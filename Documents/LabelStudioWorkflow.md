@@ -5,7 +5,7 @@ This note explains how to prepare, start, import, and reload Label Studio projec
 Run commands from the repository root:
 
 ```powershell
-cd "E:\2. UM-Student\MSC Dissertation\MTSDataset"
+cd "E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark"
 ```
 
 ## Quick Copy-Paste Commands
@@ -17,7 +17,7 @@ Use these commands first. Replace `GRP-3` with the group you are working on.
 Open one terminal and keep it running:
 
 ```powershell
-.\Scripts\LabelStudio\start_labelstudio.ps1 -Group GRP-3
+.\Scripts\MTSD-Scripts\LabelStudio\start_labelstudio.ps1 -Group GRP-3
 ```
 
 Then open Label Studio:
@@ -39,13 +39,13 @@ API token: sample-annotations-token
 Use this when the group already has a final QA file such as:
 
 ```text
-Datasets/Annotations/GRP-3/Final-QA/QA-GRP3.json
+Datasets/MTSD/Annotations/GRP-3/Final-QA/QA-GRP3.json
 ```
 
 Run this in a second terminal:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-3 --no-start --reload --import-mode qa
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-3 --no-start --reload --import-mode qa
 ```
 
 This creates or reloads the `GRP-3` Label Studio project with the completed QA boxes and attributes already imported.
@@ -57,13 +57,13 @@ Use this when there is no final QA file yet, or when you want to start from the 
 Expected XML folder:
 
 ```text
-Datasets/Annotations/GRP-3/Fiverr-Annotations/
+Datasets/MTSD/Annotations/GRP-3/Fiverr-Annotations/
 ```
 
 Run:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-3 --no-start --reload --import-mode raw
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-3 --no-start --reload --import-mode raw
 ```
 
 This creates or reloads the `GRP-3` project from the raw annotation source.
@@ -73,7 +73,7 @@ This creates or reloads the `GRP-3` project from the raw annotation source.
 Use this after changing QA JSON, changing XML files, or fixing images/labels:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-3 --no-start --reload
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-3 --no-start --reload
 ```
 
 This auto-picks QA if `Final-QA/QA-GRP3.json` exists. Otherwise it falls back to RAW/XML.
@@ -83,7 +83,7 @@ This auto-picks QA if `Final-QA/QA-GRP3.json` exists. Otherwise it falls back to
 Use a different title when you want to inspect an import without replacing the main group project:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-3 --no-start --reload --title GRP-3-CHECK --keep-existing
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-3 --no-start --reload --title GRP-3-CHECK --keep-existing
 ```
 
 ## Folder Layout
@@ -109,9 +109,9 @@ Datasets/
 Examples:
 
 ```text
-Datasets/Annotations/GRP-1/Final-QA/QA-GRP1.json
-Datasets/Annotations/GRP-10/Final-QA/QA-GRP10.json
-Datasets/Annotations/GRP-1/Fiverr-Annotations/*.xml
+Datasets/MTSD/Annotations/GRP-1/Final-QA/QA-GRP1.json
+Datasets/MTSD/Annotations/GRP-10/Final-QA/QA-GRP10.json
+Datasets/MTSD/Annotations/GRP-1/Fiverr-Annotations/*.xml
 ```
 
 The preferred image folder is:
@@ -131,14 +131,14 @@ Datasets/<GROUP>/merged_images/
 
 For each group, the preparation script chooses the annotation source in this order:
 
-1. `Datasets/Annotations/<GROUP>/Final-QA/QA-<GROUP_WITHOUT_DASH>.json`
+1. `Datasets/MTSD/Annotations/<GROUP>/Final-QA/QA-<GROUP_WITHOUT_DASH>.json`
 2. Other `QA-*.json` files in `Final-QA/`
-3. XML files in `Datasets/Annotations/<GROUP>/Fiverr-Annotations/`
+3. XML files in `Datasets/MTSD/Annotations/<GROUP>/Fiverr-Annotations/`
 
 For `GRP-1`, the preferred QA file is:
 
 ```text
-Datasets/Annotations/GRP-1/Final-QA/QA-GRP1.json
+Datasets/MTSD/Annotations/GRP-1/Final-QA/QA-GRP1.json
 ```
 
 If that file exists, the import is a QA import. If it does not exist, the scripts fall back to the XML workflow.
@@ -148,19 +148,19 @@ If that file exists, the import is a QA import. If it does not exist, the script
 Start Label Studio for a group:
 
 ```powershell
-.\Scripts\LabelStudio\start_labelstudio.ps1 -Group GRP-1
+.\Scripts\MTSD-Scripts\LabelStudio\start_labelstudio.ps1 -Group GRP-1
 ```
 
 Or with the command wrapper:
 
 ```powershell
-.\Scripts\LabelStudio\start_labelstudio.cmd -Group GRP-1
+.\Scripts\MTSD-Scripts\LabelStudio\start_labelstudio.cmd -Group GRP-1
 ```
 
 On Bash:
 
 ```bash
-./Scripts/LabelStudio/start_labelstudio.sh GRP-1
+./Scripts/MTSD-Scripts/LabelStudio/start_labelstudio.sh GRP-1
 ```
 
 Keep the Label Studio terminal open while using the app.
@@ -179,7 +179,7 @@ API token: sample-annotations-token
 The easiest refresh command is:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload
 ```
 
 This command:
@@ -205,13 +205,13 @@ Use this same command whenever:
 To generate import files without touching Label Studio:
 
 ```powershell
-python .\Scripts\LabelStudio\prepare_labelstudio_import.py --group GRP-1
+python .\Scripts\MTSD-Scripts\LabelStudio\prepare_labelstudio_import.py --group GRP-1
 ```
 
 Outputs are written to:
 
 ```text
-Datasets/GRP-1/labelstudio_output/
+Datasets/MTSD/GRP-1/labelstudio_output/
 ```
 
 Important files:
@@ -234,19 +234,19 @@ Only the files for the selected workflow are created or refreshed. The compatibi
 Force QA mode:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload --import-mode qa
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload --import-mode qa
 ```
 
 Force XML/RAW mode even when QA exists:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload --import-mode raw
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload --import-mode raw
 ```
 
 Prepare only with a forced mode:
 
 ```powershell
-python .\Scripts\LabelStudio\prepare_labelstudio_import.py --group GRP-1 --import-mode raw
+python .\Scripts\MTSD-Scripts\LabelStudio\prepare_labelstudio_import.py --group GRP-1 --import-mode raw
 ```
 
 ## Keep Existing Projects
@@ -254,7 +254,7 @@ python .\Scripts\LabelStudio\prepare_labelstudio_import.py --group GRP-1 --impor
 Normally reloads recreate the project with the same title. To create a second project without deleting the existing one, pass a different title and keep existing projects:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload --title GRP-1-CHECK --keep-existing
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload --title GRP-1-CHECK --keep-existing
 ```
 
 ## Useful Checks
@@ -262,25 +262,25 @@ python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-sta
 Check whether QA exists:
 
 ```powershell
-Test-Path .\Datasets\Annotations\GRP-1\Final-QA\QA-GRP1.json
+Test-Path .\Datasets\MTSD\Annotations\GRP-1\Final-QA\QA-GRP1.json
 ```
 
 Count XML files:
 
 ```powershell
-Get-ChildItem .\Datasets\Annotations\GRP-1\Fiverr-Annotations -Recurse -Filter *.xml | Measure-Object
+Get-ChildItem .\Datasets\MTSD\Annotations\GRP-1\Fiverr-Annotations -Recurse -Filter *.xml | Measure-Object
 ```
 
 Count images:
 
 ```powershell
-Get-ChildItem .\Datasets\GRP-1\Images -File | Measure-Object
+Get-ChildItem .\Datasets\MTSD\GRP-1\Images -File | Measure-Object
 ```
 
 Review import warnings:
 
 ```text
-Datasets/GRP-1/labelstudio_output/validation_report.md
+Datasets/MTSD/GRP-1/labelstudio_output/validation_report.md
 ```
 
 Important fields:
@@ -301,7 +301,7 @@ Out-of-bounds boxes
 If images do not display, restart Label Studio:
 
 ```powershell
-.\Scripts\LabelStudio\start_labelstudio.ps1 -Group GRP-1
+.\Scripts\MTSD-Scripts\LabelStudio\start_labelstudio.ps1 -Group GRP-1
 ```
 
 The startup script enables local file serving and sets the repository root as the local file document root.
@@ -309,7 +309,7 @@ The startup script enables local file serving and sets the repository root as th
 If setup says import files are missing, use reload:
 
 ```powershell
-python .\Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload
+python .\Scripts\MTSD-Scripts\LabelStudio\setup_labelstudio_project.py --group GRP-1 --no-start --reload
 ```
 
 If Label Studio returns a `500` during import with a message about an `atomic` transaction block, rerun the same reload command. The setup script now retries transient import failures and removes a half-created project if the import cannot complete.

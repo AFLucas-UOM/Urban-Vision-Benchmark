@@ -1,6 +1,6 @@
 """Loading and validation of the QA-verified COCO annotation exports.
 
-Only the ``QA-GRP*.json`` files under ``Datasets/Annotations/*/Final-QA`` are
+Only the ``QA-GRP*.json`` files under ``Datasets/MTSD/Annotations/*/Final-QA`` are
 ever read - they are the verified ground truth.  The per-file COCO ids are
 re-indexed into globally unique ids; the source group is kept purely as
 provenance (it identifies which QA file a record came from and where the

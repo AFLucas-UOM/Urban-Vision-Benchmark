@@ -3,7 +3,7 @@
 A PowerShell utility for listing and deleting the large model weights that
 PromptDetect downloads, so you can reclaim disk space safely.
 
-- **Script:** [`Scripts/PromptDetect/clean_model_cache.ps1`](../Scripts/PromptDetect/clean_model_cache.ps1)
+- **Script:** [`Scripts/Other-Scripts/PromptDetect/clean_model_cache.ps1`](../Scripts/Other-Scripts/PromptDetect/clean_model_cache.ps1)
 - **Platform:** Windows PowerShell (PowerShell 5.1 or PowerShell 7+)
 - **Scope:** touches **only** PromptDetect's models — other cached models are never affected.
 
@@ -78,7 +78,7 @@ delete — it costs only the re-download time/bandwidth later.
 Open a PowerShell terminal in the script's folder:
 
 ```powershell
-cd "Scripts\PromptDetect"
+cd "Scripts\Other-Scripts\PromptDetect"
 ```
 
 ### List models and sizes (default — no deletion)
@@ -113,7 +113,7 @@ You'll see what will be removed and how much it frees, then a `y/N` prompt.
 ### Run from anywhere (full path)
 
 ```powershell
-powershell -File "E:\path\to\MTSDataset\Scripts\PromptDetect\clean_model_cache.ps1"
+powershell -File "E:\path\to\Urban-Vision-Benchmark\Scripts\Other-Scripts\PromptDetect\clean_model_cache.ps1"
 ```
 
 ### Parameters

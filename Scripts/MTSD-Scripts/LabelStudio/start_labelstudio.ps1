@@ -5,9 +5,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-$RepoRoot = Resolve-Path (Join-Path $PSScriptRoot "..\..")
-$DatasetDir = Join-Path $RepoRoot "Datasets\$Group"
-$OutputDir = Join-Path $RepoRoot "Datasets\$Group\labelstudio_output"
+$RepoRoot = Resolve-Path (Join-Path $PSScriptRoot "..\..\..")
+$DatasetDir = Join-Path $RepoRoot "Datasets\MTSD\$Group"
+$OutputDir = Join-Path $RepoRoot "Datasets\MTSD\$Group\labelstudio_output"
 $DataDir = Join-Path $OutputDir "LabelStudioData"
 $EnvPath = Join-Path $DataDir ".env"
 

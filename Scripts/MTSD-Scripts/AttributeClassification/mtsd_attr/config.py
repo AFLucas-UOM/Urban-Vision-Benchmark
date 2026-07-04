@@ -16,7 +16,8 @@ from pathlib import Path
 import numpy as np
 import yaml
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+# <repo>/Scripts/MTSD-Scripts/AttributeClassification/mtsd_attr/config.py
+REPO_ROOT = Path(__file__).resolve().parents[4]
 SUBPROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_CONFIG_PATH = SUBPROJECT_ROOT / "config" / "default.yaml"
 

@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd "$(dirname "$0")/../.."
+cd "$(dirname "$0")/../../.."
 
 GROUP="${1:-${GROUP:-GRP-1}}"
 PORT="${2:-${PORT:-8080}}"
 HOST_URL="http://localhost:${PORT}"
-DATASET_DIR="Datasets/${GROUP}"
-DATA_DIR="Datasets/${GROUP}/labelstudio_output/LabelStudioData"
+DATASET_DIR="Datasets/MTSD/${GROUP}"
+DATA_DIR="Datasets/MTSD/${GROUP}/labelstudio_output/LabelStudioData"
 
 if [ ! -d "$DATASET_DIR" ]; then
   echo "Could not find dataset directory for ${GROUP} at ${DATASET_DIR}" >&2

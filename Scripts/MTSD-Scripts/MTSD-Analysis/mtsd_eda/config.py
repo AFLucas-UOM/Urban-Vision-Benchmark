@@ -5,10 +5,11 @@ from __future__ import annotations
 from pathlib import Path
 
 # Repository layout ----------------------------------------------------------
+# <repo>/Scripts/MTSD-Scripts/MTSD-Analysis/mtsd_eda/config.py
 PACKAGE_DIR = Path(__file__).resolve().parent
-BASE_DIR = PACKAGE_DIR.parents[2]
+BASE_DIR = PACKAGE_DIR.parents[3]
 
-DATASETS_ROOT = BASE_DIR / "Datasets"
+DATASETS_ROOT = BASE_DIR / "Datasets" / "MTSD"
 ANNOTATIONS_ROOT = DATASETS_ROOT / "Annotations"
 
 EDA_DIR = BASE_DIR / "Documents" / "MTSD-EDA"

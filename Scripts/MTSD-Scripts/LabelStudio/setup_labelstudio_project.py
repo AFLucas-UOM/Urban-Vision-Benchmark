@@ -16,8 +16,9 @@ from typing import Any
 import requests
 
 
-ROOT = Path(__file__).resolve().parents[2]
-DATASETS_ROOT = ROOT / "Datasets"
+# <repo>/Scripts/MTSD-Scripts/LabelStudio/setup_labelstudio_project.py
+ROOT = Path(__file__).resolve().parents[3]
+DATASETS_ROOT = ROOT / "Datasets" / "MTSD"
 DEFAULT_GROUP = "GRP-1"
 IMPORT_MODE_PROMPT = "prompt"
 IMPORT_MODE_QA = "qa"
@@ -320,11 +321,11 @@ def choose_import_task(group: str, out_dir: Path, requested_mode: str, qa_availa
         print(f"Using legacy prepared task file as {mode.upper()} import.")
         return mode, legacy_task_path
 
-    raise SystemExit(f"Missing import task file. Run Scripts/LabelStudio/prepare_labelstudio_import.py first.")
+    raise SystemExit(f"Missing import task file. Run Scripts/MTSD-Scripts/LabelStudio/prepare_labelstudio_import.py first.")
 
 
 def prepare_import_files(group: str, out_dir: Path, import_mode: str) -> None:
-    script_path = ROOT / "Scripts" / "LabelStudio" / "prepare_labelstudio_import.py"
+    script_path = ROOT / "Scripts" / "MTSD-Scripts" / "LabelStudio" / "prepare_labelstudio_import.py"
     cmd = [
         sys.executable,
         str(script_path),
@@ -407,7 +408,7 @@ def main() -> None:
         import_mode, task_path = choose_import_task(group, out_dir, import_mode, qa_available)
     missing = [path for path in (task_path, out_dir / "config.xml") if not path.exists()]
     if missing:
-        raise SystemExit(f"Missing import files. Run Scripts/LabelStudio/prepare_labelstudio_import.py first: {missing}")
+        raise SystemExit(f"Missing import files. Run Scripts/MTSD-Scripts/LabelStudio/prepare_labelstudio_import.py first: {missing}")
 
     proc = start_server(args, out_dir)
     try:

@@ -46,8 +46,9 @@ from gdpr_compliance.detectors import (BACKEND_DEFAULTS, DETECTOR_REGISTRY,
                                        build_detectors, resolve_backend)
 from gdpr_compliance.detectors.sam31 import DEFAULT_CATEGORIES
 
-BASE_DIR = SCRIPT_DIR.parents[1]
-DEFAULT_INPUT = BASE_DIR / "Datasets"
+# <repo>/Scripts/Other-Scripts/GDPR-Compliance/redact.py
+BASE_DIR = SCRIPT_DIR.parents[2]
+DEFAULT_INPUT = BASE_DIR / "Datasets" / "MTSD"
 DEFAULT_OUTPUT = BASE_DIR / "GDPR-Compliance-Preview"
 
 

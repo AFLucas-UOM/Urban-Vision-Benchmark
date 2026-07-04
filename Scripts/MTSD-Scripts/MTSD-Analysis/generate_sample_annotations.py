@@ -10,10 +10,11 @@ from typing import Dict, Iterable, List, Optional
 from PIL import Image, ImageDraw, ImageFont
 
 
-BASE_DIR = Path(__file__).resolve().parents[2]
-DATASET_DIR = BASE_DIR / "Datasets"
+# <repo>/Scripts/MTSD-Scripts/MTSD-Analysis/generate_sample_annotations.py
+BASE_DIR = Path(__file__).resolve().parents[3]
+DATASET_DIR = BASE_DIR / "Datasets" / "MTSD"
 ANNOTATIONS_DIR = DATASET_DIR / "Annotations"
-OUTPUT_DIR = BASE_DIR / "Samples" / "SampleAnnotationImages"
+OUTPUT_DIR = BASE_DIR / "Documents" / "MTSD-EDA" / "SampleAnnotationImages"
 SAMPLE_SIZE = 10
 GROUP_PATTERN = "GRP-*"
 ANNOTATION_JSON = "merged_input.json"

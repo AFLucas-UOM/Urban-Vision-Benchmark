@@ -1,7 +1,7 @@
 # Conda Environments
 
 Reproducible Conda environment setup for every GPU/experiment component of the
-MTSDataset repository. Each environment has one YAML file (Python version +
+Urban-Vision-Benchmark repository. Each environment has one YAML file (Python version +
 pinned pip dependencies) and is created by one platform-appropriate setup
 script that also installs the correct PyTorch build for your hardware.
 
@@ -14,8 +14,8 @@ experiments ran in.
 | Environment | YAML | Python | Used by |
 |---|---|---|---|
 | `MDWD` | [environment-mdwd.yml](environment-mdwd.yml) | 3.12 | Maltese Domestic Waste Dataset work — YOLO (ultralytics), VLM experiments, annotation notebooks |
-| `mtsd-attrcls` | [environment-mtsd-attrcls.yml](environment-mtsd-attrcls.yml) | 3.11 | [Scripts/AttributeClassification/](../AttributeClassification/) — DINOv3 / V-JEPA / ConvNeXt attribute experiments |
-| `mtsd-base` | [environment-mtsd-base.yml](environment-mtsd-base.yml) | 3.12 | [Scripts/PromptDetect/](../PromptDetect/) main app (SAM 3 / 3.1 + Cosmos Reason2) and the [GDPR-Compliance](../GDPR-Compliance/) `sam31` backend |
+| `mtsd-attrcls` | [environment-mtsd-attrcls.yml](environment-mtsd-attrcls.yml) | 3.11 | [Scripts/MTSD-Scripts/AttributeClassification/](../../MTSD-Scripts/AttributeClassification/) — DINOv3 / V-JEPA / ConvNeXt attribute experiments |
+| `mtsd-base` | [environment-mtsd-base.yml](environment-mtsd-base.yml) | 3.12 | [Scripts/Other-Scripts/PromptDetect/](../PromptDetect/) main app (SAM 3 / 3.1 + Cosmos Reason2) and the [GDPR-Compliance](../GDPR-Compliance/) `sam31` backend |
 | `mtsd-la` | [environment-mtsd-la.yml](environment-mtsd-la.yml) | 3.12 | PromptDetect's LocateAnything-3B worker (`transformers==4.57.1`, spawned automatically — never activated by hand) |
 
 The corresponding loose pip requirements (unpinned/manual installs) live in
@@ -53,7 +53,7 @@ Other platform specifics handled automatically:
 
 ## Create
 
-Run from this folder (`Scripts/CondaEnvironments/`). Replace `mtsd-base` with
+Run from this folder (`Scripts/Other-Scripts/CondaEnvironments/`). Replace `mtsd-base` with
 `MDWD`, `mtsd-attrcls`, `mtsd-la`, or `all`.
 
 **Windows PowerShell**
@@ -143,7 +143,7 @@ reclaiming that space.
 - **Windows user-site packages:** this machine has a shared
   `AppData\Roaming\Python` site-packages that can shadow env packages. Run
   AttributeClassification entry points with `PYTHONNOUSERSITE=1` and `python
-  -s` (see [Scripts/AttributeClassification/README.md](../AttributeClassification/README.md)).
+  -s` (see [Scripts/MTSD-Scripts/AttributeClassification/README.md](../../MTSD-Scripts/AttributeClassification/README.md)).
 - **flash-attention:** the primary machine additionally carries a custom
   `flash_attn_3` build inside `mtsd-base`. It is optional (attention falls
   back to SDPA) and not pip-installable portably, so it is deliberately not

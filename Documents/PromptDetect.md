@@ -62,13 +62,13 @@ SAM 3's `facebook/sam3` repo ships transformers-format weights, but **SAM 3.1's
 there is no transformers `model.safetensors`** (confirmed on the model card).
 So SAM 3.1 can *only* be loaded through Meta's `sam3` package. To keep SAM 3 and
 SAM 3.1 directly comparable for the dissertation, **both** run through the same
-native engine ([`Sam3NativeEngine`](../Scripts/PromptDetect/backend.py)), under bf16 autocast.
+native engine ([`Sam3NativeEngine`](../Scripts/Other-Scripts/PromptDetect/backend.py)), under bf16 autocast.
 
 ---
 
 ## How each flow works (end-to-end)
 
-**SAM 3 / SAM 3.1** ([`Sam3NativeEngine`](../Scripts/PromptDetect/backend.py)):
+**SAM 3 / SAM 3.1** ([`Sam3NativeEngine`](../Scripts/Other-Scripts/PromptDetect/backend.py)):
 
 ```
 text prompt + image
@@ -89,7 +89,7 @@ boxes (xyxy px) + scores + masks
 filter_detections(...)                        ← confidence · area · count
 ```
 
-**Cosmos Reason2** ([`CosmosReason2Engine`](../Scripts/PromptDetect/backend.py)):
+**Cosmos Reason2** ([`CosmosReason2Engine`](../Scripts/Other-Scripts/PromptDetect/backend.py)):
 
 ```
 text prompt + image
@@ -107,7 +107,7 @@ parse [{"bbox_2d":[x1,y1,x2,y2], "label":…}]   ← boxes only, score = 1.0
 filter_detections(...)
 ```
 
-**LocateAnything 3B** ([`LocateAnythingEngine`](../Scripts/PromptDetect/backend.py)):
+**LocateAnything 3B** ([`LocateAnythingEngine`](../Scripts/Other-Scripts/PromptDetect/backend.py)):
 
 ```
 text prompt + image
@@ -130,7 +130,7 @@ filter_detections(...)
 ## Folder structure
 
 ```
-Scripts/PromptDetect/          # source + the cleanup utility
+Scripts/Other-Scripts/PromptDetect/          # source + the cleanup utility
 ├── app.py                — Gradio UI (5 tabs) + event wiring
 ├── backend.py            — model registry + inference engines (SAM 3/3.1, Cosmos, LocateAnything)
 ├── la_worker.py          — out-of-process LocateAnything worker (transformers 4.57 env)
@@ -143,7 +143,7 @@ Requirements/             # pip dependency definitions (repo root)
 ├── requirements-promptdetect.txt     — main env (SAM 3/3.1 + Cosmos)
 └── requirements-locate-anything.txt  — LocateAnything worker env
 
-Scripts/CondaEnvironments/            # reproducible env YAMLs + setup scripts
+Scripts/Other-Scripts/CondaEnvironments/            # reproducible env YAMLs + setup scripts
 ├── environment-mtsd-base.yml         — main env (pinned)
 └── environment-mtsd-la.yml           — LocateAnything worker env (pinned)
 
@@ -164,7 +164,7 @@ The app assumes a **Conda environment named `mtsd-base`** (formerly `sam3`) (Pyt
 
 > **Shortcut:** the whole setup below (env + PyTorch + dependencies + `sam3`
 > package) is automated by the per-platform scripts in
-> [Scripts/CondaEnvironments/](../Scripts/CondaEnvironments/README.md), e.g.
+> [Scripts/Other-Scripts/CondaEnvironments/](../Scripts/Other-Scripts/CondaEnvironments/README.md), e.g.
 > `.\setup_conda_env.ps1 -Name mtsd-base`. The manual steps follow.
 
 ```bash
@@ -231,13 +231,13 @@ Cosmos Reason2 ~5 GB (2B) / ~16 GB (8B) / ~64 GB (32B); LocateAnything ~6 GB.
 LocateAnything's `trust_remote_code` modeling code is hard-bound to
 **transformers ~4.57.x** and can't share the transformers 5.x process the other
 models use. PromptDetect handles this **automatically**: selecting
-"LocateAnything 3B" launches a small worker ([`la_worker.py`](../Scripts/PromptDetect/la_worker.py)) in a
+"LocateAnything 3B" launches a small worker ([`la_worker.py`](../Scripts/Other-Scripts/PromptDetect/la_worker.py)) in a
 dedicated `mtsd-la` conda env and proxies inference to it over localhost
 — you never switch environments by hand.
 
 Create that env **once** — either via the setup scripts
 (`.\setup_conda_env.ps1 -Name mtsd-la` from
-[Scripts/CondaEnvironments/](../Scripts/CondaEnvironments/README.md)) or manually:
+[Scripts/Other-Scripts/CondaEnvironments/](../Scripts/Other-Scripts/CondaEnvironments/README.md)) or manually:
 
 ```bash
 conda create -n mtsd-la python=3.12 -y
@@ -265,7 +265,7 @@ GPU; boxes are on a 0–1000 grid, so the downscale does not affect coordinates.
 
 ```bash
 conda activate mtsd-base
-cd Scripts/PromptDetect
+cd Scripts/Other-Scripts/PromptDetect
 python app.py
 ```
 
@@ -332,7 +332,7 @@ Model weights are **not** stored in this folder — they download into the
 is ~60 GB, and all PromptDetect models together approach ~100 GB.
 
 To inspect or reclaim space, use the bundled
-[`clean_model_cache.ps1`](../Scripts/PromptDetect/clean_model_cache.ps1) helper
+[`clean_model_cache.ps1`](../Scripts/Other-Scripts/PromptDetect/clean_model_cache.ps1) helper
 (it touches only the PromptDetect models). Full usage — prerequisites, commands,
 expected output, and troubleshooting — is in
 **[Documents/CleanModelCache.md](CleanModelCache.md)**.
