@@ -1,0 +1,23 @@
+{
+  "model_variant": "yolo26l",
+  "parameter_count": 26184054,
+  "model_size_mb": 50.54,
+  "mAP@50": 0.9152102000336587,
+  "mAP@50-95": 0.7951067059184301,
+  "precision": 0.9578149412414303,
+  "recall": 0.8732289459488067,
+  "F1 Score": 0.9135681972513805,
+  "validation_inference_time_ms": 4.69017533842868,
+  "test_inference_time_ms": 4.807777779787617,
+  "total_training_time_seconds": 26600.16,
+  "test_mAP@50": 0.8976302321761004,
+  "test_mAP@50-95": 0.782444279952786,
+  "test_precision": 0.9718192043621817,
+  "test_recall": 0.8697716707782541,
+  "test_F1 Score": 0.9179680725861878,
+  "best_weights": "E:\\1. UM-Staff\\AICOM\\AICOM-OD\\runs\\YOLO26-EUVIP\\E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001\\weights\\best.pt",
+  "last_weights": "E:\\1. UM-Staff\\AICOM\\AICOM-OD\\runs\\YOLO26-EUVIP\\E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001\\weights\\last.pt",
+  "run_name": "E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001",
+  "status": "completed",
+  "wandb_url": "https://wandb.ai/mark-bugeja-university-of-malta/MSc-MDWD-EUVIP26/runs/at8vk5xq"
+}

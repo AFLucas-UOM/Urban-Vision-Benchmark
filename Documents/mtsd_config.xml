@@ -1,0 +1,69 @@
+<View>
+  <Header value="Maltese Traffic Signs: Detection and Attribute Labelling"/>
+
+  <!-- OBJECT DETECTION -->
+  <View style="display:flex; align-items:flex-start; gap:8px; flex-direction:column-reverse;">
+    <Image name="image" value="$image" zoom="true" zoomControl="true" rotateControl="false"/>
+
+    <RectangleLabels name="sign_type" toName="image" showInline="true">s
+      <Label value="Pedestrian Crossing" background="#800000" hotkey="1"/>
+      <Label value="Stop Sign" background="#008000" hotkey="2"/>
+      <Label value="No Entry (One Way)" background="#808000" hotkey="3"/>
+      <Label value="Roundabout Ahead" background="#000080" hotkey="4"/>
+      <Label value="No Through Road (T-Junction)" background="#800080" hotkey="5"/>
+      <Label value="Blind-Spot Mirror (Convex Mirror)" background="#008080" hotkey="6"/>
+      <Label value="Street Sign" background="#808080" hotkey="7"/>
+      <Label value="Directional Sign" background="#400000" hotkey="8"/>
+      <Label value="Tourist Sign" background="#C00000" hotkey="9"/>
+      <Label value="Auxiliary Sign" background="#408000" hotkey="0"/>
+      <Label value="Back-Unknown" background="#C08000" hotkey="q"/>
+      <Label value="Other-Unknown" background="#400080" hotkey="w"/>
+    </RectangleLabels>
+  </View>
+
+  <!-- INSTRUCTIONS -->
+  <View style="margin:8px 0; font-size:13px; color:#555;">
+    Draw one tight bounding box around each visible traffic infrastructure object belonging to the MTSD taxonomy.
+    This includes official traffic signs, street signs, directional signs, Tourist signs, auxiliary signs,
+    rear-facing signs, and roadside convex blind-spot mirrors. Do not annotate private signage, commercial
+    notices, advertisements, private no-parking signs, CCTV signs, or unrelated infrastructure.
+    For every box, select exactly one sign type and complete all required attributes:
+    viewing angle, mounting type, condition, and shape.
+    Use Back-Unknown only when the rear side of a sign is visible and the front-facing sign category cannot be determined.
+    Use Other-Unknown only when the object clearly belongs to public traffic infrastructure but does not match any predefined MTSD class.
+  </View>
+
+  <!-- REQUIRED PER-REGION ATTRIBUTES -->
+  <Choices name="view_angle" toName="image" perRegion="true" choice="single" required="true" showInline="true">
+    <Header value="Viewing Angle"/>
+    <Choice value="Front"/>
+    <Choice value="Side"/>
+    <Choice value="Back"/>
+  </Choices>
+
+  <Choices name="mounting" toName="image" perRegion="true" choice="single" required="true" showInline="true">
+    <Header value="Mounting Type"/>
+    <Choice value="Pole-Mounted"/>
+    <Choice value="Wall-Mounted"/>
+  </Choices>
+
+  <Choices name="condition" toName="image" perRegion="true" choice="single" required="true" showInline="true">
+    <Header value="Sign Condition"/>
+    <Choice value="Good"/>
+    <Choice value="Weathered"/>
+    <Choice value="Heavily Damaged"/>
+  </Choices>
+
+  <Choices name="sign_shape" toName="image" perRegion="true" choice="single" required="true" showInline="true">
+    <Header value="Sign Shape"/>
+    <Choice value="Circular"/>
+    <Choice value="Quadrangle"/>
+    <Choice value="Octagonal"/>
+    <Choice value="Pentagon"/>
+    <Choice value="Triangular"/>
+    <Choice value="Damaged-Unknown"/>
+  </Choices>
+
+  <View style="margin-top:12px; border-top:1px solid #ddd; padding-top:8px;">
+  </View>
+</View>

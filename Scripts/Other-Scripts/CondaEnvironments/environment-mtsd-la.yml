@@ -1,0 +1,43 @@
+# ============================================================
+# mtsd-la — PromptDetect LocateAnything-3B worker environment
+# ============================================================
+# LocateAnything-3B ships custom (trust_remote_code) modeling code hard-bound
+# to transformers ~4.57.x, incompatible with the transformers 5.x used by
+# mtsd-base. PromptDetect launches Scripts/PromptDetect/la_worker.py in this
+# env automatically — create it once and never activate it by hand.
+# Pip pins are the pinned superset of
+# Requirements/requirements-locate-anything.txt.
+#
+# Create:   see Scripts/CondaEnvironments/README.md (per-platform scripts)
+# PyTorch is NOT listed here on purpose — the correct build (CUDA 12.8 /
+# CPU / macOS) is platform-specific and installed by the setup scripts
+# after env creation (tested: torch 2.11.0 + torchvision 0.26.0, cu128).
+# Gated weights: `hf auth login` with access to nvidia/LocateAnything-3B.
+#
+# Pins mirror the working env on the primary Windows machine (2026-07-03).
+# ============================================================
+name: mtsd-la
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      # ---- App framework (worker reuses PromptDetect utils) ----
+      - gradio==6.17.3
+      # ---- transformers PINNED for LocateAnything's remote code ----
+      - transformers==4.57.1
+      - accelerate==1.14.0
+      - huggingface_hub==0.36.2
+      - safetensors==0.8.0
+      # ---- LocateAnything remote-code dependencies (imported at load time) ----
+      - peft==0.19.1
+      - lmdb==2.2.1
+      - "decord==0.6.0; sys_platform != 'darwin' or platform_machine != 'arm64'"
+      - "eva-decord==0.6.1; sys_platform == 'darwin' and platform_machine == 'arm64'"
+      # ---- Vision & numerics ----
+      - pillow==12.2.0
+      - opencv-python==4.13.0.92
+      - matplotlib==3.11.0
+      - pandas==3.0.3
+      - numpy==2.4.4

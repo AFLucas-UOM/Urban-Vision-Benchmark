@@ -1,0 +1,47 @@
+# ============================================================
+# PromptDetect — LocateAnything-3B *dedicated* environment
+# ============================================================
+# LocateAnything-3B ships custom (trust_remote_code) modeling code that is
+# hard-bound to transformers ~4.57, incompatible with the transformers 5.x used
+# by the main env (SAM 3/3.1 + Cosmos Reason2). The main app launches a worker in
+# this env automatically — you only create it once.
+# See Documents/PromptDetect.md → "LocateAnything-3B transparent worker".
+# Reproducible env creation: Scripts/CondaEnvironments/environment-mtsd-la.yml
+# (plus the per-platform setup scripts in that folder). Manual alternative:
+#
+#   conda create -n mtsd-la python=3.12 -y
+#   conda activate mtsd-la
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r Requirements/requirements-locate-anything.txt
+#   hf auth login          # needs access to nvidia/LocateAnything-3B
+#   conda deactivate       # the main app spawns this env's worker on demand
+# ============================================================
+
+# ---- App framework ----
+gradio>=4.28.0
+
+# ---- transformers PINNED for LocateAnything's remote code ----
+transformers==4.57.1
+accelerate>=0.27.0
+huggingface_hub>=0.21.0
+safetensors>=0.4.0
+
+# ---- LocateAnything remote-code dependencies ----
+# The model's modeling/processor files import these at module load time.
+peft
+decord==0.6.0
+lmdb
+
+# ---- Vision & numerics ----
+Pillow>=10.0.0
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+numpy
+
+# ---- PyTorch (install separately, see header / README) ----
+# torch
+# torchvision
+#
+# NOTE: SAM 3 / 3.1 and Cosmos Reason2 are NOT expected to run in this pinned
+# env — use the main environment (Requirements/requirements-promptdetect.txt).

@@ -1,0 +1,27 @@
+{
+  "hardware": {
+    "device": "cuda",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "cpu_count": 24,
+    "python": "3.12.11 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 12:58:53) [MSC v.1929 64 bit (AMD64)]",
+    "torch_version": "2.10.0.dev20251013+cu130",
+    "cuda_available": true,
+    "mps_available": false,
+    "mps_built": false,
+    "cuda_version": "13.0",
+    "cuda_device_count": 1,
+    "cuda_devices": [
+      {
+        "index": 0,
+        "name": "NVIDIA GeForce RTX 4090",
+        "total_memory_gb": 23.99,
+        "major": 8,
+        "minor": 9,
+        "multi_processor_count": 128
+      }
+    ]
+  },
+  "device": "cuda",
+  "workers": 0
+}

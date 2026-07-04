@@ -1,0 +1,35 @@
+{
+  "experiment_name": "YOLO26-EUVIP-Model-Size-Comparison",
+  "created_at": "2026-06-21T10:46:29",
+  "root_dir": "/mnt/external_ssd/1. UM-Staff/AICOM/AICOM-OD",
+  "runs_dir": "/mnt/external_ssd/1. UM-Staff/AICOM/AICOM-OD/runs/YOLO26-EUVIP",
+  "results_dir": "/mnt/external_ssd/1. UM-Staff/AICOM/AICOM-OD/Results/YOLO26",
+  "benchmark_results_dir": "/mnt/external_ssd/1. UM-Staff/AICOM/AICOM-OD/Results/YOLO26/Model-Size-Comparison",
+  "run_config_dir": "/mnt/external_ssd/1. UM-Staff/AICOM/AICOM-OD/Results/YOLO26/Model-Size-Comparison/run_configs",
+  "device": "cuda",
+  "workers": 8,
+  "default_batch_size": 32,
+  "hardware": {
+    "device": "cuda",
+    "platform": "Linux-6.17.0-1014-nvidia-aarch64-with-glibc2.39",
+    "processor": "aarch64",
+    "cpu_count": 20,
+    "python": "3.12.13 | packaged by Anaconda, Inc. | (main, Mar 19 2026, 20:09:21) [GCC 14.3.0]",
+    "torch_version": "2.12.0+cu130",
+    "cuda_available": true,
+    "mps_available": false,
+    "mps_built": false,
+    "cuda_version": "13.0",
+    "cuda_device_count": 1,
+    "cuda_devices": [
+      {
+        "index": 0,
+        "name": "NVIDIA GB10",
+        "total_memory_gb": 121.69,
+        "major": 12,
+        "minor": 1,
+        "multi_processor_count": 48
+      }
+    ]
+  }
+}

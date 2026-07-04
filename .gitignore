@@ -1,0 +1,80 @@
+# ============================================================
+# Urban-Vision-Benchmark .gitignore
+# Policy: track code, configs, docs, annotations and the numeric
+# experimental record; keep raw images, model weights and heavy
+# run media out of git (they stay on disk, nothing is deleted).
+# ============================================================
+
+# --- Local configuration / secrets ---------------------------
+.env
+.env.*
+!.env.example
+
+# --- Python environments and caches --------------------------
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+
+# --- Jupyter -------------------------------------------------
+.ipynb_checkpoints/
+
+# --- Datasets ------------------------------------------------
+# Raw images and heavy exports are not versioned. Small, irreplaceable
+# metadata IS tracked: MDWD data.yaml / Roboflow READMEs and the
+# MTSD Final-QA annotation JSONs.
+Datasets/MDWD/*/train/
+Datasets/MDWD/*/valid/
+Datasets/MDWD/*/test/
+Datasets/MTSD/GRP-*/
+Datasets/MTSD/Annotations/GRP-*/Fiverr-Annotations/
+*.cache
+
+# --- Model weights and checkpoints ---------------------------
+# Pretrained weights in Models/ are re-downloadable; trained weights
+# live in Results/MDWD-Runs/**/weights and W&B artifacts.
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.weights
+
+# --- Experiment outputs --------------------------------------
+# W&B local run folders and Ultralytics scratch runs/ dirs are not
+# versioned (mirrored to the W&B cloud project where relevant).
+wandb/
+runs/
+mlruns/
+# Heavy per-run media inside curated run archives; the numeric record
+# (results.csv, args.yaml, *.json) stays tracked.
+Results/MDWD-Runs/**/*.jpg
+Results/MDWD-Runs/**/*.jpeg
+Results/MDWD-Runs/**/*.png
+# Attribute-classification bulk artefacts (regenerable from the QA
+# JSONs via mtsd_attr.data_manifest); metrics/reports/manifests are tracked.
+Scripts/MTSD-Scripts/AttributeClassification/outputs/crops/
+
+# --- GDPR redaction previews ---------------------------------
+GDPR-Compliance-Preview/
+
+# --- Logs and temporary files --------------------------------
+*.log
+logs/
+tmp/
+temp/
+TEMP-*/
+temp-*/
+exports/
+env_backups/
+
+# --- OS and editor metadata ----------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.claude/

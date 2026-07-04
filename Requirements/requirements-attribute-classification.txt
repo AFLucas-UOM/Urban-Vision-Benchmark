@@ -1,0 +1,27 @@
+# ============================================================
+# MTSD attribute classification (Scripts/AttributeClassification/)
+# ============================================================
+# Environment: conda env "mtsd-attrcls" (Python 3.11, formerly "mtsd-attr"),
+# CUDA 12.8 wheels for torch.
+# Reproducible env creation: Scripts/CondaEnvironments/environment-mtsd-attrcls.yml
+# (plus the per-platform setup scripts in that folder). Manual alternative —
+# install torch first from the PyTorch index, then the rest:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r Requirements/requirements-attribute-classification.txt
+# ============================================================
+torch>=2.10
+torchvision>=0.25
+transformers>=5.5
+timm>=1.0
+wandb>=0.27
+pandas>=2.2
+pyarrow>=17
+scikit-learn>=1.6
+pyyaml>=6.0
+matplotlib>=3.10
+pillow>=11
+gradio>=5.0
+python-dotenv>=1.0
+einops>=0.8
+# LoRA adapter injection for the dinov3_lora / vjepa_lora variants.
+peft>=0.19

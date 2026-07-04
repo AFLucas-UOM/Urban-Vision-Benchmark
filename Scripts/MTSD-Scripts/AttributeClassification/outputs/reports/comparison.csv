@@ -1,0 +1,4 @@
+variant,run_id,view_angle,mounting,condition,sign_shape,mean_macro_f1
+dinov3,dinov3-20260703-021817,0.8594,0.8417,0.5777,0.8697,0.7871
+vjepa,vjepa-20260703-023332,0.8751,0.8606,0.5294,0.8575,0.7806
+convnext,convnext-20260703-025354,0.9153,0.8691,0.6899,0.9660,0.8601

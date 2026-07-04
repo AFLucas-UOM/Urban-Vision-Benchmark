@@ -1,0 +1,46 @@
+# ============================================================
+# mtsd-base — PromptDetect main environment (SAM 3 / 3.1 + Cosmos Reason2)
+# ============================================================
+# Runs Scripts/PromptDetect/app.py and the GDPR-Compliance sam31 backend.
+# Formerly named "sam3". Pip pins are the pinned superset of
+# Requirements/requirements-promptdetect.txt.
+#
+# Create:   see Scripts/CondaEnvironments/README.md (per-platform scripts)
+# NOT listed here on purpose (installed by the setup scripts, in order):
+#   1. PyTorch          — platform-specific build (tested: torch 2.10.0 +
+#                         torchvision 0.25.0, cu128)
+#   2. Meta sam3 pkg    — pip install git+https://github.com/facebookresearch/sam3.git
+#                         (needs torch first; unavailable on macOS — no triton)
+# Gated Hugging Face weights need `hf auth login` — see Documents/PromptDetect.md.
+#
+# Pins mirror the working env on the primary Windows machine (2026-07-03).
+# ============================================================
+name: mtsd-base
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - pip:
+      # ---- App framework ----
+      - gradio==6.19.0
+      # ---- transformers stack (Cosmos Reason2 / Qwen3-VL needs >= 4.57) ----
+      - transformers==5.12.1
+      - accelerate==1.14.0
+      - huggingface_hub==1.20.1
+      - safetensors==0.8.0
+      - timm==1.0.27
+      - einops==0.8.2
+      - sentencepiece==0.2.1
+      # ---- Vision & numerics ----
+      - pillow==12.2.0
+      - opencv-python==4.11.0.86
+      - matplotlib==3.11.0
+      - pandas==3.0.3
+      - numpy==1.26.4
+      - scipy==1.17.1
+      # ---- sam3 package prerequisites ----
+      # pkg_resources was removed in setuptools 81; the sam3 package still uses it.
+      - setuptools<81
+      # Windows has no official triton wheels; sam3 imports triton at module level.
+      - "triton-windows==3.7.1.post27; sys_platform == 'win32'"
