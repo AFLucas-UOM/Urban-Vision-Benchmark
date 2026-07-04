@@ -1,0 +1,37 @@
+{
+  "variant": "MDWD-YOLO26",
+  "format": "yolo",
+  "classes": [
+    "Mixed Waste",
+    "Orange CMD",
+    "Organic Waste",
+    "Other Waste",
+    "Recyclable Material"
+  ],
+  "n_images": 30225,
+  "n_unique_source_images": 3598,
+  "n_boxes": 211512,
+  "per_split": {
+    "train": {
+      "images": 29487,
+      "boxes": 209334
+    },
+    "valid": {
+      "images": 369,
+      "boxes": 1072
+    },
+    "test": {
+      "images": 369,
+      "boxes": 1106
+    }
+  },
+  "boxes_per_image_mean": 6.998,
+  "median_box_area_frac": 0.02328,
+  "issue_counts": {
+    "out_of_range_box": 15,
+    "empty_annotation": 5,
+    "source_in_multiple_splits": 30
+  },
+  "generated_at": "2026-07-04T00:47:42+00:00",
+  "max_images": null
+}

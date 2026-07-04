@@ -1,0 +1,6 @@
+class_name,instances,share_pct,train,valid,test
+Mixed Waste,60034,28.38,59426,274,334
+Recyclable Material,52096,24.63,51595,263,238
+Other Waste,43727,20.67,43188,261,278
+Organic Waste,40783,19.28,40409,196,178
+Orange CMD,14872,7.03,14716,78,78
