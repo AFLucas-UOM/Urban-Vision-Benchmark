@@ -1,0 +1,13 @@
+issue,count,description
+missing_split,0,expected split folder/annotation file is absent
+unreadable_image,0,image file exists but PIL cannot read its header
+missing_image,0,annotation references an image file absent from disk
+missing_label,0,image has no matching YOLO label file
+orphan_label,0,label file has no matching image
+orphan_annotation,0,COCO annotation references an unknown image id
+empty_annotation,5,image has an annotation entry but zero boxes
+malformed_label_row,0,label row does not parse as 'class cx cy w h'
+invalid_class_id,0,class id outside the declared vocabulary
+out_of_range_box,15,box coordinates fall outside the image bounds
+duplicate_filename,0,same file name appears more than once
+source_in_multiple_splits,30,augmented copies of one source image appear in more than one split (leakage)

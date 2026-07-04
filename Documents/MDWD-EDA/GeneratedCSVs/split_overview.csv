@@ -1,0 +1,5 @@
+split,images,unique_source_images,boxes,boxes_per_image_mean,boxes_per_image_median,boxes_per_image_max,images_without_boxes
+train,29487,2891,209334,7.099,6.0,42,5
+valid,369,369,1072,2.905,2.0,18,0
+test,369,368,1106,2.997,2.0,28,0
+TOTAL,30225,3598,211512,6.998,6.0,42,5
