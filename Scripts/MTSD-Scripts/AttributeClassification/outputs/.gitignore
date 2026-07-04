@@ -1,0 +1,4 @@
+crops/
+checkpoints/
+logs/
+wandb/

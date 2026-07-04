@@ -1,0 +1,15 @@
+attribute,value,annotations
+view_angle,Front,2080
+view_angle,Back,1952
+view_angle,Side,1425
+mounting,Pole-Mounted,4850
+mounting,Wall-Mounted,607
+condition,Good,4126
+condition,Weathered,995
+condition,Heavily Damaged,332
+sign_shape,Circular,2439
+sign_shape,Quadrangle,1501
+sign_shape,Triangular,741
+sign_shape,Octagonal,654
+sign_shape,Pentagon,115
+sign_shape,Damaged-Unknown,4

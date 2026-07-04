@@ -1,0 +1,43 @@
+# ============================================================
+# mtsd-attrcls — MTSD attribute classification environment
+# ============================================================
+# Runs Scripts/AttributeClassification/ (DINOv3 / V-JEPA / ConvNeXt
+# multi-head attribute experiments). Formerly named "mtsd-attr".
+# Pip pins are the pinned superset of
+# Requirements/requirements-attribute-classification.txt.
+#
+# Create:   see Scripts/CondaEnvironments/README.md (per-platform scripts)
+# PyTorch is NOT listed here on purpose — the correct build (CUDA 12.8 /
+# CPU / macOS) is platform-specific and installed by the setup scripts
+# after env creation (tested: torch 2.11.0 + torchvision 0.26.0, cu128).
+#
+# Pins mirror the working env on the primary Windows machine (2026-07-03).
+# ============================================================
+name: mtsd-attrcls
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      # ---- Backbones / adaptation ----
+      - transformers==5.2.0
+      - timm==1.0.25
+      - accelerate==1.14.0
+      - peft==0.19.1          # LoRA adapter injection (dinov3_lora / vjepa_lora)
+      - einops==0.8.2
+      - safetensors==0.8.0
+      - huggingface_hub==1.21.0
+      # ---- Data / metrics ----
+      - numpy==2.4.4
+      - pandas==2.3.3
+      - pyarrow==24.0.0
+      - scikit-learn==1.9.0
+      - pillow==12.2.0
+      - matplotlib==3.11.0
+      # ---- Config / tracking / inference UI ----
+      - pyyaml==6.0.3
+      - wandb==0.28.0
+      - python-dotenv==1.2.2
+      - gradio==6.19.0
+      - tqdm==4.68.3

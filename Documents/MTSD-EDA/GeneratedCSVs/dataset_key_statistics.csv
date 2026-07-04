@@ -1,0 +1,23 @@
+Statistic,Value
+Images on disk,"7,492"
+Total volume,20.76 GiB
+Unreadable images,0
+EXIF coverage,76.9%
+GPS coverage,56.4%
+Median resolution,3024×4032 px
+Median megapixels,12.2 MP
+Portrait orientation,97.3%
+Device manufacturers,5
+Distinct camera models,34
+Capture window,06 Nov 2025 - 31 Jan 2026
+Localities reached,50
+QA-verified images,"1,971"
+QA-verified annotations,"5,457"
+Annotation classes,12
+Boxes per image (mean),2.77
+Class imbalance ratio,124 : 1
+Gini coefficient (classes),0.43
+Small objects (COCO),9.7%
+Median relative box area,0.865%
+Signs not in good condition,24.4%
+Near-duplicate pairs,12

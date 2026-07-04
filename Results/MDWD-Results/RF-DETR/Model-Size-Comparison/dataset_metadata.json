@@ -1,0 +1,140 @@
+{
+  "dataset_path": "E:\\1. UM-Staff\\AICOM\\AICOM-OD\\Dataset-Versions\\MDWD-RFDETR",
+  "dataset_dir": "E:\\1. UM-Staff\\AICOM\\AICOM-OD\\Dataset-Versions\\MDWD-RFDETR",
+  "workspace": "um-vbsez",
+  "project": "maltese-garbage-bag-detection-xgodx",
+  "version": 20,
+  "export_format": "coco-mmdetection",
+  "dataset_augmentation": "pre-augmented export; RF-DETR online augmentation left at package defaults",
+  "train": {
+    "annotation_file": "E:\\1. UM-Staff\\AICOM\\AICOM-OD\\Dataset-Versions\\MDWD-RFDETR\\train\\_annotations.coco.json",
+    "images": 29487,
+    "annotations": 209349,
+    "categories": [
+      {
+        "id": 0,
+        "name": "Mixed Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 1,
+        "name": "Orange CMD",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 2,
+        "name": "Organic Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 3,
+        "name": "Other Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 4,
+        "name": "Recyclable Material",
+        "supercategory": "mdwd"
+      }
+    ],
+    "class_names": [
+      "Mixed Waste",
+      "Orange CMD",
+      "Organic Waste",
+      "Other Waste",
+      "Recyclable Material"
+    ],
+    "class_count": 5,
+    "image_files": 29487
+  },
+  "valid": {
+    "annotation_file": "E:\\1. UM-Staff\\AICOM\\AICOM-OD\\Dataset-Versions\\MDWD-RFDETR\\valid\\_annotations.coco.json",
+    "images": 369,
+    "annotations": 1072,
+    "categories": [
+      {
+        "id": 0,
+        "name": "Mixed Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 1,
+        "name": "Orange CMD",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 2,
+        "name": "Organic Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 3,
+        "name": "Other Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 4,
+        "name": "Recyclable Material",
+        "supercategory": "mdwd"
+      }
+    ],
+    "class_names": [
+      "Mixed Waste",
+      "Orange CMD",
+      "Organic Waste",
+      "Other Waste",
+      "Recyclable Material"
+    ],
+    "class_count": 5,
+    "image_files": 369
+  },
+  "test": {
+    "annotation_file": "E:\\1. UM-Staff\\AICOM\\AICOM-OD\\Dataset-Versions\\MDWD-RFDETR\\test\\_annotations.coco.json",
+    "images": 369,
+    "annotations": 1106,
+    "categories": [
+      {
+        "id": 0,
+        "name": "Mixed Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 1,
+        "name": "Orange CMD",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 2,
+        "name": "Organic Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 3,
+        "name": "Other Waste",
+        "supercategory": "mdwd"
+      },
+      {
+        "id": 4,
+        "name": "Recyclable Material",
+        "supercategory": "mdwd"
+      }
+    ],
+    "class_names": [
+      "Mixed Waste",
+      "Orange CMD",
+      "Organic Waste",
+      "Other Waste",
+      "Recyclable Material"
+    ],
+    "class_count": 5,
+    "image_files": 369
+  },
+  "class_names": [
+    "Mixed Waste",
+    "Orange CMD",
+    "Organic Waste",
+    "Other Waste",
+    "Recyclable Material"
+  ],
+  "class_count": 5
+}

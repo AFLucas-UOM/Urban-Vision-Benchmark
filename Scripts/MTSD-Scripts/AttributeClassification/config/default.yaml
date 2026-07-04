@@ -1,0 +1,207 @@
+# Central configuration for the MTSD attribute representation learning experiment.
+# All relative paths are resolved against the repository root (MTSDataset/).
+# Nothing in the source code hardcodes paths, attributes, or class names; edit here instead.
+
+seed: 42
+
+paths:
+  data_root: Datasets
+  annotations_root: Datasets/Annotations
+  subproject_root: Scripts/AttributeClassification
+  manifest: Scripts/AttributeClassification/outputs/manifests/manifest.json
+  crops_dir: Scripts/AttributeClassification/outputs/crops
+  checkpoints_dir: Scripts/AttributeClassification/outputs/checkpoints
+  metrics_dir: Scripts/AttributeClassification/outputs/metrics
+  reports_dir: Scripts/AttributeClassification/outputs/reports
+  experiment_log: Scripts/AttributeClassification/outputs/experiment_log.jsonl
+  env_file: .env
+
+data:
+  # A group is QA-approved iff <annotations_root>/<group>/Final-QA/ contains a file
+  # matching qa_filename_pattern. Groups without it are excluded automatically -
+  # as of 2026-07-03 that means exactly GRP-1, GRP-2, GRP-3. New groups join
+  # automatically once their Final-QA JSON exists; no config change needed.
+  group_dir_pattern: "GRP-*"
+  qa_subdir: Final-QA
+  qa_filename_pattern: "QA-GRP*.json"
+  # Context margin added around each bbox when extracting crops, as a fraction of
+  # bbox width/height per side (mounting/view-angle cues need surrounding context).
+  crop_padding: 0.25
+  # Crops whose bbox min(width, height) in original-resolution pixels is below this
+  # are excluded from the manifest (decision 2026-07-03: unreadable at 224x224).
+  min_crop_size: 16
+  crop_format: jpg
+  crop_quality: 95
+  # What to do with attribute values not listed in an attribute's class vocabulary
+  # (and not in drop_values): "mask" treats them as a missing label, "error" aborts.
+  unknown_value_policy: mask
+
+attributes:
+  view_angle:
+    classes: [Front, Back, Side]
+  mounting:
+    classes: [Pole-Mounted, Wall-Mounted]
+  condition:
+    classes: [Good, Weathered, Heavily Damaged]
+  sign_shape:
+    classes: [Circular, Quadrangle, Triangular, Octagonal, Pentagon]
+    # Crops carrying these values are dropped entirely, all heads included
+    # (decision 2026-07-03: 4 'Damaged-Unknown' instances are unlearnable).
+    drop_values: [Damaged-Unknown]
+
+splits:
+  fractions:
+    train: 0.8
+    val: 0.1
+    test: 0.1
+  # Salt for the deterministic hash that assigns each source image to a split.
+  # Never change this once experiments have started: it would reshuffle all splits.
+  hash_key: mtsd-attr-split-v1
+
+training:
+  batch_size: 32
+  num_workers: 4
+  # Maximum epoch budget; early stopping usually ends runs sooner. The cosine
+  # schedule spans max_epochs * len(train_loader) steps.
+  max_epochs: 150
+  optimizer: adamw
+  lr_heads: 1.0e-3
+  lr_backbone: 5.0e-5
+  weight_decay: 0.05
+  scheduler: cosine
+  warmup_epochs: 5
+  amp: true
+  grad_clip: 1.0
+  label_smoothing: 0.0
+  # Class-weighted cross-entropy per head, weights computed from the training
+  # split's class frequencies (inverse frequency, normalised to mean 1).
+  class_weighted_loss: true
+  head_loss_weights:
+    view_angle: 1.0
+    mounting: 1.0
+    condition: 1.0
+    sign_shape: 1.0
+  # Stop when validation mean macro-F1 has not improved by at least min_delta
+  # for `patience` consecutive epochs. Best-checkpoint selection is independent
+  # (best.pt tracks any improvement); test metrics are never used for stopping.
+  early_stopping:
+    enabled: true
+    monitor: mean_macro_f1
+    mode: max
+    patience: 10
+    min_delta: 0.001
+  augmentation:
+    color_jitter: [0.3, 0.3, 0.2, 0.02]
+    rotation_degrees: 10
+    random_resized_crop_scale: [0.8, 1.0]
+    horizontal_flip: false
+
+# Checkpoint selection metric: best epoch = highest mean macro-F1 across heads on val.
+selection_metric: mean_macro_f1
+
+# Head architecture for frozen backbones: "linear" or "mlp".
+probe:
+  type: linear
+  mlp_hidden_dim: 512
+  mlp_dropout: 0.2
+
+# Each variant: backbone kind + adaptation mode.
+#   frozen   - backbone requires_grad=False, pinned to eval(), heads only
+#   lora     - base weights frozen, LoRA adapters + heads trainable
+#   finetune - whole network trained end to end
+models:
+  dinov3:
+    backbone: dinov3
+    hf_model_id: facebook/dinov3-vitb16-pretrain-lvd1689m
+    adaptation: frozen
+    image_size: 224
+  dinov3_lora:
+    backbone: dinov3
+    hf_model_id: facebook/dinov3-vitb16-pretrain-lvd1689m
+    adaptation: lora
+    # DINOv3ViTModel uses separate per-block projections; adapters go on the
+    # query and value projections (verified module names, transformers 5.12).
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [q_proj, v_proj]
+    image_size: 224
+    training_overrides:
+      lr_backbone: 2.0e-4
+  vjepa:
+    backbone: vjepa
+    # backend: "torch_hub" loads V-JEPA 2.1 from Meta's GitHub repo;
+    # "transformers" loads V-JEPA 2 from Hugging Face. If torch_hub fails
+    # (e.g. decord issues), the code falls back to transformers with a warning.
+    backend: torch_hub
+    hf_model_id: facebook/vjepa2-vitl-fpc64-256
+    torch_hub_repo: facebookresearch/vjepa2
+    torch_hub_entrypoint: vjepa2_1_vit_large_384
+    # Meta's hubconf currently points at a localhost placeholder; the real
+    # checkpoint is pre-cached from this URL so the hub load succeeds.
+    torch_hub_checkpoint_url: https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt
+    # Pseudo-clip length: the image is repeated this many times along the
+    # temporal axis (must be a multiple of the tubelet size, 2).
+    num_frames: 2
+    adaptation: frozen
+    image_size_transformers: 256
+    image_size_torch_hub: 384
+  vjepa_lora:
+    backbone: vjepa
+    backend: torch_hub
+    hf_model_id: facebook/vjepa2-vitl-fpc64-256
+    torch_hub_repo: facebookresearch/vjepa2
+    torch_hub_entrypoint: vjepa2_1_vit_large_384
+    torch_hub_checkpoint_url: https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt
+    num_frames: 2
+    adaptation: lora
+    # Meta's VisionTransformer uses a fused qkv projection per block, so the
+    # query/value-equivalent target is the fused qkv Linear (q, k and v are
+    # adapted jointly; verified module names, vjepa2 repo main).
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [qkv]
+    image_size_transformers: 256
+    image_size_torch_hub: 384
+    training_overrides:
+      lr_backbone: 2.0e-4
+  convnext_frozen:
+    backbone: convnext
+    adaptation: frozen
+    image_size: 224
+  convnext:
+    backbone: convnext
+    adaptation: finetune
+    image_size: 224
+    training_overrides:
+      lr_heads: 4.0e-4
+
+wandb:
+  # Master switch: false runs fully offline (wandb.init(mode="disabled")),
+  # no key needed. Smoke tests always disable W&B regardless of this flag.
+  enabled: true
+  project: MSc-MTSD-Attributes
+  entity: null
+  # Optional W&B run group - set to a fresh label (e.g. "rerun-2026-07") so a
+  # clean experiment round is separated from any earlier runs in the project.
+  group: null
+  # Optional prefix prepended to every run name (run names are otherwise
+  # "<variant>-<timestamp>").
+  run_name_prefix: ""
+
+run_all:
+  # Default experiment set; LoRA variants are opt-in via
+  # `run_all.py --include dinov3_lora vjepa_lora` (or --variants to replace).
+  variants: [dinov3, vjepa, convnext_frozen, convnext]
+  # Sequential by default (single GPU); "parallel: true" launches subprocesses.
+  parallel: false
+
+smoke_test:
+  max_samples_per_split: 64
+  max_epochs: 1
+  batch_size: 8
+  num_workers: 0
+  disable_wandb: true

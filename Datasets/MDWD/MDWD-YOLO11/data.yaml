@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 5
+names: ['Mixed Waste', 'Orange CMD', 'Organic Waste', 'Other Waste', 'Recyclable Material']
+
+roboflow:
+  workspace: um-vbsez
+  project: maltese-garbage-bag-detection-xgodx
+  version: 20
+  license: CC BY 4.0
+  url: https://app.roboflow.com/um-vbsez/maltese-garbage-bag-detection-xgodx/20

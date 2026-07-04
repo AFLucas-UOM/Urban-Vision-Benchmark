@@ -1,0 +1,8 @@
+annotation_uid,image_uid,category_name,view_angle,mounting,condition,sign_shape
+282,123,Street Sign,Front,Pole-Mounted,Good,
+522,205,Blind-Spot Mirror (Convex Mirror),Back,Pole-Mounted,Good,
+658,253,Pedestrian Crossing,Front,Pole-Mounted,,Triangular
+944,354,Back-Unknown,Back,Pole-Mounted,Good,
+980,363,Back-Unknown,Back,Pole-Mounted,,Triangular
+1278,466,Back-Unknown,Back,Pole-Mounted,,Quadrangle
+1340,493,Other-Unknown,Side,Pole-Mounted,,Quadrangle

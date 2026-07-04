@@ -1,0 +1,174 @@
+{
+ "run_id": "convnext-20260703-025354",
+ "variant": "convnext",
+ "split": "test",
+ "smoke_test": false,
+ "timestamp": "2026-07-03T01:09:42+00:00",
+ "mean_macro_f1": 0.8600769079502802,
+ "attributes": {
+  "view_angle": {
+   "n": 503,
+   "accuracy": 0.9244532803180915,
+   "macro_f1": 0.9153155510278684,
+   "classes": [
+    "Front",
+    "Back",
+    "Side"
+   ],
+   "per_class_f1": {
+    "Front": 0.9267015706806283,
+    "Back": 0.9595959595959596,
+    "Side": 0.8596491228070176
+   },
+   "support": {
+    "Front": 185,
+    "Back": 200,
+    "Side": 118
+   },
+   "confusion_matrix": [
+    [
+     177,
+     2,
+     6
+    ],
+    [
+     4,
+     190,
+     6
+    ],
+    [
+     16,
+     4,
+     98
+    ]
+   ]
+  },
+  "mounting": {
+   "n": 503,
+   "accuracy": 0.952286282306163,
+   "macro_f1": 0.8690786048932847,
+   "classes": [
+    "Pole-Mounted",
+    "Wall-Mounted"
+   ],
+   "per_class_f1": {
+    "Pole-Mounted": 0.9734513274336283,
+    "Wall-Mounted": 0.7647058823529411
+   },
+   "support": {
+    "Pole-Mounted": 444,
+    "Wall-Mounted": 59
+   },
+   "confusion_matrix": [
+    [
+     440,
+     4
+    ],
+    [
+     20,
+     39
+    ]
+   ]
+  },
+  "condition": {
+   "n": 502,
+   "accuracy": 0.852589641434263,
+   "macro_f1": 0.6899047394921727,
+   "classes": [
+    "Good",
+    "Weathered",
+    "Heavily Damaged"
+   ],
+   "per_class_f1": {
+    "Good": 0.9236641221374046,
+    "Weathered": 0.6127167630057804,
+    "Heavily Damaged": 0.5333333333333333
+   },
+   "support": {
+    "Good": 387,
+    "Weathered": 85,
+    "Heavily Damaged": 30
+   },
+   "confusion_matrix": [
+    [
+     363,
+     23,
+     1
+    ],
+    [
+     30,
+     53,
+     2
+    ],
+    [
+     6,
+     12,
+     12
+    ]
+   ]
+  },
+  "sign_shape": {
+   "n": 503,
+   "accuracy": 0.9681908548707754,
+   "macro_f1": 0.9660087363877953,
+   "classes": [
+    "Circular",
+    "Quadrangle",
+    "Triangular",
+    "Octagonal",
+    "Pentagon"
+   ],
+   "per_class_f1": {
+    "Circular": 0.9775784753363229,
+    "Quadrangle": 0.9765886287625418,
+    "Triangular": 0.9565217391304348,
+    "Octagonal": 0.9193548387096774,
+    "Pentagon": 1.0
+   },
+   "support": {
+    "Circular": 226,
+    "Quadrangle": 148,
+    "Triangular": 57,
+    "Octagonal": 61,
+    "Pentagon": 11
+   },
+   "confusion_matrix": [
+    [
+     218,
+     2,
+     1,
+     5,
+     0
+    ],
+    [
+     0,
+     146,
+     1,
+     1,
+     0
+    ],
+    [
+     0,
+     2,
+     55,
+     0,
+     0
+    ],
+    [
+     2,
+     1,
+     1,
+     57,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0,
+     11
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,45 @@
+# ============================================================
+# PromptDetect — main environment (SAM 3 / 3.1 + Cosmos Reason2)
+# ============================================================
+# Tested on Python 3.12 inside the Conda env "mtsd-base" (formerly "sam3").
+# Reproducible env creation: Scripts/CondaEnvironments/environment-mtsd-base.yml
+# (plus the per-platform setup scripts in that folder).
+# Install order matters — see Documents/PromptDetect.md → "Setup".
+# LocateAnything-3B uses a SEPARATE env: Requirements/requirements-locate-anything.txt
+#
+#   1. PyTorch (pick the right CUDA/CPU build):  https://pytorch.org
+#   2. This file:  pip install -r Requirements/requirements-promptdetect.txt
+#   3. Meta sam3 package (SAM 3 / SAM 3.1)        — see Documents/PromptDetect.md
+#   4. Request gated weights + `hf auth login`    — see Documents/PromptDetect.md
+# ============================================================
+
+# ---- App framework ----
+gradio>=4.28.0
+
+# ---- transformers: Cosmos Reason2 (Qwen3-VL) ----
+# Qwen3VLForConditionalGeneration needs transformers >= 4.57.
+transformers>=4.57.0
+accelerate>=0.27.0
+huggingface_hub>=0.21.0
+safetensors>=0.4.0
+
+# ---- Vision & numerics ----
+Pillow>=10.0.0
+opencv-python>=4.8.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+numpy
+
+# ---- SAM 3 / SAM 3.1 native package dependency ----
+# pkg_resources was removed in setuptools 81; the sam3 package still uses it.
+setuptools<81
+
+# ---- PyTorch (install separately, see README) ----
+# torch
+# torchvision
+
+# ---- SAM 3 / SAM 3.1 (Meta native package — required for both) ----
+# pip install git+https://github.com/facebookresearch/sam3.git
+# Windows only: the package imports `triton`, which has no official Windows
+# wheels — install the community port instead:
+# pip install triton-windows

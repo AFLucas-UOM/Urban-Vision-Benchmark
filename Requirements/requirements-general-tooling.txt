@@ -1,0 +1,31 @@
+# ============================================================
+# General MTSDataset tooling (shared across the repository)
+# ============================================================
+# For dataset preparation, Label Studio project setup, EDA notebooks, GPS
+# mapping, lightweight sample rendering, and the classic (non-GPU) GDPR
+# anonymiser backend. Install with:
+#   pip install -r Requirements/requirements-general-tooling.txt
+#
+# GPU components use their own Conda environments — YAMLs and setup scripts
+# live in Scripts/CondaEnvironments/. Their pip pins are:
+#   Requirements/requirements-promptdetect.txt             (mtsd-base: SAM 3/3.1 + Cosmos)
+#   Requirements/requirements-locate-anything.txt          (mtsd-la: LocateAnything worker)
+#   Requirements/requirements-attribute-classification.txt (mtsd-attrcls: attribute experiments)
+# ============================================================
+
+Pillow>=10.0.0
+numpy>=1.26.0
+pandas>=2.0.0
+folium>=0.15.0
+branca>=0.7.0
+requests>=2.31.0
+label-studio>=1.12.0
+tqdm>=4.66.0
+matplotlib>=3.7.0
+notebook>=7.0.0
+ipykernel>=6.0.0
+
+# GDPR anonymiser (face / licence-plate / QR detection and blurring)
+opencv-python>=4.8.0
+# Optional: plug-in YOLO detectors for the anonymiser (--yolo-weights)
+# ultralytics>=8.0.0

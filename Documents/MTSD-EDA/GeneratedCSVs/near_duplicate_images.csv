@@ -1,0 +1,13 @@
+file_a,file_b,group_a,group_b,hamming_distance,same_file_size
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.13 (1) - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.13 (1).jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.13 (2) 2 - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.13 (2).jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.13 - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.13.jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.27 (2) - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.27 (2).jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.28 (5) - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.28 (5).jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.29 (6) - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-16 at 17.52.29 (6).jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-17 at 15.01.27 - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-17 at 15.01.27.jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-20 at 16.02.58 - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-20 at 16.02.58.jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-20 at 16.03.00 (1) - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-20 at 16.03.00 (1).jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-20 at 16.03.00 (2) - Edited.jpg,Datasets/GRP-10/merged_images/WhatsApp Image 2025-11-20 at 16.03.00 (2).jpeg,GRP-10,GRP-10,0,False
+Datasets/GRP-11/merged_images/05174eac-IMG_6411.jpeg,Datasets/GRP-11/merged_images/d5012226-IMG_6411.jpeg,GRP-11,GRP-11,0,True
+Datasets/GRP-9/merged_images/0818c28d-20251108_012029.jpg,Datasets/GRP-9/merged_images/a834dc4d-NE9_side.jpg,GRP-9,GRP-9,1,False

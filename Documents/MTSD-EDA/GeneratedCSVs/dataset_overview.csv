@@ -1,0 +1,11 @@
+Metric,Value
+Images on disk,"7,492"
+Readable images,"7,492"
+Total volume,20.76 GiB
+Images with EXIF metadata,"5,759  (76.9%)"
+Images with GPS coordinates,"4,228  (56.4%)"
+Images with capture timestamp,"5,432  (72.5%)"
+Capture window,06 Nov 2025 - 31 Jan 2026
+QA-verified images,"1,971"
+QA-verified annotations,"5,457"
+Annotation classes,12

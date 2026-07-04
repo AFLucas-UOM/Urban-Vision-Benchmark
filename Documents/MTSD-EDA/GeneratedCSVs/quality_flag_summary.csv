@@ -1,0 +1,7 @@
+flag,image_count
+missing_exif,1733
+missing_gps,3158
+low_resolution_under_1mp,161
+very_large_over_12mp,5521
+small_file_under_250kb,319
+extreme_aspect_ratio,288
