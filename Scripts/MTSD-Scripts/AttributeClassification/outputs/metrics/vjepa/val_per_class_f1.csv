@@ -1,14 +1,14 @@
 variant,split,attribute,class,f1,support
-vjepa,val,view_angle,Front,0.8658,198
-vjepa,val,view_angle,Back,0.8411,148
-vjepa,val,view_angle,Side,0.7884,123
-vjepa,val,mounting,Pole-Mounted,0.9544,414
-vjepa,val,mounting,Wall-Mounted,0.7087,55
-vjepa,val,condition,Good,0.8020,329
-vjepa,val,condition,Weathered,0.4882,114
-vjepa,val,condition,Heavily Damaged,0.3099,25
-vjepa,val,sign_shape,Circular,0.9365,221
-vjepa,val,sign_shape,Quadrangle,0.8843,116
-vjepa,val,sign_shape,Triangular,0.9173,63
-vjepa,val,sign_shape,Octagonal,0.8036,55
-vjepa,val,sign_shape,Pentagon,0.5000,13
+vjepa,val,view_angle,Front,0.8529,198
+vjepa,val,view_angle,Back,0.8479,148
+vjepa,val,view_angle,Side,0.7632,123
+vjepa,val,mounting,Pole-Mounted,0.9557,414
+vjepa,val,mounting,Wall-Mounted,0.7143,55
+vjepa,val,condition,Good,0.8226,329
+vjepa,val,condition,Weathered,0.4796,114
+vjepa,val,condition,Heavily Damaged,0.3077,25
+vjepa,val,sign_shape,Circular,0.9100,221
+vjepa,val,sign_shape,Quadrangle,0.8889,116
+vjepa,val,sign_shape,Triangular,0.9375,63
+vjepa,val,sign_shape,Octagonal,0.7246,55
+vjepa,val,sign_shape,Pentagon,0.4800,13

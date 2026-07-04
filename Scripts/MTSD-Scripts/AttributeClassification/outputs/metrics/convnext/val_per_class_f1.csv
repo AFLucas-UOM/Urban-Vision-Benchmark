@@ -1,14 +1,14 @@
 variant,split,attribute,class,f1,support
-convnext,val,view_angle,Front,0.9063,198
+convnext,val,view_angle,Front,0.8923,198
 convnext,val,view_angle,Back,0.9498,148
-convnext,val,view_angle,Side,0.8443,123
-convnext,val,mounting,Pole-Mounted,0.9750,414
-convnext,val,mounting,Wall-Mounted,0.7879,55
-convnext,val,condition,Good,0.8883,329
-convnext,val,condition,Weathered,0.5435,114
-convnext,val,condition,Heavily Damaged,0.4889,25
-convnext,val,sign_shape,Circular,0.9731,221
-convnext,val,sign_shape,Quadrangle,0.9283,116
-convnext,val,sign_shape,Triangular,0.9921,63
-convnext,val,sign_shape,Octagonal,0.9057,55
+convnext,val,view_angle,Side,0.8273,123
+convnext,val,mounting,Pole-Mounted,0.9737,414
+convnext,val,mounting,Wall-Mounted,0.7800,55
+convnext,val,condition,Good,0.8931,329
+convnext,val,condition,Weathered,0.5612,114
+convnext,val,condition,Heavily Damaged,0.4583,25
+convnext,val,sign_shape,Circular,0.9796,221
+convnext,val,sign_shape,Quadrangle,0.9277,116
+convnext,val,sign_shape,Triangular,0.9767,63
+convnext,val,sign_shape,Octagonal,0.9189,55
 convnext,val,sign_shape,Pentagon,0.6000,13

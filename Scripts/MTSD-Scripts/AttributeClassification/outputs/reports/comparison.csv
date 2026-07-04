@@ -1,4 +1,7 @@
-variant,run_id,view_angle,mounting,condition,sign_shape,mean_macro_f1
-dinov3,dinov3-20260703-021817,0.8594,0.8417,0.5777,0.8697,0.7871
-vjepa,vjepa-20260703-023332,0.8751,0.8606,0.5294,0.8575,0.7806
-convnext,convnext-20260703-025354,0.9153,0.8691,0.6899,0.9660,0.8601
+variant,run_id,adaptation,view_angle,mounting,condition,sign_shape,mean_macro_f1,val_mean_macro_f1,best_epoch,stopped_epoch,stop_reason,total_params,trainable_params,trainable_pct
+dinov3,dinov3-20260704-010441,frozen,0.8649,0.8458,0.5534,0.8663,0.7826,0.7697,17,22,early_stopping,85670413,9997,0.0117
+dinov3_lora,dinov3_lora-20260704-020900,lora,0.9129,0.8959,0.7346,0.9503,0.8734,0.8327,16,22,early_stopping,85965325,304909,0.3547
+vjepa,vjepa-20260704-011610,frozen,0.8823,0.8672,0.5110,0.8189,0.7699,0.7453,19,29,early_stopping,304694285,13325,0.0044
+vjepa_lora,vjepa_lora-20260704-022043,lora,0.9089,0.9054,0.5948,0.9507,0.8400,0.8380,8,18,early_stopping,305480717,799757,0.2618
+convnext_frozen,convnext_frozen-20260704-013448,frozen,0.8426,0.8026,0.5673,0.8389,0.7629,0.7442,37,47,early_stopping,27828589,9997,0.0359
+convnext,convnext-20260704-015608,finetune,0.9054,0.8734,0.7113,0.9663,0.8641,0.8212,21,25,early_stopping,27828589,27828589,100.0
