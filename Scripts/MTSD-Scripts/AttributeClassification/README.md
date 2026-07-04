@@ -37,7 +37,7 @@ detection or localisation.
 ## Folder structure
 
 ```
-Scripts/AttributeClassification/
+Scripts/MTSD-Scripts/AttributeClassification/
   README.md                  this file
   config/default.yaml        the single source of truth for paths, attributes,
                              class vocabularies, hyperparameters, model variants
@@ -78,7 +78,7 @@ break V-JEPA 2.1 loading.
 
 Training runs in the dedicated conda env **mtsd-attrcls** (Python 3.11, CUDA 12.8
 torch). Create it reproducibly from
-[Scripts/CondaEnvironments/](../CondaEnvironments/README.md)
+[Scripts/Other-Scripts/CondaEnvironments/](../../Other-Scripts/CondaEnvironments/README.md)
 (`.\setup_conda_env.ps1 -Name mtsd-attrcls`), or manually from the repository
 root (pip pins in
 [Requirements/requirements-attribute-classification.txt](../../Requirements/requirements-attribute-classification.txt)):
@@ -94,7 +94,7 @@ because this machine has a shared `AppData\Roaming\Python\Python311` site-packag
 that shadows env packages with incompatible versions:
 
 ```
-cd Scripts/AttributeClassification
+cd Scripts/MTSD-Scripts/AttributeClassification
 PYTHONNOUSERSITE=1 C:/Users/fridge/anaconda3/envs/mtsd-attrcls/python.exe -s run_all.py
 ```
 
@@ -193,7 +193,7 @@ All scripts accept `--config path/to/other.yaml` to run with a different config.
 Ground truth is **only** the QA-approved COCO JSONs:
 
 ```
-Datasets/Annotations/GRP-<N>/Final-QA/QA-GRP<N>.json
+Datasets/MTSD/Annotations/GRP-<N>/Final-QA/QA-GRP<N>.json
 ```
 
 A group is **QA-approved iff that file exists** (exactly one match of
@@ -204,7 +204,7 @@ three groups**; further groups join automatically once their `Final-QA` JSON
 lands (no config change needed). In each QA JSON:
 
 - `images[]`: `id`, `file_name`, `width`, `height`, and `source_image` (a
-  repo-relative path into `Datasets/GRP-<N>/Images/`). Width/height describe the
+  repo-relative path into `Datasets/MTSD/GRP-<N>/Images/`). Width/height describe the
   EXIF-rotated view Label Studio annotated; crop extraction detects and applies
   the rotation when the stored pixels differ.
 - `annotations[]`: `image_id`, `category_id` (sign type, unused here), `bbox`
@@ -216,7 +216,7 @@ lands (no config change needed). In each QA JSON:
 Every run (of any entry point) starts with group discovery. No code or config
 changes are needed when a new group finishes QA:
 
-1. All `GRP-*` folders under `Datasets/` and `Datasets/Annotations/` are
+1. All `GRP-*` folders under `Datasets/` and `Datasets/MTSD/Annotations/` are
    scanned. Each is logged as **included** (Final-QA JSON present), **awaiting
    QA** (annotations but no Final-QA JSON), or **no annotations yet**.
 2. For each QA-approved group the QA file's sha256 is compared with the hash

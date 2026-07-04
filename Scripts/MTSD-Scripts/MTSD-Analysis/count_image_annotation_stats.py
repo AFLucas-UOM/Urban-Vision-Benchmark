@@ -11,8 +11,9 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 
-BASE_DIR = Path(__file__).resolve().parents[2]
-DEFAULT_IMAGES_DIR = BASE_DIR / "Datasets"
+# <repo>/Scripts/MTSD-Scripts/MTSD-Analysis/count_image_annotation_stats.py
+BASE_DIR = Path(__file__).resolve().parents[3]
+DEFAULT_IMAGES_DIR = BASE_DIR / "Datasets" / "MTSD"
 DEFAULT_ANNOTATIONS_DIR = DEFAULT_IMAGES_DIR / "Annotations"
 DEFAULT_CSV_OUTPUT = BASE_DIR / "Documents" / "MTSD-EDA" / "GeneratedCSVs" / "image_annotation_stats.csv"
 DEFAULT_HISTOGRAM_CSV_OUTPUT = BASE_DIR / "Documents" / "MTSD-EDA" / "GeneratedCSVs" / "image_annotation_histogram.csv"
@@ -38,8 +39,8 @@ IMAGE_EXTENSIONS = {
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Count images in Datasets/GRP-*/Images, then summarise available "
-            "annotations from Datasets/Annotations/GRP-* XML or Label Studio JSON per group."
+            "Count images in Datasets/MTSD/GRP-*/Images, then summarise available "
+            "annotations from Datasets/MTSD/Annotations/GRP-* XML or Label Studio JSON per group."
         )
     )
     parser.add_argument(
@@ -52,7 +53,7 @@ def parse_args() -> argparse.Namespace:
         "--annotations-dir",
         type=Path,
         default=DEFAULT_ANNOTATIONS_DIR,
-        help="Path to the Datasets/Annotations folder containing GRP-* XML annotations.",
+        help="Path to the Datasets/MTSD/Annotations folder containing GRP-* XML annotations.",
     )
     parser.add_argument(
         "--csv-output",

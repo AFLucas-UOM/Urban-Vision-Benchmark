@@ -1,19 +1,19 @@
 # Central configuration for the MTSD attribute representation learning experiment.
-# All relative paths are resolved against the repository root (MTSDataset/).
+# All relative paths are resolved against the repository root (Urban-Vision-Benchmark/).
 # Nothing in the source code hardcodes paths, attributes, or class names; edit here instead.
 
 seed: 42
 
 paths:
-  data_root: Datasets
-  annotations_root: Datasets/Annotations
-  subproject_root: Scripts/AttributeClassification
-  manifest: Scripts/AttributeClassification/outputs/manifests/manifest.json
-  crops_dir: Scripts/AttributeClassification/outputs/crops
-  checkpoints_dir: Scripts/AttributeClassification/outputs/checkpoints
-  metrics_dir: Scripts/AttributeClassification/outputs/metrics
-  reports_dir: Scripts/AttributeClassification/outputs/reports
-  experiment_log: Scripts/AttributeClassification/outputs/experiment_log.jsonl
+  data_root: Datasets/MTSD
+  annotations_root: Datasets/MTSD/Annotations
+  subproject_root: Scripts/MTSD-Scripts/AttributeClassification
+  manifest: Scripts/MTSD-Scripts/AttributeClassification/outputs/manifests/manifest.json
+  crops_dir: Scripts/MTSD-Scripts/AttributeClassification/outputs/crops
+  checkpoints_dir: Scripts/MTSD-Scripts/AttributeClassification/outputs/checkpoints
+  metrics_dir: Scripts/MTSD-Scripts/AttributeClassification/outputs/metrics
+  reports_dir: Scripts/MTSD-Scripts/AttributeClassification/outputs/reports
+  experiment_log: Scripts/MTSD-Scripts/AttributeClassification/outputs/experiment_log.jsonl
   env_file: .env
 
 data:

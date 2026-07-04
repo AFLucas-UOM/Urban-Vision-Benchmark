@@ -1,6 +1,6 @@
 # Attribute Classification Methodology and Technical Audit
 
-This document provides a detailed methodology description and correctness review for the `Scripts/AttributeClassification` experiment. It is written to be usable as source material for a dissertation methodology section, while also recording implementation-level details that affect reproducibility, interpretation, and validity.
+This document provides a detailed methodology description and correctness review for the `Scripts/MTSD-Scripts/AttributeClassification` experiment. It is written to be usable as source material for a dissertation methodology section, while also recording implementation-level details that affect reproducibility, interpretation, and validity.
 
 ## 1. Purpose of the Experiment
 
@@ -51,16 +51,16 @@ The source code and README are broadly consistent. The README describes the main
 Only QA-approved annotation files are used. A group is included if and only if its annotation directory contains exactly one matching QA JSON under:
 
 ```text
-Datasets/Annotations/GRP-<N>/Final-QA/QA-GRP*.json
+Datasets/MTSD/Annotations/GRP-<N>/Final-QA/QA-GRP*.json
 ```
 
 Raw annotator XML files are not used by this pipeline. The current manifest includes three QA-approved groups:
 
 | Group | QA file | Images used | Crops kept | Too-small crops dropped | Dropped by configured attribute value |
 |---|---|---:|---:|---:|---:|
-| `GRP-1` | `Datasets/Annotations/GRP-1/Final-QA/QA-GRP1.json` | 724 | 1,947 | 32 | 0 |
-| `GRP-2` | `Datasets/Annotations/GRP-2/Final-QA/QA-GRP2.json` | 630 | 1,554 | 65 | 2 |
-| `GRP-3` | `Datasets/Annotations/GRP-3/Final-QA/QA-GRP3.json` | 617 | 1,772 | 84 | 1 |
+| `GRP-1` | `Datasets/MTSD/Annotations/GRP-1/Final-QA/QA-GRP1.json` | 724 | 1,947 | 32 | 0 |
+| `GRP-2` | `Datasets/MTSD/Annotations/GRP-2/Final-QA/QA-GRP2.json` | 630 | 1,554 | 65 | 2 |
+| `GRP-3` | `Datasets/MTSD/Annotations/GRP-3/Final-QA/QA-GRP3.json` | 617 | 1,772 | 84 | 1 |
 | **Total** |  | **1,971** | **5,273** | **181** | **3** |
 
 The README states that four `Damaged-Unknown` shape instances were dropped as of GRP-1..3. The manifest currently records three crops dropped by configured value across GRP-2 and GRP-3. This small mismatch should be checked if the exact number is reported in the dissertation. The code is authoritative for the current run outputs because the manifest and metrics were generated from it.

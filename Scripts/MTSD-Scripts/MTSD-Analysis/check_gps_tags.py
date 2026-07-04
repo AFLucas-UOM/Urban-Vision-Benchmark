@@ -13,9 +13,10 @@ from PIL import ExifTags, Image, UnidentifiedImageError
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".bmp", ".tiff", ".tif", ".mpo"}
 EXIF_TAGS = ExifTags.TAGS
 GPS_TAGS = ExifTags.GPSTAGS
+# <repo>/Scripts/MTSD-Scripts/MTSD-Analysis/check_gps_tags.py
 SCRIPT_DIR = Path(__file__).resolve().parent
-BASE_DIR = SCRIPT_DIR.parents[1]
-DATASET_ROOT = BASE_DIR / "Datasets"
+BASE_DIR = SCRIPT_DIR.parents[2]
+DATASET_ROOT = BASE_DIR / "Datasets" / "MTSD"
 CSV_DIR = BASE_DIR / "Documents" / "MTSD-EDA" / "GeneratedCSVs"
 
 

@@ -8,7 +8,7 @@ choice attributes into COCO annotations, and overwrites the input file by defaul
 
 .PARAMETER Group
 Dataset group to format, for example GRP-3. When Path is omitted, the script uses:
-Datasets\Annotations\<Group>\Final-QA\QA-<GroupWithoutDash>.json
+Datasets\MTSD\Annotations\<Group>\Final-QA\QA-<GroupWithoutDash>.json
 
 .PARAMETER Path
 Optional path to a Label Studio QA export JSON file. This overrides Group-derived path lookup.
@@ -20,13 +20,13 @@ Optional output path. When omitted, the input file is replaced.
 Do not create a .bak copy before overwriting the input file.
 
 .EXAMPLE
-powershell -ExecutionPolicy Bypass -File .\Scripts\LabelStudio\QA-Formatter.ps1
+powershell -ExecutionPolicy Bypass -File .\Scripts\MTSD-Scripts\LabelStudio\QA-Formatter.ps1
 
 .EXAMPLE
-powershell -ExecutionPolicy Bypass -File .\Scripts\LabelStudio\QA-Formatter.ps1 -Group GRP-3
+powershell -ExecutionPolicy Bypass -File .\Scripts\MTSD-Scripts\LabelStudio\QA-Formatter.ps1 -Group GRP-3
 
 .EXAMPLE
-powershell -ExecutionPolicy Bypass -File .\Scripts\LabelStudio\QA-Formatter.ps1 -Path .\Datasets\Annotations\GRP-3\Final-QA\QA-GRP3.json
+powershell -ExecutionPolicy Bypass -File .\Scripts\MTSD-Scripts\LabelStudio\QA-Formatter.ps1 -Path .\Datasets\MTSD\Annotations\GRP-3\Final-QA\QA-GRP3.json
 #>
 
 [CmdletBinding()]
@@ -79,11 +79,11 @@ function Get-QAPathForGroup {
     param([string]$InputGroup)
 
     $compactGroup = Get-CompactGroupName -InputGroup $InputGroup
-    return Join-Path -Path "Datasets\Annotations\$InputGroup\Final-QA" -ChildPath "QA-$compactGroup.json"
+    return Join-Path -Path "Datasets\MTSD\Annotations\$InputGroup\Final-QA" -ChildPath "QA-$compactGroup.json"
 }
 
 function Read-GroupName {
-    $annotationsRoot = "Datasets\Annotations"
+    $annotationsRoot = "Datasets\MTSD\Annotations"
     $groups = @()
     if (Test-Path -LiteralPath $annotationsRoot) {
         $groups = @(Get-ChildItem -LiteralPath $annotationsRoot -Directory | Sort-Object Name | Select-Object -ExpandProperty Name)

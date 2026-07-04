@@ -3,7 +3,7 @@
 Creates (or updates) the project's Conda environments on Windows PowerShell.
 
 .DESCRIPTION
-Reproducible environment setup for the MTSDataset repository. For the chosen
+Reproducible environment setup for the Urban-Vision-Benchmark repository. For the chosen
 environment the script:
   1. creates the env from its environment-<name>.yml (or updates + prunes it
      if it already exists);

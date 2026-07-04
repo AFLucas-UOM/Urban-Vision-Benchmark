@@ -14,8 +14,9 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[2]
-DATASETS_ROOT = ROOT / "Datasets"
+# <repo>/Scripts/MTSD-Scripts/LabelStudio/prepare_labelstudio_import.py
+ROOT = Path(__file__).resolve().parents[3]
+DATASETS_ROOT = ROOT / "Datasets" / "MTSD"
 DEFAULT_CONFIG = ROOT / "Documents" / "mtsd_config.xml"
 DEFAULT_GROUP = "GRP-1"
 DEFAULT_DATASET = DATASETS_ROOT / DEFAULT_GROUP

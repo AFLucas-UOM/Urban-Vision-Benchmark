@@ -1,6 +1,6 @@
 """Image discovery and EXIF metadata extraction for the MTSD image collection.
 
-The scan walks every ``Datasets/GRP-*`` folder, reads image headers with
+The scan walks every ``Datasets/MTSD/GRP-*`` folder, reads image headers with
 Pillow (no full decode), extracts the EXIF/GPS tags that matter for the EDA,
 and computes a 64-bit difference hash for near-duplicate detection.  Results
 are cached to ``Documents/MTSD-EDA/GeneratedCSVs/image_inventory.csv`` so the
