@@ -31,6 +31,9 @@ Datasets/MDWD/*/test/
 Datasets/MTSD/GRP-*/
 Datasets/MTSD/Annotations/GRP-*/Fiverr-Annotations/
 *.cache
+# Timestamped safety copies made by update_annotation_paths.ps1 (the
+# pre-migration content is already preserved in git history).
+*.pre-migration-*.bak
 
 # --- Model weights and checkpoints ---------------------------
 # Pretrained weights in Models/ are re-downloadable; trained weights
