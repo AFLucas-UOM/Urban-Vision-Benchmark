@@ -1,24 +1,41 @@
 {
- "run_id": "convnext-20260703-025354",
+ "run_id": "convnext-20260704-015608",
  "variant": "convnext",
  "split": "val",
  "smoke_test": false,
- "timestamp": "2026-07-03T01:09:42+00:00",
- "mean_macro_f1": 0.8254012849631177,
+ "timestamp": "2026-07-04T00:08:55+00:00",
+ "mean_macro_f1": 0.8212033622400075,
+ "run_info": {
+  "adaptation": "finetune",
+  "best_epoch": 21,
+  "stopped_epoch": 25,
+  "stop_reason": "early_stopping",
+  "max_epochs": 150,
+  "val_mean_macro_f1": 0.8212033622400075,
+  "parameters": {
+   "total": 27828589,
+   "trainable": 27828589,
+   "trainable_pct": 100.0,
+   "backbone_total": 27818592,
+   "backbone_trainable": 27818592,
+   "head_trainable": 9997,
+   "lora_trainable": 0
+  }
+ },
  "attributes": {
   "view_angle": {
    "n": 469,
-   "accuracy": 0.9040511727078892,
-   "macro_f1": 0.90014139497525,
+   "accuracy": 0.8933901918976546,
+   "macro_f1": 0.8898165683917387,
    "classes": [
     "Front",
     "Back",
     "Side"
    ],
    "per_class_f1": {
-    "Front": 0.9063291139240506,
+    "Front": 0.8923076923076924,
     "Back": 0.9498327759197325,
-    "Side": 0.8442622950819673
+    "Side": 0.8273092369477911
    },
    "support": {
     "Front": 198,
@@ -27,33 +44,33 @@
    },
    "confusion_matrix": [
     [
-     179,
-     3,
-     16
-    ],
-    [
+     174,
      4,
-     142,
-     2
+     20
     ],
     [
-     14,
-     6,
+     3,
+     142,
+     3
+    ],
+    [
+     15,
+     5,
      103
     ]
    ]
   },
   "mounting": {
    "n": 469,
-   "accuracy": 0.9552238805970149,
-   "macro_f1": 0.8814244952504786,
+   "accuracy": 0.9530916844349681,
+   "macro_f1": 0.876873508353222,
    "classes": [
     "Pole-Mounted",
     "Wall-Mounted"
    ],
    "per_class_f1": {
-    "Pole-Mounted": 0.9749702026221693,
-    "Wall-Mounted": 0.7878787878787878
+    "Pole-Mounted": 0.9737470167064439,
+    "Wall-Mounted": 0.78
    },
    "support": {
     "Pole-Mounted": 414,
@@ -61,8 +78,8 @@
    },
    "confusion_matrix": [
     [
-     409,
-     5
+     408,
+     6
     ],
     [
      16,
@@ -73,16 +90,16 @@
   "condition": {
    "n": 468,
    "accuracy": 0.8012820512820513,
-   "macro_f1": 0.6402091347851141,
+   "macro_f1": 0.6375404689814268,
    "classes": [
     "Good",
     "Weathered",
     "Heavily Damaged"
    ],
    "per_class_f1": {
-    "Good": 0.8882602545968883,
-    "Weathered": 0.5434782608695652,
-    "Heavily Damaged": 0.4888888888888889
+    "Good": 0.8930635838150289,
+    "Weathered": 0.5612244897959183,
+    "Heavily Damaged": 0.4583333333333333
    },
    "support": {
     "Good": 329,
@@ -91,26 +108,26 @@
    },
    "confusion_matrix": [
     [
-     314,
-     13,
-     2
+     309,
+     19,
+     1
     ],
     [
-     57,
-     50,
-     7
+     48,
+     55,
+     11
     ],
     [
-     7,
-     7,
+     6,
+     8,
      11
     ]
    ]
   },
   "sign_shape": {
    "n": 468,
-   "accuracy": 0.9487179487179487,
-   "macro_f1": 0.8798301148416279,
+   "accuracy": 0.9508547008547008,
+   "macro_f1": 0.8805829032336419,
    "classes": [
     "Circular",
     "Quadrangle",
@@ -119,10 +136,10 @@
     "Pentagon"
    ],
    "per_class_f1": {
-    "Circular": 0.9730941704035875,
-    "Quadrangle": 0.9282700421940928,
-    "Triangular": 0.9921259842519685,
-    "Octagonal": 0.9056603773584906,
+    "Circular": 0.9795918367346939,
+    "Quadrangle": 0.9276595744680851,
+    "Triangular": 0.9767441860465116,
+    "Octagonal": 0.918918918918919,
     "Pentagon": 0.6
    },
    "support": {
@@ -134,17 +151,17 @@
    },
    "confusion_matrix": [
     [
-     217,
+     216,
      2,
      0,
-     2,
+     3,
      0
     ],
     [
+     1,
+     109,
      3,
-     110,
-     1,
-     1,
+     2,
      1
     ],
     [
@@ -155,10 +172,10 @@
      0
     ],
     [
-     5,
-     2,
+     3,
+     1,
      0,
-     48,
+     51,
      0
     ],
     [

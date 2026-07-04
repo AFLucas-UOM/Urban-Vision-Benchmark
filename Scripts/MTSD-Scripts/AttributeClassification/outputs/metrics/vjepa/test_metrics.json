@@ -1,24 +1,41 @@
 {
- "run_id": "vjepa-20260703-023332",
+ "run_id": "vjepa-20260704-011610",
  "variant": "vjepa",
  "split": "test",
  "smoke_test": false,
- "timestamp": "2026-07-03T00:53:49+00:00",
- "mean_macro_f1": 0.7806395950201735,
+ "timestamp": "2026-07-03T23:34:43+00:00",
+ "mean_macro_f1": 0.7698696755075882,
+ "run_info": {
+  "adaptation": "frozen",
+  "best_epoch": 19,
+  "stopped_epoch": 29,
+  "stop_reason": "early_stopping",
+  "max_epochs": 150,
+  "val_mean_macro_f1": 0.7452821582798872,
+  "parameters": {
+   "total": 304694285,
+   "trainable": 13325,
+   "trainable_pct": 0.0044,
+   "backbone_total": 304680960,
+   "backbone_trainable": 0,
+   "head_trainable": 13325,
+   "lora_trainable": 0
+  }
+ },
  "attributes": {
   "view_angle": {
    "n": 503,
-   "accuracy": 0.882703777335984,
-   "macro_f1": 0.8751252330601713,
+   "accuracy": 0.8906560636182903,
+   "macro_f1": 0.882263145145981,
    "classes": [
     "Front",
     "Back",
     "Side"
    ],
    "per_class_f1": {
-    "Front": 0.8918205804749341,
-    "Back": 0.910025706940874,
-    "Side": 0.8235294117647058
+    "Front": 0.8976377952755905,
+    "Back": 0.9172932330827067,
+    "Side": 0.831858407079646
    },
    "support": {
     "Front": 185,
@@ -27,33 +44,33 @@
    },
    "confusion_matrix": [
     [
-     169,
+     171,
      7,
-     9
+     7
     ],
     [
      10,
-     177,
-     13
+     183,
+     7
     ],
     [
      15,
-     5,
-     98
+     9,
+     94
     ]
    ]
   },
   "mounting": {
    "n": 503,
-   "accuracy": 0.9324055666003976,
-   "macro_f1": 0.8606057642149192,
+   "accuracy": 0.9363817097415507,
+   "macro_f1": 0.8672385351369185,
    "classes": [
     "Pole-Mounted",
     "Wall-Mounted"
    ],
    "per_class_f1": {
-    "Pole-Mounted": 0.9606481481481481,
-    "Wall-Mounted": 0.7605633802816901
+    "Pole-Mounted": 0.9630484988452656,
+    "Wall-Mounted": 0.7714285714285715
    },
    "support": {
     "Pole-Mounted": 444,
@@ -61,8 +78,8 @@
    },
    "confusion_matrix": [
     [
-     415,
-     29
+     417,
+     27
     ],
     [
      5,
@@ -72,17 +89,17 @@
   },
   "condition": {
    "n": 502,
-   "accuracy": 0.7171314741035857,
-   "macro_f1": 0.5293574719236543,
+   "accuracy": 0.7370517928286853,
+   "macro_f1": 0.5110340131150469,
    "classes": [
     "Good",
     "Weathered",
     "Heavily Damaged"
    ],
    "per_class_f1": {
-    "Good": 0.85273492286115,
-    "Weathered": 0.4097560975609756,
-    "Heavily Damaged": 0.32558139534883723
+    "Good": 0.8763440860215054,
+    "Weathered": 0.36809815950920244,
+    "Heavily Damaged": 0.28865979381443296
    },
    "support": {
     "Good": 387,
@@ -91,26 +108,26 @@
    },
    "confusion_matrix": [
     [
-     304,
-     64,
-     19
+     326,
+     37,
+     24
     ],
     [
-     20,
-     42,
-     23
+     26,
+     30,
+     29
     ],
     [
-     2,
-     14,
+     5,
+     11,
      14
     ]
    ]
   },
   "sign_shape": {
    "n": 503,
-   "accuracy": 0.904572564612326,
-   "macro_f1": 0.8574699108819495,
+   "accuracy": 0.8628230616302187,
+   "macro_f1": 0.8189430086324062,
    "classes": [
     "Circular",
     "Quadrangle",
@@ -119,11 +136,11 @@
     "Pentagon"
    ],
    "per_class_f1": {
-    "Circular": 0.9369369369369369,
-    "Quadrangle": 0.9209621993127147,
-    "Triangular": 0.85,
-    "Octagonal": 0.8387096774193549,
-    "Pentagon": 0.7407407407407407
+    "Circular": 0.9065420560747663,
+    "Quadrangle": 0.8960573476702509,
+    "Triangular": 0.8771929824561403,
+    "Octagonal": 0.7006369426751592,
+    "Pentagon": 0.7142857142857143
    },
    "support": {
     "Circular": 226,
@@ -134,31 +151,31 @@
    },
    "confusion_matrix": [
     [
-     208,
+     194,
+     1,
      2,
-     6,
-     7,
-     3
+     25,
+     4
     ],
     [
-     2,
-     134,
-     6,
-     4,
+     1,
+     125,
+     5,
+     15,
      2
     ],
     [
      2,
      4,
-     51,
-     0,
+     50,
+     1,
      0
     ],
     [
-     6,
-     2,
+     5,
      0,
-     52,
+     0,
+     55,
      1
     ],
     [
