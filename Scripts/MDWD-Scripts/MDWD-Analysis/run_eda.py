@@ -22,7 +22,10 @@ from pathlib import Path
 
 import matplotlib
 
-matplotlib.use("Agg")
+# Headless backend for CLI runs; leave the backend alone when imported from
+# a notebook/IPython session (MDWD-EDA.ipynb reuses the chart functions).
+if "ipykernel" not in sys.modules and not hasattr(sys, "ps1"):
+    matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import FuncFormatter

@@ -6,6 +6,7 @@ Tooling for the **Maltese Traffic Sign Dataset (MTSD)** track of the dissertatio
 | --- | --- |
 | [AttributeClassification/](AttributeClassification/README.md) | Multi-attribute sign classification (DINOv3 / V-JEPA / ConvNeXt, frozen · LoRA · fine-tune) with W&B logging |
 | [MTSD-Analysis/](MTSD-Analysis/) | EDA: `mtsd_eda` package, `MTSD-EDA.ipynb`, dataset mapper and audit scripts (outputs go to `Documents/MTSD-EDA/`) |
+| [MTSD-SupervisedNotebooks/](MTSD-SupervisedNotebooks/) | Supervised detection: `Prepare-MTSD-Detection-Dataset.ipynb` (QA groups → `Datasets/MTSD/Prepared/{MTSD-YOLO,MTSD-COCO}`) plus `YOLO12` / `YOLO26` / `RF-DETR` benchmark notebooks (W&B project `MTSD-Supervised-Detection`; runs → `Results/MTSD-Runs/`, exports → `Results/MTSD-Results/`) |
 | [LabelStudio/](LabelStudio/) | Label Studio launchers, import preparation, project setup and the QA formatter |
 | `update_annotation_paths.ps1` | One-off migration of old `source_image` paths in annotation JSONs (see below) |
 

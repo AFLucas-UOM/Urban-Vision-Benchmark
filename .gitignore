@@ -30,6 +30,13 @@ Datasets/MDWD/*/valid/
 Datasets/MDWD/*/test/
 Datasets/MTSD/GRP-*/
 Datasets/MTSD/Annotations/GRP-*/Fiverr-Annotations/
+# Prepared MTSD detection datasets (built by Prepare-MTSD-Detection-Dataset.ipynb);
+# images/labels are regenerable from the tracked QA JSONs + prep_manifest.json,
+# which stay tracked along with data.yaml.
+Datasets/MTSD/Prepared/*/train/
+Datasets/MTSD/Prepared/*/valid/
+Datasets/MTSD/Prepared/*/test/
+Datasets/MTSD/Prepared/_archive/
 *.cache
 # Timestamped safety copies made by update_annotation_paths.ps1 (the
 # pre-migration content is already preserved in git history).
@@ -57,6 +64,9 @@ mlruns/
 Results/MDWD-Runs/**/*.jpg
 Results/MDWD-Runs/**/*.jpeg
 Results/MDWD-Runs/**/*.png
+Results/MTSD-Runs/**/*.jpg
+Results/MTSD-Runs/**/*.jpeg
+Results/MTSD-Runs/**/*.png
 # Attribute-classification bulk artefacts (regenerable from the QA
 # JSONs via mtsd_attr.data_manifest); metrics/reports/manifests are tracked.
 Scripts/MTSD-Scripts/AttributeClassification/outputs/crops/
