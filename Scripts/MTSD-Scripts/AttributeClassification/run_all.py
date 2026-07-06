@@ -30,11 +30,22 @@ import logging
 log = logging.getLogger("mtsd_attr")
 
 
+# Variant keys whose entry-script filename does not follow train_<variant>.py.
+# The ConvNeXt scripts were renamed (frozen -> train_convnext.py, fine-tuned ->
+# train_convnext_finetuned.py) while the variant keys keep their historical
+# names so existing checkpoints/metrics/W&B runs stay valid.
+SCRIPT_FOR_VARIANT = {
+    "convnext_frozen": "train_convnext.py",
+    "convnext": "train_convnext_finetuned.py",
+}
+
+
 def _run_parallel(variants, config_arg, smoke):
     """Launch each variant's entry script as a subprocess and wait for all."""
     procs = {}
     for variant in variants:
-        cmd = [sys.executable, str(Path(__file__).parent / f"train_{variant}.py")]
+        script = SCRIPT_FOR_VARIANT.get(variant, f"train_{variant}.py")
+        cmd = [sys.executable, str(Path(__file__).parent / script)]
         if config_arg:
             cmd += ["--config", config_arg]
         if smoke:

@@ -2,6 +2,10 @@
 
 Thin wrapper around the shared training core; all behaviour is configured in
 config/default.yaml.
+
+Note: for historical continuity this script drives the config variant key
+``convnext`` (existing checkpoints/metrics/W&B runs keep that name); only
+the script filename changed.
 """
 
 import sys

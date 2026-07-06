@@ -1,0 +1,5 @@
+group,annotation_id,attribute,image,qa_file,status,suggestion,value
+GRP-2,16,sign_shape,03c371c6-IMG_20251223_131651.jpg,Datasets\MTSD\Annotations\GRP-2\Final-QA\QA-GRP2.json,known_drop_value,,Damaged-Unknown
+GRP-2,1529,sign_shape,f5018d2e-IMG_20251223_124329.jpg,Datasets\MTSD\Annotations\GRP-2\Final-QA\QA-GRP2.json,known_drop_value,,Damaged-Unknown
+GRP-3,880,sign_shape,87b8c423-IMG_20251203_121216.jpg,Datasets\MTSD\Annotations\GRP-3\Final-QA\QA-GRP3.json,known_drop_value,,Damaged-Unknown
+GRP-3,1078,sign_shape,9e3791d5-20251129_113953.jpg,Datasets\MTSD\Annotations\GRP-3\Final-QA\QA-GRP3.json,known_drop_value,,Damaged-Unknown

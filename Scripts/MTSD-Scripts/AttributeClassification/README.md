@@ -54,8 +54,8 @@ Scripts/MTSD-Scripts/AttributeClassification/
   train_dinov3_lora.py       thin entry point: DINOv3 (LoRA adapters + heads)
   train_vjepa.py             thin entry point: V-JEPA 2/2.1 (frozen, probed)
   train_vjepa_lora.py        thin entry point: V-JEPA 2.1 (LoRA adapters + heads)
-  train_convnext_frozen.py   thin entry point: ConvNeXt-Tiny (frozen, probed)
-  train_convnext.py          thin entry point: ConvNeXt-Tiny (fine-tuned)
+  train_convnext.py          thin entry point: ConvNeXt-Tiny (frozen, probed; variant key convnext_frozen)
+  train_convnext_finetuned.py  thin entry point: ConvNeXt-Tiny (fine-tuned; variant key convnext)
   run_all.py                 manifest update + selected variants + comparison report
   reset_outputs.py           archive/delete generated outputs for a fresh rerun
   inference/gradio_compare.py  side-by-side checkpoint inference UI
@@ -138,7 +138,7 @@ PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --variants din
 One variant via its thin entry script:
 
 ```
-PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s train_convnext_frozen.py
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s train_convnext.py
 ```
 
 Re-evaluate an existing checkpoint (reconstructed from its stored metadata,

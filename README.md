@@ -171,7 +171,7 @@ all relative paths resolve against the repository root):
   deterministic hash-based train/val/test splits), multi-head model, shared
   training loop, evaluation.
 - `train_dinov3.py` / `train_dinov3_lora.py` / `train_vjepa.py` /
-  `train_vjepa_lora.py` / `train_convnext_frozen.py` / `train_convnext.py`,
+  `train_vjepa_lora.py` / `train_convnext.py` / `train_convnext_finetuned.py`,
   orchestrated by `run_all.py` (`--smoke-test` supported).
 - Outputs under `outputs/` (crops, checkpoints, metrics, reports, logs,
   `experiment_log.jsonl`); `reset_outputs.py` archives/clears them safely.
