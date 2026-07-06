@@ -2,7 +2,7 @@
 # PromptDetect — main environment (SAM 3 / 3.1 + Cosmos Reason2)
 # ============================================================
 # Tested on Python 3.12 inside the Conda env "mtsd-base" (formerly "sam3").
-# Reproducible env creation: Scripts/CondaEnvironments/environment-mtsd-base.yml
+# Reproducible env creation: Requirements/CondaEnvironments/environment-mtsd-base.yml
 # (plus the per-platform setup scripts in that folder).
 # Install order matters — see Documents/PromptDetect.md → "Setup".
 # LocateAnything-3B uses a SEPARATE env: Requirements/requirements-locate-anything.txt

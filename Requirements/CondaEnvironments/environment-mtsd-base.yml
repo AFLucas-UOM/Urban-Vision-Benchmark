@@ -5,7 +5,7 @@
 # Formerly named "sam3". Pip pins are the pinned superset of
 # Requirements/requirements-promptdetect.txt.
 #
-# Create:   see Scripts/Other-Scripts/CondaEnvironments/README.md (per-platform scripts)
+# Create:   see Requirements/CondaEnvironments/README.md (per-platform scripts)
 # NOT listed here on purpose (installed by the setup scripts, in order):
 #   1. PyTorch          — platform-specific build (tested: torch 2.10.0 +
 #                         torchvision 0.25.0, cu128)

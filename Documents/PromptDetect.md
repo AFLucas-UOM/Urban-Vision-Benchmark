@@ -143,7 +143,7 @@ Requirements/             # pip dependency definitions (repo root)
 ├── requirements-promptdetect.txt     — main env (SAM 3/3.1 + Cosmos)
 └── requirements-locate-anything.txt  — LocateAnything worker env
 
-Scripts/Other-Scripts/CondaEnvironments/            # reproducible env YAMLs + setup scripts
+Requirements/CondaEnvironments/                     # reproducible env YAMLs + setup scripts
 ├── environment-mtsd-base.yml         — main env (pinned)
 └── environment-mtsd-la.yml           — LocateAnything worker env (pinned)
 
@@ -164,7 +164,7 @@ The app assumes a **Conda environment named `mtsd-base`** (formerly `sam3`) (Pyt
 
 > **Shortcut:** the whole setup below (env + PyTorch + dependencies + `sam3`
 > package) is automated by the per-platform scripts in
-> [Scripts/Other-Scripts/CondaEnvironments/](../Scripts/Other-Scripts/CondaEnvironments/README.md), e.g.
+> [Requirements/CondaEnvironments/](../Requirements/CondaEnvironments/README.md), e.g.
 > `.\setup_conda_env.ps1 -Name mtsd-base`. The manual steps follow.
 
 ```bash
@@ -237,7 +237,7 @@ dedicated `mtsd-la` conda env and proxies inference to it over localhost
 
 Create that env **once** — either via the setup scripts
 (`.\setup_conda_env.ps1 -Name mtsd-la` from
-[Scripts/Other-Scripts/CondaEnvironments/](../Scripts/Other-Scripts/CondaEnvironments/README.md)) or manually:
+[Requirements/CondaEnvironments/](../Requirements/CondaEnvironments/README.md)) or manually:
 
 ```bash
 conda create -n mtsd-la python=3.12 -y
