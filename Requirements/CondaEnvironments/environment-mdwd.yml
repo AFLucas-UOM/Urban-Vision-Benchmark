@@ -4,7 +4,7 @@
 # YOLO detection (ultralytics), VLM experiments (transformers 4.57.x),
 # and the notebook-based annotation/analysis tooling for the MDWD work.
 #
-# Create:   see Scripts/Other-Scripts/CondaEnvironments/README.md (per-platform scripts)
+# Create:   see Requirements/CondaEnvironments/README.md (per-platform scripts)
 # PyTorch is NOT listed here on purpose — the correct build (CUDA 13.0 /
 # CUDA 12.8 / CPU / macOS) is platform-specific and installed by the
 # setup scripts after env creation.

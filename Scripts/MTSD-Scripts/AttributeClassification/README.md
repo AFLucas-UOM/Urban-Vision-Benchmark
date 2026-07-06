@@ -78,7 +78,7 @@ break V-JEPA 2.1 loading.
 
 Training runs in the dedicated conda env **mtsd-attrcls** (Python 3.11, CUDA 12.8
 torch). Create it reproducibly from
-[Scripts/Other-Scripts/CondaEnvironments/](../../Other-Scripts/CondaEnvironments/README.md)
+[Requirements/CondaEnvironments/](../../../Requirements/CondaEnvironments/README.md)
 (`.\setup_conda_env.ps1 -Name mtsd-attrcls`), or manually from the repository
 root (pip pins in
 [Requirements/requirements-attribute-classification.txt](../../Requirements/requirements-attribute-classification.txt)):

@@ -6,7 +6,7 @@
 # by the main env (SAM 3/3.1 + Cosmos Reason2). The main app launches a worker in
 # this env automatically — you only create it once.
 # See Documents/PromptDetect.md → "LocateAnything-3B transparent worker".
-# Reproducible env creation: Scripts/CondaEnvironments/environment-mtsd-la.yml
+# Reproducible env creation: Requirements/CondaEnvironments/environment-mtsd-la.yml
 # (plus the per-platform setup scripts in that folder). Manual alternative:
 #
 #   conda create -n mtsd-la python=3.12 -y

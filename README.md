@@ -212,7 +212,7 @@ standalone audit utilities.
 ### Environments (conda, recommended)
 
 Per-workstream environments are defined in
-[Scripts/Other-Scripts/CondaEnvironments/](Scripts/Other-Scripts/CondaEnvironments/README.md)
+[Requirements/CondaEnvironments/](Requirements/CondaEnvironments/README.md)
 with per-platform setup scripts:
 
 | Env | Used by |

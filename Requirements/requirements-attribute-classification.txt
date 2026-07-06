@@ -3,7 +3,7 @@
 # ============================================================
 # Environment: conda env "mtsd-attrcls" (Python 3.11, formerly "mtsd-attr"),
 # CUDA 12.8 wheels for torch.
-# Reproducible env creation: Scripts/CondaEnvironments/environment-mtsd-attrcls.yml
+# Reproducible env creation: Requirements/CondaEnvironments/environment-mtsd-attrcls.yml
 # (plus the per-platform setup scripts in that folder). Manual alternative —
 # install torch first from the PyTorch index, then the rest:
 #   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128

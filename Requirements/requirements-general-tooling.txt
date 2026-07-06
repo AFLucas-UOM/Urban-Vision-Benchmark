@@ -7,7 +7,7 @@
 #   pip install -r Requirements/requirements-general-tooling.txt
 #
 # GPU components use their own Conda environments — YAMLs and setup scripts
-# live in Scripts/CondaEnvironments/. Their pip pins are:
+# live in Requirements/CondaEnvironments/. Their pip pins are:
 #   Requirements/requirements-promptdetect.txt             (mtsd-base: SAM 3/3.1 + Cosmos)
 #   Requirements/requirements-locate-anything.txt          (mtsd-la: LocateAnything worker)
 #   Requirements/requirements-attribute-classification.txt (mtsd-attrcls: attribute experiments)

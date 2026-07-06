@@ -486,7 +486,7 @@ class LocateAnythingEngine(_Engine):
             raise RuntimeError(
                 f"LocateAnything needs the '{env_name}' conda env (transformers "
                 f"4.57.x), which was not found. Create it once via the setup "
-                f"scripts in Scripts/Other-Scripts/CondaEnvironments/ (see its README), or "
+                f"scripts in Requirements/CondaEnvironments/ (see its README), or "
                 f"manually:\n"
                 f"  conda create -n {env_name} python=3.12 -y\n"
                 f"  conda activate {env_name}\n"

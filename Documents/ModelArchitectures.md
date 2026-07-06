@@ -549,7 +549,7 @@ first divide their 0–1000 grid coordinates by 1000 before this step.
 | `setuptools<81` | setuptools 82 removed `pkg_resources`. The `sam3` package's `model_builder.py` still calls `pkg_resources.resource_filename(...)` at import time. |
 
 Install order for a fresh environment (automated by
-`Scripts/CondaEnvironments/setup_conda_env.ps1 -Name mtsd-base`):
+`Requirements/CondaEnvironments/setup_conda_env.ps1 -Name mtsd-base`):
 
 ```bash
 conda create -n mtsd-base python=3.12 -y
@@ -580,4 +580,4 @@ pip install git+https://github.com/facebookresearch/sam3.git
 | Detection filtering | `Scripts/PromptDetect/utils.py` — `filter_detections` |
 | Visualisation | `Scripts/PromptDetect/utils.py` — `draw_detections` |
 | Gradio UI | `Scripts/PromptDetect/app.py` |
-| LocateAnything env | `Requirements/requirements-locate-anything.txt` + `Scripts/CondaEnvironments/environment-mtsd-la.yml` |
+| LocateAnything env | `Requirements/requirements-locate-anything.txt` + `Requirements/CondaEnvironments/environment-mtsd-la.yml` |
