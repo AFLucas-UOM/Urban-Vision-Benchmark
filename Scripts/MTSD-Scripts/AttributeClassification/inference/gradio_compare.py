@@ -152,8 +152,9 @@ def _is_smoke_checkpoint(path: Path) -> bool:
     return any("smoke" in part.lower() for part in path.parts)
 
 
-# Load initially with include_smoke=True as that is our workspace default for testing
-CHECKPOINTS, DISCOVERY_DIAGNOSTICS = discover_checkpoints(include_smoke=True)
+# Smoke checkpoints are hidden by default; tick "Include Smoke Checkpoints"
+# in the UI to opt in explicitly.
+CHECKPOINTS, DISCOVERY_DIAGNOSTICS = discover_checkpoints(include_smoke=False)
 
 
 @lru_cache(maxsize=8)
@@ -326,6 +327,49 @@ def _no_checkpoint_html(diagnostics: dict[str, Any]) -> str:
     )
 
 
+FAMILY_DISPLAY_NAMES = {"DINO": "DINOv3", "V-JEPA": "V-JEPA", "ConvNeXt": "ConvNeXt", "Unknown": "Model"}
+
+
+def _mode_label(ckpt: dict[str, Any]) -> str:
+    """Training-mode suffix for the comparison title (linearprobe/lora/finetuned/...)."""
+    try:
+        adaptation = ckpt.get("adaptation") or adaptation_of(ckpt.get("model_cfg", {}))
+    except Exception:
+        adaptation = None
+    probe_type = str((ckpt.get("probe") or {}).get("type", "")).lower()
+    if adaptation == "frozen":
+        return "linearprobe" if probe_type == "linear" else "frozen"
+    if adaptation == "lora":
+        return "lora"
+    if adaptation == "finetune":
+        return "finetuned"
+    return "unknown-mode"
+
+
+def _comparison_display_name(info: CheckpointInfo, ckpt: dict[str, Any]) -> str:
+    """'<model>_<mode>' for one loaded checkpoint, e.g. 'DINOv3_lora'."""
+    base = FAMILY_DISPLAY_NAMES.get(info.family, info.family)
+    name = f"{base}_{_mode_label(ckpt)}"
+    if _is_smoke_checkpoint(info.path):
+        name += " (smoke)"
+    return name
+
+
+def _comparison_title_html(names: list[str]) -> str:
+    """Dynamic title: 'A vs B [vs C ...]' from the actually-loaded checkpoints."""
+    unique = list(dict.fromkeys(names))
+    if not unique:
+        return ""
+    title = " vs ".join(unique) if len(unique) > 1 else unique[0]
+    return (
+        "<div style='padding:10px 14px;margin-bottom:4px;border:1px solid #30363d;"
+        "border-radius:6px;background:#0d1117;'>"
+        f"<span style='color:#f0f6fc;font-size:1.05rem;font-weight:600;'>{escape(title)}</span>"
+        "<span style='color:#8b949e;font-size:0.8rem;margin-left:10px;'>model_mode comparison</span>"
+        "</div>"
+    )
+
+
 def run_comparison(
     image: Image.Image | None,
     vjepa_selected: list[str],
@@ -355,12 +399,14 @@ def run_comparison(
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     rows = []
+    comparison_names = []
     rgb = image.convert("RGB")
 
     for info in selected_checkpoints:
         checkpoint_display = _safe_rel(info.path)
         try:
-            model, attributes, transform, _ = load_model(str(info.path), str(device))
+            model, attributes, transform, ckpt = load_model(str(info.path), str(device))
+            comparison_names.append(_comparison_display_name(info, ckpt))
             tensor = transform(rgb).unsqueeze(0).to(device)
             with torch.inference_mode():
                 logits_by_head = model(tensor)
@@ -387,7 +433,7 @@ def run_comparison(
                 "topk": traceback.format_exc(limit=2).strip().splitlines()[-1],
             })
 
-    return _render_table(rows)
+    return _comparison_title_html(comparison_names) + _render_table(rows)
 
 
 def update_checkbox_choices(include_smoke: bool):
@@ -553,13 +599,14 @@ def build_demo():
             """
             <div class="app-header">
                 <h1 class="minimal-title">Traffic Sign Attribute Comparison</h1>
-                <p class="subtitle">Upload an image to run side-by-side inference across selected multi-head checkpoints</p>
+                <p class="subtitle">Upload an image to run side-by-side inference across selected multi-head checkpoints.
+                The results header names exactly what is being compared, e.g. <code>DINOv3_linearprobe vs DINOv3_lora</code>.</p>
             </div>
             """
         )
 
-        # We start with include_smoke=True as default because only smoke checkpoints are present currently in workspace
-        initial_grouped, _ = discover_checkpoints(include_smoke=True)
+        # Smoke checkpoints are excluded by default; the checkbox opts in.
+        initial_grouped, _ = discover_checkpoints(include_smoke=False)
 
         vjepa_choices = [c.label for c in initial_grouped["V-JEPA"]]
         dino_choices = [c.label for c in initial_grouped["DINO"]]
@@ -580,8 +627,9 @@ def build_demo():
                 with gr.Row():
                     include_smoke_cb = gr.Checkbox(
                         label="Include Smoke Checkpoints",
-                        value=True,
-                        info="Scan and load best.pt from -smoke runs."
+                        value=False,
+                        info="Off by default: smoke runs are 1-epoch sanity checks, "
+                             "not comparable models. Tick to include them explicitly."
                     )
                     refresh_btn = gr.Button(
                         "Rescan Disk", 
