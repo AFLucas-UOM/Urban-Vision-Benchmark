@@ -85,3 +85,38 @@ python Scripts/Automation/verify_repository_health.py --dry-run  # console only
 Reports: `Documents/Final-Reports/repository_health_check.md` / `.json`
 (fixed names — a living "current health" snapshot with its timestamp inside).
 Exit code 1 on FAIL-level findings, so it can gate scheduled jobs.
+
+### Local pre-commit / pre-push check (why there is no CI workflow)
+
+A GitHub Actions workflow for this check was considered and deliberately
+**not** added: a fresh CI checkout contains only git-tracked files, and five
+directories the health check requires exist only locally as git-ignored
+data/weights — `Datasets/MTSD/GRP-1/`, `Models/`, `Results/MTSD-Results/`,
+`Results/MTSD-Runs/` and
+`Scripts/MTSD-Scripts/AttributeClassification/outputs/checkpoints/` — so the
+`expected_folders` and `result_folders_preserved` checks would FAIL on every
+CI run by design. Run the check locally before committing or pushing instead
+(standard library only, any Python ≥ 3.9, no packages to install):
+
+```bash
+python Scripts/Automation/verify_repository_health.py --dry-run
+```
+
+Exit code 0 = PASS/WARN, 1 = FAIL; `--dry-run` prints to the console and
+writes nothing.
+
+Optionally enforce it as a git pre-push hook (hooks are local-only and never
+committed). Create `.git/hooks/pre-push` containing:
+
+```sh
+#!/bin/sh
+python "$(git rev-parse --show-toplevel)/Scripts/Automation/verify_repository_health.py" --dry-run || {
+    echo "Repository health check FAILED - push aborted (bypass with: git push --no-verify)."
+    exit 1
+}
+```
+
+Git for Windows runs hooks through its bundled `sh`, so no `chmod` is needed.
+If the check reports a FAIL the hook blocks the push; fix the finding, or
+bypass deliberately with `git push --no-verify`. (As of 2026-07-07 the check
+is fully green — about 2.5 s on the system Python.)

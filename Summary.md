@@ -8,6 +8,73 @@
 
 ---
 
+## 0. Latest repository hygiene update (2026-07-07)
+
+**Status: implemented and verified.** The repository hygiene pass was completed
+without deleting datasets, result folders, notebooks, checkpoints, crops, or
+trained outputs. The final health check is clean:
+
+```powershell
+python Scripts\Automation\verify_repository_health.py
+```
+
+Result:
+
+```text
+Repository health: PASS
+All checks PASS, 0 findings.
+```
+
+Reports regenerated:
+
+- `Documents/Final-Reports/repository_health_check.md`
+- `Documents/Final-Reports/repository_health_check.json`
+
+Files changed by the hygiene pass:
+
+- `Scripts/MTSD-Scripts/AttributeClassification/outputs/manifests/manifest.json`
+- `Scripts/Automation/verify_repository_health.py`
+- `Scripts/Other-Scripts/GDPR-Compliance/README.md`
+- `Scripts/Other-Scripts/GDPR-Compliance/redact.py`
+- `Requirements/CondaEnvironments/README.md`
+- `Scripts/MTSD-Scripts/AttributeClassification/README.md`
+- `Scripts/MTSD-Scripts/AttributeClassification/inference/gradio_compare.py`
+- `Documents/Other/CloudflareTunnel.md`
+- `Documents/Other/CleanModelCache.md`
+- `Documents/Final-Reports/repository_health_check.md`
+- `Documents/Final-Reports/repository_health_check.json`
+
+What was fixed:
+
+- The attribute-classification manifest had **5,273 stale `source_image` paths**
+  of the old form `Datasets/GRP-*/Images/...`; all were updated to the current
+  MTSD layout `Datasets/MTSD/GRP-*/Images/...`.
+- The GDPR redaction docs and CLI examples now point at the current
+  `Datasets/MTSD/GRP-1` layout. The preview output tree is documented as
+  relative to the selected input root (`./GRP-1/...`) rather than as a dataset
+  source path.
+- The Conda environments README link to the model-cache cleanup document was
+  fixed from the old `Documents/CleanModelCache.md` location to
+  `Documents/Other/CleanModelCache.md`.
+- Machine-specific documentation examples using local Windows user-profile
+  paths or local Anaconda interpreter paths were replaced with portable
+  conda/Python commands, `%USERPROFILE%`, or explicit placeholders.
+- The repository health checker now has a narrow documented allowlist for
+  intentionally retained historical/provenance references:
+  - QA `source_file` fields in `Datasets/MTSD/Annotations/.../Final-QA/QA-GRP*.json`
+    remain as provenance of the original export/migration source.
+  - old MDWD EDA notebook references remain as historical/legacy context.
+  - attribute-classification `experiment_log.json` checkpoint paths remain as
+    historical run records.
+  - migration docs/scripts may still show the old `Datasets\GRP-*\Images\...`
+    shape because they document the exact legacy form the migration script fixes.
+
+No remaining warnings are intentionally outstanding in the generated health
+report. Historical references are retained only where they are explicitly
+documented provenance or migration examples.
+
+---
+
 ## 1. Repository overview
 
 **Urban-Vision-Benchmark** is the central private repository for an MSc dissertation
@@ -238,6 +305,9 @@ human glance at the running UI (not launched here).
 - [x] Inference-speed/deployment benchmark tooling (`Scripts/Other-Scripts/Inference-Benchmark/`, dry-run verified;
       see `Documents/Final-Reports/inference_speed_benchmark_report.md`)
 - [x] PromptDetect manual UI (5 tabs, 6 models)
+- [x] Repository hygiene pass (2026-07-07): stale MTSD manifest paths fixed,
+      documentation path examples made portable, broken Markdown link repaired,
+      provenance allowlist added, health check now **PASS** with 0 findings
 - [x] Documentation: root README, per-tool READMEs, workflow docs, this Summary
 
 ## 12. What is still pending ⏳
@@ -262,37 +332,127 @@ human glance at the running UI (not launched here).
 - [ ] **Dissertation figures/tables**: cross-track comparison table (supervised vs
       prompt-based), per-class detection results, attribute confusion matrices,
       dataset datasheets; decide which EDA figures go in
-- [ ] Commit + push the new tooling/docs (MTSD-AnnotationQA, batch_evaluation,
-      gradio_compare changes, MTSD atlas updates, README.md, Summary.md are currently uncommitted)
 
 ## 13. Suggested next steps (practical, in priority order)
 
-1. **Clean the MTSD annotations this week** (review → apply → re-scan → regenerate
+1. **Commit the hygiene pass first** while the diff is small and auditable. Suggested
+   commit message: `Fix repository hygiene checks and MTSD manifest paths`.
+2. **Clean the MTSD annotations** (review → apply → re-scan → regenerate
    manifest). Everything downstream (prep notebook, detection training, attribute
    re-training, batch eval on MTSD) consumes these files; do it before any new runs.
-2. **Run the MTSD prep notebook, then the three detection notebooks** (YOLO12 →
+3. **Run the MTSD prep notebook, then the three detection notebooks** (YOLO12 →
    YOLO26 → RF-DETR). Risk: ~1.4k training images with the MDWD protocol (100
    epochs, no augmentation) may underfit — consider enabling the prep notebook's
    photometric augmentation or raising epochs, and record whichever choice you make
    as a protocol deviation in the methodology.
-3. **Run a small PromptDetect batch eval first** (`--max-images 25`, SAM 3 only) to
+4. **Run a small PromptDetect batch eval first** (`--max-images 25`, SAM 3 only) to
    validate the pipeline end-to-end, then the full MTSD test-split and MDWD
    test-split evaluations with 3–5 prompts per dataset. Budget GPU time for Cosmos
    2B/8B; keep 32B optional and explicitly opt in with `--allow-heavy`.
-4. **Quantify the MDWD leakage impact**: re-evaluate the best YOLO26 checkpoint on
+5. **Quantify the MDWD leakage impact**: re-evaluate the best YOLO26 checkpoint on
    val/test with the 30 leaked source images excluded; if metrics barely move, a
    dissertation footnote suffices — otherwise regenerate splits (risk: invalidates
    comparability with existing runs, so prefer exclusion-based re-evaluation).
-5. **Fix `condition` head weakness** before presenting attribute results: try class
+6. **Fix `condition` head weakness** before presenting attribute results: try class
    re-weighting already in the config, or merge Weathered/Heavily Damaged into
    "Degraded" as a sensitivity analysis. Document the imbalance either way.
-6. **Methodology chapter content now available**: dataset construction + QA workflow
+7. **Methodology chapter content now available**: dataset construction + QA workflow
    (LabelStudio → Final-QA → audit tool findings), EDA statistics, training
    protocols (identical-protocol ablation design), evaluation metrics definitions
    (IoU matching, macro-F1 rationale), reproducibility measures (seeds, manifests,
    W&B). Evaluation chapter: MDWD ablation results are final; MTSD attribute results
    are final pending annotation-fix sensitivity; detection + prompt-based results pending.
-7. **Risks to watch**: annotation edits change QA SHA-256 hashes (manifest must be
+8. **Risks to watch**: annotation edits change QA SHA-256 hashes (manifest must be
    regenerated or training aborts); GRP-4/5 annotation effort is the biggest
    remaining manual cost; SAM 3/3.1 HF gating and the `mtsd-la` env are the usual
    PromptDetect setup friction; keep the repo private (street imagery, GDPR).
+
+## 14. Good next tasks for another coding agent
+
+These are good copy-paste prompts for Claude Code, GPT-5.X Codex, or another
+coding agent. They are scoped to avoid touching datasets/results unless explicitly
+needed.
+
+### High-value prompt 1 — make health checks harder to regress
+
+```text
+Inspect Scripts/Automation/verify_repository_health.py and add focused tests or
+a lightweight self-test mode for the hygiene rules added on 2026-07-07. Keep the
+allowlist narrow and documented. Do not change datasets, notebooks, experiment
+outputs, or generated reports except by rerunning the health check at the end.
+
+Verify:
+- old Datasets/GRP-* paths fail unless they are migration examples;
+- QA source_file provenance remains allowed;
+- absolute C:/Users paths fail in code/docs unless explicitly generic;
+- Markdown relative links are checked correctly.
+
+Run:
+python Scripts/Automation/verify_repository_health.py
+
+Report changed files and whether health remains PASS.
+```
+
+### High-value prompt 2 — prepare an MTSD annotation cleanup runbook
+
+```text
+Do not apply annotation fixes yet. Inspect the latest
+Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-*/ reports and produce a
+step-by-step runbook for manually reviewing and applying MTSD annotation QA
+fixes. Include exact commands, expected files, backup behavior, how to re-scan,
+and how to regenerate the AttributeClassification manifest afterward. Preserve
+all datasets, notebooks, results, and trained outputs.
+```
+
+### High-value prompt 3 — dry-run MTSD detection preparation safely
+
+```text
+Inspect Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks/Prepare-MTSD-Detection-Dataset.ipynb
+and any helper code. Do not execute cells that write the prepared dataset unless
+there is an explicit dry-run/read-only mode. Summarize the current expected
+input QA files, output folders, split policy, class mapping, overwrite protection,
+and what commands/manual steps are needed before real MTSD detection training.
+Do not modify notebooks unless a broken path must be fixed.
+```
+
+### Nice-to-have prompt 4 — add a repository hygiene CI workflow
+
+```text
+Add a minimal GitHub Actions workflow that runs:
+python Scripts/Automation/verify_repository_health.py --dry-run
+
+Keep it dependency-light and safe for a private repo with large untracked data:
+do not assume datasets, models, or results are present in CI unless the existing
+health check already expects them. If CI cannot run because this repository
+requires local data folders, instead add a documented local pre-commit/pre-push
+command in Scripts/Automation/README.md. Do not touch experiment outputs.
+```
+
+### Nice-to-have prompt 5 — make a dissertation handoff checklist
+
+```text
+Create or update a concise Documents/Final-Reports/dissertation_handoff_checklist.md
+that turns Summary.md into a checklist for the remaining dissertation work:
+annotation cleanup, MTSD detection, PromptDetect batch eval, inference-speed
+benchmarks, MDWD leakage discussion, final tables/figures, and commit/push.
+Use existing files as sources; do not invent results.
+```
+
+### Nice-to-have prompt 6 — inspect notebook output hygiene without editing notebooks
+
+```text
+Inspect notebooks under Scripts/MDWD-Scripts and Scripts/MTSD-Scripts for stale
+absolute paths or old repository names in executed outputs. Do not edit notebooks.
+Classify each hit as: executable code needing a fix, harmless historical output,
+or output that should be cleared only if the user approves. Propose the smallest
+safe cleanup plan and update Summary.md with the recommendation.
+```
+
+### Nice-to-have prompt 7 — make PromptDetect first-run smoke commands
+
+```text
+Inspect Scripts/Other-Scripts/PromptDetect/batch_evaluation and write a small
+first-run smoke-test guide with exact commands for MDWD and MTSD, using small
+--max-images values and non-heavy models first. Do not run heavy models. Do not
+change evaluation logic unless a path bug blocks the smoke test.
+```
