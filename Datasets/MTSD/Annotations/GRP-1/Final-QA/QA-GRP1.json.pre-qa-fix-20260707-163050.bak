@@ -14733,7 +14733,7 @@
         "view_angle": "Front",
         "mounting": "Pole-Mounted",
         "condition": "Good",
-        "sign_shape": "Quadrangle",
+        "sign_shape": null,
         "label_studio_region_id": "_a6xeeuQXV",
         "label_studio_annotation_id": "_a6xeeuQXV",
         "rotation": 0,
@@ -20493,7 +20493,7 @@
         "view_angle": "Back",
         "mounting": "Pole-Mounted",
         "condition": "Good",
-        "sign_shape": "Circular",
+        "sign_shape": null,
         "label_studio_region_id": "T6WH2xeFF7",
         "label_studio_annotation_id": "T6WH2xeFF7",
         "rotation": 0,
@@ -23756,7 +23756,7 @@
       "attributes": {
         "view_angle": "Front",
         "mounting": "Pole-Mounted",
-        "condition": "Good",
+        "condition": null,
         "sign_shape": "Triangular",
         "label_studio_region_id": "OrVuLRKm31",
         "label_studio_annotation_id": "OrVuLRKm31",
@@ -30621,7 +30621,7 @@
         "view_angle": "Back",
         "mounting": "Pole-Mounted",
         "condition": "Good",
-        "sign_shape": "Circular",
+        "sign_shape": null,
         "label_studio_region_id": "IokOct0U4s",
         "label_studio_annotation_id": "IokOct0U4s",
         "rotation": 0,
@@ -31484,7 +31484,7 @@
       "attributes": {
         "view_angle": "Back",
         "mounting": "Pole-Mounted",
-        "condition": "Good",
+        "condition": null,
         "sign_shape": "Triangular",
         "label_studio_region_id": "85-wq8Ri7U",
         "label_studio_annotation_id": "85-wq8Ri7U",
@@ -33245,6 +33245,30 @@
       }
     },
     {
+      "id": 1054,
+      "image_id": 382,
+      "category_id": 2,
+      "bbox": [
+        325.25000000000006,
+        858.76,
+        2153.35,
+        2108.79
+      ],
+      "area": 4540962.9465,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Octagonal",
+        "label_studio_region_id": "3ed9890074",
+        "label_studio_annotation_id": "3ed9890074",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
       "id": 1055,
       "image_id": 383,
       "category_id": 1,
@@ -33317,6 +33341,30 @@
       }
     },
     {
+      "id": 1058,
+      "image_id": 383,
+      "category_id": 8,
+      "bbox": [
+        1012.86,
+        3337.0599999999995,
+        77.45999999999992,
+        92.47000000000027
+      ],
+      "area": 7162.726200000014,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Circular",
+        "label_studio_region_id": "151db8f883",
+        "label_studio_annotation_id": "151db8f883",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
       "id": 1059,
       "image_id": 383,
       "category_id": 12,
@@ -33365,6 +33413,30 @@
       }
     },
     {
+      "id": 1061,
+      "image_id": 383,
+      "category_id": 11,
+      "bbox": [
+        871.8900000000001,
+        3175.4299999999994,
+        48.690000000000055,
+        53.99000000000024
+      ],
+      "area": 2628.7731000000144,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Back",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Triangular",
+        "label_studio_region_id": "2b42fd78d7",
+        "label_studio_annotation_id": "2b42fd78d7",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
       "id": 1062,
       "image_id": 383,
       "category_id": 11,
@@ -33389,6 +33461,30 @@
       }
     },
     {
+      "id": 1063,
+      "image_id": 383,
+      "category_id": 12,
+      "bbox": [
+        2143.43,
+        3158.16,
+        31.7800000000002,
+        37.930000000000284
+      ],
+      "area": 1205.4154000000167,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Quadrangle",
+        "label_studio_region_id": "4ed36fbd84",
+        "label_studio_annotation_id": "4ed36fbd84",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
       "id": 1064,
       "image_id": 383,
       "category_id": 12,
@@ -33408,6 +33504,270 @@
         "sign_shape": "Quadrangle",
         "label_studio_region_id": "2090031b6a",
         "label_studio_annotation_id": "2090031b6a",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1065,
+      "image_id": 383,
+      "category_id": 12,
+      "bbox": [
+        1345.77,
+        623.48,
+        377.26,
+        1298.98
+      ],
+      "area": 490053.1948,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Side",
+        "mounting": "Pole-Mounted",
+        "condition": "Weathered",
+        "sign_shape": "Triangular",
+        "label_studio_region_id": "2c6ff1f27d",
+        "label_studio_annotation_id": "2c6ff1f27d",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1066,
+      "image_id": 383,
+      "category_id": 4,
+      "bbox": [
+        1271.94,
+        1867.99,
+        428.0399999999999,
+        968.7999999999998
+      ],
+      "area": 414685.1519999998,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Side",
+        "mounting": "Pole-Mounted",
+        "condition": "Weathered",
+        "sign_shape": "Circular",
+        "label_studio_region_id": "bfc6104e7e",
+        "label_studio_annotation_id": "bfc6104e7e",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1067,
+      "image_id": 383,
+      "category_id": 12,
+      "bbox": [
+        2516.61,
+        3140.55,
+        35.86999999999989,
+        44.929999999999836
+      ],
+      "area": 1611.6390999999892,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Quadrangle",
+        "label_studio_region_id": "dd545c200b",
+        "label_studio_annotation_id": "dd545c200b",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1068,
+      "image_id": 383,
+      "category_id": 12,
+      "bbox": [
+        2143.43,
+        3158.16,
+        31.7800000000002,
+        37.930000000000284
+      ],
+      "area": 1205.4154000000167,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Quadrangle",
+        "label_studio_region_id": "07e381dd1a",
+        "label_studio_annotation_id": "07e381dd1a",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1069,
+      "image_id": 383,
+      "category_id": 11,
+      "bbox": [
+        852.02,
+        3297.63,
+        47.440000000000055,
+        50.00999999999976
+      ],
+      "area": 2372.4743999999914,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Back",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Circular",
+        "label_studio_region_id": "a78b2598e5",
+        "label_studio_annotation_id": "a78b2598e5",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1070,
+      "image_id": 383,
+      "category_id": 11,
+      "bbox": [
+        871.8900000000001,
+        3175.4299999999994,
+        48.690000000000055,
+        53.99000000000024
+      ],
+      "area": 2628.7731000000144,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Back",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Triangular",
+        "label_studio_region_id": "cb59c91297",
+        "label_studio_annotation_id": "cb59c91297",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1071,
+      "image_id": 383,
+      "category_id": 12,
+      "bbox": [
+        1012.86,
+        3337.0599999999995,
+        77.45999999999992,
+        92.47000000000027
+      ],
+      "area": 7162.726200000014,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Circular",
+        "label_studio_region_id": "dc23b821e8",
+        "label_studio_annotation_id": "dc23b821e8",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1072,
+      "image_id": 383,
+      "category_id": 4,
+      "bbox": [
+        1271.94,
+        1867.99,
+        428.0399999999999,
+        968.7999999999998
+      ],
+      "area": 414685.1519999998,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Side",
+        "mounting": "Pole-Mounted",
+        "condition": "Weathered",
+        "sign_shape": "Circular",
+        "label_studio_region_id": "c51f8d4c1a",
+        "label_studio_annotation_id": "c51f8d4c1a",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1073,
+      "image_id": 383,
+      "category_id": 12,
+      "bbox": [
+        1345.77,
+        623.48,
+        377.26,
+        1298.98
+      ],
+      "area": 490053.1948,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Side",
+        "mounting": "Pole-Mounted",
+        "condition": "Weathered",
+        "sign_shape": "Triangular",
+        "label_studio_region_id": "b6a37ed78f",
+        "label_studio_annotation_id": "b6a37ed78f",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1074,
+      "image_id": 383,
+      "category_id": 12,
+      "bbox": [
+        2516.61,
+        3140.55,
+        35.86999999999989,
+        44.929999999999836
+      ],
+      "area": 1611.6390999999892,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Quadrangle",
+        "label_studio_region_id": "7258024937",
+        "label_studio_annotation_id": "7258024937",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1075,
+      "image_id": 383,
+      "category_id": 11,
+      "bbox": [
+        852.02,
+        3297.63,
+        47.440000000000055,
+        50.00999999999976
+      ],
+      "area": 2372.4743999999914,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Back",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Circular",
+        "label_studio_region_id": "92d4ca4364",
+        "label_studio_annotation_id": "92d4ca4364",
         "rotation": 0,
         "origin": "manual"
       }
@@ -37925,6 +38285,54 @@
       }
     },
     {
+      "id": 1264,
+      "image_id": 460,
+      "category_id": 3,
+      "bbox": [
+        1377.91,
+        3295.78,
+        104.24,
+        153.12999999999963
+      ],
+      "area": 15962.271199999961,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Circular",
+        "label_studio_region_id": "489a962a52",
+        "label_studio_annotation_id": "489a962a52",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1265,
+      "image_id": 460,
+      "category_id": 12,
+      "bbox": [
+        2848.04,
+        3312.2499999999995,
+        127.80000000000017,
+        113.84000000000015
+      ],
+      "area": 14548.752000000037,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Back",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Triangular",
+        "label_studio_region_id": "7271ff2dbe",
+        "label_studio_annotation_id": "7271ff2dbe",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
       "id": 1266,
       "image_id": 460,
       "category_id": 11,
@@ -38228,7 +38636,7 @@
       "attributes": {
         "view_angle": "Back",
         "mounting": "Pole-Mounted",
-        "condition": "Good",
+        "condition": null,
         "sign_shape": "Quadrangle",
         "label_studio_region_id": "z0TCqCITUS",
         "label_studio_annotation_id": "z0TCqCITUS",
@@ -39716,7 +40124,7 @@
       "attributes": {
         "view_angle": "Side",
         "mounting": "Pole-Mounted",
-        "condition": "Good",
+        "condition": null,
         "sign_shape": "Quadrangle",
         "label_studio_region_id": "epXZio3US7",
         "label_studio_annotation_id": "epXZio3US7",
@@ -50477,6 +50885,30 @@
       }
     },
     {
+      "id": 1789,
+      "image_id": 652,
+      "category_id": 5,
+      "bbox": [
+        958.16,
+        2020.25,
+        1140.93,
+        1084.42
+      ],
+      "area": 1237247.3106000002,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Weathered",
+        "sign_shape": "Quadrangle",
+        "label_studio_region_id": "ef587ec40a",
+        "label_studio_annotation_id": "ef587ec40a",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
       "id": 1790,
       "image_id": 653,
       "category_id": 11,
@@ -50617,6 +51049,30 @@
         "label_studio_region_id": "21ca20d02c",
         "label_studio_annotation_id": "21ca20d02c",
         "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
+      "id": 1796,
+      "image_id": 658,
+      "category_id": 6,
+      "bbox": [
+        809.78,
+        1611.3,
+        1412.1200000000003,
+        1343.67
+      ],
+      "area": 1897423.2804000005,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Circular",
+        "label_studio_region_id": "b7451fcf93",
+        "label_studio_annotation_id": "b7451fcf93",
+        "rotation": 0.0,
         "origin": "manual"
       }
     },

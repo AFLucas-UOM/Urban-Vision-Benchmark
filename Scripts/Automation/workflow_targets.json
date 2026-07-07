@@ -1,0 +1,148 @@
+{
+  "_comment": "Single source of truth for run_urban_workflows.ps1 and verify_repository_health.py. Paths are repo-root-relative. 'env' names a conda environment under %USERPROFILE%/anaconda3/envs (override with -PythonExe). 'training: true' targets refuse to run without -AllowTraining. 'defaultArgs' apply when -Args is not given.",
+  "targets": {
+    "MDWD-EDA": {
+      "type": "python",
+      "path": "Scripts/MDWD-Scripts/MDWD-Analysis/run_eda.py",
+      "env": "MDWD",
+      "defaultArgs": [],
+      "training": false,
+      "description": "Full MDWD exploratory data analysis (tables + figures to Documents/MDWD-EDA)."
+    },
+    "MDWD-EDA-Notebook": {
+      "type": "notebook",
+      "path": "Scripts/MDWD-Scripts/MDWD-Analysis/MDWD-EDA.ipynb",
+      "env": "MDWD",
+      "training": false,
+      "description": "MDWD EDA notebook, executed headlessly to a timestamped copy."
+    },
+    "MTSD-EDA": {
+      "type": "notebook",
+      "path": "Scripts/MTSD-Scripts/MTSD-Analysis/MTSD-EDA.ipynb",
+      "env": "mtsd-base",
+      "training": false,
+      "description": "MTSD EDA notebook (image inventory, EXIF/GPS, annotation analysis)."
+    },
+    "MDWD-YOLO12-Notebook": {
+      "type": "notebook",
+      "path": "Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/YOLO12.ipynb",
+      "env": "MDWD",
+      "training": true,
+      "description": "MDWD YOLO12 model-scale benchmark - RUNS TRAINING (RUN_TRAINING=True in the notebook)."
+    },
+    "MDWD-YOLO26-Notebook": {
+      "type": "notebook",
+      "path": "Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/YOLO26.ipynb",
+      "env": "MDWD",
+      "training": true,
+      "description": "MDWD YOLO26 model-scale benchmark - RUNS TRAINING."
+    },
+    "MDWD-RFDETR-Notebook": {
+      "type": "notebook",
+      "path": "Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/RF-DETR.ipynb",
+      "env": "MDWD",
+      "training": true,
+      "description": "MDWD RF-DETR benchmark - RUNS TRAINING."
+    },
+    "MTSD-Prepare-Detection-Dataset": {
+      "type": "notebook",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks/Prepare-MTSD-Detection-Dataset.ipynb",
+      "env": "MDWD",
+      "training": false,
+      "description": "Builds Datasets/MTSD/Prepared/{MTSD-YOLO,MTSD-COCO} from QA annotations (~2 GB; overwrite-protected internally)."
+    },
+    "MTSD-YOLO12-Notebook": {
+      "type": "notebook",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks/YOLO12.ipynb",
+      "env": "MDWD",
+      "training": true,
+      "description": "MTSD YOLO12 benchmark - training notebook (ships with RUN_TRAINING=False; flip it before a real run)."
+    },
+    "MTSD-YOLO26-Notebook": {
+      "type": "notebook",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks/YOLO26.ipynb",
+      "env": "MDWD",
+      "training": true,
+      "description": "MTSD YOLO26 benchmark - training notebook (RUN_TRAINING=False by default)."
+    },
+    "MTSD-RFDETR-Notebook": {
+      "type": "notebook",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks/RF-DETR.ipynb",
+      "env": "MDWD",
+      "training": true,
+      "description": "MTSD RF-DETR benchmark - training notebook (RUN_TRAINING=False by default)."
+    },
+    "PromptDetect-App": {
+      "type": "python",
+      "path": "Scripts/Other-Scripts/PromptDetect/app.py",
+      "env": "mtsd-base",
+      "defaultArgs": [],
+      "training": false,
+      "description": "Launches the interactive PromptDetect Gradio app (long-running server; stop with Ctrl+C)."
+    },
+    "PromptDetect-BatchEval": {
+      "type": "python",
+      "path": "Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_batch_eval.py",
+      "env": "mtsd-base",
+      "defaultArgs": ["--dataset", "MTSD", "--split", "test", "--prompts", "traffic sign", "--models", "sam3", "--max-images", "25", "--dry-run"],
+      "training": false,
+      "description": "PromptDetect batch evaluation. Default args are a safe dry-run; pass -Args for a real run."
+    },
+    "GDPR-Compliance": {
+      "type": "python",
+      "path": "Scripts/Other-Scripts/GDPR-Compliance/redact.py",
+      "env": "mtsd-base",
+      "defaultArgs": ["--help"],
+      "training": false,
+      "description": "GDPR redaction tool. Default shows help (its 'preview' loads SAM 3.1); e.g. -Args 'preview --limit 5 --backend classic'."
+    },
+    "Inference-Benchmark": {
+      "type": "python",
+      "path": "Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py",
+      "env": "MDWD",
+      "defaultArgs": ["--list-models"],
+      "training": false,
+      "description": "Deployment/inference-speed benchmark. Default lists the model inventory; pass -Args for a benchmark run."
+    },
+    "MTSD-AnnotationQA-Scan": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-AnnotationQA/scan_annotations.py",
+      "env": "mtsd-base",
+      "defaultArgs": [],
+      "training": false,
+      "description": "Read-only MTSD annotation audit (writes a timestamped report folder)."
+    },
+    "Repo-Health-Check": {
+      "type": "python",
+      "path": "Scripts/Automation/verify_repository_health.py",
+      "env": "mtsd-base",
+      "defaultArgs": [],
+      "training": false,
+      "description": "Repository path/structure/health verification (report to Documents/Final-Reports)."
+    },
+    "Final-Dataset-Integrity": {
+      "type": "python",
+      "path": "Scripts/FinalEvaluation/final_dataset_integrity_check.py",
+      "env": "MDWD",
+      "defaultArgs": ["--dataset", "all"],
+      "training": false,
+      "description": "Dissertation-ready dataset integrity report for MDWD + MTSD (read-only)."
+    },
+    "Export-Dissertation-Tables": {
+      "type": "python",
+      "path": "Scripts/FinalEvaluation/export_dissertation_tables.py",
+      "env": "MDWD",
+      "defaultArgs": [],
+      "training": false,
+      "description": "Consolidates existing result files into Documents/Final-Tables (timestamped)."
+    },
+    "Failure-Case-Sampler": {
+      "type": "python",
+      "path": "Scripts/FinalEvaluation/failure_case_sampler.py",
+      "env": "MDWD",
+      "defaultArgs": ["--help"],
+      "training": false,
+      "description": "Error-analysis image sampler (FP/FN/duplicate/low-conf). Needs -Args, e.g. '--dataset PromptDetect --latest'."
+    }
+  }
+}

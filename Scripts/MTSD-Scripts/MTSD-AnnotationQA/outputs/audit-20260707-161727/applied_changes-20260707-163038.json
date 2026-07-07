@@ -1,0 +1,312 @@
+{
+  "mode": "dry-run",
+  "decisions_file": "Scripts\\MTSD-Scripts\\MTSD-AnnotationQA\\outputs\\audit-20260707-161727\\reviewed_decisions.json",
+  "run_at": "2026-07-07T16:30:38",
+  "changes": [
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "set_attribute",
+      "annotation_id": 282,
+      "status": "would_apply",
+      "attribute": "sign_shape",
+      "old": null,
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "set_attribute",
+      "annotation_id": 522,
+      "status": "would_apply",
+      "attribute": "sign_shape",
+      "old": null,
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "set_attribute",
+      "annotation_id": 658,
+      "status": "would_apply",
+      "attribute": "condition",
+      "old": null,
+      "new": "Good"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "set_attribute",
+      "annotation_id": 944,
+      "status": "would_apply",
+      "attribute": "sign_shape",
+      "old": null,
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "set_attribute",
+      "annotation_id": 980,
+      "status": "would_apply",
+      "attribute": "condition",
+      "old": null,
+      "new": "Good"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "set_attribute",
+      "annotation_id": 1278,
+      "status": "would_apply",
+      "attribute": "condition",
+      "old": null,
+      "new": "Good"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "set_attribute",
+      "annotation_id": 1340,
+      "status": "would_apply",
+      "attribute": "condition",
+      "old": null,
+      "new": "Good"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1054,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1053 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1063,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1055 (IoU 1.0, conflicting_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1061,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1056 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1058,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1057 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1071,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1058 (IoU 1.0, conflicting_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1065,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1059 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1066,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1060 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1070,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1061 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1069,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1062 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1068,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1063 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1067,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1064 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1073,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1065 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1072,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1066 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1074,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1067 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1075,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1069 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1265,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1262 (IoU 1.0, conflicting_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1264,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1263 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1789,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1788 (IoU 1.0, conflicting_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "type": "delete_annotation",
+      "annotation_id": 1796,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1797 (IoU 0.9931, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+      "type": "set_attribute",
+      "annotation_id": 16,
+      "status": "would_apply",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "set_attribute",
+      "annotation_id": 880,
+      "status": "would_apply",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 595,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 594 (IoU 1.0, conflicting_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1572,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1571 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1635,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1634 (IoU 0.9883, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1641,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1638 (IoU 0.9694, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1639,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1640 (IoU 0.9842, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1643,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1642 (IoU 0.9844, conflicting_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1645,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1644 (IoU 0.9867, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1647,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1646 (IoU 0.9873, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1649,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1650 (IoU 0.9818, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1816,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1815 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1820,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1817 (IoU 1.0, conflicting_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1822,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1818 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "delete_annotation",
+      "annotation_id": 1821,
+      "status": "would_apply",
+      "reason": "duplicate of annotation 1819 (IoU 1.0, conflicting_duplicate)"
+    }
+  ]
+}
