@@ -45,9 +45,18 @@ def run_preview(
     Only images with at least one detection are written (unless
     ``copy_clean`` asks for a complete mirror). Returns the report payload.
     """
-    if output_root.resolve() == input_root.resolve():
+    input_resolved = input_root.resolve()
+    output_resolved = output_root.resolve()
+    if output_resolved == input_resolved:
         raise SystemExit("Output directory must equal the input directory? No - "
                          "this tool never writes into the originals in preview.")
+    try:
+        output_resolved.relative_to(input_resolved)
+    except ValueError:
+        pass
+    else:
+        raise SystemExit("Output directory must not be inside the input tree; "
+                         "choose a separate preview directory.")
     output_root.mkdir(parents=True, exist_ok=True)
 
     targets = discover_images(input_root)
@@ -103,28 +112,48 @@ def run_preview(
     )
 
 
-def apply_results(output_root: Path, input_root: Path,
+def apply_results(output_root: Path, input_root: Path, report: dict | None = None,
                   backup: bool = True) -> tuple[int, int]:
     """Replace originals with their verified redacted counterparts.
 
-    Every image in ``output_root`` (except comparison sheets and backups) is
-    copied over the matching file in ``input_root``. When ``backup`` is on,
-    each original is first copied to ``output_root/_replaced_originals/``.
+    When a report is supplied, only preview files listed in that report are
+    copied over their matching originals. This avoids replacing originals from
+    stale files left in the preview directory after older runs. When ``backup``
+    is on, each original is first copied to ``output_root/_replaced_originals/``.
     Returns ``(replaced, missing)`` counts.
     """
-    processed = [
-        path for path in sorted(output_root.rglob("*"))
-        if path.is_file()
-        and path.suffix.lower() in IMAGE_EXTENSIONS
-        and COMPARISONS_DIR_NAME not in path.relative_to(output_root).parts
-        and BACKUP_DIR_NAME not in path.relative_to(output_root).parts
-    ]
+    if report is not None:
+        processed = []
+        for item in report.get("images", []):
+            preview = item.get("preview")
+            if not preview:
+                continue
+            path = Path(preview)
+            if not path.is_absolute():
+                path = output_root / path
+            if path.suffix.lower() in IMAGE_EXTENSIONS:
+                processed.append(path)
+    else:
+        processed = [
+            path for path in sorted(output_root.rglob("*"))
+            if path.is_file()
+            and path.suffix.lower() in IMAGE_EXTENSIONS
+            and COMPARISONS_DIR_NAME not in path.relative_to(output_root).parts
+            and BACKUP_DIR_NAME not in path.relative_to(output_root).parts
+        ]
 
     replaced = missing = 0
     backup_root = output_root / BACKUP_DIR_NAME
     iterator = tqdm(processed, desc="Replacing", unit="img") if tqdm else processed
     for path in iterator:
-        relative = path.relative_to(output_root)
+        if not path.exists():
+            missing += 1
+            continue
+        try:
+            relative = path.relative_to(output_root)
+        except ValueError:
+            missing += 1
+            continue
         original = input_root / relative
         if not original.exists():
             missing += 1

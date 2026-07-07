@@ -33,17 +33,30 @@ RESULTS_ROOT = PROJECT_ROOT / "Results" / "PromptDetect" / "BatchEvaluation"
 MDWD_YOLO_DIR = DATASETS_DIR / "MDWD" / "MDWD-YOLO26"
 MTSD_PREPARED_YOLO_DIR = DATASETS_DIR / "MTSD" / "Prepared" / "MTSD-YOLO"
 MTSD_ANNOTATIONS_ROOT = DATASETS_DIR / "MTSD" / "Annotations"
+MTSD_QA_SPLIT_RATIOS = {"train": 0.80, "valid": 0.10, "test": 0.10}
+MTSD_QA_SPLIT_SEED = 42
 
 SPLIT_ALIASES = {"val": "valid", "validation": "valid"}
 VALID_SPLITS = ("train", "valid", "test", "all")
 
 # Prompts -----------------------------------------------------------------------
-MIN_PROMPTS, MAX_PROMPTS = 1, 15
+# Zero prompts are allowed only for dry-run / dataset sanity checks. Real
+# evaluation still needs at least one prompt to produce metrics.
+MIN_PROMPTS, MAX_PROMPTS = 0, 15
 
 # Models ------------------------------------------------------------------------
 # Heavy checkpoints are OPT-IN: they are never selected by default and the CLI
 # refuses them without --allow-heavy (the Gradio UI has an equivalent gate).
-HEAVY_MODEL_LABELS = {"Cosmos Reason2 8B", "Cosmos Reason2 32B"}
+HEAVY_MODEL_LABELS = {"Cosmos Reason2 32B"}
+MODEL_ALIASES = {
+    "sam3": "sam_3",
+    "sam31": "sam_3.1",
+    "sam3.1": "sam_3.1",
+    "cosmos2b": "cosmos_reason2_2b",
+    "cosmos8b": "cosmos_reason2_8b",
+    "cosmos32b": "cosmos_reason2_32b",
+    "locateanything": "locateanything_3b",
+}
 
 
 def model_slug(label: str) -> str:

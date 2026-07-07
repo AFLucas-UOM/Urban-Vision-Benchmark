@@ -1,6 +1,6 @@
 # Inference Speed / Deployment Benchmark — Status Report
 
-*Generated 2026-07-06. Companion to `Scripts/FinalBenchmarks/inference_speed_benchmark.py`.
+*Generated 2026-07-06. Companion to `Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py`.
 This report describes the benchmark **infrastructure and coverage**; it contains no
 timing numbers yet, because no full benchmark run has been executed — dry-run
 verification only, per the repository's safety policy.*
@@ -39,7 +39,7 @@ model-size reporting. The dedicated benchmark was created on 2026-07-06.
   breakdown (Ultralytics, PromptDetect backend), it is recorded alongside the
   wall-clock measurement; the attribute pipeline times its transform separately.
 - Every run writes to a fresh timestamped folder under
-  `Results/Final-Benchmarks/InferenceSpeed/` — previous results are never touched.
+  `Results/Inference-Benchmark/InferenceSpeed/` — previous results are never touched.
 
 Hardware at the time of writing: single **NVIDIA GeForce RTX 4090**, CUDA available
 in all three conda environments (`MDWD`: torch 2.10-dev/cu130; `mtsd-attrcls`:
@@ -55,7 +55,7 @@ remain distinguishable.
 | --- | --- | --- |
 | MDWD detection (env `MDWD`) | YOLO11 n/s/m/l · YOLO12 n/s/m · YOLO26 n/s/m/l (EUVIP) · YOLO26 n/s/m/l (`@dgx` duplicates trained on the DGX) · RF-DETR **nano** | `Results/MDWD-Runs/<suite>/E*/weights/best.pt`; RF-DETR `checkpoint_best_ema.pth` |
 | MTSD attribute classification (env `mtsd-attrcls`) | dinov3, dinov3_lora, vjepa, vjepa_lora, convnext_frozen, convnext (fine-tuned) | `AttributeClassification/outputs/checkpoints/<variant>/best.pt` |
-| PromptDetect (env `mtsd-base`) | SAM 3, SAM 3.1, Cosmos Reason2 2B, LocateAnything 3B | weights load on demand (SAM: gated HF repo; LocateAnything: `mtsd-la` worker) |
+| PromptDetect (env `mtsd-base`) | SAM 3, SAM 3.1, Cosmos Reason2 2B/8B, LocateAnything 3B | weights load on demand (SAM: gated HF repo; LocateAnything: `mtsd-la` worker) |
 
 Notes on coverage gaps within "ready": **YOLO12-large was never trained** (only
 n/s/m exist), and **RF-DETR small/medium were never trained on MDWD** (only the
@@ -64,7 +64,7 @@ needs the full RF-DETR scale curve, those runs must be trained first.
 
 ### Opt-in only
 
-- Cosmos Reason2 **8B** and **32B**: refuse to run without `--allow-heavy`
+- Cosmos Reason2 **32B**: refuses to run without `--allow-heavy`
   (VRAM/runtime cost; 32B needs multi-GPU or CPU offload).
 
 ### Pending (no results faked)
@@ -79,33 +79,33 @@ needs the full RF-DETR scale curve, those runs must be trained first.
 
 ```bash
 # 0. Inventory
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py --list-models
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py --list-models
 
 # 1. MDWD detection (MDWD env) — dry-run, then drop --dry-run
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py \
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py \
     --dataset MDWD --task detection --models yolo11 yolo12 yolo26 rf-detr \
     --split test --max-images 50 --batch-size 1 --dry-run
 
 # 2. MTSD attribute classifiers (mtsd-attrcls env)
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py \
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py \
     --dataset MTSD --task attribute \
     --models dinov3 dinov3_lora vjepa vjepa_lora convnext_frozen convnext_finetuned \
     --max-images 50 --batch-size 1 --dry-run
 
 # 3. PromptDetect (mtsd-base env; start with 10 images)
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py \
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py \
     --dataset PromptDetect --task prompt --models sam3 sam3.1 locateanything cosmos_reason2_2b \
     --max-images 10 --prompt "traffic sign" --dry-run
 
 # 4. MTSD detection — after the MTSD notebooks have been trained
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py \
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py \
     --dataset MTSD --task detection --models yolo12 yolo26 rf-detr \
     --split test --max-images 50 --dry-run
 ```
 
 ## 5. Outputs per run
 
-`Results/Final-Benchmarks/InferenceSpeed/<timestamp>/`:
+`Results/Inference-Benchmark/InferenceSpeed/<timestamp>/`:
 `inference_speed_summary.csv` + `.md` (per-model metrics table),
 `inference_speed_raw_timings.csv` (every per-image latency),
 `benchmark_config.json` (full config + hardware), `benchmark_images_used.csv`,
@@ -119,7 +119,7 @@ python Scripts/FinalBenchmarks/inference_speed_benchmark.py \
 - [ ] MDWD detection speed benchmark **executed** — pending user confirmation
 - [ ] Attribute classification speed benchmark **executed** — pending
 - [ ] PromptDetect speed benchmark **executed** — pending (SAM/LocateAnything
-      first; Cosmos 2B next; 8B/32B optional)
+      first; Cosmos 2B/8B next; 32B optional)
 - [ ] MTSD detection speed benchmark — blocked on MTSD detection training
 - [ ] Dissertation table/figure: accuracy-vs-latency (and vs model size) scatter
       combining this benchmark with the existing accuracy results — pending the

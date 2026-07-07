@@ -71,7 +71,18 @@ def load_points(rescan: bool) -> tuple[pd.DataFrame, dict]:
 
 def relative_image_url(relative_path: str, output_html: Path) -> str:
     """URL from the output HTML to an image inside the repository."""
-    absolute = config.BASE_DIR / Path(relative_path)
+    path = Path(relative_path)
+    absolute = config.BASE_DIR / path
+
+    # Older inventory CSVs were built before the dataset moved under
+    # Datasets/MTSD, so keep generated maps usable even with stale caches.
+    if not absolute.exists():
+        parts = path.parts
+        if len(parts) >= 2 and parts[0] == "Datasets" and parts[1].startswith("GRP-"):
+            absolute = config.BASE_DIR / "Datasets" / "MTSD" / Path(*parts[1:])
+        elif parts and parts[0].startswith("GRP-"):
+            absolute = config.DATASETS_ROOT / path
+
     try:
         rel = os.path.relpath(absolute, start=output_html.parent)
         return quote(Path(rel).as_posix(), safe="/")
@@ -222,14 +233,23 @@ footer { margin-top: auto; font-size: 10.5px; color: var(--muted); line-height: 
 .pop .meta { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px;
   color: var(--ink-2); margin-bottom: 8px; }
 .pop .meta span:nth-child(odd) { color: var(--muted); }
+.pop .preview { display: block; color: var(--ink-2); text-decoration: none; }
 .pop img { width: 100%; height: 140px; object-fit: cover; border-radius: 8px;
   border: 1px solid var(--ring); display: block; }
-.pop .copy {
-  margin-top: 8px; width: 100%; font: inherit; font-size: 11.5px; padding: 6px 0;
-  background: transparent; color: var(--accent); border: 1px solid var(--ring);
-  border-radius: 7px; cursor: pointer;
+.pop .image-missing {
+  display: none; align-items: center; justify-content: center; min-height: 74px;
+  border: 1px dashed var(--ring); border-radius: 8px; color: var(--muted);
+  padding: 10px; text-align: center;
 }
-.pop .copy:hover { border-color: var(--accent); }
+.pop .preview.missing img { display: none; }
+.pop .preview.missing .image-missing { display: flex; }
+.pop .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 8px; }
+.pop .action {
+  width: 100%; font: inherit; font-size: 11.5px; padding: 6px 0; text-align: center;
+  background: transparent; color: var(--accent); border: 1px solid var(--ring);
+  border-radius: 7px; cursor: pointer; text-decoration: none;
+}
+.pop .action:hover { border-color: var(--accent); }
 .cluster {
   background: var(--card); border: 2px solid var(--accent); color: var(--ink);
   border-radius: 50%; display: flex; align-items: center; justify-content: center;
@@ -326,25 +346,43 @@ const tiles = {
     { attribution: "&copy; OpenStreetMap contributors &copy; CARTO", maxZoom: 20 }),
 };
 tiles.light.addTo(map);
+map.createPane("heatPane");
+map.getPane("heatPane").style.zIndex = 350;
+map.getPane("heatPane").style.pointerEvents = "none";
 const canvasRenderer = L.canvas({ padding: 0.4 });
 
 // ── layers ──────────────────────────────────────────────────────────────────
 function groupColor(gi) { return DATA.groups[gi][state.theme]; }
 
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (ch) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;"
+  }[ch]));
+}
+
 function popupHtml(pt) {
   const [gi, lat, lon, name, url, taken, camera] = pt;
   const g = DATA.groups[gi];
+  const safeName = escapeHtml(name);
+  const safeUrl = escapeHtml(url);
+  const copyUrl = url.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
   return `<div class="pop">
-    <div class="t">${name}</div>
+    <div class="t">${safeName}</div>
     <div class="meta">
-      <span>Group</span><span>${g.name}</span>
+      <span>Group</span><span>${escapeHtml(g.name)}</span>
       <span>Position</span><span>${lat.toFixed(5)}, ${lon.toFixed(5)}</span>
-      ${taken ? `<span>Captured</span><span>${taken}</span>` : ""}
-      ${camera ? `<span>Camera</span><span>${camera}</span>` : ""}
+      ${taken ? `<span>Captured</span><span>${escapeHtml(taken)}</span>` : ""}
+      ${camera ? `<span>Camera</span><span>${escapeHtml(camera)}</span>` : ""}
     </div>
-    <img src="${url}" loading="lazy" alt="${name}"
-         onerror="this.style.display='none'"/>
-    <button class="copy" onclick="copyText('${url.replace(/'/g, "\\'")}', this)">Copy image path</button>
+    <a class="preview" href="${safeUrl}" target="_blank" rel="noopener">
+      <img src="${safeUrl}" loading="lazy" alt="${safeName}"
+           onerror="this.closest('.preview').classList.add('missing')"/>
+      <span class="image-missing">Image not found<br>${safeUrl}</span>
+    </a>
+    <div class="actions">
+      <a class="action" href="${safeUrl}" target="_blank" rel="noopener">Open image</a>
+      <button class="action" onclick="copyText('${copyUrl}', this)">Copy path</button>
+    </div>
   </div>`;
 }
 
@@ -417,6 +455,7 @@ function rebuildLayers() {
 
   if (wantHeat && pts.length) {
     heatLayer = L.heatLayer(pts.map((pt) => [pt[1], pt[2], 1]), {
+      pane: "heatPane", interactive: false,
       radius: 16, blur: 18, minOpacity: 0.28, gradient: heatGradient(),
     }).addTo(map);
   }

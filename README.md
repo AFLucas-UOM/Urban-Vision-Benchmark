@@ -38,14 +38,11 @@ Photographs of Maltese traffic signs collected in **11 groups**
 ([Datasets/MTSD/GRP-1 … GRP-11](Datasets/MTSD/)), each group holding raw
 captures under `Images/`. QA-verified annotations exist for **GRP-1–GRP-3**
 under [Datasets/MTSD/Annotations/](Datasets/MTSD/Annotations/):
-COCO-style JSONs (`GRP-*/Final-QA/QA-GRP*.json`, 1,971 annotated images) whose
+COCO-style JSONs (`GRP-*/Final-QA/QA-GRP*.json`, 1,971 annotated images / 5,457 boxes) whose
 boxes carry **per-sign auxiliary attributes** — viewing angle, mounting type,
 condition, and sign shape — used for the multi-attribute classification
 experiments. Remaining groups join automatically once their `Final-QA` JSON
 exists.
-
-> Known data gap: GRP-3's `Images/` folder currently contains 398 files while
-> its QA JSON annotates 617 images (219 annotated images not on disk).
 
 ---
 
@@ -64,8 +61,8 @@ exists.
    (frozen/LoRA), **V-JEPA 2.1** (frozen/LoRA) and **ConvNeXt**
    (frozen/fine-tuned) — in
    [Scripts/MTSD-Scripts/AttributeClassification/](Scripts/MTSD-Scripts/AttributeClassification/).
-   Supporting tooling covers annotation (Label Studio), GDPR redaction, and
-   promptable-detection experiments.
+   Supporting tooling covers annotation QA, Label Studio conversion, GDPR
+   redaction, promptable-detection experiments, and inference-speed benchmarking.
 
 ---
 
@@ -86,7 +83,8 @@ Urban-Vision-Benchmark/
 │   ├── MDWD-Results/              # Consolidated benchmark tables/plots per model family
 │   ├── MDWD-Runs/                 # Archived training runs (weights, curves, configs)
 │   ├── MTSD-Results/              # (reserved for MTSD result exports)
-│   └── MTSD-Runs/                 # (reserved for MTSD run archives)
+│   ├── MTSD-Runs/                 # (reserved for MTSD run archives)
+│   └── PromptDetect/              # Batch prompt-evaluation outputs
 └── Scripts/
     ├── MDWD-Scripts/
     │   ├── MDWD-Analysis/         # MDWD EDA package + runner (see its README)
@@ -95,11 +93,13 @@ Urban-Vision-Benchmark/
     │   ├── AttributeClassification/   # Multi-attribute training pipeline + configs
     │   ├── LabelStudio/           # Annotation-workflow tooling
     │   ├── MTSD-Analysis/         # MTSD EDA package + notebook + audit scripts
+    │   ├── MTSD-AnnotationQA/     # Audit/review/apply workflow for Final-QA JSONs
     │   └── update_annotation_paths.ps1
     └── Other-Scripts/
         ├── CondaEnvironments/     # Reproducible conda env YAMLs + setup scripts
         ├── GDPR-Compliance/       # Face/plate detection + redaction pipeline
-        └── PromptDetect/          # SAM 3 / Cosmos Reason2 / LocateAnything app
+        ├── Inference-Benchmark/   # Inference-speed benchmark scripts
+        └── PromptDetect/          # SAM 3 / Cosmos Reason2 / LocateAnything app + batch eval
 ```
 
 ### What each top-level folder is for
@@ -184,7 +184,11 @@ all relative paths resolve against the repository root):
 `mtsd_eda` package + `MTSD-EDA.ipynb` generate the image inventory, EXIF/GPS
 profiling, annotation statistics and 21 figures under
 `Documents/MTSD-EDA/`; `mtsd_mapper.py` builds the interactive
-`MTSD_mapped.html` capture map; `check_gps_tags.py`,
+`MTSD_mapped.html` capture atlas. Atlas point popups show the image preview,
+filename, group, GPS position, capture metadata when available, plus `Open image`
+and `Copy path`; the density layer is non-interactive so points remain clickable
+in `Both` mode. Open the HTML through Live Server from the repository root so
+relative links to `Datasets/MTSD/...` resolve correctly. `check_gps_tags.py`,
 `count_image_annotation_stats.py` and `generate_sample_annotations.py` are
 standalone audit utilities.
 
@@ -198,12 +202,21 @@ standalone audit utilities.
   ([Scripts/MTSD-Scripts/update_annotation_paths.ps1](Scripts/MTSD-Scripts/README.md)):
   one-off, re-runnable migration of legacy `source_image` paths to the new
   layout (dry-run + timestamped backups). Already applied on 2026-07-04.
+- **Annotation QA** ([Scripts/MTSD-Scripts/MTSD-AnnotationQA/](Scripts/MTSD-Scripts/MTSD-AnnotationQA/)):
+  audit, visual review and guarded-apply workflow for duplicate boxes and
+  attribute issues in the Final-QA JSONs.
 - **GDPR redaction** ([Scripts/Other-Scripts/GDPR-Compliance/](Scripts/Other-Scripts/GDPR-Compliance/)):
   face/licence-plate detection and blurring previews before any imagery is
-  shared.
+  shared; preview/apply paths are guarded so stale previews are not applied.
 - **PromptDetect** ([Scripts/Other-Scripts/PromptDetect/](Scripts/Other-Scripts/PromptDetect/),
   doc: [Documents/PromptDetect.md](Documents/PromptDetect.md)): Gradio app for
-  promptable detection with SAM 3/3.1, Cosmos Reason2 and LocateAnything.
+  promptable detection with SAM 3/3.1, Cosmos Reason2 and LocateAnything, plus
+  `batch_evaluation/` for GT-scored MDWD/MTSD prompt evaluation with 0–15 prompt
+  config checks and 1–15 real prompts.
+- **Inference benchmark** ([Scripts/Other-Scripts/Inference-Benchmark/](Scripts/Other-Scripts/Inference-Benchmark/)):
+  dry-run verified inference-speed benchmark covering supervised detectors,
+  prompt models and attribute classifiers. Only Cosmos Reason2 32B requires
+  `--allow-heavy`; 8B is allowed normally.
 
 ---
 
@@ -212,14 +225,14 @@ standalone audit utilities.
 ### Environments (conda, recommended)
 
 Per-workstream environments are defined in
-[Requirements/CondaEnvironments/](Requirements/CondaEnvironments/README.md)
+[Scripts/Other-Scripts/CondaEnvironments/](Scripts/Other-Scripts/CondaEnvironments/)
 with per-platform setup scripts:
 
 | Env | Used by |
 | --- | --- |
 | `MDWD` | MDWD notebooks + MDWD EDA |
 | `mtsd-attrcls` | AttributeClassification training/inference |
-| `mtsd-base` | PromptDetect app, GDPR `sam31` backend, general MTSD tooling |
+| `mtsd-base` | PromptDetect app/batch eval, GDPR, annotation QA review app, general MTSD tooling |
 | `mtsd-la` | LocateAnything worker |
 
 ### Requirements files
@@ -270,9 +283,10 @@ numeric results; the imagery must be restored from local/off-repo storage.
 
 **Under active MSc research development** (2026). Current state: MDWD
 detection benchmarks (YOLO11/12/26, RF-DETR) executed with archived runs;
-MTSD groups 1–3 QA-annotated with EDA and attribute-classification pipeline
-operational (full training round in progress); MTSD detection-track results
-folders reserved; further MTSD group annotation ongoing.
+MTSD groups 1–3 QA-annotated with EDA and the full attribute-classification
+round executed; MTSD supervised detection notebooks are scaffolded but not yet
+run; PromptDetect batch evaluation and inference-speed tooling are dry-run
+verified; further MTSD annotation/cleanup is ongoing.
 
 ## Citation
 

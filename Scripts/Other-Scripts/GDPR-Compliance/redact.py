@@ -141,7 +141,8 @@ def cmd_apply(args: argparse.Namespace) -> None:
             return
 
     replaced, missing = pipeline.apply_results(
-        output_root=args.output, input_root=args.input, backup=not args.no_backup)
+        output_root=args.output, input_root=args.input, report=report,
+        backup=not args.no_backup)
     print(f"\nReplaced  : {replaced:,} originals")
     if missing:
         print(f"Missing   : {missing:,} originals not found (renamed or moved?)")

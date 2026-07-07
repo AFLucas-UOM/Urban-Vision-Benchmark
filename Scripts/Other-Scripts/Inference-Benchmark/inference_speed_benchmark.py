@@ -13,7 +13,7 @@ count - for every trained model family in the repository:
                Scripts/MTSD-Scripts/AttributeClassification/outputs/checkpoints.
   prompt     : PromptDetect models (SAM 3 / SAM 3.1 / Cosmos Reason2 /
                LocateAnything) via the existing DetectionBackend; heavy Cosmos
-               variants (8B/32B) are opt-in via --allow-heavy.
+               32B is opt-in via --allow-heavy.
 
 Benchmarking rules implemented:
   * torch.cuda.synchronize() before/after every timed call on CUDA;
@@ -24,7 +24,7 @@ Benchmarking rules implemented:
   * batch size 1 by default; --batch-sizes 1 4 8 opts into larger batches
     (engines without batch support fall back to 1 with a note);
   * every run writes to a fresh timestamped folder under
-    Results/Final-Benchmarks/InferenceSpeed/ - nothing is overwritten.
+    Results/Inference-Benchmark/InferenceSpeed/ - nothing is overwritten.
 
 Usage:
   python inference_speed_benchmark.py --list-models
@@ -67,7 +67,7 @@ def find_project_root(start: Path = SCRIPT_DIR) -> Path:
 
 
 PROJECT_ROOT = find_project_root()
-RESULTS_ROOT = PROJECT_ROOT / "Results" / "Final-Benchmarks" / "InferenceSpeed"
+RESULTS_ROOT = PROJECT_ROOT / "Results" / "Inference-Benchmark" / "InferenceSpeed"
 MDWD_RUNS = PROJECT_ROOT / "Results" / "MDWD-Runs"
 MTSD_RUNS = PROJECT_ROOT / "Results" / "MTSD-Runs"
 ATTRCLS_DIR = PROJECT_ROOT / "Scripts" / "MTSD-Scripts" / "AttributeClassification"
@@ -78,13 +78,16 @@ MDWD_YOLO_DATASET = PROJECT_ROOT / "Datasets" / "MDWD" / "MDWD-YOLO26"
 MTSD_PREPARED_YOLO = PROJECT_ROOT / "Datasets" / "MTSD" / "Prepared" / "MTSD-YOLO"
 MTSD_GROUPS_ROOT = PROJECT_ROOT / "Datasets" / "MTSD"
 
-HEAVY_PROMPT_MODELS = {"Cosmos Reason2 8B", "Cosmos Reason2 32B"}
+HEAVY_PROMPT_MODELS = {"Cosmos Reason2 32B"}
 RFDETR_CHECKPOINT_PREFERENCE = ("checkpoint_best_total.pth", "checkpoint_best_ema.pth",
                                 "checkpoint_best_regular.pth", "checkpoint.pth")
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 # Selector aliases (user-facing convenience -> canonical id/prefix).
 SELECTOR_ALIASES = {
     "convnext_finetuned": "convnext",
+    "cosmos2b": "cosmos_reason2_2b",
+    "cosmos8b": "cosmos_reason2_8b",
+    "cosmos32b": "cosmos_reason2_32b",
     "rf-detr": "rfdetr",
     "rf_detr": "rfdetr",
 }
@@ -302,17 +305,20 @@ def _percentile(values: list[float], q: float) -> float:
     return ordered[index]
 
 
-def timed_loop(run_batch, batches: list, device: str, warmup: int) -> dict:
+def timed_loop(run_batch, batches: list, device: str, warmup: int,
+               reset_after_warmup=None) -> dict:
     """Warmup then time run_batch(batch) over all batches, CUDA-synchronised."""
     import torch
 
     use_cuda = device.startswith("cuda") and torch.cuda.is_available()
 
-    for batch in batches[:max(1, min(warmup, len(batches)))]:
+    for batch in batches[:min(max(0, warmup), len(batches))]:
         run_batch(batch)
     if use_cuda:
         torch.cuda.synchronize()
         torch.cuda.reset_peak_memory_stats()
+    if reset_after_warmup is not None:
+        reset_after_warmup()
 
     per_image_latency_ms: list[float] = []
     total_images = 0
@@ -346,6 +352,11 @@ def timed_loop(run_batch, batches: list, device: str, warmup: int) -> dict:
 
 def make_batches(items: list, batch_size: int) -> list[list]:
     return [items[i:i + batch_size] for i in range(0, len(items), batch_size)]
+
+
+def clear_metric_lists(metrics: dict[str, list]) -> None:
+    for values in metrics.values():
+        values.clear()
 
 
 def file_size_mb(path: str | Path | None) -> float | None:
@@ -397,7 +408,10 @@ def benchmark_yolo(entry: ModelEntry, images: list[Path], args, device: str) -> 
                 if value is not None:
                     speeds[key].append(value)
 
-    stats = timed_loop(run_batch, make_batches(images, args.batch_size), device, args.warmup)
+    stats = timed_loop(
+        run_batch, make_batches(images, args.batch_size), device, args.warmup,
+        reset_after_warmup=lambda: clear_metric_lists(speeds),
+    )
     return {
         **stats,
         "cold_start_s": round(cold_start_s, 2),
@@ -511,7 +525,10 @@ def benchmark_prompt(entry: ModelEntry, images: list[Path], args, device: str) -
                 breakdown[key].append(result["runtime"][key] * 1000)
 
     try:
-        stats = timed_loop(run_batch, make_batches(loaded, 1), device, args.warmup)
+        stats = timed_loop(
+            run_batch, make_batches(loaded, 1), device, args.warmup,
+            reset_after_warmup=lambda: clear_metric_lists(breakdown),
+        )
     finally:
         try:
             backend._loaded.engine.close()  # noqa: SLF001 - no public close API
@@ -665,7 +682,7 @@ def main() -> int:
                         help="Text prompt for the prompt task.")
     parser.add_argument("--device", default="auto", choices=["auto", "cpu", "cuda"])
     parser.add_argument("--allow-heavy", action="store_true",
-                        help="Required for Cosmos Reason2 8B/32B.")
+                        help="Required for Cosmos Reason2 32B.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Resolve models + images and print the plan; load nothing, write nothing.")
     args = parser.parse_args()

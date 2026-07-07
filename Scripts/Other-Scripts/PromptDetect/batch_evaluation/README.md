@@ -13,9 +13,12 @@ untouched — this is an additional mode that reuses the same
    - **MTSD** — the prepared dataset at `Datasets/MTSD/Prepared/MTSD-YOLO`
      when it exists, otherwise the QA COCO annotations
      (`Datasets/MTSD/Annotations/GRP-*/Final-QA/`, groups discovered
-     dynamically) via `--split all`.
+     dynamically). Before the prepared dataset exists, `train`/`valid`/`test`
+     reproduce the prep notebook's seeded per-group 80/10/10 split; `all`
+     evaluates every QA image.
 2. Runs each selected model sequentially (previous model is freed first),
-   feeding every image each of the 1–15 prompts.
+   feeding every image each of the 1–15 prompts. Zero prompts are accepted
+   for dry-run dataset/model sanity checks only.
 3. Matches predictions to GT boxes (greedy IoU matching, threshold
    configurable) and reports: precision, recall, F1, accuracy
    (TP/(TP+FP+FN)), AP@50, mAP@50:95, mean matched IoU, FP/FN counts,
@@ -27,7 +30,7 @@ untouched — this is an additional mode that reuses the same
 
 - **No model runs unless explicitly selected** (CLI `--models` is required;
   the Gradio UI pre-selects nothing).
-- **Heavy models are opt-in**: Cosmos Reason2 8B/32B refuse to run without
+- **Heavy models are opt-in**: Cosmos Reason2 32B refuses to run without
   `--allow-heavy` (CLI) or the explicit *allow heavy models* toggle (UI).
 - `--dry-run` loads the dataset and prints the execution plan without
   touching any model; `--max-images N` caps a run for smoke testing.
@@ -40,7 +43,7 @@ untouched — this is an additional mode that reuses the same
 ```bash
 # Preview (no models loaded, nothing written):
 python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_batch_eval.py \
-    --dataset MTSD --split all \
+    --dataset MTSD --split test \
     --prompts "traffic sign" "stop sign" "warning sign" \
     --models sam3 locateanything_3b \
     --max-images 25 --dry-run
@@ -51,7 +54,8 @@ python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_batch_eval.py \
     --models sam3 --max-images 25 --save-visuals 10
 ```
 
-Model slugs are derived from the backend registry — run with an invalid
+Model slugs are derived from the backend registry, with convenience aliases
+such as `sam3`, `sam3.1`, `cosmos8b`, and `locateanything`. Run with an invalid
 `--models x` to see the current list (e.g. `sam_3`, `sam_3.1`,
 `cosmos_reason2_2b`, `cosmos_reason2_8b`, `cosmos_reason2_32b`,
 `locateanything_3b`).
@@ -62,9 +66,9 @@ Model slugs are derived from the backend registry — run with an invalid
 python Scripts/Other-Scripts/PromptDetect/batch_evaluation/gradio_batch_eval.py
 ```
 
-Dataset/split dropdowns, prompt textbox (one per line), model checkboxes
-(heavy models in a separate gated group), max-images, thresholds, dry-run
-toggle, metrics table and result-folder path.
+Dataset/split dropdowns (`all` means every MTSD QA image), prompt textbox
+(0-15, one per line; zero prompts for dry-run only), model checkboxes (32B in a separate gated group),
+max-images, thresholds, dry-run toggle, metrics table and result-folder path.
 
 ## Output files (per run)
 
