@@ -1,7 +1,9 @@
 """Minimal Gradio app for side-by-side multi-head checkpoint inference.
 
 Run from Scripts/MTSD-Scripts/AttributeClassification:
-    PYTHONNOUSERSITE=1 C:/Users/fridge/anaconda3/envs/mtsd-attrcls/python.exe -s inference/gradio_compare.py
+    conda activate mtsd-attrcls
+    $env:PYTHONNOUSERSITE = "1"
+    python -s inference/gradio_compare.py
 """
 
 from __future__ import annotations

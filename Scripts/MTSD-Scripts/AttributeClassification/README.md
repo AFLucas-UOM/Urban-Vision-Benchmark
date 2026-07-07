@@ -85,8 +85,9 @@ root (pip pins in
 
 ```
 conda create -n mtsd-attrcls python=3.11 -y
-C:/Users/fridge/anaconda3/envs/mtsd-attrcls/python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
-C:/Users/fridge/anaconda3/envs/mtsd-attrcls/python.exe -m pip install -r Requirements/requirements-attribute-classification.txt
+conda activate mtsd-attrcls
+python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+python -m pip install -r Requirements/requirements-attribute-classification.txt
 ```
 
 Always run with user-site packages disabled (`-s` plus `PYTHONNOUSERSITE=1`),
@@ -95,7 +96,8 @@ that shadows env packages with incompatible versions:
 
 ```
 cd Scripts/MTSD-Scripts/AttributeClassification
-PYTHONNOUSERSITE=1 C:/Users/fridge/anaconda3/envs/mtsd-attrcls/python.exe -s run_all.py
+$env:PYTHONNOUSERSITE = "1"
+python -s run_all.py
 ```
 
 Weights & Biases logging uses `WANDB_API_KEY` from the repository-root `.env`
@@ -216,7 +218,7 @@ lands (no config change needed). In each QA JSON:
 Every run (of any entry point) starts with group discovery. No code or config
 changes are needed when a new group finishes QA:
 
-1. All `GRP-*` folders under `Datasets/` and `Datasets/MTSD/Annotations/` are
+1. All `GRP-*` folders under `Datasets/MTSD/` and `Datasets/MTSD/Annotations/` are
    scanned. Each is logged as **included** (Final-QA JSON present), **awaiting
    QA** (annotations but no Final-QA JSON), or **no annotations yet**.
 2. For each QA-approved group the QA file's sha256 is compared with the hash

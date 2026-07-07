@@ -49,7 +49,7 @@ that mirrors the input structure:
 
 ```text
 GDPR-Compliance-Preview/
-  GRP-1/Images/<name>.jpeg               # redacted copy (EXIF kept, orientation baked)
+  ./GRP-1/Images/<name>.jpeg             # redacted copy, relative to input Datasets/MTSD
   _comparisons/GRP-1/Images/<name>.jpg   # before (boxes + confidence) | after sheet
   detection_report.json                  # per-detection: label, confidence, detector,
                                          #   box before AND after padding, method, errors

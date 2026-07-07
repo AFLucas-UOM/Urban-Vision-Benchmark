@@ -131,7 +131,7 @@ powershell -File "E:\path\to\Urban-Vision-Benchmark\Scripts\Other-Scripts\Prompt
 ### Listing (no arguments)
 
 ```
-Hugging Face hub cache: C:\Users\<you>\.cache\huggingface\hub
+Hugging Face hub cache: %USERPROFILE%\.cache\huggingface\hub
 
 PromptDetect models in cache:
   sam3                      6.42 GB

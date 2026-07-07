@@ -26,7 +26,7 @@ Typical workflow:
 
 Examples:
   python redact.py preview --backend classic --method pixelate
-  python redact.py preview --input ..\\..\\Datasets\\GRP-1 --limit 50
+  python redact.py preview --input ..\\..\\..\\Datasets\\MTSD\\GRP-1 --limit 50
   python redact.py preview --sam-prompt "licence_plate=car number plate"
   python redact.py apply --yes
 """
