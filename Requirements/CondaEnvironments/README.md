@@ -135,7 +135,7 @@ conda env remove -n mtsd-base --yes
 
 Model weights are cached outside the envs (in `~/.cache/huggingface/hub`), so
 removing an env does not delete downloaded weights — see
-[Documents/CleanModelCache.md](../../Documents/CleanModelCache.md) for
+[Documents/Other/CleanModelCache.md](../../Documents/Other/CleanModelCache.md) for
 reclaiming that space.
 
 ## Notes

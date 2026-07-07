@@ -114,9 +114,45 @@ CROSS_CHECKS = [
 ]
 
 
+def rel_posix(path: Path) -> str:
+    """Repository-relative POSIX path for matching allowlisted records."""
+    return str(path.relative_to(ROOT)).replace("\\", "/")
+
+
+def is_allowed_pattern_hit(name: str, path: Path, line: str) -> bool:
+    """Known provenance/history/migration references that stay auditable.
+
+    These are intentionally not rewritten: they document where data or run
+    records came from, or show the legacy path shape handled by migration
+    tooling, rather than paths used by current executable workflows.
+    """
+    rel = rel_posix(path)
+    if name == "old_grp_path":
+        return rel in {
+            "Scripts/MTSD-Scripts/README.md",
+            "Scripts/MTSD-Scripts/update_annotation_paths.ps1",
+        } and '"source_image"' in line
+    if name == "old_repo_name":
+        if rel == "Scripts/Automation/verify_repository_health.py":
+            return True
+        if rel.startswith("Datasets/MTSD/Annotations/") and "/Final-QA/QA-GRP" in rel \
+                and '"source_file"' in line:
+            return True
+        if rel == "Scripts/MTSD-Scripts/AttributeClassification/outputs/experiment_log.json":
+            return True
+        if rel == "Scripts/MTSD-Scripts/update_annotation_paths.ps1" \
+                and "MTSDataset repository root" in line:
+            return True
+        if rel == "Scripts/MDWD-Scripts/MDWD-Analysis/MDWD-EDA-OG.ipynb":
+            return True
+        if rel == "Scripts/MDWD-Scripts/MDWD-Analysis/README.md" and "Legacy" in line:
+            return True
+    return False
+
+
 def is_excluded(path: Path) -> bool:
     rel = path.relative_to(ROOT)
-    if str(rel).replace("\\", "/") in LEGACY_FILES:
+    if rel_posix(path) in LEGACY_FILES:
         return True
     return any(part in EXCLUDED_DIR_TOKENS or part.startswith("[OLD]") for part in rel.parts) \
         or ".bak" in path.name or ".pre-migration" in path.name or ".pre-qa-fix" in path.name
@@ -204,7 +240,7 @@ def run_checks() -> list[dict]:
             if name == "wandb_key" and path.name == ".env":
                 continue
             for line_no, line in enumerate(file_text(path).splitlines(), 1):
-                if pattern.search(line):
+                if pattern.search(line) and not is_allowed_pattern_hit(name, path, line):
                     hits.append(f"{path.relative_to(ROOT)}:{line_no}: {line.strip()[:110]}")
         add(f"pattern_{name}", severity if hits else "PASS", hits[:60], description)
 

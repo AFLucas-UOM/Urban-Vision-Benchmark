@@ -58,7 +58,7 @@ Recommended location:
 On Windows this usually means:
 
 ```text
-C:\Users\<YOUR_USERNAME>\.cloudflared\
+%USERPROFILE%\.cloudflared\
 ```
 
 For this repository, keep Cloudflare credentials outside Git. The documentation is enough to recreate the setup.
@@ -159,7 +159,7 @@ After login, Cloudflare writes a certificate file locally.
 On Windows it is usually:
 
 ```text
-C:\Users\<YOUR_USERNAME>\.cloudflared\cert.pem
+%USERPROFILE%\.cloudflared\cert.pem
 ```
 
 Check it exists:
@@ -183,7 +183,7 @@ This creates a tunnel and prints a tunnel ID.
 It also creates a credentials JSON file like:
 
 ```text
-C:\Users\<YOUR_USERNAME>\.cloudflared\<TUNNEL_ID>.json
+%USERPROFILE%\.cloudflared\<TUNNEL_ID>.json
 ```
 
 List tunnels:
@@ -219,7 +219,7 @@ This creates the Cloudflare DNS route automatically.
 Create or edit:
 
 ```text
-C:\Users\<YOUR_USERNAME>\.cloudflared\config.yml
+%USERPROFILE%\.cloudflared\config.yml
 ```
 
 PowerShell:
@@ -232,7 +232,7 @@ Use this content, replacing `<TUNNEL_ID>` with the real tunnel ID:
 
 ```yaml
 tunnel: labelstudio
-credentials-file: C:\Users\<YOUR_USERNAME>\.cloudflared\<TUNNEL_ID>.json
+credentials-file: <absolute path to your .cloudflared>\<TUNNEL_ID>.json
 
 ingress:
   - hostname: labelstudio.aflucas.com
@@ -243,7 +243,7 @@ ingress:
 Example Windows path shape:
 
 ```yaml
-credentials-file: C:\Users\fridge\.cloudflared\f40eb9d6-4a86-4756-8eae-df45718d6865.json
+credentials-file: %USERPROFILE%\.cloudflared\f40eb9d6-4a86-4756-8eae-df45718d6865.json
 ```
 
 Important:
