@@ -67,24 +67,24 @@ Only the separate `apply` command touches originals. It:
 ```powershell
 # 1. Preview over the whole dataset with SAM 3.1 (originals untouched)
 conda activate mtsd-base
-python .\Scripts\GDPR-Compliance\redact.py preview
+python .\Scripts\Other-Scripts\GDPR-Compliance\redact.py preview
 
 # quick trial on a subset
-python .\Scripts\GDPR-Compliance\redact.py preview --input .\Datasets\GRP-1 --limit 50
+python .\Scripts\Other-Scripts\GDPR-Compliance\redact.py preview --input .\Datasets\MTSD\GRP-1 --limit 50
 
 # classical detectors only (no torch needed)
-python .\Scripts\GDPR-Compliance\redact.py preview --backend classic
+python .\Scripts\Other-Scripts\GDPR-Compliance\redact.py preview --backend classic
 
 # pixelation instead of Gaussian blur; custom plate prompt
-python .\Scripts\GDPR-Compliance\redact.py preview --method pixelate --sam-prompt "licence_plate=car number plate"
+python .\Scripts\Other-Scripts\GDPR-Compliance\redact.py preview --method pixelate --sam-prompt "licence_plate=car number plate"
 
 # full redacted mirror (also copies images without detections)
-python .\Scripts\GDPR-Compliance\redact.py preview --copy-clean
+python .\Scripts\Other-Scripts\GDPR-Compliance\redact.py preview --copy-clean
 
 # 2. Review  GDPR-Compliance-Preview\_comparisons\  and  detection_summary.csv
 
 # 3. Replace originals (interactive confirmation; backups on by default)
-python .\Scripts\GDPR-Compliance\redact.py apply
+python .\Scripts\Other-Scripts\GDPR-Compliance\redact.py apply
 ```
 
 ## Notes

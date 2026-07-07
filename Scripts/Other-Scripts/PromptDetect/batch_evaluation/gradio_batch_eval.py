@@ -2,9 +2,9 @@
 """Gradio front-end for PromptDetect batch evaluation.
 
 A thin UI over run_batch_eval.run_evaluation: dataset + split dropdowns,
-1-15 prompts (one per line), model checkboxes (none pre-selected; heavy
-Cosmos variants gated behind an explicit opt-in), max-images limit and a
-dry-run toggle. The existing PromptDetect app (app.py) is untouched.
+0-15 prompts (zero prompts for dry-run only), model checkboxes (none
+pre-selected; Cosmos 32B gated behind an explicit opt-in), max-images limit
+and a dry-run toggle. The existing PromptDetect app (app.py) is untouched.
 
 Usage:
     python Scripts/Other-Scripts/PromptDetect/batch_evaluation/gradio_batch_eval.py
@@ -31,18 +31,21 @@ LIGHT_MODELS = [label for label in config.available_models().values()
 HEAVY_MODELS = sorted(config.HEAVY_MODEL_LABELS)
 
 
-def parse_prompts(text: str) -> list[str]:
+def parse_prompts(text: str, dry_run: bool) -> list[str]:
     prompts = [line.strip() for line in text.splitlines() if line.strip()]
     if not (config.MIN_PROMPTS <= len(prompts) <= config.MAX_PROMPTS):
         raise gr.Error(f"Provide {config.MIN_PROMPTS}-{config.MAX_PROMPTS} prompts "
                        f"(one per line); got {len(prompts)}.")
+    if not dry_run and not prompts:
+        raise gr.Error("A real evaluation needs at least one prompt. "
+                       "Use dry run for a zero-prompt dataset/model sanity check.")
     return prompts
 
 
 def launch_run(dataset, split, prompts_text, light_selected, heavy_selected,
                allow_heavy, max_images, conf_threshold, iou_threshold,
                save_visuals, dry_run, progress=gr.Progress()):
-    prompts = parse_prompts(prompts_text)
+    prompts = parse_prompts(prompts_text, bool(dry_run))
     selected = list(light_selected or [])
     if heavy_selected:
         if not allow_heavy:
@@ -65,7 +68,7 @@ def launch_run(dataset, split, prompts_text, light_selected, heavy_selected,
             f"- Images: {len(gt['records']):,} | GT boxes: {n_boxes:,} | "
             f"classes: {len(gt['class_names'])}\n"
             f"- Models: {', '.join(labels)}\n"
-            f"- Prompts ({len(prompts)}): {', '.join(prompts)}\n"
+            f"- Prompts ({len(prompts)}): {', '.join(prompts) if prompts else '(none - dataset sanity check)'}\n"
             f"- A full run would make ~{estimated:,} predict() calls."
         )
         return info, pd.DataFrame(), ""
@@ -90,7 +93,7 @@ def build_app():
         gr.Markdown(
             "# PromptDetect - batch evaluation vs ground truth\n"
             "Systematic evaluation of prompt-based models against MDWD/MTSD annotations. "
-            "Models must be selected explicitly; heavy Cosmos variants need the extra "
+            "Models must be selected explicitly; Cosmos 32B needs the extra "
             "opt-in toggle. Use **dry run** first to sanity-check the plan."
         )
         with gr.Row():
@@ -99,7 +102,7 @@ def build_app():
                 split = gr.Dropdown(["train", "valid", "test", "all"], value="test",
                                     label="Split ('all' = MTSD QA annotations fallback)")
                 prompts_text = gr.Textbox(
-                    label=f"Prompts ({config.MIN_PROMPTS}-{config.MAX_PROMPTS}, one per line)",
+                    label=f"Prompts ({config.MIN_PROMPTS}-{config.MAX_PROMPTS}, one per line; 0 dry-run only)",
                     lines=5, placeholder="traffic sign\nstop sign\nwarning sign",
                 )
                 light_models = gr.CheckboxGroup(LIGHT_MODELS, label="Models (none pre-selected)")

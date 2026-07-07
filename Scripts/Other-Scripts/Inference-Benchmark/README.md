@@ -1,4 +1,4 @@
-# FinalBenchmarks
+# Inference-Benchmark
 
 Deployment-oriented benchmarks for the dissertation's comparative evaluation —
 metrics beyond accuracy: latency, throughput, memory, model size.
@@ -20,20 +20,20 @@ CUDA-synchronised timing, cold-start reported separately, batch 1 by default).
 
 ```bash
 # Inventory: which checkpoints exist, what is pending
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py --list-models
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py --list-models
 
 # MDWD detection (dry-run first, then real; MDWD env)
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py \
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py \
     --dataset MDWD --task detection --models yolo11 yolo12 yolo26 rf-detr \
     --split test --max-images 50 --batch-size 1 --dry-run
 
 # MTSD attribute classification (mtsd-attrcls env)
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py \
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py \
     --dataset MTSD --task attribute --models dinov3 dinov3_lora vjepa vjepa_lora convnext_frozen convnext_finetuned \
     --max-images 50 --batch-size 1 --dry-run
 
-# PromptDetect (mtsd-base env; heavy Cosmos variants need --allow-heavy)
-python Scripts/FinalBenchmarks/inference_speed_benchmark.py \
+# PromptDetect (mtsd-base env; Cosmos 32B needs --allow-heavy)
+python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py \
     --dataset PromptDetect --task prompt --models sam3 locateanything \
     --max-images 10 --prompt "traffic sign" --dry-run
 ```
@@ -45,7 +45,7 @@ row per size; RF-DETR and prompt models are single-image APIs and stay at 1),
 ### Outputs
 
 Each real run writes a fresh timestamped folder
-`Results/Final-Benchmarks/InferenceSpeed/<stamp>/` containing
+`Results/Inference-Benchmark/InferenceSpeed/<stamp>/` containing
 `inference_speed_summary.csv` / `.md`, `inference_speed_raw_timings.csv`
 (per-image latencies), `benchmark_config.json`, `benchmark_images_used.csv`
 (the exact seeded sample), `model_inventory.csv` and `latency_fps.png`.
@@ -57,6 +57,6 @@ Each real run writes a fresh timestamped folder
 - Selecting a **pending** model (e.g. MTSD detection) records it as pending in
   the summary instead of faking numbers.
 - SAM 3/3.1 weights are HF-gated and download on first load; LocateAnything
-  spawns its `mtsd-la` worker; Cosmos 8B/32B require `--allow-heavy`.
+  spawns its `mtsd-la` worker; Cosmos 32B requires `--allow-heavy`.
 - Run the same command per environment — dependency failures are recorded per
   model in the summary rather than aborting the whole run.

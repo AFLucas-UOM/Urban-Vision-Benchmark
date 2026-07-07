@@ -63,9 +63,12 @@ def run_models(
                     conf_threshold=conf_threshold, max_detections=max_detections,
                 )
                 elapsed_ms = (time.perf_counter() - started) * 1000
+                masks = result.get("masks")
+                if masks is None or len(masks) != len(result["boxes"]):
+                    masks = [None] * len(result["boxes"])
                 for box, score, label, mask in zip(
                     result["boxes"], result["scores"], result["labels"],
-                    result["masks"] or [None] * len(result["boxes"]),
+                    masks,
                 ):
                     predictions.append({
                         "model": model_label,

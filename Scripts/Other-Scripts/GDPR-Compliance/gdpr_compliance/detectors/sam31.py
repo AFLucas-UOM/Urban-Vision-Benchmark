@@ -69,7 +69,7 @@ class Sam31Detector(BaseDetector):
                 "not importable in this environment.\n"
                 "Run inside the mtsd-base conda env, e.g.:\n"
                 "  conda activate mtsd-base\n"
-                "  python Scripts/GDPR-Compliance/redact.py preview\n"
+                "  python Scripts/Other-Scripts/GDPR-Compliance/redact.py preview\n"
                 "or select the classical detectors with --backend classic."
             )
 

@@ -10,7 +10,7 @@ prompt-vs-class confusion matrix and plots.
 
 Safety:
 * models must be selected explicitly (``--models``); nothing runs by default;
-* heavy checkpoints (Cosmos Reason2 8B/32B) additionally require
+* heavy checkpoints (Cosmos Reason2 32B) additionally require
   ``--allow-heavy``;
 * ``--dry-run`` loads the dataset and prints the plan without touching any
   model; ``--max-images`` caps the run for smoke tests;
@@ -45,9 +45,9 @@ def resolve_models(slugs: list[str], allow_heavy: bool) -> list[str]:
     registry = config.available_models()
     labels = []
     for slug in slugs:
-        key = slug.lower()
+        key = config.MODEL_ALIASES.get(slug.lower(), slug.lower())
         if key not in registry:
-            options = ", ".join(sorted(registry))
+            options = ", ".join(sorted({*registry, *config.MODEL_ALIASES}))
             raise SystemExit(f"Unknown model '{slug}'. Available: {options}")
         labels.append(registry[key])
     heavy = [label for label in labels if label in config.HEAVY_MODEL_LABELS]
@@ -258,10 +258,12 @@ def main() -> int:
     parser.add_argument("--dataset", required=True, choices=["MDWD", "MTSD", "mdwd", "mtsd"])
     parser.add_argument("--split", default="test",
                         help="train / valid / test, or 'all' (MTSD QA fallback).")
-    parser.add_argument("--prompts", nargs="+", required=True, metavar="PROMPT",
-                        help=f"{config.MIN_PROMPTS}-{config.MAX_PROMPTS} text prompts.")
+    parser.add_argument("--prompts", nargs="*", default=[], metavar="PROMPT",
+                        help=f"{config.MIN_PROMPTS}-{config.MAX_PROMPTS} text prompts "
+                             "(0 is dry-run only).")
     parser.add_argument("--models", nargs="+", required=True, metavar="MODEL",
-                        help=f"Model slugs: {', '.join(sorted(config.available_models()))}")
+                        help="Model slugs/aliases: "
+                             f"{', '.join(sorted({*config.available_models(), *config.MODEL_ALIASES}))}")
     parser.add_argument("--allow-heavy", action="store_true",
                         help=f"Required to run heavy models: {sorted(config.HEAVY_MODEL_LABELS)}")
     parser.add_argument("--max-images", type=int, default=None)
@@ -276,6 +278,9 @@ def main() -> int:
     if not (config.MIN_PROMPTS <= len(args.prompts) <= config.MAX_PROMPTS):
         raise SystemExit(f"Provide between {config.MIN_PROMPTS} and {config.MAX_PROMPTS} prompts "
                          f"(got {len(args.prompts)}).")
+    if not args.dry_run and not args.prompts:
+        raise SystemExit("A real evaluation needs at least one prompt. "
+                         "Use --dry-run for a zero-prompt dataset/model sanity check.")
     model_labels = resolve_models(args.models, args.allow_heavy)
 
     gt = load_ground_truth(args.dataset, args.split, args.max_images)

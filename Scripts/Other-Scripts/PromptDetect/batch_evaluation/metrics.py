@@ -75,21 +75,23 @@ def average_precision(scored_flags: list[tuple[float, bool]], n_gt: int) -> floa
         return 0.0
     ordered = sorted(scored_flags, key=lambda item: -item[0])
     tp_cum = fp_cum = 0
-    points = []
+    recalls, precisions = [], []
     for _, is_tp in ordered:
         tp_cum += int(is_tp)
         fp_cum += int(not is_tp)
-        points.append((tp_cum / n_gt, tp_cum / (tp_cum + fp_cum)))
-    ap, best_precision, previous_recall = 0.0, 0.0, None
-    for recall, precision in reversed(points):
-        best_precision = max(best_precision, precision)
-        if previous_recall is None:
-            previous_recall = recall
-            segment = recall
-        else:
-            segment = previous_recall - recall
-            previous_recall = recall
-        ap += best_precision * segment
+        recalls.append(tp_cum / n_gt)
+        precisions.append(tp_cum / (tp_cum + fp_cum))
+
+    # Precision envelope integration, as used by VOC/COCO-style AP. Appending
+    # recall=1 ensures missed GT contributes zero-precision area.
+    mrec = [0.0, *recalls, 1.0]
+    mpre = [0.0, *precisions, 0.0]
+    for i in range(len(mpre) - 2, -1, -1):
+        mpre[i] = max(mpre[i], mpre[i + 1])
+    ap = 0.0
+    for i in range(1, len(mrec)):
+        if mrec[i] != mrec[i - 1]:
+            ap += (mrec[i] - mrec[i - 1]) * mpre[i]
     return round(ap, 4)
 
 

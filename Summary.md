@@ -1,6 +1,6 @@
 # Urban-Vision-Benchmark — Full Repository Status Summary
 
-> **Purpose:** temporary, in-depth context document (generated 2026-07-06) so that
+> **Purpose:** temporary, in-depth context document (updated 2026-07-07) so that
 > another model/person can evaluate what remains for the MSc dissertation. Safe to
 > delete. Status labels used throughout: **implemented** (built and executed),
 > **scaffolded** (built, verified light, but not executed for real),
@@ -44,6 +44,7 @@ Datasets/
   MTSD/Prepared/           NOT YET CREATED — output target of the dataset prep notebook
 Documents/                 workflow docs + generated EDA outputs
   MTSD-EDA/                21 figures, ~30 CSVs, interactive HTML capture map
+                           (`MTSD_mapped.html` with image popups)
   MDWD-EDA/                10 figures, 11 CSVs, eda_summary.json, annotated samples
 Models/                    stock pretrained weights (YOLO11/12/26 n-l, RF-DETR n/s/m) [untracked]
 Requirements/              5 pip requirement files per workstream
@@ -68,6 +69,8 @@ Scripts/
   Other-Scripts/
     CondaEnvironments/     4 env YAMLs + per-platform setup scripts
     GDPR-Compliance/       face/plate detection + redaction previews
+    Inference-Benchmark/   deployment-speed benchmark across supervised,
+                           attribute, and prompt-based models
     PromptDetect/          Gradio app (SAM 3/3.1, Cosmos Reason2 2B/8B/32B, LocateAnything 3B)
       batch_evaluation/    NEW — GT-scored batch evaluation (CLI + Gradio)
 ```
@@ -107,7 +110,12 @@ Scripts/
   `condition` is the weakest head everywhere (macro-F1 0.51–0.73). W&B project
   `MSc-MTSD-Attributes`.
 - **EDA**: **implemented & executed** — `MTSD-EDA.ipynb` + `mtsd_eda`, 21 figures
-  and ~30 CSVs in `Documents/MTSD-EDA/`, interactive GPS map.
+  and ~30 CSVs in `Documents/MTSD-EDA/`. The interactive GPS atlas
+  (`MTSD_mapped.html`) was regenerated 2026-07-07 after the dataset move to
+  `Datasets/MTSD/...`; point popups now show image previews, capture metadata,
+  `Open image` / `Copy path` controls, visible image-missing diagnostics, and
+  a non-interactive lower heatmap pane so markers remain clickable in `Both`
+  mode.
 - **Supervised detection**: **scaffolded, not executed** — `Prepare-MTSD-Detection-Dataset.ipynb`
   (QA groups → `Datasets/MTSD/Prepared/{MTSD-YOLO,MTSD-COCO}`, overwrite-protected,
   read-only logic dry-tested: 1,752 usable images, split 1401/175/176, 4,746 boxes —
@@ -127,7 +135,9 @@ Scripts/
 - **Batch evaluation** (`batch_evaluation/`, NEW): **scaffolded & dry-run verified**
   — CLI + Gradio; MDWD (YOLO GT) and MTSD (prepared dataset, or QA-annotation
   fallback via `--split all`) loaders verified; heavy-model gate and prompt limits
-  (1–15) verified. **No real model evaluation has been executed yet.**
+  (0–15, with zero prompts allowed only for dry-run/config checks) verified.
+  Only Cosmos Reason2 32B is gated by `--allow-heavy`; 8B is allowed normally.
+  **No real model evaluation has been executed yet.**
 - **Metrics produced**: P/R/F1/accuracy, AP@50, mAP@50:95, mean matched IoU, FP/FN,
   duplicate detections, per-image/per-prompt/per-model tables, prompt-vs-class
   confusion matrix, plots, optional GT-vs-pred overlays.
@@ -188,9 +198,15 @@ human glance at the running UI (not launched here).
     `*-SupervisedNotebooks/` folders; flip `RUN_TRAINING=True` in the final cell.
   - Annotation QA: `scan_annotations.py [--dry-run]` → `review_app.py` →
     `apply_fixes.py --decisions ... --apply`.
+  - MTSD atlas: `python Scripts/MTSD-Scripts/MTSD-Analysis/mtsd_mapper.py [--rescan]`;
+    open `Documents/MTSD-EDA/MTSD_mapped.html` via Live Server from the repo root
+    so relative image links resolve.
   - PromptDetect batch eval: `run_batch_eval.py --dataset ... --prompts ... --models ...
-    [--max-images N] [--dry-run]` or `gradio_batch_eval.py`; heavy Cosmos variants
-    need `--allow-heavy`.
+    [--max-images N] [--dry-run]` or `gradio_batch_eval.py`; only Cosmos 32B
+    needs `--allow-heavy`.
+  - Inference-speed benchmark: `python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py
+    --dataset ... --task ... --models ... [--max-images N] [--dry-run]`; only Cosmos
+    32B needs `--allow-heavy`.
 - Dry-run/sample modes exist for: annotation scan, fix application, batch
   evaluation, EDA (`--max-images`, `--out-tag`), prep notebook (read-only cells).
 
@@ -215,12 +231,12 @@ human glance at the running UI (not launched here).
 - [x] MDWD dataset exports (4 variants) + full EDA (package, notebook, artefacts)
 - [x] MDWD supervised benchmarks: YOLO11/12/26 (n/s/m/l) + RF-DETR (n/s/m), runs + consolidated results + W&B
 - [x] MTSD groups 1–3 QA-annotated (1,971 images / 5,457 boxes); GRP-3 image gap resolved
-- [x] MTSD EDA (package, notebook, 21 figures, GPS map)
+- [x] MTSD EDA (package, notebook, 21 figures, GPS atlas with clickable image popups)
 - [x] MTSD attribute-classification round: 6 variants trained, compared (best: dinov3_lora, macro-F1 0.873)
 - [x] Annotation path migration (source_image → new layout)
 - [x] Annotation QA **audit** executed: findings quantified (42 dup pairs, 11 attribute issues)
 - [x] gradio_compare cleanup (smokes off by default, dynamic `<model>_<mode> vs ...` title)
-- [x] Inference-speed/deployment benchmark tooling (`Scripts/FinalBenchmarks/`, dry-run verified;
+- [x] Inference-speed/deployment benchmark tooling (`Scripts/Other-Scripts/Inference-Benchmark/`, dry-run verified;
       see `Documents/Final-Reports/inference_speed_benchmark_report.md`)
 - [x] PromptDetect manual UI (5 tabs, 6 models)
 - [x] Documentation: root README, per-tool READMEs, workflow docs, this Summary
@@ -234,7 +250,7 @@ human glance at the running UI (not launched here).
 - [ ] **MTSD supervised detection training**: YOLO12/YOLO26/RF-DETR notebooks (not run;
       `Results/MTSD-*` empty) — decide epochs/augmentation for the ~1.8k-image scale
 - [ ] **PromptDetect batch evaluations** (not run): e.g. SAM 3/3.1 + LocateAnything on
-      MTSD (prompts per sign type) and MDWD test (waste prompts); Cosmos variants opt-in
+      MTSD (prompts per sign type) and MDWD test (waste prompts); Cosmos 32B is opt-in
 - [ ] **Inference-speed benchmarks** (tooling ready, not executed): MDWD detection,
       attribute classifiers, PromptDetect models; MTSD detection blocked on training
 - [ ] **MDWD split-leakage remediation/discussion** (30 leaked sources, 15 bad boxes)
@@ -247,8 +263,8 @@ human glance at the running UI (not launched here).
 - [ ] **Dissertation figures/tables**: cross-track comparison table (supervised vs
       prompt-based), per-class detection results, attribute confusion matrices,
       dataset datasheets; decide which EDA figures go in
-- [ ] Commit + push the new tooling (MTSD-AnnotationQA, batch_evaluation,
-      gradio_compare changes, Summary.md are currently uncommitted)
+- [ ] Commit + push the new tooling/docs (MTSD-AnnotationQA, batch_evaluation,
+      gradio_compare changes, MTSD atlas updates, README.md, Summary.md are currently uncommitted)
 
 ## 13. Suggested next steps (practical, in priority order)
 
@@ -263,7 +279,7 @@ human glance at the running UI (not launched here).
 3. **Run a small PromptDetect batch eval first** (`--max-images 25`, SAM 3 only) to
    validate the pipeline end-to-end, then the full MTSD test-split and MDWD
    test-split evaluations with 3–5 prompts per dataset. Budget GPU time for Cosmos
-   2B; keep 8B/32B optional.
+   2B/8B; keep 32B optional and explicitly opt in with `--allow-heavy`.
 4. **Quantify the MDWD leakage impact**: re-evaluate the best YOLO26 checkpoint on
    val/test with the 30 leaked source images excluded; if metrics barely move, a
    dissertation footnote suffices — otherwise regenerate splits (risk: invalidates

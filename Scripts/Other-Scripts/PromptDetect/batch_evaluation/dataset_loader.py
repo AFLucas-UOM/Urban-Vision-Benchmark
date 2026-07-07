@@ -11,13 +11,16 @@ Supported sources (auto-selected by dataset name):
 * **MTSD**  - the prepared detection dataset at
   Datasets/MTSD/Prepared/MTSD-YOLO when it exists (train/valid/test);
   otherwise falls back to the QA COCO annotations under
-  Datasets/MTSD/Annotations/GRP-*/Final-QA/ (split must be "all"; groups are
-  discovered dynamically, current and future alike).
+  Datasets/MTSD/Annotations/GRP-*/Final-QA/. Before the prepared dataset
+  exists, train/valid/test reproduce the prep notebook's seeded per-group
+  80/10/10 split; "all" evaluates every QA image.
 """
 
 from __future__ import annotations
 
 import json
+import random
+from collections import defaultdict
 from pathlib import Path
 
 import yaml
@@ -80,7 +83,29 @@ def _load_yolo_split(dataset_dir: Path, split: str, max_images: int | None) -> t
 
 # --- MTSD QA fallback (COCO) --------------------------------------------------------
 
-def _load_mtsd_qa(max_images: int | None) -> tuple[list[dict], list[str]]:
+def _assign_mtsd_qa_splits(records: list[dict]) -> dict[str, str]:
+    """Mirror Prepare-MTSD-Detection-Dataset's random per-group split."""
+    rng = random.Random(config.MTSD_QA_SPLIT_SEED)
+    by_group: dict[str, list[dict]] = defaultdict(list)
+    for record in records:
+        by_group[record["_group"]].append(record)
+
+    assignment = {}
+    for group, group_records in sorted(by_group.items()):
+        group_records = sorted(group_records, key=lambda r: r["_out_name"])
+        rng.shuffle(group_records)
+        n = len(group_records)
+        n_train = round(n * config.MTSD_QA_SPLIT_RATIOS["train"])
+        n_valid = round(n * config.MTSD_QA_SPLIT_RATIOS["valid"])
+        for index, record in enumerate(group_records):
+            split = ("train" if index < n_train
+                     else "valid" if index < n_train + n_valid
+                     else "test")
+            assignment[record["_out_name"]] = split
+    return assignment
+
+
+def _load_mtsd_qa(split: str, max_images: int | None) -> tuple[list[dict], list[str]]:
     qa_files = sorted(config.MTSD_ANNOTATIONS_ROOT.glob("GRP-*/Final-QA/QA-*.json"))
     qa_files = [p for p in qa_files if ".bak" not in p.name.lower()]
     if not qa_files:
@@ -100,19 +125,31 @@ def _load_mtsd_qa(max_images: int | None) -> tuple[list[dict], list[str]]:
                 "class_name": categories.get(annotation.get("category_id"), "?"),
                 "x0": float(x), "y0": float(y), "x1": float(x) + float(w), "y1": float(y) + float(h),
             })
+        group = qa_path.parents[1].name
         for image in data.get("images", []):
             source = str(image.get("source_image", "") or "").replace("\\", "/")
             image_path = config.PROJECT_ROOT / source
             if not image_path.exists():
                 continue  # missing files are excluded, matching the prep notebook
+            out_name = f"{group.lower().replace('-', '')}_{image.get('file_name')}"
             records.append({
                 "image_path": image_path,
-                "image_id": f"{qa_path.parents[1].name}/{image.get('file_name')}",
+                "image_id": f"{group}/{image.get('file_name')}",
                 "width": image.get("width"), "height": image.get("height"),
                 "boxes": boxes_by_image.get(image["id"], []),
+                "_group": group,
+                "_out_name": out_name,
             })
-            if max_images is not None and len(records) >= max_images:
-                return records, class_names
+
+    if split != "all":
+        assignment = _assign_mtsd_qa_splits(records)
+        records = [record for record in records
+                   if assignment.get(record["_out_name"]) == split]
+    if max_images is not None:
+        records = records[:max_images]
+    for record in records:
+        record.pop("_group", None)
+        record.pop("_out_name", None)
     return records, class_names
 
 
@@ -134,15 +171,9 @@ def load_ground_truth(dataset: str, split: str, max_images: int | None = None) -
         if config.MTSD_PREPARED_YOLO_DIR.is_dir() and split != "all":
             records, class_names = _load_yolo_split(config.MTSD_PREPARED_YOLO_DIR, split, max_images)
             source = str(config.MTSD_PREPARED_YOLO_DIR)
-        elif split == "all":
-            records, class_names = _load_mtsd_qa(max_images)
-            source = str(config.MTSD_ANNOTATIONS_ROOT)
         else:
-            raise FileNotFoundError(
-                f"Prepared MTSD dataset not found at {config.MTSD_PREPARED_YOLO_DIR}. "
-                f"Run Prepare-MTSD-Detection-Dataset.ipynb first, or use --split all "
-                f"to evaluate directly against the QA annotations."
-            )
+            records, class_names = _load_mtsd_qa(split, max_images)
+            source = str(config.MTSD_ANNOTATIONS_ROOT)
     else:
         raise ValueError(f"Unknown dataset {dataset!r}; expected MDWD or MTSD.")
     return {
