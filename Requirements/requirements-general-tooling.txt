@@ -1,5 +1,5 @@
 # ============================================================
-# General MTSDataset tooling (shared across the repository)
+# General Urban-Vision-Benchmark tooling (shared across the repository)
 # ============================================================
 # For dataset preparation, Label Studio project setup, EDA notebooks, GPS
 # mapping, lightweight sample rendering, and the classic (non-GPU) GDPR

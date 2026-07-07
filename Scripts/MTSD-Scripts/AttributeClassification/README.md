@@ -81,7 +81,7 @@ torch). Create it reproducibly from
 [Requirements/CondaEnvironments/](../../../Requirements/CondaEnvironments/README.md)
 (`.\setup_conda_env.ps1 -Name mtsd-attrcls`), or manually from the repository
 root (pip pins in
-[Requirements/requirements-attribute-classification.txt](../../Requirements/requirements-attribute-classification.txt)):
+[Requirements/requirements-attribute-classification.txt](../../../Requirements/requirements-attribute-classification.txt)):
 
 ```
 conda create -n mtsd-attrcls python=3.11 -y

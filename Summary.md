@@ -67,7 +67,6 @@ Scripts/
     LabelStudio/           annotation workflow tooling + QA formatter
     update_annotation_paths.ps1   (applied 2026-07-04)
   Other-Scripts/
-    CondaEnvironments/     4 env YAMLs + per-platform setup scripts
     GDPR-Compliance/       face/plate detection + redaction previews
     Inference-Benchmark/   deployment-speed benchmark across supervised,
                            attribute, and prompt-based models
@@ -184,7 +183,7 @@ human glance at the running UI (not launched here).
 
 ## 9. Reproducibility notes
 
-- **Environments** (conda; `Scripts/Other-Scripts/CondaEnvironments/`): `MDWD`
+- **Environments** (conda; `Requirements/CondaEnvironments/`): `MDWD`
   (detection notebooks + MDWD EDA), `mtsd-attrcls` (attribute pipeline +
   gradio_compare), `mtsd-base` (PromptDetect app/batch eval, GDPR, annotation QA
   review app), `mtsd-la` (LocateAnything worker). Requirements files mirror these.

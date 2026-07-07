@@ -96,7 +96,6 @@ Urban-Vision-Benchmark/
     │   ├── MTSD-AnnotationQA/     # Audit/review/apply workflow for Final-QA JSONs
     │   └── update_annotation_paths.ps1
     └── Other-Scripts/
-        ├── CondaEnvironments/     # Reproducible conda env YAMLs + setup scripts
         ├── GDPR-Compliance/       # Face/plate detection + redaction pipeline
         ├── Inference-Benchmark/   # Inference-speed benchmark scripts
         └── PromptDetect/          # SAM 3 / Cosmos Reason2 / LocateAnything app + batch eval
@@ -225,7 +224,7 @@ standalone audit utilities.
 ### Environments (conda, recommended)
 
 Per-workstream environments are defined in
-[Scripts/Other-Scripts/CondaEnvironments/](Scripts/Other-Scripts/CondaEnvironments/)
+[Requirements/CondaEnvironments/](Requirements/CondaEnvironments/)
 with per-platform setup scripts:
 
 | Env | Used by |

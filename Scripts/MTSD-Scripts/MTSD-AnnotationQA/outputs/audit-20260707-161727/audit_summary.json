@@ -1,0 +1,74 @@
+{
+  "annotations_root": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations",
+  "qa_files_audited": 3,
+  "qa_files": [
+    "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+    "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+    "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json"
+  ],
+  "duplicate_iou": 0.95,
+  "overlap_iou": 0.75,
+  "verify_images": false,
+  "generated_at": "2026-07-07T16:17:27",
+  "schema": {
+    "view_angle": [
+      "Front",
+      "Back",
+      "Side"
+    ],
+    "mounting": [
+      "Pole-Mounted",
+      "Wall-Mounted"
+    ],
+    "condition": [
+      "Good",
+      "Weathered",
+      "Heavily Damaged"
+    ],
+    "sign_shape": [
+      "Circular",
+      "Quadrangle",
+      "Triangular",
+      "Octagonal",
+      "Pentagon"
+    ]
+  },
+  "totals": {
+    "missing_attribute_findings": 7,
+    "invalid_attribute_findings": 4,
+    "duplicate_pair_findings": 42,
+    "reference_problem_findings": 0
+  },
+  "per_group": [
+    {
+      "group": "GRP-1",
+      "annotations": 1979,
+      "attr_known_drop_value": 0,
+      "attr_missing": 7,
+      "dup_conflicting_duplicate": 6,
+      "dup_exact_duplicate": 20,
+      "dup_high_overlap": 0,
+      "images": 724
+    },
+    {
+      "group": "GRP-2",
+      "annotations": 1621,
+      "attr_known_drop_value": 2,
+      "attr_missing": 0,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 3,
+      "images": 630
+    },
+    {
+      "group": "GRP-3",
+      "annotations": 1857,
+      "attr_known_drop_value": 2,
+      "attr_missing": 0,
+      "dup_conflicting_duplicate": 4,
+      "dup_exact_duplicate": 9,
+      "dup_high_overlap": 0,
+      "images": 617
+    }
+  ]
+}

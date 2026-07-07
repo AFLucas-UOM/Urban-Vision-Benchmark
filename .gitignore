@@ -75,6 +75,8 @@ Scripts/MTSD-Scripts/AttributeClassification/outputs/crops/
 GDPR-Compliance-Preview/
 
 # --- Logs and temporary files --------------------------------
+# Executed notebook copies from the automation runner (regenerable; can be large when training notebooks run headlessly).
+Scripts/Automation/executed/
 *.log
 logs/
 tmp/

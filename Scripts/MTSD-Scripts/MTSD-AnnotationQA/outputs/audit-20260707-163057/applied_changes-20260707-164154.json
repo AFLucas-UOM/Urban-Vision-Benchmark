@@ -1,0 +1,16 @@
+{
+  "mode": "dry-run",
+  "decisions_file": "Scripts\\MTSD-Scripts\\MTSD-AnnotationQA\\outputs\\audit-20260707-163057\\reviewed_decisions.json",
+  "run_at": "2026-07-07T16:41:54",
+  "changes": [
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "set_attribute",
+      "annotation_id": 1078,
+      "status": "would_apply",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    }
+  ]
+}

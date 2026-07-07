@@ -335,7 +335,7 @@ To inspect or reclaim space, use the bundled
 [`clean_model_cache.ps1`](../Scripts/Other-Scripts/PromptDetect/clean_model_cache.ps1) helper
 (it touches only the PromptDetect models). Full usage — prerequisites, commands,
 expected output, and troubleshooting — is in
-**[Documents/CleanModelCache.md](CleanModelCache.md)**.
+**[Documents/Other/CleanModelCache.md](Other/CleanModelCache.md)**.
 
 ---
 

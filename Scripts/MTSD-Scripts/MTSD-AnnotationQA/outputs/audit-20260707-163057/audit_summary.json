@@ -9,7 +9,7 @@
   "duplicate_iou": 0.95,
   "overlap_iou": 0.75,
   "verify_images": false,
-  "generated_at": "2026-07-06T19:13:02",
+  "generated_at": "2026-07-07T16:30:57",
   "schema": {
     "view_angle": [
       "Front",
@@ -34,39 +34,30 @@
     ]
   },
   "totals": {
-    "missing_attribute_findings": 7,
-    "invalid_attribute_findings": 4,
-    "duplicate_pair_findings": 42,
+    "missing_attribute_findings": 0,
+    "invalid_attribute_findings": 2,
+    "duplicate_pair_findings": 3,
     "reference_problem_findings": 0
   },
   "per_group": [
     {
       "group": "GRP-1",
-      "annotations": 1979,
+      "annotations": 1960,
       "attr_known_drop_value": 0,
-      "attr_missing": 7,
-      "dup_conflicting_duplicate": 6,
-      "dup_exact_duplicate": 20,
       "dup_high_overlap": 0,
       "images": 724
     },
     {
       "group": "GRP-2",
       "annotations": 1621,
-      "attr_known_drop_value": 2,
-      "attr_missing": 0,
-      "dup_conflicting_duplicate": 0,
-      "dup_exact_duplicate": 0,
+      "attr_known_drop_value": 1,
       "dup_high_overlap": 3,
       "images": 630
     },
     {
       "group": "GRP-3",
-      "annotations": 1857,
-      "attr_known_drop_value": 2,
-      "attr_missing": 0,
-      "dup_conflicting_duplicate": 4,
-      "dup_exact_duplicate": 9,
+      "annotations": 1844,
+      "attr_known_drop_value": 1,
       "dup_high_overlap": 0,
       "images": 617
     }
