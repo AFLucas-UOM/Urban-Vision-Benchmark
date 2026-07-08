@@ -9,6 +9,7 @@ a LoRA variant must never silently degrade to frozen or full fine-tuning.
 """
 
 import logging
+import warnings
 
 from torch import nn
 
@@ -31,7 +32,13 @@ def apply_lora(model, lora_cfg, context):
         RuntimeError: If any requested target matches no module, or if the
             injection produced no trainable adapter parameters.
     """
-    from peft import LoraConfig, inject_adapter_in_model
+    with warnings.catch_warnings():
+        warnings.filterwarnings(
+            "ignore",
+            message=r"Importing from .* is deprecated, please import via timm\.layers",
+            category=FutureWarning,
+        )
+        from peft import LoraConfig, inject_adapter_in_model
 
     targets = list(lora_cfg.get("target_modules") or [])
     if not targets:

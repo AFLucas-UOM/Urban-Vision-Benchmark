@@ -147,6 +147,8 @@ def _load_checkpoint_state(model, state, adaptation):
     if adaptation == "finetune":
         model.load_state_dict(state)
         return
+    model_keys = set(model.state_dict())
+    state = _normalise_checkpoint_keys(state, model_keys)
     result = model.load_state_dict(state, strict=False)
     if result.unexpected_keys:
         raise RuntimeError(f"Checkpoint has unexpected keys: "
@@ -156,6 +158,38 @@ def _load_checkpoint_state(model, state, adaptation):
     if bad:
         raise RuntimeError(f"Checkpoint is missing trained parameters: "
                            f"{bad[:5]}...")
+
+
+def _normalise_checkpoint_keys(state, model_keys):
+    """Map compatible wrapper-depth differences between library versions."""
+    normalised = {}
+    for key, value in state.items():
+        target = key
+        if target not in model_keys:
+            candidates = []
+            if key.startswith("backbone.model.model."):
+                candidates.append("backbone.model." + key[len("backbone.model.model."):])
+            if key.startswith("backbone.model."):
+                candidates.append("backbone.model.model." + key[len("backbone.model."):])
+            for candidate in candidates:
+                if candidate in model_keys:
+                    target = candidate
+                    break
+        normalised[target] = value
+    return normalised
+
+
+def _checkpoint_adaptation(ckpt, model_cfg):
+    """Infer the adaptation mode from metadata, with LoRA-key compatibility.
+
+    Some older/manual checkpoint paths can carry LoRA adapter tensors even when
+    the caller supplies the base variant name. The saved tensors are the source
+    of truth in that case: rebuilding a frozen backbone would reject them as
+    unexpected keys.
+    """
+    has_lora = any("lora_" in key for key in ckpt.get("model_state", {}))
+    adaptation = ckpt.get("adaptation") or adaptation_of(model_cfg)
+    return "lora" if has_lora else adaptation
 
 
 def _append_experiment_log(path, entry):

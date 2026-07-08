@@ -12,6 +12,7 @@ direct value labels on bars.
 """
 
 import argparse
+import copy
 import csv
 import json
 import logging
@@ -363,7 +364,7 @@ def reevaluate_from_checkpoint(cfg, variant, split="test", checkpoint=None):
     exactly like the post-training evaluation.
     """
     from .backbones import build_backbone
-    from .config import adaptation_of
+    from .train_common import _checkpoint_adaptation, _load_checkpoint_state
     from .dataset import AttributeCropDataset, build_transforms
     from .multihead_model import MultiHeadClassifier, parameter_breakdown
     from torch.utils.data import DataLoader
@@ -374,19 +375,14 @@ def reevaluate_from_checkpoint(cfg, variant, split="test", checkpoint=None):
         raise FileNotFoundError(f"No checkpoint at {ckpt_path}; train the "
                                 f"variant first")
     ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
-    model_cfg = ckpt["model_cfg"]
-    adaptation = ckpt.get("adaptation") or adaptation_of(model_cfg)
+    model_cfg = copy.deepcopy(ckpt["model_cfg"])
+    adaptation = _checkpoint_adaptation(ckpt, model_cfg)
+    model_cfg["adaptation"] = adaptation
     attributes = ckpt.get("attributes", cfg["attributes"])
 
     backbone = build_backbone(model_cfg)
     model = MultiHeadClassifier(backbone, attributes, ckpt["probe"], adaptation)
-    if adaptation == "finetune":
-        model.load_state_dict(ckpt["model_state"])
-    else:
-        result = model.load_state_dict(ckpt["model_state"], strict=False)
-        if result.unexpected_keys:
-            raise RuntimeError(f"Checkpoint has unexpected keys: "
-                               f"{result.unexpected_keys[:5]}...")
+    _load_checkpoint_state(model, ckpt["model_state"], adaptation)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     model = model.to(device)
 
