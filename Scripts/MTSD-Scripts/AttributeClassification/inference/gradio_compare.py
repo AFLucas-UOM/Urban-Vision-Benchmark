@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import sys
 import traceback
+from copy import deepcopy
 from dataclasses import dataclass
 from functools import lru_cache
 from html import escape
@@ -30,7 +31,7 @@ from mtsd_attr.backbones import build_backbone  # noqa: E402
 from mtsd_attr.config import adaptation_of, load_config  # noqa: E402
 from mtsd_attr.dataset import build_transforms  # noqa: E402
 from mtsd_attr.multihead_model import MultiHeadClassifier  # noqa: E402
-from mtsd_attr.train_common import _load_checkpoint_state  # noqa: E402
+from mtsd_attr.train_common import _checkpoint_adaptation, _load_checkpoint_state  # noqa: E402
 
 
 FAMILY_ORDER = ("V-JEPA", "DINO", "ConvNeXt", "Unknown")
@@ -163,14 +164,15 @@ CHECKPOINTS, DISCOVERY_DIAGNOSTICS = discover_checkpoints(include_smoke=False)
 def load_model(checkpoint_path: str, device_name: str):
     ckpt_path = Path(checkpoint_path)
     ckpt = torch.load(ckpt_path, map_location="cpu", weights_only=False)
-    model_cfg = ckpt["model_cfg"]
+    model_cfg = deepcopy(ckpt["model_cfg"])
     attributes = ckpt.get("attributes")
     if not attributes:
         raise ValueError("Checkpoint does not contain attribute class mappings.")
     probe = ckpt.get("probe")
     if not probe:
         raise ValueError("Checkpoint does not contain probe/head configuration.")
-    adaptation = ckpt.get("adaptation") or adaptation_of(model_cfg)
+    adaptation = _checkpoint_adaptation(ckpt, model_cfg)
+    model_cfg["adaptation"] = adaptation
 
     backbone = build_backbone(model_cfg)
     model = MultiHeadClassifier(backbone, attributes, probe, adaptation)
@@ -229,6 +231,9 @@ def _render_table(rows: list[dict[str, Any]]) -> str:
     if not rows:
         return _empty_html("No results to display.")
 
+    def escaped_cell(value: Any) -> str:
+        return escape("" if value is None else str(value))
+
     body = []
     previous_model = None
     for row in rows:
@@ -245,7 +250,7 @@ def _render_table(rows: list[dict[str, Any]]) -> str:
 
         confidence = row.get("confidence_value")
         if confidence is None:
-            confidence_cell = f"<span style='color:#8b949e;'>{escape(row.get('confidence', ''))}</span>"
+            confidence_cell = f"<span style='color:#8b949e;'>{escaped_cell(row.get('confidence', ''))}</span>"
         else:
             pct = max(0.0, min(1.0, confidence)) * 100.0
             if confidence >= 0.8:
@@ -276,7 +281,7 @@ def _render_table(rows: list[dict[str, Any]]) -> str:
                 for label, score in topk
             )
         else:
-            topk_cell = f"<code style='font-family:JetBrains Mono,monospace;font-size:12px;color:#f85149;'>{escape(row.get('topk', ''))}</code>"
+            topk_cell = f"<code style='font-family:JetBrains Mono,monospace;font-size:12px;color:#f85149;'>{escaped_cell(row.get('topk', ''))}</code>"
 
         checkpoint_name = escape(row['checkpoint'])
         if "smoke" in checkpoint_name.lower():
@@ -394,8 +399,10 @@ def run_comparison(
 
     grouped, diagnostics = discover_checkpoints(include_smoke=include_smoke)
     checkpoints = _flatten_checkpoints(grouped)
-    selected_checkpoints = [ckpt for ckpt in checkpoints if ckpt.label in selected_labels]
+    if not checkpoints:
+        return _no_checkpoint_html(diagnostics)
 
+    selected_checkpoints = [ckpt for ckpt in checkpoints if ckpt.label in selected_labels]
     if not selected_checkpoints:
         return _notice_html("<strong>No matching checkpoints found.</strong> Try checking 'Include Smoke Checkpoints' or rescanning.")
 
@@ -458,6 +465,7 @@ def update_checkbox_choices(include_smoke: bool):
 
 def handle_refresh(include_smoke: bool):
     discover_checkpoints.cache_clear()
+    load_model.cache_clear()
     return update_checkbox_choices(include_smoke)
 
 
