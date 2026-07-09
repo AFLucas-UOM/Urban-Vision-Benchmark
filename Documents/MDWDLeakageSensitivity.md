@@ -19,11 +19,12 @@ classic train/test leakage problem.
 
 `Documents/MDWD-EDA/GeneratedCSVs/integrity_issues.csv` already reported this:
 **30 source images** have augmented derivatives spread across more than one
-split. Before treating the completed MDWD benchmark (YOLO11/12/26 + RF-DETR,
-already trained and archived under `Results/MDWD-Runs/` and
-`Results/MDWD-Results/`) as final dissertation evidence, this needed a direct
-answer to one question: **does this leakage actually move the reported
-numbers, or is it a cosmetic dataset-hygiene footnote?**
+split. Before treating the completed **YOLO11/12/26** benchmark tables as final
+dissertation evidence, this needed a direct answer to one question: **does this
+leakage actually move the reported numbers, or is it a cosmetic dataset-hygiene
+footnote?** RF-DETR nano is outside this sensitivity analysis because it uses a
+different evaluator and has not been normalised into the consolidated result
+tables.
 
 Retraining anything, regenerating the splits, or touching the completed
 benchmark runs was explicitly out of scope — those results are the
@@ -90,8 +91,8 @@ run — unchanged — and by `git status` showing zero modifications under
 No stored per-image predictions existed anywhere (the original training
 notebooks called `model.val()` without `save_json`/`save_txt`), so getting
 clean-subset metrics required running inference — no shortcut was available.
-The best checkpoint of each already-trained model family was re-evaluated,
-using the **exact original protocol** (`imgsz=640, conf=0.001, iou=0.7,
+Four headline YOLO checkpoints were re-evaluated using the **exact original
+protocol** (`imgsz=640, conf=0.001, iou=0.7,
 batch=32`), on four subsets: original valid, clean valid, original test,
 clean test:
 
@@ -211,15 +212,15 @@ python launch_uvb.py
 > An integrity audit of the augmented Roboflow export identified 30 source
 > images (of 3,598) whose augmented derivatives appear in more than one split
 > (16 train–test, 11 train–validation, 3 validation–test), affecting 14 of
-> 369 validation and 19 of 369 test images. To quantify the impact, the best
-> checkpoint of each model family was re-evaluated on leakage-excluded
+> 369 validation and 19 of 369 test images. To quantify the impact, four
+> headline YOLO checkpoints were re-evaluated on leakage-excluded
 > validation (355 images) and test (350 images) subsets, constructed so that
 > no evaluated image shares a source photograph with any other split. Across
-> all models and both splits, mAP@50 and mAP@50–95 changed by at most 0.48
+> all evaluated YOLO configurations and both splits, mAP@50 and mAP@50–95 changed by at most 0.48
 > percentage points, below typical run-to-run training variance, and
 > validation scores marginally increased after exclusion. The cross-split
-> leakage therefore did not materially inflate the reported results, and all
-> benchmark comparisons are reported on the original splits, with this
+> leakage therefore did not materially inflate the reported YOLO results, and
+> those comparisons are reported on the original splits, with this
 > sensitivity analysis retained as supplementary evidence. A further 15
 > marginally out-of-range bounding boxes and 5 empty annotations were
 > confined to the training split and could not affect evaluation metrics.

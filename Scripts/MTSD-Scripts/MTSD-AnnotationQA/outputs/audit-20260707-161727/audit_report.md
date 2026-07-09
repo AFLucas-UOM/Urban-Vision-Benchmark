@@ -4,6 +4,10 @@ Generated: 2026-07-07T16:17:27
 QA files audited: 3  
 Thresholds: duplicate IoU >= 0.95, overlap IoU >= 0.75
 
+> Historical audit retained for provenance. It predates the later cleanup and
+> GRP-5 QA export; use `../audit-20260709-201340/audit_report.md` for the latest
+> four-group audit snapshot.
+
 | Finding | Count |
 | --- | --- |
 | missing attribute findings | 7 |

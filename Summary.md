@@ -144,7 +144,8 @@ Results/
   MDWD-Results/            consolidated benchmark tables/plots (YOLO11/12/26, YOLO26-DGX, RF-DETR)
   MDWD-Runs/               archived training runs incl. weights [weights/media untracked]
   MTSD-Results/, MTSD-Runs/  EMPTY — reserved for the MTSD supervised detection track
-  PromptDetect/BatchEvaluation/  output target of the new batch evaluator (created on first run)
+  PromptDetect/BatchEvaluation/  batch-evaluation outputs (one 5-image MDWD pilot exists;
+                                 full dissertation evaluations still pending)
 Scripts/
   MDWD-Scripts/
     MDWD-Analysis/         mdwd_eda package + run_eda.py + visualise_samples.py
@@ -173,8 +174,8 @@ Scripts/
 | Dataset | **implemented** — Roboflow v20 exports on disk in 4 variants (YOLO + COCO), 30,225 images / 211,512 boxes / 3,598 unique source images |
 | EDA | **implemented & executed** — `mdwd_eda` package + `run_eda.py` (11 tables, 10 figures, summary JSON in `Documents/MDWD-EDA/`) + `MDWD-EDA.ipynb` (26 cells, mirrors MTSD EDA style; created clean, not yet executed top-to-bottom by the user) |
 | YOLO11/12/26 benchmarks | **implemented & executed** — suites in `Results/MDWD-Runs/{YOLO11,YOLO12,YOLO26}-EUVIP` + `YOLO26-DGX` (n/s/m/l), consolidated CSVs in `Results/MDWD-Results/*/Model-Size-Comparison/` |
-| RF-DETR benchmark | **partially implemented & executed** — RF-DETR **nano** has a completed run; small/medium configs are archived templates without completed checkpoints |
-| Known issues | EDA integrity findings: 30 source images have augmented copies in >1 split (train/val/test leakage), 15 out-of-range boxes, 5 empty annotations (`Documents/MDWD-EDA/GeneratedCSVs/integrity_issues.csv`). **RESOLVED (2026-07-09)**: leakage sensitivity test (`Scripts/FinalEvaluation/mdwd_leakage_sensitivity.py`) independently re-confirmed the 30 leaked sources and measured the effect as **negligible** (max Δ 0.48pp mAP50-95 across all models/splits) — see [`Documents/MDWDLeakageSensitivity.md`](Documents/MDWDLeakageSensitivity.md). Headline MDWD tables need no adjustment; only a dissertation-limitations caveat |
+| RF-DETR benchmark | **partially implemented & executed** — RF-DETR **nano** has a completed checkpoint and training log; small/medium configs are archived templates without completed checkpoints. Its metrics are not yet normalised into the consolidated MDWD result/table pipeline |
+| Known issues | EDA integrity findings: 30 source images have augmented copies in >1 split (train/val/test leakage), 15 out-of-range boxes, 5 empty annotations (`Documents/MDWD-EDA/GeneratedCSVs/integrity_issues.csv`). **RESOLVED FOR THE CONSOLIDATED YOLO TABLES (2026-07-09)**: leakage sensitivity test (`Scripts/FinalEvaluation/mdwd_leakage_sensitivity.py`) independently re-confirmed the 30 leaked sources and measured the effect as **negligible** (max Δ 0.48pp mAP50-95 across the four evaluated YOLO checkpoint configurations/splits) — see [`Documents/MDWDLeakageSensitivity.md`](Documents/MDWDLeakageSensitivity.md). RF-DETR is outside this Ultralytics-based sensitivity analysis. Headline YOLO tables need no adjustment; retain a dissertation-limitations caveat |
 
 ## 3a. MDWD split-leakage sensitivity analysis (2026-07-09) — RESOLVED
 
@@ -190,14 +191,14 @@ check (**consistent**: 2891+369+368 unique per-split source stems vs 3598
 deduplicated = excess of exactly 30). Leakage-excluded ("clean") valid/test
 subsets were built (14/369 valid images and 19/369 test images excluded;
 0 dataset files touched — verified via unchanged `labels.cache` timestamps
-and clean `git status` under `Datasets/`), and the best checkpoint per model
-family (yolo11l, yolo12m, yolo26l EUVIP, yolo26l DGX) was re-evaluated with
+and clean `git status` under `Datasets/`), and four headline YOLO checkpoints
+(yolo11l, yolo12m, yolo26l EUVIP, yolo26l DGX) were re-evaluated with
 the original protocol on original vs. clean subsets (16 Ultralytics val
 runs). Every original-subset re-evaluation reproduced the published benchmark
 CSV values to 4 decimal places, confirming pipeline fidelity before trusting
 the clean-subset numbers.
 
-**Result: negligible effect** — every model/split delta falls within ±0.48
+**Result: negligible effect** — every evaluated YOLO configuration/split delta falls within ±0.48
 percentage points of mAP50/mAP50-95, with validation deltas mostly slightly
 positive after exclusion (the opposite of what memorisation-driven inflation
 would produce). The completed MDWD benchmark tables require no adjustment;
@@ -286,12 +287,15 @@ cause any image to be dropped by Ultralytics' training loader.
 - **Manual UI** (`app.py`): **implemented** — single-image, prompt-comparison,
   file-batch and folder-summary tabs plus analytics; *no ground-truth scoring*.
   Untouched by this update.
-- **Batch evaluation** (`batch_evaluation/`, NEW): **scaffolded & dry-run verified**
-  — CLI + Gradio; MDWD (YOLO GT) and MTSD (prepared dataset, or QA-annotation
-  fallback via `--split all`) loaders verified; heavy-model gate and prompt limits
-  (0–15, with zero prompts allowed only for dry-run/config checks) verified.
-  Only Cosmos Reason2 32B is gated by `--allow-heavy`; 8B is allowed normally.
-  **No real model evaluation has been executed yet.**
+- **Batch evaluation** (`batch_evaluation/`): **implemented, dry-run verified, and
+  pilot-executed** — CLI + Gradio; MDWD (YOLO GT) and MTSD (prepared dataset, or
+  QA-annotation fallback via `--split all`) loaders verified; heavy-model gate and
+  prompt limits (0–15, with zero prompts allowed only for dry-run/config checks)
+  verified. Only Cosmos Reason2 32B is gated by `--allow-heavy`; 8B is allowed
+  normally. A real MDWD test pilot (`20260709-234655`) ran SAM 3 and Cosmos
+  Reason2 2B on **5 images / 11 GT boxes** with six waste prompts. It verifies
+  model loading and scoring, but is far too small and prompt-exploratory for
+  dissertation comparison; retain it as a smoke/pilot, not headline evidence.
 - **Metrics produced**: P/R/F1/accuracy, AP@50, mAP@50:95, mean matched IoU, FP/FN,
   duplicate detections, per-image/per-prompt/per-model tables, prompt-vs-class
   confusion matrix, plots, optional GT-vs-pred overlays.
@@ -367,8 +371,10 @@ human glance at the running UI (not launched here).
 ## 10. Dissertation relevance
 
 - **MDWD** grounds the domestic-waste-monitoring use case: a realistic, augmented
-  street-level detection benchmark with a completed model-family/size ablation
-  (YOLO11 vs 12 vs 26 vs RF-DETR, n→l scales, identical protocol).
+  street-level detection benchmark with completed YOLO11/12/26 model-family/size
+  ablations. RF-DETR nano is an additional completed run, but it must be
+  normalised into the final table before being used in a quantitative
+  cross-family conclusion; small/medium were not run.
 - **MTSD** grounds infrastructure monitoring: detection (scaffolded) plus a unique
   **multi-attribute condition-assessment** layer (view/mounting/condition/shape).
   The completed adaptation study (frozen probe vs LoRA vs full fine-tune across
@@ -385,7 +391,7 @@ human glance at the running UI (not launched here).
 
 - [x] Unified private repo, git history, path conventions, `.gitignore` policy
 - [x] MDWD dataset exports (4 variants) + full EDA (package, notebook, artefacts)
-- [x] MDWD supervised benchmarks: YOLO11/12/26 (n/s/m/l) + RF-DETR nano, runs + consolidated results + W&B; RF-DETR small/medium remain unexecuted templates
+- [x] MDWD supervised benchmarks: YOLO11/12/26 (n/s/m/l), runs + consolidated results + W&B; RF-DETR nano has a completed checkpoint/log, while small/medium remain unexecuted templates
 - [x] MTSD raw captures in all 11 groups (7,492 images); Final-QA exists for
       GRP-1/2/3/5 (2,628 images / 7,266 boxes); GRP-3 image gap resolved
 - [x] MTSD EDA (package, notebook, 21 figures, GPS atlas with clickable image popups)
@@ -399,6 +405,8 @@ human glance at the running UI (not launched here).
 - [x] Inference-speed/deployment benchmark tooling (`Scripts/Other-Scripts/Inference-Benchmark/`, dry-run verified;
       see `Documents/Final-Reports/inference_speed_benchmark_report.md`)
 - [x] PromptDetect manual UI (5 tabs, 6 models)
+- [x] PromptDetect GT-scored MDWD pilot: SAM 3 + Cosmos Reason2 2B, 5 test
+      images / 11 GT boxes / 6 prompts; pipeline and model loading verified only
 - [x] Repository hygiene pass (2026-07-07): stale MTSD manifest paths fixed,
       documentation path examples made portable, broken Markdown link repaired,
       provenance allowlist added, health check now **PASS** with 0 findings
@@ -417,10 +425,16 @@ human glance at the running UI (not launched here).
 - [ ] **MTSD supervised detection training**: YOLO12/YOLO26/RF-DETR notebooks (not run;
       `Results/MTSD-*` empty) — decide epochs/augmentation for the current
       ~2.6k-image QA-approved scale
-- [ ] **PromptDetect batch evaluations** (not run): e.g. SAM 3/3.1 + LocateAnything on
-      MTSD (prompts per sign type) and MDWD test (waste prompts); Cosmos 32B is opt-in
+- [ ] **PromptDetect batch evaluations**: a 5-image MDWD pilot has run, but the
+      dissertation still needs a fixed, adequately sampled MDWD test evaluation
+      and MTSD evaluation after QA/preparation. Use a documented prompt set and
+      retain the pilot separately; Cosmos 32B remains opt-in.
 - [ ] **Inference-speed benchmarks** (tooling ready, not executed): MDWD detection,
       attribute classifiers, PromptDetect models; MTSD detection blocked on training
+- [ ] **RF-DETR nano metric export**: extract/validate the completed run's COCO
+      metrics into the same traceable result format as the YOLO tables, or exclude
+      RF-DETR from quantitative cross-family tables and state why. Do not imply an
+      RF-DETR n/s/m ablation: only nano was run.
 - [ ] **Further MTSD annotation**: GRP-4 and GRP-6..11 contain 4,864 unannotated
       images. Decide explicitly whether any belong in dissertation scope; annotate
       them only under a documented expansion protocol, then regenerate EDA/manifests.
@@ -452,10 +466,11 @@ human glance at the running UI (not launched here).
    epochs, no augmentation) may underfit — consider enabling the prep notebook's
    photometric augmentation or raising epochs, and record whichever choice you make
    as a protocol deviation in the methodology.
-5. **Run a small PromptDetect batch eval first** (`--max-images 25`, SAM 3 only) to
-   validate the pipeline end-to-end, then the full MTSD test-split and MDWD
-   test-split evaluations with 3–5 prompts per dataset. Budget GPU time for Cosmos
-   2B/8B; keep 32B optional and explicitly opt in with `--allow-heavy`.
+5. **Promote PromptDetect from pilot to evidence.** The 5-image MDWD pilot has
+   validated SAM 3 and Cosmos Reason2 2B end-to-end. Now fix 3–5 prompts per
+   dataset, run an adequately sampled MDWD test evaluation, then run the MTSD
+   evaluation after QA/preparation. Budget GPU time for Cosmos 2B/8B; keep 32B
+   optional and explicitly opt in with `--allow-heavy`.
 6. **Defer the final MTSD attribute-classification rerun** until the final
    annotation scope is fixed. The GRP-1--GRP-3 results are already usable as a
    historical/provenance experiment; do not burn time rerunning just for GRP-5 if
@@ -466,7 +481,9 @@ human glance at the running UI (not launched here).
    (IoU matching, macro-F1 rationale), reproducibility measures (seeds, manifests,
    W&B), and the MDWD leakage sensitivity methodology (independent leakage
    re-derivation, clean-subset construction, checkpoint re-evaluation). Evaluation
-   chapter: MDWD ablation results are final (leakage-checked); the existing MTSD
+   chapter: MDWD YOLO ablation results are final (leakage-checked); RF-DETR nano
+   still needs a normalised metric export before a cross-family quantitative claim.
+   The existing MTSD
    attribute results are final only for their GRP-1--GRP-3 snapshot, while the
    final-scope attribute rerun, detection and prompt-based results remain pending.
 8. **Risks to watch**: annotation edits change QA SHA-256 hashes (manifest must be
@@ -513,13 +530,15 @@ benchmarks, MDWD leakage discussion, final tables/figures, and commit/push.
 Use existing files as sources; do not invent results.
 ```
 
-### High-value prompt 4 — make PromptDetect first-run smoke commands
+### High-value prompt 4 — make a PromptDetect evaluation runbook
 
 ```text
-Inspect Scripts/Other-Scripts/PromptDetect/batch_evaluation and write a small
-first-run smoke-test guide with exact commands for MDWD and MTSD, using small
---max-images values and non-heavy models first. Do not run heavy models. Do not
-change evaluation logic unless a path bug blocks the smoke test.
+Inspect the existing MDWD pilot at
+Results/PromptDetect/BatchEvaluation/MDWD/20260709-234655 and the batch evaluator.
+Write a reproducible evaluation runbook: a fixed prompt set, a defensible image
+sample, model selection, exact commands for MDWD and later MTSD, and how to keep
+pilot outputs separate from dissertation results. Do not run heavy models or
+change evaluation logic.
 ```
 
 ---
@@ -534,14 +553,15 @@ polish is deliberately excluded.
 
 1. ~~Resolve the MDWD leakage question.~~ **DONE (2026-07-09)**: independently
    re-derived leakage count matches (30 sources), clean-subset re-evaluation of
-   the best checkpoint per model family shows a negligible effect (max Δ
+   four headline YOLO checkpoints shows a negligible effect (max Δ
    0.48pp mAP50-95). Use the recommended limitations-section wording in
    `Documents/MDWDLeakageSensitivity.md`; no metric adjustment needed.
 2. **Finish MTSD QA decisions before new MTSD detection/prompt runs.** Review the
    current duplicate/drop-value findings, apply only confirmed fixes, re-scan, and
    regenerate downstream prepared datasets/manifests.
-3. **Run MTSD supervised detection and PromptDetect batch evaluation.** These are
-   core comparison axes and currently the largest real evidence gaps.
+3. **Run MTSD supervised detection and complete PromptDetect batch evaluation.**
+   A 5-image MDWD PromptDetect pilot exists, but the full fixed-protocol MDWD and
+   MTSD evaluations remain core evidence gaps.
 4. **Freeze the final methodology snapshot after MTSD scope is decided.** The
    attribute-classification docs now describe the six-variant historical
    GRP-1--GRP-3 comparison and current GRP-1/2/3/5 QA scope. After the final

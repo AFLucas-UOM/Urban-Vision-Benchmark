@@ -125,7 +125,7 @@ cloudflared --version
 From the repository root:
 
 ```powershell
-.\Scripts\LabelStudio\start_labelstudio.ps1
+.\Scripts\MTSD-Scripts\LabelStudio\start_labelstudio.ps1
 ```
 
 Confirm it works locally:
@@ -285,7 +285,7 @@ Each time you want the public Label Studio link to work:
 1. Start Label Studio:
 
 ```powershell
-.\Scripts\LabelStudio\start_labelstudio.ps1
+.\Scripts\MTSD-Scripts\LabelStudio\start_labelstudio.ps1
 ```
 
 2. In another terminal, start the tunnel:
@@ -346,7 +346,7 @@ Anyone with valid Label Studio credentials can access it from a different IP add
 Error:
 
 ```text
-open Scripts/LabelStudio/.cloudflared/config.yml: The system cannot find the path specified.
+open %USERPROFILE%/.cloudflared/config.yml: The system cannot find the path specified.
 ```
 
 Cause:
