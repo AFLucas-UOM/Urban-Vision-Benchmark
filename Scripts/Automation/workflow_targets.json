@@ -136,6 +136,14 @@
       "training": false,
       "description": "Consolidates existing result files into Documents/Final-Tables (timestamped)."
     },
+    "MDWD-Leakage-Sensitivity": {
+      "type": "python",
+      "path": "Scripts/FinalEvaluation/mdwd_leakage_sensitivity.py",
+      "env": "MDWD",
+      "defaultArgs": [],
+      "training": false,
+      "description": "MDWD split-leakage sensitivity report (audit-only by default; pass -Args '--run-inference --models best-per-family' to re-evaluate checkpoints on leakage-clean valid/test subsets)."
+    },
     "Failure-Case-Sampler": {
       "type": "python",
       "path": "Scripts/FinalEvaluation/failure_case_sampler.py",

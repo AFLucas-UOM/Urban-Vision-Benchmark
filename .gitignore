@@ -93,3 +93,5 @@ desktop.ini
 .vscode/
 .idea/
 .claude/
+# Local UVB launcher state (reserved for future opt-in recent-launch history)
+.uvb_launcher_state.json

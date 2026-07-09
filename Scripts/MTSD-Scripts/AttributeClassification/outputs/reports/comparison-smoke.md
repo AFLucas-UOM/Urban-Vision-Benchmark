@@ -2,6 +2,10 @@
 
 Generated 2026-07-03T13:16:18+00:00. Primary metric: **macro-F1** on the test split (robust to class imbalance; accuracy shown for reference).
 
+This is a one-epoch smoke-test report for pipeline verification only; it is not a
+dissertation result and must not be compared with the completed six-variant
+GRP-1--GRP-3 report.
+
 ## Macro-F1 by attribute
 
 | Variant | view_angle | mounting | condition | sign_shape | Mean |

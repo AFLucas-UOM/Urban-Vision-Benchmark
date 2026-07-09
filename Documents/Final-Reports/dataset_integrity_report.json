@@ -1,0 +1,663 @@
+{
+  "generated_at": "2026-07-09T20:11:41",
+  "overall": "FAIL",
+  "sections": [
+    {
+      "name": "MDWD (variant MDWD-YOLO26)",
+      "format": "yolo",
+      "sampled": false,
+      "summary": {
+        "variant": "MDWD-YOLO26",
+        "format": "yolo",
+        "classes": [
+          "Mixed Waste",
+          "Orange CMD",
+          "Organic Waste",
+          "Other Waste",
+          "Recyclable Material"
+        ],
+        "n_images": 30225,
+        "n_unique_source_images": 3598,
+        "n_boxes": 211512,
+        "per_split": {
+          "train": {
+            "images": 29487,
+            "boxes": 209334
+          },
+          "valid": {
+            "images": 369,
+            "boxes": 1072
+          },
+          "test": {
+            "images": 369,
+            "boxes": 1106
+          }
+        },
+        "boxes_per_image_mean": 6.998,
+        "median_box_area_frac": 0.02328,
+        "issue_counts": {
+          "out_of_range_box": 15,
+          "empty_annotation": 5,
+          "source_in_multiple_splits": 30
+        }
+      },
+      "class_distribution_by_split": [
+        {
+          "class_name": "Mixed Waste",
+          "instances": 60034,
+          "share_pct": 28.38,
+          "train": 59426,
+          "valid": 274,
+          "test": 334
+        },
+        {
+          "class_name": "Recyclable Material",
+          "instances": 52096,
+          "share_pct": 24.63,
+          "train": 51595,
+          "valid": 263,
+          "test": 238
+        },
+        {
+          "class_name": "Other Waste",
+          "instances": 43727,
+          "share_pct": 20.67,
+          "train": 43188,
+          "valid": 261,
+          "test": 278
+        },
+        {
+          "class_name": "Organic Waste",
+          "instances": 40783,
+          "share_pct": 19.28,
+          "train": 40409,
+          "valid": 196,
+          "test": 178
+        },
+        {
+          "class_name": "Orange CMD",
+          "instances": 14872,
+          "share_pct": 7.03,
+          "train": 14716,
+          "valid": 78,
+          "test": 78
+        }
+      ],
+      "issues": [
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "473448940_615763551007064_269417391686000009_n_jpg.rf.66d5ae55d545b823ce9514d9230357d7.txt",
+          "split": "train",
+          "detail": "line 9"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "ARI3129_SDM_73_jpg.rf.0fbb70d78fff697cd7a2879879b90756.txt",
+          "split": "train",
+          "detail": "line 5"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "empty_annotation",
+          "severity": "WARNING",
+          "where": "ARI3129_TK_76_jpg.rf.be9b8f5cf041aa7042a5a9dc8ba63410.jpg",
+          "split": "train",
+          "detail": ""
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "ARI3129_TK_80_jpg.rf.8c5047a7cd420055e57597f7fc962518.txt",
+          "split": "train",
+          "detail": "line 2"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "empty_annotation",
+          "severity": "WARNING",
+          "where": "CMD-Batch1_108_jpeg.rf.729768dc0b9b62a7e60c6ecf40b4b716.jpg",
+          "split": "train",
+          "detail": ""
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "CMD-Batch1_151_jpeg.rf.5533559aa3de8ae698be773ebdb6fab2.txt",
+          "split": "train",
+          "detail": "line 3"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "empty_annotation",
+          "severity": "WARNING",
+          "where": "image00094_jpeg.rf.5dc9d7dab7a5842d30c04d175ee32719.jpg",
+          "split": "train",
+          "detail": ""
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_0210_JPG.rf.83286e23a8cd8dd360dbe235dcfa1be8.txt",
+          "split": "train",
+          "detail": "line 1"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_0689_jpeg.rf.70f86cd8ca2e437ccf19efbe49607b40.txt",
+          "split": "train",
+          "detail": "line 1"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_0712_jpeg.rf.d8d792231d3bd80e08fe91ee48383928.txt",
+          "split": "train",
+          "detail": "line 4"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_1060_jpeg.rf.e7b8fb5a312afc2f61e6f4d38f2ed876.txt",
+          "split": "train",
+          "detail": "line 1"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_1739_JPG.rf.ac7541ac4523bae7c75c67b0ea2f38fc.txt",
+          "split": "train",
+          "detail": "line 3"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_20241212_073326_jpg.rf.4012d9ea107874aa25ef94c380ddee89.txt",
+          "split": "train",
+          "detail": "line 2"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_20241212_073326_jpg.rf.877b8262ab593d739923fdd013bdba54.txt",
+          "split": "train",
+          "detail": "line 2"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_20241217_073010_jpg.rf.57961908de5ab4cfd37ef1cfbdd5b705.txt",
+          "split": "train",
+          "detail": "line 1"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_4245_JPG.rf.fe9742dbbd2c9c52a1c0913571cf1074.txt",
+          "split": "train",
+          "detail": "line 7"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "IMG_4432_jpeg.rf.fd3bd9654f49e097f8d9beaae8067581.txt",
+          "split": "train",
+          "detail": "line 7"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "empty_annotation",
+          "severity": "WARNING",
+          "where": "IMG_8894_jpeg.rf.5b7176ec4afd76d88bce07c56139a03a.jpg",
+          "split": "train",
+          "detail": ""
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "empty_annotation",
+          "severity": "WARNING",
+          "where": "IMG_8992_jpeg.rf.7a801e51f331acd1d7e7395812e27e51.jpg",
+          "split": "train",
+          "detail": ""
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "out_of_range_box",
+          "severity": "FAIL",
+          "where": "PHOTO-2025-01-04-12-12-42-1-_jpg.rf.aa140dab5ed57345c816d846d417ee49.txt",
+          "split": "train",
+          "detail": "line 3"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "20241214_080238_jpg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "ARI3129_AFL_55_jpeg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "ARI3129_AFL_60_jpeg",
+          "split": "",
+          "detail": "test, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "ARI3129_AFL_65_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "ARI3129_AFL_88_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "ARI3129_SDM_26_jpg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "ARI3129_SDM_30_jpg",
+          "split": "",
+          "detail": "test, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "ARI3129_SDM_40_jpg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "ARI3129_TK_71_jpg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG20250107083759_jpg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG20250107085115_jpg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_0714_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_0721_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_0725_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_0726_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_0740_jpeg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_0741_jpeg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_0790_jpeg",
+          "split": "",
+          "detail": "test, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_1583_jpg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_1739_JPG",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_8665_jpeg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_8675_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_8747_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_8855_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_8859_jpeg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_8861_jpeg",
+          "split": "",
+          "detail": "train, valid"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_8897_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "IMG_8972_jpeg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "MSIDA_72_jpg",
+          "split": "",
+          "detail": "test, train"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "source_in_multiple_splits",
+          "severity": "WARNING",
+          "where": "MSIDA_77_jpg",
+          "split": "",
+          "detail": "test, train"
+        }
+      ],
+      "notes": [
+        "Counts are export-level (train is ~10x offline-augmented); unique source images: 3598.",
+        "source_in_multiple_splits = augmented copies of one capture in more than one split (leakage) - list in the issues CSV."
+      ],
+      "status": "FAIL",
+      "issue_counts": {
+        "out_of_range_box": 15,
+        "empty_annotation": 5,
+        "source_in_multiple_splits": 30
+      }
+    },
+    {
+      "name": "MTSD QA annotations (Final-QA COCO exports)",
+      "format": "coco+attributes",
+      "summary": {
+        "qa_files": [
+          "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+          "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+          "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+          "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json"
+        ],
+        "per_group": {
+          "GRP-1": {
+            "annotations": 1960,
+            "images": 724
+          },
+          "GRP-2": {
+            "annotations": 1621,
+            "attr_known_drop_value": 1,
+            "dup_high_overlap": 3,
+            "images": 630
+          },
+          "GRP-3": {
+            "annotations": 1844,
+            "attr_known_drop_value": 1,
+            "images": 617
+          },
+          "GRP-5": {
+            "annotations": 1841,
+            "attr_known_drop_value": 3,
+            "dup_exact_duplicate": 1,
+            "dup_high_overlap": 1,
+            "images": 657
+          }
+        },
+        "attribute_schema": {
+          "view_angle": [
+            "Front",
+            "Back",
+            "Side"
+          ],
+          "mounting": [
+            "Pole-Mounted",
+            "Wall-Mounted"
+          ],
+          "condition": [
+            "Good",
+            "Weathered",
+            "Heavily Damaged"
+          ],
+          "sign_shape": [
+            "Circular",
+            "Quadrangle",
+            "Triangular",
+            "Octagonal",
+            "Pentagon"
+          ]
+        }
+      },
+      "issues": [
+        {
+          "dataset": "MTSD-QA",
+          "issue": "attr_known_drop_value",
+          "severity": "WARNING",
+          "where": "GRP-2/f5018d2e-IMG_20251223_124329.jpg#1529",
+          "split": "GRP-2",
+          "detail": "sign_shape=Damaged-Unknown suggestion="
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "attr_known_drop_value",
+          "severity": "WARNING",
+          "where": "GRP-3/9e3791d5-20251129_113953.jpg#1078",
+          "split": "GRP-3",
+          "detail": "sign_shape=Damaged-Unknown suggestion="
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "attr_known_drop_value",
+          "severity": "WARNING",
+          "where": "GRP-5/0856e08c-BenTaliana_33_Front.jpeg#66",
+          "split": "GRP-5",
+          "detail": "sign_shape=Damaged-Unknown suggestion="
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "attr_known_drop_value",
+          "severity": "WARNING",
+          "where": "GRP-5/9986c115-MelatAssefa_32_Side.jpg#1114",
+          "split": "GRP-5",
+          "detail": "sign_shape=Damaged-Unknown suggestion="
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "attr_known_drop_value",
+          "severity": "WARNING",
+          "where": "GRP-5/c09ec099-BenTaliana_33_Back.jpeg#1443",
+          "split": "GRP-5",
+          "detail": "sign_shape=Damaged-Unknown suggestion="
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "dup_high_overlap",
+          "severity": "WARNING",
+          "where": "GRP-2/1df3d397-51.back.front.jpg",
+          "split": "GRP-2",
+          "detail": "ann 190 vs 191 IoU=0.8848"
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "dup_high_overlap",
+          "severity": "WARNING",
+          "where": "GRP-2/204dfdcd-20251223_154404.jpg",
+          "split": "GRP-2",
+          "detail": "ann 201 vs 202 IoU=0.9496"
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "dup_high_overlap",
+          "severity": "WARNING",
+          "where": "GRP-2/d79d0bd2-20251223_155233.jpg",
+          "split": "GRP-2",
+          "detail": "ann 1363 vs 1364 IoU=0.9124"
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "dup_high_overlap",
+          "severity": "WARNING",
+          "where": "GRP-5/7a0c33f1-BenTaliana_36_Side.jpeg",
+          "split": "GRP-5",
+          "detail": "ann 855 vs 857 IoU=0.8397"
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "dup_exact_duplicate",
+          "severity": "WARNING",
+          "where": "GRP-5/90ee886c-MichaelFarrugia_59_Side.jpg",
+          "split": "GRP-5",
+          "detail": "ann 1033 vs 1040 IoU=1.0"
+        }
+      ],
+      "notes": [
+        "Duplicate thresholds: exact/conflicting IoU >= 0.95, high-overlap >= 0.75.",
+        "Fixable via the MTSD-AnnotationQA review/apply workflow."
+      ],
+      "status": "WARNING",
+      "issue_counts": {
+        "attr_known_drop_value": 5,
+        "dup_high_overlap": 4,
+        "dup_exact_duplicate": 1
+      }
+    },
+    {
+      "name": "MTSD prepared detection dataset (MTSD-YOLO)",
+      "format": "-",
+      "summary": {},
+      "pending": true,
+      "issues": [],
+      "notes": [
+        "PENDING - not built yet; run Prepare-MTSD-Detection-Dataset.ipynb first."
+      ],
+      "status": "PENDING",
+      "issue_counts": {}
+    }
+  ]
+}

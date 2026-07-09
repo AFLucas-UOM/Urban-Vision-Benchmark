@@ -2,6 +2,11 @@
 
 Generated 2026-07-04T00:41:46+00:00. Primary metric: **macro-F1** on the test split (robust to class imbalance; accuracy shown for reference).
 
+Scope note: this report is the completed **GRP-1--GRP-3 manifest snapshot**
+(1,971 source images / 5,273 retained crops). GRP-5 was QA-approved later and is
+not represented here; do not treat these metrics as final for the expanded MTSD
+annotation scope.
+
 ## Macro-F1 by attribute
 
 | Variant | view_angle | mounting | condition | sign_shape | Mean |
