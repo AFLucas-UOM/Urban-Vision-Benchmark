@@ -31,6 +31,11 @@ Generated: 2026-07-07T16:19:08 - consolidated from existing result files only (n
 
 ## MTSD attribute classification
 
+These six-model metrics are the completed **historical GRP-1--GRP-3 snapshot**
+(manifest: 1,971 source images / 5,273 retained crops). GRP-5 is now QA-approved
+but was not included in this comparison; defer the final attribute rerun until
+the MTSD annotation scope and QA decisions are frozen.
+
 | variant | backbone | adaptation | mean_macro_f1 | view_angle_f1 | mounting_f1 | condition_f1 | sign_shape_f1 | total_params | trainable_params |
 |---|---|---|---|---|---|---|---|---|---|
 | dinov3 | dinov3 | frozen | 0.7826 | 0.8649 | 0.8458 | 0.5534 | 0.8663 | 85670413 | 9997 |

@@ -190,7 +190,7 @@ PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s -m mtsd_attr.evaluate
 
 All scripts accept `--config path/to/other.yaml` to run with a different config.
 
-## Data schema (confirmed 2026-07-03)
+## Data schema and experiment snapshot (confirmed 2026-07-09)
 
 Ground truth is **only** the QA-approved COCO JSONs:
 
@@ -198,12 +198,16 @@ Ground truth is **only** the QA-approved COCO JSONs:
 Datasets/MTSD/Annotations/GRP-<N>/Final-QA/QA-GRP<N>.json
 ```
 
-A group is **QA-approved iff that file exists** (exactly one match of
+A group is **QA-approved if that file exists** (exactly one match of
 `QA-GRP*.json` under `Final-QA/`). Raw annotator output
-(`Fiverr-Annotations/*.xml`) is never read. **Currently only `GRP-1`, `GRP-2`,
-and `GRP-3` have QA-approved annotations, so the experiment uses exactly those
-three groups**; further groups join automatically once their `Final-QA` JSON
-lands (no config change needed). In each QA JSON:
+(`Fiverr-Annotations/*.xml`) is never read. The current annotation tree has
+QA-approved JSONs for **GRP-1, GRP-2, GRP-3 and GRP-5** (2,628 images / 7,266
+boxes); further groups join automatically once their `Final-QA` JSON lands (no
+config change needed). The completed six-model comparison is intentionally a
+**historical GRP-1--GRP-3 manifest snapshot** (1,971 source images and 5,273
+retained crops). Do not rerun only for GRP-5: first finish the annotation-scope
+decision, then refresh the manifest and run one separately labelled final
+round. In each QA JSON:
 
 - `images[]`: `id`, `file_name`, `width`, `height`, and `source_image` (a
   repo-relative path into `Datasets/MTSD/GRP-<N>/Images/`). Width/height describe the
@@ -233,7 +237,8 @@ changes are needed when a new group finishes QA:
 
 Exclusions during ingestion (all counted in the log): crops whose bbox min-side
 is below `data.min_crop_size` (default 16 px — unreadable after resizing), and
-crops whose `sign_shape` is `Damaged-Unknown` (4 instances as of GRP-1..3;
+crops whose `sign_shape` is `Damaged-Unknown` (3 instances in the historical
+GRP-1--GRP-3 manifest; the latest four-group QA audit finds 5 in total;
 decision 2026-07-03: dropped entirely). Crops missing a label for some attribute
 are **kept**; the loss masks the missing head (see below).
 

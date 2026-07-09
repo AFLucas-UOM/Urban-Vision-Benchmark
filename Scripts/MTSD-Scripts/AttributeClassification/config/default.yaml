@@ -19,8 +19,10 @@ paths:
 data:
   # A group is QA-approved iff <annotations_root>/<group>/Final-QA/ contains a file
   # matching qa_filename_pattern. Groups without it are excluded automatically -
-  # as of 2026-07-03 that means exactly GRP-1, GRP-2, GRP-3. New groups join
-  # automatically once their Final-QA JSON exists; no config change needed.
+  # as of 2026-07-09 that means GRP-1, GRP-2, GRP-3 and GRP-5. New groups join
+  # automatically once their Final-QA JSON exists; no config change needed. The
+  # completed six-model comparison predates GRP-5 and remains a historical
+  # GRP-1--GRP-3 snapshot until the final annotation scope is fixed.
   group_dir_pattern: "GRP-*"
   qa_subdir: Final-QA
   qa_filename_pattern: "QA-GRP*.json"
@@ -46,7 +48,9 @@ attributes:
   sign_shape:
     classes: [Circular, Quadrangle, Triangular, Octagonal, Pentagon]
     # Crops carrying these values are dropped entirely, all heads included
-    # (decision 2026-07-03: 4 'Damaged-Unknown' instances are unlearnable).
+    # (decision 2026-07-03: 'Damaged-Unknown' instances are unlearnable; the
+    # latest four-group QA audit found 5 and the final manifest must be refreshed
+    # after annotation review).
     drop_values: [Damaged-Unknown]
 
 splits:

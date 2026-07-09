@@ -36,21 +36,27 @@ framework-specific variants of the same data:
 
 Photographs of Maltese traffic signs collected in **11 groups**
 ([Datasets/MTSD/GRP-1 … GRP-11](Datasets/MTSD/)), each group holding raw
-captures under `Images/`. QA-verified annotations exist for **GRP-1–GRP-3**
-under [Datasets/MTSD/Annotations/](Datasets/MTSD/Annotations/):
-COCO-style JSONs (`GRP-*/Final-QA/QA-GRP*.json`, 1,971 annotated images / 5,457 boxes) whose
-boxes carry **per-sign auxiliary attributes** — viewing angle, mounting type,
-condition, and sign shape — used for the multi-attribute classification
-experiments. Remaining groups join automatically once their `Final-QA` JSON
-exists.
+captures under `Images/`. QA-verified annotations currently exist for
+**GRP-1, GRP-2, GRP-3 and GRP-5** under
+[Datasets/MTSD/Annotations/](Datasets/MTSD/Annotations/): the four
+COCO-style JSONs (`GRP-*/Final-QA/QA-GRP*.json`) contain **2,628 annotated
+images / 7,266 boxes**. Their boxes carry **per-sign auxiliary attributes** —
+viewing angle, mounting type, condition, and sign shape — used for the
+multi-attribute classification experiments. The completed attribute-model
+comparison is a **historical GRP-1–GRP-3 snapshot** (1,971 images / 5,273
+retained crops); GRP-5 is deliberately deferred until the final annotation
+scope is fixed. Remaining groups join automatically once their `Final-QA`
+JSON exists.
 
 ---
 
 ## The two experimental tracks
 
 1. **Domestic waste detection (MDWD).** Supervised object-detection
-   benchmarks across model families and sizes: **YOLO11, YOLO12, YOLO26**
-   (n/s/m/l) and **RF-DETR** (nano/small/medium), run from the notebooks in
+    benchmarks across model families and sizes: **YOLO11, YOLO12, YOLO26**
+    (n/s/m/l) and **RF-DETR nano**. RF-DETR small/medium configurations are
+    archived as templates but have no completed checkpoints, so they are not
+    reported as executed results. Runs are produced from the notebooks in
    [Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/](Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/),
    with runs archived under [Results/MDWD-Runs/](Results/MDWD-Runs/) and
    consolidated metrics under [Results/MDWD-Results/](Results/MDWD-Results/).
@@ -76,7 +82,8 @@ Urban-Vision-Benchmark/
 ├── Documents/                     # Workflow docs + generated EDA outputs
 │   ├── MTSD-EDA/                  #   MTSD EDA figures/CSVs/HTML map
 │   ├── MDWD-EDA/                  #   MDWD EDA figures/CSVs/summary
-│   └── *.md                       #   LabelStudio, QA formatter, PromptDetect, etc.
+│   ├── Final-Reports/             #   Health checks, integrity + leakage sensitivity reports
+│   └── *.md                       #   LabelStudio, QA formatter, PromptDetect, leakage analysis, etc.
 ├── Models/                        # Stock pretrained weights (YOLO11/12/26, RF-DETR)
 ├── Requirements/                  # pip requirements per workstream
 ├── Results/
@@ -89,6 +96,7 @@ Urban-Vision-Benchmark/
     ├── MDWD-Scripts/
     │   ├── MDWD-Analysis/         # MDWD EDA package + runner (see its README)
     │   └── MDWD-SupervisedNotebooks/  # YOLO26 / YOLO12 / RF-DETR training notebooks
+    ├── FinalEvaluation/           # Dataset integrity + MDWD leakage sensitivity reports
     ├── MTSD-Scripts/              # (see its README)
     │   ├── AttributeClassification/   # Multi-attribute training pipeline + configs
     │   ├── LabelStudio/           # Annotation-workflow tooling
@@ -158,6 +166,25 @@ training → val/test evaluation → W&B logging → summary CSV export):
   `YOLO26-DGX` (DGX machine runs), `RF-DETR-EUVIP`, and an `[OLD] YOLO26-Sweep`
   hyper-parameter sweep, all under `Results/MDWD-Runs/`.
 
+### Split-leakage sensitivity analysis — [Scripts/FinalEvaluation/mdwd_leakage_sensitivity.py](Scripts/FinalEvaluation/mdwd_leakage_sensitivity.py)
+
+Because MDWD splits the data *after* ~10x offline augmentation, the EDA flags
+30 source photographs whose augmented copies land in more than one split.
+This read-only tool independently re-derives that leakage (cross-checked
+against the EDA's `integrity_issues.csv`), builds leakage-excluded valid/test
+subsets without touching any dataset file, and re-evaluates the best
+checkpoint per model family (YOLO11/12/26) on original vs. clean subsets to
+measure the actual effect on reported metrics — result: negligible (max Δ
+0.48pp mAP50-95). Full write-up:
+[Documents/MDWDLeakageSensitivity.md](Documents/MDWDLeakageSensitivity.md);
+outputs in `Documents/Final-Reports/MDWD-Leakage-Analysis/`.
+
+```bash
+python Scripts/FinalEvaluation/mdwd_leakage_sensitivity.py --self-test   # logic self-tests
+python Scripts/FinalEvaluation/mdwd_leakage_sensitivity.py               # audit only
+python Scripts/FinalEvaluation/mdwd_leakage_sensitivity.py --run-inference --models best-per-family
+```
+
 ## MTSD workstream
 
 ### Attribute classification — [Scripts/MTSD-Scripts/AttributeClassification/](Scripts/MTSD-Scripts/AttributeClassification/README.md)
@@ -221,6 +248,44 @@ standalone audit utilities.
 
 ## Setup
 
+### UVB launcher
+
+Use the root launcher to find the repository's safe audit tools, analysis
+commands, Gradio applications and report folders without memorising paths:
+
+```powershell
+python launch_uvb.py
+.\launch_uvb.ps1
+python launch_uvb.py --list
+python launch_uvb.py --doctor
+python launch_uvb.py --dry-run
+python launch_uvb.py promptdetect
+```
+
+The menu is grouped into model/inference UIs, annotation/QA, dataset analysis,
+evaluation, maintenance, and documentation. It detects the repository root
+from the launcher location, checks ports before localhost apps, uses `conda run`
+for the documented `MDWD`, `mtsd-attrcls`, `mtsd-base`, and `mtsd-la` environments,
+and opens supported Gradio URLs in the browser. If Conda is missing, model UIs
+are refused with an actionable warning; safe commands may use the current
+Python interpreter. Heavy model tools require an explicit confirmation.
+
+Navigate the interactive menu with **Up/Down** arrows and **Enter**. Use
+**Esc** or **Backspace** to return, `/` to search by tool name or purpose, and
+`q` to quit from the workspace menu. `j`/`k` also move the selection when
+arrow keys are inconvenient.
+
+The launcher never starts training, never auto-applies annotation fixes, never
+deletes anything, and never opens or modifies `label_studio.sqlite3`. The Label
+Studio menu item prints the documented workflow because the existing startup
+script can stop a port-8080 process and writes local Label Studio state. Stop
+localhost applications with `Ctrl+C` in their visible terminal.
+
+To add a tool, add one `Tool(...)` entry to `TOOLS` in `launch_uvb.py`: use a
+repository-relative script path, working directory, environment, safe default
+arguments, and a port only when the target supports it. Keep mutating or heavy
+commands behind `confirm=True` and prefer their documented dry-run flags.
+
 ### Environments (conda, recommended)
 
 Per-workstream environments are defined in
@@ -281,11 +346,14 @@ numeric results; the imagery must be restored from local/off-repo storage.
 ## Status
 
 **Under active MSc research development** (2026). Current state: MDWD
-detection benchmarks (YOLO11/12/26, RF-DETR) executed with archived runs;
-MTSD groups 1–3 QA-annotated with EDA and the full attribute-classification
-round executed; MTSD supervised detection notebooks are scaffolded but not yet
-run; PromptDetect batch evaluation and inference-speed tooling are dry-run
-verified; further MTSD annotation/cleanup is ongoing.
+detection benchmarks (YOLO11/12/26 plus RF-DETR nano) executed with archived runs and
+a completed split-leakage sensitivity check (negligible effect, see
+[Documents/MDWDLeakageSensitivity.md](Documents/MDWDLeakageSensitivity.md));
+MTSD groups 1/2/3/5 QA-annotated with EDA and a six-variant
+attribute-classification round executed on the historical GRP-1–GRP-3
+snapshot; MTSD supervised detection notebooks are scaffolded but not yet run;
+PromptDetect batch evaluation and inference-speed tooling are dry-run verified;
+annotation QA review and the final MTSD scope decision are ongoing.
 
 ## Citation
 

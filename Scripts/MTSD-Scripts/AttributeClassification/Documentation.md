@@ -17,15 +17,22 @@ The experiment predicts four attributes jointly:
 
 The design is multi-task and multi-head: one image crop is passed through one backbone network, and the resulting feature vector is sent to four independent classification heads. Each head predicts one attribute. This is appropriate because the four labels describe different properties of the same traffic-sign instance, and sharing the visual representation avoids training four unrelated models over the same image data.
 
-The experiment compares three representation strategies:
+The completed comparison contains six variants spanning three adaptation modes:
 
-| Variant | Backbone | Training regime | Input size | Feature dim | Current run |
-|---|---|---|---:|---:|---|
-| `dinov3` | `facebook/dinov3-vitb16-pretrain-lvd1689m` | Frozen self-supervised backbone, trained linear heads | 224 | 768 | `dinov3-20260703-021817` |
-| `vjepa` | V-JEPA 2.1 `vjepa2_1_vit_large_384` through `torch.hub` | Frozen self-supervised video backbone, trained linear heads | 384 | 1024 | `vjepa-20260703-023332` |
-| `convnext` | `torchvision` ConvNeXt-Tiny, ImageNet-pretrained | Fully fine-tuned supervised baseline | 224 | 768 | `convnext-20260703-025354` |
+| Variant | Backbone | Training regime | Input size | Feature dim |
+|---|---|---|---:|---:|
+| `dinov3` | `facebook/dinov3-vitb16-pretrain-lvd1689m` | Frozen self-supervised backbone + linear heads | 224 | 768 |
+| `dinov3_lora` | Same DINOv3 checkpoint | LoRA on `q_proj`/`v_proj` + heads | 224 | 768 |
+| `vjepa` | V-JEPA 2.1 `vjepa2_1_vit_large_384` through `torch.hub` | Frozen self-supervised video backbone + linear heads | 384 | 1,024 |
+| `vjepa_lora` | Same V-JEPA checkpoint | LoRA on fused `qkv` + heads | 384 | 1,024 |
+| `convnext_frozen` | `torchvision` ConvNeXt-Tiny, ImageNet-pretrained | Frozen backbone + linear heads | 224 | 768 |
+| `convnext` | Same ConvNeXt-Tiny checkpoint | Fully fine-tuned supervised baseline | 224 | 768 |
 
-The comparison is therefore not a pure architecture comparison. It is a cross-paradigm comparison: frozen self-supervised representation probes are compared with a fully fine-tuned supervised ImageNet baseline. This is valid if framed as a comparison of practical representation-learning strategies, but it should not be described as a strictly equal training-budget or equal-adaptation comparison.
+The comparison is therefore not a pure architecture ranking. It is an
+adaptation-strategy comparison: frozen probes, parameter-efficient LoRA adaptation,
+and full fine-tuning are evaluated over self-supervised and supervised pretrained
+backbones. LoRA changes adapter capacity, and DINOv3/V-JEPA full fine-tuning is not
+included, so claims should not imply equal adaptation across all backbones.
 
 ## 2. Repository Structure Reviewed
 
@@ -44,7 +51,10 @@ The implementation is organised as follows:
 | `train_dinov3.py`, `train_vjepa.py`, `train_convnext.py` | Thin entry scripts selecting one model variant. |
 | `run_all.py` | End-to-end orchestration of manifest update, model training, and comparison report generation. |
 
-The source code and README are broadly consistent. The README describes the main behaviour implemented in the code: QA-only data ingestion, deterministic image-level split assignment, crop padding, class-weighted masked multi-task loss, frozen probes for DINOv3 and V-JEPA, full fine-tuning for ConvNeXt, and macro-F1 as the primary metric.
+The source code and README describe the implemented behaviour: QA-only data
+ingestion, deterministic image-level split assignment, crop padding, class-weighted
+masked multi-task loss, frozen/LoRA/fine-tuned adaptation modes, and macro-F1 as the
+primary metric.
 
 ## 3. Data Source and Inclusion Criteria
 
@@ -54,7 +64,9 @@ Only QA-approved annotation files are used. A group is included if and only if i
 Datasets/MTSD/Annotations/GRP-<N>/Final-QA/QA-GRP*.json
 ```
 
-Raw annotator XML files are not used by this pipeline. The current manifest includes three QA-approved groups:
+Raw annotator XML files are not used by this pipeline. The completed comparison used
+the following **historical manifest snapshot** (refreshed 2026-07-04), before GRP-5
+was added to the QA scope:
 
 | Group | QA file | Images used | Crops kept | Too-small crops dropped | Dropped by configured attribute value |
 |---|---|---:|---:|---:|---:|
@@ -63,7 +75,11 @@ Raw annotator XML files are not used by this pipeline. The current manifest incl
 | `GRP-3` | `Datasets/MTSD/Annotations/GRP-3/Final-QA/QA-GRP3.json` | 617 | 1,772 | 84 | 1 |
 | **Total** |  | **1,971** | **5,273** | **181** | **3** |
 
-The README states that four `Damaged-Unknown` shape instances were dropped as of GRP-1..3. The manifest currently records three crops dropped by configured value across GRP-2 and GRP-3. This small mismatch should be checked if the exact number is reported in the dissertation. The code is authoritative for the current run outputs because the manifest and metrics were generated from it.
+The historical manifest records three dropped `Damaged-Unknown` crops across
+GRP-2/GRP-3. The latest four-group QA audit (2026-07-09) finds five such values in
+GRP-1/2/3/5 combined, plus five duplicate candidates. These are annotation-QA
+findings for the future final round; the completed comparison must be labelled as
+the GRP-1--GRP-3 snapshot.
 
 ### Crop extraction
 
@@ -88,7 +104,8 @@ unknown_value_policy: mask
 
 This means an unknown value is treated as a missing label for that head, rather than crashing the run. Missing labels are encoded as `-1` and masked in the loss and metrics. The exception is `sign_shape: Damaged-Unknown`, which is explicitly configured as a `drop_values` entry and causes the entire crop to be dropped.
 
-Current missing-label counts are small:
+For the historical GRP-1--GRP-3 comparison snapshot, missing-label counts were
+small:
 
 | Split | Crops | Missing `view_angle` | Missing `mounting` | Missing `condition` | Missing `sign_shape` |
 |---|---:|---:|---:|---:|---:|
@@ -132,7 +149,7 @@ hash_key: mtsd-attr-split-v1
 
 This key should not be changed once experiments have started, because changing it would reshuffle every image and invalidate direct comparison with previous results.
 
-Current split sizes are:
+The historical comparison snapshot split sizes were:
 
 | Split | Crops | Source images |
 |---|---:|---:|
@@ -352,7 +369,7 @@ The global training settings are:
 
 | Hyperparameter | Value |
 |---|---:|
-| Epochs | 30 |
+| Maximum epochs | 150 |
 | Batch size | 32 |
 | DataLoader workers | 4 |
 | Optimizer | AdamW |
@@ -360,10 +377,10 @@ The global training settings are:
 | Backbone learning rate | `5.0e-5` |
 | Weight decay | `0.05` |
 | Scheduler | Linear warmup followed by cosine decay |
-| Warmup | 2 epochs |
+| Warmup | 5 epochs |
 | AMP | Enabled on CUDA using bfloat16 autocast |
 | Gradient clipping | Global norm `1.0` |
-| Early stopping patience | `0`, meaning disabled |
+| Early stopping | Enabled; patience 10, min delta 0.001 |
 | Seed | 42 |
 
 For ConvNeXt only:
@@ -381,14 +398,22 @@ The scheduler runs per training step. It linearly increases the learning-rate mu
 
 The hyperparameters are broadly sensible for the intended comparison:
 
-1. **Thirty epochs** is reasonable for small linear probes and for fine-tuning a compact ConvNeXt model on 4,301 training crops. The validation curves show that all models reach their best validation macro-F1 within the 30-epoch budget.
+1. **A 150-epoch maximum with early stopping** gives the small probes and the
+   fine-tuned ConvNeXt enough budget while stopping once validation mean macro-F1
+   plateaus. The completed runs stopped between epochs 18 and 47.
 2. **AdamW with weight decay 0.05** is standard for modern vision transformer and ConvNeXt-style training.
 3. **Lower backbone learning rate** for ConvNeXt is appropriate because pretrained features should be adapted carefully.
 4. **Class-weighted loss** is justified by severe imbalance in `mounting`, `condition`, and `sign_shape`.
 5. **Macro-F1 selection** is correct for imbalanced multi-class classification.
-6. **No early stopping** is acceptable because best-checkpoint selection is used. However, it costs extra compute after the best epoch and may be worth enabling if future runs become longer.
+6. **Early stopping and best-checkpoint selection are separate safeguards.** The
+   test split is not used for stopping; `best.pt` is selected from validation mean
+   macro-F1 and then evaluated once on test.
 
-The most important methodological caveat is that ConvNeXt has much greater task-specific adaptation than DINOv3 and V-JEPA. If the dissertation wants to isolate representation quality, an additional ConvNeXt frozen-probe baseline, and possibly fine-tuned DINOv3/V-JEPA variants, would make the comparison more balanced.
+The most important methodological caveat is that the matrix still has unequal
+adaptation coverage: ConvNeXt has a full fine-tune, while DINOv3 and V-JEPA have
+frozen and LoRA variants but no full fine-tune. The existing `convnext_frozen`
+baseline improves the comparison, but a pure representation-quality study would
+also require fine-tuned DINOv3/V-JEPA variants.
 
 ## 9. Checkpoint Selection and Evaluation
 
@@ -425,35 +450,53 @@ The evaluation code reports, for each attribute:
 
 Macro-F1 is the correct primary metric here. For example, `condition` is dominated by `Good`, so a model can obtain acceptable accuracy while performing poorly on `Weathered` and `Heavily Damaged`.
 
-## 11. Current Full-Run Results
+## 11. Completed comparison results (historical GRP-1--GRP-3 snapshot)
 
-The consolidated test results are:
+The consolidated test results are the six-variant comparison generated on
+2026-07-04. They are valid for the GRP-1--GRP-3 manifest only; they do not yet
+represent the current four-group QA scope.
 
 | Variant | `view_angle` macro-F1 | `mounting` macro-F1 | `condition` macro-F1 | `sign_shape` macro-F1 | Mean macro-F1 |
 |---|---:|---:|---:|---:|---:|
-| DINOv3 | 0.8594 | 0.8417 | 0.5777 | 0.8697 | 0.7871 |
-| V-JEPA | 0.8751 | 0.8606 | 0.5294 | 0.8575 | 0.7806 |
-| ConvNeXt-Tiny | 0.9153 | 0.8691 | 0.6899 | 0.9660 | 0.8601 |
+| `dinov3` | 0.8649 | 0.8458 | 0.5534 | 0.8663 | **0.7826** |
+| `dinov3_lora` | 0.9129 | 0.8959 | 0.7346 | 0.9503 | **0.8734** |
+| `vjepa` | 0.8823 | 0.8672 | 0.5110 | 0.8189 | **0.7699** |
+| `vjepa_lora` | 0.9089 | 0.9054 | 0.5948 | 0.9507 | **0.8400** |
+| `convnext_frozen` | 0.8426 | 0.8026 | 0.5673 | 0.8389 | **0.7629** |
+| `convnext` | 0.9054 | 0.8734 | 0.7113 | 0.9663 | **0.8641** |
 
 The corresponding test accuracies are:
 
 | Variant | `view_angle` accuracy | `mounting` accuracy | `condition` accuracy | `sign_shape` accuracy |
 |---|---:|---:|---:|---:|
-| DINOv3 | 0.8688 | 0.9264 | 0.7570 | 0.9066 |
-| V-JEPA | 0.8827 | 0.9324 | 0.7171 | 0.9046 |
-| ConvNeXt-Tiny | 0.9245 | 0.9523 | 0.8526 | 0.9682 |
+| `dinov3` | 0.8748 | 0.9324 | 0.7092 | 0.9026 |
+| `dinov3_lora` | 0.9205 | 0.9563 | 0.8267 | 0.9602 |
+| `vjepa` | 0.8907 | 0.9364 | 0.7371 | 0.8628 |
+| `vjepa_lora` | 0.9165 | 0.9583 | 0.8028 | 0.9662 |
+| `convnext_frozen` | 0.8549 | 0.9026 | 0.7291 | 0.8887 |
+| `convnext` | 0.9145 | 0.9503 | 0.8566 | 0.9702 |
 
 Validation scores for the selected checkpoints were:
 
 | Variant | Best epoch | Validation mean macro-F1 | Test mean macro-F1 |
 |---|---:|---:|---:|
-| DINOv3 | 12 | 0.7710 | 0.7871 |
-| V-JEPA | 23 | 0.7512 | 0.7806 |
-| ConvNeXt-Tiny | 29 | 0.8254 | 0.8601 |
+| `dinov3` | 17 | 0.7697 | 0.7826 |
+| `dinov3_lora` | 16 | 0.8327 | 0.8734 |
+| `vjepa` | 19 | 0.7453 | 0.7699 |
+| `vjepa_lora` | 8 | 0.8380 | 0.8400 |
+| `convnext_frozen` | 37 | 0.7442 | 0.7629 |
+| `convnext` | 21 | 0.8212 | 0.8641 |
 
-The fact that ConvNeXt's best epoch is 29 suggests the 30-epoch budget was almost fully used. If future data increases or stronger augmentation is introduced, ConvNeXt may benefit from a slightly longer schedule. DINOv3 peaked earlier, at epoch 12, suggesting that its linear heads saturate more quickly.
+The runs stopped early under the current 150-epoch maximum (the stopping epochs
+are recorded in `outputs/reports/comparison.md`). This avoids interpreting the
+maximum budget as the actual training duration.
 
-### Per-class test F1
+### Legacy three-variant per-class appendix (superseded)
+
+The detailed per-class tables immediately below were written before the LoRA
+variants and the final comparison report were added. They are retained only as
+historical audit material; use `outputs/reports/comparison.md` for the
+authoritative six-variant per-class values and supports.
 
 #### DINOv3
 
@@ -511,13 +554,22 @@ The fact that ConvNeXt's best epoch is 29 suggests the 30-epoch budget was almos
 
 ### Interpretation
 
-ConvNeXt-Tiny is the strongest current model by mean test macro-F1. It outperforms both frozen self-supervised probes on all four attributes, with the largest advantage on `condition` and `sign_shape`.
+`dinov3_lora` is the strongest completed variant by mean test macro-F1 (0.8734),
+followed by fine-tuned `convnext` (0.8641) and `vjepa_lora` (0.8400). This is an
+adaptation-strategy result on the historical snapshot, not a universal backbone
+ranking.
 
-DINOv3 and V-JEPA are close overall. V-JEPA performs slightly better on `view_angle` and `mounting`, while DINOv3 performs better on `condition` and `sign_shape`. This pattern is plausible: V-JEPA's video pretraining may help with viewpoint-like cues, while DINOv3's still-image representation may better encode object appearance and shape.
+LoRA improves both self-supervised backbones over their frozen probes in this
+experiment: DINOv3 rises from 0.7826 to 0.8734 and V-JEPA from 0.7699 to 0.8400.
+Because adapter capacity and backbone family both vary, the result should be
+described as evidence for parameter-efficient adaptation rather than proof that
+one pretraining family is universally superior.
 
 The hardest attribute is `condition`. All models show substantially lower macro-F1 for `condition` than for the other attributes. This is expected because condition labels are both imbalanced and visually subtle. `Heavily Damaged` has only 30 labelled test examples, and performance on this class is limited even for ConvNeXt.
 
-The easiest attribute is `sign_shape`, especially for ConvNeXt. This is also plausible because shape is a strong geometric signal preserved by the square-padding transform.
+The easiest attribute is generally `sign_shape`, while `condition` remains the
+weakest head across all six variants. Shape is a strong geometric signal preserved
+by square padding; condition is both visually subtle and imbalanced.
 
 ## 12. Correctness Review
 
@@ -547,7 +599,10 @@ Overall, the implementation is technically coherent and suitable for the stated 
 5. **No explicit validation checks enforce split-fraction sum or class presence.** The current manifest is fine, but future datasets would benefit from automated assertions or a saved data-audit table.
 6. **DINOv3 preprocessing uses the shared ImageNet normalisation rather than a model-specific processor.** This is common and likely acceptable, but if exact model-card preprocessing differs, a processor-based transform could be tested.
 7. **V-JEPA uses repeated still frames.** This is a practical static-image adaptation of a video model, not a native video evaluation.
-8. **The exact dropped count for `Damaged-Unknown` should be reconciled.** Current manifest totals show three drops by configured value, while the README says four.
+8. **The annotation scope is time-dependent.** The completed metrics use the
+   GRP-1--GRP-3 manifest (three dropped `Damaged-Unknown` crops); the latest
+   four-group QA audit finds five drop-value findings and five duplicate
+   candidates. Resolve those findings before the final MTSD training round.
 
 ## 13. Suggested Methodology Text
 
@@ -557,13 +612,13 @@ The following text can be adapted directly into a dissertation methodology secti
 >
 > Only annotation groups containing a final QA JSON file were included. For each annotated bounding box, a crop was extracted with 25 percent padding on each side to retain contextual cues such as mounting structure and viewpoint. Crops with a minimum bounding-box side below 16 pixels were excluded. Instances labelled with the configured unlearnable shape value `Damaged-Unknown` were removed. Missing labels for individual attributes were retained as masked targets, allowing the remaining labels for the same crop to contribute to training.
 >
-> Data splitting was performed deterministically at source-image level using a salted SHA-256 hash of the group and image filename. This assigned images to train, validation, and test splits with target fractions 80 percent, 10 percent, and 10 percent respectively. Because all crops from the same source image inherit the same split, the procedure prevents leakage caused by multiple signs from the same photograph appearing across different splits. The current manifest contains 5,273 crops from 1,971 source images: 4,301 training crops, 469 validation crops, and 503 test crops.
+> Data splitting was performed deterministically at source-image level using a salted SHA-256 hash of the group and image filename. This assigned images to train, validation, and test splits with target fractions 80 percent, 10 percent, and 10 percent respectively. Because all crops from the same source image inherit the same split, the procedure prevents leakage caused by multiple signs from the same photograph appearing across different splits. The completed comparison snapshot contains 5,273 crops from 1,971 source images: 4,301 training crops, 469 validation crops, and 503 test crops. GRP-5 was not included in these metrics.
 >
 > All crops were padded to a square canvas before resizing, preserving aspect ratio so that sign shape was not geometrically distorted. Training augmentation consisted of small random rotations, random resized cropping, and colour jitter. Horizontal flipping was disabled because mirrored traffic signs may be semantically unrealistic. Validation and test images used deterministic square padding, resizing, tensor conversion, and ImageNet normalisation.
 >
-> Three representation strategies were compared. DINOv3 used the gated `facebook/dinov3-vitb16-pretrain-lvd1689m` checkpoint as a frozen image backbone with trained linear attribute heads. V-JEPA used V-JEPA 2.1 through Meta's `torch.hub` interface as a frozen video backbone; each static crop was repeated along the temporal dimension to form a two-frame pseudo-clip, and output tokens were mean-pooled. ConvNeXt-Tiny used ImageNet-pretrained `torchvision` weights and was fully fine-tuned end to end, serving as a supervised baseline.
+> Six variants were compared. DINOv3 and V-JEPA used frozen probes and LoRA-adapted versions; ConvNeXt-Tiny used both a frozen probe and a fully fine-tuned ImageNet-pretrained baseline. V-JEPA treated each static crop as a two-frame pseudo-clip and mean-pooled its output tokens. The matrix therefore compares frozen probing, parameter-efficient adaptation, and full fine-tuning rather than equal adaptation of every backbone.
 >
-> Models were trained using AdamW, class-weighted cross-entropy, a batch size of 32, 30 epochs, two warmup epochs, and cosine learning-rate decay. The default head learning rate was `1e-3`, the backbone learning rate for trainable backbones was `5e-5`, and weight decay was `0.05`. ConvNeXt used a lower head learning rate of `4e-4`. Losses from the four heads were weighted equally. Class weights were computed from the training split only using inverse class frequency, reducing the effect of class imbalance in mounting, condition, and sign shape.
+> Models were trained using AdamW, class-weighted cross-entropy, a batch size of 32, a 150-epoch maximum, five warmup epochs, cosine learning-rate decay, and validation early stopping (patience 10, minimum improvement 0.001). The default head learning rate was `1e-3`, the backbone learning rate for trainable backbones was `5e-5`, and weight decay was `0.05`. ConvNeXt used a lower head learning rate of `4e-4`; LoRA variants used `2e-4` for adapter parameters. Losses from the four heads were weighted equally. Class weights were computed from the training split only using inverse class frequency, reducing the effect of class imbalance in mounting, condition, and sign shape.
 >
 > Model selection used validation mean macro-F1, computed as the mean of the four per-attribute macro-F1 values. The selected checkpoint was then evaluated once on the held-out test split. Macro-F1 was used as the primary metric because several attributes were imbalanced; accuracy was reported as a secondary metric. Per-class F1 scores and confusion matrices were also produced to analyse rare-class behaviour.
 
@@ -571,10 +626,16 @@ The following text can be adapted directly into a dissertation methodology secti
 
 The experiment is in good methodological shape. The data ingestion, split logic, multi-task architecture, masked loss, class weighting, checkpoint selection, and metric reporting are all appropriate for the task.
 
-The key interpretation point is that the current results show ConvNeXt-Tiny as the best-performing system, but ConvNeXt receives full fine-tuning while DINOv3 and V-JEPA are frozen probes. Therefore, the strongest defensible conclusion is:
+The key interpretation point is that the current snapshot shows DINOv3 with LoRA
+adaptation as the best-performing variant, while the comparison still contains
+asymmetric adaptation regimes. Therefore, the strongest defensible conclusion is:
 
 ```text
-In the current setup, a fully fine-tuned supervised ConvNeXt-Tiny baseline outperforms frozen linear probes over DINOv3 and V-JEPA features for MTSD attribute classification, especially on condition and sign shape.
+In the GRP-1--GRP-3 snapshot, parameter-efficient LoRA adaptation produced the
+best mean macro-F1 for DINOv3 (0.8734), while full ConvNeXt fine-tuning (0.8641)
+also outperformed the frozen-probe baselines. The result supports comparing
+adaptation strategies, but it should not be generalised to the final four-group
+MTSD corpus until the deferred attribute-classification round is run.
 ```
 
 A stronger representation-learning conclusion would require additional balanced variants, such as frozen ConvNeXt probes and fine-tuned DINOv3/V-JEPA models. For the current dissertation methodology, however, the implementation is sufficiently rigorous as long as this comparison asymmetry and the rare-class limitations are stated clearly.
