@@ -6,6 +6,15 @@ MDWD or MTSD. The existing manual PromptDetect UI ([../app.py](../app.py)) is
 untouched — this is an additional mode that reuses the same
 `backend.DetectionBackend` and model registry.
 
+## Current research status
+
+`Results/PromptDetect/BatchEvaluation/MDWD/20260709-234655` is a completed
+five-image MDWD pilot using SAM 3 and Cosmos Reason2 2B with six exploratory
+prompts. It validates model loading and GT scoring only; do not use its metrics
+as dissertation evidence. The next runs should use a fixed prompt protocol and
+an adequately sampled MDWD test set, followed by MTSD after annotation QA and
+detection-dataset preparation.
+
 ## What it does
 
 1. Loads a dataset split into a common ground-truth format:

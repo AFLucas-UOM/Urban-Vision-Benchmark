@@ -57,9 +57,12 @@ JSON exists.
     (n/s/m/l) and **RF-DETR nano**. RF-DETR small/medium configurations are
     archived as templates but have no completed checkpoints, so they are not
     reported as executed results. Runs are produced from the notebooks in
-   [Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/](Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/),
-   with runs archived under [Results/MDWD-Runs/](Results/MDWD-Runs/) and
-   consolidated metrics under [Results/MDWD-Results/](Results/MDWD-Results/).
+    [Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/](Scripts/MDWD-Scripts/MDWD-SupervisedNotebooks/),
+    with runs archived under [Results/MDWD-Runs/](Results/MDWD-Runs/) and
+    consolidated metrics under [Results/MDWD-Results/](Results/MDWD-Results/).
+    The RF-DETR nano checkpoint/log exists, but its metrics are not yet in the
+    standard consolidated table format and should not be used for a quantitative
+    cross-family conclusion until exported and validated.
 
 2. **Traffic-sign multi-attribute classification (MTSD).** Representation
    learning on QA-approved sign crops with four heads (view angle, mounting,
@@ -352,8 +355,10 @@ a completed split-leakage sensitivity check (negligible effect, see
 MTSD groups 1/2/3/5 QA-annotated with EDA and a six-variant
 attribute-classification round executed on the historical GRP-1–GRP-3
 snapshot; MTSD supervised detection notebooks are scaffolded but not yet run;
-PromptDetect batch evaluation and inference-speed tooling are dry-run verified;
-annotation QA review and the final MTSD scope decision are ongoing.
+PromptDetect batch evaluation is dry-run verified with a real five-image MDWD
+pilot (SAM 3 + Cosmos Reason2 2B; not dissertation evidence), while
+inference-speed tooling remains dry-run verified; annotation QA review and the
+final MTSD scope decision are ongoing.
 
 ## Citation
 

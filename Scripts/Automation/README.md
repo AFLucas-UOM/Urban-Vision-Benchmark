@@ -118,5 +118,5 @@ python "$(git rev-parse --show-toplevel)/Scripts/Automation/verify_repository_he
 
 Git for Windows runs hooks through its bundled `sh`, so no `chmod` is needed.
 If the check reports a FAIL the hook blocks the push; fix the finding, or
-bypass deliberately with `git push --no-verify`. (As of 2026-07-07 the check
+bypass deliberately with `git push --no-verify`. (As of 2026-07-10 the check
 is fully green — about 2.5 s on the system Python.)

@@ -27,6 +27,14 @@ You can:
 - Track per-prompt performance across a session.
 - Export detections as CSV / JSON / COCO / YOLO.
 
+For ground-truth-scored experiments, use the separate
+[batch-evaluation workflow](../Scripts/Other-Scripts/PromptDetect/batch_evaluation/README.md).
+The Gradio tabs described below are exploratory and do **not** score detections
+against dataset ground truth. A five-image MDWD pilot (SAM 3 + Cosmos Reason2
+2B) has verified the scoring pipeline; it is deliberately kept separate from
+dissertation results until fixed, adequately sampled MDWD and MTSD evaluations
+are run.
+
 ---
 
 ## Supported models

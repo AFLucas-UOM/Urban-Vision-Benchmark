@@ -5,6 +5,10 @@ Generated: 2026-07-07T16:19:08 - consolidated from existing result files only (n
 
 ## MDWD supervised detection
 
+This generated table currently contains the consolidated YOLO summaries only.
+An RF-DETR nano checkpoint/log exists, but its metrics have not yet been exported
+into the same traceable table format; RF-DETR small/medium were not trained.
+
 | dataset | model_family | model_variant | parameters | model_size_mb | precision | recall | f1 | map50 | map50_95 |
 |---|---|---|---|---|---|---|---|---|---|
 | MDWD | YOLO11 | yolo11n | 2590815 | 5.22 | 0.9035638191227982 | 0.8036866029135148 | 0.8507037127455663 | 0.8636417638926028 | 0.6888369062440758 |
@@ -51,7 +55,12 @@ the MTSD annotation scope and QA decisions are frozen.
 
 ## PromptDetect (prompt-based detection)
 
-**PENDING** - PromptDetect: no batch-evaluation runs yet - pending (run Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_batch_eval.py)
+**PENDING FOR DISSERTATION RESULTS** — a real MDWD pilot exists at
+`Results/PromptDetect/BatchEvaluation/MDWD/20260709-234655` (SAM 3 + Cosmos
+Reason2 2B; 5 images / 11 GT boxes / 6 exploratory prompts). It verifies the
+pipeline but is too small and prompt-exploratory for this table. Run the fixed,
+adequately sampled MDWD and MTSD evaluations via
+`Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_batch_eval.py`.
 
 ## Model efficiency (inference speed)
 

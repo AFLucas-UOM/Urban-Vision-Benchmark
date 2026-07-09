@@ -4,6 +4,9 @@ Generated: 2026-07-09T20:13:40
 QA files audited: 4  
 Thresholds: duplicate IoU >= 0.95, overlap IoU >= 0.75
 
+> Current audit snapshot for GRP-1/2/3/5. It remains a pre-fix record until
+> reviewed decisions are applied and a new audit is generated.
+
 | Finding | Count |
 | --- | --- |
 | missing attribute findings | 0 |

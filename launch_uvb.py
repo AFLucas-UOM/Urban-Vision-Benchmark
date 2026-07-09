@@ -8,6 +8,8 @@ installed it improves the presentation, but it is never required.
 from __future__ import annotations
 
 import argparse
+import contextlib
+import io
 import os
 import platform
 import shlex
@@ -17,6 +19,7 @@ import subprocess
 import sys
 import threading
 import webbrowser
+
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Sequence
@@ -37,6 +40,25 @@ try:
 except ImportError:  # pragma: no cover - exercised on minimal installations
     RICH = False
     CONSOLE = None
+
+
+# ---------------------------------------------------------------------------
+# Cache git info once at startup so we don't shell out on every frame redraw
+# ---------------------------------------------------------------------------
+def _init_repo_status() -> tuple[str, str]:
+    branch = commit = "unavailable"
+    try:
+        branch = subprocess.check_output(
+            ["git", "branch", "--show-current"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL
+        ).strip() or "detached"
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL
+        ).strip()
+    except (OSError, subprocess.CalledProcessError):
+        pass
+    return branch, commit
+
+_REPO_BRANCH, _REPO_COMMIT = _init_repo_status()
 
 
 @dataclass(frozen=True)
@@ -102,16 +124,59 @@ def say(message: str = "", style: str | None = None) -> None:
 
 
 def repo_status() -> tuple[str, str]:
-    branch = commit = "unavailable"
-    try:
-        branch = subprocess.check_output(["git", "branch", "--show-current"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL).strip() or "detached"
-        commit = subprocess.check_output(["git", "rev-parse", "--short", "HEAD"], cwd=ROOT, text=True, stderr=subprocess.DEVNULL).strip()
-    except (OSError, subprocess.CalledProcessError):
-        pass
-    return branch, commit
+    return _REPO_BRANCH, _REPO_COMMIT
+
+
+# ---------------------------------------------------------------------------
+# Rendering helpers — double-buffered to eliminate flicker
+# ---------------------------------------------------------------------------
+
+def _render_to_string(render_fn) -> str:
+    """Capture all Rich output produced by *render_fn* into a plain string."""
+    buf = io.StringIO()
+    tmp_console = Console(file=buf, force_terminal=True, color_system="truecolor", width=CONSOLE.width if CONSOLE else 120)
+    render_fn(tmp_console)
+    return buf.getvalue()
+
+
+def _paint(frame: str) -> None:
+    """Write a full frame to the terminal without any visible flicker.
+
+    Moves the cursor to 1,1 (home), writes the pre-rendered frame, then
+    erases everything below it so stale lines from a previous longer frame
+    don't linger.  Because there is no "clear" step, the old pixels stay
+    on screen until they are overwritten — zero blank-flash.
+    """
+    sys.stdout.write(
+        "\033[H"       # cursor to home (1,1)
+        + frame
+        + "\033[J"     # erase from cursor to end of screen
+    )
+    sys.stdout.flush()
+
+
+def _render_header(c: Console) -> None:
+    """Render the UVB banner + repo metadata into *c*."""
+    branch, commit = repo_status()
+    logo = """██╗   ██╗██╗   ██╗██████╗
+██║   ██║██║   ██║██╔══██╗
+██║   ██║██║   ██║██████╔╝
+██║   ██║╚██╗ ██╔╝██╔══██╗
+╚██████╔╝ ╚████╔╝ ██████╔╝
+ ╚═════╝   ╚═══╝  ╚═════╝"""
+    c.print(Panel.fit(
+        f"[bold bright_cyan]{logo}[/]\n\n"
+        "[bold white]URBAN VISION BENCHMARK[/]  [dim]// local research workspace[/]",
+        border_style="bright_blue", padding=(1, 4),
+    ))
+    c.print(
+        f"  [dim]branch[/] [bold cyan]{branch}[/]   [dim]commit[/] [bold white]{commit}[/]   "
+        f"[dim]python[/] [bold white]{Path(sys.executable).name}[/]   [dim]platform[/] [bold white]{platform.system()}[/]\n"
+    )
 
 
 def header() -> None:
+    """Print the header directly (used outside the navigation loop)."""
     branch, commit = repo_status()
     logo = """██╗   ██╗██╗   ██╗██████╗
 ██║   ██║██║   ██║██╔══██╗
@@ -134,10 +199,21 @@ def header() -> None:
         print(f"repo={ROOT.name} branch={branch} commit={commit} python={sys.executable} os={platform.system()}")
 
 
-
 def clear_screen() -> None:
-    sys.stdout.write("\033[H\033[2J")
+    sys.stdout.write("\033[H\033[J")
     sys.stdout.flush()
+
+
+@contextlib.contextmanager
+def fullscreen_tui():
+    """Enter alternate screen buffer and hide cursor for a glitch-free TUI."""
+    sys.stdout.write("\033[?1049h\033[?25l")
+    sys.stdout.flush()
+    try:
+        yield
+    finally:
+        sys.stdout.write("\033[?1049l\033[?25h")
+        sys.stdout.flush()
 
 
 def read_key() -> str:
@@ -183,74 +259,88 @@ def tool_badges(tool: Tool) -> str:
 
 
 def navigation_menu(title: str, subtitle: str, options: Sequence[tuple[str, str, str]], *, allow_search: bool = False, allow_quit: bool = False) -> tuple[str, int | None]:
-    """Return (action, selected index); keyboard controls are shown on screen."""
-    selected = 0
-    while True:
-        clear_screen()
-        header()
-        
-        controls = "↑/↓ move   Enter select   Esc back"
-        if allow_search:
-            controls += "   / search"
-        if allow_quit:
-            controls += "   q quit"
+    """Return (action, selected index); keyboard controls are shown on screen.
 
-        if RICH:
-            say(f" [dim]{subtitle}[/]\n")
-            table = Table(show_header=False, show_edge=False, box=None, padding=(0, 1, 0, 0))
-            table.add_column("Pointer", justify="right", style="bold bright_cyan", width=2)
-            table.add_column("Main")
-            
-            for index, (label, description, badge) in enumerate(options):
-                if index == selected:
-                    pointer = "▶"
-                    title_text = f"[bold bright_cyan]{label}[/]"
-                    desc_text = f"[white]{description}[/]"
-                    badge_text = f"[dim]{badge}[/]" if badge else ""
-                else:
-                    pointer = " "
-                    title_text = f"[white]{label}[/]"
-                    desc_text = f"[dim]{description}[/]"
-                    badge_text = f"[dim]{badge}[/]" if badge else ""
-                
-                row_main = f"{title_text}  {badge_text}\n  {desc_text}" if badge_text else f"{title_text}\n  {desc_text}"
-                table.add_row(pointer, row_main)
-                # Add spacing row
-                if index < len(options) - 1:
-                    table.add_row("", "")
-                    
-            CONSOLE.print(Panel(
-                table,
-                title=f"[bold white]{title}[/]",
-                title_align="left",
-                subtitle=f"[dim]{controls}[/]",
-                subtitle_align="left",
-                border_style="bright_black",
-                padding=(1, 2)
-            ))
-        else:
-            say(f"\n{title}")
-            say(subtitle)
-            say("")
-            for index, (label, description, badge) in enumerate(options):
-                pointer = "❯" if index == selected else " "
-                suffix = f"  [{badge}]" if badge else ""
-                say(f"{pointer} {label}{suffix}\n    {description}")
-            say(f"\n{controls}")
-            
-        key = read_key()
-        if key in {"UP", "k"}:
-            selected = (selected - 1) % len(options)
-        elif key in {"DOWN", "j"}:
-            selected = (selected + 1) % len(options)
-        elif key == "ENTER":
-            return "select", selected
-        elif allow_search and key == "/":
-            return "search", None
-        elif key in {"ESC", "BACK", "b"}:
-            return "quit" if allow_quit else "back", None
-        elif allow_quit and key == "q":
-            return "quit", None
+    Uses double-buffered rendering: each frame is rendered to a string
+    buffer in memory, then written to the terminal in a single write with
+    the cursor repositioned to home — no clear step, so zero flicker.
+    """
+    selected = 0
+
+    controls = "↑/↓ move   Enter select   Esc back"
+    if allow_search:
+        controls += "   / search"
+    if allow_quit:
+        controls += "   q quit"
+
+    with fullscreen_tui():
+        while True:
+            # --- build frame in memory ---
+            if RICH:
+                def _build(c: Console, *, _sel=selected, _opts=options, _title=title, _sub=subtitle, _ctrl=controls) -> None:
+                    _render_header(c)
+                    c.print(f" [dim]{_sub}[/]\n")
+
+                    table = Table(show_header=False, show_edge=False, box=None, padding=(0, 1, 0, 0))
+                    table.add_column("Pointer", justify="right", style="bold bright_cyan", width=2)
+                    table.add_column("Main")
+
+                    for idx, (label, description, badge) in enumerate(_opts):
+                        if idx == _sel:
+                            ptr = "▶"
+                            t_text = f"[bold bright_cyan]{label}[/]"
+                            d_text = f"[white]{description}[/]"
+                        else:
+                            ptr = " "
+                            t_text = f"[white]{label}[/]"
+                            d_text = f"[dim]{description}[/]"
+                        b_text = f"  [dim]{badge}[/]" if badge else ""
+                        row = f"{t_text}{b_text}\n  {d_text}"
+                        table.add_row(ptr, row)
+                        if idx < len(_opts) - 1:
+                            table.add_row("", "")
+
+                    c.print(Panel(
+                        table,
+                        title=f"[bold white]{_title}[/]",
+                        title_align="left",
+                        subtitle=f"[dim]{_ctrl}[/]",
+                        subtitle_align="left",
+                        border_style="bright_black",
+                        padding=(1, 2),
+                    ))
+
+                frame = _render_to_string(_build)
+            else:
+                lines: list[str] = []
+                lines.append(f"\n{title}")
+                lines.append(subtitle)
+                lines.append("")
+                for idx, (label, description, badge) in enumerate(options):
+                    pointer = "❯" if idx == selected else " "
+                    suffix = f"  [{badge}]" if badge else ""
+                    lines.append(f"{pointer} {label}{suffix}")
+                    lines.append(f"    {description}")
+                lines.append(f"\n{controls}")
+                frame = "\n".join(lines) + "\n"
+
+            # --- paint the frame in one shot ---
+            _paint(frame)
+
+            # --- wait for input ---
+            key = read_key()
+            if key in {"UP", "k"}:
+                selected = (selected - 1) % len(options)
+            elif key in {"DOWN", "j"}:
+                selected = (selected + 1) % len(options)
+            elif key == "ENTER":
+                return "select", selected
+            elif allow_search and key == "/":
+                return "search", None
+            elif key in {"ESC", "BACK", "b"}:
+                return "quit" if allow_quit else "back", None
+            elif allow_quit and key == "q":
+                return "quit", None
 
 
 def command_for(tool: Tool, port: int | None = None) -> list[str]:

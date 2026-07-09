@@ -567,17 +567,17 @@ pip install git+https://github.com/facebookresearch/sam3.git
 
 | Concept | Location |
 |---------|----------|
-| Model registry | `Scripts/PromptDetect/backend.py` — `MODELS` dict |
-| SAM 3 / 3.1 engine | `Scripts/PromptDetect/backend.py` — `Sam3NativeEngine` |
-| Cosmos engine | `Scripts/PromptDetect/backend.py` — `CosmosReason2Engine` |
-| LocateAnything engine | `Scripts/PromptDetect/backend.py` — `LocateAnythingEngine` |
-| LocateAnything worker (4.57 env) | `Scripts/PromptDetect/la_worker.py` |
-| Worker env helpers | `Scripts/PromptDetect/backend.py` — `_find_env_python`, `_free_port`, `_la_should_run_inprocess` |
-| JSON box parser (Cosmos) | `Scripts/PromptDetect/backend.py` — `_parse_json_boxes` |
-| Box-token parser (LocateAnything) | `Scripts/PromptDetect/backend.py` — `_parse_box_tokens` |
-| transformers 4.57 shims (LocateAnything) | `Scripts/PromptDetect/backend.py` — `_shim_la_attn_impl`, `_patch_la_rope_config` |
-| Box normalisation | `Scripts/PromptDetect/backend.py` — `_normalise_box` |
-| Detection filtering | `Scripts/PromptDetect/utils.py` — `filter_detections` |
-| Visualisation | `Scripts/PromptDetect/utils.py` — `draw_detections` |
-| Gradio UI | `Scripts/PromptDetect/app.py` |
+| Model registry | `Scripts/Other-Scripts/PromptDetect/backend.py` — `MODELS` dict |
+| SAM 3 / 3.1 engine | `Scripts/Other-Scripts/PromptDetect/backend.py` — `Sam3NativeEngine` |
+| Cosmos engine | `Scripts/Other-Scripts/PromptDetect/backend.py` — `CosmosReason2Engine` |
+| LocateAnything engine | `Scripts/Other-Scripts/PromptDetect/backend.py` — `LocateAnythingEngine` |
+| LocateAnything worker (4.57 env) | `Scripts/Other-Scripts/PromptDetect/la_worker.py` |
+| Worker env helpers | `Scripts/Other-Scripts/PromptDetect/backend.py` — `_find_env_python`, `_free_port`, `_la_should_run_inprocess` |
+| JSON box parser (Cosmos) | `Scripts/Other-Scripts/PromptDetect/backend.py` — `_parse_json_boxes` |
+| Box-token parser (LocateAnything) | `Scripts/Other-Scripts/PromptDetect/backend.py` — `_parse_box_tokens` |
+| transformers 4.57 shims (LocateAnything) | `Scripts/Other-Scripts/PromptDetect/backend.py` — `_shim_la_attn_impl`, `_patch_la_rope_config` |
+| Box normalisation | `Scripts/Other-Scripts/PromptDetect/backend.py` — `_normalise_box` |
+| Detection filtering | `Scripts/Other-Scripts/PromptDetect/utils.py` — `filter_detections` |
+| Visualisation | `Scripts/Other-Scripts/PromptDetect/utils.py` — `draw_detections` |
+| Gradio UI | `Scripts/Other-Scripts/PromptDetect/app.py` |
 | LocateAnything env | `Requirements/requirements-locate-anything.txt` + `Requirements/CondaEnvironments/environment-mtsd-la.yml` |
