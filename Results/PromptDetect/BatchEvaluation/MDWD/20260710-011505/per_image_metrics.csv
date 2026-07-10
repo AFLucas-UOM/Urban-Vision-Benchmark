@@ -1,0 +1,21 @@
+model,prompt,image_id,n_gt,n_pred,tp,fp,fn,duplicates,precision,recall,f1,accuracy
+SAM 3.1,garbage bag,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,3,4,3,1,0,1,0.75,1.0,0.8571,0.75
+SAM 3.1,garbage bag,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,3,3,3,0,0,0,1.0,1.0,1.0,1.0
+SAM 3.1,garbage bag,20241213_082745_jpg.rf.96486ae40adc356b948caf5f75b61f88.jpg,1,1,1,0,0,0,1.0,1.0,1.0,1.0
+SAM 3.1,garbage bag,20241214_075842_jpg.rf.1891b8867310eeface2f0bc74a0dc490.jpg,1,1,1,0,0,0,1.0,1.0,1.0,1.0
+SAM 3.1,garbage bag,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,3,3,3,0,0,0,1.0,1.0,1.0,1.0
+SAM 3.1,garbage bag,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,4,5,4,1,0,0,0.8,1.0,0.8889,0.8
+SAM 3.1,garbage bag,20241214_080238_jpg.rf.d135463be32b902dab5265e4564ae485.jpg,1,1,1,0,0,0,1.0,1.0,1.0,1.0
+SAM 3.1,garbage bag,20241214_080317_jpg.rf.17f03c2e6a52857573a93ef9530fa3ab.jpg,3,2,2,0,1,0,1.0,0.6667,0.8,0.6667
+SAM 3.1,garbage bag,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,2,2,2,0,0,0,1.0,1.0,1.0,1.0
+SAM 3.1,garbage bag,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,2,2,2,0,0,0,1.0,1.0,1.0,1.0
+Cosmos Reason2 2B,garbage bag,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,3,0,0,0,3,0,0.0,0.0,0.0,0.0
+Cosmos Reason2 2B,garbage bag,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,3,3,3,0,0,0,1.0,1.0,1.0,1.0
+Cosmos Reason2 2B,garbage bag,20241213_082745_jpg.rf.96486ae40adc356b948caf5f75b61f88.jpg,1,0,0,0,1,0,0.0,0.0,0.0,0.0
+Cosmos Reason2 2B,garbage bag,20241214_075842_jpg.rf.1891b8867310eeface2f0bc74a0dc490.jpg,1,0,0,0,1,0,0.0,0.0,0.0,0.0
+Cosmos Reason2 2B,garbage bag,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,3,0,0,0,3,0,0.0,0.0,0.0,0.0
+Cosmos Reason2 2B,garbage bag,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,4,4,4,0,0,0,1.0,1.0,1.0,1.0
+Cosmos Reason2 2B,garbage bag,20241214_080238_jpg.rf.d135463be32b902dab5265e4564ae485.jpg,1,1,1,0,0,0,1.0,1.0,1.0,1.0
+Cosmos Reason2 2B,garbage bag,20241214_080317_jpg.rf.17f03c2e6a52857573a93ef9530fa3ab.jpg,3,0,0,0,3,0,0.0,0.0,0.0,0.0
+Cosmos Reason2 2B,garbage bag,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,2,0,0,0,2,0,0.0,0.0,0.0,0.0
+Cosmos Reason2 2B,garbage bag,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,2,0,0,0,2,0,0.0,0.0,0.0,0.0
