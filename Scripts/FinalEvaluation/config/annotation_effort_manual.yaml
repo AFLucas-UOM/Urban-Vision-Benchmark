@@ -1,0 +1,28 @@
+# Manual effort values that cannot be recovered from the repository.
+# Edit by hand; leave a value as null when it was not recorded - the report
+# renders nulls as "not recorded" and NEVER estimates or fabricates them.
+#
+# Units: hours are decimal hours; costs are EUR.
+
+MDWD:
+  annotation_hours: null
+  qa_hours: null
+  annotator_count: null
+  annotation_cost_eur: null
+  notes: ""
+
+MTSD:
+  annotation_hours: null
+  qa_hours: null
+  annotator_count: null
+  annotation_cost_eur: null
+  notes: ""
+
+PromptDetect:
+  prompt_design_hours: null
+  manual_review_hours: null
+  notes: ""
+
+AttributeClassification:
+  labelling_hours: null   # attribute labelling effort beyond box annotation, if tracked separately
+  notes: ""

@@ -144,6 +144,38 @@
       "training": false,
       "description": "MDWD split-leakage sensitivity report (audit-only by default; pass -Args '--run-inference --models best-per-family' to re-evaluate checkpoints on leakage-clean valid/test subsets)."
     },
+    "Robustness-Slices": {
+      "type": "python",
+      "path": "Scripts/FinalEvaluation/robustness_slice_analysis.py",
+      "env": "MDWD",
+      "defaultArgs": ["--dry-run"],
+      "training": false,
+      "description": "Robustness slice analysis over stored predictions (no inference). Default is a dry-run; drop --dry-run via -Args to write the timestamped report + figures."
+    },
+    "Annotation-Effort": {
+      "type": "python",
+      "path": "Scripts/FinalEvaluation/annotation_effort_report.py",
+      "env": "MDWD",
+      "defaultArgs": ["--dry-run", "--skip-disk-size"],
+      "training": false,
+      "description": "Annotation/training/operational effort report (read-only sources; manual hours from config/annotation_effort_manual.yaml). Default is a dry-run."
+    },
+    "Bootstrap-Uncertainty": {
+      "type": "python",
+      "path": "Scripts/FinalEvaluation/bootstrap_uncertainty.py",
+      "env": "MDWD",
+      "defaultArgs": ["--dry-run"],
+      "training": false,
+      "description": "Bootstrap CIs / paired comparisons over stored sample-level outcomes (no inference). Default is a dry-run."
+    },
+    "Dissertation-Dashboard": {
+      "type": "python",
+      "path": "Scripts/FinalEvaluation/build_dissertation_dashboard.py",
+      "env": "MDWD",
+      "defaultArgs": [],
+      "training": false,
+      "description": "Builds the static offline dissertation evidence dashboard (viewer only - never trains or runs inference)."
+    },
     "Failure-Case-Sampler": {
       "type": "python",
       "path": "Scripts/FinalEvaluation/failure_case_sampler.py",

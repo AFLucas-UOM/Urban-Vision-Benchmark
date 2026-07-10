@@ -303,6 +303,51 @@ cause any image to be dropped by Ultralytics' training loader.
   to one P/R point (compare on F1); box-based scoring only (no mask GT); SAM 3/3.1
   weights are gated on HF and download on first load.
 
+## 5a. Dissertation evidence tooling (Scripts/FinalEvaluation, 2026-07-10)
+
+**Status: implemented, self-tested, executed against current evidence.** Four
+publication-oriented, read-only tools plus a shared helper library
+(`evidence_lib.py`), documented in
+[`Scripts/FinalEvaluation/README.md`](Scripts/FinalEvaluation/README.md) and
+registered in the workflow runner + `launch_uvb.py`:
+
+- **`robustness_slice_analysis.py`** — per-slice performance from **stored**
+  predictions only (never runs models): MDWD detection sliced by COCO object
+  size, brightness/contrast/sharpness terciles (dataset-derived thresholds,
+  recorded in the output config), density, position, class, class frequency;
+  MTSD attribute per-head/per-class results (historical GRP-1..3 label);
+  PromptDetect model x prompt slices (pilot label). MTSD detection and
+  image-property attribute slices correctly report as pending with the command
+  that produces their inputs. Slices below `--min-support` are kept but marked
+  `insufficient_support` and never plotted. Outputs:
+  `Documents/Final-Reports/Robustness-Slices/<ts>/` + figures (PNG/PDF/SVG).
+- **`annotation_effort_report.py`** — dataset/annotation/QA/training/
+  operational effort per paradigm from existing artefacts; manual hours only
+  from `config/annotation_effort_manual.yaml` (currently all *not recorded* —
+  fill in when known); paradigm comparison table with raw dimensions and
+  deliberately **no composite score**. Outputs:
+  `Documents/Final-Reports/Annotation-Effort/<ts>/`.
+- **`bootstrap_uncertainty.py`** — seeded percentile-bootstrap CIs (default
+  2,000 resamples) and paired comparisons: image-level for MDWD detection
+  (stored leakage-analysis predictions) and PromptDetect (pilot label);
+  test-crop level for attribute heads (samples reconstructed exactly from the
+  stored confusion matrices, documented iid assumption). Paired variant
+  comparisons / cross-head CIs / detection mAP intervals are correctly pending
+  (need per-sample dumps). Outputs:
+  `Documents/Final-Reports/Statistical-Uncertainty/<ts>/`.
+- **`build_dissertation_dashboard.py`** — static offline HTML evidence
+  dashboard (no server, CDN, or telemetry): research-question matrix from
+  `config/research_questions.yaml`, dataset/integrity/leakage status,
+  experiment cards with status badges and headline-use permissions, final
+  tables, figure gallery, robustness/uncertainty/effort views, PromptDetect
+  failure-case gallery with filters, auto-generated limitations, and
+  `data/evidence_index.json` provenance. Missing evidence renders PENDING.
+  `--overwrite` maintains `Documents/Final-Reports/Dissertation-Dashboard/latest/`.
+
+All four have `--self-test` (deterministic, synthetic fixtures) and
+`--dry-run`; the repository health check verifies the scripts/configs and that
+dashboard evidence references stay repo-relative.
+
 ## 6. gradio_compare status
 
 Side-by-side inference of attribute-classification checkpoints on one uploaded
@@ -414,6 +459,11 @@ human glance at the running UI (not launched here).
 - [x] MDWD split-leakage sensitivity analysis (2026-07-09): 30 leaked sources
       independently re-confirmed, clean-subset re-evaluation shows negligible
       effect (max Δ 0.48pp) — see `Documents/MDWDLeakageSensitivity.md`
+- [x] Dissertation evidence tooling (2026-07-10, see §5a): robustness slice
+      analysis, annotation/operational effort report, bootstrap uncertainty,
+      and the static offline evidence dashboard — all read-only over stored
+      evidence, self-tested, registered in the launcher/workflow runner and
+      covered by the repository health check
 
 ## 12. What is still pending ⏳
 

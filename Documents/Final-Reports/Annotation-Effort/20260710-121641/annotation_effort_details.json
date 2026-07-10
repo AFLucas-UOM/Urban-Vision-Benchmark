@@ -1,0 +1,537 @@
+{
+  "generated_at": "2026-07-10T12:16:41",
+  "commit_sha": "15853d305771fa09ee1c241e3a58f563c123f54d",
+  "generator": "Scripts/FinalEvaluation/annotation_effort_report.py",
+  "mdwd": {
+    "dataset": "MDWD",
+    "source_files": [
+      "Documents/MDWD-EDA/eda_summary.json",
+      "Documents/Final-Reports/MDWD-Leakage-Analysis/metric_comparison.json"
+    ],
+    "raw_images": 30225,
+    "annotated_images": 30225,
+    "unannotated_images": 0,
+    "unique_source_images": 3598,
+    "boxes": 211512,
+    "classes": 5,
+    "auxiliary_attributes": 0,
+    "integrity_findings": {
+      "out_of_range_box": 15,
+      "empty_annotation": 5,
+      "source_in_multiple_splits": 30
+    },
+    "per_split": {
+      "train": {
+        "images": 29487,
+        "boxes": 209334
+      },
+      "valid": {
+        "images": 369,
+        "boxes": 1072
+      },
+      "test": {
+        "images": 369,
+        "boxes": 1106
+      }
+    },
+    "leakage_affected_eval_images": 33,
+    "leaked_source_identities": 30,
+    "disk_size_gb": 5.52
+  },
+  "mtsd": {
+    "dataset": "MTSD",
+    "source_files": [
+      "Datasets/MTSD/Annotations/GRP-1/Final-QA/QA-GRP1.json",
+      "Datasets/MTSD/Annotations/GRP-2/Final-QA/QA-GRP2.json",
+      "Datasets/MTSD/Annotations/GRP-3/Final-QA/QA-GRP3.json",
+      "Datasets/MTSD/Annotations/GRP-5/Final-QA/QA-GRP5.json",
+      "Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-20260709-201340/audit_summary.json"
+    ],
+    "raw_images": 4683,
+    "annotated_images": 2628,
+    "unannotated_images": 2055,
+    "boxes": 7266,
+    "attribute_labelled_boxes": 7266,
+    "classes": 12,
+    "auxiliary_attributes": 4,
+    "qa_approved_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-5"
+    ],
+    "excluded_groups": [
+      "GRP-4",
+      "GRP-6",
+      "GRP-7"
+    ],
+    "qa_audit": {
+      "audit": "audit-20260709-201340",
+      "missing_attribute_findings": 0,
+      "invalid_attribute_findings": 5,
+      "duplicate_pair_findings": 5,
+      "reference_problem_findings": 0
+    },
+    "confirmed_corrections": 3,
+    "disk_size_gb": 20.99
+  },
+  "detection": {
+    "paradigm": "MDWD supervised detection",
+    "runs": [
+      {
+        "suite": "YOLO11-EUVIP",
+        "model": "yolo11n",
+        "run_name": "E001_yolo11n_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 2590815,
+        "model_size_mb": 5.22,
+        "training_seconds": 10402.89,
+        "val_inference_ms": 1.4703723577181742,
+        "test_inference_ms": 1.1065593495980621,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO11-EUVIP/E001_yolo11n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO11-EUVIP",
+        "model": "yolo11s",
+        "run_name": "E002_yolo11s_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 9429727,
+        "model_size_mb": 18.29,
+        "training_seconds": 10635.52,
+        "val_inference_ms": 2.191731978301606,
+        "test_inference_ms": 2.1376999999923525,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO11-EUVIP/E002_yolo11s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO11-EUVIP",
+        "model": "yolo11m",
+        "run_name": "E003_yolo11m_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 20056863,
+        "model_size_mb": 38.64,
+        "training_seconds": 12053.98,
+        "val_inference_ms": 3.6567655826734535,
+        "test_inference_ms": 3.639014905151724,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO11-EUVIP/E003_yolo11m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO11-EUVIP",
+        "model": "yolo11l",
+        "run_name": "E004_yolo11l_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 25314335,
+        "model_size_mb": 48.83,
+        "training_seconds": 17753.24,
+        "val_inference_ms": 4.579085907844421,
+        "test_inference_ms": 4.713532249347009,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO11-EUVIP/E004_yolo11l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO12-EUVIP",
+        "model": "yolo12n",
+        "run_name": "E001_yolo12n_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 2569023,
+        "model_size_mb": 5.26,
+        "training_seconds": 12103.25,
+        "val_inference_ms": 2.1182322498602755,
+        "test_inference_ms": 2.0487837400035,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO12-EUVIP/E001_yolo12n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO12-EUVIP",
+        "model": "yolo12s",
+        "run_name": "E002_yolo12s_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 9255071,
+        "model_size_mb": 18.06,
+        "training_seconds": 15215.0,
+        "val_inference_ms": 3.05508536622332,
+        "test_inference_ms": 2.6344967448230845,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO12-EUVIP/E002_yolo12s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO12-EUVIP",
+        "model": "yolo12m",
+        "run_name": "E003_yolo12m_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 20141343,
+        "model_size_mb": 38.88,
+        "training_seconds": 17051.21,
+        "val_inference_ms": 5.253148780504149,
+        "test_inference_ms": 5.01073495936274,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO12-EUVIP/E003_yolo12m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO26-DGX",
+        "model": "yolo26n",
+        "run_name": "E001_yolo26n_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 2505750,
+        "model_size_mb": 5.14,
+        "training_seconds": 9188.58,
+        "val_inference_ms": 3.4520835853642,
+        "test_inference_ms": 3.0685505772529735,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO26-DGX/E001_yolo26n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO26-DGX",
+        "model": "yolo26s",
+        "run_name": "E002_yolo26s_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 9951734,
+        "model_size_mb": 19.38,
+        "training_seconds": 22959.41,
+        "val_inference_ms": 8.186924943118672,
+        "test_inference_ms": 8.07531673719032,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO26-DGX/E002_yolo26s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO26-DGX",
+        "model": "yolo26m",
+        "run_name": "E003_yolo26m_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 21780598,
+        "model_size_mb": 41.99,
+        "training_seconds": 46709.58,
+        "val_inference_ms": 13.51098994851279,
+        "test_inference_ms": 15.04252795400546,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO26-DGX/E003_yolo26m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO26-DGX",
+        "model": "yolo26l",
+        "run_name": "E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 26184054,
+        "model_size_mb": 50.54,
+        "training_seconds": 90351.43,
+        "val_inference_ms": 17.25308737945667,
+        "test_inference_ms": 16.867737590633762,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO26-DGX/E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO26-EUVIP",
+        "model": "yolo26n",
+        "run_name": "E001_yolo26n_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 2505750,
+        "model_size_mb": 5.14,
+        "training_seconds": 10687.15,
+        "val_inference_ms": 1.4199146352264131,
+        "test_inference_ms": 1.5538986431571042,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO26-EUVIP/E001_yolo26n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO26-EUVIP",
+        "model": "yolo26s",
+        "run_name": "E002_yolo26s_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 9951734,
+        "model_size_mb": 19.38,
+        "training_seconds": 18632.86,
+        "val_inference_ms": 2.5447943086324507,
+        "test_inference_ms": 2.603901628414951,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO26-EUVIP/E002_yolo26s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO26-EUVIP",
+        "model": "yolo26m",
+        "run_name": "E003_yolo26m_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 21780598,
+        "model_size_mb": 42.0,
+        "training_seconds": 18368.08,
+        "val_inference_ms": 3.835848238581645,
+        "test_inference_ms": 3.7139577230786887,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO26-EUVIP/E003_yolo26m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      },
+      {
+        "suite": "YOLO26-EUVIP",
+        "model": "yolo26l",
+        "run_name": "E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001",
+        "parameters": 26184054,
+        "model_size_mb": 50.54,
+        "training_seconds": 26600.16,
+        "val_inference_ms": 4.69017533842868,
+        "test_inference_ms": 4.807777779787617,
+        "epochs": 100,
+        "batch_size": 32,
+        "status": "final",
+        "source_file": "Results/MDWD-Runs/YOLO26-EUVIP/E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+      }
+    ],
+    "source_files": [
+      "Results/MDWD-Runs/YOLO11-EUVIP/E001_yolo11n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO11-EUVIP/E002_yolo11s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO11-EUVIP/E003_yolo11m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO11-EUVIP/E004_yolo11l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO12-EUVIP/E001_yolo12n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO12-EUVIP/E002_yolo12s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO12-EUVIP/E003_yolo12m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO26-DGX/E001_yolo26n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO26-DGX/E002_yolo26s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO26-DGX/E003_yolo26m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO26-DGX/E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO26-EUVIP/E001_yolo26n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO26-EUVIP/E002_yolo26s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO26-EUVIP/E003_yolo26m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json",
+      "Results/MDWD-Runs/YOLO26-EUVIP/E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json"
+    ],
+    "completed_runs": 15,
+    "historical_runs": 1,
+    "rfdetr_runs": 1,
+    "rfdetr_note": "RF-DETR nano has a checkpoint/log but no normalised summary - excluded from headline tables",
+    "peak_gpu_memory": "not recorded",
+    "hardware": "RTX 4090 (EUVIP suites) / DGX (YOLO26-DGX suite)"
+  },
+  "attributes": {
+    "paradigm": "MTSD attribute classification",
+    "variants": [
+      {
+        "variant": "dinov3",
+        "adaptation": "frozen",
+        "run_id": "dinov3-20260704-010441",
+        "total_params": "85670413",
+        "trainable_params": "9997",
+        "trainable_pct": "0.0117",
+        "best_epoch": "17",
+        "stopped_epoch": "22",
+        "mean_macro_f1": "0.7826",
+        "status": "historical snapshot"
+      },
+      {
+        "variant": "dinov3_lora",
+        "adaptation": "lora",
+        "run_id": "dinov3_lora-20260704-020900",
+        "total_params": "85965325",
+        "trainable_params": "304909",
+        "trainable_pct": "0.3547",
+        "best_epoch": "16",
+        "stopped_epoch": "22",
+        "mean_macro_f1": "0.8734",
+        "status": "historical snapshot"
+      },
+      {
+        "variant": "vjepa",
+        "adaptation": "frozen",
+        "run_id": "vjepa-20260704-011610",
+        "total_params": "304694285",
+        "trainable_params": "13325",
+        "trainable_pct": "0.0044",
+        "best_epoch": "19",
+        "stopped_epoch": "29",
+        "mean_macro_f1": "0.7699",
+        "status": "historical snapshot"
+      },
+      {
+        "variant": "vjepa_lora",
+        "adaptation": "lora",
+        "run_id": "vjepa_lora-20260704-022043",
+        "total_params": "305480717",
+        "trainable_params": "799757",
+        "trainable_pct": "0.2618",
+        "best_epoch": "8",
+        "stopped_epoch": "18",
+        "mean_macro_f1": "0.8400",
+        "status": "historical snapshot"
+      },
+      {
+        "variant": "convnext_frozen",
+        "adaptation": "frozen",
+        "run_id": "convnext_frozen-20260704-013448",
+        "total_params": "27828589",
+        "trainable_params": "9997",
+        "trainable_pct": "0.0359",
+        "best_epoch": "37",
+        "stopped_epoch": "47",
+        "mean_macro_f1": "0.7629",
+        "status": "historical snapshot"
+      },
+      {
+        "variant": "convnext",
+        "adaptation": "finetune",
+        "run_id": "convnext-20260704-015608",
+        "total_params": "27828589",
+        "trainable_params": "27828589",
+        "trainable_pct": "100.0",
+        "best_epoch": "21",
+        "stopped_epoch": "25",
+        "mean_macro_f1": "0.8641",
+        "status": "historical snapshot"
+      }
+    ],
+    "source_files": [
+      "Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv",
+      "Scripts/MTSD-Scripts/AttributeClassification/outputs/manifests/manifest.json"
+    ],
+    "completed_runs": 6,
+    "smoke_runs": 6,
+    "manifest": {
+      "updated_at": "2026-07-04T00:20:43+00:00",
+      "seed": 42,
+      "split_fractions": {
+        "train": 0.8,
+        "val": 0.1,
+        "test": 0.1
+      },
+      "n_crops": "not recorded"
+    },
+    "training_duration": "not recorded"
+  },
+  "promptdetect": {
+    "paradigm": "PromptDetect (prompt-based)",
+    "runs": [
+      {
+        "run": "MDWD/20260709-234655",
+        "dataset": "MDWD",
+        "split": "test",
+        "n_images": 5,
+        "n_gt_boxes": 11,
+        "prompts": 6,
+        "models": 2,
+        "prompt_model_combinations": 12,
+        "status": "pilot",
+        "source_file": "Results/PromptDetect/BatchEvaluation/MDWD/20260709-234655/run_config.json"
+      },
+      {
+        "run": "MDWD/20260710-011505",
+        "dataset": "MDWD",
+        "split": "test",
+        "n_images": 10,
+        "n_gt_boxes": 23,
+        "prompts": 1,
+        "models": 2,
+        "prompt_model_combinations": 2,
+        "status": "pilot",
+        "source_file": "Results/PromptDetect/BatchEvaluation/MDWD/20260710-011505/run_config.json"
+      }
+    ],
+    "model_facts": [
+      {
+        "model": "SAM 3",
+        "provides_confidence": true,
+        "gated_weights": true,
+        "separate_env": false,
+        "prompt_engineering": "text prompt per concept",
+        "retraining_required": false
+      },
+      {
+        "model": "SAM 3.1",
+        "provides_confidence": true,
+        "gated_weights": true,
+        "separate_env": false,
+        "prompt_engineering": "text prompt per concept",
+        "retraining_required": false
+      },
+      {
+        "model": "Cosmos Reason2 2B",
+        "provides_confidence": false,
+        "gated_weights": false,
+        "separate_env": false,
+        "prompt_engineering": "grounding prompt (JSON bbox reply)",
+        "retraining_required": false
+      },
+      {
+        "model": "Cosmos Reason2 8B",
+        "provides_confidence": false,
+        "gated_weights": false,
+        "separate_env": false,
+        "prompt_engineering": "grounding prompt (JSON bbox reply)",
+        "retraining_required": false
+      },
+      {
+        "model": "Cosmos Reason2 32B",
+        "provides_confidence": false,
+        "gated_weights": false,
+        "separate_env": false,
+        "prompt_engineering": "grounding prompt; opt-in via --allow-heavy",
+        "retraining_required": false
+      },
+      {
+        "model": "LocateAnything 3B",
+        "provides_confidence": false,
+        "gated_weights": false,
+        "separate_env": true,
+        "prompt_engineering": "text prompt; runs in mtsd-la worker env",
+        "retraining_required": false
+      }
+    ],
+    "source_files": [
+      "Results/PromptDetect/BatchEvaluation/MDWD/20260709-234655/run_config.json",
+      "Results/PromptDetect/BatchEvaluation/MDWD/20260710-011505/run_config.json"
+    ],
+    "images_evaluated": 15,
+    "prompts_evaluated": 7
+  },
+  "efficiency": {
+    "status": "pending",
+    "note": "no inference-speed benchmark runs yet - run Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py; MDWD detection latency below comes from the training pipelines' own val timing instead"
+  },
+  "manual_values": {
+    "MDWD": {
+      "annotation_hours": null,
+      "qa_hours": null,
+      "annotator_count": null,
+      "annotation_cost_eur": null,
+      "notes": ""
+    },
+    "MTSD": {
+      "annotation_hours": null,
+      "qa_hours": null,
+      "annotator_count": null,
+      "annotation_cost_eur": null,
+      "notes": ""
+    },
+    "PromptDetect": {
+      "prompt_design_hours": null,
+      "manual_review_hours": null,
+      "notes": ""
+    },
+    "AttributeClassification": {
+      "labelling_hours": null,
+      "notes": ""
+    }
+  },
+  "missing_manual_values": [
+    "MDWD.annotation_hours",
+    "MDWD.qa_hours",
+    "MDWD.annotator_count",
+    "MDWD.annotation_cost_eur",
+    "MTSD.annotation_hours",
+    "MTSD.qa_hours",
+    "MTSD.annotator_count",
+    "MTSD.annotation_cost_eur",
+    "PromptDetect.prompt_design_hours",
+    "PromptDetect.manual_review_hours",
+    "AttributeClassification.labelling_hours"
+  ]
+}

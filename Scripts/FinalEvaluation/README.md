@@ -13,6 +13,11 @@ with respect to datasets, runs and previous results** — outputs go to
 | `mdwd_leakage_sensitivity.py` | independently measures the effect of MDWD cross-split augmented-source leakage | yes for the audit; `--run-inference` explicitly re-evaluates existing checkpoints without changing datasets |
 | `export_dissertation_tables.py` | consolidates existing result CSVs/JSONs into final tables | yes (reads results, writes timestamped tables; `--overwrite` opts into fixed names) |
 | `failure_case_sampler.py` | annotated FP/FN/duplicate/success image samples | yes, **unless** you pass `--model`, which explicitly opts into running one checkpoint over a small sample |
+| `robustness_slice_analysis.py` | per-slice performance (object size, brightness, blur, density, class, attributes, prompts) from **stored** predictions | yes (never runs models; pending inputs are reported, not recomputed) |
+| `annotation_effort_report.py` | dataset/annotation/QA/training/operational effort per paradigm | yes (reads existing artefacts; manual hours only from `config/annotation_effort_manual.yaml`, never estimated) |
+| `bootstrap_uncertainty.py` | seeded percentile-bootstrap CIs + paired comparisons over stored sample-level outcomes | yes (never runs inference; missing sample-level inputs -> pending report) |
+| `build_dissertation_dashboard.py` | static offline HTML evidence dashboard (viewer only) | yes (renders existing evidence; missing sections show PENDING) |
+| `evidence_lib.py` | shared read-only helpers for the four tools above (loaders, matching, bootstrap core, figure export) | library, no CLI |
 
 ## Dataset integrity
 
@@ -86,12 +91,96 @@ labels exist); select them manually from the FN/FP samples.
 
 If no prediction source exists the sampler says so and exits without writing.
 
+## Robustness slice analysis
+
+```bash
+python Scripts/FinalEvaluation/robustness_slice_analysis.py --self-test
+python Scripts/FinalEvaluation/robustness_slice_analysis.py --dry-run
+python Scripts/FinalEvaluation/robustness_slice_analysis.py                 # all available evidence
+python Scripts/FinalEvaluation/robustness_slice_analysis.py --dataset MDWD --task detection
+```
+
+Slices performance by object size (COCO thresholds, 640x640 evaluation
+pixels), brightness/contrast/sharpness (dataset-quantile terciles, recorded in
+`robustness_slice_config.json`), object density, object position, class and
+class frequency; MTSD attribute heads/classes (historical GRP-1..3 snapshot);
+PromptDetect model x prompt (pilot runs labelled as such). Inputs: the stored
+MDWD predictions from the leakage analysis, attribute `test_metrics.json`
+files, and PromptDetect batch runs — **no inference is ever run**; anything
+unavailable lands in `insufficient_or_missing_inputs.md` with the command that
+produces it. Slices under `--min-support` stay in the CSV marked
+`insufficient_support` and are never highlighted or plotted. Outputs:
+`Documents/Final-Reports/Robustness-Slices/<stamp>/` +
+`Documents/Final-Figures/Robustness-Slices/<stamp>/` (PNG/PDF/SVG);
+`--overwrite` targets `latest/` instead.
+
+## Annotation / operational effort
+
+```bash
+python Scripts/FinalEvaluation/annotation_effort_report.py --self-test
+python Scripts/FinalEvaluation/annotation_effort_report.py --dry-run --skip-disk-size
+python Scripts/FinalEvaluation/annotation_effort_report.py
+```
+
+Derives dataset/annotation/QA/training/prompt-evaluation facts from existing
+artefacts (EDA summary, QA JSONs, audit reports, `pipeline_complete.json`
+files, `comparison.csv`, run configs) and merges the hand-edited
+`config/annotation_effort_manual.yaml` (annotation hours, costs). Missing
+manual values are reported as *not recorded* — never estimated — and listed in
+`missing_manual_values.md`. Produces the paradigm-level
+`operational_comparison.csv` (raw dimensions only; deliberately **no composite
+score**). Outputs under `Documents/Final-Reports/Annotation-Effort/<stamp>/` +
+figures.
+
+## Bootstrap uncertainty
+
+```bash
+python Scripts/FinalEvaluation/bootstrap_uncertainty.py --self-test
+python Scripts/FinalEvaluation/bootstrap_uncertainty.py --dry-run
+python Scripts/FinalEvaluation/bootstrap_uncertainty.py
+python Scripts/FinalEvaluation/bootstrap_uncertainty.py --dataset MDWD `
+    --model-a yolo26l@YOLO26-EUVIP --model-b yolo12m@YOLO12-EUVIP
+```
+
+Seeded percentile bootstrap (default 2,000 resamples, 95% intervals) over
+stored sample-level outcomes: image-level for MDWD detection (stored
+leakage-analysis predictions) and PromptDetect runs; test-crop level for
+attribute heads (samples reconstructed exactly from the stored confusion
+matrices — the documented iid-crop assumption). Paired comparisons resample
+identical unit indices on both sides and report the CI of the difference plus
+the fraction of resamples favouring A; nothing is ever labelled
+"statistically significant". Cross-head attribute CIs, paired variant
+comparisons and detection mAP intervals need inputs that do not exist yet and
+are listed in `missing_inputs.md`. Outputs under
+`Documents/Final-Reports/Statistical-Uncertainty/<stamp>/` + figures.
+
+## Dissertation evidence dashboard
+
+```bash
+python Scripts/FinalEvaluation/build_dissertation_dashboard.py --self-test
+python Scripts/FinalEvaluation/build_dissertation_dashboard.py               # timestamped build
+python Scripts/FinalEvaluation/build_dissertation_dashboard.py --overwrite   # -> Dissertation-Dashboard/latest/
+```
+
+Static, fully offline HTML site (plain HTML/CSS/vanilla JS, no CDN, no
+telemetry, no backend) indexing all dissertation evidence: research-question
+matrix (`config/research_questions.yaml`), dataset/integrity/leakage status,
+experiment cards with status badges (final / historical snapshot / pilot /
+smoke test / pending / excluded) and headline-use permissions, final tables,
+figures, robustness slices, bootstrap CIs, effort comparison, existing
+failure-case galleries, auto-generated limitations, and a machine-readable
+`data/evidence_index.json` with per-item provenance (source file, generating
+script, commit SHA). Missing evidence renders as PENDING. All links are
+repository-relative — open `index.html` directly or via a local static server.
+
 ## What may run heavy work
 
 Nothing here trains. The only inference is `failure_case_sampler.py --model ...`
 (one checkpoint, ≤ `--max-images` images, explicit) and the explicit
 `mdwd_leakage_sensitivity.py --run-inference ...` re-evaluation of existing
-checkpoints. Run the tools via the workflow runner too: targets
+checkpoints. The robustness/bootstrap/effort/dashboard tools never load a
+model. Run the tools via the workflow runner too: targets
 `Final-Dataset-Integrity`, `MDWD-Leakage-Sensitivity`,
-`Export-Dissertation-Tables`, `Failure-Case-Sampler`, `Repo-Health-Check`
-(see [Scripts/Automation/README.md](../Automation/README.md)).
+`Export-Dissertation-Tables`, `Failure-Case-Sampler`, `Robustness-Slices`,
+`Annotation-Effort`, `Bootstrap-Uncertainty`, `Dissertation-Dashboard`,
+`Repo-Health-Check` (see [Scripts/Automation/README.md](../Automation/README.md)).
