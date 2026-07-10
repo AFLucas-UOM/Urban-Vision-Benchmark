@@ -1,0 +1,114 @@
+# Research questions and their evidence links for the dissertation dashboard.
+# Edit freely - the dashboard renders this file as the evidence matrix.
+#
+# status vocabulary (fixed): final | historical snapshot | pilot | smoke test |
+#                            pending | excluded
+# Never set a status to "final" just because a result file exists; the status
+# here is an explicit human decision.
+
+project:
+  title: "Computer Vision for Urban Waste and Infrastructure Monitoring in Malta"
+  degree: "MSc dissertation, University of Malta"
+  purpose: >
+    Compare classical supervised detectors, prompt-based foundation models and
+    representation-learning attribute classifiers for two municipal monitoring
+    tasks: kerbside domestic-waste detection (MDWD) and traffic-sign
+    condition assessment (MTSD).
+
+questions:
+  - id: RQ1
+    question: >
+      How do modern supervised detector families and model scales (YOLO11/12/26,
+      RF-DETR) compare on Maltese kerbside domestic-waste detection?
+    datasets: [MDWD]
+    experiments:
+      - "MDWD YOLO11/12/26 n-l benchmark suites (Results/MDWD-Runs, Results/MDWD-Results)"
+      - "RF-DETR nano run (excluded from headline tables until normalised)"
+    tables:
+      - "Documents/Final-Tables (mdwd_detection_results.csv)"
+    figures:
+      - "Documents/Final-Figures/Robustness-Slices (per-class / slice figures)"
+    status: final
+    limitations: >
+      RF-DETR is a single nano-scale run without a normalised summary; the
+      cross-family claim is YOLO-internal until that is fixed. Split leakage
+      was measured and found negligible (max 0.48 pp).
+
+  - id: RQ2
+    question: >
+      Can zero-shot, prompt-based foundation models (SAM 3/3.1, Cosmos Reason2,
+      LocateAnything) replace or complement supervised training for these
+      municipal detection tasks?
+    datasets: [MDWD, MTSD]
+    experiments:
+      - "PromptDetect batch evaluations (Results/PromptDetect/BatchEvaluation)"
+    tables:
+      - "Documents/Final-Tables (promptdetect_results.csv)"
+    figures:
+      - "PromptDetect run plots and GT-vs-prediction overlays"
+    status: pilot
+    limitations: >
+      Only pilot-scale MDWD runs exist (5-10 images, exploratory prompts); the
+      fixed-protocol MDWD and MTSD evaluations are pending. Cosmos and
+      LocateAnything emit no per-box confidence, so AP is not comparable across
+      models - compare on precision/recall/F1/matched IoU.
+
+  - id: RQ3
+    question: >
+      Which adaptation strategy (frozen linear probe, LoRA, full fine-tuning)
+      over which pretrained backbone (DINOv3, V-JEPA 2.1, ConvNeXt) best
+      supports multi-attribute traffic-sign condition assessment?
+    datasets: [MTSD]
+    experiments:
+      - "Six-variant attribute-classification round (AttributeClassification/outputs)"
+    tables:
+      - "Documents/Final-Tables (mtsd_attribute_results.csv)"
+    figures:
+      - "AttributeClassification/outputs/reports/comparison_macro_f1.png"
+      - "Documents/Final-Figures/Robustness-Slices (per-head / condition figures)"
+    status: historical snapshot
+    limitations: >
+      Valid for the recorded GRP-1..GRP-3 manifest snapshot only; a final-scope
+      round is deferred until the MTSD annotation scope is frozen. The
+      condition head is the weakest (class imbalance).
+
+  - id: RQ4
+    question: >
+      What are the operational trade-offs - annotation effort, training cost,
+      model size, latency, maintenance - between the supervised, prompt-based
+      and attribute-classification paradigms?
+    datasets: [MDWD, MTSD]
+    experiments:
+      - "Annotation-effort report (Documents/Final-Reports/Annotation-Effort)"
+      - "Inference-speed benchmark (pending)"
+    tables:
+      - "operational_comparison.csv (Annotation-Effort report)"
+      - "Documents/Final-Tables (model_efficiency_results.csv - pending)"
+    figures:
+      - "Documents/Final-Figures/Annotation-Effort"
+    status: pending
+    limitations: >
+      Manual annotation-hour values are not recorded; the inference-speed
+      benchmark has not been executed. Dimensions are reported raw - no
+      composite ranking is computed.
+
+  - id: RQ5
+    question: >
+      How reliable are the collected datasets and reported results - annotation
+      quality, integrity, split leakage and statistical uncertainty?
+    datasets: [MDWD, MTSD]
+    experiments:
+      - "Dataset integrity report (Documents/Final-Reports/dataset_integrity_report.md)"
+      - "MDWD leakage sensitivity analysis (Documents/Final-Reports/MDWD-Leakage-Analysis)"
+      - "MTSD annotation QA audits (Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs)"
+      - "Bootstrap uncertainty (Documents/Final-Reports/Statistical-Uncertainty)"
+    tables:
+      - "leaked_source_identities.csv, bootstrap_results.csv"
+    figures:
+      - "Documents/Final-Figures/Statistical-Uncertainty"
+    status: final
+    limitations: >
+      Bootstrap CIs currently cover stored MDWD detection predictions, the
+      historical attribute snapshot (reconstructed from confusion matrices)
+      and pilot PromptDetect runs; final-run uncertainty remains pending where
+      the underlying experiments are pending.

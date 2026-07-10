@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-07-10T12:03:57",
+  "generator": "Scripts/FinalEvaluation/robustness_slice_analysis.py",
+  "args": {
+    "dataset": "all",
+    "task": "auto",
+    "run": "latest",
+    "min_support": 15,
+    "bootstrap_samples": 0,
+    "seed": 42,
+    "working_conf": 0.25,
+    "output_dir": null,
+    "overwrite": false,
+    "dry_run": false,
+    "self_test": false
+  },
+  "resolved_thresholds": {
+    "MDWD/test": {
+      "brightness": {
+        "tercile_33": 136.27,
+        "tercile_67": 149.63
+      },
+      "contrast": {
+        "tercile_33": 41.85,
+        "tercile_67": 51.77
+      },
+      "sharpness": {
+        "tercile_33": 830.05,
+        "tercile_67": 1620.71
+      }
+    },
+    "MDWD/valid": {
+      "brightness": {
+        "tercile_33": 135.41,
+        "tercile_67": 149.18
+      },
+      "contrast": {
+        "tercile_33": 41.2,
+        "tercile_67": 50.5
+      },
+      "sharpness": {
+        "tercile_33": 816.49,
+        "tercile_67": 1641.45
+      }
+    },
+    "MDWD/notes": {
+      "object_size": "COCO-style thresholds (area < 32^2 small, < 96^2 medium) in resized 640x640 evaluation pixels",
+      "working_confidence": 0.25,
+      "iou_threshold": 0.5,
+      "matching": "class-aware greedy (PromptDetect batch_evaluation/metrics.py)"
+    },
+    "PromptDetect-MDWD/MDWD/20260710-011505": {
+      "brightness": {
+        "tercile_33": 165.46,
+        "tercile_67": 170.6
+      },
+      "contrast": {
+        "tercile_33": 31.1,
+        "tercile_67": 39.3
+      },
+      "sharpness": {
+        "tercile_33": 229.47,
+        "tercile_67": 718.45
+      }
+    }
+  },
+  "min_support_rule": "slices below --min-support are kept in the CSV/JSON but marked insufficient_support and excluded from figures/summary tables"
+}

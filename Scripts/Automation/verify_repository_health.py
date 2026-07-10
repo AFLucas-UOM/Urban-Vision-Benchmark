@@ -279,7 +279,45 @@ def run_checks() -> list[dict]:
             details.append(".env exists but is NOT git-ignored!")
     add("env_gitignored", status, details, ".env is git-ignored")
 
-    # 8. automation targets exist ------------------------------------------------
+    # 8. FinalEvaluation dissertation tooling -------------------------------------
+    # The analysis scripts, their config files, and - when a dashboard has been
+    # built - its evidence index: every referenced source must stay inside the
+    # repository and no machine-absolute path may be recorded.
+    details = []
+    required = [
+        "Scripts/FinalEvaluation/evidence_lib.py",
+        "Scripts/FinalEvaluation/robustness_slice_analysis.py",
+        "Scripts/FinalEvaluation/annotation_effort_report.py",
+        "Scripts/FinalEvaluation/bootstrap_uncertainty.py",
+        "Scripts/FinalEvaluation/build_dissertation_dashboard.py",
+        "Scripts/FinalEvaluation/config/annotation_effort_manual.yaml",
+        "Scripts/FinalEvaluation/config/research_questions.yaml",
+    ]
+    details += [f"missing: {f}" for f in required if not (ROOT / f).is_file()]
+    dash_root = ROOT / "Documents" / "Final-Reports" / "Dissertation-Dashboard"
+    indexes = sorted(dash_root.glob("*/data/evidence_index.json")) if dash_root.is_dir() else []
+    abs_path = re.compile(r"^([A-Za-z]:[\\/]|[\\/])")
+    if indexes:
+        newest = max(indexes, key=lambda p: p.stat().st_mtime)
+        try:
+            items = json.loads(newest.read_text(encoding="utf-8")).get("items", [])
+        except Exception as exc:
+            items = []
+            details.append(f"{newest.relative_to(ROOT)}: unreadable ({exc})")
+        for item in items:
+            source = str(item.get("source_file", ""))
+            if not source:
+                continue
+            if abs_path.match(source):
+                details.append(f"evidence_index absolute path: {source[:90]}")
+            elif not (ROOT / source).resolve().is_relative_to(ROOT):
+                details.append(f"evidence_index escapes repository: {source[:90]}")
+    add("finalevaluation_tooling", "FAIL" if any(d.startswith("missing:") for d in details)
+        else "WARN" if details else "PASS", details,
+        "FinalEvaluation analysis scripts + configs exist; dashboard evidence "
+        "references are repo-relative and stay inside the repository")
+
+    # 9. automation targets exist ------------------------------------------------
     registry_path = SCRIPT_DIR / "workflow_targets.json"
     missing = []
     if registry_path.exists():

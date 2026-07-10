@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T00:46:43",
+  "generated_at": "2026-07-10T12:17:33",
   "overall": "PASS",
   "checks": [
     {
@@ -29,7 +29,7 @@
     {
       "check": "python_compiles",
       "status": "PASS",
-      "description": "77 Python files compile",
+      "description": "83 Python files compile",
       "details": []
     },
     {
@@ -87,9 +87,15 @@
       "details": []
     },
     {
+      "check": "finalevaluation_tooling",
+      "status": "PASS",
+      "description": "FinalEvaluation analysis scripts + configs exist; dashboard evidence references are repo-relative and stay inside the repository",
+      "details": []
+    },
+    {
       "check": "automation_targets",
       "status": "PASS",
-      "description": "All 20 workflow-runner targets exist on disk",
+      "description": "All 24 workflow-runner targets exist on disk",
       "details": []
     }
   ]

@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-07-10T12:04:59",
+  "generator": "Scripts/FinalEvaluation/bootstrap_uncertainty.py",
+  "args": {
+    "dataset": "all",
+    "task": "auto",
+    "run": "latest",
+    "n_bootstrap": 2000,
+    "confidence_level": 0.95,
+    "seed": 42,
+    "model_a": "",
+    "model_b": "",
+    "prompt_a": "",
+    "prompt_b": "",
+    "working_conf": 0.25,
+    "output_dir": null,
+    "overwrite": false,
+    "dry_run": false,
+    "self_test": false
+  },
+  "interval_method": "percentile (BCa not implemented - percentile only, stated in every row)",
+  "resampling_units": {
+    "detection/PromptDetect": "image",
+    "attributes": "test crop (reconstructed from stored confusion matrices)"
+  },
+  "pairing": "paired comparisons resample identical unit indices for both sides",
+  "significance_policy": "no result is labelled 'statistically significant'; reports state whether the CI excludes zero and the proportion of resamples favouring A"
+}

@@ -249,6 +249,41 @@ standalone audit utilities.
 
 ---
 
+## Dissertation evidence tooling — [Scripts/FinalEvaluation/](Scripts/FinalEvaluation/README.md)
+
+Read-only analysis and reporting layer over the completed experiments (nothing
+here trains or silently runs inference):
+
+- `final_dataset_integrity_check.py` — MDWD + MTSD integrity sign-off report.
+- `mdwd_leakage_sensitivity.py` — the completed split-leakage sensitivity
+  analysis (effect measured negligible; see
+  [Documents/MDWDLeakageSensitivity.md](Documents/MDWDLeakageSensitivity.md)).
+- `export_dissertation_tables.py` / `failure_case_sampler.py` — final tables
+  and qualitative error samples.
+- `robustness_slice_analysis.py` — performance by object size, brightness,
+  blur, clutter, position, class, attribute head and prompt, computed from
+  **stored** predictions only; low-support slices are marked, never highlighted.
+- `annotation_effort_report.py` — dataset/annotation/QA/training/operational
+  effort per paradigm; human hours come only from
+  `config/annotation_effort_manual.yaml` (missing = *not recorded*, never
+  estimated); no composite ranking is produced.
+- `bootstrap_uncertainty.py` — seeded percentile-bootstrap confidence
+  intervals and paired model/prompt comparisons over stored sample-level
+  outcomes; pending experiments produce pending reports, not reruns.
+- `build_dissertation_dashboard.py` — static, fully offline HTML evidence
+  dashboard (research-question matrix, experiment status badges, tables,
+  figures, robustness, uncertainty, effort, failure cases, limitations, and a
+  machine-readable `data/evidence_index.json`); missing evidence renders as
+  PENDING. Build with `--overwrite` for the stable
+  `Documents/Final-Reports/Dissertation-Dashboard/latest/` path.
+
+Outputs go to timestamped folders under `Documents/Final-Reports/`,
+`Documents/Final-Figures/` and `Documents/Final-Tables/`; previous outputs are
+never overwritten by default. Pilot, smoke-test, historical-snapshot and final
+results stay explicitly labelled throughout.
+
+---
+
 ## Setup
 
 ### UVB launcher
