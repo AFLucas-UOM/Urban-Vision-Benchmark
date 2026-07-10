@@ -44,7 +44,7 @@ def parse_prompts(text: str, dry_run: bool) -> list[str]:
 
 def launch_run(dataset, split, prompts_text, light_selected, heavy_selected,
                allow_heavy, max_images, conf_threshold, iou_threshold,
-               save_visuals, dry_run, progress=gr.Progress()):
+               save_visualizations, dry_run, progress=gr.Progress()):
     prompts = parse_prompts(prompts_text, bool(dry_run))
     selected = list(light_selected or [])
     if heavy_selected:
@@ -78,13 +78,15 @@ def launch_run(dataset, split, prompts_text, light_selected, heavy_selected,
 
     run_dir, summary = run_evaluation(
         dataset, split, prompts, labels, max_images,
-        float(conf_threshold), float(iou_threshold), int(save_visuals), notify,
+        float(conf_threshold), float(iou_threshold),
+        len(load_ground_truth(dataset, split, max_images)["records"]) if save_visualizations else 0,
+        notify,
     )
     table = pd.DataFrame(summary["per_prompt_metrics"])
     files = "\n".join(f"- `{p}`" for p in sorted(str(x.name) for x in Path(run_dir).iterdir()))
-    info = (
-        f"**Run complete.** Results folder:\n\n`{run_dir}`\n\nFiles:\n{files}"
-    )
+    visual_note = (f"\n\nVisual comparisons (all evaluated images): `{run_dir / 'visualizations' / 'index.html'}`"
+                   if save_visualizations else "")
+    info = f"**Run complete.** Results folder:\n\n`{run_dir}`{visual_note}\n\nFiles:\n{files}"
     return info, table, str(run_dir)
 
 
@@ -113,7 +115,9 @@ def build_app():
                     info="Required when any heavy model is selected.")
                 with gr.Row():
                     max_images = gr.Number(label="Max images (0 = all)", value=25, precision=0)
-                    save_visuals = gr.Number(label="Visual samples per model", value=0, precision=0)
+                    save_visualizations = gr.Checkbox(
+                        label="Save visual comparisons (GT vs predictions)", value=False,
+                        info="Writes one side-by-side sheet for every evaluated image, model and prompt, plus visualizations/index.html.")
                 with gr.Row():
                     conf_threshold = gr.Slider(0.0, 1.0, value=config.CONF_THRESHOLD,
                                                step=0.05, label="Confidence threshold")
@@ -129,7 +133,7 @@ def build_app():
         run_btn.click(
             launch_run,
             inputs=[dataset, split, prompts_text, light_models, heavy_models, allow_heavy,
-                    max_images, conf_threshold, iou_threshold, save_visuals, dry_run],
+                    max_images, conf_threshold, iou_threshold, save_visualizations, dry_run],
             outputs=[info, table, run_dir_box],
         )
     return demo

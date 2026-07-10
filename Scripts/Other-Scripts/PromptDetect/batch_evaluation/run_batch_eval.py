@@ -6,7 +6,8 @@ SAM 3.1, Cosmos Reason2 variants, LocateAnything) over a dataset split, then
 scores the predictions against the ground-truth boxes with IoU matching:
 precision/recall/F1/accuracy, AP@50 and mAP@50:95, mean matched IoU, FP/FN
 and duplicate counts, per-prompt and per-model breakdowns, plus a
-prompt-vs-class confusion matrix and plots.
+prompt-vs-class confusion matrix, plots, and optional GT-vs-prediction
+comparison sheets with an HTML index.
 
 Safety:
 * models must be selected explicitly (``--models``); nothing runs by default;
@@ -126,42 +127,6 @@ def save_plots(run_dir: Path, prompt_rows: list[dict], confusion: dict, class_na
     return saved
 
 
-def save_visual_samples(run_dir: Path, gt: dict, predictions: list[dict],
-                        model_labels: list[str], prompts: list[str], n_samples: int) -> int:
-    from PIL import Image, ImageDraw
-
-    from prompt_runner import prediction_boxes
-
-    samples_dir = run_dir / "samples"
-    rendered = 0
-    for model in model_labels:
-        grouped = {}
-        for prompt in prompts:
-            for image_id, boxes in prediction_boxes(predictions, model, prompt).items():
-                grouped.setdefault(image_id, []).extend(boxes)
-        for record in gt["records"][:n_samples]:
-            try:
-                with Image.open(record["image_path"]) as img:
-                    canvas = img.convert("RGB")
-            except Exception:
-                continue
-            draw = ImageDraw.Draw(canvas)
-            line = max(2, canvas.width // 500)
-            for box in record["boxes"]:
-                draw.rectangle([box["x0"], box["y0"], box["x1"], box["y1"]],
-                               outline="#2a78d6", width=line)          # GT blue
-            for box in grouped.get(record["image_id"], []):
-                draw.rectangle([box["x0"], box["y0"], box["x1"], box["y1"]],
-                               outline="#e34948", width=line)          # predictions red
-            if canvas.width > 1280:
-                canvas = canvas.resize((1280, int(canvas.height * 1280 / canvas.width)))
-            out = samples_dir / config.model_slug(model) / f"{Path(record['image_id']).name}"
-            out.parent.mkdir(parents=True, exist_ok=True)
-            canvas.save(out.with_suffix(".jpg"), quality=88)
-            rendered += 1
-    return rendered
-
-
 def run_evaluation(
     dataset: str, split: str, prompts: list[str], model_labels: list[str],
     max_images: int | None, conf_threshold: float, iou_threshold: float,
@@ -181,6 +146,7 @@ def run_evaluation(
         "iou_threshold": iou_threshold, "map_iou_range": config.MAP_IOU_RANGE,
         "n_images": len(gt["records"]),
         "n_gt_boxes": sum(len(b) for b in gt_by_image.values()),
+        "save_visualizations": bool(save_visuals),
         "started_at": datetime.now().isoformat(timespec="seconds"),
     }
     (run_dir / "run_config.json").write_text(json.dumps(run_config, indent=2) + "\n", encoding="utf-8")
@@ -227,9 +193,13 @@ def run_evaluation(
     write_csv(run_dir / "per_class_matches.csv", per_class_rows)
     plots = save_plots(run_dir, prompt_rows, confusion_total, gt["class_names"])
 
-    rendered = 0
+    visualizations = []
     if save_visuals > 0:
-        rendered = save_visual_samples(run_dir, gt, predictions, model_labels, prompts, save_visuals)
+        from visualizations import save_visualizations
+        visualizations = save_visualizations(
+            run_dir, gt, predictions, model_labels, prompts, iou_threshold,
+            None if save_visuals >= len(gt["records"]) else save_visuals,
+        )
 
     summary = {
         **run_config,
@@ -238,7 +208,11 @@ def run_evaluation(
         "per_prompt_metrics": prompt_rows,
         "confusion_prompt_vs_class": confusion_total,
         "plots": plots,
-        "visual_samples": rendered,
+        "visualizations": {
+            "enabled": bool(save_visuals), "count": len(visualizations),
+            "folder": "visualizations" if visualizations else None,
+            "index": "visualizations/index.html" if visualizations else None,
+        },
         "notes": [
             "Cosmos/LocateAnything emit no per-box confidence (backend assigns 1.0), "
             "so their AP values collapse to a single precision/recall point.",
@@ -269,8 +243,10 @@ def main() -> int:
     parser.add_argument("--max-images", type=int, default=None)
     parser.add_argument("--conf-threshold", type=float, default=config.CONF_THRESHOLD)
     parser.add_argument("--iou-threshold", type=float, default=config.IOU_MATCH_THRESHOLD)
+    parser.add_argument("--save-visualizations", action="store_true",
+                        help="Save GT-vs-prediction comparison sheets for every evaluated image.")
     parser.add_argument("--save-visuals", type=int, default=0,
-                        help="Render GT-vs-prediction overlays for the first N images per model.")
+                        help="Legacy shorthand: save comparison sheets for the first N evaluated images.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Load the dataset and print the plan; run no models, write nothing.")
     args = parser.parse_args()
@@ -299,15 +275,18 @@ def main() -> int:
               f"{len(gt['records'])} image(s)).")
         return 0
 
+    save_visuals = len(gt["records"]) if args.save_visualizations else args.save_visuals
     run_dir, summary = run_evaluation(
         args.dataset, args.split, args.prompts, model_labels,
-        args.max_images, args.conf_threshold, args.iou_threshold, args.save_visuals,
+        args.max_images, args.conf_threshold, args.iou_threshold, save_visuals,
     )
     print(f"\nResults written to: {run_dir}")
     for row in summary["per_prompt_metrics"]:
         print(f"  {row['model']:<22} {row['prompt']:<28} "
               f"P={row['precision']:.3f} R={row['recall']:.3f} F1={row['f1']:.3f} "
               f"AP50={row['ap50']:.3f} mAP50-95={row['map50_95']:.3f}")
+    if summary["visualizations"]["enabled"]:
+        print(f"Visual comparisons: {run_dir / summary['visualizations']['index']}")
     return 0
 
 

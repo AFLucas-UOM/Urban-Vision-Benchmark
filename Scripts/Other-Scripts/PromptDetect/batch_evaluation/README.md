@@ -57,10 +57,10 @@ python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_batch_eval.py \
     --models sam3 locateanything_3b \
     --max-images 25 --dry-run
 
-# Small real run (SAM 3 only, 25 images, with 10 visual overlays):
+# Small real run (SAM 3 only, all 10-image comparison sheets saved):
 python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_batch_eval.py \
     --dataset MDWD --split test --prompts "garbage bag" \
-    --models sam3 --max-images 25 --save-visuals 10
+    --models sam3 --max-images 10 --save-visualizations
 ```
 
 Model slugs are derived from the backend registry, with convenience aliases
@@ -77,7 +77,9 @@ python Scripts/Other-Scripts/PromptDetect/batch_evaluation/gradio_batch_eval.py
 
 Dataset/split dropdowns (`all` means every MTSD QA image), prompt textbox
 (0-15, one per line; zero prompts for dry-run only), model checkboxes (32B in a separate gated group),
-max-images, thresholds, dry-run toggle, metrics table and result-folder path.
+max-images, thresholds, a **Save visual comparisons (GT vs predictions)** toggle,
+dry-run toggle, metrics table and result-folder path. The visual toggle writes a
+sheet for every evaluated image/model/prompt and displays the HTML-index path.
 
 ## Output files (per run)
 
@@ -90,7 +92,8 @@ max-images, thresholds, dry-run toggle, metrics table and result-folder path.
 | `per_image_metrics.csv` | matching outcome per image |
 | `per_class_matches.csv` | matched detections per prompt × GT class |
 | `metrics_bars.png`, `confusion_matrix.png` | plots |
-| `samples/<model>/*.jpg` | optional GT (blue) vs prediction (red) overlays |
+| `visualizations/<model>/<prompt>/*.jpg` | optional side-by-side GT/prediction sheets, including labels, confidence (when available), TP/FP/FN status and matched IoU |
+| `visualizations/index.html`, `visualization_index.csv` | browsable visual index and a machine-readable listing of all sheets |
 | `evaluation_summary.json` | everything above, plus model load statuses and caveats |
 
 ## Caveats

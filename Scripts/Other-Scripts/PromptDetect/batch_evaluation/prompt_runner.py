@@ -113,6 +113,7 @@ def prediction_boxes(prediction_rows: list[dict], model: str, prompt: str) -> di
             "x0": float(row["x0"]), "y0": float(row["y0"]),
             "x1": float(row["x1"]), "y1": float(row["y1"]),
             "score": float(row["score"]) if row["score"] != "" else 0.0,
-            "prompt": prompt,
+            "prompt": prompt, "predicted_label": row.get("predicted_label", prompt),
+            "has_confidence": row.get("has_confidence", True),
         })
     return grouped
