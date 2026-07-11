@@ -1,0 +1,12 @@
+gate_version: qa-gate-v1
+audit_path: Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-20260709-201340
+audit_timestamp: '2026-07-09T20:13:40'
+audited_groups: [GRP-1, GRP-2, GRP-3, GRP-5]
+approved_scope: [GRP-1, GRP-2, GRP-3, GRP-5, GRP-6]
+finding_counts:
+  invalid_attribute_values: 5
+  duplicate_candidates: 5
+resolution_status: unresolved
+approved_by: null
+acknowledgement: GRP-6 was committed after this audit and must be included in a refreshed audit before final preparation.
+

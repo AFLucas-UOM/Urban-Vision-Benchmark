@@ -1,9 +1,9 @@
 # Urban-Vision-Benchmark — Full Repository Status Summary
 
-> **Purpose:** temporary, in-depth context document (live scan updated 2026-07-09) so that
+> **Purpose:** temporary, in-depth context document (live scan updated 2026-07-11) so that
 > another model/person can evaluate what remains for the MSc dissertation. Safe to
-> delete. Status labels used throughout: **implemented** (built and executed),
-> **scaffolded** (built, verified light, but not executed for real),
+> delete. Status labels used throughout: **implemented** (built and verified;
+> execution status is stated separately), **scaffolded** (partially built),
 > **pending** (not built / not run), **requires manual review** (needs a human decision).
 
 ---
@@ -33,9 +33,9 @@ Reports regenerated:
 Live scan results that supersede older MTSD statements elsewhere in this file:
 
 - All 11 MTSD raw-capture groups are now populated (**7,492 images** total).
-  QA-approved JSONs currently exist for **GRP-1, GRP-2, GRP-3 and GRP-5**:
-  **2,628 images / 7,266 annotations** across 12 detection classes. GRP-4 and
-  GRP-6--GRP-11 have images but no Final-QA JSON and remain excluded from
+  Final-QA JSONs currently exist for **GRP-1, GRP-2, GRP-3, GRP-5 and GRP-6**:
+  **3,098 images / 8,372 annotations** across 12 detection classes. GRP-4 and
+  GRP-7--GRP-11 have images but no Final-QA JSON and remain excluded from
   experiments.
 - The fresh annotation audit (`audit-20260709-201340`) found **5 invalid
   `sign_shape=Damaged-Unknown` values** and **5 duplicate candidates** (one
@@ -109,7 +109,7 @@ monitoring in Malta**. It unifies two research tracks:
    `Other Waste`, `Recyclable Material`).
 2. **MTSD — Maltese Traffic Sign Dataset**: 7,492 smartphone-collected traffic-sign
    photos across 11 collection groups. Four groups currently have QA-verified
-   COCO annotations (2,628 images / 7,266 boxes; 12 sign classes) whose boxes
+   COCO annotations (3,098 images / 8,372 boxes; 12 sign classes) whose boxes
    carry **auxiliary attributes** (view angle, mounting, condition, shape).
 
 The comparative angle of the dissertation: classical supervised detectors
@@ -132,8 +132,8 @@ Datasets/
                            GRP-1: 724, 2: 630, 3: 617, 4: 875, 5: 657,
                            6: 470, 7: 710, 8: 703, 9: 715, 10: 789, 11: 602
   MTSD/Annotations/        GRP-*/Final-QA/QA-GRP*.json — QA-verified COCO annotations
-                           (currently GRP-1/2/3/5; 2,628 images, 7,266 boxes, 12 classes)
-  MTSD/Prepared/           NOT YET CREATED — output target of the dataset prep notebook
+                           (currently GRP-1/2/3/5/6; 3,098 images, 8,372 boxes, 12 classes)
+  MTSD/Prepared/           NOT YET CREATED — output target of the canonical supervised CLI
 Documents/                 workflow docs + generated EDA outputs
   MTSD-EDA/                21 figures, ~30 CSVs, interactive HTML capture map
                            (`MTSD_mapped.html` with image popups)
@@ -156,7 +156,8 @@ Scripts/
                                6 training scripts, run_all.py, outputs/, inference/gradio_compare.py)
     MTSD-Analysis/         mtsd_eda package + MTSD-EDA.ipynb + audit scripts
     MTSD-AnnotationQA/     NEW — audit -> review -> guarded-apply annotation QA workflow
-    MTSD-SupervisedNotebooks/  Prepare-MTSD-Detection-Dataset + YOLO12/YOLO26/RF-DETR (not executed)
+    MTSD-SupervisedDetection/  canonical prep/validation/training/evaluation package + CLI
+    MTSD-SupervisedNotebooks/  thin read-only front ends to the canonical package
     LabelStudio/           annotation workflow tooling + QA formatter
     update_annotation_paths.ps1   (applied 2026-07-04)
   Other-Scripts/
@@ -209,9 +210,9 @@ cause any image to be dropped by Ultralytics' training loader.
 
 ## 4. MTSD status
 
-- **Dataset**: all groups GRP-1..11 have raw images (**7,492** total). QA-approved
-  COCO JSONs are present for GRP-1, GRP-2, GRP-3 and GRP-5 (**2,628 images / 7,266
-  annotations**); GRP-4 and GRP-6..11 remain unannotated. GRP-3's previously-missing
+- **Dataset**: all groups GRP-1..11 have raw images (**7,492** total). Final-QA
+  COCO JSONs are present for GRP-1, GRP-2, GRP-3, GRP-5 and GRP-6 (**3,098 images / 8,372
+  annotations**); GRP-4 and GRP-7..11 remain unannotated. GRP-3's previously-missing
   219 images remain restored (617 annotated images on disk).
 - **Annotation schema**: COCO-style QA JSONs; absolute-pixel bboxes; per-box
   `attributes`: `view_angle` {Front, Back, Side}, `mounting` {Pole-Mounted,
@@ -271,13 +272,18 @@ cause any image to be dropped by Ultralytics' training loader.
    mode. The numeric EDA CSV/notebook outputs still contain the pre-GRP-5
    1,971-image / 5,457-box annotation snapshot; rerun the EDA after the final
    annotation scope is frozen before citing current MTSD annotation statistics.
-- **Supervised detection**: **scaffolded, not executed** — `Prepare-MTSD-Detection-Dataset.ipynb`
-  (QA groups → `Datasets/MTSD/Prepared/{MTSD-YOLO,MTSD-COCO}`, overwrite-protected).
-  The earlier 1,752-image dry-run is obsolete because GRP-5 is now QA-approved;
-  regenerate the prepared dataset after QA review and record the resulting split
-  counts. The YOLO12/YOLO26/RF-DETR notebooks (`RUN_TRAINING=False`, W&B project
-  `MTSD-Supervised-Detection`, outputs → `Results/MTSD-Runs|MTSD-Results`). **No MTSD
-  detection training has been run**; `Results/MTSD-*` are empty.
+- **Supervised detection**: **implemented, not executed** — the canonical
+  `MTSD-SupervisedDetection/run_mtsd_supervised.py` package provides dual-variant
+  preparation, manifests, validation, the resumable 13-model matrix, and reports.
+  A real-data dry run over the explicit candidate lock GRP-1/2/3/5/6 resolves **3,098 images** into
+  **2,479 train / 310 valid / 309 test**, with no output writes. The thin
+  preparation/YOLO12/YOLO26/RF-DETR notebooks retain `RUN_TRAINING=False`-style
+  gates and point back to the CLI. W&B project is
+  `MSc-MTSD-SupervisedDetection`; outputs go to
+  `Results/MTSD-Runs|MTSD-Results`. **No MTSD detection training has been run**;
+  `Results/MTSD-*` remain empty. The machine-readable QA gate is unresolved and
+  the recorded audit predates GRP-6, so this configured scope is not yet approved
+  for final preparation/training.
 
 ## 5. PromptDetect status
 
@@ -296,6 +302,13 @@ cause any image to be dropped by Ultralytics' training loader.
   Reason2 2B on **5 images / 11 GT boxes** with six waste prompts. It verifies
   model loading and scoring, but is far too small and prompt-exploratory for
   dissertation comparison; retain it as a smoke/pilot, not headline evidence.
+- **Dissertation protocol** (`run_dissertation_protocol.py` +
+  `prompt_protocols/dissertation_protocol.yaml`): **implemented and dry-run
+  verified** for MDWD and MTSD. It validates target classes before model loading,
+  retains negative images, counts unmatched detections as FP, records non-target
+  overlaps, persists each model×prompt combination atomically, and refuses MTSD
+  QA fallback under `--final`. The legacy evaluator is explicitly labelled
+  `class-agnostic-exploratory`; the dissertation route writes `targeted-v1`.
 - **Metrics produced**: P/R/F1/accuracy, AP@50, mAP@50:95, mean matched IoU, FP/FN,
   duplicate detections, per-image/per-prompt/per-model tables, prompt-vs-class
   confusion matrix, plots, optional GT-vs-pred overlays.
@@ -365,7 +378,7 @@ human glance at the running UI (not launched here).
 ## 7. W&B / experiment tracking
 
 - Projects: `MSc-MDWD-EUVIP26` (MDWD detection, executed), `MSc-MTSD-Attributes`
-  (attribute classification, executed), `MTSD-Supervised-Detection` (reserved for
+  (attribute classification, executed), `MSc-MTSD-SupervisedDetection` (reserved for
   the MTSD detection notebooks, unused so far).
 - Entity: `WANDB_ENTITY` env var, default `mark-bugeja-university-of-malta`.
 - Credentials: repository-root `.env` (git-ignored) with `WANDB_API_KEY`; loaded by
@@ -395,23 +408,27 @@ human glance at the running UI (not launched here).
   (pathlib); no absolute paths in code.
 - **How to run things**:
   - MDWD EDA: `python Scripts/MDWD-Scripts/MDWD-Analysis/run_eda.py` (or the notebook).
-  - MTSD dataset prep: run `Prepare-MTSD-Detection-Dataset.ipynb` (config cell;
-    overwrite-protected; ~2 GB output).
-  - MTSD/MDWD supervised training: notebooks in the respective
-    `*-SupervisedNotebooks/` folders; flip `RUN_TRAINING=True` in the final cell.
+  - MTSD detection plan/prep/validation: use
+    `Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py`
+    with `--dry-run`, `--prepare-only --dataset-variant both --final`, then
+    `--validate-prepared --strict`.
+  - MTSD supervised training: use the same CLI with `--smoke-test`,
+    `--matrix dissertation`, or an explicit `--models` list; the notebooks are
+    read-only front ends. MDWD retains its existing notebook routes.
   - Annotation QA: `scan_annotations.py [--dry-run]` → `review_app.py` →
     `apply_fixes.py --decisions ... --apply`.
   - MTSD atlas: `python Scripts/MTSD-Scripts/MTSD-Analysis/mtsd_mapper.py [--rescan]`;
     open `Documents/MTSD-EDA/MTSD_mapped.html` via Live Server from the repo root
     so relative image links resolve.
-  - PromptDetect batch eval: `run_batch_eval.py --dataset ... --prompts ... --models ...
-    [--max-images N] [--dry-run]` or `gradio_batch_eval.py`; only Cosmos 32B
-    needs `--allow-heavy`.
+  - PromptDetect dissertation eval: `run_dissertation_protocol.py --dataset ...
+    --split test [--dry-run|--smoke-test|--final]`; use `run_batch_eval.py` or
+    `gradio_batch_eval.py` only for exploratory class-agnostic work. Only Cosmos
+    32B needs `--allow-heavy`.
   - Inference-speed benchmark: `python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py
     --dataset ... --task ... --models ... [--max-images N] [--dry-run]`; only Cosmos
     32B needs `--allow-heavy`.
-- Dry-run/sample modes exist for: annotation scan, fix application, batch
-  evaluation, EDA (`--max-images`, `--out-tag`), prep notebook (read-only cells).
+- Dry-run/sample modes exist for annotation scan, fix application, both
+  PromptDetect evaluators, EDA, and the canonical MTSD supervised CLI.
 
 ## 10. Dissertation relevance
 
@@ -420,7 +437,8 @@ human glance at the running UI (not launched here).
   ablations. RF-DETR nano is an additional completed run, but it must be
   normalised into the final table before being used in a quantitative
   cross-family conclusion; small/medium were not run.
-- **MTSD** grounds infrastructure monitoring: detection (scaffolded) plus a unique
+- **MTSD** grounds infrastructure monitoring: detection (pipeline implemented,
+  final runs pending) plus a unique
   **multi-attribute condition-assessment** layer (view/mounting/condition/shape).
   The completed adaptation study (frozen probe vs LoRA vs full fine-tune across
   DINOv3/V-JEPA/ConvNeXt) is valid evidence for its recorded GRP-1--GRP-3 data
@@ -438,12 +456,12 @@ human glance at the running UI (not launched here).
 - [x] MDWD dataset exports (4 variants) + full EDA (package, notebook, artefacts)
 - [x] MDWD supervised benchmarks: YOLO11/12/26 (n/s/m/l), runs + consolidated results + W&B; RF-DETR nano has a completed checkpoint/log, while small/medium remain unexecuted templates
 - [x] MTSD raw captures in all 11 groups (7,492 images); Final-QA exists for
-      GRP-1/2/3/5 (2,628 images / 7,266 boxes); GRP-3 image gap resolved
+      GRP-1/2/3/5/6 (3,098 images / 8,372 boxes); GRP-3 image gap resolved
 - [x] MTSD EDA (package, notebook, 21 figures, GPS atlas with clickable image popups)
 - [x] MTSD attribute-classification round: 6 variants trained and compared on the
       recorded GRP-1--GRP-3 snapshot (best: dinov3_lora, macro-F1 0.873)
 - [x] Annotation path migration (source_image → new layout)
-- [x] Annotation QA **audit** executed on the current four QA groups: 5 duplicate
+- [x] Annotation QA **audit** executed on the current five QA groups: 5 duplicate
       candidates and 5 configured drop-value findings, with no missing attributes
       or broken references
 - [x] gradio_compare cleanup (smokes off by default, dynamic `<model>_<mode> vs ...` title)
@@ -471,10 +489,11 @@ human glance at the running UI (not launched here).
       candidates plus 5 `Damaged-Unknown` drop values in
       `audit-20260709-201340` using `review_app.py`; apply only confirmed
       changes, then re-scan until the accepted status is documented.
-- [ ] **MTSD detection dataset preparation**: run the prep notebook (after cleanup)
-- [ ] **MTSD supervised detection training**: YOLO12/YOLO26/RF-DETR notebooks (not run;
-      `Results/MTSD-*` empty) — decide epochs/augmentation for the current
-      ~2.6k-image QA-approved scale
+- [ ] **MTSD detection dataset preparation**: after cleanup and refreshed GRP-6
+      audit approval, run `--prepare-only --dataset-variant both --final` and
+      require `--validate-prepared --strict` to pass
+- [ ] **MTSD supervised detection training**: run the CLI smoke test, then the
+      resumable 13-model dissertation matrix (`Results/MTSD-*` remain empty)
 - [ ] **PromptDetect batch evaluations**: a 5-image MDWD pilot has run, but the
       dissertation still needs a fixed, adequately sampled MDWD test evaluation
       and MTSD evaluation after QA/preparation. Use a documented prompt set and
@@ -485,14 +504,14 @@ human glance at the running UI (not launched here).
       metrics into the same traceable result format as the YOLO tables, or exclude
       RF-DETR from quantitative cross-family tables and state why. Do not imply an
       RF-DETR n/s/m ablation: only nano was run.
-- [ ] **Further MTSD annotation**: GRP-4 and GRP-6..11 contain 4,864 unannotated
+- [ ] **Further MTSD annotation**: GRP-4 and GRP-7..11 remain outside Final-QA
       images. Decide explicitly whether any belong in dissertation scope; annotate
       them only under a documented expansion protocol, then regenerate EDA/manifests.
 - [ ] **Final MTSD attribute round, deferred**: do not rerun only to add GRP-5.
       Wait until the intended annotation scope is fixed, then refresh the manifest
       and run one distinctly labelled final attribute experiment.
-- [ ] **MDWD-EDA.ipynb / MTSD supervised notebooks**: execute top-to-bottom once, so
-      outputs/cell numbers exist for the dissertation record
+- [ ] **MDWD-EDA.ipynb / MTSD supervised front-end notebooks**: execute
+      top-to-bottom once in read-only mode for the dissertation record
 - [ ] **Dissertation figures/tables**: cross-track comparison table (supervised vs
       prompt-based), per-class detection results, attribute confusion matrices,
       dataset datasheets; decide which EDA figures go in
@@ -511,16 +530,16 @@ human glance at the running UI (not launched here).
    re-scan → regenerate manifest). Everything downstream (dataset preparation,
    detection training and MTSD batch evaluation) consumes these files; do it before
    any new MTSD runs.
-4. **Run the MTSD prep notebook, then the three detection notebooks** (YOLO12 →
-   YOLO26 → RF-DETR). Risk: roughly 2.1k training images with the MDWD protocol (100
-   epochs, no augmentation) may underfit — consider enabling the prep notebook's
-   photometric augmentation or raising epochs, and record whichever choice you make
-   as a protocol deviation in the methodology.
-5. **Promote PromptDetect from pilot to evidence.** The 5-image MDWD pilot has
-   validated SAM 3 and Cosmos Reason2 2B end-to-end. Now fix 3–5 prompts per
-   dataset, run an adequately sampled MDWD test evaluation, then run the MTSD
-   evaluation after QA/preparation. Budget GPU time for Cosmos 2B/8B; keep 32B
-   optional and explicitly opt in with `--allow-heavy`.
+4. **Run the canonical MTSD preparation and strict validation, then the smoke
+   test and resumable dissertation matrix with `--final`.** The primary augmented dataset uses
+   the fixed deterministic photometric-v1 recipe; the unaugmented variant supports
+   the three-model clean augmentation ablation (YOLO11m/12m/26m), with YOLO26l
+   optional. RF-DETR augmentation comparisons are descriptive only. Do not silently change the
+   100-epoch/640 px/effective-batch-32 protocol after OOM.
+5. **Promote PromptDetect from pilot to evidence.** Use the committed fixed
+   protocol rather than selecting new prompts ad hoc: run the full MDWD test
+   evaluation, then MTSD after QA/preparation. Budget GPU time for SAM 3/3.1,
+   LocateAnything and Cosmos 2B/8B; keep 32B optional with `--allow-heavy`.
 6. **Defer the final MTSD attribute-classification rerun** until the final
    annotation scope is fixed. The GRP-1--GRP-3 results are already usable as a
    historical/provenance experiment; do not burn time rerunning just for GRP-5 if
@@ -538,7 +557,7 @@ human glance at the running UI (not launched here).
    final-scope attribute rerun, detection and prompt-based results remain pending.
 8. **Risks to watch**: annotation edits change QA SHA-256 hashes (manifest must be
    regenerated or training aborts); the stale manifest is already a data-snapshot
-   risk; GRP-4 and GRP-6..11 annotation effort is the biggest remaining manual
+   risk; GRP-4 and GRP-7..11 annotation effort is the biggest remaining manual
    cost; SAM 3/3.1 HF gating and the `mtsd-la` env are the usual PromptDetect setup
    friction; keep the repo private (street imagery, GDPR).
 
@@ -614,7 +633,7 @@ polish is deliberately excluded.
    MTSD evaluations remain core evidence gaps.
 4. **Freeze the final methodology snapshot after MTSD scope is decided.** The
    attribute-classification docs now describe the six-variant historical
-   GRP-1--GRP-3 comparison and current GRP-1/2/3/5 QA scope. After the final
+   GRP-1--GRP-3 comparison and current GRP-1/2/3/5/6 QA scope. After the final
    annotation decision, update the one explicit scope note and run the deferred
    final attribute round.
 
@@ -628,7 +647,7 @@ polish is deliberately excluded.
    discussed, but extra class-merging or reweighting experiments are only worth it
    if attribute classification becomes a headline contribution rather than a
    supporting study.
-3. **Further MTSD annotation beyond GRP-1/2/3/5.** Valuable, but it is a scope
+3. **Further MTSD annotation beyond GRP-1/2/3/5/6.** Valuable, but it is a scope
    decision, not a coding task. Only expand if the dissertation timeline supports
    annotation, QA, EDA refresh and re-running affected experiments.
 

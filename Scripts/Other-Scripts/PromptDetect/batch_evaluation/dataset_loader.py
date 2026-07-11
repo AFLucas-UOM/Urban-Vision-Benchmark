@@ -19,13 +19,17 @@ Supported sources (auto-selected by dataset name):
 from __future__ import annotations
 
 import json
-import random
 from collections import defaultdict
 from pathlib import Path
 
 import yaml
 
 import config
+
+SUPERVISED_ROOT = config.PROJECT_ROOT / "Scripts" / "MTSD-Scripts" / "MTSD-SupervisedDetection"
+if str(SUPERVISED_ROOT) not in __import__("sys").path:
+    __import__("sys").path.insert(0, str(SUPERVISED_ROOT))
+from mtsd_detection.splitting import assign_splits
 
 
 def normalise_split(split: str) -> str:
@@ -84,25 +88,9 @@ def _load_yolo_split(dataset_dir: Path, split: str, max_images: int | None) -> t
 # --- MTSD QA fallback (COCO) --------------------------------------------------------
 
 def _assign_mtsd_qa_splits(records: list[dict]) -> dict[str, str]:
-    """Mirror Prepare-MTSD-Detection-Dataset's random per-group split."""
-    rng = random.Random(config.MTSD_QA_SPLIT_SEED)
-    by_group: dict[str, list[dict]] = defaultdict(list)
-    for record in records:
-        by_group[record["_group"]].append(record)
-
-    assignment = {}
-    for group, group_records in sorted(by_group.items()):
-        group_records = sorted(group_records, key=lambda r: r["_out_name"])
-        rng.shuffle(group_records)
-        n = len(group_records)
-        n_train = round(n * config.MTSD_QA_SPLIT_RATIOS["train"])
-        n_valid = round(n * config.MTSD_QA_SPLIT_RATIOS["valid"])
-        for index, record in enumerate(group_records):
-            split = ("train" if index < n_train
-                     else "valid" if index < n_train + n_valid
-                     else "test")
-            assignment[record["_out_name"]] = split
-    return assignment
+    """Delegate to the canonical notebook-identical implementation."""
+    canonical = [{"group": row["_group"], "out_name": row["_out_name"]} for row in records]
+    return assign_splits(canonical, config.MTSD_QA_SPLIT_RATIOS, config.MTSD_QA_SPLIT_SEED)
 
 
 def _load_mtsd_qa(split: str, max_images: int | None) -> tuple[list[dict], list[str]]:
@@ -168,18 +156,27 @@ def load_ground_truth(dataset: str, split: str, max_images: int | None = None) -
         records, class_names = _load_yolo_split(config.MDWD_YOLO_DIR, split, max_images)
         source = str(config.MDWD_YOLO_DIR)
     elif dataset == "MTSD":
-        if config.MTSD_PREPARED_YOLO_DIR.is_dir() and split != "all":
-            records, class_names = _load_yolo_split(config.MTSD_PREPARED_YOLO_DIR, split, max_images)
-            source = str(config.MTSD_PREPARED_YOLO_DIR)
+        prepared = (config.MTSD_PREPARED_YOLO_DIR if config.MTSD_PREPARED_YOLO_DIR.is_dir()
+                    else config.MTSD_LEGACY_PREPARED_YOLO_DIR)
+        if prepared.is_dir() and split != "all":
+            records, class_names = _load_yolo_split(prepared, split, max_images)
+            source = str(prepared)
         else:
             records, class_names = _load_mtsd_qa(split, max_images)
             source = str(config.MTSD_ANNOTATIONS_ROOT)
     else:
         raise ValueError(f"Unknown dataset {dataset!r}; expected MDWD or MTSD.")
-    return {
+    result = {
         "dataset": dataset, "split": split, "source": source,
         "class_names": class_names, "records": records,
     }
+    source_path = Path(source)
+    manifest_path = source_path.parent / "prep_manifest.json"
+    result["source_type"] = "prepared" if manifest_path.is_file() else ("qa_fallback" if dataset == "MTSD" else "yolo")
+    result["manifest_path"] = str(manifest_path) if manifest_path.is_file() else None
+    if manifest_path.is_file():
+        result["manifest"] = json.loads(manifest_path.read_text(encoding="utf-8"))
+    return result
 
 
 def ground_truth_index_rows(gt: dict) -> list[dict]:

@@ -31,7 +31,9 @@ RESULTS_ROOT = PROJECT_ROOT / "Results" / "PromptDetect" / "BatchEvaluation"
 
 # Dataset locations -------------------------------------------------------------
 MDWD_YOLO_DIR = DATASETS_DIR / "MDWD" / "MDWD-YOLO26"
-MTSD_PREPARED_YOLO_DIR = DATASETS_DIR / "MTSD" / "Prepared" / "MTSD-YOLO"
+MTSD_PREPARED_VARIANT_DIR = DATASETS_DIR / "MTSD" / "Prepared" / "MTSD-Unaugmented"
+MTSD_PREPARED_YOLO_DIR = MTSD_PREPARED_VARIANT_DIR / "MTSD-YOLO"
+MTSD_LEGACY_PREPARED_YOLO_DIR = DATASETS_DIR / "MTSD" / "Prepared" / "MTSD-YOLO"
 MTSD_ANNOTATIONS_ROOT = DATASETS_DIR / "MTSD" / "Annotations"
 MTSD_QA_SPLIT_RATIOS = {"train": 0.80, "valid": 0.10, "test": 0.10}
 MTSD_QA_SPLIT_SEED = 42
@@ -78,8 +80,9 @@ IOU_MATCH_THRESHOLD = 0.5          # TP threshold for P/R/F1
 MAP_IOU_RANGE = [round(0.5 + 0.05 * i, 2) for i in range(10)]  # 0.50 .. 0.95
 
 
-def new_run_dir(dataset: str) -> Path:
+def new_run_dir(dataset: str, run_label: str | None = None) -> Path:
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
-    run_dir = RESULTS_ROOT / dataset.upper() / stamp
+    suffix = f"-{re.sub(r'[^A-Za-z0-9_.-]+', '-', run_label).strip('-')}" if run_label else ""
+    run_dir = RESULTS_ROOT / dataset.upper() / f"{stamp}{suffix}"
     run_dir.mkdir(parents=True, exist_ok=False)
     return run_dir

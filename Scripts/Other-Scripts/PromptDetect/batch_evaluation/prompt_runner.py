@@ -17,6 +17,7 @@ from PIL import Image
 import config  # noqa: F401  (sys.path side effect for `backend`)
 
 ProgressCb = Callable[[float, str], None]
+CombinationCb = Callable[[str, str, list[dict], dict], None]
 
 
 def run_models(
@@ -26,6 +27,7 @@ def run_models(
     conf_threshold: float,
     max_detections: int,
     progress: ProgressCb | None = None,
+    on_combination_complete: CombinationCb | None = None,
 ) -> tuple[list[dict], list[dict]]:
     """Return (prediction_rows, model_statuses)."""
     from backend import DetectionBackend
@@ -35,28 +37,33 @@ def run_models(
     records = gt["records"]
     predictions: list[dict] = []
     statuses: list[dict] = []
-    total_steps = max(1, len(model_labels) * len(records))
+    total_steps = max(1, len(model_labels) * len(records) * max(1, len(prompts)))
     step = 0
 
     for model_label in model_labels:
         notify(step / total_steps, f"Loading {model_label}...")
+        load_started = time.perf_counter()
         status = backend.load(model_label)
-        statuses.append({"model": model_label, **status})
+        load_ms = (time.perf_counter() - load_started) * 1000
+        statuses.append({"model": model_label, "model_load_ms": round(load_ms, 1), **status})
         if not status.get("ok"):
             notify(step / total_steps, f"SKIPPED {model_label}: {status.get('error')}")
-            step += len(records)
+            step += len(records) * max(1, len(prompts))
             continue
 
-        for record in records:
-            step += 1
-            notify(step / total_steps, f"{model_label} | {record['image_id']}")
-            try:
-                image = np.array(Image.open(record["image_path"]).convert("RGB"))
-            except Exception as exc:
-                statuses.append({"model": model_label, "ok": False,
-                                 "error": f"unreadable image {record['image_id']}: {exc}"})
-                continue
-            for prompt in prompts:
+        # A prompt combination becomes durable as soon as its image loop ends;
+        # the model stays loaded across prompts, so there is no reload penalty.
+        for prompt in prompts:
+            combination_rows: list[dict] = []
+            for record in records:
+                step += 1
+                notify(step / total_steps, f"{model_label} | {prompt} | {record['image_id']}")
+                try:
+                    image = np.array(Image.open(record["image_path"]).convert("RGB"))
+                except Exception as exc:
+                    statuses.append({"model": model_label, "ok": False,
+                                     "error": f"unreadable image {record['image_id']}: {exc}"})
+                    continue
                 started = time.perf_counter()
                 result = backend.predict(
                     image=image, text_prompt=prompt,
@@ -70,7 +77,7 @@ def run_models(
                     result["boxes"], result["scores"], result["labels"],
                     masks,
                 ):
-                    predictions.append({
+                    row = {
                         "model": model_label,
                         "prompt": prompt,
                         "image_id": record["image_id"],
@@ -82,17 +89,22 @@ def run_models(
                         "has_mask": mask is not None,
                         "has_confidence": result.get("has_confidence", True),
                         "inference_ms": round(elapsed_ms, 1),
-                    })
+                    }
+                    predictions.append(row); combination_rows.append(row)
                 if not result["boxes"]:
                     # keep a zero-detection marker so per-image timing survives
-                    predictions.append({
+                    row = {
                         "model": model_label, "prompt": prompt,
                         "image_id": record["image_id"], "image_path": str(record["image_path"]),
                         "x0": "", "y0": "", "x1": "", "y1": "", "score": "",
                         "predicted_label": "<no detections>", "has_mask": False,
                         "has_confidence": result.get("has_confidence", True),
                         "inference_ms": round(elapsed_ms, 1),
-                    })
+                    }
+                    predictions.append(row); combination_rows.append(row)
+            if on_combination_complete:
+                on_combination_complete(model_label, prompt, combination_rows,
+                                        {"model_load_ms": round(load_ms, 1)})
 
     # release the last model
     try:

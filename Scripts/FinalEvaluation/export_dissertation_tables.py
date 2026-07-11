@@ -163,6 +163,7 @@ def collect_promptdetect() -> tuple[list[dict], list[str]]:
             continue
         for metric_row in payload.get("per_prompt_metrics", []):
             rows.append({
+                "evaluation_protocol": payload.get("evaluation_protocol", "class-agnostic-exploratory"),
                 "dataset": payload.get("dataset"),
                 "split": payload.get("split"),
                 "model": metric_row.get("model"),
@@ -177,6 +178,9 @@ def collect_promptdetect() -> tuple[list[dict], list[str]]:
                 "run_folder": str(summary_path.parent.relative_to(ROOT)),
                 "status": "completed",
             })
+        protocol = payload.get("evaluation_protocol", "class-agnostic-exploratory")
+        if protocol == "class-agnostic-exploratory":
+            notes.append(f"{summary_path.parent.relative_to(ROOT)} is exploratory class-agnostic evidence")
     return rows, notes
 
 

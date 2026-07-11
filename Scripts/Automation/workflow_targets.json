@@ -51,6 +51,30 @@
       "training": false,
       "description": "Builds Datasets/MTSD/Prepared/{MTSD-YOLO,MTSD-COCO} from QA annotations (~2 GB; overwrite-protected internally)."
     },
+    "MTSD-Prepare-CLI": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py",
+      "env": "MDWD",
+      "defaultArgs": ["--dry-run"],
+      "training": false,
+      "description": "Canonical MTSD preparation CLI. Default is a read-only annotation/split/model plan."
+    },
+    "MTSD-Supervised-Matrix": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py",
+      "env": "MDWD",
+      "defaultArgs": ["--matrix", "dissertation", "--dataset-variant", "augmented", "--final"],
+      "training": true,
+      "description": "Runs the resumable 13-model MTSD supervised dissertation matrix."
+    },
+    "MTSD-Supervised-Smoke": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py",
+      "env": "MDWD",
+      "defaultArgs": ["--smoke-test", "--dataset-variant", "augmented", "--wandb-mode", "disabled", "--acknowledge-open-qa-gate"],
+      "training": true,
+      "description": "Two-epoch YOLO12n + RF-DETR Nano end-to-end smoke test."
+    },
     "MTSD-YOLO12-Notebook": {
       "type": "notebook",
       "path": "Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks/YOLO12.ipynb",
@@ -87,6 +111,22 @@
       "defaultArgs": ["--dataset", "MTSD", "--split", "test", "--prompts", "traffic sign", "--models", "sam3", "--max-images", "25", "--dry-run"],
       "training": false,
       "description": "PromptDetect batch evaluation. Default args are a safe dry-run; pass -Args for a real run."
+    },
+    "PromptDetect-Dissertation-MDWD": {
+      "type": "python",
+      "path": "Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_protocol.py",
+      "env": "mtsd-base",
+      "defaultArgs": ["--dataset", "MDWD", "--split", "test", "--final"],
+      "training": true,
+      "description": "Fixed targeted-v1 PromptDetect dissertation protocol for MDWD (loads heavy inference models)."
+    },
+    "PromptDetect-Dissertation-MTSD": {
+      "type": "python",
+      "path": "Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_protocol.py",
+      "env": "mtsd-base",
+      "defaultArgs": ["--dataset", "MTSD", "--split", "test", "--final"],
+      "training": true,
+      "description": "Fixed targeted-v1 PromptDetect dissertation protocol for prepared MTSD (loads heavy inference models)."
     },
     "GDPR-Compliance": {
       "type": "python",

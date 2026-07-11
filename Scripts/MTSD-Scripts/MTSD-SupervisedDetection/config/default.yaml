@@ -1,0 +1,59 @@
+dataset:
+  annotations_root: Datasets/MTSD/Annotations
+  prepared_root: Datasets/MTSD/Prepared
+  version_base: mtsd-qa-v1
+annotations:
+  source_mode: qa_only
+  group_scope: explicit
+  approved_groups: [GRP-1, GRP-2, GRP-3, GRP-5, GRP-6]
+  unexpected_group_policy: fail
+  allow_raw_xml_fallback: false
+  require_non_qa_confirmation: true
+  qa_gate_file: Scripts/MTSD-Scripts/MTSD-SupervisedDetection/config/qa_gate.yaml
+split:
+  algorithm_version: v1
+  ratios: {train: 0.80, valid: 0.10, test: 0.10}
+  seed: 42
+augmentation:
+  recipe_version: photometric-v1
+  copies_per_image: 2
+  seed: 42
+  ops:
+    brightness: {min: 0.8, max: 1.2}
+    contrast: {min: 0.85, max: 1.15}
+    color: {min: 0.9, max: 1.1}
+    gaussian_blur: {p: 0.5, sigma_max: 1.0}
+    gaussian_noise: {p: 0.3, sigma_max: 0.02}
+    jpeg_compression: {p: 0.3, quality_min: 70, quality_max: 92}
+    gamma: {min: 0.9, max: 1.1}
+training:
+  epochs: 100
+  image_size: 640
+  effective_batch: 32
+  optimizer: AdamW
+  lr0: 0.001
+  lrf: 0.01
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  patience: 10
+  seed: 42
+  deterministic: true
+  device: auto
+  per_model_overrides: {}
+matrix:
+  dissertation: [yolo12n, yolo12s, yolo12m, yolo26n, yolo26s, yolo26m, yolo11n, yolo11s, yolo11m, rfdetr-n, rfdetr-s, rfdetr-m, yolo26l]
+  aug_ablation: [yolo11m, yolo12m, yolo26m]
+  aug_ablation_optional: [yolo26l]
+validation:
+  require_all_classes_in_test: false
+  minimum_boxes_per_class: {train: 1, valid: 0, test: 0}
+  low_support_warning_threshold: 3
+wandb:
+  project: MSc-MTSD-SupervisedDetection
+  entity_env: WANDB_ENTITY
+  mode: online
+  group: dissertation-augmented-v1
+outputs:
+  runs_root: Results/MTSD-Runs
+  results_root: Results/MTSD-Results
+  state_root: Results/MTSD-Runs/Supervised-Matrix
