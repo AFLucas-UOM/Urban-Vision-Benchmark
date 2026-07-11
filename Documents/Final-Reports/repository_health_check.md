@@ -1,6 +1,6 @@
 # Repository health check
 
-Generated: 2026-07-11T00:56:41  |  Overall: **PASS**
+Generated: 2026-07-11T12:53:58  |  Overall: **PASS**
 
 | Check | Status | Findings |
 | --- | --- | --- |
@@ -20,5 +20,6 @@ Generated: 2026-07-11T00:56:41  |  Overall: **PASS**
 | env_gitignored | PASS | 0 |
 | finalevaluation_tooling | PASS | 0 |
 | automation_targets | PASS | 0 |
+| qa_gate_scope_consistency | PASS | 0 |
 
 *Read-only report; nothing was modified. Re-run via `python Scripts/Automation/verify_repository_health.py`.*

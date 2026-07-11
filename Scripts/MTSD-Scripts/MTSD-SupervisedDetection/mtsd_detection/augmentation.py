@@ -7,7 +7,7 @@ import random
 from pathlib import Path
 from typing import Any
 
-from PIL import Image, ImageEnhance, ImageFilter
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 
 from .utils import sha256_file
 
@@ -20,7 +20,10 @@ def augment_image(source: Path, destination: Path, out_name: str, copy_index: in
     ops = config["ops"]
     applied: dict[str, Any] = {}
     with Image.open(source) as raw:
-        image = raw.convert("RGB")
+        # QA bboxes live in the EXIF-applied (displayed) coordinate space, and the
+        # augmented copy is saved without EXIF metadata; transposing the pixels here
+        # keeps the generated image aligned with its copied label file.
+        image = ImageOps.exif_transpose(raw).convert("RGB")
         for name, enhancer in (("brightness", ImageEnhance.Brightness),
                                ("contrast", ImageEnhance.Contrast), ("color", ImageEnhance.Color)):
             factor = rng.uniform(float(ops[name]["min"]), float(ops[name]["max"]))
