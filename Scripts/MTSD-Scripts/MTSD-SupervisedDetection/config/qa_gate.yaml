@@ -8,5 +8,4 @@ finding_counts:
   duplicate_candidates: 5
 resolution_status: unresolved
 approved_by: null
-acknowledgement: GRP-6 was committed after this audit and must be included in a refreshed audit before final preparation.
-
+acknowledgement: GRP-6 has a valid Final-QA JSON but is not included in the latest annotation audit.

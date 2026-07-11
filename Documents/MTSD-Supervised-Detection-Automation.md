@@ -20,6 +20,45 @@ development-only preparation or smoke run can proceed with
 excluded. Raw XML is never automatic, never overrides QA, and requires both
 fallback/confirmation flags; it is incompatible with `--final`.
 
+### Refreshing the gate and approved scope
+
+`config/default.yaml` (`annotations.approved_groups`) and `config/qa_gate.yaml`
+must never be hand-edited into disagreement: `update_qa_gate.py` discovers the
+current Final-QA groups and the newest annotation-QA audit and rewrites both
+files consistently.
+
+```powershell
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/update_qa_gate.py --dry-run
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/update_qa_gate.py --apply
+```
+
+Behaviour:
+
+* a group is discovered only if it has exactly one active (non-backup)
+  Final-QA JSON that parses, has `images`/`annotations`/`categories`, and uses
+  the canonical 12-class vocabulary with no duplicate category IDs or names -
+  a vocabulary mismatch or more than one active file for a group is a
+  structural error (non-zero exit), not a silent exclusion;
+* a QA file that is simply invalid (bad JSON, missing keys) is reported and
+  excluded, and the run still succeeds;
+* the newest audit is chosen by its own `generated_at` timestamp inside
+  `audit_summary.json`, not by directory name or mtime; an audit summary that
+  exists but cannot be parsed is a structural error, while no usable audit at
+  all is reported without fabricating a path, timestamp, or finding counts;
+* `resolution_status` is only `resolved` when a usable audit covers every
+  approved group and reports zero unresolved invalid-attribute, duplicate,
+  missing-attribute, and reference-problem findings - an unresolved gate is
+  reported but never causes a non-zero exit by itself;
+* `--apply` never creates backup files, never rewrites `group_scope` or
+  `unexpected_group_policy`, and reloads both files afterward to confirm their
+  scopes still agree before reporting success; `--dry-run` (the default when
+  neither flag is given) writes nothing.
+
+A newly QA'd group is added to `approved_groups`/`approved_scope`
+automatically, but it stays blocked from `--final` preparation/training until
+a refreshed audit covers it with zero unresolved findings - this script only
+refreshes the two config files, it never runs the audit itself.
+
 The v1 split exactly reproduces the notebook: sort within each group, use one seeded RNG (42), shuffle, then round 80/10/10. It is computed once for both variants. The augmented variant adds two deterministic, train-only photometric copies per original (brightness, contrast, colour, mild blur/noise/JPEG/gamma); it never applies geometry. Valid/test membership and hashes must match the unaugmented variant.
 
 ```powershell

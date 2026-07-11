@@ -75,6 +75,14 @@
       "training": true,
       "description": "Two-epoch YOLO12n + RF-DETR Nano end-to-end smoke test."
     },
+    "MTSD-Refresh-QA-Gate": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/update_qa_gate.py",
+      "env": "MDWD",
+      "defaultArgs": ["--dry-run"],
+      "training": false,
+      "description": "Discovers current Final-QA groups and the newest annotation-QA audit, then reports (or, with --apply, writes) the refreshed approved_groups scope and qa_gate.yaml resolution status. Never prepares data, trains, or runs the audit itself."
+    },
     "MTSD-YOLO12-Notebook": {
       "type": "notebook",
       "path": "Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks/YOLO12.ipynb",

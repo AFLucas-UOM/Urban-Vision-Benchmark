@@ -12,7 +12,9 @@ Read-only checks over structure, code and documentation:
     code cells and vice versa);
   * hardcoded W&B keys outside .env; .env is git-ignored;
   * Markdown relative links that no longer resolve;
-  * every target in Scripts/Automation/workflow_targets.json exists on disk.
+  * every target in Scripts/Automation/workflow_targets.json exists on disk;
+  * MTSD-SupervisedDetection's default.yaml approved_groups and qa_gate.yaml
+    approved_scope stay in sync (refresh via update_qa_gate.py --apply if not).
 
 Outputs (unless --dry-run):
     Documents/Final-Reports/repository_health_check.md
@@ -34,6 +36,8 @@ import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
+
+import yaml
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
@@ -336,6 +340,37 @@ def run_checks() -> list[dict]:
             f"All {len(registry)} workflow-runner targets exist on disk")
     else:
         add("automation_targets", "WARN", ["workflow_targets.json not found"], "")
+
+    # 10. MTSD QA gate / approved scope consistency -------------------------------
+    details = []
+    status = "PASS"
+    default_cfg_path = ROOT / "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/config/default.yaml"
+    qa_gate_path = ROOT / "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/config/qa_gate.yaml"
+    if default_cfg_path.is_file() and qa_gate_path.is_file():
+        try:
+            default_cfg = yaml.safe_load(default_cfg_path.read_text(encoding="utf-8")) or {}
+            qa_gate = yaml.safe_load(qa_gate_path.read_text(encoding="utf-8")) or {}
+            approved_groups = default_cfg.get("annotations", {}).get("approved_groups")
+            approved_scope = qa_gate.get("approved_scope")
+            if approved_groups != approved_scope:
+                status = "FAIL"
+                details.append(
+                    f"default.yaml annotations.approved_groups {approved_groups} != "
+                    f"qa_gate.yaml approved_scope {approved_scope} - run "
+                    f"update_qa_gate.py --apply to refresh both."
+                )
+            if qa_gate.get("resolution_status") not in {"resolved", "unresolved"}:
+                status = "FAIL"
+                details.append(f"qa_gate.yaml resolution_status is invalid: {qa_gate.get('resolution_status')!r}")
+        except Exception as exc:
+            status = "FAIL"
+            details.append(f"could not parse default.yaml / qa_gate.yaml: {exc}")
+    else:
+        status = "WARN"
+        details.append("MTSD-SupervisedDetection default.yaml or qa_gate.yaml missing")
+    add("qa_gate_scope_consistency", status, details,
+        "MTSD-SupervisedDetection default.yaml approved_groups matches qa_gate.yaml "
+        "approved_scope; refresh via update_qa_gate.py --apply if this drifts")
 
     return checks
 

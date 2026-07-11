@@ -284,6 +284,19 @@ cause any image to be dropped by Ultralytics' training loader.
   `Results/MTSD-*` remain empty. The machine-readable QA gate is unresolved and
   the recorded audit predates GRP-6, so this configured scope is not yet approved
   for final preparation/training.
+- **QA gate refresh** (`MTSD-SupervisedDetection/update_qa_gate.py`, new):
+  **implemented**. Discovers valid Final-QA groups and the newest
+  `MTSD-AnnotationQA/outputs/audit-*` from disk and rewrites
+  `config/default.yaml` (`approved_groups`) and `config/qa_gate.yaml`
+  (audit metadata + `resolution_status`) in place, so a newly QA'd group no
+  longer needs a manual edit of either file. `--dry-run` (the default) only
+  prints the proposed refresh; `--apply` writes both files atomically with no
+  backup copies, then reloads them to confirm their scopes still agree. It
+  never prepares data, trains, or runs the audit itself, so a newly discovered
+  group is added to the approved scope automatically but the gate stays
+  `unresolved` — and `--final` blocked — until a refreshed audit covers it.
+  A repository health check (`qa_gate_scope_consistency`) now fails if the two
+  files ever drift apart.
 
 ## 5. PromptDetect status
 
