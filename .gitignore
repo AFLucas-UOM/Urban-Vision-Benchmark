@@ -9,6 +9,12 @@
 .env
 .env.*
 !.env.example
+# Label Studio local databases hold session/auth state and must never be
+# versioned. NOTE: Datasets/MTSD/LabelStudioShared/.../label_studio.sqlite3 was
+# committed before this rule existed and is still tracked; untrack it with
+# `git rm --cached` (see Full-Repository-Audit recommended actions).
+label_studio.sqlite3
+*.sqlite3
 
 # --- Python environments and caches --------------------------
 .venv/

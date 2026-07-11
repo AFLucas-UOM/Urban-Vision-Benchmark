@@ -3,7 +3,7 @@
 A PowerShell utility for listing and deleting the large model weights that
 PromptDetect downloads, so you can reclaim disk space safely.
 
-- **Script:** [`Scripts/Other-Scripts/PromptDetect/clean_model_cache.ps1`](../Scripts/Other-Scripts/PromptDetect/clean_model_cache.ps1)
+- **Script:** [`Scripts/Other-Scripts/PromptDetect/clean_model_cache.ps1`](../../Scripts/Other-Scripts/PromptDetect/clean_model_cache.ps1)
 - **Platform:** Windows PowerShell (PowerShell 5.1 or PowerShell 7+)
 - **Scope:** touches **only** PromptDetect's models — other cached models are never affected.
 
@@ -176,5 +176,5 @@ Done. Reclaimed ~62.14 GB
 
 ## Related
 
-- [PromptDetect.md](PromptDetect.md) — the application this cache belongs to.
-- [ModelArchitectures.md](ModelArchitectures.md) — per-model details and footprints.
+- [PromptDetect.md](../PromptDetect.md) — the application this cache belongs to.
+- [ModelArchitectures.md](../ModelArchitectures.md) — per-model details and footprints.

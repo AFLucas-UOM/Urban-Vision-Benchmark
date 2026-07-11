@@ -1,6 +1,6 @@
 """Group discovery, QA detection, crop extraction, and manifest maintenance.
 
-A group GRP-N is QA-approved iff Datasets/Annotations/GRP-N/Final-QA/ contains a
+A group GRP-N is QA-approved iff Datasets/MTSD/Annotations/GRP-N/Final-QA/ contains a
 COCO JSON matching the configured pattern (currently QA-GRP*.json). This module
 scans for all groups on every run, ingests newly approved ones, skips groups
 whose QA file content hash is unchanged, and re-ingests (with a warning) groups
