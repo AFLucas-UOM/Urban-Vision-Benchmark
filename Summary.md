@@ -108,7 +108,7 @@ monitoring in Malta**. It unifies two research tracks:
    object detection with 5 classes (`Mixed Waste`, `Orange CMD`, `Organic Waste`,
    `Other Waste`, `Recyclable Material`).
 2. **MTSD — Maltese Traffic Sign Dataset**: 7,492 smartphone-collected traffic-sign
-   photos across 11 collection groups. Four groups currently have QA-verified
+   photos across 11 collection groups. Five groups currently have QA-verified
    COCO annotations (3,098 images / 8,372 boxes; 12 sign classes) whose boxes
    carry **auxiliary attributes** (view angle, mounting, condition, shape).
 
