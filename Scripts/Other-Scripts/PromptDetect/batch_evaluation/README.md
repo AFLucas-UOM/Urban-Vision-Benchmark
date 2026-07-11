@@ -6,6 +6,19 @@ MDWD or MTSD. The existing manual PromptDetect UI ([../app.py](../app.py)) is
 untouched — this is an additional mode that reuses the same
 `backend.DetectionBackend` and model registry.
 
+There are two intentionally distinct modes: `run_batch_eval.py` is the legacy
+class-agnostic exploratory evaluator; `run_dissertation_protocol.py` loads the
+fixed YAML protocol and performs target-class-aware dissertation evaluation.
+See [the protocol document](../../../../Documents/PromptDetect-Dissertation-Protocol.md).
+
+The dissertation headline macro includes `class-targeted` and
+`synonym-comparison` prompts only. Broad/optional prompts are reported
+separately. Universal model comparison uses P/R/F1, matched IoU and runtime;
+Cosmos/LocateAnything constant-score AP is marked `ap_meaningful=false` and is
+never a headline ranking field. `--final` MTSD runs require the canonical
+unaugmented prepared test folder, valid prep/split hashes, explicit approved
+scope, QA-only data and a resolved QA gate.
+
 ## Current research status
 
 `Results/PromptDetect/BatchEvaluation/MDWD/20260709-234655` is a completed
@@ -19,7 +32,7 @@ detection-dataset preparation.
 
 1. Loads a dataset split into a common ground-truth format:
    - **MDWD** — YOLO layout at `Datasets/MDWD/MDWD-YOLO26` (`train`/`valid`/`test`);
-   - **MTSD** — the prepared dataset at `Datasets/MTSD/Prepared/MTSD-YOLO`
+   - **MTSD** — the prepared dataset at `Datasets/MTSD/Prepared/MTSD-Unaugmented/MTSD-YOLO`
      when it exists, otherwise the QA COCO annotations
      (`Datasets/MTSD/Annotations/GRP-*/Final-QA/`, groups discovered
      dynamically). Before the prepared dataset exists, `train`/`valid`/`test`

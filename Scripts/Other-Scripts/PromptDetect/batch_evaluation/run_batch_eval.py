@@ -140,6 +140,7 @@ def run_evaluation(
     run_dir = config.new_run_dir(dataset)
 
     run_config = {
+        "evaluation_protocol": "class-agnostic-exploratory",
         "dataset": gt["dataset"], "split": gt["split"], "source": gt["source"],
         "prompts": prompts, "models": model_labels,
         "max_images": max_images, "conf_threshold": conf_threshold,

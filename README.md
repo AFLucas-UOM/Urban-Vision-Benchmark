@@ -37,10 +37,10 @@ framework-specific variants of the same data:
 Photographs of Maltese traffic signs collected in **11 groups**
 ([Datasets/MTSD/GRP-1 … GRP-11](Datasets/MTSD/)), each group holding raw
 captures under `Images/`. QA-verified annotations currently exist for
-**GRP-1, GRP-2, GRP-3 and GRP-5** under
-[Datasets/MTSD/Annotations/](Datasets/MTSD/Annotations/): the four
-COCO-style JSONs (`GRP-*/Final-QA/QA-GRP*.json`) contain **2,628 annotated
-images / 7,266 boxes**. Their boxes carry **per-sign auxiliary attributes** —
+**GRP-1, GRP-2, GRP-3, GRP-5 and GRP-6** under
+[Datasets/MTSD/Annotations/](Datasets/MTSD/Annotations/): the five
+COCO-style JSONs (`GRP-*/Final-QA/QA-GRP*.json`) contain **3,098 annotated
+images / 8,372 boxes**. Their boxes carry **per-sign auxiliary attributes** —
 viewing angle, mounting type, condition, and sign shape — used for the
 multi-attribute classification experiments. The completed attribute-model
 comparison is a **historical GRP-1–GRP-3 snapshot** (1,971 images / 5,273
@@ -221,6 +221,28 @@ relative links to `Datasets/MTSD/...` resolve correctly. `check_gps_tags.py`,
 `count_image_annotation_stats.py` and `generate_sample_annotations.py` are
 standalone audit utilities.
 
+### Supervised detection — [Scripts/MTSD-Scripts/MTSD-SupervisedDetection/](Scripts/MTSD-Scripts/MTSD-SupervisedDetection/README.md)
+
+The canonical CLI/package implements Final-QA discovery, the shared deterministic
+80/10/10 split, hashed augmented and unaugmented YOLO/COCO exports, strict dataset
+validation, and a resumable 13-model YOLO11/12/26 + RF-DETR training matrix.
+The explicit candidate lock currently resolves **3,098 images** into
+**2,479 train / 310 valid / 309 test**. Training uses W&B project
+`MSc-MTSD-SupervisedDetection`; no MTSD detection training has been executed.
+The four notebooks under `MTSD-SupervisedNotebooks/` are now thin read-only front
+ends to this package.
+
+```bash
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --dry-run
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --prepare-only --dataset-variant both --final
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --validate-prepared --strict
+```
+
+The final command intentionally refuses until `config/qa_gate.yaml` is resolved:
+the recorded audit has five invalid values and five duplicate candidates and
+predates GRP-6. Thus GRP-6 is explicitly configured, not silently discovered,
+but is not yet methodologically approved for final execution.
+
 ### Annotation & compliance tooling
 
 - **Label Studio workflow** ([Scripts/MTSD-Scripts/LabelStudio/](Scripts/MTSD-Scripts/LabelStudio/),
@@ -238,10 +260,12 @@ standalone audit utilities.
   face/licence-plate detection and blurring previews before any imagery is
   shared; preview/apply paths are guarded so stale previews are not applied.
 - **PromptDetect** ([Scripts/Other-Scripts/PromptDetect/](Scripts/Other-Scripts/PromptDetect/),
-  doc: [Documents/PromptDetect.md](Documents/PromptDetect.md)): Gradio app for
-  promptable detection with SAM 3/3.1, Cosmos Reason2 and LocateAnything, plus
-  `batch_evaluation/` for GT-scored MDWD/MTSD prompt evaluation with 0–15 prompt
-  config checks and 1–15 real prompts.
+  docs: [Documents/PromptDetect.md](Documents/PromptDetect.md) and
+  [Documents/PromptDetect-Dissertation-Protocol.md](Documents/PromptDetect-Dissertation-Protocol.md)):
+  Gradio app for promptable detection with SAM 3/3.1, Cosmos Reason2 and
+  LocateAnything, plus
+  an exploratory class-agnostic evaluator and a fixed target-aware dissertation
+  protocol with resumable per-model×prompt persistence.
 - **Inference benchmark** ([Scripts/Other-Scripts/Inference-Benchmark/](Scripts/Other-Scripts/Inference-Benchmark/)):
   dry-run verified inference-speed benchmark covering supervised detectors,
   prompt models and attribute classifiers. Only Cosmos Reason2 32B requires
@@ -387,13 +411,14 @@ numeric results; the imagery must be restored from local/off-repo storage.
 detection benchmarks (YOLO11/12/26 plus RF-DETR nano) executed with archived runs and
 a completed split-leakage sensitivity check (negligible effect, see
 [Documents/MDWDLeakageSensitivity.md](Documents/MDWDLeakageSensitivity.md));
-MTSD groups 1/2/3/5 QA-annotated with EDA and a six-variant
+MTSD groups 1/2/3/5/6 have Final-QA files, with the candidate final lock awaiting
+human QA approval; EDA and a six-variant
 attribute-classification round executed on the historical GRP-1–GRP-3
-snapshot; MTSD supervised detection notebooks are scaffolded but not yet run;
-PromptDetect batch evaluation is dry-run verified with a real five-image MDWD
-pilot (SAM 3 + Cosmos Reason2 2B; not dissertation evidence), while
-inference-speed tooling remains dry-run verified; annotation QA review and the
-final MTSD scope decision are ongoing.
+snapshot; the canonical MTSD supervised pipeline and fixed PromptDetect
+dissertation protocol are implemented and dry-run verified but have not been
+executed for final evidence. A five-image exploratory MDWD PromptDetect pilot
+exists (SAM 3 + Cosmos Reason2 2B; not dissertation evidence). Annotation-QA
+review remains the gate before final MTSD preparation and evaluation.
 
 ## Citation
 

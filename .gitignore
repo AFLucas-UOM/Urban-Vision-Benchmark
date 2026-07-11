@@ -33,9 +33,9 @@ Datasets/MTSD/Annotations/GRP-*/Fiverr-Annotations/
 # Prepared MTSD detection datasets (built by Prepare-MTSD-Detection-Dataset.ipynb);
 # images/labels are regenerable from the tracked QA JSONs + prep_manifest.json,
 # which stay tracked along with data.yaml.
-Datasets/MTSD/Prepared/*/train/
-Datasets/MTSD/Prepared/*/valid/
-Datasets/MTSD/Prepared/*/test/
+Datasets/MTSD/Prepared/**/train/
+Datasets/MTSD/Prepared/**/valid/
+Datasets/MTSD/Prepared/**/test/
 Datasets/MTSD/Prepared/_archive/
 *.cache
 # Timestamped safety copies made by update_annotation_paths.ps1 (the

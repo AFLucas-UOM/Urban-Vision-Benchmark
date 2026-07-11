@@ -29,3 +29,5 @@ ipykernel>=6.0.0
 opencv-python>=4.8.0
 # Optional: plug-in YOLO detectors for the anonymiser (--yolo-weights)
 # ultralytics>=8.0.0
+pytest
+PyYAML
