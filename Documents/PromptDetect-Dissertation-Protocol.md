@@ -4,7 +4,7 @@
 
 Targeted-v1 evaluates every image for each prompt. Only boxes in that prompt's declared target classes are positive GT; detections on target-negative images are false positives. False positives overlapping non-target annotated objects are separately recorded. This corrects the exploratory evaluator's tendency to reward a prompt for matching any annotated object.
 
-The versioned YAML contains six MDWD prompts and twelve primary MTSD prompts plus the optional all-12-class “roadside traffic-control object.” “No entry”/“one way” and “no through road”/“T-junction” remain separate synonym comparisons. The broad MTSD “traffic sign” target deliberately excludes the convex mirror. The primary model matrix is SAM 3, SAM 3.1, LocateAnything 3B, Cosmos Reason2 2B, and Cosmos Reason2 8B; 32B remains behind `--allow-heavy`.
+The versioned YAML contains six MDWD prompts and thirteen primary MTSD prompts, including the all-12-class “roadside traffic-control object.” “No entry”/“one way” and “no through road”/“T-junction” remain separate synonym comparisons. The broad MTSD “traffic sign” target deliberately excludes the convex mirror. The primary model matrix is SAM 3, SAM 3.1, LocateAnything 3B, Cosmos Reason2 2B, and Cosmos Reason2 8B; 32B remains behind `--allow-heavy`.
 
 ```powershell
 cd Scripts/Other-Scripts/PromptDetect/batch_evaluation
