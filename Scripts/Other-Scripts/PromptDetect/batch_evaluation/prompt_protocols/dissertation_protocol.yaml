@@ -37,4 +37,4 @@ datasets:
       - {id: mtsd-p10, prompt: directional sign, group: class-targeted, target_classes: [Directional Sign]}
       - {id: mtsd-p11, prompt: back of a traffic sign, group: class-targeted, target_classes: [Back-Unknown]}
       - {id: mtsd-p12, prompt: traffic sign, group: broad, target_classes: [Back-Unknown, No Entry (One Way), Other-Unknown, Stop Sign, Auxiliary Sign, Pedestrian Crossing, Directional Sign, Street Sign, Roundabout Ahead, No Through Road (T-Junction), Tourist Sign]}
-      - {id: mtsd-opt1, prompt: roadside traffic-control object, group: optional-broad, include_in_primary: false, target_classes: [Pedestrian Crossing, Stop Sign, No Entry (One Way), Roundabout Ahead, No Through Road (T-Junction), Blind-Spot Mirror (Convex Mirror), Street Sign, Directional Sign, Tourist Sign, Auxiliary Sign, Back-Unknown, Other-Unknown]}
+      - {id: mtsd-p13, prompt: roadside traffic-control object, group: broad, target_classes: [Pedestrian Crossing, Stop Sign, No Entry (One Way), Roundabout Ahead, No Through Road (T-Junction), Blind-Spot Mirror (Convex Mirror), Street Sign, Directional Sign, Tourist Sign, Auxiliary Sign, Back-Unknown, Other-Unknown]}
