@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T00:56:41",
+  "generated_at": "2026-07-11T12:53:58",
   "overall": "PASS",
   "checks": [
     {
@@ -29,7 +29,7 @@
     {
       "check": "python_compiles",
       "status": "PASS",
-      "description": "115 Python files compile",
+      "description": "117 Python files compile",
       "details": []
     },
     {
@@ -95,7 +95,13 @@
     {
       "check": "automation_targets",
       "status": "PASS",
-      "description": "All 29 workflow-runner targets exist on disk",
+      "description": "All 30 workflow-runner targets exist on disk",
+      "details": []
+    },
+    {
+      "check": "qa_gate_scope_consistency",
+      "status": "PASS",
+      "description": "MTSD-SupervisedDetection default.yaml approved_groups matches qa_gate.yaml approved_scope; refresh via update_qa_gate.py --apply if this drifts",
       "details": []
     }
   ]
