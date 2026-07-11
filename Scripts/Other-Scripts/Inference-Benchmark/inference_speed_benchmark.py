@@ -169,7 +169,7 @@ def _pending_detection_entries(dataset: str) -> list[ModelEntry]:
         ModelEntry(id=family, task="detection", dataset=dataset, family=family,
                    status="pending",
                    notes="no trained checkpoint found - train via "
-                         "Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks first")
+                         "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py first")
         for family in ("yolo12", "yolo26", "rfdetr")
     ]
 

@@ -61,3 +61,68 @@ def test_one_authoritative_split_drives_both_variants_and_formats(tmp_path, monk
         assert yolo == {Path(row["file_name"]).stem for row in coco_payload["images"]}
     assert not list((augmented / "MTSD-YOLO/valid/images").glob("*_aug*"))
     assert not list((augmented / "MTSD-YOLO/test/images").glob("*_aug*"))
+
+
+def test_coco_variant_normalises_exif_oriented_images(tmp_path):
+    # QA labels live in the EXIF-applied space. Ultralytics applies EXIF at load
+    # (YOLO variant hard-links originals) but rfdetr/torchvision's PIL loader does
+    # not, so the COCO variant must materialise transposed copies for oriented
+    # images. Raw pixels here are 40x20 tagged Orientation=6 -> displayed 20x40.
+    (tmp_path / "Scripts").mkdir(); annotations = tmp_path / "Datasets/MTSD/Annotations"
+    images_dir = tmp_path / "Datasets/MTSD/GRP-1/Images"; images_dir.mkdir(parents=True)
+    images, annotations_rows = [], []
+    for index in range(10):
+        path = images_dir / f"image_{index}.jpg"
+        image = Image.new("RGB", (40, 20), (index * 20, index, 255 - index * 20))
+        if index == 0:
+            exif = Image.Exif(); exif[274] = 6
+            image.save(path, quality=95, exif=exif)
+            width, height = 20, 40  # QA metadata records the displayed size
+        else:
+            image.save(path, quality=95)
+            width, height = 40, 20
+        images.append({"id": index + 1, "file_name": path.name,
+                       "source_image": path.relative_to(tmp_path).as_posix(),
+                       "width": width, "height": height})
+        annotations_rows.append({"id": index + 1, "image_id": index + 1,
+                                 "category_id": (index % len(CLASS_NAMES)) + 1, "bbox": [2, 2, 10, 8]})
+    qa = annotations / "GRP-1/Final-QA/QA-GRP1.json"; qa.parent.mkdir(parents=True)
+    qa.write_text(json.dumps({"images": images, "annotations": annotations_rows,
+                              "categories": [{"id": i + 1, "name": name} for i, name in enumerate(CLASS_NAMES)]}),
+                  encoding="utf-8")
+    gate = tmp_path / "gate.yaml"
+    gate.write_text("gate_version: v1\naudit_path: audit\naudit_timestamp: now\naudited_groups: [GRP-1]\n"
+                    "approved_scope: [GRP-1]\nfinding_counts: {}\nresolution_status: resolved\napproved_by: tester\n",
+                    encoding="utf-8")
+    config = {
+        "repo_root": str(tmp_path),
+        "dataset": {"annotations_root": str(annotations), "prepared_root": str(tmp_path / "prepared"),
+                    "version_base": "mtsd-qa-v1"},
+        "annotations": {"group_scope": "explicit", "approved_groups": ["GRP-1"],
+                        "unexpected_group_policy": "fail", "qa_gate_file": str(gate)},
+        "split": {"ratios": {"train": .8, "valid": .1, "test": .1}, "seed": 42},
+        "augmentation": {"recipe_version": "photometric-v1", "copies_per_image": 1, "seed": 42,
+            "ops": {"brightness": {"min": 1, "max": 1}, "contrast": {"min": 1, "max": 1},
+                    "color": {"min": 1, "max": 1}, "gaussian_blur": {"p": 0, "sigma_max": 0},
+                    "gaussian_noise": {"p": 0, "sigma_max": 0},
+                    "jpeg_compression": {"p": 0, "quality_min": 90, "quality_max": 90},
+                    "gamma": {"min": 1, "max": 1}}},
+        "validation": {"require_all_classes_in_test": False,
+                       "minimum_boxes_per_class": {"train": 0, "valid": 0, "test": 0},
+                       "low_support_warning_threshold": 0},
+    }
+    result = prep.prepare(config, variants="both", final=True)
+    assert result["validation"]["ok"]
+    for variant in ("MTSD-Augmented", "MTSD-Unaugmented"):
+        root = tmp_path / "prepared" / variant
+        manifest = json.loads((root / "prep_manifest.json").read_text(encoding="utf-8"))
+        assert manifest["coco_exif_normalised_images"] == 1
+        found = list(root.glob("MTSD-COCO/*/grp1_image_0.jpg"))
+        assert len(found) == 1
+        with Image.open(found[0]) as coco_img:
+            assert coco_img.size == (20, 40)          # transposed copy, matches QA dims
+            assert coco_img.getexif().get(274, 1) in (None, 1)  # orientation baked in
+        yolo_img = next(root.glob("MTSD-YOLO/*/images/grp1_image_0.jpg"))
+        with Image.open(yolo_img) as raw:
+            assert raw.size == (40, 20)               # original untouched (hard link)
+            assert raw.getexif().get(274) == 6

@@ -128,6 +128,20 @@ Roboflow folds the original file extension into the stem (`10_jpeg` vs
 `10_jpg` are treated as distinct source photographs — a known, stated
 limitation, not a bug). All 13 passed.
 
+**Quantified during the 2026-07-11 full-repository audit:** normalising that
+extension marker (treating `X_jpg` and `X_jpeg` as the same photograph)
+identifies **9 additional cross-split source identities** beyond the 30 used
+here — IMG_4299, IMG_4396, IMG_4398, IMG_4407, IMG_4410 (train+test) and
+IMG_4403, IMG_4405, IMG_4406, IMG_4419 (train+valid) — i.e. 39 candidate
+leaked photographs in total, adding at most 9 evaluation images (~2.4% of a
+369-image split) to the removed sets. Given that the clean subsets built from
+the 30 confirmed identities moved every metric by less than the negligible
+threshold, these 9 extra candidates are extremely unlikely to change the
+verdict; they are recorded here so the limitation is quantified rather than
+open-ended. See
+`Documents/Final-Reports/Full-Repository-Audit/20260711-111540/` (finding F04)
+for the recomputation.
+
 ## What the results show
 
 Full per-model tables are in the report; headline numbers:
@@ -173,6 +187,17 @@ shows **0 of the 15** would have been silently dropped from training — they
 train with a marginally out-of-bounds box as-is, and the 5 empty-label images
 simply act as background/negative examples. Neither issue could have
 influenced any reported validation/test metric.
+
+**Interpretation note (2026-07-11 audit):** the 15 flagged lines are in fact
+YOLO *polygon/segmentation-format* label lines (class id followed by a point
+list), which the EDA's 5-value box parser misreads as boxes with coordinates
+out of range. Re-parsing every label line by its actual format shows **no
+true bounding-box coordinate outside [0, 1] anywhere in the dataset**;
+polygon-format lines occur in all three splits (1,373 train / 13 valid /
+7 test) and Ultralytics converts them to boxes natively at load time. The
+"confined to training / zero metric impact" conclusion above is therefore
+conservative — the flagged lines were never defective to begin with. The 5
+empty-annotation (background) images are confirmed exactly as stated.
 
 ## Outputs
 

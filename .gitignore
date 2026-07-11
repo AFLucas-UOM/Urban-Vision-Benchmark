@@ -48,6 +48,7 @@ Datasets/MTSD/Prepared/_archive/
 # Timestamped safety copies made by update_annotation_paths.ps1 (the
 # pre-migration content is already preserved in git history).
 *.pre-migration-*.bak
+LabelStudioshared/
 
 # --- Model weights and checkpoints ---------------------------
 # Pretrained weights in Models/ are re-downloadable; trained weights
