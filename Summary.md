@@ -206,7 +206,12 @@ would produce). The completed MDWD benchmark tables require no adjustment;
 the leakage is documented as a limitations-section caveat only. The 15
 out-of-range boxes and 5 empty annotations were audited separately, confirmed
 confined to the training split (0 in evaluation splits), and confirmed not to
-cause any image to be dropped by Ultralytics' training loader.
+cause any image to be dropped by Ultralytics' training loader. (2026-07-11
+audit follow-up: the 15 flagged lines are actually YOLO polygon-format label
+lines misread as boxes — no true box coordinate is outside [0, 1] anywhere;
+extension-normalised source identity also finds 9 further leaked photos, 39
+total, without changing the negligible verdict — see the interpretation notes
+in [`Documents/MDWDLeakageSensitivity.md`](Documents/MDWDLeakageSensitivity.md).)
 
 ## 4. MTSD status
 

@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 import yaml
-from PIL import Image
+from PIL import Image, ImageOps
 
 from . import __version__
 from .annotation_sources import CLASS_NAMES, discover_sources
@@ -29,6 +29,32 @@ def _place(source: Path, destination: Path) -> None:
         os.link(source, destination)
     except OSError:
         shutil.copy2(source, destination)
+
+
+def _place_coco(source: Path, destination: Path) -> bool:
+    """Place an image into the COCO variant, EXIF-normalising when required.
+
+    QA labels are in the EXIF-applied (displayed) coordinate space. Ultralytics
+    applies EXIF orientation when loading, so the YOLO variant can hard-link the
+    originals, but RF-DETR's CocoDetection inherits torchvision's PIL loader,
+    which does NOT apply EXIF orientation. Oriented images therefore get a
+    transposed copy (orientation baked into the pixels, tag dropped) instead of
+    a hard link. Returns True when a normalised copy was written.
+    """
+    try:
+        with Image.open(source) as image:
+            orientation = image.getexif().get(274, 1) or 1
+            if orientation != 1:
+                destination.parent.mkdir(parents=True, exist_ok=True)
+                transposed = ImageOps.exif_transpose(image)
+                save_kwargs = {"quality": 95, "subsampling": 0} \
+                    if destination.suffix.lower() in {".jpg", ".jpeg"} else {}
+                transposed.save(destination, **save_kwargs)
+                return True
+    except Exception:
+        pass  # unreadable EXIF: fall through to the plain placement
+    _place(source, destination)
+    return False
 
 
 def validate_records(raw: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], dict[str, Any], list[dict[str, Any]]]:
@@ -134,12 +160,15 @@ def _coco_payload(records: list[dict[str, Any]], split: str, version: str) -> di
             "images": images, "annotations": annotations}
 
 
-def _write_coco(root: Path, records: list[dict[str, Any]], version: str) -> None:
+def _write_coco(root: Path, records: list[dict[str, Any]], version: str) -> int:
+    normalised = 0
     for split in SPLITS:
         split_records = [row for row in records if row["split"] == split]
-        for record in split_records: _place(record["source_path"], root / split / record["out_name"])
+        for record in split_records:
+            normalised += _place_coco(record["source_path"], root / split / record["out_name"])
         path = root / split / "_annotations.coco.json"; path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps(_coco_payload(records, split, version), indent=2) + "\n", encoding="utf-8")
+    return normalised
 
 
 def _augment(variant: Path, records: list[dict[str, Any]], config: dict[str, Any]) -> list[dict[str, Any]]:
@@ -209,7 +238,7 @@ def prepare(config: dict[str, Any], variants: str = "both", allow_raw_xml: bool 
         version = f"{base}-{'aug' if variant_name == 'augmented' else 'noaug'}"
         included = [row["group"] for row in groups if row["status"] == "included"]
         _write_yolo(target / "MTSD-YOLO", records, version, included)
-        _write_coco(target / "MTSD-COCO", records, version)
+        coco_exif_normalised = _write_coco(target / "MTSD-COCO", records, version)
         split_path = target / "split_manifest.csv"; write_csv(split_path, split_rows)
         aug_rows = _augment(target, records, config["augmentation"]) if variant_name == "augmented" else []
         aug_path = target / "augmentation_manifest.csv"
@@ -234,6 +263,11 @@ def prepare(config: dict[str, Any], variants: str = "both", allow_raw_xml: bool 
                              "copies_per_image": config["augmentation"]["copies_per_image"] if aug_rows else 0,
                              "ops": config["augmentation"]["ops"], "seed": config["augmentation"]["seed"]},
             "validation_findings": findings, "excluded_records": excluded,
+            # RF-DETR/torchvision load COCO images via PIL without applying EXIF
+            # orientation; oriented originals are materialised as transposed copies
+            # in MTSD-COCO (the YOLO variant hard-links originals because
+            # Ultralytics applies EXIF at load time).
+            "coco_exif_normalised_images": coco_exif_normalised,
             "outputs": {"yolo_path": str(target / "MTSD-YOLO"), "coco_path": str(target / "MTSD-COCO")},
             "split_manifest_sha256": sha256_file(split_path), "augmentation_manifest_sha256": sha256_file(aug_path),
             "cross_variant_split_manifest_sha256": sha256_file(split_path),
