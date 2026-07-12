@@ -1,0 +1,8 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,GRP-1/072bd818-IMG_4648.jpeg,1123.25,1419.59,1774.41,3088.47,0.3828,Stop Sign,0.9393
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,GRP-1/091652b2-IMG20260105120954.jpg,500.67,1036.94,2765.43,3072.73,0.6641,Auxiliary Sign,0.9727
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,GRP-1/091652b2-IMG20260105120954.jpg,1070.33,1205.17,2283.8,2324.02,0.5938,,0.2864
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,GRP-1/091652b2-IMG20260105120954.jpg,932.59,582.09,2404.19,1158.64,0.373,Directional Sign,0.9777
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,GRP-1/094f8a9f-RV__2.jpeg,1073.85,1205.45,1819.37,1996.25,0.707,Other-Unknown,0.9817
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,GRP-1/094f8a9f-RV__2.jpeg,1061.54,592.78,1814.62,1259.88,0.6484,Stop Sign,0.9707
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,GRP-1/094f8a9f-RV__2.jpeg,1059.42,577.5,1808.97,4032.0,0.3086,,0.2351

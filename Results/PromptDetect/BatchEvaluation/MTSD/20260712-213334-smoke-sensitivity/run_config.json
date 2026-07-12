@@ -1,0 +1,249 @@
+{
+  "evaluation_protocol": "prompt-sensitivity-v1",
+  "protocol_version": "prompt-sensitivity-v1",
+  "protocol_hash": "502faa200c0ffa7cc393124b63fe8c7def75d6f14476bba218a77787eb8bacb1",
+  "dataset": "MTSD",
+  "split": "test",
+  "source": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations",
+  "source_type": "qa_fallback",
+  "dataset_manifest_hash": "qa-fallback-no-manifest",
+  "dataset_manifest": null,
+  "models": [
+    "SAM 3"
+  ],
+  "prompt_ids": [
+    "sens-mtsd-ped-01",
+    "sens-mtsd-ped-02",
+    "sens-mtsd-ped-03",
+    "sens-mtsd-ped-04",
+    "sens-mtsd-stop-01",
+    "sens-mtsd-stop-02",
+    "sens-mtsd-stop-03",
+    "sens-mtsd-stop-04",
+    "sens-mtsd-entry-01",
+    "sens-mtsd-entry-02",
+    "sens-mtsd-entry-03",
+    "sens-mtsd-entry-04",
+    "sens-mtsd-roundabout-01",
+    "sens-mtsd-roundabout-02",
+    "sens-mtsd-roundabout-03",
+    "sens-mtsd-roundabout-04",
+    "sens-mtsd-mirror-01",
+    "sens-mtsd-mirror-02",
+    "sens-mtsd-mirror-03",
+    "sens-mtsd-mirror-04"
+  ],
+  "prompt_definitions": [
+    {
+      "id": "sens-mtsd-ped-01",
+      "prompt": "pedestrian crossing sign",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Pedestrian Crossing"
+      ],
+      "sensitivity_family": "mtsd-pedestrian-crossing",
+      "variant_type": "canonical"
+    },
+    {
+      "id": "sens-mtsd-ped-02",
+      "prompt": "road sign for a pedestrian crossing",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Pedestrian Crossing"
+      ],
+      "sensitivity_family": "mtsd-pedestrian-crossing",
+      "variant_type": "lexical-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-ped-03",
+      "prompt": "sign indicating a pedestrian crossing",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Pedestrian Crossing"
+      ],
+      "sensitivity_family": "mtsd-pedestrian-crossing",
+      "variant_type": "descriptive-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-ped-04",
+      "prompt": "find all pedestrian crossing signs",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Pedestrian Crossing"
+      ],
+      "sensitivity_family": "mtsd-pedestrian-crossing",
+      "variant_type": "instruction"
+    },
+    {
+      "id": "sens-mtsd-stop-01",
+      "prompt": "stop sign",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Stop Sign"
+      ],
+      "sensitivity_family": "mtsd-stop-sign",
+      "variant_type": "canonical"
+    },
+    {
+      "id": "sens-mtsd-stop-02",
+      "prompt": "road sign instructing drivers to stop",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Stop Sign"
+      ],
+      "sensitivity_family": "mtsd-stop-sign",
+      "variant_type": "lexical-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-stop-03",
+      "prompt": "traffic sign indicating that vehicles must stop",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Stop Sign"
+      ],
+      "sensitivity_family": "mtsd-stop-sign",
+      "variant_type": "descriptive-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-stop-04",
+      "prompt": "find all stop signs",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Stop Sign"
+      ],
+      "sensitivity_family": "mtsd-stop-sign",
+      "variant_type": "instruction"
+    },
+    {
+      "id": "sens-mtsd-entry-01",
+      "prompt": "no entry sign",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "No Entry (One Way)"
+      ],
+      "sensitivity_family": "mtsd-no-entry",
+      "variant_type": "canonical"
+    },
+    {
+      "id": "sens-mtsd-entry-02",
+      "prompt": "road sign indicating no entry",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "No Entry (One Way)"
+      ],
+      "sensitivity_family": "mtsd-no-entry",
+      "variant_type": "lexical-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-entry-03",
+      "prompt": "traffic sign prohibiting vehicles from entering",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "No Entry (One Way)"
+      ],
+      "sensitivity_family": "mtsd-no-entry",
+      "variant_type": "descriptive-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-entry-04",
+      "prompt": "find all no entry signs",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "No Entry (One Way)"
+      ],
+      "sensitivity_family": "mtsd-no-entry",
+      "variant_type": "instruction"
+    },
+    {
+      "id": "sens-mtsd-roundabout-01",
+      "prompt": "roundabout ahead sign",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Roundabout Ahead"
+      ],
+      "sensitivity_family": "mtsd-roundabout-ahead",
+      "variant_type": "canonical"
+    },
+    {
+      "id": "sens-mtsd-roundabout-02",
+      "prompt": "warning sign for a roundabout ahead",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Roundabout Ahead"
+      ],
+      "sensitivity_family": "mtsd-roundabout-ahead",
+      "variant_type": "lexical-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-roundabout-03",
+      "prompt": "traffic sign indicating an upcoming roundabout",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Roundabout Ahead"
+      ],
+      "sensitivity_family": "mtsd-roundabout-ahead",
+      "variant_type": "descriptive-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-roundabout-04",
+      "prompt": "find all roundabout ahead signs",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Roundabout Ahead"
+      ],
+      "sensitivity_family": "mtsd-roundabout-ahead",
+      "variant_type": "instruction"
+    },
+    {
+      "id": "sens-mtsd-mirror-01",
+      "prompt": "blind-spot convex mirror",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Blind-Spot Mirror (Convex Mirror)"
+      ],
+      "sensitivity_family": "mtsd-blind-spot-mirror",
+      "variant_type": "canonical"
+    },
+    {
+      "id": "sens-mtsd-mirror-02",
+      "prompt": "roadside convex mirror for blind spots",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Blind-Spot Mirror (Convex Mirror)"
+      ],
+      "sensitivity_family": "mtsd-blind-spot-mirror",
+      "variant_type": "lexical-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-mirror-03",
+      "prompt": "convex traffic mirror used to improve road visibility",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Blind-Spot Mirror (Convex Mirror)"
+      ],
+      "sensitivity_family": "mtsd-blind-spot-mirror",
+      "variant_type": "descriptive-paraphrase"
+    },
+    {
+      "id": "sens-mtsd-mirror-04",
+      "prompt": "find all roadside blind-spot mirrors",
+      "group": "paraphrase-sensitivity",
+      "target_classes": [
+        "Blind-Spot Mirror (Convex Mirror)"
+      ],
+      "sensitivity_family": "mtsd-blind-spot-mirror",
+      "variant_type": "instruction"
+    }
+  ],
+  "approved_group_scope": null,
+  "group_scope": null,
+  "final_enforcement": {
+    "final_mode": false
+  },
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 100,
+  "consistency_iou_threshold": 0.5,
+  "n_images": 5,
+  "started_at": "2026-07-12T19:33:36.156002+00:00"
+}

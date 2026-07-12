@@ -1,0 +1,6 @@
+dataset,model,sensitivity_family,n_pairs,mean_pairwise_box_f1,mean_pairwise_box_jaccard,mean_matched_pair_iou,min_pairwise_box_f1,max_pairwise_box_f1
+MTSD,SAM 3,mtsd-blind-spot-mirror,6,0.4833,0.4778,0.9969,0.2,0.8
+MTSD,SAM 3,mtsd-no-entry,6,0.6825,0.6268,0.9706,0.5333,0.8513
+MTSD,SAM 3,mtsd-pedestrian-crossing,6,0.7288,0.7029,0.9918,0.6,0.9667
+MTSD,SAM 3,mtsd-roundabout-ahead,6,0.7667,0.7,0.9955,0.6667,0.96
+MTSD,SAM 3,mtsd-stop-sign,6,0.6969,0.6288,0.9927,0.5491,0.9581

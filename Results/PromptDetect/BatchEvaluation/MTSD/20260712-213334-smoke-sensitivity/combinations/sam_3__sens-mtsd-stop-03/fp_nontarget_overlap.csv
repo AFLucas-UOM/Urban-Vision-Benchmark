@@ -1,0 +1,12 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/072bd818-IMG_4648.jpeg,2585.89,2955.71,3024.0,3579.32,0.3379,,0.0
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/072bd818-IMG_4648.jpeg,1496.74,3527.8,1663.97,3681.59,0.3105,,0.0
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/091652b2-IMG20260105120954.jpg,932.21,585.15,2402.06,1157.74,0.8281,Directional Sign,0.9698
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/091652b2-IMG20260105120954.jpg,499.21,1036.31,2765.17,3075.51,0.7617,Auxiliary Sign,0.9749
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/091652b2-IMG20260105120954.jpg,1070.76,1201.55,2285.68,2326.52,0.5742,,0.2884
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/094f8a9f-RV__2.jpeg,1073.17,1204.46,1818.93,1996.0,0.832,Other-Unknown,0.9829
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/094f8a9f-RV__2.jpeg,1238.38,1863.72,1718.31,3081.62,0.8281,Pedestrian Crossing,0.96
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/094f8a9f-RV__2.jpeg,174.42,2787.43,332.37,2996.01,0.7578,Auxiliary Sign,0.9566
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/094f8a9f-RV__2.jpeg,102.62,2960.23,331.78,3146.01,0.5508,Auxiliary Sign,0.8332
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/094f8a9f-RV__2.jpeg,1059.27,580.83,1805.17,4032.0,0.3965,,0.2365
+SAM 3,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,GRP-1/094f8a9f-RV__2.jpeg,1337.1,2193.09,1690.22,2913.64,0.3008,,0.4179

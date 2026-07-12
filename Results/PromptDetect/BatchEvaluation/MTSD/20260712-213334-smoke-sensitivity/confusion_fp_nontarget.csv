@@ -1,0 +1,97 @@
+model,prompt_id,non_target_class,count
+SAM 3,sens-mtsd-entry-01,Blind-Spot Mirror (Convex Mirror),1
+SAM 3,sens-mtsd-entry-01,Back-Unknown,1
+SAM 3,sens-mtsd-entry-01,Stop Sign,1
+SAM 3,sens-mtsd-entry-01,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-01,Directional Sign,1
+SAM 3,sens-mtsd-entry-01,Stop Sign,1
+SAM 3,sens-mtsd-entry-01,Other-Unknown,1
+SAM 3,sens-mtsd-entry-01,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-01,Pedestrian Crossing,1
+SAM 3,sens-mtsd-entry-01,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-02,Back-Unknown,1
+SAM 3,sens-mtsd-entry-02,Stop Sign,1
+SAM 3,sens-mtsd-entry-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-02,Directional Sign,1
+SAM 3,sens-mtsd-entry-02,Other-Unknown,1
+SAM 3,sens-mtsd-entry-02,Stop Sign,1
+SAM 3,sens-mtsd-entry-02,Pedestrian Crossing,1
+SAM 3,sens-mtsd-entry-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-03,Back-Unknown,1
+SAM 3,sens-mtsd-entry-03,Stop Sign,1
+SAM 3,sens-mtsd-entry-03,Stop Sign,1
+SAM 3,sens-mtsd-entry-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-03,Directional Sign,1
+SAM 3,sens-mtsd-entry-03,Stop Sign,1
+SAM 3,sens-mtsd-entry-03,Other-Unknown,1
+SAM 3,sens-mtsd-entry-03,Pedestrian Crossing,1
+SAM 3,sens-mtsd-entry-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-04,Directional Sign,1
+SAM 3,sens-mtsd-entry-04,Auxiliary Sign,1
+SAM 3,sens-mtsd-entry-04,Other-Unknown,1
+SAM 3,sens-mtsd-entry-04,Stop Sign,1
+SAM 3,sens-mtsd-entry-04,Pedestrian Crossing,1
+SAM 3,sens-mtsd-mirror-03,Back-Unknown,1
+SAM 3,sens-mtsd-mirror-03,Stop Sign,1
+SAM 3,sens-mtsd-mirror-03,Stop Sign,1
+SAM 3,sens-mtsd-mirror-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-mirror-03,Directional Sign,1
+SAM 3,sens-mtsd-mirror-03,Stop Sign,1
+SAM 3,sens-mtsd-mirror-03,Other-Unknown,1
+SAM 3,sens-mtsd-mirror-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-ped-02,Directional Sign,1
+SAM 3,sens-mtsd-ped-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-ped-02,Other-Unknown,1
+SAM 3,sens-mtsd-ped-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-ped-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-ped-02,Stop Sign,1
+SAM 3,sens-mtsd-ped-03,Directional Sign,1
+SAM 3,sens-mtsd-ped-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-ped-03,Other-Unknown,1
+SAM 3,sens-mtsd-ped-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-ped-04,Directional Sign,1
+SAM 3,sens-mtsd-ped-04,Auxiliary Sign,1
+SAM 3,sens-mtsd-roundabout-01,Stop Sign,1
+SAM 3,sens-mtsd-roundabout-01,Auxiliary Sign,1
+SAM 3,sens-mtsd-roundabout-01,Directional Sign,1
+SAM 3,sens-mtsd-roundabout-01,Other-Unknown,1
+SAM 3,sens-mtsd-roundabout-01,Stop Sign,1
+SAM 3,sens-mtsd-roundabout-02,Blind-Spot Mirror (Convex Mirror),1
+SAM 3,sens-mtsd-roundabout-02,Stop Sign,1
+SAM 3,sens-mtsd-roundabout-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-roundabout-02,Other-Unknown,1
+SAM 3,sens-mtsd-roundabout-02,Stop Sign,1
+SAM 3,sens-mtsd-roundabout-03,Blind-Spot Mirror (Convex Mirror),1
+SAM 3,sens-mtsd-roundabout-03,Stop Sign,1
+SAM 3,sens-mtsd-roundabout-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-roundabout-03,Directional Sign,1
+SAM 3,sens-mtsd-roundabout-03,Other-Unknown,1
+SAM 3,sens-mtsd-roundabout-03,Stop Sign,1
+SAM 3,sens-mtsd-roundabout-03,Pedestrian Crossing,1
+SAM 3,sens-mtsd-roundabout-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-roundabout-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-roundabout-04,Blind-Spot Mirror (Convex Mirror),1
+SAM 3,sens-mtsd-roundabout-04,Stop Sign,1
+SAM 3,sens-mtsd-roundabout-04,Auxiliary Sign,1
+SAM 3,sens-mtsd-roundabout-04,Directional Sign,1
+SAM 3,sens-mtsd-roundabout-04,Stop Sign,1
+SAM 3,sens-mtsd-roundabout-04,Other-Unknown,1
+SAM 3,sens-mtsd-stop-01,Auxiliary Sign,1
+SAM 3,sens-mtsd-stop-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-stop-02,Directional Sign,1
+SAM 3,sens-mtsd-stop-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-stop-02,Other-Unknown,1
+SAM 3,sens-mtsd-stop-02,Pedestrian Crossing,1
+SAM 3,sens-mtsd-stop-02,Auxiliary Sign,1
+SAM 3,sens-mtsd-stop-03,Directional Sign,1
+SAM 3,sens-mtsd-stop-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-stop-03,Other-Unknown,1
+SAM 3,sens-mtsd-stop-03,Pedestrian Crossing,1
+SAM 3,sens-mtsd-stop-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-stop-03,Auxiliary Sign,1
+SAM 3,sens-mtsd-stop-04,Blind-Spot Mirror (Convex Mirror),1
+SAM 3,sens-mtsd-stop-04,Auxiliary Sign,1
+SAM 3,sens-mtsd-stop-04,Other-Unknown,1
+SAM 3,sens-mtsd-stop-04,Auxiliary Sign,1

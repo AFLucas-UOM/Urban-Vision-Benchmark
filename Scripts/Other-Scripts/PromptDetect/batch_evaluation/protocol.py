@@ -14,6 +14,8 @@ def canonical_hash(payload: dict[str, Any]) -> str:
 
 
 def load_protocol(path: Path) -> dict[str, Any]:
+    from prompt_sensitivity import validate_sensitivity_families
+
     payload = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
     if not payload.get("protocol_version") or not isinstance(payload.get("datasets"), dict):
         raise ValueError(f"Invalid protocol file: {path}")
@@ -24,6 +26,7 @@ def load_protocol(path: Path) -> dict[str, Any]:
             for key in ("id", "prompt", "group", "target_classes"):
                 if key not in prompt: raise ValueError(f"{dataset} prompt missing {key}: {prompt}")
             ids.append(prompt["id"])
+        validate_sensitivity_families(dataset, spec)
     if len(ids) != len(set(ids)): raise ValueError("Protocol prompt IDs must be globally unique")
     payload["protocol_hash"] = canonical_hash(payload)
     payload["protocol_path"] = str(path)

@@ -15,13 +15,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_protocol_fixed_semantics():
+    # mtsd-opt1 (optional-broad) was promoted to mtsd-p13 (broad) in f244d47.
     protocol = load_protocol(ROOT / "prompt_protocols/dissertation_protocol.yaml")
     mtsd = protocol["datasets"]["MTSD"]
     traffic = next(row for row in mtsd["prompts"] if row["id"] == "mtsd-p12")
-    optional = next(row for row in mtsd["prompts"] if row["id"] == "mtsd-opt1")
+    all_objects = next(row for row in mtsd["prompts"] if row["id"] == "mtsd-p13")
     assert "Blind-Spot Mirror (Convex Mirror)" not in traffic["target_classes"]
-    assert len(optional["target_classes"]) == 12
-    assert optional not in select_prompts(mtsd)
+    assert len(all_objects["target_classes"]) == 12
+    assert all_objects["group"] == "broad" and all_objects in select_prompts(mtsd)
     assert [row["id"] for row in mtsd["prompts"] if row["group"] == "synonym-comparison"] == ["mtsd-p3", "mtsd-p4", "mtsd-p6", "mtsd-p7"]
 
 

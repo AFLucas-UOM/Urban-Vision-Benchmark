@@ -1,0 +1,6 @@
+model,target_class,best_prompt_id,best_prompt,recall,f1
+SAM 3,Blind-Spot Mirror (Convex Mirror),sens-mtsd-mirror-04,find all roadside blind-spot mirrors,1.0,1.0
+SAM 3,No Entry (One Way),sens-mtsd-entry-04,find all no entry signs,0.0,0.0
+SAM 3,Pedestrian Crossing,sens-mtsd-ped-01,pedestrian crossing sign,1.0,0.6667
+SAM 3,Roundabout Ahead,sens-mtsd-roundabout-04,find all roundabout ahead signs,0.0,0.0
+SAM 3,Stop Sign,sens-mtsd-stop-01,stop sign,1.0,0.6667

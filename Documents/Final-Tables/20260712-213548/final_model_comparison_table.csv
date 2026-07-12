@@ -1,0 +1,38 @@
+track,model,key_metric,value,secondary_metric,secondary_value,source
+MDWD detection,yolo11n,val mAP@50-95,0.6888369062440758,val F1,0.8507037127455663,Results\MDWD-Results\YOLO11\Model-Size-Comparison\yolo11_multi_model_template_summary.csv
+MDWD detection,yolo11s,val mAP@50-95,0.7346008341140627,val F1,0.8819858833775887,Results\MDWD-Results\YOLO11\Model-Size-Comparison\yolo11_multi_model_template_summary.csv
+MDWD detection,yolo11m,val mAP@50-95,0.7353568731041266,val F1,0.8672905780509078,Results\MDWD-Results\YOLO11\Model-Size-Comparison\yolo11_multi_model_template_summary.csv
+MDWD detection,yolo11l,val mAP@50-95,0.7614110989418542,val F1,0.9003537244993949,Results\MDWD-Results\YOLO11\Model-Size-Comparison\yolo11_multi_model_template_summary.csv
+MDWD detection,yolo12n,val mAP@50-95,0.7121870181049601,val F1,0.8659996215550535,Results\MDWD-Results\YOLO12\Model-Size-Comparison\yolo12_multi_model_template_summary.csv
+MDWD detection,yolo12s,val mAP@50-95,0.7413695245455391,val F1,0.8845083183312759,Results\MDWD-Results\YOLO12\Model-Size-Comparison\yolo12_multi_model_template_summary.csv
+MDWD detection,yolo12m,val mAP@50-95,0.7655754993119791,val F1,0.9075919868142031,Results\MDWD-Results\YOLO12\Model-Size-Comparison\yolo12_multi_model_template_summary.csv
+MDWD detection,yolo26n,val mAP@50-95,0.6983701238316875,val F1,0.8589337736179753,Results\MDWD-Results\YOLO26\Model-Size-Comparison\yolo26_multi_model_template_summary.csv
+MDWD detection,yolo26s,val mAP@50-95,0.7559666179134011,val F1,0.8951393265871109,Results\MDWD-Results\YOLO26\Model-Size-Comparison\yolo26_multi_model_template_summary.csv
+MDWD detection,yolo26m,val mAP@50-95,0.762111243348453,val F1,0.8992460511580751,Results\MDWD-Results\YOLO26\Model-Size-Comparison\yolo26_multi_model_template_summary.csv
+MDWD detection,yolo26l,val mAP@50-95,0.7951067059184301,val F1,0.9135681972513805,Results\MDWD-Results\YOLO26\Model-Size-Comparison\yolo26_multi_model_template_summary.csv
+MDWD detection,yolo26n,val mAP@50-95,0.7101449387196088,val F1,0.8677538670065944,Results\MDWD-Results\YOLO26-DGX\Model-Size-Comparison\yolo26_multi_model_template_summary.csv
+MDWD detection,yolo26s,val mAP@50-95,0.7565106419877367,val F1,0.8950051965560605,Results\MDWD-Results\YOLO26-DGX\Model-Size-Comparison\yolo26_multi_model_template_summary.csv
+MDWD detection,yolo26m,val mAP@50-95,0.7637484286319105,val F1,0.8976566260803364,Results\MDWD-Results\YOLO26-DGX\Model-Size-Comparison\yolo26_multi_model_template_summary.csv
+MDWD detection,yolo26l,val mAP@50-95,0.7947859960634506,val F1,0.9127824935072647,Results\MDWD-Results\YOLO26-DGX\Model-Size-Comparison\yolo26_multi_model_template_summary.csv
+MTSD attributes,dinov3,mean macro-F1,0.7826,condition F1,0.5534,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv
+MTSD attributes,dinov3_lora,mean macro-F1,0.8734,condition F1,0.7346,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv
+MTSD attributes,vjepa,mean macro-F1,0.7699,condition F1,0.5110,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv
+MTSD attributes,vjepa_lora,mean macro-F1,0.8400,condition F1,0.5948,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv
+MTSD attributes,convnext_frozen,mean macro-F1,0.7629,condition F1,0.5673,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv
+MTSD attributes,convnext,mean macro-F1,0.8641,condition F1,0.7113,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv
+PromptDetect (MDWD),SAM 3 | Black Garbage Bag,F1,0.4286,AP@50,0.2727,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),SAM 3 | Grey Garbage Bag,F1,0.7368,AP@50,0.6136,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),SAM 3 | White Garbage Bag,F1,0.7368,AP@50,0.6364,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),SAM 3 | Orange Garbage Bag,F1,0.0,AP@50,0.0,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),SAM 3 | Domestic Waste,F1,0.3529,AP@50,0.2273,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),SAM 3 | Garbage,F1,0.8462,AP@50,0.9282,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),SAM 3 | <all prompts combined>,F1,0.4314,AP@50,0.7329,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),Cosmos Reason2 2B | Black Garbage Bag,F1,0.3077,AP@50,0.1818,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),Cosmos Reason2 2B | Grey Garbage Bag,F1,0.5,AP@50,0.3091,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),Cosmos Reason2 2B | White Garbage Bag,F1,0.5333,AP@50,0.3636,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),Cosmos Reason2 2B | Orange Garbage Bag,F1,0.5333,AP@50,0.3636,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),Cosmos Reason2 2B | Domestic Waste,F1,0.6667,AP@50,0.4935,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),Cosmos Reason2 2B | Garbage,F1,0.5882,AP@50,0.4091,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),Cosmos Reason2 2B | <all prompts combined>,F1,0.359,AP@50,0.2508,Results\PromptDetect\BatchEvaluation\MDWD\20260709-234655
+PromptDetect (MDWD),SAM 3.1 | garbage bag,F1,0.9362,AP@50,0.9565,Results\PromptDetect\BatchEvaluation\MDWD\20260710-011505
+PromptDetect (MDWD),Cosmos Reason2 2B | garbage bag,F1,0.5161,AP@50,0.3478,Results\PromptDetect\BatchEvaluation\MDWD\20260710-011505

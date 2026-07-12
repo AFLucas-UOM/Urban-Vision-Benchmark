@@ -1,0 +1,6 @@
+model,prompt_id,prompt,image_id,n_gt,n_pred,tp,fp,fn,duplicates,precision,recall,f1,accuracy
+SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/02ac92f5-IMG20251123165127.jpg,0,1,0,1,0,0,0.0,0.0,0.0,0.0
+SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/0608acbd-IMG_4633.jpeg,0,0,0,0,0,0,0.0,0.0,0.0,0.0
+SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/072bd818-IMG_4648.jpeg,0,1,0,1,0,0,0.0,0.0,0.0,0.0
+SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/091652b2-IMG20260105120954.jpg,0,3,0,3,0,0,0.0,0.0,0.0,0.0
+SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/094f8a9f-RV__2.jpeg,0,2,0,2,0,0,0.0,0.0,0.0,0.0
