@@ -17,12 +17,15 @@ import config
 from dataset_loader import ground_truth_index_rows, load_ground_truth
 from persistence import combination_dir, compatible_complete, write_csv, write_json
 from prompt_runner import prediction_boxes, run_models
+from prompt_sensitivity import DEFAULT_CONSISTENCY_IOU, has_sensitivity_prompts, validate_family_gt_counts
 from protocol import load_protocol, select_prompts, validate_vocabulary
 from protocol_reporting import generate
 from run_batch_eval import resolve_models
+from sensitivity_reporting import generate_sensitivity
 from targeted_metrics import evaluate_targeted
 
 DEFAULT_PROTOCOL = HERE / "prompt_protocols" / "dissertation_protocol.yaml"
+SENSITIVITY_PROTOCOL = HERE / "prompt_protocols" / "prompt_sensitivity_protocol.yaml"
 
 
 def sha256(path: Path) -> str:
@@ -68,13 +71,19 @@ def enforce_final_mtsd(gt: dict, spec: dict) -> dict:
 
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Targeted PromptDetect dissertation protocol")
-    p.add_argument("--protocol", type=Path, default=DEFAULT_PROTOCOL)
+    p.add_argument("--protocol", type=Path, default=None,
+                   help="Protocol YAML. Default: dissertation protocol; with --dataset both and no "
+                        "explicit --protocol, the dissertation AND prompt-sensitivity protocols both "
+                        "run as separate stages with separate run directories.")
     p.add_argument("--dataset", choices=("MDWD", "MTSD", "both", "mdwd", "mtsd"), default="both")
     p.add_argument("--split", default="test"); p.add_argument("--models", nargs="+")
-    p.add_argument("--prompt-ids", nargs="+"); p.add_argument("--prompt-group", choices=("class-targeted", "synonym-comparison", "broad", "optional-broad"))
+    p.add_argument("--prompt-ids", nargs="+")
+    p.add_argument("--prompt-group", help="Restrict to one prompt group; validated against the groups defined in the loaded protocol")
     p.add_argument("--include-optional-prompts", action="store_true")
     p.add_argument("--dry-run", action="store_true"); p.add_argument("--smoke-test", action="store_true")
     p.add_argument("--max-images", type=int); p.add_argument("--conf-threshold", type=float); p.add_argument("--iou-threshold", type=float)
+    p.add_argument("--consistency-iou", type=float, default=DEFAULT_CONSISTENCY_IOU,
+                   help="IoU threshold for prompt-pair prediction-consistency matching (sensitivity runs)")
     p.add_argument("--resume", type=Path); p.add_argument("--skip-completed", action="store_true")
     p.add_argument("--save-visualizations", nargs="?", const=-1, type=int, default=0)
     p.add_argument("--allow-heavy", action="store_true", help="Required for optional Cosmos Reason2 32B")
@@ -96,10 +105,22 @@ def _dry_stats(gt: dict, prompts: list[dict]) -> list[dict]:
     for prompt in prompts:
         target = set(prompt["target_classes"])
         counts = [sum(box["class_name"] in target for box in record["boxes"]) for record in gt["records"]]
-        rows.append({"prompt_id": prompt["id"], "prompt": prompt["prompt"], "group": prompt["group"],
-                     "target_classes": prompt["target_classes"], "positive_images": sum(value > 0 for value in counts),
-                     "negative_images": sum(value == 0 for value in counts), "target_boxes": sum(counts)})
+        row = {"prompt_id": prompt["id"], "prompt": prompt["prompt"], "group": prompt["group"],
+               "target_classes": prompt["target_classes"], "positive_images": sum(value > 0 for value in counts),
+               "negative_images": sum(value == 0 for value in counts), "target_boxes": sum(counts)}
+        if "sensitivity_family" in prompt:
+            row["sensitivity_family"] = prompt["sensitivity_family"]
+            row["variant_type"] = prompt["variant_type"]
+        rows.append(row)
     return rows
+
+
+def _image_ids_from_index(run_dir: Path) -> list[str]:
+    import csv
+    path = run_dir / "ground_truth_index.csv"
+    if not path.is_file() or not path.stat().st_size: return []
+    with path.open(encoding="utf-8", newline="") as stream:
+        return sorted({row["image_id"] for row in csv.DictReader(stream)})
 
 
 def _collect(run_dir: Path) -> tuple[list[dict], list[dict], list[dict], list[dict]]:
@@ -120,6 +141,8 @@ def reports_only(run_dir: Path) -> int:
     rows, predictions, per_image, overlaps = _collect(run_dir)
     write_csv(run_dir / "predictions.csv", predictions)
     generate(run_dir, cfg, rows, per_image, overlaps)
+    if has_sensitivity_prompts(cfg.get("prompt_definitions") or []):
+        generate_sensitivity(run_dir, cfg, rows, predictions, _image_ids_from_index(run_dir))
     print(run_dir); return 0
 
 
@@ -137,9 +160,16 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
         raise RuntimeError("MTSD QA fallback requires --allow-qa-fallback for development runs")
     models = resolve_models(model_aliases, args.allow_heavy)
     manifest_hash = _manifest_hash(gt)
+    sensitivity = has_sensitivity_prompts(prompts)
+    dry_rows = _dry_stats(gt, prompts)
+    # Prompts inside one sensitivity family share target_classes, so their GT
+    # counts must be identical; a mismatch means a broken family definition.
+    family_gt = validate_family_gt_counts(dry_rows) if sensitivity else []
     plan = {"dataset": dataset, "split": gt["split"], "source": gt["source"], "source_type": gt.get("source_type"),
-            "images": len(gt["records"]), "models": models, "prompts": _dry_stats(gt, prompts),
+            "images": len(gt["records"]), "models": models, "prompts": dry_rows,
             "predict_calls": len(gt["records"]) * len(models) * len(prompts)}
+    if sensitivity:
+        plan["sensitivity_families"] = family_gt
     if args.dry_run:
         print(json.dumps(plan, indent=2)); return Path()
     if args.resume:
@@ -149,31 +179,45 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
                            "split": gt["split"], "conf_threshold": conf, "iou_threshold": iou}.items():
             if existing.get(key) != value: raise ValueError(f"Resume mismatch for {key}: {existing.get(key)!r} != {value!r}")
     else:
-        label = args.run_label or ("smoke" if args.smoke_test else None)
-        run_dir = config.new_run_dir(dataset, label)
+        base_label = args.run_label or ("smoke" if args.smoke_test else None)
+        if sensitivity:  # keep sensitivity run directories visibly separate
+            base_label = f"{base_label}-sensitivity" if base_label else "sensitivity"
+        run_dir = config.new_run_dir(dataset, base_label)
         snapshot = dict(protocol); snapshot.pop("protocol_path", None)
         (run_dir / "protocol_snapshot.yaml").write_text(yaml.safe_dump(snapshot, sort_keys=False), encoding="utf-8")
         (run_dir / "protocol_hash").write_text(protocol["protocol_hash"] + "\n", encoding="utf-8")
-    run_config = {"evaluation_protocol": "targeted-v1", "protocol_version": protocol["protocol_version"],
+    run_config = {"evaluation_protocol": "prompt-sensitivity-v1" if sensitivity else "targeted-v1",
+                  "protocol_version": protocol["protocol_version"],
                   "protocol_hash": protocol["protocol_hash"], "dataset": dataset, "split": gt["split"],
                   "source": gt["source"], "source_type": gt.get("source_type"), "dataset_manifest_hash": manifest_hash,
                   "dataset_manifest": gt.get("manifest"), "models": models, "prompt_ids": [row["id"] for row in prompts],
+                  "prompt_definitions": prompts,
                   "approved_group_scope": (gt.get("manifest") or {}).get("approved_groups"),
                   "group_scope": (gt.get("manifest") or {}).get("group_scope"),
                   "final_enforcement": enforcement,
                   "conf_threshold": conf, "iou_threshold": iou, "max_detections": defaults["max_detections"],
+                  "consistency_iou_threshold": args.consistency_iou,
                   "n_images": len(gt["records"]), "started_at": datetime.now(timezone.utc).isoformat()}
     write_json(run_dir / "run_config.json", run_config)
     write_csv(run_dir / "ground_truth_index.csv", ground_truth_index_rows(gt))
+
+    def prompt_identity(model: str, prompt: dict) -> dict:
+        """Resume/status fingerprint; stale prompt wording or family membership invalidates a cache hit."""
+        identity = {"protocol_hash": protocol["protocol_hash"], "dataset_manifest_hash": manifest_hash,
+                    "model": model, "prompt_id": prompt["id"], "prompt": prompt["prompt"],
+                    "target_classes": prompt["target_classes"], "conf_threshold": conf,
+                    "iou_threshold": iou, "split": gt["split"]}
+        if "sensitivity_family" in prompt:
+            identity["sensitivity_family"] = prompt["sensitivity_family"]
+            identity["variant_type"] = prompt["variant_type"]
+        return identity
+
     by_text = {row["prompt"]: row for row in prompts}
     for model in models:
         pending = []
         for prompt in prompts:
-            expected = {"protocol_hash": protocol["protocol_hash"], "dataset_manifest_hash": manifest_hash,
-                        "model": model, "prompt_id": prompt["id"], "conf_threshold": conf,
-                        "iou_threshold": iou, "split": gt["split"]}
             directory = combination_dir(run_dir, model, prompt["id"])
-            if args.skip_completed and compatible_complete(directory, expected): continue
+            if args.skip_completed and compatible_complete(directory, prompt_identity(model, prompt)): continue
             pending.append(prompt)
         if not pending: continue
         def completed(model_label, prompt_text, prediction_rows, runtime):
@@ -189,14 +233,16 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
                       "prompt": prompt_text, "prompt_group": prompt["group"], "target_classes": prompt["target_classes"],
                       "prompt_class_confusion": result["prompt_class_confusion"],
                       **result["summary"], **runtime}
+            if "sensitivity_family" in prompt:
+                metric["sensitivity_family"] = prompt["sensitivity_family"]
+                metric["variant_type"] = prompt["variant_type"]
             infer = [float(row["inference_ms"]) for row in prediction_rows if row.get("inference_ms") not in (None, "")]
             metric["mean_inference_ms"] = round(sum(infer) / len(infer), 2) if infer else None
             metric["has_confidence"] = all(str(row.get("has_confidence", True)).lower() == "true" for row in prediction_rows)
             metric["ap_meaningful"] = metric["has_confidence"]
             write_json(directory / "metrics.json", metric)
-            status = {"status": "completed", "protocol_hash": protocol["protocol_hash"], "dataset_manifest_hash": manifest_hash,
-                      "model": model_label, "prompt_id": prompt["id"], "conf_threshold": conf, "iou_threshold": iou,
-                      "split": gt["split"], "target_gt_count": metric["target_gt_boxes"], "tp": metric["tp"],
+            status = {"status": "completed", **prompt_identity(model_label, prompt),
+                      "target_gt_count": metric["target_gt_boxes"], "tp": metric["tp"],
                       "fp": metric["fp"], "fn": metric["fn"], "finished_at": datetime.now(timezone.utc).isoformat(), **runtime}
             write_json(directory / "status.json", status)
         try:
@@ -211,15 +257,16 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
                 if status_path.is_file():
                     continue
                 write_json(status_path, {"status": "failed", "error": str(exc),
-                    "protocol_hash": protocol["protocol_hash"], "dataset_manifest_hash": manifest_hash,
-                    "model": model, "prompt_id": prompt["id"], "conf_threshold": conf,
-                    "iou_threshold": iou, "split": gt["split"],
+                    **prompt_identity(model, prompt),
                     "finished_at": datetime.now(timezone.utc).isoformat()})
             print(f"FAILED {model}: {exc}", file=sys.stderr)
     metrics, predictions, per_image, overlaps = _collect(run_dir)
     write_csv(run_dir / "predictions.csv", predictions)
     run_config["finished_at"] = datetime.now(timezone.utc).isoformat()
     generate(run_dir, run_config, metrics, per_image, overlaps)
+    if sensitivity:
+        generate_sensitivity(run_dir, run_config, metrics, predictions,
+                             [record["image_id"] for record in gt["records"]])
     print(run_dir); return run_dir
 
 
@@ -228,11 +275,29 @@ def main(argv: list[str] | None = None) -> int:
     if args.final and args.allow_qa_fallback:
         raise ValueError("--allow-qa-fallback is incompatible with --final")
     if args.reports_only: return reports_only(args.reports_only)
-    protocol = load_protocol(args.protocol)
-    aliases = args.models or list(protocol["models"]["primary"])
     datasets = ["MDWD", "MTSD"] if args.dataset.lower() == "both" else [args.dataset.upper()]
     if args.resume and len(datasets) != 1: raise ValueError("--resume requires one dataset")
-    for dataset in datasets: run_dataset(args, protocol, dataset, aliases)
+    # The standard both-dataset evaluation runs the classic dissertation protocol
+    # AND the prompt-sensitivity protocol as separate stages, each with its own
+    # run directories, outputs and protocol label. An explicit --protocol selects
+    # a single protocol instead.
+    dual_stage = args.dataset.lower() == "both" and args.protocol is None
+    if dual_stage and (args.prompt_ids or args.prompt_group or args.resume):
+        raise ValueError("--prompt-ids/--prompt-group/--resume are ambiguous across the dissertation "
+                         "and prompt-sensitivity stages; pass --protocol to select one protocol")
+    protocol_paths = [DEFAULT_PROTOCOL, SENSITIVITY_PROTOCOL] if dual_stage else [args.protocol or DEFAULT_PROTOCOL]
+    for path in protocol_paths:
+        protocol = load_protocol(path)
+        if args.prompt_group:
+            available = sorted({row["group"] for name in datasets
+                                for row in protocol["datasets"][name]["prompts"]})
+            if args.prompt_group not in available:
+                raise ValueError(f"Unknown prompt group {args.prompt_group!r}; protocol "
+                                 f"{protocol['protocol_version']} defines: {available}")
+        aliases = args.models or list(protocol["models"]["primary"])
+        if dual_stage:
+            print(f"=== Stage: {protocol['protocol_version']} ({path.name}) ===")
+        for dataset in datasets: run_dataset(args, protocol, dataset, aliases)
     return 0
 
 

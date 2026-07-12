@@ -16,7 +16,8 @@ Outputs (default: a fresh timestamped folder Documents/Final-Tables/<stamp>/;
     mdwd_detection_results.csv     mtsd_detection_results.csv
     mtsd_attribute_results.csv     promptdetect_results.csv
     model_efficiency_results.csv   final_model_comparison_table.csv
-    dissertation_results_summary.md
+    prompt_sensitivity_results.csv prompt_sensitivity_model_summary.csv
+    prompt_consistency_results.csv dissertation_results_summary.md
 
 Usage:
     python Scripts/FinalEvaluation/export_dissertation_tables.py
@@ -161,6 +162,12 @@ def collect_promptdetect() -> tuple[list[dict], list[str]]:
         except Exception as exc:
             notes.append(f"unreadable {summary_path.relative_to(ROOT)}: {exc}")
             continue
+        if payload.get("evaluation_protocol") == "prompt-sensitivity-v1":
+            # Controlled paraphrase-sensitivity runs are exported separately
+            # (collect_prompt_sensitivity) and never blended into this ranking.
+            notes.append(f"{summary_path.parent.relative_to(ROOT)} is a prompt-sensitivity run; "
+                         "see prompt_sensitivity_results.csv")
+            continue
         for metric_row in payload.get("per_prompt_metrics", []):
             rows.append({
                 "evaluation_protocol": payload.get("evaluation_protocol", "class-agnostic-exploratory"),
@@ -182,6 +189,46 @@ def collect_promptdetect() -> tuple[list[dict], list[str]]:
         if protocol == "class-agnostic-exploratory":
             notes.append(f"{summary_path.parent.relative_to(ROOT)} is exploratory class-agnostic evidence")
     return rows, notes
+
+
+SENSITIVITY_COMMAND = ("python Scripts/Other-Scripts/PromptDetect/batch_evaluation/"
+                       "run_dissertation_protocol.py --protocol "
+                       "prompt_protocols/prompt_sensitivity_protocol.yaml --dataset both --split test --final")
+
+
+def collect_prompt_sensitivity() -> tuple[dict[str, list[dict]], list[str]]:
+    """Controlled paraphrase-sensitivity runs (prompt_sensitivity_summary.json).
+
+    Returns three dissertation-ready tables: per-family sensitivity statistics,
+    per-model macro summaries and prompt-pair prediction consistency. Kept
+    separate from targeted/exploratory PromptDetect rankings by design.
+    """
+    tables = {"prompt_sensitivity_results": [], "prompt_sensitivity_model_summary": [],
+              "prompt_consistency_results": []}
+    notes: list[str] = []
+    summaries = sorted(PROMPT_RESULTS.glob("*/*/prompt_sensitivity_summary.json")) if PROMPT_RESULTS.is_dir() else []
+    if not summaries:
+        return tables, ["Prompt sensitivity: no controlled prompt-sensitivity runs yet - pending "
+                        f"(run {SENSITIVITY_COMMAND})"]
+    for summary_path in summaries:
+        try:
+            payload = json.loads(summary_path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            notes.append(f"unreadable {summary_path.relative_to(ROOT)}: {exc}")
+            continue
+        provenance = {"protocol_version": payload.get("protocol_version"),
+                      "protocol_hash": payload.get("protocol_hash"),
+                      "run_folder": str(summary_path.parent.relative_to(ROOT)),
+                      "status": "completed"}
+        for row in payload.get("per_family_sensitivity", []):
+            tables["prompt_sensitivity_results"].append({**row, **provenance})
+        for row in payload.get("per_model_sensitivity", []):
+            tables["prompt_sensitivity_model_summary"].append({**row, **provenance})
+        for row in payload.get("prediction_consistency", {}).get("per_pair", []):
+            tables["prompt_consistency_results"].append({**row, **provenance})
+    notes.append(f"Prompt-sensitivity tables aggregated from {len(summaries)} run(s); prediction "
+                 "consistency measures agreement between prompt variants, not accuracy against GT.")
+    return tables, notes
 
 
 def collect_efficiency() -> tuple[list[dict], list[str]]:
@@ -219,6 +266,7 @@ def main() -> int:
         "promptdetect_results": collect_promptdetect(),
         "model_efficiency_results": collect_efficiency(),
     }
+    sensitivity_tables, sensitivity_notes = collect_prompt_sensitivity()
 
     all_notes: dict[str, list[str]] = {}
     comparison_rows: list[dict] = []
@@ -227,6 +275,10 @@ def main() -> int:
                   rows or [{"status": "pending", "note": "; ".join(notes)}])
         all_notes[name] = notes
         print(f"{name}: {len(rows)} rows" + (f" | notes: {len(notes)}" if notes else ""))
+    for name, rows in sensitivity_tables.items():
+        write_csv(out_dir / f"{name}.csv",
+                  rows or [{"status": "pending", "note": "; ".join(sensitivity_notes)}])
+        print(f"{name}: {len(rows)} rows")
 
     # Cross-track comparison (long form; only completed rows).
     for row in sections["mdwd_detection_results"][0]:
@@ -275,6 +327,29 @@ def main() -> int:
         for note in notes:
             lines.append(f"\n> {note}")
         lines.append(f"\n*Full table incl. source paths: `{name}.csv`*")
+
+    lines.append("\n## Prompt sensitivity and prediction consistency\n")
+    model_summary = sensitivity_tables["prompt_sensitivity_model_summary"]
+    if not model_summary:
+        lines.append(f"**PENDING** - no controlled prompt-sensitivity run found. Generate one with:\n\n"
+                     f"```\n{SENSITIVITY_COMMAND}\n```")
+    else:
+        lines.append("Controlled paraphrase families only (identical target GT per family); synonym and "
+                     "broad-prompt effects are reported in the PromptDetect section, never here. "
+                     "Prediction consistency measures agreement between prompt variants, not accuracy.\n")
+        columns = ["dataset", "model", "n_families", "macro_mean_f1", "mean_within_family_f1_std",
+                   "mean_f1_range", "mean_relative_f1_degradation", "worst_family",
+                   "macro_canonical_f1", "macro_instruction_f1", "protocol_version"]
+        lines.append("| " + " | ".join(columns) + " |")
+        lines.append("|" + "---|" * len(columns))
+        for row in model_summary:
+            lines.append("| " + " | ".join(str(row.get(c, "")) for c in columns) + " |")
+        lines.append("\n*Full tables: `prompt_sensitivity_results.csv` (per family), "
+                     "`prompt_sensitivity_model_summary.csv`, `prompt_consistency_results.csv` "
+                     "(per prompt pair); source run paths and protocol hashes are recorded per row.*")
+    for note in sensitivity_notes:
+        lines.append(f"\n> {note}")
+
     lines.append("\n---\n*Source files are recorded per row for traceability. Pending "
                  "sections list the command that produces them.*\n")
     (out_dir / "dissertation_results_summary.md").write_text("\n".join(lines), encoding="utf-8")

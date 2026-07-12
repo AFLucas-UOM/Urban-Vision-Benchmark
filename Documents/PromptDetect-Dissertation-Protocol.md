@@ -16,6 +16,13 @@ python run_dissertation_protocol.py --dataset MTSD --resume <run-dir> --skip-com
 python run_dissertation_protocol.py --reports-only <run-dir>
 ```
 
+With `--dataset both` and no explicit `--protocol`, the runner executes two
+separate stages: this classic protocol (`dissertation-v1`, label `targeted-v1`)
+followed by the controlled prompt-sensitivity protocol
+(`prompt-sensitivity-v1`), each in its own run directory with its own outputs
+and reports. Pass `--protocol` to run a single protocol; see
+[PromptDetect-Prompt-Sensitivity-Protocol.md](PromptDetect-Prompt-Sensitivity-Protocol.md).
+
 Use the `mtsd-base` environment; LocateAnything delegates to `mtsd-la`. SAM checkpoints require the documented Hugging Face access. Final MTSD mode requires the canonical prepared unaugmented test split, a valid prep/split manifest, the explicit GRP-1/2/3/5/6 scope, QA-only annotations and a resolved non-overridden QA gate. It rejects QA fallback, mixed/raw-XML datasets, auto scope and stale hashes. Each model×prompt combination is persisted atomically with hashes and thresholds so an interrupted run loses no completed work.
 
 Headline comparison is the macro average over both `class-targeted` and

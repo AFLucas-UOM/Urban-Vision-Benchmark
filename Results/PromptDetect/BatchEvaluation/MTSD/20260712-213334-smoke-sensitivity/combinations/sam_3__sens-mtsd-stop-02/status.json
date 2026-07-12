@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "protocol_hash": "502faa200c0ffa7cc393124b63fe8c7def75d6f14476bba218a77787eb8bacb1",
+  "dataset_manifest_hash": "qa-fallback-no-manifest",
+  "model": "SAM 3",
+  "prompt_id": "sens-mtsd-stop-02",
+  "prompt": "road sign instructing drivers to stop",
+  "target_classes": [
+    "Stop Sign"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "split": "test",
+  "sensitivity_family": "mtsd-stop-sign",
+  "variant_type": "lexical-paraphrase",
+  "target_gt_count": 2,
+  "tp": 2,
+  "fp": 13,
+  "fn": 0,
+  "finished_at": "2026-07-12T19:33:54.858029+00:00",
+  "model_load_ms": 9712.9
+}

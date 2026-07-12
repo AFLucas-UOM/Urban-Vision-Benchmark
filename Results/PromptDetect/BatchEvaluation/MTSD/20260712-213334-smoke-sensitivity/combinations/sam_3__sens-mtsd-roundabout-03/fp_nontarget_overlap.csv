@@ -1,0 +1,14 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/02ac92f5-IMG20251123165127.jpg,1442.53,1372.17,2004.24,2859.0,0.7773,Blind-Spot Mirror (Convex Mirror),0.974
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/02ac92f5-IMG20251123165127.jpg,947.86,1370.9,1999.8,4087.0,0.4277,,0.2933
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/072bd818-IMG_4648.jpeg,1122.48,1419.44,1775.45,3086.8,0.8594,Stop Sign,0.941
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/072bd818-IMG_4648.jpeg,2585.92,2956.97,3024.0,3579.35,0.3145,,0.0
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/091652b2-IMG20260105120954.jpg,502.11,1036.32,2766.04,3074.15,0.8438,Auxiliary Sign,0.9734
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/091652b2-IMG20260105120954.jpg,931.34,582.89,2403.88,1157.11,0.6836,Directional Sign,0.9744
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/091652b2-IMG20260105120954.jpg,1071.44,1204.53,2285.0,2321.98,0.6289,,0.2861
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/094f8a9f-RV__2.jpeg,1073.1,1204.6,1819.34,1997.0,0.9102,Other-Unknown,0.9847
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/094f8a9f-RV__2.jpeg,1061.67,591.97,1813.95,1260.22,0.8789,Stop Sign,0.9714
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/094f8a9f-RV__2.jpeg,1239.23,1864.36,1718.05,3081.33,0.7969,Pedestrian Crossing,0.957
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/094f8a9f-RV__2.jpeg,174.45,2788.23,331.41,2994.9,0.5391,Auxiliary Sign,0.954
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/094f8a9f-RV__2.jpeg,104.45,2961.43,332.16,3145.53,0.3887,Auxiliary Sign,0.8304
+SAM 3,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,GRP-1/094f8a9f-RV__2.jpeg,1061.61,582.76,1792.27,4032.0,0.3711,,0.2416

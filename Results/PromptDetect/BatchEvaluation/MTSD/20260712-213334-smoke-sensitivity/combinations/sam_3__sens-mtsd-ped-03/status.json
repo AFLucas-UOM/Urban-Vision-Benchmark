@@ -1,0 +1,22 @@
+{
+  "status": "completed",
+  "protocol_hash": "502faa200c0ffa7cc393124b63fe8c7def75d6f14476bba218a77787eb8bacb1",
+  "dataset_manifest_hash": "qa-fallback-no-manifest",
+  "model": "SAM 3",
+  "prompt_id": "sens-mtsd-ped-03",
+  "prompt": "sign indicating a pedestrian crossing",
+  "target_classes": [
+    "Pedestrian Crossing"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "split": "test",
+  "sensitivity_family": "mtsd-pedestrian-crossing",
+  "variant_type": "descriptive-paraphrase",
+  "target_gt_count": 1,
+  "tp": 1,
+  "fp": 7,
+  "fn": 0,
+  "finished_at": "2026-07-12T19:33:50.532039+00:00",
+  "model_load_ms": 9712.9
+}

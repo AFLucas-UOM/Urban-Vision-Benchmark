@@ -1,0 +1,12 @@
+image_id,image_path,class_name,x0,y0,x1,y1
+GRP-1/02ac92f5-IMG20251123165127.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\02ac92f5-IMG20251123165127.jpg,Back-Unknown,2047.8,3521.9,2660.81,4045.0
+GRP-1/02ac92f5-IMG20251123165127.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\02ac92f5-IMG20251123165127.jpg,Blind-Spot Mirror (Convex Mirror),1435.6,1372.43,2009.67,2865.5
+GRP-1/0608acbd-IMG_4633.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\0608acbd-IMG_4633.jpeg,Blind-Spot Mirror (Convex Mirror),766.1,1911.3,2338.9,3977.6
+GRP-1/072bd818-IMG_4648.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\072bd818-IMG_4648.jpeg,Stop Sign,1103.85,1404.61,1785.7,3101.43
+GRP-1/091652b2-IMG20260105120954.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\091652b2-IMG20260105120954.jpg,Directional Sign,926.41,574.0,2407.29,1160.01
+GRP-1/091652b2-IMG20260105120954.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\091652b2-IMG20260105120954.jpg,Auxiliary Sign,488.8,1020.74,2792.15,3078.5
+GRP-1/094f8a9f-RV__2.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\094f8a9f-RV__2.jpeg,Other-Unknown,1071.96,1201.21,1823.3,2000.5
+GRP-1/094f8a9f-RV__2.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\094f8a9f-RV__2.jpeg,Pedestrian Crossing,1236.5,1843.88,1728.15,3082.3
+GRP-1/094f8a9f-RV__2.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\094f8a9f-RV__2.jpeg,Stop Sign,1055.3,587.66,1816.48,1267.55
+GRP-1/094f8a9f-RV__2.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\094f8a9f-RV__2.jpeg,Auxiliary Sign,177.83,2787.2,330.25,2997.69
+GRP-1/094f8a9f-RV__2.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\094f8a9f-RV__2.jpeg,Auxiliary Sign,97.99,2965.03,337.51,3168.26

@@ -6,10 +6,20 @@ MDWD or MTSD. The existing manual PromptDetect UI ([../app.py](../app.py)) is
 untouched — this is an additional mode that reuses the same
 `backend.DetectionBackend` and model registry.
 
-There are two intentionally distinct modes: `run_batch_eval.py` is the legacy
-class-agnostic exploratory evaluator; `run_dissertation_protocol.py` loads the
-fixed YAML protocol and performs target-class-aware dissertation evaluation.
-See [the protocol document](../../../../Documents/PromptDetect-Dissertation-Protocol.md).
+There are three intentionally distinct modes: `run_batch_eval.py` is the legacy
+class-agnostic exploratory evaluator; `run_dissertation_protocol.py` loads a
+fixed YAML protocol and performs target-class-aware dissertation evaluation;
+the same runner with `prompt_protocols/prompt_sensitivity_protocol.yaml` (or
+the thin `run_prompt_sensitivity.py` wrapper) runs the controlled
+prompt-sensitivity experiment — 9 paraphrase families x 4 semantically
+equivalent wordings with identical target GT per family, plus prompt-pair
+prediction-consistency analysis. With `--dataset both` and no explicit
+`--protocol`, `run_dissertation_protocol.py` runs the dissertation protocol
+AND the prompt-sensitivity protocol as separate stages with separate run
+directories (`...-sensitivity`) and protocol labels (`targeted-v1` /
+`prompt-sensitivity-v1`).
+See [the protocol document](../../../../Documents/PromptDetect-Dissertation-Protocol.md)
+and [the prompt-sensitivity document](../../../../Documents/PromptDetect-Prompt-Sensitivity-Protocol.md).
 
 The dissertation headline macro includes `class-targeted` and
 `synonym-comparison` prompts only. Broad/optional prompts are reported

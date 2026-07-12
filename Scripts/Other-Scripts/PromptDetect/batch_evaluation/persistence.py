@@ -31,11 +31,19 @@ def write_json(path: Path, payload: Any) -> None:
     os.replace(temp, path)
 
 
+# Prompt identity keys are only compared when the caller supplies them, so
+# legacy expectations (hash/threshold-only) keep working; when present, a stale
+# prompt wording, target scope or sensitivity definition invalidates the cache.
+RESUME_BASE_KEYS = ("protocol_hash", "dataset_manifest_hash", "model", "prompt_id",
+                    "conf_threshold", "iou_threshold", "split")
+RESUME_PROMPT_KEYS = ("prompt", "target_classes", "sensitivity_family", "variant_type")
+
+
 def compatible_complete(path: Path, expected: dict[str, Any]) -> bool:
     status_path = path / "status.json"
     if not status_path.is_file(): return False
     status = json.loads(status_path.read_text(encoding="utf-8"))
-    keys = ("protocol_hash", "dataset_manifest_hash", "model", "prompt_id", "conf_threshold", "iou_threshold", "split")
+    keys = RESUME_BASE_KEYS + tuple(key for key in RESUME_PROMPT_KEYS if key in expected)
     differences = {key: (status.get(key), expected.get(key)) for key in keys if status.get(key) != expected.get(key)}
     if differences: raise ValueError(f"Incompatible completed combination {path}: {differences}")
     return status.get("status") == "completed"
