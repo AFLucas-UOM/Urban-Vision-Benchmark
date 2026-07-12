@@ -1,0 +1,687 @@
+% =========================================================================
+% Chapter: Methodology
+% Dissertation: A Comparative Study of Vision-Based Perception Paradigms
+%               for Urban Waste and Infrastructure Monitoring
+%               (MSc, University of Malta, 2026)
+% Drafted against repository commit cee7dc6a (inspected 11 July 2026),
+% under the final-state assumption documented in
+% methodology_writing_notes.md. All procedures are described as executed;
+% numeric values that can only be produced by the assumed-final artefacts
+% are marked with the \TBD{...} placeholder macro and enumerated in the
+% writing notes. No experimental outcomes are reported in this chapter.
+% Requires: natbib, tikz, (array). Placeholder macro defined below.
+% =========================================================================
+
+\providecommand{\TBD}[1]{\textbf{[TBD:\,#1]}}
+
+\chapter{Methodology}
+\label{ch:methodology}
+
+This chapter documents how the comparative study was designed and executed. It describes the experimental environment, the construction, annotation and quality assurance of the two datasets, the preparation of training data, the three experimental tracks---supervised object detection, prompt-based localisation and multi-attribute classification---and the evaluation, robustness, benchmarking and statistical procedures applied to them. Throughout, the emphasis is on reproducibility: every experiment was driven by version-controlled configuration files, fixed random seeds and immutable, manifest-hashed artefacts, and the exact settings reported here were extracted from the saved run configurations rather than from documentation. Results obtained under these procedures are reported in Chapter~\ref{ch:evaluation}.
+
+\section{Research Design}
+\label{sec:research-design}
+
+The study was designed as a controlled comparative benchmark across three perception tracks evaluated on two purpose-built Maltese datasets. The first track trained \emph{supervised object detectors}---three YOLO generations and one detection transformer---on the Maltese Domestic Waste Dataset (MDWD) and the Maltese Traffic Sign Dataset (MTSD). The second track evaluated \emph{zero-shot, prompt-based localisation} systems, which received only natural-language prompts and no task-specific training, against the same held-out ground truth. The third track studied \emph{multi-attribute representation learning}: pretrained visual backbones under three adaptation strategies, classifying four per-sign attributes on MTSD ground-truth crops. The two datasets support related but distinct municipal tasks: MDWD poses detection and categorisation of kerbside domestic waste in cluttered street scenes, while MTSD poses detection of traffic-sign infrastructure together with classification of maintenance-relevant sign attributes. Table~\ref{tab:research-design} maps the dissertation objectives onto tasks, data, models and analyses.
+
+\begin{table}[htbp]
+\centering
+\caption{Research-design matrix linking objectives to datasets, tasks, models and analyses.}
+\label{tab:research-design}
+\small
+\begin{tabular}{p{0.16\linewidth}p{0.19\linewidth}p{0.19\linewidth}p{0.18\linewidth}p{0.18\linewidth}}
+\hline
+ & \textbf{Supervised detection} & \textbf{Prompt-based localisation} & \textbf{Attribute classification} & \textbf{Deployment benchmark} \\
+\hline
+Objective & O2 & O3 & O4 & O4 \\
+Dataset & MDWD; MTSD & MDWD test; MTSD test & MTSD sign crops & MDWD/MTSD test samples \\
+Task & object detection & zero-shot localisation & 4-head classification & inference efficiency \\
+Input unit & full image & full image + text prompt & padded sign crop & image or crop \\
+Output & boxes, classes, scores & boxes (masks; scores where available) & 4 class labels & latency, memory \\
+Model families & YOLO11/12/26, RF-DETR & SAM~3/3.1, LocateAnything, Cosmos Reason2 & DINOv3, V-JEPA~2.1, ConvNeXt & all of the above \\
+Strategy & fine-tuning from pretrained weights & zero-shot, fixed prompts & frozen probe / LoRA / full fine-tune & fixed-protocol timing \\
+Primary metrics & mAP@50, mAP@50:95, P, R, F1 & P, R, F1, matched IoU & macro-F1, accuracy & latency, throughput, memory \\
+Operational metrics & params, size, latency & runtime, prompt sensitivity & trainable params & checkpoint size, cold start \\
+Analysis & capacity + generation comparison; augmentation ablation & taxonomy-aware prompt comparison & adaptation-strategy comparison & cross-paradigm comparison \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Independent and Controlled Variables}
+
+The manipulated variables differed by track. In supervised detection they were detector family (YOLO versus RF-DETR), detector generation (YOLO11, YOLO12, YOLO26), model scale (nano to large), dataset domain (MDWD, MTSD) and, in the dedicated ablation, augmentation condition (augmented versus unaugmented training data). In the prompt-based track they were the model, the prompt wording and the prompt breadth (class-targeted, synonym-comparison, broad). In the attribute track they were the backbone family and the adaptation strategy (frozen linear probe, LoRA, full fine-tuning). In the deployment benchmark, inference batch size was additionally varied where supported.
+
+Controlled variables were held constant within each comparison: the underlying dataset split and test set; input resolution (640~px for detection; the backbone-native crop size for attribute models); the epoch budget; the optimiser family (AdamW throughout); the random seed (42 everywhere); the effective batch size (32 for all training); evaluation thresholds and metric implementations; the prompt protocol; the checkpoint-selection rule; and the hardware (Section~\ref{sec:experimental-environment}).
+
+Several controls were only approximately aligned across frameworks, and the design acknowledges this explicitly rather than claiming a perfectly controlled experiment. The models' pretraining corpora differ (COCO for the detectors, web-scale self-supervised corpora for the foundation backbones); the YOLO and RF-DETR implementations come from different frameworks with different internal pipelines; RF-DETR applies internal online augmentation that has no exact Ultralytics equivalent; parameter counts differ substantially across scales and families; the prompt-based systems emit structurally different outputs (with and without masks and calibrated confidences); and the attribute backbones require different native input resolutions (224~px for DINOv3 and ConvNeXt, 384~px for V-JEPA~2.1). Accordingly, the study distinguishes six analysis types of decreasing internal control: (i) the \emph{controlled augmentation ablation}, where only the training-data condition changed; (ii) \emph{model-scale comparisons} within one family and framework; (iii) the \emph{cross-family practical benchmark} between YOLO generations and RF-DETR; (iv) the \emph{adaptation-strategy comparison} within each attribute backbone; (v) the \emph{zero-shot prompt comparison}; and (vi) the \emph{deployment benchmark}. Claims in Chapter~\ref{ch:evaluation} are scoped to the appropriate analysis type.
+
+\section{Experimental Environment}
+\label{sec:experimental-environment}
+
+All final training, evaluation and benchmarking runs were executed on a single local workstation equipped with an NVIDIA GeForce RTX~4090 GPU with 24~GB of memory. Table~\ref{tab:environment} lists the verified hardware and software configuration. Supervised training used CUDA acceleration with automatic mixed precision where configured; deterministic execution was enabled wherever the frameworks supported it; and the global random seed was fixed at 42 for every run. During prompt-based evaluation, heavy model families were loaded sequentially and each model was explicitly unloaded before the next was instantiated, so that no two foundation models shared GPU memory. All inference timings were taken with explicit CUDA synchronisation before and after the timed call.
+
+\begin{table}[htbp]
+\centering
+\caption{Hardware and software environment for all final runs. Package versions were introspected from the installed environments at the recorded repository commit.}
+\label{tab:environment}
+\small
+\begin{tabular}{p{0.28\linewidth}p{0.40\linewidth}p{0.24\linewidth}}
+\hline
+\textbf{Component} & \textbf{Verified specification} & \textbf{Relevance} \\
+\hline
+GPU & NVIDIA GeForce RTX 4090, 24\,564~MiB & all training and inference \\
+CPU & AMD Ryzen~9 7900X3D (12 cores) & data loading, preprocessing \\
+System memory & 128~GB & dataset caching \\
+Operating system & Microsoft Windows 11 Pro & host platform \\
+\hline
+Detection env.\ (\texttt{MDWD}) & Python 3.12.11; PyTorch 2.10.0 (CUDA 13.0, cuDNN 9.12); torchvision 0.25.0; Ultralytics 8.4.60; \texttt{rfdetr} 1.3.0; Transformers 4.57.6 & YOLO and RF-DETR training \\
+Attribute env.\ (\texttt{mtsd-attrcls}) & Python 3.11.15; PyTorch 2.11.0 (CUDA 12.8, cuDNN 9.19); torchvision 0.26.0; Transformers 5.12.1; PEFT 0.19.1; timm 1.0.27 & attribute classification \\
+PromptDetect env.\ (\texttt{mtsd-base}) & Python 3.12.13; PyTorch 2.10.0 (CUDA 12.8); Transformers 5.12.1; Meta \texttt{sam3} package & SAM~3/3.1, Cosmos Reason2 \\
+Grounding env.\ (\texttt{mtsd-la}) & Python 3.12.13; PyTorch 2.11.0 (CUDA 12.8); Transformers 4.57.1; decord 0.6.0 & LocateAnything worker \\
+\hline
+\end{tabular}
+\end{table}
+
+Four isolated conda environments were used because the model families impose mutually incompatible dependency constraints: LocateAnything's vendored modelling code is bound to Transformers 4.57.x, whereas the attribute and PromptDetect pipelines require Transformers 5.x; the Ultralytics/RF-DETR stack pins NumPy below 2.0. The LocateAnything model therefore ran in a dedicated worker process in its own environment, communicating with the evaluation host over a local HTTP interface, which left evaluation behaviour identical while isolating its dependencies. Environment definitions and per-workstream requirement files are version-controlled in the repository.
+
+\section{Dataset Development and Characterisation}
+\label{sec:dataset-development}
+
+\subsection{Maltese Domestic Waste Dataset}
+\label{subsec:mdwd-methodology}
+
+MDWD is a street-level object-detection dataset of kerbside domestic waste collected across Maltese localities during \TBD{mdwd-collection-period}, using \TBD{mdwd-capture-devices} at street level under pedestrian and vehicle-based acquisition. The dataset comprises 3\,598 unique source photographs. Images were captured in ordinary residential and commercial streets under natural conditions, deliberately retaining the properties that make the task operationally hard: strong illumination variation between sunlight and shadow, small and distant objects, dense clutter, partial occlusion by parked vehicles, grouped and overlapping waste presentations, and oblique viewing angles. Still photographs were used throughout; the dataset contains no video-derived frame sequences, so near-duplicate consecutive frames do not occur by construction. Images unsuitable for annotation (severe blur, no visible waste context, or privacy-sensitive content that redaction could not resolve) were excluded during curation.
+
+Annotation used axis-aligned bounding boxes over the five operational classes defined in Chapter~\ref{ch:background}: Mixed Waste, Organic Waste, Recyclable Material, Orange~CMD and Other Waste. Annotators operationalised the taxonomy by visible collection presentation---bag colour, form, placement and context---rather than by inferred material content: a sealed black sack was labelled Mixed Waste regardless of its actual contents, and objects were assigned to Recyclable Material or Organic Waste only when the presentation (grey/green or white bags, respectively, or unambiguous loose presentations such as flattened cardboard) identified the collection stream. Boxes were drawn tightly around the visible extent of each object; partially occluded objects were annotated over their visible region; and instances too ambiguous to assign to any class were excluded rather than guessed. Annotation and dataset management used the Roboflow platform (project version~20), with reviewer consolidation of class assignments and box boundaries prior to release. The dataset was exported in two formats from the identical annotation state: YOLO-format exports for the Ultralytics models and a COCO/MMDetection-format export for RF-DETR, giving four framework-specific variants of one dataset.
+
+\subsubsection{Exploratory Data Analysis}
+
+Before any model was trained, MDWD was characterised by a dedicated EDA package (\texttt{mdwd\_eda}), executed through a single runner script that auto-detects and indexes both the YOLO and COCO export formats. The EDA generated an image inventory, a bounding-box inventory, a per-split overview, the class distribution, bounding-box geometry summaries (width, height, area, aspect ratio), object-size categorisation using the COCO small/medium/large convention, the image-resolution distribution, the instances-per-image distribution, a class co-occurrence matrix, an integrity summary with individual findings, and annotated sample images for visual verification. Each analysis served a specific design purpose: class balance informed the interpretation of per-class metrics; object-size and aspect-ratio distributions established that small objects dominate and therefore motivated size-sliced robustness analysis (Section~\ref{sec:robustness-methodology}); instance density and co-occurrence characterised the grouped-bag configurations that stress duplicate suppression; resolution and split-consistency checks verified export integrity; and source-image identity analysis underpinned the leakage audit described in Section~\ref{sec:annotation-quality-assurance}. Table~\ref{tab:mdwd-summary} summarises the dataset, and Table~\ref{tab:mdwd-classes} its class distribution.
+
+\begin{table}[htbp]
+\centering
+\caption{MDWD summary (Roboflow project v20 working release).}
+\label{tab:mdwd-summary}
+\small
+\begin{tabular}{lr}
+\hline
+\textbf{Property} & \textbf{Value} \\
+\hline
+Unique source photographs & 3\,598 \\
+Export images (train, $\sim$10$\times$ offline-augmented) & 29\,487 \\
+Export images (validation) & 369 \\
+Export images (test) & 369 \\
+Annotated boxes (train / valid / test exports) & 209\,334 / 1\,072 / 1\,106 \\
+Classes & 5 \\
+Export resolution & $640 \times 640$ (stretch) \\
+Formats & YOLO; COCO/MMDetection \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{MDWD class distribution over the export-level annotations (boxes; train counts include offline augmentation).}
+\label{tab:mdwd-classes}
+\small
+\begin{tabular}{lrrrr}
+\hline
+\textbf{Class} & \textbf{Total} & \textbf{Train} & \textbf{Valid} & \textbf{Test} \\
+\hline
+Mixed Waste & 60\,034 & 59\,426 & 274 & 334 \\
+Recyclable Material & 52\,096 & 51\,595 & 263 & 238 \\
+Other Waste & 43\,727 & 43\,188 & 261 & 278 \\
+Organic Waste & 40\,783 & 40\,409 & 196 & 178 \\
+Orange CMD & 14\,872 & 14\,716 & 78 & 78 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Maltese Traffic Sign Dataset}
+\label{subsec:mtsd-methodology}
+
+MTSD is a street-level dataset of Maltese traffic-sign and roadside-sign infrastructure collected in eleven groups (GRP-1 through GRP-11) totalling 7\,492 raw smartphone photographs, captured across Maltese localities during \TBD{mtsd-collection-period}. All eleven groups completed annotation and quality assurance, and the final annotation scope comprises all eleven groups: \TBD{mtsd-final-annotated-images} annotated images containing \TBD{mtsd-final-instances} sign instances. Capture used consumer smartphones at pedestrian level; EXIF metadata, including capture time and GPS position where recorded, was profiled during EDA (\TBD{mtsd-final-exif-coverage} of images carried EXIF timestamps and \TBD{mtsd-final-gps-coverage} carried GPS tags in the final scope). Burst near-duplicates were identified during EDA and handled during quality assurance rather than silently deleted. Table~\ref{tab:mtsd-groups} lists the per-group composition.
+
+\begin{table}[htbp]
+\centering
+\caption{MTSD collection groups. Raw counts were verified from the on-disk group folders; annotated-image and instance counts refer to the final Final-QA exports of the complete eleven-group scope.}
+\label{tab:mtsd-groups}
+\small
+\begin{tabular}{lrrr}
+\hline
+\textbf{Group} & \textbf{Raw images} & \textbf{Annotated images} & \textbf{Instances} \\
+\hline
+GRP-1 & 724 & 724 & 1\,960 \\
+GRP-2 & 630 & 630 & 1\,621 \\
+GRP-3 & 617 & 617 & 1\,844 \\
+GRP-4 & 875 & \TBD{grp4-img} & \TBD{grp4-inst} \\
+GRP-5 & 657 & 657 & 1\,841 \\
+GRP-6 & 470 & 470 & 1\,106 \\
+GRP-7 & 710 & 710 & 1\,891 \\
+GRP-8 & 703 & \TBD{grp8-img} & \TBD{grp8-inst} \\
+GRP-9 & 715 & \TBD{grp9-img} & \TBD{grp9-inst} \\
+GRP-10 & 789 & \TBD{grp10-img} & \TBD{grp10-inst} \\
+GRP-11 & 602 & \TBD{grp11-img} & \TBD{grp11-inst} \\
+\hline
+Total & 7\,492 & \TBD{mtsd-final-annotated-images} & \TBD{mtsd-final-instances} \\
+\hline
+\end{tabular}
+\end{table}
+
+Annotation used the twelve-class detection taxonomy defined in Chapter~\ref{ch:background}: Pedestrian Crossing, Stop Sign, No Entry (One Way), Roundabout Ahead, No Through Road (T-Junction), Blind-Spot Mirror (Convex Mirror), Street Sign, Directional Sign, Tourist Sign, Auxiliary Sign, Back-Unknown and Other-Unknown. Every annotated box additionally carried four attributes, each with a mutually exclusive vocabulary: viewing angle (Front, Back, Side), mounting type (Pole-Mounted, Wall-Mounted), physical condition (Good, Weathered, Heavily Damaged) and sign shape (Circular, Quadrangle, Triangular, Octagonal, Pentagon). The annotation tooling additionally exposed a \emph{Damaged-Unknown} shape fallback for signs whose geometry could not be determined; this value was excluded from the learnable taxonomy, and every affected instance was either corrected to a definite shape or removed during the quality-assurance review, so no Damaged-Unknown value survives in the final dataset.
+
+Inclusion rules confined annotation to public traffic infrastructure: official traffic signs, street nameplates, directional and tourist signage, auxiliary plates, rear-facing signs (annotated as Back-Unknown when the front category could not be established) and roadside convex mirrors. Private signage, advertisements, commercial notices, private no-parking notices and CCTV notices were explicitly excluded. Public sign infrastructure that matched no semantic class was annotated as Other-Unknown rather than omitted, so that the dataset records the presence of all public sign furniture. The final class and attribute distributions over the eleven-group scope are given in Tables~\ref{tab:mtsd-class-dist} and~\ref{tab:mtsd-attr-dist}.
+
+\begin{table}[htbp]
+\centering
+\caption{MTSD detection-class distribution (final eleven-group scope, regenerated from the final EDA export).}
+\label{tab:mtsd-class-dist}
+\small
+\begin{tabular}{lrr}
+\hline
+\textbf{Class} & \textbf{Instances} & \textbf{Share (\%)} \\
+\hline
+Pedestrian Crossing & \TBD{cls-pc} & \TBD{cls-pc-pct} \\
+Stop Sign & \TBD{cls-stop} & \TBD{cls-stop-pct} \\
+No Entry (One Way) & \TBD{cls-ne} & \TBD{cls-ne-pct} \\
+Roundabout Ahead & \TBD{cls-ra} & \TBD{cls-ra-pct} \\
+No Through Road (T-Junction) & \TBD{cls-ntr} & \TBD{cls-ntr-pct} \\
+Blind-Spot Mirror (Convex Mirror) & \TBD{cls-bsm} & \TBD{cls-bsm-pct} \\
+Street Sign & \TBD{cls-ss} & \TBD{cls-ss-pct} \\
+Directional Sign & \TBD{cls-ds} & \TBD{cls-ds-pct} \\
+Tourist Sign & \TBD{cls-ts} & \TBD{cls-ts-pct} \\
+Auxiliary Sign & \TBD{cls-as} & \TBD{cls-as-pct} \\
+Back-Unknown & \TBD{cls-bu} & \TBD{cls-bu-pct} \\
+Other-Unknown & \TBD{cls-ou} & \TBD{cls-ou-pct} \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{MTSD attribute distribution (final eleven-group scope).}
+\label{tab:mtsd-attr-dist}
+\small
+\begin{tabular}{llr}
+\hline
+\textbf{Attribute} & \textbf{Value} & \textbf{Instances} \\
+\hline
+Viewing angle & Front / Back / Side & \TBD{va-front} / \TBD{va-back} / \TBD{va-side} \\
+Mounting & Pole-Mounted / Wall-Mounted & \TBD{mt-pole} / \TBD{mt-wall} \\
+Condition & Good / Weathered / Heavily Damaged & \TBD{cond-good} / \TBD{cond-weath} / \TBD{cond-hd} \\
+Shape & Circular / Quadrangle / Triangular / Octagonal / Pentagon & \TBD{sh-circ} / \TBD{sh-quad} / \TBD{sh-tri} / \TBD{sh-oct} / \TBD{sh-pent} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Exploratory Data Analysis}
+
+The final MTSD EDA was regenerated over the complete eleven-group scope by the \texttt{mtsd\_eda} package and its notebook front end after the final annotation freeze. It produced the per-group image inventory; annotation counts; the detection-class distribution; the four attribute distributions and class-by-attribute cross-tabulations; bounding-box geometry and COCO object-size distributions; the signs-per-image distribution and the share of images containing multiple signs; image resolution and orientation summaries; the capture-time distribution; EXIF and GPS completeness audits; locality coverage summaries; per-group comparisons; and annotated sample visualisations. A companion tool generated an interactive GPS atlas that plots every geotagged capture on a map of Malta with image previews, which was used to verify geographic coverage and to spot-check annotations in situ. The EDA directly informed later methodology: attribute class frequencies determined the inverse-frequency class weights used in the attribute loss; the prevalence of wall-mounted and obliquely viewed signs justified the contextual crop padding (Section~\ref{sec:dataset-preparation}); the dominance of small objects motivated object-size robustness slices; rare categories were flagged for cautious per-class interpretation; and the duplicate and integrity findings fed the quality-assurance workflow described next.
+
+\section{Annotation and Quality Assurance}
+\label{sec:annotation-quality-assurance}
+
+\subsection{MDWD Quality Assurance}
+
+MDWD annotations passed through manual annotation followed by reviewer consolidation, in which class assignments were checked for consistency with the presentation-based taxonomy, box boundaries were tightened, and ambiguous instances were removed. Both export formats were then verified programmatically. A dataset-integrity checker validated every export variant for missing or unreadable images, missing label files, orphan labels without images, malformed label rows, invalid class identifiers, out-of-range coordinates, empty annotation files, duplicate filenames and cross-split leakage of augmented sources, and cross-checked that the YOLO and COCO variants encode the same annotation state. Annotated samples were rendered and visually inspected as a final check.
+
+Because MDWD's training split was expanded by offline augmentation \emph{before} splitting (a property of the upstream export), a dedicated cross-split leakage audit was conducted. Source identities were reconstructed from the augmented filenames, normalising file extensions so that derivatives of one photograph were grouped under one identity; source images whose derivatives appeared in more than one split were flagged. Leakage-excluded validation and test subsets were then constructed---without modifying a single dataset file---and the already-trained checkpoints were re-evaluated on both the original and the leakage-excluded subsets under the original evaluation protocol. This analysis was used strictly as a \emph{sensitivity check} quantifying how far the reported benchmark could have been influenced by the shared sources; the original dataset and benchmark remained the primary evaluation material, and the sensitivity outcome is reported with the results in Chapter~\ref{ch:evaluation}.
+
+\subsection{MTSD Quality Assurance}
+
+MTSD annotation was performed in Label Studio under a written labelling configuration that enforced one class and all four attributes per box, and QA-formatted COCO exports (one Final-QA JSON per group) formed the canonical annotation record. Quality assurance followed a three-stage pipeline: a read-only automated audit, an interactive visual review, and a guarded application of corrections.
+
+The automated audit validated every Final-QA export for: absent attribute dictionaries; missing attribute keys; null or empty values; values outside the controlled vocabularies; case mismatches and close misspellings of valid values; unknown category identifiers; configured excluded values (Damaged-Unknown); geometrically invalid bounding boxes; malformed JSON; missing source-image references; unreadable images; orphan annotations; and duplicate annotations. Duplicates were detected geometrically: two boxes of the same image with intersection-over-union $\geq 0.95$ were flagged as duplicate candidates, and pairs with IoU in $[0.75, 0.95)$ as high-overlap warnings, with attribute conflicts between duplicate candidates reported separately.
+
+Findings were then inspected in a purpose-built visual review application that displayed the full image alongside an enlarged crop with the annotation overlay, allowed attribute correction against the controlled vocabularies, presented duplicate pairs side by side for keep/delete decisions, and recorded explicit skip decisions so that every finding received a documented resolution. Confirmed corrections were applied by a guarded writer that ran in dry-run mode by default, required explicit confirmation, created timestamped backups of every touched file, verified the expected old value before writing, edited only the targeted field, re-parsed and re-counted each file after modification, and wrote an applied-change log. The audit was re-run after every application cycle. The final eleven-group dataset was accepted only when all required attributes were present, all values belonged to the controlled vocabularies, all duplicate decisions were resolved, all image references and bounding boxes were valid, the QA file hashes were refreshed, and the machine-readable QA gate that guards dataset preparation was marked resolved.
+
+\section{Dataset Preparation}
+\label{sec:dataset-preparation}
+
+\subsection{Split Strategy}
+
+Both MTSD tracks used deterministic 80/10/10 train/validation/test splits with seed 42, assigned at the level of the \emph{source image} so that no photograph---and therefore no annotation or crop derived from it---could appear in more than one partition. For supervised detection, the preparation pipeline assigned each annotated image to a split deterministically (split algorithm v1) before any augmentation was applied, and the identical assignment was reused for both the augmented and the unaugmented dataset variants, so the two variants differ only in their training images. For attribute classification, each source image was assigned by a salted deterministic hash (key \texttt{mtsd-attr-split-v1}) of its identity, and all sign crops extracted from one image inherited its split. MDWD retained the fixed upstream v20 split (29\,487/369/369 export images), whose leakage properties were audited as described above.
+
+\subsection{MDWD Preprocessing}
+
+Every MDWD export image was EXIF-orientation corrected (with orientation metadata stripped) and resized to $640 \times 640$ pixels by stretch resizing, with labels transformed accordingly; images were stored as JPEG. The 640~px resolution matches the native training resolution of the evaluated detectors and keeps the four export variants directly comparable. Stretch resizing (rather than letterboxing) means that aspect ratio was not preserved: objects in strongly non-square photographs are geometrically distorted by a known, deterministic amount. This choice guarantees a uniform tensor shape without padding artefacts, but it is acknowledged as a preprocessing decision that slightly alters object geometry relative to the original scenes, identically across all compared models.
+
+\subsection{MTSD Supervised-Detection Preparation}
+
+The canonical preparation pipeline generated two linked dataset variants from the final QA-approved annotations: \emph{MTSD-Augmented} (the primary training material) and \emph{MTSD-Unaugmented} (the ablation and prompt-evaluation material), each exported in both YOLO and COCO layouts. Preparation consumed only Final-QA JSONs under a machine-readable QA gate that refused to run while any audit finding was unresolved; the raw XML fallback was disabled for all final runs. For each variant the pipeline wrote a manifest recording the split assignment, the SHA-256 hash of every source annotation file and every prepared file, the class mapping, and the bounding-box conversions applied; prepared datasets were validated strictly (file existence, label validity, class coverage, split integrity) before any training was permitted, and existing prepared versions could not be overwritten, making every dataset version immutable. The final prepared training split contained \TBD{mtsd-prepared-train} images (\TBD{mtsd-prepared-train-aug} after augmentation), with \TBD{mtsd-prepared-valid} validation and \TBD{mtsd-prepared-test} test images.
+
+\subsection{MTSD Attribute Crops}
+
+Attribute-classification samples were extracted from the ground-truth boxes of the final annotation scope. Each box was expanded by 25\% of its width and height on every side before cropping, clipped at the image boundary, and saved as JPEG at quality 95. Contextual padding was retained deliberately: mounting type and viewing angle are partly determined by context outside the sign face---the supporting pole or wall, and the sign's projection geometry---so a tightly cropped sign face would discard the very evidence those heads require. Boxes whose shorter side measured below 16 pixels at original resolution were excluded from the manifest, because such crops are unreadable after resizing to the backbone input sizes and would contribute label noise rather than signal. Crops carrying the excluded Damaged-Unknown shape value were dropped entirely under the configured policy; any attribute value outside a head's controlled vocabulary was masked as a missing label for that head only, contributing no gradient to it. The final manifest contained \TBD{attr-final-crops} crops.
+
+\subsection{Data Augmentation}
+\label{subsec:augmentation}
+
+\subsubsection{MDWD Offline Augmentation}
+
+MDWD training data were augmented offline in the upstream v20 export, generating approximately ten variants per source photograph. Table~\ref{tab:mdwd-aug} lists the verified operations. Horizontal flipping simulates the arbitrary left--right composition of street photography; brightness and exposure perturbation simulate illumination and metering variation across capture times and devices; Gaussian blur up to one pixel simulates mild defocus; and vertical flipping, which is not physically representative of street scenes, was retained in the export as a purely robustness-oriented perturbation that discourages reliance on absolute vertical orientation. The validation and test splits received no augmentation---only the deterministic resize---so all evaluation was performed on unaugmented imagery.
+
+\begin{table}[htbp]
+\centering
+\caption{MDWD offline augmentation pipeline (verified from the v20 export metadata; $\sim$10 variants per source image).}
+\label{tab:mdwd-aug}
+\small
+\begin{tabular}{llp{0.42\linewidth}}
+\hline
+\textbf{Operation} & \textbf{Setting} & \textbf{Rationale / limitation} \\
+\hline
+Horizontal flip & $p = 0.5$ & viewpoint diversity; label-safe for waste \\
+Vertical flip & $p = 0.5$ & robustness-oriented only; not physically representative \\
+Brightness & $\pm 17\%$ & illumination variation \\
+Exposure & $\pm 10\%$ & camera metering variation \\
+Gaussian blur & 0--1~px & mild defocus \\
+\hline
+\end{tabular}
+\end{table}
+
+Crucially, the offline pipeline was the \emph{sole} source of training augmentation for the YOLO models: the saved run configurations show every Ultralytics online augmentation explicitly disabled (HSV shifts, geometric transforms, flips, mosaic, mixup, cutmix, copy-paste and random erasing all set to zero). Training therefore saw exactly the exported images, which makes the augmentation state fully deterministic and identical across YOLO generations. RF-DETR, by contrast, applies internal online transformations within its own training pipeline that cannot be disabled equivalently in version 1.3.0; multi-scale and expanded-scale options were switched off in the final configuration, and the residual internal augmentation is documented as a controlled-comparison limitation (Section~\ref{sec:supervised-detection-methodology}).
+
+\subsubsection{MTSD Photometric Augmentation}
+
+MTSD training images were augmented offline by the deterministic \emph{photometric-v1} recipe: two augmented copies per training image, generated under seed 42, with each copy's parameters drawn from the configured ranges in Table~\ref{tab:mtsd-aug}. Every augmented file's provenance and hash were recorded in the prepared-dataset manifest, making the augmented variant exactly reproducible. The recipe is deliberately photometric rather than geometric: traffic-sign meaning is encoded in shape, orientation and left--right content (arrows, text), and the annotation attributes include viewing angle and shape, so geometric transforms such as flips or large rotations would corrupt labels or alter the sign semantics. Photometric perturbations instead simulate the capture-side variation observed in the EDA---illumination, colour temperature, mild blur, sensor noise and compression---while preserving geometry and every attribute label.
+
+\begin{table}[htbp]
+\centering
+\caption{MTSD \emph{photometric-v1} offline augmentation (two copies per training image, seed 42; verified from the preparation configuration).}
+\label{tab:mtsd-aug}
+\small
+\begin{tabular}{llp{0.40\linewidth}}
+\hline
+\textbf{Operation} & \textbf{Setting} & \textbf{Rationale} \\
+\hline
+Brightness & factor 0.8--1.2 & illumination variation \\
+Contrast & factor 0.85--1.15 & haze, exposure variation \\
+Colour & factor 0.9--1.1 & white-balance variation \\
+Gaussian blur & $p=0.5$, $\sigma \leq 1.0$ & defocus, motion softness \\
+Gaussian noise & $p=0.3$, $\sigma \leq 0.02$ & sensor noise \\
+JPEG compression & $p=0.3$, quality 70--92 & re-compression artefacts \\
+Gamma & factor 0.9--1.1 & tone-curve variation \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Supervised Object Detection}
+\label{sec:supervised-detection-methodology}
+
+\subsection{Model Matrix}
+
+Table~\ref{tab:model-matrix} lists the supervised detectors trained in the final study. The matrix spans three YOLO generations at matched nano/small/medium scales (with YOLO26 additionally at large), representing convolution-dominated (YOLO11), attention-centric (YOLO12) and end-to-end NMS-free (YOLO26) one-stage design \citep{ultralytics2024yolo11,tian2025yolov12,jocher2026yolo26}, together with RF-DETR at nano/small/medium scales representing pretrained-backbone detection transformers \citep{robinson2025rfdetr}. All models were initialised from their official COCO-pretrained checkpoints. Parameter counts were introspected from the instantiated models at training time rather than taken from vendor tables. The matrix supports four comparisons: generational variation within YOLO at fixed scale; capacity scaling within each family; convolutional versus attention-oriented versus transformer-based design; and accuracy--efficiency trade-offs when read together with the deployment benchmark.
+
+\begin{table}[htbp]
+\centering
+\caption{Supervised model matrix. Parameter counts were introspected at run time; RF-DETR counts are taken from the final checkpoint metadata.}
+\label{tab:model-matrix}
+\small
+\begin{tabular}{llllrr}
+\hline
+\textbf{Model} & \textbf{Family} & \textbf{Framework} & \textbf{Pretraining} & \textbf{Input} & \textbf{Parameters} \\
+\hline
+YOLO11n & YOLO11 & Ultralytics 8.4.60 & COCO & 640 & 2\,590\,815 \\
+YOLO11s & YOLO11 & Ultralytics 8.4.60 & COCO & 640 & 9\,429\,727 \\
+YOLO11m & YOLO11 & Ultralytics 8.4.60 & COCO & 640 & 20\,056\,863 \\
+YOLO12n & YOLO12 & Ultralytics 8.4.60 & COCO & 640 & 2\,569\,023 \\
+YOLO12s & YOLO12 & Ultralytics 8.4.60 & COCO & 640 & 9\,255\,071 \\
+YOLO12m & YOLO12 & Ultralytics 8.4.60 & COCO & 640 & 20\,141\,343 \\
+YOLO26n & YOLO26 & Ultralytics 8.4.60 & COCO & 640 & 2\,505\,750 \\
+YOLO26s & YOLO26 & Ultralytics 8.4.60 & COCO & 640 & 9\,951\,734 \\
+YOLO26m & YOLO26 & Ultralytics 8.4.60 & COCO & 640 & 21\,780\,598 \\
+YOLO26l & YOLO26 & Ultralytics 8.4.60 & COCO & 640 & 26\,184\,054 \\
+RF-DETR Nano & RF-DETR & \texttt{rfdetr} 1.3.0 & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-n-params} \\
+RF-DETR Small & RF-DETR & \texttt{rfdetr} 1.3.0 & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-s-params} \\
+RF-DETR Medium & RF-DETR & \texttt{rfdetr} 1.3.0 & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-m-params} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Training Protocol}
+
+A single shared protocol governed all supervised runs on both datasets, with settings extracted from the immutable per-run configuration exports (Table~\ref{tab:supervised-hparams}). Every model trained for at most 100 epochs at $640 \times 640$ input with an effective batch size of 32, optimised by AdamW with initial learning rate $10^{-3}$, final learning-rate factor 0.01, weight decay $5 \times 10^{-4}$ and momentum 0.937 where applicable, three warm-up epochs, early stopping with patience 10, seed 42 and deterministic execution. Automatic mixed precision was enabled. Validation ran after every epoch; the validation split alone drove checkpoint selection, early stopping and training monitoring, and the test split was evaluated exactly once per model, after checkpoint selection.
+
+\begin{table}[htbp]
+\centering
+\caption{Shared supervised training hyperparameters (verified from saved run configurations; identical for MDWD and MTSD).}
+\label{tab:supervised-hparams}
+\small
+\begin{tabular}{lll}
+\hline
+\textbf{Setting} & \textbf{YOLO (all generations)} & \textbf{RF-DETR} \\
+\hline
+Epochs (max) & 100 & 100 \\
+Input resolution & $640 \times 640$ & $640 \times 640$ \\
+Effective batch size & 32 & 32 (no gradient accumulation) \\
+Optimiser & AdamW & AdamW \\
+Initial learning rate & 0.001 & 0.001 (encoder 0.001) \\
+Final LR factor & 0.01 & 0.01 \\
+Weight decay & 0.0005 & 0.0005 \\
+Warm-up epochs & 3 & 3 \\
+Early stopping & patience 10 & patience 10, min.\ delta 0.001 \\
+Checkpoint rule & best validation fitness & best validation metric (EMA and regular) \\
+EMA & framework default & enabled \\
+Mixed precision & enabled & enabled \\
+Seed / determinism & 42 / enabled & 42 / enabled \\
+Online augmentation & all disabled & internal (multi-scale and expanded scales off) \\
+Pretrained initialisation & official COCO checkpoints & official COCO checkpoint \\
+\hline
+\end{tabular}
+\end{table}
+
+For the YOLO models, the official \texttt{yolo11\{n,s,m\}.pt}, \texttt{yolo12\{n,s,m\}.pt} and \texttt{yolo26\{n,s,m,l\}.pt} checkpoints initialised training; the Ultralytics engine selected the best checkpoint by validation fitness, validation used an IoU threshold of 0.7 for duplicate suppression with at most 300 detections per image, and eight dataloader workers fed the GPU. As noted in Section~\ref{subsec:augmentation}, every online augmentation parameter was explicitly zeroed in the saved configurations. For RF-DETR, the \texttt{rfdetr} 1.3.0 package trained from the official COCO checkpoints with exponential moving average enabled, checkpoints written every ten epochs, early stopping with minimum improvement 0.001, and both regular and EMA best checkpoints retained; the Roboflow COCO/MMDetection export was normalised before training (missing supercategory keys added and category identifiers remapped to contiguous zero-based labels) to satisfy the RF-DETR data loader. RF-DETR's residual internal augmentation could not be aligned with the fully deterministic YOLO input stream, so cross-family comparisons are reported as practical benchmarks rather than controlled ablations.
+
+MDWD and MTSD runs differed only in their data: MDWD models consumed the v20 exports, while MTSD models consumed the prepared MTSD-Augmented variant, with the identical protocol otherwise. Every run wrote to an immutable, name-encoded run directory (encoding model, dataset version, resolution, batch, epochs, optimiser and learning rate), exported its full configuration, and streamed metrics to the Weights~\&~Biases projects listed in Section~\ref{sec:reproducibility}; the MTSD matrix additionally ran under a resumable executor with per-run fingerprint checks so that an interrupted matrix continued without re-training completed models.
+
+\subsection{Augmentation Ablation}
+
+A controlled ablation isolated the causal effect of the photometric-v1 augmentation on MTSD. Three medium-scale models---YOLO11m, YOLO12m and YOLO26m---were each trained twice under the shared protocol: once on MTSD-Augmented and once on MTSD-Unaugmented. Medium scale was chosen because it represents each YOLO generation at comparable capacity, keeps training cost practical, and avoids confounding from extreme scale differences. Between the two conditions of each pair, everything except the training images was held fixed: the source-image split assignment, validation and test sets, checkpoint family, input size, epoch budget, optimiser and learning-rate schedule, effective batch size, seed, hardware and evaluation code. The unaugmented condition trained on exactly the original images of the same training split; the augmented condition added the two deterministic photometric copies per image. RF-DETR was excluded from this causal ablation because its internal online augmentation could not be held constant across conditions; its behaviour across the two dataset variants is reported descriptively only. Table~\ref{tab:ablation} summarises the design.
+
+\begin{table}[htbp]
+\centering
+\caption{MTSD augmentation-ablation design.}
+\label{tab:ablation}
+\small
+\begin{tabular}{lp{0.24\linewidth}p{0.24\linewidth}p{0.26\linewidth}}
+\hline
+\textbf{Model} & \textbf{Condition A} & \textbf{Condition B} & \textbf{Fixed controls} \\
+\hline
+YOLO11m & MTSD-Augmented & MTSD-Unaugmented & \multirow{3}{0.26\linewidth}{split, val/test sets, checkpoint family, 640~px, 100 epochs, AdamW, LR schedule, batch 32, seed 42, hardware, metric code} \\
+YOLO12m & MTSD-Augmented & MTSD-Unaugmented & \\
+YOLO26m & MTSD-Augmented & MTSD-Unaugmented & \\
+\hline
+\end{tabular}
+
+\vspace{2pt}
+{\footnotesize Dependent variables: mAP@50, mAP@50:95, per-class AP on the shared test set; one run per cell (six runs).}
+\end{table}
+
+\section{Prompt-Based and Open-Vocabulary Localisation}
+\label{sec:promptdetect-methodology}
+
+\subsection{Model Set}
+
+The zero-shot track evaluated six promptable systems through one common backend (Table~\ref{tab:promptdetect-models}): SAM~3 and SAM~3.1, loaded through Meta's native \texttt{sam3} package so that both checkpoints share an identical preprocessing, inference and post-processing path \citep{meta2025sam3,meta2026sam31}; LocateAnything~3B, a dedicated visual-grounding vision--language model executed in its isolated worker environment \citep{nvidia2026locateanything}; and NVIDIA Cosmos Reason2 at 2B, 8B and 32B parameters, reasoning vision--language models prompted to emit bounding boxes as structured JSON \citep{nvidia2025cosmosreason2}. The 2B and 8B variants formed part of the primary matrix; the 32B variant, whose half-precision weights (approximately 64~GB) exceed the workstation's GPU memory and require CPU offload, was included as an explicitly opt-in heavy configuration. All model weights were obtained from their gated official repositories.
+
+\begin{table}[htbp]
+\centering
+\caption{PromptDetect model capabilities as exposed through the common evaluation backend.}
+\label{tab:promptdetect-models}
+\small
+\begin{tabular}{lp{0.15\linewidth}llp{0.16\linewidth}l}
+\hline
+\textbf{Model} & \textbf{Family} & \textbf{Boxes} & \textbf{Masks} & \textbf{Per-box confidence} & \textbf{Matrix} \\
+\hline
+SAM 3 & promptable concept segmentation & yes & yes & calibrated scores & primary \\
+SAM 3.1 & as SAM 3 (updated checkpoint) & yes & yes & calibrated scores & primary \\
+LocateAnything 3B & VLM grounding (parallel box decoding) & yes & no & none (constant 1.0) & primary \\
+Cosmos Reason2 2B & reasoning VLM (Qwen3-VL) & yes & no & none (constant 1.0) & primary \\
+Cosmos Reason2 8B & reasoning VLM (Qwen3-VL) & yes & no & none (constant 1.0) & primary \\
+Cosmos Reason2 32B & reasoning VLM (Qwen3-VL) & yes & no & none (constant 1.0) & optional heavy \\
+\hline
+\end{tabular}
+\end{table}
+
+Two output asymmetries shaped the evaluation design. First, although SAM~3 and SAM~3.1 return segmentation masks alongside boxes, both datasets carry box ground truth only, so all models were scored on boxes; masks were retained for qualitative inspection. Second, Cosmos Reason2 and LocateAnything emit no calibrated per-box confidence through the common backend, which stored a constant score of 1.0 for their detections; ranking-based average precision is therefore not a meaningful universal metric for these models, and cross-model comparison rests on the fixed-threshold operating-point metrics defined in Section~\ref{sec:evaluation-framework}.
+
+\subsection{Fixed Prompt Protocol}
+
+All dissertation evaluations ran under a versioned, committed prompt protocol (\texttt{dissertation-v1}) rather than ad-hoc prompting, with fixed defaults verified from the final run configurations: confidence threshold 0.30 (applied to score-producing models), IoU matching threshold 0.50, and at most 100 detections per image. Evaluation used the held-out test splits only---the MDWD test export and the MTSD-Unaugmented prepared test split, the latter loaded strictly through its manifest under the QA gate. Tables~\ref{tab:mdwd-prompts} and~\ref{tab:mtsd-prompts} document the complete prompt sets and their declared target classes, transcribed from the protocol file.
+
+\begin{table}[htbp]
+\centering
+\caption{MDWD prompt-to-taxonomy mapping (protocol \texttt{dissertation-v1}).}
+\label{tab:mdwd-prompts}
+\small
+\begin{tabular}{llp{0.34\linewidth}}
+\hline
+\textbf{Prompt} & \textbf{Group} & \textbf{Target class(es)} \\
+\hline
+``black garbage bag'' & class-targeted & Mixed Waste \\
+``grey recycling bag'' & class-targeted & Recyclable Material \\
+``white organic-waste bag'' & class-targeted & Organic Waste \\
+``orange garbage bag'' & class-targeted & Orange CMD \\
+``domestic waste'' & broad & all five classes \\
+``garbage'' & broad & all five classes \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{MTSD prompt-to-taxonomy mapping (protocol \texttt{dissertation-v1}).}
+\label{tab:mtsd-prompts}
+\small
+\begin{tabular}{llp{0.40\linewidth}}
+\hline
+\textbf{Prompt} & \textbf{Group} & \textbf{Target class(es)} \\
+\hline
+``pedestrian crossing sign'' & class-targeted & Pedestrian Crossing \\
+``stop sign'' & class-targeted & Stop Sign \\
+``no entry sign'' & synonym-comparison & No Entry (One Way) \\
+``one way sign'' & synonym-comparison & No Entry (One Way) \\
+``roundabout ahead sign'' & class-targeted & Roundabout Ahead \\
+``no through road sign'' & synonym-comparison & No Through Road (T-Junction) \\
+``T-junction sign'' & synonym-comparison & No Through Road (T-Junction) \\
+``blind-spot convex mirror'' & class-targeted & Blind-Spot Mirror (Convex Mirror) \\
+``street sign'' & class-targeted & Street Sign \\
+``directional sign'' & class-targeted & Directional Sign \\
+``back of a traffic sign'' & class-targeted & Back-Unknown \\
+``traffic sign'' & broad & eleven sign classes (excludes Blind-Spot Mirror, which is not a conventional sign face) \\
+``roadside traffic-control object'' & broad & all twelve classes \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Taxonomy-Aware Ground-Truth Strategy}
+
+The central design decision of this track is that a prompt was never rewarded for localising an arbitrary annotated object. For every model--prompt combination, the full test split was evaluated, including images containing no instance of the prompt's targets: the prompt's declared target classes defined the positive ground-truth set; annotations of non-target classes were excluded from the positives; predictions in target-negative images counted as false positives; unmatched target boxes counted as false negatives; and predictions that failed to match a target but overlapped a non-target annotation at or above the matching threshold were recorded separately, feeding a prompt-versus-ground-truth-class confusion matrix. This taxonomy-aware design differs fundamentally from a class-agnostic evaluator, which scores whether a model found \emph{any} annotated object: under class-agnostic scoring, the prompt ``stop sign'' would earn credit for boxing a street nameplate. The targeted evaluator prevents such credit, measures each prompt against the municipal taxonomy it claims to address, and its confusion matrix separates two distinct failure modes---hallucinated detections on background versus systematic confusion with other annotated infrastructure. The exploratory class-agnostic evaluator remained available for prompt development but contributed no dissertation evidence; all reported results derive from the targeted route, which labels its outputs with the protocol version.
+
+\subsection{Matching, Aggregation and Outputs}
+
+Within each image, predictions were matched to target ground truth greedily and one-to-one: predictions were ordered by descending confidence (a stable order for constant-confidence models), each prediction claimed the unmatched ground-truth box of highest IoU if that IoU reached 0.50, and every subsequent prediction overlapping an already-claimed box was surplus---counted as a false positive and flagged as a duplicate detection. Unmatched predictions and unmatched ground-truth boxes yielded false positives and false negatives respectively. For aggregation, class-targeted and synonym-comparison prompts formed the principal macro comparison, with each synonym phrasing retained as a separate observation to expose prompt sensitivity; broad prompts were reported separately and excluded from the prompt-specific macro average. Universal cross-model comparison used precision, recall, F1, mean matched IoU and runtime; average precision was computed and interpreted only for the score-producing SAM models.
+
+Each run persisted: the complete run configuration; the ground-truth index; the full prediction table; per-prompt, per-image and per-model metric tables; per-class match records; the prompt confusion matrix; ground-truth-versus-prediction overlay visualisations; and an evaluation summary. Every model--prompt combination was written atomically to its own completion record, so an interrupted evaluation resumed from the last completed combination without recomputing finished work---an essential property given that a single heavy-model pass over a test split takes hours.
+
+\section{Multi-Attribute Traffic-Sign Classification}
+\label{sec:attribute-classification-methodology}
+
+\subsection{Task Formulation}
+
+The attribute study is crop-level multi-task classification: one padded sign crop passes through one shared visual backbone, and four independent heads predict viewing angle, mounting type, physical condition and sign shape, each as one mutually exclusive class from its vocabulary. This is multi-\emph{head}, not multi-\emph{label}, classification---each head solves its own single-label problem over a distinct vocabulary---and it differs from training four separate single-head models in that the backbone computation and representation are shared, quartering inference cost and enabling (but not guaranteeing) beneficial feature sharing. Crops lacking a valid label for some head under the configured masking policy contributed no loss to that head while still training the others.
+
+\subsection{Backbone and Adaptation Matrix}
+
+Six variants crossed three pretrained representation families with three adaptation strategies (Table~\ref{tab:attr-variants}). DINOv3 contributed a self-supervised image transformer (ViT-B/16, checkpoint \texttt{facebook/dinov3-vitb16-pretrain-lvd1689m}) \citep{simeoni2025dinov3}; V-JEPA~2.1 contributed a video-pretrained joint-embedding predictive architecture (ViT-L at 384~px, Torch~Hub entry point \texttt{vjepa2\_1\_vit\_large\_384}, distilled checkpoint \texttt{vjepa2\_1\_vitl\_dist\_vitG\_384}) \citep{murlabadia2026vjepa21}; and ConvNeXt-Tiny contributed a supervised ImageNet-pretrained convolutional network \citep{liu2022convnet}. Because V-JEPA~2.1 is a video encoder, each still crop was presented as a two-frame pseudo-clip (the crop repeated along the temporal axis, matching the tubelet size of 2); this adds compute but no information, and is documented as an inherent cost of applying a video backbone to still imagery. The trainable-parameter counts in Table~\ref{tab:attr-variants} were introspected from the instantiated models and show that the comparison spans four orders of magnitude of adaptation capacity; for this reason the study is framed as an adaptation-strategy comparison across representation families, not a controlled backbone ranking---the LoRA adapters differ in capacity across backbones, and full fine-tuning was applied only to the smallest backbone.
+
+\begin{table}[htbp]
+\centering
+\caption{Attribute-classification variant matrix (parameter counts introspected at run time; final-scope run).}
+\label{tab:attr-variants}
+\small
+\begin{tabular}{lp{0.17\linewidth}lllrr}
+\hline
+\textbf{Variant} & \textbf{Backbone} & \textbf{Pretraining} & \textbf{Adaptation} & \textbf{Input} & \textbf{Feat.\ dim} & \textbf{Trainable params} \\
+\hline
+\texttt{dinov3} & DINOv3 ViT-B/16 & SSL, LVD-1689M & frozen + linear probe & 224 & 768 & 9\,997 \\
+\texttt{dinov3\_lora} & DINOv3 ViT-B/16 & SSL & LoRA ($r{=}8$) + heads & 224 & 768 & 304\,909 \\
+\texttt{vjepa} & V-JEPA 2.1 ViT-L/384 & video SSL & frozen + linear probe & 384 & 1\,024 & 13\,325 \\
+\texttt{vjepa\_lora} & V-JEPA 2.1 ViT-L/384 & video SSL & LoRA ($r{=}8$) + heads & 384 & 1\,024 & 799\,757 \\
+\texttt{convnext\_frozen} & ConvNeXt-Tiny & supervised, ImageNet-1k & frozen + linear probe & 224 & 768 & 9\,997 \\
+\texttt{convnext} & ConvNeXt-Tiny & supervised, ImageNet-1k & full fine-tuning & 224 & 768 & 27\,828\,589 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Shared Multi-Head Architecture}
+
+The classifier wraps each backbone behind a uniform interface that yields one pooled feature vector per crop: DINOv3 uses its pooler (CLS) output, ConvNeXt its global average pool, and V-JEPA~2.1 mean-pooled token features. Four independent linear heads---one $d \to |\mathcal{C}_a|$ layer per attribute $a$---map this shared representation to class logits (Figure~\ref{fig:multihead}). Under the \emph{frozen} mode the backbone's parameters carry no gradients and the module is pinned to evaluation mode even while the heads train, so normalisation statistics cannot drift; under \emph{LoRA} the base weights stay frozen while low-rank adapters and heads train; under \emph{finetune} all parameters train.
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=2pt, minimum width=2.55cm, minimum height=0.85cm, align=center, font=\small},
+  head/.style={draw, rounded corners=2pt, minimum width=2.0cm, minimum height=0.8cm, align=center, font=\small},
+  arr/.style={->, thick}
+]
+\node[box] (crop) {Traffic-sign crop\\ \footnotesize (padded, resized)};
+\node[box, below=0.55cm of crop] (backbone) {Shared visual backbone\\ \footnotesize DINOv3 / V-JEPA 2.1 / ConvNeXt};
+\node[box, below=0.55cm of backbone] (feat) {Pooled representation\\ \footnotesize $d = 768$ or $1024$};
+\node[head, below=0.8cm of feat, xshift=-4.65cm] (h1) {Viewing angle\\ \footnotesize 3 classes};
+\node[head, below=0.8cm of feat, xshift=-1.55cm] (h2) {Mounting\\ \footnotesize 2 classes};
+\node[head, below=0.8cm of feat, xshift=1.55cm] (h3) {Condition\\ \footnotesize 3 classes};
+\node[head, below=0.8cm of feat, xshift=4.65cm] (h4) {Sign shape\\ \footnotesize 5 classes};
+\draw[arr] (crop) -- (backbone);
+\draw[arr] (backbone) -- (feat);
+\draw[arr] (feat.south) -- (h1.north);
+\draw[arr] (feat.south) -- (h2.north);
+\draw[arr] (feat.south) -- (h3.north);
+\draw[arr] (feat.south) -- (h4.north);
+\end{tikzpicture}
+\caption{Shared-backbone multi-head attribute classifier. One backbone produces a pooled representation consumed by four independent linear heads.}
+\label{fig:multihead}
+\end{figure}
+
+\subsection{Training Procedure}
+
+All six variants trained under one shared loop with the configuration in Table~\ref{tab:attr-hparams}. Differential learning rates separated the three parameter groups: newly initialised heads trained at $10^{-3}$; pretrained backbone parameters (fine-tuning only) at $5 \times 10^{-5}$, two orders of magnitude lower, to preserve pretrained structure; and LoRA adapters at $2 \times 10^{-4}$. The cosine schedule spanned the full epoch budget with five warm-up epochs. Early stopping monitored validation mean macro-F1 with patience 10 and minimum delta 0.001, and the best checkpoint was the epoch with the highest validation mean macro-F1; test data played no role in learning-rate selection, early stopping, checkpoint selection or any other model choice, and each selected checkpoint was evaluated exactly once on the test split.
+
+\begin{table}[htbp]
+\centering
+\caption{Attribute-classification training configuration (shared across all six variants; verified from the central configuration and run logs).}
+\label{tab:attr-hparams}
+\small
+\begin{tabular}{ll}
+\hline
+\textbf{Setting} & \textbf{Value} \\
+\hline
+Seed & 42 \\
+Batch size / workers & 32 / 4 \\
+Maximum epochs & 150 \\
+Optimiser & AdamW \\
+Learning rates (heads / backbone / LoRA) & $10^{-3}$ / $5\times10^{-5}$ / $2\times10^{-4}$ \\
+Weight decay & 0.05 \\
+Schedule & cosine, 5 warm-up epochs \\
+Mixed precision & enabled \\
+Gradient clipping & 1.0 \\
+Label smoothing & 0.0 \\
+Class weighting & inverse frequency, normalised to mean 1 \\
+Head loss weights & 1.0 per head \\
+Early stopping & patience 10, min.\ delta 0.001, on validation mean macro-F1 \\
+Checkpoint selection & highest validation mean macro-F1 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Loss Function}
+
+Let $\mathcal{A}$ denote the four attribute heads, and for head $a \in \mathcal{A}$ let $\mathcal{C}_a$ be its class vocabulary and $V_a \subseteq \{1,\dots,N\}$ the subset of a batch of $N$ crops carrying a valid label for $a$ (missing labels are encoded as $-1$ and masked). With per-class weights $w_{a,c}$ computed from the training split as inverse class frequencies normalised to mean one, the head loss is the weighted categorical cross-entropy
+\begin{equation}
+\mathcal{L}_a \;=\; \frac{1}{\sum_{i \in V_a} w_{a,y_i}} \sum_{i \in V_a} w_{a,y_i} \; \bigl( -\log p_a(y_i \mid x_i) \bigr),
+\end{equation}
+where $p_a(y_i \mid x_i)$ is the head's softmax probability of the true class $y_i$. A head whose entire batch is masked contributes zero. The total loss is the weighted sum
+\begin{equation}
+\mathcal{L} \;=\; \sum_{a \in \mathcal{A}} \lambda_a \, \mathcal{L}_a, \qquad \lambda_a = 1 \;\; \forall a,
+\end{equation}
+with equal head weights $\lambda_a$ throughout, so no attribute was privileged during optimisation.
+
+\subsubsection{Training Augmentation}
+
+Training crops received colour jitter (brightness 0.3, contrast 0.3, saturation 0.2, hue 0.02), random rotation of up to $10^\circ$, and random resized cropping with scale 0.8--1.0. Horizontal flipping was disabled deliberately: sign content is frequently left--right asymmetric (arrows, text), flipping would invert directional semantics, and the viewing-angle labels encode a physically meaningful orientation that mirroring would corrupt. The modest rotation and photometric perturbations instead reflect the capture variation observed in the EDA without disturbing any label. Validation and test transformations were deterministic---resize and normalisation only.
+
+\subsection{Adaptation Strategies}
+
+\subsubsection{Frozen Linear Probing}
+In the two \texttt{frozen} variants and \texttt{convnext\_frozen}, the pretrained backbone was placed in evaluation mode with all gradients disabled, and only the four linear heads (9\,997 parameters at $d{=}768$; 13\,325 at $d{=}1\,024$) were optimised. Linear probing was included as the lowest-cost adaptation strategy, as a direct assessment of frozen representation quality on these attributes, and as the operationally attractive baseline: a municipality able to train only a linear layer could deploy it on modest hardware.
+
+\subsubsection{LoRA}
+The LoRA variants froze all base backbone weights and inserted trainable low-rank updates \citep{hu2022lora} with rank 8, scaling factor $\alpha = 16$ and dropout 0.05, alongside the trainable heads. Adapter placement followed each backbone's architecture: the DINOv3 implementation exposes separate per-block query and value projections, which received adapters (\texttt{q\_proj}, \texttt{v\_proj}), whereas Meta's V-JEPA vision transformer uses one fused QKV projection per block, so the fused \texttt{qkv} linear layer was adapted, jointly affecting queries, keys and values. The two configurations are the closest available analogues but do not yield identical adapter capacity (304\,909 versus 799\,757 trainable parameters), which is reported rather than hidden. LoRA was included as the parameter-efficient middle ground between probing and full fine-tuning.
+
+\subsubsection{Full Fine-Tuning}
+The \texttt{convnext} variant trained all backbone and head parameters end to end (27.8~M trainable), providing the maximum-adaptation-capacity reference point against which frozen transfer and parameter-efficient adaptation are compared, at correspondingly higher computational cost and overfitting risk on a dataset of this size. Full fine-tuning of the two foundation-scale transformers was not performed; the design compares each family under the adaptation regimes practical for its size, which is a stated boundary of the comparison.
+
+\section{Evaluation Framework}
+\label{sec:evaluation-framework}
+
+Table~\ref{tab:metrics} summarises every metric, its definition, aggregation level and limitations. Three evaluation routes shared these definitions: framework-native COCO-style evaluation for supervised detection, the targeted evaluator for prompt-based localisation, and the classification evaluator for attributes.
+
+\begin{table}[htbp]
+\centering
+\caption{Evaluation metrics. TP, FP and FN denote true positives, false positives and false negatives; IoU is intersection over union.}
+\label{tab:metrics}
+\footnotesize
+\begin{tabular}{p{0.16\linewidth}p{0.12\linewidth}p{0.28\linewidth}p{0.12\linewidth}p{0.20\linewidth}}
+\hline
+\textbf{Metric} & \textbf{Task} & \textbf{Definition} & \textbf{Aggregation} & \textbf{Limitations} \\
+\hline
+IoU & detection & $|B_p \cap B_g| / |B_p \cup B_g|$ & per match & threshold-sensitive \\
+Precision & det./prompt & $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$ & class, image, run & threshold-dependent \\
+Recall & det./prompt & $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$ & class, image, run & threshold-dependent \\
+F1 & det./prompt & $2PR/(P+R)$ & class, run & threshold-dependent \\
+AP@50 & detection & area under P--R curve at IoU 0.50 & per class & needs ranked scores \\
+mAP@50 / mAP@50:95 & detection & mean AP over classes / over IoU 0.50--0.95 & run & needs ranked scores \\
+Matched IoU & prompt & mean IoU over matched pairs & prompt, model & matched pairs only \\
+Target-aware accuracy & prompt & $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN})$ & prompt, model & not classification accuracy \\
+Accuracy & attributes & correct / valid-labelled & head & imbalance-blind \\
+Macro-F1 & attributes & unweighted mean per-class F1 & head; mean over heads & unstable for rare classes \\
+Confusion matrix & attributes & counts of predicted vs true class & head & --- \\
+Latency / throughput & deployment & per-image wall time / images per second & model & hardware-specific \\
+Peak GPU memory & deployment & maximum allocated during inference & model & allocator-dependent \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Object-Detection Metrics}
+
+Supervised detectors were evaluated with the standard COCO-style protocol \citep{lin2014microsoft,padilla2021comparative}: a prediction is a true positive when it matches an unmatched same-class ground-truth box at IoU $\geq$ the threshold; AP integrates precision over recall as the confidence threshold sweeps; mAP@50 averages AP over classes at IoU 0.50; and mAP@50:95 additionally averages over IoU thresholds from 0.50 to 0.95 in steps of 0.05. Per-class AP was always retained given the class imbalance in both datasets. Framework-native evaluation (Ultralytics for YOLO; COCO evaluation for RF-DETR) produced these threshold-free ranking metrics, whereas the fixed-threshold precision, recall and F1 reported alongside them use a single operating point; the two families of numbers answer different questions---ranking quality versus performance at a deployment threshold---and were never merged. Duplicate suppression at validation used the frameworks' native settings (IoU 0.7, maximum 300 detections for the YOLO route).
+
+\subsection{Attribute-Classification Metrics}
+
+Each head was evaluated with accuracy, per-class precision, recall and F1, macro-F1 (the unweighted mean of per-class F1) and its confusion matrix; the cross-head summary is the mean macro-F1 over the four heads---the same quantity used for checkpoint selection. Macro-F1 was preferred as the primary measure because the condition head in particular is heavily imbalanced, and accuracy under such imbalance rewards predicting the majority class \citep{sokolova2009systematic}. Crops with masked labels for a head were excluded from that head's denominators entirely.
+
+\subsection{PromptDetect Metrics}
+
+The targeted evaluator reported, per model--prompt combination: precision, recall, F1; the implementation's \emph{target-aware accuracy}, defined as $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP}+\mathrm{FN})$---a detection-style agreement ratio (equivalent to a Jaccard index over decisions) that must not be read as conventional classification accuracy; mean matched IoU; false-positive and false-negative counts; duplicate-detection counts; and per-image runtime. AP@50 and mAP@50:95 were additionally computed but interpreted only for SAM~3 and SAM~3.1, whose confidence scores support meaningful ranking; for the constant-confidence models these quantities collapse to a single operating point and were excluded from cross-model ranking claims \citep{guo2017calibration}.
+
+\subsection{Efficiency Metrics}
+
+Deployment comparison used: total and trainable parameter counts; checkpoint size on disk; mean, median and 95th-percentile per-image latency; throughput; cold-start model-loading time; peak GPU memory during inference; and the separated preprocessing, forward-pass and post-processing components where the framework exposed them.
+
+\subsection{Annotation-Effort and Operational Analysis}
+
+Operational effort was compiled per paradigm from existing repository artefacts: source-image, box and attribute-label counts; the number of annotation and QA stages and of QA findings reviewed; manually recorded annotation hours, taken exclusively from the recorded-values file with absent values reported as \emph{not recorded} rather than estimated; the number of training runs and trainable parameters; model storage; prompt counts and model--prompt evaluation combinations; inference latency and memory from the benchmark; whether task-specific retraining is required; and maintenance complexity. No composite score was computed: the dimensions were reported individually, because any single weighting of annotation cost against latency or accuracy would be arbitrary and would obscure the trade-offs the comparison is designed to expose.
+
+\section{Robustness and Failure-Case Analysis}
+\label{sec:robustness-methodology}
+
+\subsection{Robustness Slices}
+
+Stored predictions from all tracks were re-analysed along twelve slice dimensions: COCO object-size category (small/medium/large, computed at the $640 \times 640$ evaluation scale); image brightness, contrast and sharpness; object density (annotations per image); object position in the frame; semantic class; class frequency band; MTSD attribute head; MTSD attribute class; PromptDetect model; and PromptDetect prompt. Image-property thresholds were dataset-derived terciles rather than arbitrary fixed cut-offs---each dataset's own brightness, contrast and sharpness distributions defined the low/medium/high boundaries, which were recorded in the generated slice configuration for exact reproducibility. Dataset-derived terciles were preferred because fixed absolute thresholds calibrated on other datasets would slice Maltese street imagery unevenly, leaving some cells nearly empty. Slices with fewer than 15 supporting units (the configured minimum-support threshold) were retained in the outputs but marked \texttt{insufficient\_support} and excluded from any highlighted comparison. The slicing tool operated strictly on stored predictions and never re-ran a model, so slice analyses cannot silently diverge from the primary evaluations.
+
+\subsection{Failure-Case Sampling}
+
+Qualitative analysis used seeded, capped sampling of six outcome categories per model: false positives; false negatives; small-object false negatives; duplicate detections; low-confidence true positives; and clean successes. Sampled cases were rendered as overlay visualisations distinguishing ground truth from predictions. Because clutter and occlusion are not annotated attributes in either dataset, no automatic clutter or occlusion labels were assigned; such judgements were made only by manual inspection of the sampled images. The qualitative examples supplement the quantitative metrics---they illustrate error mechanisms and support the discussion in Chapter~\ref{ch:evaluation}---but no claim rests on them alone.
+
+\section{Inference and Deployment Benchmarking}
+\label{sec:inference-benchmarking}
+
+All models were benchmarked with one common procedure on the RTX~4090 workstation. For each dataset and task, 50 test-split images (or all, when fewer were available) were selected by a seeded sampler (seed 42) and the exact image list was saved with the results, so every model timed the same inputs. Detection models ran at 640~px input with confidence threshold 0.30; attribute models ran at their native crop sizes. Model loading (cold start) was timed separately from inference; three warm-up iterations preceded measurement and were excluded from all statistics; peak-GPU-memory counters were reset after warm-up; CUDA synchronisation bracketed every timed call; and raw per-image timings were retained alongside the summary statistics. Batch size 1 was the primary condition, reflecting the frame-at-a-time regime of a deployed monitoring pipeline; batch sizes 4 and 8 were additionally measured where a model supported true batching. Framework constraints were recorded rather than papered over: RF-DETR's high-level prediction interface and all PromptDetect models operate on single images, so unsupported batch sizes fell back to 1 with an explicit note in the output. Each benchmark wrote its configuration, image list, model inventory, summary metrics, raw timings and a latency-versus-throughput figure to a fresh timestamped folder; cold-start time, preprocessing, forward time, post-processing and end-to-end latency were reported as separate columns and never conflated.
+
+\section{Statistical Analysis}
+\label{sec:statistical-analysis}
+
+Uncertainty was quantified with seeded percentile-bootstrap confidence intervals over stored per-sample outcomes: 2\,000 resamples, 95\% intervals, seed 42. The resampling unit matched each task's independence structure: whole images for supervised detection and for PromptDetect (images are the natural independent deployment unit, and resampling images preserves the within-image correlation of boxes), and sign crops for attribute classification. For paired model comparisons, the same resampled unit indices were applied to both models, the metric difference was computed on every resample, and the percentile interval of the difference was reported together with the fraction of resamples favouring each model. No comparison is described as ``statistically significant'': no preregistered formal hypothesis test was conducted, and the bootstrap intervals are reported as uncertainty summaries rather than significance verdicts. One independence caveat is stated explicitly: attribute crops originating from the same source photograph are not fully independent, and although the split design keeps same-source crops within one partition, crop-level resampling treats them as exchangeable units; the final attribute bootstrap used the stored per-crop prediction records produced by the final evaluation round, and this residual dependence is acknowledged when interpreting the intervals.
+
+\section{Reproducibility and Data Governance}
+\label{sec:reproducibility}
+
+\subsection{Reproducibility Measures}
+
+The study's reproducibility rests on layered, verifiable provenance. All code, configuration and numeric results are version-controlled in the private repository (final chapter state recorded at commit \texttt{cee7dc6a}); every random process used seed 42 with deterministic execution enabled where the framework supports it; and each pipeline reads one central YAML configuration whose effective values are exported verbatim into every run folder. Run directories are immutable and name-encoded, refuse re-use, and carry timestamped outputs; prepared datasets, annotation exports and manifests carry SHA-256 hashes (source annotations, prepared files and split assignments), so any post-hoc modification is detectable; checkpoint metadata records the producing configuration; benchmark image lists are saved; PromptDetect combinations persist atomically and resumably; and the supervised matrix executor fingerprints each run before resuming. Experiment tracking used three Weights~\&~Biases projects---\texttt{MSc-MDWD-EUVIP26} (MDWD detection), \texttt{MSc-MTSD-SupervisedDetection} (MTSD detection) and \texttt{MSc-MTSD-Attributes} (attribute classification)---as a monitoring mirror; the authoritative reproducibility record remains the repository artefacts and local exports. A static evidence dashboard indexes every final table and figure back to its generating artefact, and the final dissertation tables embed source-file provenance.
+
+\subsection{Privacy and Data Governance}
+
+Street-level imagery unavoidably captures personal data---faces and vehicle registration plates---so the datasets were handled under the General Data Protection Regulation's requirements for research data \citep{gdpr2016}. Raw imagery was excluded from version control and stored locally; the repository is private and the datasets are not publicly released. A dedicated redaction workflow supported privacy processing before any image left the controlled environment: sensitive regions (human faces, vehicle registration plates and QR codes) were detected automatically---by promptable open-vocabulary detection with SAM~3.1 or by dedicated classical detectors, according to environment availability---then blurred through a preview-and-verify procedure in which proposed redactions were manually inspected before being applied, and stale previews could not be applied to changed images. Complete anonymisation of all raw imagery is not claimed: redaction was applied to imagery designated for sharing or publication, while the raw research corpus remained access-restricted. Annotation records contain no personal identifiers beyond the image content itself, and GPS metadata was used only in aggregate for coverage analysis.
+
+This methodology yields, for every research objective, a documented, hash-verified chain from raw imagery through annotation, quality assurance, preparation and training to evaluation outputs. The following chapter reports what these procedures found.
