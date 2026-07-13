@@ -23,5 +23,11 @@ pillow>=11
 gradio>=5.0
 python-dotenv>=1.0
 einops>=0.8
-# LoRA adapter injection for the dinov3_lora / vjepa_lora variants.
+# LoRA adapter injection for the *_lora variants (DINOv3, V-JEPA, LingBot).
 peft>=0.19
+# LingBot-Vision backbone loader (lingbot_vitb/vitl variants). Not on PyPI;
+# pinned to a reviewed commit of the official repo instead of a floating
+# branch. Pulls in omegaconf / opencv-python-headless / huggingface_hub.
+lingbot-vision @ git+https://github.com/robbyant/lingbot-vision@151e46321bae4399f8568829f190c7bdec216b49
+# Non-training validation suite (Scripts/MTSD-Scripts/AttributeClassification/tests/).
+pytest>=8

@@ -198,10 +198,16 @@ all relative paths resolve against the repository root):
 
 - `mtsd_attr/` package: manifest building (QA JSONs → padded sign crops →
   deterministic hash-based train/val/test splits), multi-head model, shared
-  training loop, evaluation.
-- `train_dinov3.py` / `train_dinov3_lora.py` / `train_vjepa.py` /
-  `train_vjepa_lora.py` / `train_convnext.py` / `train_convnext_finetuned.py`,
-  orchestrated by `run_all.py` (`--smoke-test` supported).
+  training loop (generic gradient accumulation), variant metadata/profiles
+  (`variants.py`), evaluation and size-ablation reporting.
+- Four backbone families — DINOv3 (ViT-B/L), V-JEPA 2.1 (ViT-B/L), ConvNeXt
+  (Tiny legacy, Base/Large), LingBot-Vision (ViT-B/L) — as a 16-variant
+  model-size ablation (`--profile size_ablation_all`) on top of the
+  preserved historical six-variant round.
+- Generic entry point `train_variant.py --variant <key>` (historical thin
+  scripts `train_dinov3.py`, `train_vjepa.py`, ... kept as wrappers),
+  orchestrated by `run_all.py` (`--profile` / `--plan` / `--list-variants` /
+  `--list-profiles` / `--smoke-test`).
 - Outputs under `outputs/` (crops, checkpoints, metrics, reports, logs,
   `experiment_log.jsonl`); `reset_outputs.py` archives/clears them safely.
 - W&B project: `MSc-MTSD-Attributes` (disabled automatically for smoke tests).

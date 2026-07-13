@@ -1,0 +1,14 @@
+variant,split,attribute,class,f1,support
+dinov3_vitl_frozen,test,view_angle,Front,0.8682,447
+dinov3_vitl_frozen,test,view_angle,Back,0.9081,463
+dinov3_vitl_frozen,test,view_angle,Side,0.7979,280
+dinov3_vitl_frozen,test,mounting,Pole-Mounted,0.9688,1027
+dinov3_vitl_frozen,test,mounting,Wall-Mounted,0.8245,163
+dinov3_vitl_frozen,test,condition,Good,0.8473,905
+dinov3_vitl_frozen,test,condition,Weathered,0.5389,220
+dinov3_vitl_frozen,test,condition,Heavily Damaged,0.4238,65
+dinov3_vitl_frozen,test,sign_shape,Circular,0.9097,469
+dinov3_vitl_frozen,test,sign_shape,Quadrangle,0.9184,385
+dinov3_vitl_frozen,test,sign_shape,Triangular,0.9054,169
+dinov3_vitl_frozen,test,sign_shape,Octagonal,0.8219,145
+dinov3_vitl_frozen,test,sign_shape,Pentagon,0.8936,22

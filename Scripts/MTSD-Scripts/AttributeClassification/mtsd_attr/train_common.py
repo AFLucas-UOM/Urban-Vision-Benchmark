@@ -1,10 +1,14 @@
-"""Shared multi-task training loop used by all three model variants.
+"""Shared multi-task training loop used by every model variant.
 
 Every run: loads the config, refreshes the manifest (automatic group discovery),
-builds datasets and the multi-head model, trains with a masked joint loss,
-selects the best checkpoint by mean macro-F1 across heads on the validation
-split, evaluates that checkpoint on the test split, saves metrics and plots,
-logs to Weights & Biases, and appends a line to the experiment log.
+builds datasets and the multi-head model, trains with a masked joint loss
+(with generic gradient accumulation), selects the best checkpoint by mean
+macro-F1 across heads on the validation split, evaluates that checkpoint on
+the test split, saves metrics and plots, logs to Weights & Biases, and appends
+a line to the experiment log. Variant/backbone/batching metadata (family,
+architecture, size, adaptation, model id, backend and version, resolution,
+feature dim, physical/effective batch size) is recorded in the checkpoint,
+the metrics bundles, the experiment log, and the W&B config.
 """
 
 import argparse
@@ -30,6 +34,7 @@ from .dataset import (AttributeCropDataset, build_transforms,
 from .evaluate import evaluate_model, mean_macro_f1, save_metrics_bundle
 from .multihead_model import (MaskedMultiTaskLoss, MultiHeadClassifier,
                               parameter_breakdown)
+from .variants import variant_metadata
 
 log = logging.getLogger("mtsd_attr")
 
@@ -95,30 +100,51 @@ def _build_scheduler(optimizer, training, steps_per_epoch):
 
 
 def _train_one_epoch(model, loader, loss_fn, optimizer, scheduler, device,
-                     amp, grad_clip):
-    """Run one training epoch and return (mean_total_loss, mean_per_head_losses)."""
+                     amp, grad_clip, accum_steps=1):
+    """Run one training epoch with generic gradient accumulation.
+
+    The optimiser and scheduler step once per `accum_steps` batches; each
+    batch loss is scaled by its accumulation group's size before backward, so
+    the final partial group (when len(loader) is not a multiple of
+    accum_steps) still averages correctly. Gradient clipping is applied
+    immediately before each optimiser step. Validation/test behaviour is
+    unaffected (this function only runs on the train split).
+
+    Returns:
+        (mean_total_loss, mean_per_head_losses, optimizer_steps)
+    """
     model.train()
     totals, head_totals, batches = 0.0, {}, 0
-    for images, targets, _ in loader:
+    accum_steps = max(1, int(accum_steps))
+    n_batches = len(loader)
+    full_groups = n_batches // accum_steps
+    remainder = n_batches - full_groups * accum_steps
+    optimizer_steps = 0
+    optimizer.zero_grad(set_to_none=True)
+    for i, (images, targets, _) in enumerate(loader):
         images = images.to(device, non_blocking=True)
         targets = targets.to(device, non_blocking=True)
-        optimizer.zero_grad(set_to_none=True)
         with torch.autocast(device_type=device.type, dtype=torch.bfloat16,
                             enabled=amp):
             logits = model(images)
             loss, per_head = loss_fn(logits, targets)
-        loss.backward()
-        if grad_clip:
-            torch.nn.utils.clip_grad_norm_(
-                (p for p in model.parameters() if p.requires_grad), grad_clip)
-        optimizer.step()
-        scheduler.step()
+        group_size = accum_steps if i < full_groups * accum_steps else remainder
+        (loss / group_size).backward()
         totals += loss.item()
         batches += 1
         for attr, value in per_head.items():
             head_totals[attr] = head_totals.get(attr, 0.0) + value
+        if (i + 1) % accum_steps == 0 or (i + 1) == n_batches:
+            if grad_clip:
+                torch.nn.utils.clip_grad_norm_(
+                    (p for p in model.parameters() if p.requires_grad),
+                    grad_clip)
+            optimizer.step()
+            scheduler.step()
+            optimizer.zero_grad(set_to_none=True)
+            optimizer_steps += 1
     mean_heads = {a: v / batches for a, v in head_totals.items()}
-    return totals / max(1, batches), mean_heads
+    return totals / max(1, batches), mean_heads, optimizer_steps
 
 
 def _checkpoint_state(model):
@@ -255,6 +281,22 @@ def run_training(variant, config_path=None, smoke_test=False):
         params["backbone_total"] / 1e6, params["head_trainable"] / 1e6,
         params["lora_trainable"] / 1e6)
 
+    variant_meta = variant_metadata(model_cfg, variant)
+    backbone_meta = dict(getattr(backbone, "backbone_meta", {}) or {})
+    accum_steps = training["gradient_accumulation_steps"]
+    training_meta = {
+        "physical_batch_size": training["batch_size"],
+        "gradient_accumulation_steps": accum_steps,
+        "effective_batch_size": training["effective_batch_size"],
+    }
+    log.info("Variant %s: family=%s architecture=%s size=%s adaptation=%s "
+             "model_id=%s resolution=%s", variant, variant_meta["family"],
+             variant_meta["architecture"], variant_meta["model_size"],
+             adaptation, variant_meta["model_id"], variant_meta["resolution"])
+    log.info("Batching: physical=%d x accumulation=%d -> effective=%d",
+             training_meta["physical_batch_size"], accum_steps,
+             training_meta["effective_batch_size"])
+
     loss_fn = MaskedMultiTaskLoss(
         cfg["attributes"],
         head_weights=training["head_loss_weights"],
@@ -262,7 +304,10 @@ def run_training(variant, config_path=None, smoke_test=False):
         label_smoothing=training["label_smoothing"],
     ).to(device)
     optimizer = _build_optimizer(model, training)
-    scheduler = _build_scheduler(optimizer, training, len(loaders["train"]))
+    # The scheduler advances once per optimiser step, so with accumulation
+    # there are ceil(batches / accum_steps) steps per epoch.
+    steps_per_epoch = math.ceil(len(loaders["train"]) / accum_steps)
+    scheduler = _build_scheduler(optimizer, training, steps_per_epoch)
 
     import wandb
     wandb_cfg = cfg["wandb"]
@@ -279,6 +324,9 @@ def run_training(variant, config_path=None, smoke_test=False):
             "adaptation": adaptation,
             "lora": model_cfg.get("lora"),
             "model": {k: str(v) for k, v in model_cfg.items()},
+            "variant_meta": variant_meta,
+            "backbone_meta": backbone_meta,
+            "training_meta": training_meta,
             "training": training,
             "parameters": params,
             "seed": cfg["seed"],
@@ -303,20 +351,29 @@ def run_training(variant, config_path=None, smoke_test=False):
         "frozen": adaptation == "frozen", "model_cfg": model_cfg,
         "probe": cfg["probe"], "attributes": cfg["attributes"],
         "max_epochs": max_epochs, "parameters": params,
+        "variant_meta": variant_meta, "backbone_meta": backbone_meta,
+        "training_meta": training_meta,
     }
 
+    train_started = time.time()
     for epoch in range(1, max_epochs + 1):
         t0 = time.time()
-        train_loss, head_losses = _train_one_epoch(
+        train_loss, head_losses, optim_steps = _train_one_epoch(
             model, loaders["train"], loss_fn, optimizer, scheduler, device,
-            amp, training["grad_clip"])
+            amp, training["grad_clip"], accum_steps)
         val_metrics = evaluate_model(model, loaders["val"], cfg["attributes"],
                                      device, amp)
         score = mean_macro_f1(val_metrics)
-        log.info("Epoch %d/%d: train_loss=%.4f val_mean_macro_f1=%.4f (%.1fs)",
-                 epoch, max_epochs, train_loss, score, time.time() - t0)
+        log.info("Epoch %d/%d: train_loss=%.4f val_mean_macro_f1=%.4f "
+                 "(%d optimiser steps, %.1fs)",
+                 epoch, max_epochs, train_loss, score, optim_steps,
+                 time.time() - t0)
         wandb_log = {"epoch": epoch, "train/loss": train_loss,
                      "val/mean_macro_f1": score,
+                     "train/optimizer_steps": optim_steps,
+                     "train/physical_batch_size": training["batch_size"],
+                     "train/effective_batch_size":
+                         training["effective_batch_size"],
                      "lr": optimizer.param_groups[0]["lr"]}
         for attr, value in head_losses.items():
             wandb_log[f"train/loss_{attr}"] = value
@@ -351,9 +408,11 @@ def run_training(variant, config_path=None, smoke_test=False):
             break
 
     stopped_epoch = epoch
+    train_duration_s = round(time.time() - train_started, 1)
     log.info("Training ended at epoch %d/%d (reason: %s); best epoch %d "
-             "(val mean macro-F1 %.4f)", stopped_epoch, max_epochs,
-             stop_reason, best_epoch, best_score)
+             "(val mean macro-F1 %.4f); %.1fs total", stopped_epoch,
+             max_epochs, stop_reason, best_epoch, best_score,
+             train_duration_s)
     torch.save({**ckpt_meta, "epoch": stopped_epoch,
                 "stopped_epoch": stopped_epoch, "stop_reason": stop_reason,
                 "model_state": _checkpoint_state(model)},
@@ -362,10 +421,17 @@ def run_training(variant, config_path=None, smoke_test=False):
     best = torch.load(ckpt_dir / "best.pt", map_location=device,
                       weights_only=False)
     _load_checkpoint_state(model, best["model_state"], adaptation)
+    eval_started = time.time()
     test_metrics = evaluate_model(model, loaders["test"], cfg["attributes"],
                                   device, amp)
+    test_eval_duration_s = round(time.time() - eval_started, 2)
+    n_test = len(loaders["test"].dataset)
+    test_images_per_s = round(n_test / test_eval_duration_s, 2) \
+        if test_eval_duration_s else None
     test_score = mean_macro_f1(test_metrics)
-    log.info("Test (best epoch %d): mean macro-F1 %.4f", best_epoch, test_score)
+    log.info("Test (best epoch %d): mean macro-F1 %.4f (%d crops in %.2fs, "
+             "%.1f im/s)", best_epoch, test_score, n_test,
+             test_eval_duration_s, test_images_per_s or 0.0)
     for attr, m in test_metrics.items():
         log.info("  %-12s acc=%.4f macro_f1=%.4f", attr, m["accuracy"],
                  m["macro_f1"])
@@ -378,6 +444,12 @@ def run_training(variant, config_path=None, smoke_test=False):
         "max_epochs": max_epochs,
         "val_mean_macro_f1": best_score,
         "parameters": params,
+        "variant_meta": variant_meta,
+        "backbone_meta": backbone_meta,
+        "training_meta": training_meta,
+        "train_duration_s": train_duration_s,
+        "test_eval_duration_s": test_eval_duration_s,
+        "test_images_per_s": test_images_per_s,
     }
     metrics_dir = cfg["paths"]["metrics_dir"]
     save_metrics_bundle(metrics_dir, variant, "val", best_val_metrics, run_id,
@@ -405,6 +477,12 @@ def run_training(variant, config_path=None, smoke_test=False):
         "groups": {g: info["n_crops"] for g, info in manifest["groups"].items()},
         "split_sizes": {s: len(loaders[s].dataset) for s in loaders},
         "backbone_backend": getattr(backbone, "backend", None),
+        "variant_meta": variant_meta,
+        "backbone_meta": backbone_meta,
+        "training_meta": training_meta,
+        "train_duration_s": train_duration_s,
+        "test_eval_duration_s": test_eval_duration_s,
+        "test_images_per_s": test_images_per_s,
         "parameters": params,
         "best_epoch": best_epoch,
         "stopped_epoch": stopped_epoch,
@@ -421,7 +499,7 @@ def run_training(variant, config_path=None, smoke_test=False):
 
 
 def main_cli(variant):
-    """Shared argparse CLI used by the three thin entry scripts."""
+    """Shared argparse CLI used by the thin entry scripts and train_variant.py."""
     parser = argparse.ArgumentParser(
         description=f"Train the {variant} variant of the MTSD attribute classifier")
     parser.add_argument("--config", default=None, help="Path to YAML config")

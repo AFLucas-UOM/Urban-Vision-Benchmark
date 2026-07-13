@@ -1,0 +1,14 @@
+variant,split,attribute,class,f1,support
+convnext_large_finetune,test,view_angle,Front,0.4074,23
+convnext_large_finetune,test,view_angle,Back,0.2857,24
+convnext_large_finetune,test,view_angle,Side,0.4615,17
+convnext_large_finetune,test,mounting,Pole-Mounted,0.0656,59
+convnext_large_finetune,test,mounting,Wall-Mounted,0.1493,5
+convnext_large_finetune,test,condition,Good,0.0816,45
+convnext_large_finetune,test,condition,Weathered,0.2667,12
+convnext_large_finetune,test,condition,Heavily Damaged,0.2857,7
+convnext_large_finetune,test,sign_shape,Circular,0.3784,23
+convnext_large_finetune,test,sign_shape,Quadrangle,0.0000,20
+convnext_large_finetune,test,sign_shape,Triangular,0.2951,12
+convnext_large_finetune,test,sign_shape,Octagonal,0.0000,6
+convnext_large_finetune,test,sign_shape,Pentagon,0.0000,3

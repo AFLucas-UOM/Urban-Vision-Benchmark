@@ -32,9 +32,18 @@ from mtsd_attr.config import adaptation_of, load_config  # noqa: E402
 from mtsd_attr.dataset import build_transforms  # noqa: E402
 from mtsd_attr.multihead_model import MultiHeadClassifier  # noqa: E402
 from mtsd_attr.train_common import _checkpoint_adaptation, _load_checkpoint_state  # noqa: E402
+from mtsd_attr.variants import variant_metadata  # noqa: E402
 
 
-FAMILY_ORDER = ("V-JEPA", "DINO", "ConvNeXt", "Unknown")
+FAMILY_ORDER = ("V-JEPA", "DINO", "ConvNeXt", "LingBot", "Unknown")
+
+# Metadata family (mtsd_attr.variants) -> UI family key.
+UI_FAMILY = {
+    "DINOv3": "DINO",
+    "V-JEPA": "V-JEPA",
+    "ConvNeXt": "ConvNeXt",
+    "LingBot-Vision": "LingBot",
+}
 
 
 @dataclass(frozen=True)
@@ -44,6 +53,12 @@ class CheckpointInfo:
     label: str
     variant: str
     run_id: str
+    # Display metadata (from checkpoint variant_meta when available, else
+    # legacy fallback): architecture/size, adaptation, resolution.
+    architecture: str = "?"
+    model_size: str = "?"
+    adaptation: str = "?"
+    resolution: str = "?"
 
 
 def _safe_rel(path: Path, root: Path = SUBPROJECT_ROOT) -> str:
@@ -59,12 +74,39 @@ def _family_from_text(text: str) -> str | None:
         return "V-JEPA"
     if "dino" in lower:
         return "DINO"
+    if any(token in lower for token in ("lingbot", "lbot", "robbyant")):
+        return "LingBot"
     if any(token in lower for token in ("convnext", "conv-next", "conv")):
         return "ConvNeXt"
     return None
 
 
+def _checkpoint_variant_meta(ckpt: dict[str, Any]) -> dict[str, Any] | None:
+    """Metadata for one checkpoint, preferring stored metadata over parsing.
+
+    New checkpoints carry an explicit variant_meta block. Old checkpoints
+    without it are reconstructed from their stored model_cfg via
+    mtsd_attr.variants (whose legacy defaults match what the historical
+    variants were). Returns None only if neither source is usable.
+    """
+    meta = ckpt.get("variant_meta")
+    if isinstance(meta, dict) and meta.get("family"):
+        return meta
+    model_cfg = ckpt.get("model_cfg")
+    if isinstance(model_cfg, dict) and model_cfg.get("backbone"):
+        try:
+            return variant_metadata(model_cfg, ckpt.get("variant"))
+        except Exception:
+            return None
+    return None
+
+
 def _family_from_metadata(ckpt: dict[str, Any], path: Path) -> str | None:
+    meta = _checkpoint_variant_meta(ckpt)
+    if meta and meta.get("family") in UI_FAMILY:
+        return UI_FAMILY[meta["family"]]
+    # Fall back to name/path parsing only for checkpoints without usable
+    # metadata.
     pieces = [
         str(ckpt.get("variant", "")),
         str(ckpt.get("run_id", "")),
@@ -117,6 +159,8 @@ def discover_checkpoints(include_smoke: bool = False) -> tuple[dict[str, list[Ch
                 if not include_smoke:
                     continue
 
+            # Reading the checkpoint dict is metadata-only discovery; no
+            # model (backbone weights) is ever built or downloaded here.
             ckpt = {}
             metadata_error = None
             try:
@@ -129,12 +173,21 @@ def discover_checkpoints(include_smoke: bool = False) -> tuple[dict[str, list[Ch
             if family not in grouped:
                 family = "Unknown"
 
+            meta = _checkpoint_variant_meta(ckpt) if ckpt else None
+            architecture = str(meta.get("architecture", "?")) if meta else "?"
+            model_size = str(meta.get("model_size", "?")) if meta else "?"
+            adaptation = str(meta.get("adaptation", "?")) if meta else "?"
+            resolution = str(meta.get("resolution", "?")) if meta else "?"
+
             variant = str(ckpt.get("variant") or resolved.parent.name)
             run_id = str(ckpt.get("run_id") or resolved.parent.name)
             rel = _safe_rel(resolved)
             suffix = f" [{metadata_error}]" if metadata_error else ""
             smoke_prefix = "[SMOKE] " if is_smoke else ""
-            label = f"{smoke_prefix}{run_id} | {rel}{suffix}"
+            # Architecture/size leads the label so two sizes of one family
+            # can never appear indistinguishable in the checkbox list.
+            arch_prefix = f"{architecture} · " if architecture != "?" else ""
+            label = f"{smoke_prefix}{arch_prefix}{run_id} | {rel}{suffix}"
             grouped[family].append(
                 CheckpointInfo(
                     path=resolved,
@@ -142,6 +195,10 @@ def discover_checkpoints(include_smoke: bool = False) -> tuple[dict[str, list[Ch
                     label=label,
                     variant=variant,
                     run_id=run_id,
+                    architecture=architecture,
+                    model_size=model_size,
+                    adaptation=adaptation,
+                    resolution=resolution,
                 )
             )
 
@@ -153,11 +210,6 @@ def discover_checkpoints(include_smoke: bool = False) -> tuple[dict[str, list[Ch
 def _is_smoke_checkpoint(path: Path) -> bool:
     """Return True for checkpoints stored under a smoke run folder."""
     return any("smoke" in part.lower() for part in path.parts)
-
-
-# Smoke checkpoints are hidden by default; tick "Include Smoke Checkpoints"
-# in the UI to opt in explicitly.
-CHECKPOINTS, DISCOVERY_DIAGNOSTICS = discover_checkpoints(include_smoke=False)
 
 
 @lru_cache(maxsize=8)
@@ -222,6 +274,8 @@ def _get_family_badge(family: str) -> str:
         bg, border, color = "rgba(6, 182, 212, 0.1)", "rgba(6, 182, 212, 0.2)", "#99f6e4"
     elif family == "ConvNeXt":
         bg, border, color = "rgba(249, 115, 22, 0.1)", "rgba(249, 115, 22, 0.2)", "#fed7aa"
+    elif family == "LingBot":
+        bg, border, color = "rgba(34, 197, 94, 0.1)", "rgba(34, 197, 94, 0.2)", "#bbf7d0"
     else:
         bg, border, color = "rgba(107, 114, 128, 0.1)", "rgba(107, 114, 128, 0.2)", "#e5e7eb"
     return f"<span style='display:inline-block;padding:2px 6px;border-radius:4px;background:{bg};border:1px solid {border};color:{color};font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:0.02em;'>{escape(family)}</span>"
@@ -290,6 +344,12 @@ def _render_table(rows: list[dict[str, Any]]) -> str:
                 f"padding:0px 3px;border-radius:3px;background:rgba(248,81,73,0.03);margin-right:4px;vertical-align:middle;'>SMOKE</span>"
                 f"<span style='vertical-align:middle;'>{checkpoint_name}</span>"
             )
+        details = row.get("details")
+        if details:
+            checkpoint_name = (
+                f"<div style='color:#c9d1d9;font-weight:500;font-size:11.5px;'>{escape(details)}</div>"
+                f"<div style='margin-top:2px;'>{checkpoint_name}</div>"
+            )
 
         body.append(
             "<tr class='table-row'>"
@@ -334,32 +394,46 @@ def _no_checkpoint_html(diagnostics: dict[str, Any]) -> str:
     )
 
 
-FAMILY_DISPLAY_NAMES = {"DINO": "DINOv3", "V-JEPA": "V-JEPA", "ConvNeXt": "ConvNeXt", "Unknown": "Model"}
+FAMILY_DISPLAY_NAMES = {"DINO": "DINOv3", "V-JEPA": "V-JEPA", "ConvNeXt": "ConvNeXt", "LingBot": "LingBot-Vision", "Unknown": "Model"}
+
+MODE_LABEL = {"frozen": "frozen", "lora": "LoRA", "finetune": "fine-tuned"}
 
 
 def _mode_label(ckpt: dict[str, Any]) -> str:
-    """Training-mode suffix for the comparison title (linearprobe/lora/finetuned/...)."""
+    """Training-mode suffix for the comparison title (frozen/LoRA/fine-tuned)."""
     try:
         adaptation = ckpt.get("adaptation") or adaptation_of(ckpt.get("model_cfg", {}))
     except Exception:
         adaptation = None
-    probe_type = str((ckpt.get("probe") or {}).get("type", "")).lower()
-    if adaptation == "frozen":
-        return "linearprobe" if probe_type == "linear" else "frozen"
-    if adaptation == "lora":
-        return "lora"
-    if adaptation == "finetune":
-        return "finetuned"
-    return "unknown-mode"
+    return MODE_LABEL.get(adaptation, "unknown-mode")
 
 
 def _comparison_display_name(info: CheckpointInfo, ckpt: dict[str, Any]) -> str:
-    """'<model>_<mode>' for one loaded checkpoint, e.g. 'DINOv3_lora'."""
+    """Size-aware display name, e.g. 'DINOv3 ViT-L/16 frozen' or
+    'LingBot-Vision ViT-B/16 LoRA'."""
     base = FAMILY_DISPLAY_NAMES.get(info.family, info.family)
-    name = f"{base}_{_mode_label(ckpt)}"
+    meta = _checkpoint_variant_meta(ckpt)
+    arch = (meta or {}).get("architecture") or info.architecture
+    parts = [base]
+    if arch and arch != "?":
+        parts.append(str(arch))
+    parts.append(_mode_label(ckpt))
+    name = " ".join(parts)
     if _is_smoke_checkpoint(info.path):
         name += " (smoke)"
     return name
+
+
+def _dedupe_display_names(names: list[str], run_ids: list[str]) -> list[str]:
+    """Append the run id when two checkpoints would share one display name,
+    so two entries are never shown under an indistinguishable label."""
+    seen: dict[str, int] = {}
+    for name in names:
+        seen[name] = seen.get(name, 0) + 1
+    deduped = []
+    for name, run_id in zip(names, run_ids):
+        deduped.append(f"{name} [{run_id}]" if seen[name] > 1 else name)
+    return deduped
 
 
 def _comparison_title_html(names: list[str]) -> str:
@@ -372,7 +446,7 @@ def _comparison_title_html(names: list[str]) -> str:
         "<div style='padding:10px 14px;margin-bottom:4px;border:1px solid #30363d;"
         "border-radius:6px;background:#0d1117;'>"
         f"<span style='color:#f0f6fc;font-size:1.05rem;font-weight:600;'>{escape(title)}</span>"
-        "<span style='color:#8b949e;font-size:0.8rem;margin-left:10px;'>model_mode comparison</span>"
+        "<span style='color:#8b949e;font-size:0.8rem;margin-left:10px;'>family · architecture/size · adaptation</span>"
         "</div>"
     )
 
@@ -382,6 +456,7 @@ def run_comparison(
     vjepa_selected: list[str],
     dino_selected: list[str],
     convnext_selected: list[str],
+    lingbot_selected: list[str],
     unknown_selected: list[str],
     include_smoke: bool,
 ):
@@ -389,10 +464,10 @@ def run_comparison(
         return _empty_html("Please upload or paste an image.")
 
     selected_labels = []
-    if vjepa_selected: selected_labels.extend(vjepa_selected)
-    if dino_selected: selected_labels.extend(dino_selected)
-    if convnext_selected: selected_labels.extend(convnext_selected)
-    if unknown_selected: selected_labels.extend(unknown_selected)
+    for group in (vjepa_selected, dino_selected, convnext_selected,
+                  lingbot_selected, unknown_selected):
+        if group:
+            selected_labels.extend(group)
 
     if not selected_labels:
         return _notice_html("<strong>No models selected.</strong> Please select at least one checkpoint checkbox in the sidebar.")
@@ -408,7 +483,8 @@ def run_comparison(
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     rows = []
-    comparison_names = []
+    comparison_names: list[str] = []
+    comparison_run_ids: list[str] = []
     rgb = image.convert("RGB")
 
     for info in selected_checkpoints:
@@ -416,6 +492,7 @@ def run_comparison(
         try:
             model, attributes, transform, ckpt = load_model(str(info.path), str(device))
             comparison_names.append(_comparison_display_name(info, ckpt))
+            comparison_run_ids.append(info.run_id)
             tensor = transform(rgb).unsqueeze(0).to(device)
             with torch.inference_mode():
                 logits_by_head = model(tensor)
@@ -427,27 +504,46 @@ def run_comparison(
                 rows.append({
                     "model": info.family,
                     "checkpoint": checkpoint_display,
+                    "details": _checkpoint_details(info),
                     "head": head,
                     "prediction": classes[int(pred_idx)],
                     "confidence_value": float(confidence),
                     "topk_items": _topk_items(probs, classes),
                 })
         except Exception as exc:
+            # Unavailable weights/dependencies (gated DINOv3, missing V-JEPA
+            # hub cache, uninstalled lingbot-vision) surface here as a useful
+            # per-checkpoint error row instead of crashing the app.
             rows.append({
                 "model": info.family,
                 "checkpoint": checkpoint_display,
+                "details": _checkpoint_details(info),
                 "head": "Error",
                 "prediction": f"{type(exc).__name__}: {exc}",
                 "confidence": None,
                 "topk": traceback.format_exc(limit=2).strip().splitlines()[-1],
             })
 
-    return _comparison_title_html(comparison_names) + _render_table(rows)
+    title_names = _dedupe_display_names(comparison_names, comparison_run_ids)
+    return _comparison_title_html(title_names) + _render_table(rows)
+
+
+def _checkpoint_details(info: CheckpointInfo) -> str:
+    """One-line metadata summary: architecture/size, adaptation, resolution, run id."""
+    parts = []
+    if info.architecture != "?":
+        parts.append(info.architecture)
+    if info.adaptation != "?":
+        parts.append(MODE_LABEL.get(info.adaptation, info.adaptation))
+    if info.resolution != "?":
+        parts.append(f"{info.resolution}px")
+    parts.append(f"run {info.run_id}")
+    return " · ".join(parts)
 
 
 def update_checkbox_choices(include_smoke: bool):
     grouped, diagnostics = discover_checkpoints(include_smoke=include_smoke)
-    
+
     updates = []
     for family in FAMILY_ORDER:
         choices = [info.label for info in grouped[family]]
@@ -459,8 +555,8 @@ def update_checkbox_choices(include_smoke: bool):
                 label=f"{family} ({len(choices)} found)"
             )
         )
-    
-    return updates[0], updates[1], updates[2], updates[3]
+
+    return tuple(updates)
 
 
 def handle_refresh(include_smoke: bool):
@@ -609,8 +705,9 @@ def build_demo():
             """
             <div class="app-header">
                 <h1 class="minimal-title">Traffic Sign Attribute Comparison</h1>
-                <p class="subtitle">Upload an image to run side-by-side inference across selected multi-head checkpoints.
-                The results header names exactly what is being compared, e.g. <code>DINOv3_linearprobe vs DINOv3_lora</code>.</p>
+                <p class="subtitle">Upload an image to run side-by-side inference across selected multi-head checkpoints
+                (DINOv3, V-JEPA, ConvNeXt, LingBot-Vision — any size). The results header names exactly what is being
+                compared, e.g. <code>DINOv3 ViT-B/16 frozen vs DINOv3 ViT-L/16 frozen</code>.</p>
             </div>
             """
         )
@@ -621,6 +718,7 @@ def build_demo():
         vjepa_choices = [c.label for c in initial_grouped["V-JEPA"]]
         dino_choices = [c.label for c in initial_grouped["DINO"]]
         convnext_choices = [c.label for c in initial_grouped["ConvNeXt"]]
+        lingbot_choices = [c.label for c in initial_grouped["LingBot"]]
         unknown_choices = [c.label for c in initial_grouped["Unknown"]]
 
         with gr.Row():
@@ -670,6 +768,13 @@ def build_demo():
                     visible=len(convnext_choices) > 0
                 )
 
+                lingbot_chks = gr.CheckboxGroup(
+                    label=f"LingBot ({len(lingbot_choices)} found)",
+                    choices=lingbot_choices,
+                    value=lingbot_choices,
+                    visible=len(lingbot_choices) > 0
+                )
+
                 unknown_chks = gr.CheckboxGroup(
                     label=f"Unknown ({len(unknown_choices)} found)",
                     choices=unknown_choices,
@@ -691,18 +796,18 @@ def build_demo():
         include_smoke_cb.change(
             fn=update_checkbox_choices,
             inputs=[include_smoke_cb],
-            outputs=[vjepa_chks, dino_chks, convnext_chks, unknown_chks]
+            outputs=[vjepa_chks, dino_chks, convnext_chks, lingbot_chks, unknown_chks]
         )
 
         refresh_btn.click(
             fn=handle_refresh,
             inputs=[include_smoke_cb],
-            outputs=[vjepa_chks, dino_chks, convnext_chks, unknown_chks]
+            outputs=[vjepa_chks, dino_chks, convnext_chks, lingbot_chks, unknown_chks]
         )
 
         run_btn.click(
             fn=run_comparison,
-            inputs=[image, vjepa_chks, dino_chks, convnext_chks, unknown_chks, include_smoke_cb],
+            inputs=[image, vjepa_chks, dino_chks, convnext_chks, lingbot_chks, unknown_chks, include_smoke_cb],
             outputs=table
         )
 

@@ -1,0 +1,218 @@
+{
+ "run_id": "dinov3_vitl_lora-20260713-125300-smoke",
+ "variant": "dinov3_vitl_lora",
+ "split": "val",
+ "smoke_test": true,
+ "timestamp": "2026-07-13T10:53:15+00:00",
+ "mean_macro_f1": 0.2996534913022836,
+ "run_info": {
+  "adaptation": "lora",
+  "best_epoch": 1,
+  "stopped_epoch": 1,
+  "stop_reason": "max_epochs",
+  "max_epochs": 1,
+  "val_mean_macro_f1": 0.2996534913022836,
+  "parameters": {
+   "total": 303929357,
+   "trainable": 799757,
+   "trainable_pct": 0.2631,
+   "backbone_total": 303916032,
+   "backbone_trainable": 786432,
+   "head_trainable": 13325,
+   "lora_trainable": 786432
+  },
+  "variant_meta": {
+   "variant": "dinov3_vitl_lora",
+   "family": "DINOv3",
+   "backbone": "dinov3",
+   "architecture": "ViT-L/16",
+   "model_size": "large",
+   "adaptation": "lora",
+   "model_id": "facebook/dinov3-vitl16-pretrain-lvd1689m",
+   "resolution": 224,
+   "display_name": "DINOv3 ViT-L/16 LoRA",
+   "legacy": false
+  },
+  "backbone_meta": {
+   "requested_backend": "transformers",
+   "loaded_backend": "transformers",
+   "model_id": "facebook/dinov3-vitl16-pretrain-lvd1689m",
+   "image_size": 224,
+   "feature_dim": 1024
+  },
+  "training_meta": {
+   "physical_batch_size": 8,
+   "gradient_accumulation_steps": 2,
+   "effective_batch_size": 16
+  },
+  "train_duration_s": 4.0,
+  "test_eval_duration_s": 1.09,
+  "test_images_per_s": 58.72
+ },
+ "attributes": {
+  "view_angle": {
+   "n": 64,
+   "accuracy": 0.421875,
+   "macro_f1": 0.3947788817455679,
+   "classes": [
+    "Front",
+    "Back",
+    "Side"
+   ],
+   "per_class_f1": {
+    "Front": 0.27586206896551724,
+    "Back": 0.5084745762711864,
+    "Side": 0.4
+   },
+   "support": {
+    "Front": 23,
+    "Back": 27,
+    "Side": 14
+   },
+   "confusion_matrix": [
+    [
+     4,
+     12,
+     7
+    ],
+    [
+     1,
+     15,
+     11
+    ],
+    [
+     1,
+     5,
+     8
+    ]
+   ]
+  },
+  "mounting": {
+   "n": 64,
+   "accuracy": 0.46875,
+   "macro_f1": 0.4420512820512821,
+   "classes": [
+    "Pole-Mounted",
+    "Wall-Mounted"
+   ],
+   "per_class_f1": {
+    "Pole-Mounted": 0.5641025641025641,
+    "Wall-Mounted": 0.32
+   },
+   "support": {
+    "Pole-Mounted": 56,
+    "Wall-Mounted": 8
+   },
+   "confusion_matrix": [
+    [
+     22,
+     34
+    ],
+    [
+     0,
+     8
+    ]
+   ]
+  },
+  "condition": {
+   "n": 64,
+   "accuracy": 0.25,
+   "macro_f1": 0.23338649654439128,
+   "classes": [
+    "Good",
+    "Weathered",
+    "Heavily Damaged"
+   ],
+   "per_class_f1": {
+    "Good": 0.3157894736842105,
+    "Weathered": 0.2631578947368421,
+    "Heavily Damaged": 0.12121212121212122
+   },
+   "support": {
+    "Good": 43,
+    "Weathered": 19,
+    "Heavily Damaged": 2
+   },
+   "confusion_matrix": [
+    [
+     9,
+     14,
+     20
+    ],
+    [
+     5,
+     5,
+     9
+    ],
+    [
+     0,
+     0,
+     2
+    ]
+   ]
+  },
+  "sign_shape": {
+   "n": 64,
+   "accuracy": 0.15625,
+   "macro_f1": 0.1283973048678931,
+   "classes": [
+    "Circular",
+    "Quadrangle",
+    "Triangular",
+    "Octagonal",
+    "Pentagon"
+   ],
+   "per_class_f1": {
+    "Circular": 0.21621621621621623,
+    "Quadrangle": 0.0,
+    "Triangular": 0.23529411764705882,
+    "Octagonal": 0.19047619047619047,
+    "Pentagon": 0.0
+   },
+   "support": {
+    "Circular": 29,
+    "Quadrangle": 14,
+    "Triangular": 14,
+    "Octagonal": 6,
+    "Pentagon": 1
+   },
+   "confusion_matrix": [
+    [
+     4,
+     11,
+     7,
+     5,
+     2
+    ],
+    [
+     1,
+     0,
+     7,
+     6,
+     0
+    ],
+    [
+     2,
+     3,
+     4,
+     2,
+     3
+    ],
+    [
+     1,
+     2,
+     1,
+     2,
+     0
+    ],
+    [
+     0,
+     0,
+     1,
+     0,
+     0
+    ]
+   ]
+  }
+ }
+}

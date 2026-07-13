@@ -1,0 +1,219 @@
+{
+ "run_id": "convnext_large_finetune-20260713-125459-smoke",
+ "variant": "convnext_large_finetune",
+ "split": "test",
+ "smoke_test": true,
+ "timestamp": "2026-07-13T10:55:35+00:00",
+ "mean_macro_f1": 0.20958260168415477,
+ "run_info": {
+  "adaptation": "finetune",
+  "best_epoch": 1,
+  "stopped_epoch": 1,
+  "stop_reason": "max_epochs",
+  "max_epochs": 1,
+  "val_mean_macro_f1": 0.24592660263610838,
+  "parameters": {
+   "total": 196247245,
+   "trainable": 196247245,
+   "trainable_pct": 100.0,
+   "backbone_total": 196227264,
+   "backbone_trainable": 196227264,
+   "head_trainable": 19981,
+   "lora_trainable": 0
+  },
+  "variant_meta": {
+   "variant": "convnext_large_finetune",
+   "family": "ConvNeXt",
+   "backbone": "convnext",
+   "architecture": "ConvNeXt-Large",
+   "model_size": "large",
+   "adaptation": "finetune",
+   "model_id": "torchvision convnext_large (IMAGENET1K_V1)",
+   "resolution": 224,
+   "display_name": "ConvNeXt ConvNeXt-Large fine-tuned",
+   "legacy": false
+  },
+  "backbone_meta": {
+   "requested_backend": "torchvision",
+   "loaded_backend": "torchvision",
+   "model_id": "torchvision convnext_large",
+   "weights": "ConvNeXt_Large_Weights.IMAGENET1K_V1",
+   "image_size": 224,
+   "feature_dim": 1536
+  },
+  "training_meta": {
+   "physical_batch_size": 8,
+   "gradient_accumulation_steps": 2,
+   "effective_batch_size": 16
+  },
+  "train_duration_s": 23.2,
+  "test_eval_duration_s": 0.9,
+  "test_images_per_s": 71.11
+ },
+ "attributes": {
+  "view_angle": {
+   "n": 64,
+   "accuracy": 0.390625,
+   "macro_f1": 0.38488671822005155,
+   "classes": [
+    "Front",
+    "Back",
+    "Side"
+   ],
+   "per_class_f1": {
+    "Front": 0.4074074074074074,
+    "Back": 0.2857142857142857,
+    "Side": 0.46153846153846156
+   },
+   "support": {
+    "Front": 23,
+    "Back": 24,
+    "Side": 17
+   },
+   "confusion_matrix": [
+    [
+     11,
+     4,
+     8
+    ],
+    [
+     14,
+     5,
+     5
+    ],
+    [
+     6,
+     2,
+     9
+    ]
+   ]
+  },
+  "mounting": {
+   "n": 64,
+   "accuracy": 0.109375,
+   "macro_f1": 0.10741375091754343,
+   "classes": [
+    "Pole-Mounted",
+    "Wall-Mounted"
+   ],
+   "per_class_f1": {
+    "Pole-Mounted": 0.06557377049180328,
+    "Wall-Mounted": 0.14925373134328357
+   },
+   "support": {
+    "Pole-Mounted": 59,
+    "Wall-Mounted": 5
+   },
+   "confusion_matrix": [
+    [
+     2,
+     57
+    ],
+    [
+     0,
+     5
+    ]
+   ]
+  },
+  "condition": {
+   "n": 64,
+   "accuracy": 0.203125,
+   "macro_f1": 0.21133786848072558,
+   "classes": [
+    "Good",
+    "Weathered",
+    "Heavily Damaged"
+   ],
+   "per_class_f1": {
+    "Good": 0.08163265306122448,
+    "Weathered": 0.26666666666666666,
+    "Heavily Damaged": 0.2857142857142857
+   },
+   "support": {
+    "Good": 45,
+    "Weathered": 12,
+    "Heavily Damaged": 7
+   },
+   "confusion_matrix": [
+    [
+     2,
+     14,
+     29
+    ],
+    [
+     2,
+     4,
+     6
+    ],
+    [
+     0,
+     0,
+     7
+    ]
+   ]
+  },
+  "sign_shape": {
+   "n": 64,
+   "accuracy": 0.25,
+   "macro_f1": 0.13469206911829862,
+   "classes": [
+    "Circular",
+    "Quadrangle",
+    "Triangular",
+    "Octagonal",
+    "Pentagon"
+   ],
+   "per_class_f1": {
+    "Circular": 0.3783783783783784,
+    "Quadrangle": 0.0,
+    "Triangular": 0.29508196721311475,
+    "Octagonal": 0.0,
+    "Pentagon": 0.0
+   },
+   "support": {
+    "Circular": 23,
+    "Quadrangle": 20,
+    "Triangular": 12,
+    "Octagonal": 6,
+    "Pentagon": 3
+   },
+   "confusion_matrix": [
+    [
+     7,
+     0,
+     15,
+     0,
+     1
+    ],
+    [
+     3,
+     0,
+     17,
+     0,
+     0
+    ],
+    [
+     3,
+     0,
+     9,
+     0,
+     0
+    ],
+    [
+     1,
+     0,
+     5,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     3,
+     0,
+     0
+    ]
+   ]
+  }
+ }
+}
