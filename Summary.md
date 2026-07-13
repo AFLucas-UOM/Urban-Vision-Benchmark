@@ -153,7 +153,9 @@ Scripts/
     MDWD-SupervisedNotebooks/  YOLO12/YOLO26/RF-DETR benchmark notebooks (RF-DETR nano executed; small/medium templates)
   MTSD-Scripts/
     AttributeClassification/   config-driven multi-attribute pipeline (mtsd_attr pkg,
-                               6 training scripts, run_all.py, outputs/, inference/gradio_compare.py)
+                               train_variant.py + 6 legacy wrappers, run_all.py with
+                               size-ablation profiles/--plan, tests/, outputs/,
+                               inference/gradio_compare.py)
     MTSD-Analysis/         mtsd_eda package + MTSD-EDA.ipynb + audit scripts
     MTSD-AnnotationQA/     NEW — audit -> review -> guarded-apply annotation QA workflow
     MTSD-SupervisedDetection/  canonical prep/validation/training/evaluation package + CLI
@@ -268,6 +270,24 @@ in [`Documents/MDWDLeakageSensitivity.md`](Documents/MDWDLeakageSensitivity.md).
   and evaluated once on the test split. `Documentation.md`, the attribute README,
   and the exported comparison tables now label these metrics as the historical
   GRP-1--GRP-3 snapshot and record the executed schedule.
+
+  **Model-size ablation framework (implemented 2026-07-13, not yet executed):**
+  a 16-variant matrix across four families — DINOv3 ViT-B/L (frozen + LoRA),
+  V-JEPA 2.1 ViT-B/L via the official hub entry points
+  `vjepa2_1_vit_base_384`/`vjepa2_1_vit_large_384` (frozen + LoRA, strict
+  `allow_backend_fallback: false` so 2.1 never silently degrades to 2.0),
+  ConvNeXt Base/Large (frozen + full fine-tune; Tiny stays legacy-only), and
+  LingBot-Vision ViT-B/L (frozen + LoRA via the official
+  `lingbot_vision.load_pretrained_backbone` loader, pinned commit; no full
+  fine-tune). Profiles: `size_ablation_frozen` (8), `size_ablation_adapted`
+  (8), `size_ablation_all` (16), `legacy_default` (4, unchanged). Generic
+  gradient accumulation keeps the effective batch at 32 everywhere; every
+  checkpoint/metric/W&B run records family/architecture/size/adaptation/
+  backend/version/batching metadata; reports add `size_ablation.{csv,md}`
+  (the historical `comparison.*` outputs and legacy checkpoint folders are
+  never overwritten). Read-only planning: `run_all.py --plan --profile
+  size_ablation_all`; generic training entry: `train_variant.py --variant
+  <key>`; non-training tests in `AttributeClassification/tests/`.
  - **EDA**: **implemented & executed** — `MTSD-EDA.ipynb` + `mtsd_eda`, 21 figures
    and ~30 CSVs in `Documents/MTSD-EDA/`. The interactive GPS atlas
    (`MTSD_mapped.html`) was regenerated 2026-07-07 after the dataset move to

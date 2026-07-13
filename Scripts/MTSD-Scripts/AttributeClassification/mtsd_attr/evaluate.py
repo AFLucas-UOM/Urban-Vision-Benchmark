@@ -254,24 +254,49 @@ def write_comparison_report(cfg, smoke_test=False):
         parameters = info(variant, "parameters", {})
         return parameters.get(key, "n/a") if isinstance(parameters, dict) else "n/a"
 
+    def vmeta(variant):
+        """Variant metadata: prefer the metrics payload's stored metadata;
+        fall back to the current config entry (covers historical runs that
+        predate metadata recording)."""
+        meta = details[variant].get("run_info", {}).get("variant_meta")
+        if isinstance(meta, dict) and meta.get("family"):
+            return meta
+        from .variants import variant_metadata
+        return variant_metadata(cfg["models"][variant], variant)
+
+    def bmeta(variant, key, default="n/a"):
+        meta = details[variant].get("run_info", {}).get("backbone_meta")
+        if isinstance(meta, dict):
+            return meta.get(key, default)
+        return default
+
     csv_path = reports_dir / f"comparison{suffix}.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(
-            ["variant", "run_id", "adaptation"] + attributes
+            ["variant", "run_id", "family", "architecture", "model_size",
+             "adaptation", "resolution"] + attributes
             + ["mean_macro_f1", "val_mean_macro_f1", "best_epoch",
                "stopped_epoch", "stop_reason", "total_params",
-               "trainable_params", "trainable_pct"])
+               "trainable_params", "trainable_pct", "train_duration_s",
+               "loaded_backend", "loaded_version"])
         for variant in present:
             val = info(variant, "val_mean_macro_f1")
+            meta = vmeta(variant)
             writer.writerow(
-                [variant, details[variant]["run_id"], info(variant, "adaptation")]
+                [variant, details[variant]["run_id"], meta["family"],
+                 meta["architecture"], meta["model_size"],
+                 info(variant, "adaptation", meta["adaptation"]),
+                 meta["resolution"]]
                 + [f"{rows[variant].get(a, float('nan')):.4f}" for a in attributes]
                 + [f"{rows[variant]['mean']:.4f}",
                    f"{val:.4f}" if isinstance(val, float) else val,
                    info(variant, "best_epoch"), info(variant, "stopped_epoch"),
                    info(variant, "stop_reason"), pinfo(variant, "total"),
-                   pinfo(variant, "trainable"), pinfo(variant, "trainable_pct")])
+                   pinfo(variant, "trainable"), pinfo(variant, "trainable_pct"),
+                   info(variant, "train_duration_s"),
+                   bmeta(variant, "loaded_backend"),
+                   bmeta(variant, "loaded_version")])
 
     md_lines = [
         "# Attribute classification: consolidated comparison",
@@ -300,22 +325,33 @@ def write_comparison_report(cfg, smoke_test=False):
 
     md_lines += [
         "", "## Run details", "",
-        "| Variant | Adaptation | Best epoch | Stopped at | Stop reason | "
-        "Val mean macro-F1 | Total params | Trainable | Trainable % |",
-        "|" + "---|" * 9,
+        "| Variant | Family | Architecture | Size | Adaptation | Res | "
+        "Best epoch | Stopped at | Stop reason | Val mean macro-F1 | "
+        "Total params | Trainable | Trainable % | Train time (s) | Backend |",
+        "|" + "---|" * 15,
     ]
     def fmt(value, spec):
         return format(value, spec) if isinstance(value, (int, float)) else str(value)
 
     for variant in present:
-        cells = [variant, info(variant, "adaptation"),
+        meta = vmeta(variant)
+        backend = bmeta(variant, "loaded_backend")
+        version = bmeta(variant, "loaded_version")
+        backend_cell = (f"{backend} ({version})"
+                        if version not in (None, "n/a") else str(backend))
+        cells = [variant, meta["family"], meta["architecture"],
+                 meta["model_size"],
+                 str(info(variant, "adaptation", meta["adaptation"])),
+                 str(meta["resolution"]),
                  str(info(variant, "best_epoch")),
                  str(info(variant, "stopped_epoch")),
                  str(info(variant, "stop_reason")),
                  fmt(info(variant, "val_mean_macro_f1"), ".4f"),
                  fmt(pinfo(variant, "total"), ","),
                  fmt(pinfo(variant, "trainable"), ","),
-                 str(pinfo(variant, "trainable_pct"))]
+                 str(pinfo(variant, "trainable_pct")),
+                 str(info(variant, "train_duration_s")),
+                 backend_cell]
         md_lines.append("| " + " | ".join(cells) + " |")
 
     for attr in attributes:
@@ -352,6 +388,197 @@ def write_comparison_report(cfg, smoke_test=False):
                      reports_dir / f"comparison_macro_f1{suffix}.png")
     log.info("Consolidated report written for %s: %s, %s",
              present, csv_path, md_path)
+    return md_path
+
+
+def _load_variant_row(cfg, variant, metrics_dir, suffix, attributes):
+    """Load one variant's test metrics into a flat size-ablation row, or None."""
+    path = metrics_dir / f"{variant}{suffix}" / "test_metrics.json"
+    if not path.is_file():
+        return None
+    with open(path, encoding="utf-8") as f:
+        payload = json.load(f)
+    run_info = payload.get("run_info", {})
+    meta = run_info.get("variant_meta")
+    if not (isinstance(meta, dict) and meta.get("family")):
+        from .variants import variant_metadata
+        meta = variant_metadata(cfg["models"][variant], variant)
+    parameters = run_info.get("parameters", {})
+    backbone_meta = run_info.get("backbone_meta", {})
+    if not isinstance(backbone_meta, dict):
+        backbone_meta = {}
+    row = {
+        "variant": variant,
+        "run_id": payload.get("run_id", "n/a"),
+        "family": meta["family"],
+        "model_size": meta["model_size"],
+        "architecture": meta["architecture"],
+        "adaptation": run_info.get("adaptation", meta["adaptation"]),
+        "resolution": meta["resolution"],
+        "total_params": parameters.get("total", "n/a"),
+        "trainable_params": parameters.get("trainable", "n/a"),
+        "best_epoch": run_info.get("best_epoch", "n/a"),
+        "val_mean_macro_f1": run_info.get("val_mean_macro_f1", "n/a"),
+        "test_mean_macro_f1": payload.get("mean_macro_f1"),
+        "train_duration_s": run_info.get("train_duration_s", "n/a"),
+        "test_images_per_s": run_info.get("test_images_per_s", "n/a"),
+        "loaded_backend": backbone_meta.get("loaded_backend", "n/a"),
+        "loaded_version": backbone_meta.get("loaded_version", "n/a"),
+    }
+    for attr in attributes:
+        m = payload.get("attributes", {}).get(attr, {})
+        row[f"{attr}_macro_f1"] = m.get("macro_f1")
+        row[f"{attr}_accuracy"] = m.get("accuracy")
+    return row
+
+
+def _ablation_md_table(rows, attributes):
+    """Markdown table for a group of size-ablation rows."""
+    def num(value, spec=".4f"):
+        return format(value, spec) if isinstance(value, (int, float)) else \
+            str(value)
+
+    header = (["Variant", "Family", "Architecture", "Size", "Adaptation",
+               "Res", "Params", "Trainable", "Best epoch",
+               "Val mean macro-F1", "Test mean macro-F1"]
+              + [f"{a} F1" for a in attributes]
+              + [f"{a} acc" for a in attributes]
+              + ["Train time (s)", "Test im/s", "Backend"])
+    lines = ["| " + " | ".join(header) + " |",
+             "|" + "---|" * len(header)]
+    for row in rows:
+        backend = row["loaded_backend"]
+        if row["loaded_version"] not in (None, "n/a"):
+            backend = f"{backend} ({row['loaded_version']})"
+        cells = ([row["variant"], row["family"], row["architecture"],
+                  row["model_size"], row["adaptation"], str(row["resolution"]),
+                  num(row["total_params"], ","),
+                  num(row["trainable_params"], ","),
+                  str(row["best_epoch"]),
+                  num(row["val_mean_macro_f1"]),
+                  num(row["test_mean_macro_f1"])]
+                 + [num(row.get(f"{a}_macro_f1")) if row.get(f"{a}_macro_f1")
+                    is not None else "n/a" for a in attributes]
+                 + [num(row.get(f"{a}_accuracy")) if row.get(f"{a}_accuracy")
+                    is not None else "n/a" for a in attributes]
+                 + [str(row["train_duration_s"]),
+                    str(row["test_images_per_s"]), backend])
+        lines.append("| " + " | ".join(str(c) for c in cells) + " |")
+    return lines
+
+
+def write_size_ablation_report(cfg, smoke_test=False):
+    """Consolidate the model-size ablation into its own report files.
+
+    Covers the variants of the size_ablation_all profile (never the legacy
+    variants — they duplicate equivalent new runs) and writes
+    reports/size_ablation{suffix}.csv and .md, distinct from the historical
+    comparison files, with sections grouped by (1) family + frozen,
+    (2) family + LoRA, (3) ConvNeXt full fine-tuning, and (4) an all-frozen
+    cross-family ranking. Adaptation modes are never mixed in one table
+    without the table saying so.
+    """
+    from .variants import available_profiles
+
+    profiles = available_profiles(cfg)
+    members = profiles.get("size_ablation_all")
+    if not members:
+        log.warning("No size_ablation_all profile in the config; skipping "
+                    "the size-ablation report")
+        return None
+    metrics_dir = Path(cfg["paths"]["metrics_dir"])
+    reports_dir = Path(cfg["paths"]["reports_dir"])
+    reports_dir.mkdir(parents=True, exist_ok=True)
+    attributes = list(cfg["attributes"])
+    suffix = "-smoke" if smoke_test else ""
+
+    rows, missing = [], []
+    for variant in members:
+        row = _load_variant_row(cfg, variant, metrics_dir, suffix, attributes)
+        if row is None:
+            missing.append(variant)
+        else:
+            rows.append(row)
+    if not rows:
+        log.info("No size-ablation variants have test metrics yet; skipping "
+                 "the size-ablation report")
+        return None
+
+    csv_path = reports_dir / f"size_ablation{suffix}.csv"
+    fieldnames = list(rows[0].keys())
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+
+    def sort_key(row):
+        score = row["test_mean_macro_f1"]
+        return -(score if isinstance(score, (int, float)) else -1.0)
+
+    md_lines = [
+        "# Model-size ablation: consolidated report",
+        "",
+        f"Generated {datetime.now(timezone.utc).isoformat(timespec='seconds')}. "
+        "Primary metric: **macro-F1** on the test split. Every table is "
+        "labelled with its adaptation mode; frozen probes, LoRA adaptation, "
+        "and full fine-tuning are never mixed in one table.",
+        "",
+        "## Full matrix (all completed size-ablation variants)",
+        "",
+    ]
+    md_lines += _ablation_md_table(sorted(rows, key=sort_key), attributes)
+
+    families = list(dict.fromkeys(r["family"] for r in rows))
+
+    md_lines += ["", "## 1. Frozen linear probes, by family "
+                     "(adaptation: frozen)", ""]
+    for family in families:
+        group = [r for r in rows
+                 if r["family"] == family and r["adaptation"] == "frozen"]
+        if group:
+            md_lines += [f"### {family} (frozen)", ""]
+            md_lines += _ablation_md_table(sorted(group, key=sort_key),
+                                           attributes)
+            md_lines.append("")
+
+    md_lines += ["## 2. LoRA adaptation, by family (adaptation: lora)", ""]
+    for family in families:
+        group = [r for r in rows
+                 if r["family"] == family and r["adaptation"] == "lora"]
+        if group:
+            md_lines += [f"### {family} (LoRA)", ""]
+            md_lines += _ablation_md_table(sorted(group, key=sort_key),
+                                           attributes)
+            md_lines.append("")
+
+    md_lines += ["## 3. ConvNeXt full fine-tuning (adaptation: finetune)", ""]
+    finetune = [r for r in rows if r["family"] == "ConvNeXt"
+                and r["adaptation"] == "finetune"]
+    if finetune:
+        md_lines += _ablation_md_table(sorted(finetune, key=sort_key),
+                                       attributes)
+    else:
+        md_lines.append("_No completed runs yet._")
+    md_lines.append("")
+
+    md_lines += ["## 4. All frozen representation models, cross-family "
+                 "ranking (adaptation: frozen)", ""]
+    frozen = [r for r in rows if r["adaptation"] == "frozen"]
+    if frozen:
+        md_lines += _ablation_md_table(sorted(frozen, key=sort_key),
+                                       attributes)
+    else:
+        md_lines.append("_No completed runs yet._")
+    md_lines.append("")
+
+    if missing:
+        md_lines += [f"Size-ablation variants without saved test metrics: "
+                     f"{', '.join(missing)} (skipped or not yet trained).", ""]
+
+    md_path = reports_dir / f"size_ablation{suffix}.md"
+    md_path.write_text("\n".join(md_lines), encoding="utf-8")
+    log.info("Size-ablation report written (%d/%d variants): %s, %s",
+             len(rows), len(members), csv_path, md_path)
     return md_path
 
 
@@ -411,6 +638,12 @@ def reevaluate_from_checkpoint(cfg, variant, split="test", checkpoint=None):
         "max_epochs": ckpt.get("max_epochs", "n/a"),
         "val_mean_macro_f1": ckpt.get("val_mean_macro_f1", "n/a"),
         "parameters": ckpt.get("parameters") or parameter_breakdown(model),
+        # New checkpoints carry explicit metadata; old ones fall back to the
+        # freshly built backbone's metadata and the config at report time.
+        "variant_meta": ckpt.get("variant_meta"),
+        "backbone_meta": (ckpt.get("backbone_meta")
+                          or getattr(backbone, "backbone_meta", None)),
+        "training_meta": ckpt.get("training_meta"),
     }
     save_metrics_bundle(cfg["paths"]["metrics_dir"], variant, split, metrics,
                         ckpt.get("run_id", "reeval"), run_info=run_info)
@@ -444,6 +677,7 @@ def main():
                                    args.checkpoint)
     else:
         write_comparison_report(cfg, smoke_test=args.smoke_test)
+        write_size_ablation_report(cfg, smoke_test=args.smoke_test)
 
 
 if __name__ == "__main__":

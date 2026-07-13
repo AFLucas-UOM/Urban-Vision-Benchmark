@@ -57,6 +57,13 @@ class DINOv3Backbone(nn.Module):
         with torch.no_grad():
             dummy = torch.zeros(1, 3, self.image_size, self.image_size)
             self.feature_dim = self._pool(self.model(pixel_values=dummy)).shape[-1]
+        self.backbone_meta = {
+            "requested_backend": "transformers",
+            "loaded_backend": "transformers",
+            "model_id": model_id,
+            "image_size": self.image_size,
+            "feature_dim": self.feature_dim,
+        }
         log.info("DINOv3 backbone %s loaded (adaptation=%s, feature_dim=%d)",
                  model_id, self.adaptation, self.feature_dim)
 

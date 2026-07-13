@@ -14,7 +14,7 @@ experiments ran in.
 | Environment | YAML | Python | Used by |
 |---|---|---|---|
 | `MDWD` | [environment-mdwd.yml](environment-mdwd.yml) | 3.12 | Maltese Domestic Waste Dataset work — YOLO (ultralytics), VLM experiments, annotation notebooks |
-| `mtsd-attrcls` | [environment-mtsd-attrcls.yml](environment-mtsd-attrcls.yml) | 3.11 | [Scripts/MTSD-Scripts/AttributeClassification/](../../Scripts/MTSD-Scripts/AttributeClassification/) — DINOv3 / V-JEPA / ConvNeXt attribute experiments |
+| `mtsd-attrcls` | [environment-mtsd-attrcls.yml](environment-mtsd-attrcls.yml) | 3.11 | [Scripts/MTSD-Scripts/AttributeClassification/](../../Scripts/MTSD-Scripts/AttributeClassification/) — DINOv3 / V-JEPA 2.1 / ConvNeXt / LingBot-Vision attribute experiments incl. the model-size ablation (`lingbot-vision` installs from a pinned Git commit, so `git` must be on PATH) |
 | `mtsd-base` | [environment-mtsd-base.yml](environment-mtsd-base.yml) | 3.12 | [Scripts/Other-Scripts/PromptDetect/](../../Scripts/Other-Scripts/PromptDetect/) main app (SAM 3 / 3.1 + Cosmos Reason2) and the [GDPR-Compliance](../../Scripts/Other-Scripts/GDPR-Compliance/) `sam31` backend |
 | `mtsd-la` | [environment-mtsd-la.yml](environment-mtsd-la.yml) | 3.12 | PromptDetect's LocateAnything-3B worker (`transformers==4.57.1`, spawned automatically — never activated by hand) |
 

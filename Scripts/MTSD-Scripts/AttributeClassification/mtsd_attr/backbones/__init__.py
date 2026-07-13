@@ -3,7 +3,11 @@
 Every backbone is an nn.Module exposing:
     feature_dim: int, dimensionality of the pooled feature vector
     image_size: int, expected square input side in pixels
+    adaptation: str, one of "frozen" / "lora" / "finetune"
     forward(x): (B, 3, H, W) float tensor -> (B, feature_dim) features
+    backbone_meta: dict, requested/loaded backend and version, model id,
+        checkpoint/entry point, resolution, and feature dim (recorded in
+        checkpoints, metrics, reports, and W&B)
 """
 
 
@@ -37,4 +41,7 @@ def build_backbone(model_cfg):
     if kind == "convnext":
         from .convnext_backbone import ConvNeXtBackbone
         return ConvNeXtBackbone(model_cfg)
+    if kind == "lingbot":
+        from .lingbot_backbone import LingBotBackbone
+        return LingBotBackbone(model_cfg)
     raise ValueError(f"Unknown backbone {kind!r}")

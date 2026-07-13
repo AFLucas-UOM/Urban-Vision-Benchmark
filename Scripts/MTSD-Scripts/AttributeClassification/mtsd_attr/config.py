@@ -72,6 +72,13 @@ def _normalise_training(training):
     """
     training["max_epochs"] = int(
         training.get("max_epochs", training.get("epochs", 30)))
+    training["batch_size"] = int(training["batch_size"])
+    accum = int(training.get("gradient_accumulation_steps", 1))
+    if accum < 1:
+        raise ValueError("gradient_accumulation_steps must be >= 1, "
+                         f"got {accum}")
+    training["gradient_accumulation_steps"] = accum
+    training["effective_batch_size"] = training["batch_size"] * accum
     es = training.get("early_stopping")
     if es is None:
         legacy = int(training.get("early_stopping_patience", 0) or 0)
@@ -122,8 +129,13 @@ def apply_smoke_test(cfg, training_cfg):
     smoke = cfg["smoke_test"]
     training_cfg["max_epochs"] = int(
         smoke.get("max_epochs", smoke.get("epochs", 1)))
-    training_cfg["batch_size"] = smoke["batch_size"]
+    training_cfg["batch_size"] = int(smoke["batch_size"])
     training_cfg["num_workers"] = smoke["num_workers"]
+    # Accumulation stays as configured so smoke runs exercise the same
+    # optimiser-step cadence; only the effective size shrinks with the batch.
+    training_cfg["effective_batch_size"] = (
+        training_cfg["batch_size"]
+        * training_cfg.get("gradient_accumulation_steps", 1))
     if smoke.get("disable_wandb", True):
         os.environ["WANDB_MODE"] = "disabled"
     return smoke["max_samples_per_split"]

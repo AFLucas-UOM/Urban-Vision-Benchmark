@@ -17,7 +17,10 @@ The experiment predicts four attributes jointly:
 
 The design is multi-task and multi-head: one image crop is passed through one backbone network, and the resulting feature vector is sent to four independent classification heads. Each head predicts one attribute. This is appropriate because the four labels describe different properties of the same traffic-sign instance, and sharing the visual representation avoids training four unrelated models over the same image data.
 
-The completed comparison contains six variants spanning three adaptation modes:
+The **historical completed comparison** (GRP-1–GRP-3 snapshot) contains six
+variants spanning three adaptation modes; a 16-variant model-size ablation has
+since been added on top (Section 1a) without touching these six or their
+outputs:
 
 | Variant | Backbone | Training regime | Input size | Feature dim |
 |---|---|---|---:|---:|
@@ -34,6 +37,60 @@ and full fine-tuning are evaluated over self-supervised and supervised pretraine
 backbones. LoRA changes adapter capacity, and DINOv3/V-JEPA full fine-tuning is not
 included, so claims should not imply equal adaptation across all backbones.
 
+## 1a. Model-Size Ablation Extension (added 2026-07-13)
+
+The framework now additionally defines a **16-variant model-size ablation**
+across four backbone families, selected through named profiles
+(`run_all.py --profile ...`):
+
+| Profile | n | Members |
+|---|---:|---|
+| `legacy_default` | 4 | exactly the historical default non-LoRA set (`dinov3`, `vjepa`, `convnext_frozen`, `convnext`) |
+| `size_ablation_frozen` | 8 | DINOv3 ViT-B/L frozen, V-JEPA 2.1 ViT-B/L frozen, ConvNeXt Base/Large frozen, LingBot-Vision ViT-B/L frozen |
+| `size_ablation_adapted` | 8 | DINOv3 ViT-B/L LoRA, V-JEPA 2.1 ViT-B/L LoRA, ConvNeXt Base/Large fully fine-tuned, LingBot-Vision ViT-B/L LoRA |
+| `size_ablation_all` | 16 | union of the two |
+
+Design decisions relevant to validity:
+
+- **Same protocol as the historical round**: identical deterministic
+  train/val/test splits, identical four heads and class vocabularies,
+  identical crop generation and missing-label masking, identical selection
+  metric (validation mean macro-F1); reports include accuracy, macro-F1,
+  per-class F1, training duration, and test-split inference throughput per
+  variant.
+- **Fairness across sizes**: per-variant `batch_size` ×
+  `gradient_accumulation_steps` overrides keep the effective batch size at 32
+  for every variant (conservative initial settings for a 24 GB RTX 4090).
+  Gradient accumulation scales each batch loss by its accumulation group's
+  size, clips gradients immediately before the optimiser step, and steps the
+  optimiser/scheduler once per group (final partial group handled). There is
+  deliberately **no automatic OOM batch-size reduction** — that would
+  silently change experimental conditions; an OOM fails the run.
+- **No silent version substitution**: the `vjepa21_*` variants set
+  `allow_backend_fallback: false`, so a failed V-JEPA 2.1 torch.hub load
+  raises `BackboneUnavailableError` instead of silently loading V-JEPA 2.0
+  from transformers (a cross-version swap would invalidate the ablation).
+  Only the legacy `vjepa`/`vjepa_lora` retain the historical fallback, marked
+  as legacy behaviour. Requested and loaded backend/version are recorded in
+  every checkpoint, metrics bundle, and W&B config.
+- **LingBot-Vision** loads through the official
+  `lingbot_vision.load_pretrained_backbone` interface (pinned commit of
+  `robbyant/lingbot-vision`; returns a `(model, embed_dim)` tuple) and
+  mean-pools the normalised patch tokens; LoRA targets the fused per-block
+  `qkv` Linear. LingBot is **frozen/LoRA only** — full fine-tuning is out of
+  scope for this comparison.
+- **Isolation**: every variant key owns its own
+  `outputs/checkpoints/<variant>/` and `outputs/metrics/<variant>/` folder;
+  the legacy variants keep theirs untouched, are excluded from the ablation
+  profiles (they duplicate equivalent new runs), and the ablation report is
+  written to distinct files (`size_ablation.{csv,md}`), never overwriting the
+  historical `comparison.*` outputs.
+- **Explicit metadata**: family, architecture, size, adaptation, model id,
+  resolution, feature dimension, parameter counts, and batching are stored as
+  explicit metadata (`mtsd_attr/variants.py`) in checkpoints and reports;
+  nothing infers them from variant names or paths (old checkpoints fall back
+  to documented legacy defaults).
+
 ## 2. Repository Structure Reviewed
 
 The implementation is organised as follows:
@@ -41,15 +98,18 @@ The implementation is organised as follows:
 | Path | Role |
 |---|---|
 | `config/default.yaml` | Central source of paths, attributes, split settings, model choices, and hyperparameters. |
-| `mtsd_attr/config.py` | YAML loading, repository-root path resolution, seeding, logging, per-model training overrides. |
+| `mtsd_attr/config.py` | YAML loading, repository-root path resolution, seeding, logging, per-model training overrides (incl. gradient accumulation). |
+| `mtsd_attr/variants.py` | Explicit variant metadata (family/architecture/size/adaptation), named profiles, selection precedence, experiment-plan resolution. |
 | `mtsd_attr/data_manifest.py` | QA group discovery, crop extraction, deterministic split assignment, manifest maintenance. |
 | `mtsd_attr/dataset.py` | Dataset class, image transforms, missing-label encoding, class-weight computation. |
 | `mtsd_attr/multihead_model.py` | Shared multi-head classifier and masked multi-task cross-entropy loss. |
 | `mtsd_attr/train_common.py` | Shared training loop, optimizer, scheduler, checkpointing, W&B logging, evaluation. |
-| `mtsd_attr/evaluate.py` | Accuracy, macro-F1, per-class F1, confusion matrices, consolidated comparison reports. |
-| `mtsd_attr/backbones/*.py` | Backbone wrappers for DINOv3, V-JEPA, and ConvNeXt-Tiny. |
-| `train_dinov3.py`, `train_vjepa.py`, `train_convnext.py` | Thin entry scripts selecting one model variant. |
-| `run_all.py` | End-to-end orchestration of manifest update, model training, and comparison report generation. |
+| `mtsd_attr/evaluate.py` | Accuracy, macro-F1, per-class F1, confusion matrices, consolidated comparison + size-ablation reports. |
+| `mtsd_attr/backbones/*.py` | Backbone wrappers for DINOv3 (B/L), V-JEPA 2.0/2.1 (B/L), ConvNeXt (Tiny/Base/Large registry), and LingBot-Vision (B/L). |
+| `train_variant.py` | Generic entry point (`--variant <key>`) for every configured variant. |
+| `train_dinov3.py`, `train_vjepa.py`, `train_convnext.py`, ... | Historical thin entry scripts, kept as compatibility wrappers. |
+| `run_all.py` | End-to-end orchestration: manifest update, profile/variant selection (`--profile`, `--plan`, `--list-*`), training, report generation. |
+| `tests/` | Non-training validation: mocked backbones, profile membership, gradient accumulation, checkpoint metadata round-trip, report grouping, plan safety. |
 
 The source code and README describe the implemented behaviour: QA-only data
 ingestion, deterministic image-level split assignment, crop padding, class-weighted

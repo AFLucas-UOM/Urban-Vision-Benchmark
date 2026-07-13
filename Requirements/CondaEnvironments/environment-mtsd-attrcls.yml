@@ -24,10 +24,14 @@ dependencies:
       - transformers==5.2.0
       - timm==1.0.25
       - accelerate==1.14.0
-      - peft==0.19.1          # LoRA adapter injection (dinov3_lora / vjepa_lora)
+      - peft==0.19.1          # LoRA adapter injection (*_lora variants)
       - einops==0.8.2
       - safetensors==0.8.0
       - huggingface_hub==1.21.0
+      # LingBot-Vision loader (lingbot_vitb/vitl variants); pinned commit,
+      # not a floating branch. Needs git at install time.
+      - lingbot-vision @ git+https://github.com/robbyant/lingbot-vision@151e46321bae4399f8568829f190c7bdec216b49
+      - omegaconf==2.3.0      # lingbot-vision config loading
       # ---- Data / metrics ----
       - numpy==2.4.4
       - pandas==2.3.3

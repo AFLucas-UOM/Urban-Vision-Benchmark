@@ -64,6 +64,13 @@ splits:
 
 training:
   batch_size: 32
+  # Generic gradient accumulation: the optimiser/scheduler step once per
+  # `gradient_accumulation_steps` batches, so
+  # effective_batch_size = batch_size * gradient_accumulation_steps.
+  # Per-variant training_overrides adjust both to keep the effective batch
+  # size at 32 for every variant. There is NO automatic OOM batch-size
+  # reduction: an OOM fails the run and requires an explicit config change.
+  gradient_accumulation_steps: 1
   num_workers: 4
   # Maximum epoch budget; early stopping usually ends runs sooner. The cosine
   # schedule spans max_epochs * len(train_loader) steps.
@@ -109,18 +116,41 @@ probe:
   mlp_hidden_dim: 512
   mlp_dropout: 0.2
 
-# Each variant: backbone kind + adaptation mode.
+# Each variant: backbone kind + adaptation mode + explicit metadata.
 #   frozen   - backbone requires_grad=False, pinned to eval(), heads only
 #   lora     - base weights frozen, LoRA adapters + heads trainable
 #   finetune - whole network trained end to end
+# family / architecture / model_size / display_name are display metadata used
+# by reports, W&B, checkpoints, and the Gradio UI; nothing parses variant
+# names or paths to infer them.
+#
+# The `legacy: true` entries are the historical six-variant round (GRP-1..3
+# snapshot). Their keys and checkpoint/metrics folders must never be renamed
+# or reused; they are deliberately excluded from the size_ablation_* profiles
+# because they duplicate equivalent new variants (dinov3 == dinov3_vitb_frozen
+# etc.).
+#
+# Per-variant batch_size / gradient_accumulation_steps overrides below are
+# INITIAL OPERATIONAL SETTINGS for a 24 GB RTX 4090, chosen conservatively so
+# the effective batch size stays 32 everywhere; the smoke round establishes
+# whether they fit and they can be overridden freely here.
 models:
+  # ---- Legacy variants (historical six-model comparison; do not rename) ----
   dinov3:
+    legacy: true
     backbone: dinov3
+    family: DINOv3
+    architecture: ViT-B/16
+    model_size: base
     hf_model_id: facebook/dinov3-vitb16-pretrain-lvd1689m
     adaptation: frozen
     image_size: 224
   dinov3_lora:
+    legacy: true
     backbone: dinov3
+    family: DINOv3
+    architecture: ViT-B/16
+    model_size: base
     hf_model_id: facebook/dinov3-vitb16-pretrain-lvd1689m
     adaptation: lora
     # DINOv3ViTModel uses separate per-block projections; adapters go on the
@@ -134,10 +164,17 @@ models:
     training_overrides:
       lr_backbone: 2.0e-4
   vjepa:
+    legacy: true
     backbone: vjepa
+    family: V-JEPA
+    architecture: ViT-L/16
+    model_size: large
     # backend: "torch_hub" loads V-JEPA 2.1 from Meta's GitHub repo;
-    # "transformers" loads V-JEPA 2 from Hugging Face. If torch_hub fails
-    # (e.g. decord issues), the code falls back to transformers with a warning.
+    # "transformers" loads V-JEPA 2 from Hugging Face. LEGACY BEHAVIOUR: this
+    # historical variant may still silently fall back from torch_hub to the
+    # transformers 2.0 checkpoint with a warning (allow_backend_fallback
+    # defaults to true when the key is absent, for old-checkpoint
+    # compatibility). The new vjepa21_* variants prohibit that fallback.
     backend: torch_hub
     hf_model_id: facebook/vjepa2-vitl-fpc64-256
     torch_hub_repo: facebookresearch/vjepa2
@@ -152,7 +189,11 @@ models:
     image_size_transformers: 256
     image_size_torch_hub: 384
   vjepa_lora:
+    legacy: true
     backbone: vjepa
+    family: V-JEPA
+    architecture: ViT-L/16
+    model_size: large
     backend: torch_hub
     hf_model_id: facebook/vjepa2-vitl-fpc64-256
     torch_hub_repo: facebookresearch/vjepa2
@@ -173,15 +214,268 @@ models:
     training_overrides:
       lr_backbone: 2.0e-4
   convnext_frozen:
+    legacy: true
     backbone: convnext
+    family: ConvNeXt
+    architecture: ConvNeXt-Tiny
+    model_size: tiny
     adaptation: frozen
     image_size: 224
   convnext:
+    legacy: true
     backbone: convnext
+    family: ConvNeXt
+    architecture: ConvNeXt-Tiny
+    model_size: tiny
     adaptation: finetune
     image_size: 224
     training_overrides:
       lr_heads: 4.0e-4
+
+  # ---- Size ablation: DINOv3 (Hugging Face, gated checkpoints) ----
+  dinov3_vitb_frozen:
+    backbone: dinov3
+    family: DINOv3
+    architecture: ViT-B/16
+    model_size: base
+    hf_model_id: facebook/dinov3-vitb16-pretrain-lvd1689m
+    adaptation: frozen
+    image_size: 224
+  dinov3_vitl_frozen:
+    backbone: dinov3
+    family: DINOv3
+    architecture: ViT-L/16
+    model_size: large
+    hf_model_id: facebook/dinov3-vitl16-pretrain-lvd1689m
+    adaptation: frozen
+    image_size: 224
+  dinov3_vitb_lora:
+    backbone: dinov3
+    family: DINOv3
+    architecture: ViT-B/16
+    model_size: base
+    hf_model_id: facebook/dinov3-vitb16-pretrain-lvd1689m
+    adaptation: lora
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [q_proj, v_proj]
+    image_size: 224
+    training_overrides:
+      lr_backbone: 2.0e-4
+  dinov3_vitl_lora:
+    backbone: dinov3
+    family: DINOv3
+    architecture: ViT-L/16
+    model_size: large
+    hf_model_id: facebook/dinov3-vitl16-pretrain-lvd1689m
+    adaptation: lora
+    # ViT-L uses the same DINOv3ViT block implementation as ViT-B in
+    # transformers (only depth/width differ), so the q_proj/v_proj targets are
+    # identical; lora.py additionally verifies every target matches at load
+    # time and fails loudly otherwise.
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [q_proj, v_proj]
+    image_size: 224
+    training_overrides:
+      lr_backbone: 2.0e-4
+      batch_size: 16
+      gradient_accumulation_steps: 2
+
+  # ---- Size ablation: V-JEPA 2.1 (torch.hub, strict — no 2.0 fallback) ----
+  # allow_backend_fallback: false means a failed torch.hub load raises
+  # BackboneUnavailableError instead of silently substituting the V-JEPA 2.0
+  # transformers checkpoint (a cross-version swap would invalidate the
+  # ablation). Entry points and checkpoint URLs are the official ones from
+  # facebookresearch/vjepa2 (hubconf ships a localhost placeholder base URL,
+  # so the real checkpoint is pre-cached from dl.fbaipublicfiles.com).
+  vjepa21_vitb_frozen:
+    backbone: vjepa
+    family: V-JEPA
+    architecture: ViT-B/16
+    model_size: base
+    backend: torch_hub
+    allow_backend_fallback: false
+    vjepa_version: "2.1"
+    torch_hub_repo: facebookresearch/vjepa2
+    torch_hub_entrypoint: vjepa2_1_vit_base_384
+    torch_hub_checkpoint_url: https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitb_dist_vitG_384.pt
+    num_frames: 2
+    adaptation: frozen
+    image_size_torch_hub: 384
+  vjepa21_vitl_frozen:
+    backbone: vjepa
+    family: V-JEPA
+    architecture: ViT-L/16
+    model_size: large
+    backend: torch_hub
+    allow_backend_fallback: false
+    vjepa_version: "2.1"
+    torch_hub_repo: facebookresearch/vjepa2
+    torch_hub_entrypoint: vjepa2_1_vit_large_384
+    torch_hub_checkpoint_url: https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt
+    num_frames: 2
+    adaptation: frozen
+    image_size_torch_hub: 384
+  vjepa21_vitb_lora:
+    backbone: vjepa
+    family: V-JEPA
+    architecture: ViT-B/16
+    model_size: base
+    backend: torch_hub
+    allow_backend_fallback: false
+    vjepa_version: "2.1"
+    torch_hub_repo: facebookresearch/vjepa2
+    torch_hub_entrypoint: vjepa2_1_vit_base_384
+    torch_hub_checkpoint_url: https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitb_dist_vitG_384.pt
+    num_frames: 2
+    adaptation: lora
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [qkv]
+    image_size_torch_hub: 384
+    training_overrides:
+      lr_backbone: 2.0e-4
+      batch_size: 16
+      gradient_accumulation_steps: 2
+  vjepa21_vitl_lora:
+    backbone: vjepa
+    family: V-JEPA
+    architecture: ViT-L/16
+    model_size: large
+    backend: torch_hub
+    allow_backend_fallback: false
+    vjepa_version: "2.1"
+    torch_hub_repo: facebookresearch/vjepa2
+    torch_hub_entrypoint: vjepa2_1_vit_large_384
+    torch_hub_checkpoint_url: https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt
+    num_frames: 2
+    adaptation: lora
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [qkv]
+    image_size_torch_hub: 384
+    training_overrides:
+      lr_backbone: 2.0e-4
+      batch_size: 16
+      gradient_accumulation_steps: 2
+
+  # ---- Size ablation: ConvNeXt (torchvision, ImageNet-1K weights) ----
+  # Only Base and Large take part in the size ablation; Tiny exists solely as
+  # the legacy convnext_frozen / convnext variants above.
+  convnext_base_frozen:
+    backbone: convnext
+    family: ConvNeXt
+    architecture: ConvNeXt-Base
+    model_size: base
+    adaptation: frozen
+    image_size: 224
+  convnext_large_frozen:
+    backbone: convnext
+    family: ConvNeXt
+    architecture: ConvNeXt-Large
+    model_size: large
+    adaptation: frozen
+    image_size: 224
+  convnext_base_finetune:
+    backbone: convnext
+    family: ConvNeXt
+    architecture: ConvNeXt-Base
+    model_size: base
+    adaptation: finetune
+    image_size: 224
+    training_overrides:
+      lr_heads: 4.0e-4
+  convnext_large_finetune:
+    backbone: convnext
+    family: ConvNeXt
+    architecture: ConvNeXt-Large
+    model_size: large
+    adaptation: finetune
+    image_size: 224
+    training_overrides:
+      lr_heads: 4.0e-4
+      batch_size: 16
+      gradient_accumulation_steps: 2
+
+  # ---- Size ablation: LingBot-Vision (lingbot_vision loader, HF weights) ----
+  # Loaded through the official lingbot_vision.load_pretrained_backbone
+  # interface (returns a (model, embed_dim) tuple). The pooled feature is the
+  # mean of the normalised patch tokens (x_norm_patchtokens), the
+  # representation the model card recommends for frozen readouts; pooling: cls
+  # switches to the normalised CLS token. Frozen and LoRA only — full
+  # fine-tuning is deliberately not implemented for LingBot.
+  lingbot_vitb_frozen:
+    backbone: lingbot
+    family: LingBot-Vision
+    architecture: ViT-B/16
+    model_size: base
+    lingbot_variant: base
+    hf_model_id: robbyant/lingbot-vision-vit-base
+    pooling: mean_patch
+    adaptation: frozen
+    image_size: 224
+  lingbot_vitl_frozen:
+    backbone: lingbot
+    family: LingBot-Vision
+    architecture: ViT-L/16
+    model_size: large
+    lingbot_variant: large
+    hf_model_id: robbyant/lingbot-vision-vit-large
+    pooling: mean_patch
+    adaptation: frozen
+    image_size: 224
+  lingbot_vitb_lora:
+    backbone: lingbot
+    family: LingBot-Vision
+    architecture: ViT-B/16
+    model_size: base
+    lingbot_variant: base
+    hf_model_id: robbyant/lingbot-vision-vit-base
+    pooling: mean_patch
+    adaptation: lora
+    # LingBot's SelfAttention uses one fused qkv Linear per block (a
+    # LinearKMaskedBias subclass of nn.Linear), like Meta's V-JEPA ViT and
+    # unlike HF DINOv3's separate q_proj/v_proj — verified against
+    # lingbot_vision/layers.py at the pinned commit; lora.py re-verifies the
+    # match at load time.
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [qkv]
+    image_size: 224
+    training_overrides:
+      lr_backbone: 2.0e-4
+      batch_size: 16
+      gradient_accumulation_steps: 2
+  lingbot_vitl_lora:
+    backbone: lingbot
+    family: LingBot-Vision
+    architecture: ViT-L/16
+    model_size: large
+    lingbot_variant: large
+    hf_model_id: robbyant/lingbot-vision-vit-large
+    pooling: mean_patch
+    adaptation: lora
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [qkv]
+    image_size: 224
+    training_overrides:
+      lr_backbone: 2.0e-4
+      batch_size: 16
+      gradient_accumulation_steps: 2
 
 wandb:
   # Master switch: false runs fully offline (wandb.init(mode="disabled")),
@@ -191,17 +485,65 @@ wandb:
   entity: null
   # Optional W&B run group - set to a fresh label (e.g. "rerun-2026-07") so a
   # clean experiment round is separated from any earlier runs in the project.
-  group: null
+  group: size-ablation-2026-07
   # Optional prefix prepended to every run name (run names are otherwise
   # "<variant>-<timestamp>").
   run_name_prefix: ""
 
 run_all:
-  # Default experiment set; LoRA variants are opt-in via
-  # `run_all.py --include dinov3_lora vjepa_lora` (or --variants to replace).
+  # Default experiment set when neither --profile nor --variants is given;
+  # identical to the legacy_default profile so historical behaviour is
+  # preserved. LoRA variants are opt-in via `run_all.py --include ...`
+  # (or --variants / --profile to replace the set).
   variants: [dinov3, vjepa, convnext_frozen, convnext]
   # Sequential by default (single GPU); "parallel: true" launches subprocesses.
   parallel: false
+  # Named experiment profiles (run_all.py --profile NAME). Selection
+  # precedence: --variants (exclusive) > --profile > run_all.variants;
+  # --include appends to whichever base set was selected.
+  profiles:
+    # Exactly the current default non-LoRA experiment set.
+    legacy_default: [dinov3, vjepa, convnext_frozen, convnext]
+    # Frozen linear probes across families and sizes (8 variants).
+    size_ablation_frozen:
+      - dinov3_vitb_frozen
+      - dinov3_vitl_frozen
+      - vjepa21_vitb_frozen
+      - vjepa21_vitl_frozen
+      - convnext_base_frozen
+      - convnext_large_frozen
+      - lingbot_vitb_frozen
+      - lingbot_vitl_frozen
+    # Adapted variants: LoRA for the SSL backbones, full fine-tuning for
+    # ConvNeXt (8 variants). Adaptation modes are never mixed in one table
+    # without labelling.
+    size_ablation_adapted:
+      - dinov3_vitb_lora
+      - dinov3_vitl_lora
+      - vjepa21_vitb_lora
+      - vjepa21_vitl_lora
+      - convnext_base_finetune
+      - convnext_large_finetune
+      - lingbot_vitb_lora
+      - lingbot_vitl_lora
+    # Union of the frozen and adapted profiles (16 variants).
+    size_ablation_all:
+      - dinov3_vitb_frozen
+      - dinov3_vitl_frozen
+      - vjepa21_vitb_frozen
+      - vjepa21_vitl_frozen
+      - convnext_base_frozen
+      - convnext_large_frozen
+      - lingbot_vitb_frozen
+      - lingbot_vitl_frozen
+      - dinov3_vitb_lora
+      - dinov3_vitl_lora
+      - vjepa21_vitb_lora
+      - vjepa21_vitl_lora
+      - convnext_base_finetune
+      - convnext_large_finetune
+      - lingbot_vitb_lora
+      - lingbot_vitl_lora
 
 smoke_test:
   max_samples_per_split: 64

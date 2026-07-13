@@ -5,7 +5,12 @@ ground-truth crops, comparing adaptation regimes over shared pretrained
 backbones. Part of the MSc AI dissertation on cross-paradigm visual perception
 for municipal monitoring in Malta.
 
-The experiment matrix (six variants, one shared multi-head architecture):
+The project covers four backbone families (DINOv3, V-JEPA 2.1, ConvNeXt,
+LingBot-Vision) in two experiment generations sharing one multi-head
+architecture:
+
+**Historical six-variant round** (completed on the GRP-1–GRP-3 snapshot; keys,
+checkpoints, and metrics folders are preserved unchanged):
 
 | Variant | Backbone | Adaptation | Trainable parameters |
 | --- | --- | --- | --- |
@@ -16,10 +21,47 @@ The experiment matrix (six variants, one shared multi-head architecture):
 | `convnext_frozen` | ConvNeXt-Tiny | frozen | heads only |
 | `convnext` | ConvNeXt-Tiny | full fine-tune | backbone + heads |
 
-The default experiment set is the four non-LoRA variants; the LoRA variants are
-opt-in (see "How to run"). The three frozen variants form a controlled
-frozen-representation comparison; `convnext` is the supervised task-adapted
-baseline; the LoRA variants measure parameter-efficient adaptation.
+**Model-size ablation matrix** (16 new variants; explicit names encode
+family, size, and adaptation):
+
+| Variant | Backbone | Model ID / entry point | Res | Adaptation |
+| --- | --- | --- | ---: | --- |
+| `dinov3_vitb_frozen` | DINOv3 ViT-B/16 | `facebook/dinov3-vitb16-pretrain-lvd1689m` | 224 | frozen |
+| `dinov3_vitl_frozen` | DINOv3 ViT-L/16 | `facebook/dinov3-vitl16-pretrain-lvd1689m` | 224 | frozen |
+| `dinov3_vitb_lora` | DINOv3 ViT-B/16 | same as frozen | 224 | LoRA (q_proj, v_proj) |
+| `dinov3_vitl_lora` | DINOv3 ViT-L/16 | same as frozen | 224 | LoRA (q_proj, v_proj) |
+| `vjepa21_vitb_frozen` | V-JEPA 2.1 ViT-B/16 (~80M) | hub `vjepa2_1_vit_base_384` | 384 | frozen |
+| `vjepa21_vitl_frozen` | V-JEPA 2.1 ViT-L/16 (~300M) | hub `vjepa2_1_vit_large_384` | 384 | frozen |
+| `vjepa21_vitb_lora` | V-JEPA 2.1 ViT-B/16 | hub `vjepa2_1_vit_base_384` | 384 | LoRA (fused qkv) |
+| `vjepa21_vitl_lora` | V-JEPA 2.1 ViT-L/16 | hub `vjepa2_1_vit_large_384` | 384 | LoRA (fused qkv) |
+| `convnext_base_frozen` | ConvNeXt-Base | torchvision `convnext_base` | 224 | frozen |
+| `convnext_large_frozen` | ConvNeXt-Large | torchvision `convnext_large` | 224 | frozen |
+| `convnext_base_finetune` | ConvNeXt-Base | torchvision `convnext_base` | 224 | full fine-tune |
+| `convnext_large_finetune` | ConvNeXt-Large | torchvision `convnext_large` | 224 | full fine-tune |
+| `lingbot_vitb_frozen` | LingBot-Vision ViT-B/16 | `robbyant/lingbot-vision-vit-base` | 224 | frozen |
+| `lingbot_vitl_frozen` | LingBot-Vision ViT-L/16 | `robbyant/lingbot-vision-vit-large` | 224 | frozen |
+| `lingbot_vitb_lora` | LingBot-Vision ViT-B/16 | `robbyant/lingbot-vision-vit-base` | 224 | LoRA (fused qkv) |
+| `lingbot_vitl_lora` | LingBot-Vision ViT-L/16 | `robbyant/lingbot-vision-vit-large` | 224 | LoRA (fused qkv) |
+
+ConvNeXt-Tiny stays legacy-only (it is the historical baseline); LingBot has
+no full fine-tuning (the ablation keeps SSL backbones at frozen/LoRA, and full
+fine-tuning of a boundary-pretrained dense model is out of scope for this
+comparison). The legacy variants are deliberately **excluded** from the
+ablation profiles: `dinov3`/`dinov3_lora`, `vjepa`/`vjepa_lora` and
+`convnext_frozen`/`convnext` would duplicate `dinov3_vitb_*`,
+`vjepa21_vitl_*`, and ConvNeXt-Tiny runs.
+
+Named experiment profiles (`run_all.py --profile NAME`):
+
+| Profile | Variants | Content |
+| --- | ---: | --- |
+| `legacy_default` | 4 | exactly the historical default non-LoRA set |
+| `size_ablation_frozen` | 8 | all frozen probes: DINOv3 B/L, V-JEPA 2.1 B/L, ConvNeXt Base/Large, LingBot B/L |
+| `size_ablation_adapted` | 8 | DINOv3 B/L LoRA, V-JEPA 2.1 B/L LoRA, ConvNeXt Base/Large fine-tuned, LingBot B/L LoRA |
+| `size_ablation_all` | 16 | union of the two |
+
+The default experiment set (no `--profile`/`--variants`) is unchanged: the
+four legacy non-LoRA variants.
 
 Four attributes are predicted jointly, each by its own classification head on a
 single shared backbone per variant:
@@ -43,28 +85,38 @@ Scripts/MTSD-Scripts/AttributeClassification/
                              class vocabularies, hyperparameters, model variants
   mtsd_attr/                 the library package
     config.py                YAML loading, path resolution, seeding, logging
+    variants.py              variant metadata, profiles, plan resolution
     data_manifest.py         group discovery, QA detection, crop extraction,
                              deterministic splits, manifest maintenance
     dataset.py               torch Dataset, transforms, class weights
     multihead_model.py       backbone -> N heads wrapper, masked multi-task loss
-    train_common.py          the shared training loop (used by all variants)
-    evaluate.py              metrics, confusion matrices, consolidated report
-    backbones/               dinov3 / vjepa / convnext wrappers, one interface
-  train_dinov3.py            thin entry point: DINOv3 (frozen, probed)
-  train_dinov3_lora.py       thin entry point: DINOv3 (LoRA adapters + heads)
-  train_vjepa.py             thin entry point: V-JEPA 2/2.1 (frozen, probed)
-  train_vjepa_lora.py        thin entry point: V-JEPA 2.1 (LoRA adapters + heads)
-  train_convnext.py          thin entry point: ConvNeXt-Tiny (frozen, probed; variant key convnext_frozen)
-  train_convnext_finetuned.py  thin entry point: ConvNeXt-Tiny (fine-tuned; variant key convnext)
-  run_all.py                 manifest update + selected variants + comparison report
+    train_common.py          the shared training loop (all variants; generic
+                             gradient accumulation)
+    evaluate.py              metrics, confusion matrices, consolidated +
+                             size-ablation reports
+    backbones/               dinov3 / vjepa / convnext / lingbot wrappers,
+                             one shared interface
+  train_variant.py           generic entry point: --variant <any config key>
+  train_dinov3.py            compat wrapper: DINOv3 (frozen, probed)
+  train_dinov3_lora.py       compat wrapper: DINOv3 (LoRA adapters + heads)
+  train_vjepa.py             compat wrapper: V-JEPA 2/2.1 (frozen, probed)
+  train_vjepa_lora.py        compat wrapper: V-JEPA 2.1 (LoRA adapters + heads)
+  train_convnext.py          compat wrapper: ConvNeXt-Tiny (frozen; variant key convnext_frozen)
+  train_convnext_finetuned.py  compat wrapper: ConvNeXt-Tiny (fine-tuned; variant key convnext)
+  run_all.py                 manifest update + selected variants/profile + reports
   reset_outputs.py           archive/delete generated outputs for a fresh rerun
   inference/gradio_compare.py  side-by-side checkpoint inference UI
+  tests/                     non-training validation (mocked backbones, profiles,
+                             gradient accumulation, reports, plan safety)
   outputs/
     manifests/manifest.json  the unified crop manifest (append-only, see below)
     crops/GRP-*/             extracted sign crops (regenerable, git-ignored)
-    checkpoints/<variant>/   best.pt and last.pt per variant (git-ignored)
+    checkpoints/<variant>/   best.pt and last.pt per variant (git-ignored);
+                             every variant key owns its own isolated folder,
+                             so legacy and ablation runs never collide
     metrics/<variant>/       per-split metrics JSON/CSV + confusion PNGs
-    reports/                 consolidated comparison (csv/md/png)
+    reports/                 comparison.{csv,md,png} (historical consolidated
+                             comparison) + size_ablation.{csv,md} (new)
     logs/                    per-run log files (git-ignored)
     experiment_log.jsonl     one line per completed run, appended forever
 ```
@@ -114,33 +166,68 @@ controlled entirely from `config/default.yaml`:
 The LoRA variants additionally require `peft` (>= 0.19, already in
 `Requirements/requirements-attribute-classification.txt`); the non-LoRA
 variants never import it, so they run fine without LoRA-specific
-initialisation.
+initialisation. The LingBot variants require the `lingbot-vision` package
+(pinned to a specific upstream commit in the same requirements file; installs
+`omegaconf`, `opencv-python-headless`, `huggingface_hub` alongside). If it is
+missing, the LingBot variants raise a clear `BackboneUnavailableError` with
+install instructions and are skipped; nothing else is affected.
 
 ## How to run
 
-The default experiment set (manifest refresh, the four non-LoRA variants,
-comparison report):
+List every configured variant / the named profiles (read-only, no data or
+model access):
+
+```
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --list-variants
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --list-profiles
+```
+
+Print the resolved experiment matrix for a selection without running anything
+(**no manifest refresh, no model loading or downloads, no checkpoints, no
+W&B**):
+
+```
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --plan --profile size_ablation_all
+```
+
+The default experiment set (manifest refresh, the four legacy non-LoRA
+variants, comparison report) — unchanged historical behaviour:
 
 ```
 PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py
 ```
 
-Add the optional LoRA variants on top of the default set:
+Run a named profile (frozen-only, adapted-only, or the complete ablation):
+
+```
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --profile size_ablation_frozen
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --profile size_ablation_adapted
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --profile size_ablation_all
+```
+
+Selection precedence is deterministic: `--variants` replaces the set entirely
+and is mutually exclusive with `--profile`; `--profile` otherwise selects the
+base set; without either, `run_all.variants` (the legacy default) is used;
+`--include` appends extra variants to whichever base set was selected.
+
+Add the optional legacy LoRA variants on top of the default set:
 
 ```
 PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --include dinov3_lora vjepa_lora
 ```
 
-Run an explicit set (replaces the default entirely — e.g. one LoRA variant only):
+Run an explicit set (replaces the default entirely — e.g. one variant only):
 
 ```
-PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --variants dinov3_lora
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s run_all.py --variants dinov3_vitl_frozen
 ```
 
-One variant via its thin entry script:
+One variant via the generic entry point (works for every configured variant;
+the historical thin scripts such as `train_convnext.py` remain as
+compatibility wrappers):
 
 ```
-PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s train_convnext.py
+PYTHONNOUSERSITE=1 .../envs/mtsd-attrcls/python.exe -s train_variant.py --variant lingbot_vitb_frozen
 ```
 
 Re-evaluate an existing checkpoint (reconstructed from its stored metadata,
@@ -287,38 +374,93 @@ Each variant's `adaptation` field in the config selects the training regime:
 
 Backbones:
 
-- **DINOv3** (`facebook/dinov3-vitb16-pretrain-lvd1689m`): loaded via
-  transformers. The checkpoint is **gated** on Hugging Face; if access is not
-  granted the variant exits/skips with instructions rather than crashing the
-  run. Access was granted for this machine's account on 2026-07-03.
-  `dinov3_lora` targets the per-block `q_proj` and `v_proj` Linear layers
-  (verified against DINOv3ViTModel in transformers 5.12; 12 blocks x 2 = 24
-  adapted layers, ~0.30M adapter parameters at r=8).
+- **DINOv3** (`facebook/dinov3-vitb16-pretrain-lvd1689m` /
+  `facebook/dinov3-vitl16-pretrain-lvd1689m`): loaded via transformers. Both
+  checkpoints are **gated** on Hugging Face; request access for *each* model
+  id and log in (`hf auth login`) first — if access is not granted the
+  variant exits/skips with instructions rather than crashing the run (ViT-B
+  access was granted for this machine's account on 2026-07-03; ViT-L needs
+  its own grant). The LoRA variants target the per-block `q_proj` and
+  `v_proj` Linear layers; ViT-B and ViT-L share the same DINOv3ViT block
+  implementation (only depth/width differ), and `lora.py` verifies at load
+  time that every configured target matched, failing loudly otherwise.
 - **V-JEPA**: a video model — each image is repeated along the temporal axis
   to form a minimal pseudo-clip (`num_frames`, default 2, the tubelet size),
-  and token embeddings are mean-pooled to a 1024-d feature. Backend is a
-  config switch:
-  - `backend: torch_hub` (default) loads **V-JEPA 2.1 ViT-L/384** from Meta's
-    GitHub repo. As of 2026-07 Meta's hubconf ships a localhost placeholder
-    checkpoint URL, so the real checkpoint is pre-cached from
-    `torch_hub_checkpoint_url` (dl.fbaipublicfiles.com, ~4.8 GB) into the
-    torch.hub cache first. This constraint is expected to disappear once
-    V-JEPA 2.1 lands in transformers.
-  - `backend: transformers` loads **V-JEPA 2.0** (`facebook/vjepa2-vitl-fpc64-256`).
-    Any torch.hub failure also falls back to this automatically with a warning
-    — except for `vjepa_lora`, which requires the hub architecture (its LoRA
-    targets are the fused `qkv` projections, 24 blocks; Meta's ViT has no
-    separate q/v Linears, so q, k and v are adapted jointly, ~0.79M adapter
-    parameters at r=8) and fails explicitly instead of adapting wrong layers.
-- **ConvNeXt-Tiny** (torchvision, ImageNet-pretrained): the same weights and
-  768-d pooled features serve both `convnext` (fully fine-tuned baseline) and
-  `convnext_frozen` (frozen linear probe).
+  and token embeddings are mean-pooled (768-d for ViT-B, 1024-d for ViT-L).
+  Backend is a config switch:
+  - `backend: torch_hub` (default) loads **V-JEPA 2.1** from Meta's GitHub
+    repo via the official entry points `vjepa2_1_vit_base_384` /
+    `vjepa2_1_vit_large_384` (each returns an `(encoder, predictor)` tuple;
+    the encoder is used). As of 2026-07 Meta's hubconf ships a localhost
+    placeholder checkpoint URL, so the real checkpoint is pre-cached from
+    `torch_hub_checkpoint_url` (dl.fbaipublicfiles.com;
+    `vjepa2_1_vitb_dist_vitG_384.pt` / `vjepa2_1_vitl_dist_vitG_384.pt`,
+    ~1–4.8 GB) into the torch.hub cache first.
+  - **Version policy**: the new `vjepa21_*` variants set
+    `allow_backend_fallback: false` — a failed 2.1 hub load raises
+    `BackboneUnavailableError` instead of silently substituting the V-JEPA
+    2.0 transformers checkpoint, because a cross-version swap would
+    invalidate the size ablation. Only the legacy `vjepa`/`vjepa_lora`
+    variants retain the historical fallback-with-warning to
+    `facebook/vjepa2-vitl-fpc64-256` (V-JEPA 2.0), kept solely for
+    backwards compatibility and marked as legacy behaviour. The requested
+    and actually loaded backend/version are recorded in every checkpoint,
+    metrics bundle, and W&B config.
+  - LoRA targets the fused `qkv` projections (Meta's ViT has no separate
+    q/v Linears, so q, k and v are adapted jointly); the hub architecture is
+    required — a LoRA variant fails explicitly rather than adapting the
+    wrong layers of the 2.0 fallback.
+- **ConvNeXt** (torchvision, ImageNet-1K `IMAGENET1K_V1` weights): a
+  validated registry maps `model_size` to the official constructors —
+  `convnext_tiny` (768-d, legacy only), `convnext_base` (1024-d),
+  `convnext_large` (1536-d). The feature dimension is derived from the
+  instantiated architecture, not hard-coded. Base/Large serve both frozen
+  probes and the fully fine-tuned baselines.
+- **LingBot-Vision** (Robbyant/Ant Group;
+  `robbyant/lingbot-vision-vit-base` / `-vit-large`): loaded through the
+  official `lingbot_vision.load_pretrained_backbone` interface (pip package
+  `lingbot-vision`, pinned to a reviewed commit), which returns a
+  `(model, embed_dim)` tuple — not a transformers AutoModel. The forward
+  pass returns the model's token dictionary; the wrapper mean-pools the
+  normalised patch tokens (`x_norm_patchtokens`, the representation
+  documented for frozen readouts; `pooling: cls` switches to the CLS token).
+  The embedding dimension comes from the loader (768 ViT-B / 1024 ViT-L) and
+  is re-verified by a dummy forward. RoPE position embeddings make the input
+  size flexible (224 configured; native pretraining used 512). LoRA targets
+  the fused per-block `qkv` Linear (verified against the pinned
+  `lingbot_vision/layers.py`). **Frozen and LoRA only** — full fine-tuning
+  is deliberately not implemented for LingBot in this experiment. A missing
+  package or checkpoint raises `BackboneUnavailableError` with instructions.
 
 Every run logs a parameter breakdown (total, trainable, trainable %, backbone
-vs heads vs LoRA) and stores it in the checkpoint, the experiment log, the
-metrics JSON, and W&B, so the regimes are explicit:
-frozen ~0.01M trainable (heads only) · LoRA ~0.3-0.8M (adapters + heads) ·
-fine-tune 27.8M (everything, ConvNeXt).
+vs heads vs LoRA) plus explicit variant metadata (family, architecture, size,
+adaptation, model id, requested/loaded backend and version, resolution,
+feature dim, physical/effective batch size) and stores it all in the
+checkpoint, the experiment log, the metrics JSON, and W&B, so the regimes are
+explicit: frozen ~0.01M trainable (heads only) · LoRA ~0.3–0.8M (adapters +
+heads) · fine-tune 28M–198M (everything; ConvNeXt Tiny→Large).
+
+### Batching, gradient accumulation, and VRAM
+
+`training.gradient_accumulation_steps` (default 1) adds generic gradient
+accumulation to the shared loop: the loss of each batch is scaled by its
+accumulation group's size before backward, gradients are clipped immediately
+before each optimiser step, and the optimiser + scheduler step once per group
+(the final partial group of an epoch is handled correctly). Validation and
+test behaviour are unchanged. Physical and effective batch sizes are logged
+per epoch and recorded in all metadata.
+
+Per-variant `training_overrides` keep `effective_batch_size =
+batch_size × gradient_accumulation_steps = 32` everywhere. The shipped values
+are **initial operational settings for a 24 GB RTX 4090** (32×1 for all
+frozen probes and ConvNeXt-Base fine-tuning; 16×2 for the ViT-L LoRA
+variants, ConvNeXt-Large fine-tuning, and all LingBot/V-JEPA-2.1 LoRA
+variants); the smoke round establishes whether they fit. Expect the highest
+VRAM pressure from `vjepa21_vitl_lora` (384 px, backprop through ViT-L) and
+`convnext_large_finetune`. **There is no automatic OOM batch-size
+reduction** — silently changing the batch would change experimental
+conditions, so an OOM fails the run and the config must be adjusted
+explicitly.
 
 ## Training schedule and early stopping
 
@@ -358,11 +500,21 @@ imbalanced.
 - `outputs/reports/comparison.{csv,md}` and `comparison_macro_f1.png` — the
   consolidated comparison across **every variant with completed test metrics**
   (the report never assumes a fixed variant count): macro-F1 and accuracy per
-  attribute, run details (adaptation, best/stopping epoch, stop reason, val
-  score, parameter counts), per-class F1 tables with supports, and links to
-  the confusion matrices. **Macro-F1 is the primary metric**: with Good ~78%
-  of condition labels, accuracy rewards majority-class collapse, while
-  macro-F1 weights rare classes (Heavily Damaged, Pentagon) equally.
+  attribute, run details (family, architecture, size, adaptation, resolution,
+  best/stopping epoch, stop reason, val score, parameter counts, training
+  duration, loaded backend/version), per-class F1 tables with supports, and
+  links to the confusion matrices. **Macro-F1 is the primary metric**: with
+  Good ~78% of condition labels, accuracy rewards majority-class collapse,
+  while macro-F1 weights rare classes (Heavily Damaged, Pentagon) equally.
+- `outputs/reports/size_ablation.{csv,md}` — the model-size ablation report
+  (distinct file names; the historical comparison files are never
+  overwritten). Covers only the `size_ablation_all` profile members and
+  groups them into: (1) frozen probes per family, (2) LoRA per family,
+  (3) ConvNeXt full fine-tuning, (4) an all-frozen cross-family ranking —
+  each table explicitly labelled with its adaptation mode. Rows carry
+  variant, family, size, architecture, adaptation, resolution, parameter
+  counts, best epoch, val/test mean macro-F1, per-head test macro-F1 and
+  accuracy, training duration, test throughput, and backend/version.
 - `outputs/experiment_log.jsonl` — one line per run: run id, variant,
   adaptation, git commit, groups and crop counts used, split sizes, parameter
   breakdown, best/stopping epoch and stop reason, val/test scores, checkpoint
