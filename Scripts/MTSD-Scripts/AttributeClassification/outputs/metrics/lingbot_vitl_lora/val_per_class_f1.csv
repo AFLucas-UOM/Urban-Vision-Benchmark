@@ -1,0 +1,14 @@
+variant,split,attribute,class,f1,support
+lingbot_vitl_lora,val,view_angle,Front,0.9173,548
+lingbot_vitl_lora,val,view_angle,Back,0.9693,509
+lingbot_vitl_lora,val,view_angle,Side,0.8748,340
+lingbot_vitl_lora,val,mounting,Pole-Mounted,0.9824,1190
+lingbot_vitl_lora,val,mounting,Wall-Mounted,0.8986,207
+lingbot_vitl_lora,val,condition,Good,0.9213,1017
+lingbot_vitl_lora,val,condition,Weathered,0.7091,308
+lingbot_vitl_lora,val,condition,Heavily Damaged,0.5954,72
+lingbot_vitl_lora,val,sign_shape,Circular,0.9849,562
+lingbot_vitl_lora,val,sign_shape,Quadrangle,0.9754,425
+lingbot_vitl_lora,val,sign_shape,Triangular,0.9825,198
+lingbot_vitl_lora,val,sign_shape,Octagonal,0.9695,181
+lingbot_vitl_lora,val,sign_shape,Pentagon,0.8571,31
