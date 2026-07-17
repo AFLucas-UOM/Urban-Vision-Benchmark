@@ -97,6 +97,19 @@ MALTA_LOCALITIES: list[tuple[str, str, float, float]] = [
 
 EARTH_RADIUS_KM = 6371.0088
 
+# Rough bounding box around the Maltese archipelago; GPS fixes outside it are
+# treated as receiver glitches and excluded from geographic aggregation.
+MALTA_LAT_RANGE = (35.7, 36.2)
+MALTA_LON_RANGE = (14.1, 14.7)
+
+
+def within_malta(points: pd.DataFrame) -> pd.Series:
+    """Boolean mask: rows whose ``gps_latitude``/``gps_longitude`` fall in Malta."""
+    return (
+        points["gps_latitude"].between(*MALTA_LAT_RANGE)
+        & points["gps_longitude"].between(*MALTA_LON_RANGE)
+    )
+
 
 def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """Great-circle distance between two WGS84 points, in kilometres."""

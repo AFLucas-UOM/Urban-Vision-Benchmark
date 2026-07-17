@@ -1,0 +1,2 @@
+annotation_uid,image_uid,category_name,bbox_x,bbox_y,bbox_w,bbox_h,image_width,image_height
+13990,5200,Pedestrian Crossing,983.13,1060.86,2.01,1.83,3000.0,4000.0

@@ -1,0 +1,51 @@
+locality,district,geotagged_images,annotated_images,annotations,distinct_classes,n_Good,pct_Good,n_Weathered,pct_Weathered,n_Heavily Damaged,pct_Heavily Damaged,low_sample
+Mosta,Northern,548,548,2198,11,1959,89.13,196,8.92,43,1.96,False
+Zurrieq,South Eastern,355,355,1078,11,810,75.14,214,19.85,54,5.01,False
+Sliema,Northern Harbour,402,402,735,11,455,61.9,224,30.48,56,7.62,False
+Msida,Northern Harbour,209,209,565,11,370,65.49,157,27.79,38,6.73,False
+Qormi,Northern Harbour,197,197,546,12,457,83.7,80,14.65,9,1.65,False
+Fgura,Southern Harbour,136,136,444,11,312,70.27,95,21.4,37,8.33,False
+Rabat (Malta),Western,191,191,420,11,240,57.14,139,33.1,41,9.76,False
+Senglea,Southern Harbour,127,127,410,11,299,72.93,82,20.0,29,7.07,False
+Safi,South Eastern,104,104,321,10,239,74.45,68,21.18,14,4.36,False
+Attard,Western,160,160,319,11,204,63.95,76,23.82,39,12.23,False
+Gharghur,Northern,79,79,308,11,243,78.9,45,14.61,20,6.49,False
+Naxxar,Northern,191,191,302,11,231,76.49,59,19.54,12,3.97,False
+Ghaxaq,South Eastern,119,119,296,11,237,80.07,41,13.85,18,6.08,False
+Zabbar,Southern Harbour,167,167,289,11,179,61.94,68,23.53,42,14.53,False
+Pieta,Northern Harbour,132,132,249,10,158,63.45,67,26.91,24,9.64,False
+San Gwann,Northern Harbour,93,93,232,11,159,68.53,57,24.57,16,6.9,False
+Qawra,Northern,105,105,224,12,144,64.29,71,31.7,9,4.02,False
+Kirkop,South Eastern,56,56,203,12,155,76.35,36,17.73,12,5.91,False
+Ta' Xbiex,Northern Harbour,69,69,200,10,115,57.5,61,30.5,24,12.0,False
+Mdina,Western,47,47,163,12,101,61.96,58,35.58,4,2.45,False
+Zejtun,South Eastern,54,54,150,10,99,66.0,39,26.0,12,8.0,False
+Victoria (Gozo),Gozo,53,53,135,11,85,62.96,39,28.89,11,8.15,False
+Bahar ic-Caghaq,Northern,59,59,134,10,101,75.37,22,16.42,11,8.21,False
+Mtarfa,Western,22,22,133,10,118,88.72,13,9.77,2,1.5,False
+Xewkija,Gozo,38,38,120,11,65,54.17,38,31.67,17,14.17,False
+Kalkara,Southern Harbour,25,25,116,8,85,73.28,22,18.97,9,7.76,False
+Vittoriosa,Southern Harbour,45,45,106,10,78,73.58,24,22.64,4,3.77,False
+Xaghra,Gozo,45,45,97,9,67,69.07,14,14.43,16,16.49,False
+Cospicua,Southern Harbour,49,47,94,11,57,60.64,28,29.79,9,9.57,False
+Lija,Western,56,56,78,9,51,65.38,19,24.36,8,10.26,False
+Tarxien,Southern Harbour,22,22,76,9,63,82.89,11,14.47,2,2.63,False
+Gzira,Northern Harbour,37,37,75,8,39,52.0,26,34.67,10,13.33,False
+St Julian's,Northern Harbour,40,40,72,9,26,36.11,40,55.56,6,8.33,False
+Gudja,South Eastern,21,21,59,9,46,77.97,8,13.56,5,8.47,False
+Marsalforn,Gozo,18,18,45,10,24,53.33,15,33.33,6,13.33,False
+Bugibba,Northern,12,12,38,9,30,78.95,8,21.05,0,0.0,False
+Paola,Southern Harbour,12,12,38,8,35,92.11,2,5.26,1,2.63,False
+Mgarr (Malta),Northern,18,18,37,7,24,64.86,9,24.32,4,10.81,False
+Santa Venera,Northern Harbour,12,12,36,6,25,69.44,9,25.0,2,5.56,False
+Xemxija,Northern,10,10,33,7,23,69.7,10,30.3,0,0.0,False
+Santa Lucija,Southern Harbour,11,11,32,8,27,84.38,2,6.25,3,9.38,False
+Zebbiegh,Northern,21,21,32,8,19,59.38,11,34.38,2,6.25,False
+Munxar,Gozo,21,21,29,7,9,31.03,17,58.62,3,10.34,True
+Birkirkara,Northern Harbour,6,6,18,5,7,38.89,10,55.56,1,5.56,True
+Mellieha,Northern,6,6,16,7,15,93.75,1,6.25,0,0.0,True
+Burmarrad,Northern,12,12,15,3,12,80.0,1,6.67,2,13.33,True
+Swieqi,Northern Harbour,2,2,6,4,4,66.67,2,33.33,0,0.0,True
+Marsaxlokk,South Eastern,6,6,6,3,1,16.67,2,33.33,3,50.0,True
+Xlendi,Gozo,3,3,6,4,3,50.0,3,50.0,0,0.0,True
+Hamrun,Northern Harbour,5,5,5,4,3,60.0,2,40.0,0,0.0,True

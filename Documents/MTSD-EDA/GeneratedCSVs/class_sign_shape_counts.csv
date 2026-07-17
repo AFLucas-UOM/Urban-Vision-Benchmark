@@ -1,0 +1,13 @@
+category_name,Circular,Quadrangle,Triangular,Octagonal,Pentagon,Damaged-Unknown
+Back-Unknown,2435,2093,1265,914,10,10
+Other-Unknown,860,427,1028,19,3,5
+No Entry (One Way),2197,4,0,1,4,8
+Blind-Spot Mirror (Convex Mirror),1647,3,0,0,0,0
+Pedestrian Crossing,7,1011,432,0,3,4
+Stop Sign,9,8,0,1321,0,0
+Auxiliary Sign,9,1288,1,0,1,1
+Directional Sign,447,314,1,0,363,1
+Street Sign,27,980,0,1,1,0
+Roundabout Ahead,593,2,206,2,0,0
+No Through Road (T-Junction),11,522,2,0,0,2
+Tourist Sign,0,29,0,0,4,0

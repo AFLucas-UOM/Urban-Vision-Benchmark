@@ -1,0 +1,4 @@
+attribute,value,value_kind,annotations,pct_of_annotations,images,pct_of_annotated_images,classes
+origin,manual,regular,20536,100.0,7490,100.0,12
+origin,(null value),null,0,0.0,0,0.0,0
+origin,(attribute absent),missing,0,0.0,0,0.0,0

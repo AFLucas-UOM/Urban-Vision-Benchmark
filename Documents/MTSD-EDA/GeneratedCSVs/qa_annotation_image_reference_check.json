@@ -1,0 +1,104 @@
+{
+  "summary": [
+    {
+      "group": "GRP-1",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "images": 724,
+      "annotations": 1960,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-2",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+      "images": 630,
+      "annotations": 1621,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-3",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "images": 617,
+      "annotations": 1844,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-4",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-4\\Final-QA\\QA-GRP4.json",
+      "images": 875,
+      "annotations": 2314,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-5",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "images": 657,
+      "annotations": 1841,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-6",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+      "images": 470,
+      "annotations": 1106,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-7",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "images": 710,
+      "annotations": 1891,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-8",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json",
+      "images": 703,
+      "annotations": 1869,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-9",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "images": 715,
+      "annotations": 2226,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-10",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "images": 779,
+      "annotations": 2335,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    },
+    {
+      "group": "GRP-11",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "images": 602,
+      "annotations": 1506,
+      "orphan_annotations": 0,
+      "missing_image_files": 0,
+      "duplicate_image_ids": 0
+    }
+  ],
+  "findings": []
+}
