@@ -13,6 +13,8 @@ from pathlib import Path
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 from matplotlib.colors import LinearSegmentedColormap
 
 from . import config
@@ -110,3 +112,56 @@ def style_h_barh(ax: plt.Axes) -> None:
     """Horizontal bar convention: no vertical grid noise, baseline on x."""
     ax.grid(axis="y", visible=False)
     ax.grid(axis="x", visible=True)
+
+
+def heatmap(
+    ax: plt.Axes,
+    matrix: pd.DataFrame,
+    *,
+    fmt: str = "{:,.0f}",
+    cbar_label: str = "",
+    annot: bool = True,
+    hide_zeros: bool = True,
+    annot_size: float = 8.0,
+    cmap=None,
+    vmin: float | None = None,
+    vmax: float | None = None,
+    row_flags: pd.Series | None = None,
+):
+    """Annotated matrix heatmap in the EDA style.
+
+    ``matrix`` rows/columns become y/x tick labels. ``row_flags`` (optional,
+    aligned with the rows) appends a marker to flagged row labels - used to
+    mark classes below the minimum-sample threshold. Returns the AxesImage
+    so callers can add further decoration.
+    """
+    data = matrix.to_numpy(dtype=float)
+    mesh = ax.imshow(data, cmap=cmap or BLUES_CMAP, aspect="auto", vmin=vmin, vmax=vmax)
+
+    row_labels = [str(label) for label in matrix.index]
+    if row_flags is not None:
+        row_labels = [
+            f"{label} *" if flagged else label
+            for label, flagged in zip(row_labels, row_flags)
+        ]
+    ax.set_xticks(range(matrix.shape[1]), [str(c) for c in matrix.columns],
+                  rotation=45, ha="right")
+    ax.set_yticks(range(matrix.shape[0]), row_labels)
+    ax.grid(False)
+
+    if annot:
+        finite = data[np.isfinite(data)]
+        threshold = finite.max() * 0.55 if finite.size and finite.max() > 0 else np.inf
+        for i in range(data.shape[0]):
+            for j in range(data.shape[1]):
+                value = data[i, j]
+                if not np.isfinite(value) or (hide_zeros and value == 0):
+                    continue
+                ax.text(j, i, fmt.format(value), ha="center", va="center",
+                        fontsize=annot_size,
+                        color=SURFACE if value > threshold else INK_SECONDARY)
+
+    cbar = ax.figure.colorbar(mesh, ax=ax, shrink=0.9, pad=0.015)
+    cbar.set_label(cbar_label, color=INK_SECONDARY)
+    cbar.outline.set_visible(False)
+    return mesh

@@ -1,15 +1,15 @@
 attribute,value,annotations
-view_angle,Front,2080
-view_angle,Back,1952
-view_angle,Side,1425
-mounting,Pole-Mounted,4850
-mounting,Wall-Mounted,607
-condition,Good,4126
-condition,Weathered,995
-condition,Heavily Damaged,332
-sign_shape,Circular,2439
-sign_shape,Quadrangle,1501
-sign_shape,Triangular,741
-sign_shape,Octagonal,654
-sign_shape,Pentagon,115
-sign_shape,Damaged-Unknown,4
+view_angle,Front,7989
+view_angle,Back,7437
+view_angle,Side,5110
+mounting,Pole-Mounted,17815
+mounting,Wall-Mounted,2721
+condition,Good,15264
+condition,Weathered,4048
+condition,Heavily Damaged,1224
+sign_shape,Circular,8242
+sign_shape,Quadrangle,6681
+sign_shape,Triangular,2935
+sign_shape,Octagonal,2258
+sign_shape,Pentagon,389
+sign_shape,Damaged-Unknown,31

@@ -18,6 +18,19 @@ from . import config
 
 ATTRIBUTE_KEYS = ("view_angle", "mounting", "condition", "sign_shape", "origin")
 
+# Reference value sets for the *quality checks only* — flagging values outside
+# the annotation schema. Distribution analyses never use these; they discover
+# the values present in the QA files at run time.
+EXPECTED_ATTRIBUTE_VALUES: dict[str, set[str]] = {
+    "view_angle": {"Front", "Back", "Side"},
+    "mounting": {"Pole-Mounted", "Wall-Mounted"},
+    "condition": {"Good", "Weathered", "Heavily Damaged"},
+    "sign_shape": {
+        "Circular", "Quadrangle", "Triangular", "Octagonal", "Pentagon", "Damaged-Unknown",
+    },
+    "origin": {"manual", "prediction"},
+}
+
 # COCO size convention (areas in squared pixels).
 COCO_SMALL_MAX = 32**2
 COCO_MEDIUM_MAX = 96**2
@@ -97,6 +110,11 @@ def load_qa_dataset(
                     "bbox_h": h,
                     "iscrowd": annotation.get("iscrowd", 0),
                     **{key: attributes.get(key) for key in ATTRIBUTE_KEYS},
+                    # keys entirely absent from the JSON (vs present-but-null),
+                    # so missing and null attributes can be reported separately
+                    "absent_attribute_keys": ",".join(
+                        key for key in ATTRIBUTE_KEYS if key not in attributes
+                    ),
                 }
             )
             next_annotation_uid += 1
@@ -145,14 +163,21 @@ def annotation_quality_report(
     images: pd.DataFrame,
     annotations: pd.DataFrame,
     inventory: pd.DataFrame | None = None,
+    categories: pd.DataFrame | None = None,
     boundary_tolerance: float = 1.0,
 ) -> dict[str, pd.DataFrame]:
     """Run consistency checks and return one DataFrame of offenders per check.
 
-    Checks: degenerate boxes, out-of-bounds boxes, sub-pixel-thin boxes,
-    duplicated boxes inside one image, orphan annotations, images without
-    annotations, missing auxiliary attributes, and (when an image inventory
-    is supplied) mismatches between the QA files and the images on disk.
+    Checks: degenerate boxes, negative-coordinate and out-of-bounds boxes,
+    sub-pixel-thin boxes, duplicated boxes inside one image, orphan
+    annotations, images without annotations, missing/null auxiliary
+    attributes, unexpected attribute values, and (when a category table or
+    an image inventory is supplied) invalid category ids, blank category
+    names, mismatches between the QA files and the images on disk, and
+    annotations whose source image cannot be resolved.
+
+    The report is strictly read-only: it never edits, removes, or repairs
+    annotations - corrections belong to the annotation-QA workflow.
     """
     report: dict[str, pd.DataFrame] = {}
     detail_columns = [
@@ -162,6 +187,9 @@ def annotation_quality_report(
 
     degenerate = annotations[(annotations["bbox_w"] <= 0) | (annotations["bbox_h"] <= 0)]
     report["degenerate_boxes"] = degenerate[detail_columns]
+
+    negative = annotations[(annotations["bbox_x"] < 0) | (annotations["bbox_y"] < 0)]
+    report["negative_coordinate_boxes"] = negative[detail_columns]
 
     out_of_bounds = annotations[
         (annotations["bbox_x"] < -boundary_tolerance)
@@ -198,6 +226,36 @@ def annotation_quality_report(
         ["annotation_uid", "image_uid", "category_name", *ATTRIBUTE_KEYS[:4]]
     ]
 
+    unexpected_rows: list[pd.DataFrame] = []
+    for key, expected in EXPECTED_ATTRIBUTE_VALUES.items():
+        bad = annotations[annotations[key].notna() & ~annotations[key].isin(expected)]
+        if len(bad):
+            unexpected_rows.append(
+                bad[["annotation_uid", "image_uid", "category_name"]]
+                .assign(attribute=key, value=bad[key].values)
+            )
+    report["unexpected_attribute_values"] = (
+        pd.concat(unexpected_rows, ignore_index=True)
+        if unexpected_rows
+        else pd.DataFrame(
+            columns=["annotation_uid", "image_uid", "category_name", "attribute", "value"]
+        )
+    )
+
+    if categories is not None:
+        known_ids = set(categories["category_id"])
+        invalid = annotations[
+            annotations["category_id"].isna()
+            | ~annotations["category_id"].isin(known_ids)
+        ]
+        report["invalid_category_ids"] = invalid[
+            ["annotation_uid", "image_uid", "category_id"]
+        ]
+        names = categories["category_name"]
+        report["missing_category_names"] = categories[
+            names.isna() | (names.astype(str).str.strip() == "")
+        ]
+
     if inventory is not None:
         annotated_groups = sorted(images["source_group"].unique())
         disk = inventory[inventory["group"].isin(annotated_groups)]
@@ -209,6 +267,18 @@ def annotation_quality_report(
         report["disk_images_missing_in_qa"] = disk[
             ~disk["filename"].isin(qa_names)
         ][["group", "filename", "relative_path"]]
+
+        # Annotations whose source image cannot be resolved: either an orphan
+        # (no QA image record) or a QA image record with no file on disk.
+        missing_uids = set(report["qa_entries_missing_on_disk"]["image_uid"])
+        unresolvable = annotations[
+            annotations["image_uid"].isna()
+            | ~annotations["image_uid"].isin(images["image_uid"])
+            | annotations["image_uid"].isin(missing_uids)
+        ]
+        report["unresolvable_annotations"] = unresolvable[
+            ["annotation_uid", "image_uid", "category_name"]
+        ]
 
     return report
 
@@ -234,5 +304,8 @@ def class_imbalance_metrics(annotations: pd.DataFrame) -> dict[str, float]:
         "gini_coefficient": round(gini, 4),
         "top1_share_pct": round(float(share.iloc[0]) * 100, 2),
         "top3_share_pct": round(float(cumulative.iloc[min(2, n - 1)]) * 100, 2),
+        "top5_share_pct": round(float(cumulative.iloc[min(4, n - 1)]) * 100, 2),
+        "top10_share_pct": round(float(cumulative.iloc[min(9, n - 1)]) * 100, 2),
         "classes_for_80pct": int((cumulative < 0.80).sum() + 1),
+        "classes_for_90pct": int((cumulative < 0.90).sum() + 1),
     }

@@ -1,13 +1,13 @@
-category_name,Back-Unknown,No Entry (One Way),Other-Unknown,Blind-Spot Mirror (Convex Mirror),Stop Sign,Auxiliary Sign,Pedestrian Crossing,Directional Sign,Street Sign,Roundabout Ahead,No Through Road (T-Junction),Tourist Sign
-Back-Unknown,961,229,233,131,156,140,122,137,141,100,25,5
-No Entry (One Way),229,522,80,63,58,61,29,67,86,15,3,3
-Other-Unknown,233,80,428,62,105,118,99,99,57,142,18,0
-Blind-Spot Mirror (Convex Mirror),131,63,62,437,44,45,15,29,48,10,3,2
-Stop Sign,156,58,105,44,380,52,22,49,60,12,5,1
-Auxiliary Sign,140,61,118,45,52,226,72,43,21,45,12,0
-Pedestrian Crossing,122,29,99,15,22,72,229,51,14,46,4,0
-Directional Sign,137,67,99,29,49,43,51,206,12,69,5,4
-Street Sign,141,86,57,48,60,21,14,12,262,13,35,1
-Roundabout Ahead,100,15,142,10,12,45,46,69,13,170,4,0
-No Through Road (T-Junction),25,3,18,3,5,12,4,5,35,4,136,2
-Tourist Sign,5,3,0,2,1,0,0,4,1,0,2,6
+category_name,Back-Unknown,Other-Unknown,No Entry (One Way),Blind-Spot Mirror (Convex Mirror),Pedestrian Crossing,Stop Sign,Auxiliary Sign,Directional Sign,Street Sign,Roundabout Ahead,No Through Road (T-Junction),Tourist Sign
+Back-Unknown,3703,924,824,465,568,543,549,492,498,353,99,11
+Other-Unknown,924,1680,315,231,412,340,452,417,206,506,65,8
+No Entry (One Way),824,315,1849,184,114,170,192,168,256,50,38,3
+Blind-Spot Mirror (Convex Mirror),465,231,184,1465,93,136,167,148,180,37,36,5
+Pedestrian Crossing,568,412,114,93,1140,109,406,223,86,211,10,6
+Stop Sign,543,340,170,136,109,1280,180,145,230,41,31,7
+Auxiliary Sign,549,452,192,167,406,180,993,206,101,247,38,4
+Directional Sign,492,417,168,148,223,145,206,773,82,260,24,11
+Street Sign,498,206,256,180,86,230,101,82,938,48,122,3
+Roundabout Ahead,353,506,50,37,211,41,247,260,48,656,9,7
+No Through Road (T-Junction),99,65,38,36,10,31,38,24,122,9,518,2
+Tourist Sign,11,8,3,5,6,7,4,11,3,7,2,23

@@ -1,0 +1,13 @@
+category_name,small (<32² px),medium (32²-96² px),large (>96² px)
+Back-Unknown,615,1776,4336
+Other-Unknown,327,730,1285
+No Entry (One Way),238,384,1592
+Blind-Spot Mirror (Convex Mirror),73,218,1359
+Pedestrian Crossing,162,363,932
+Stop Sign,80,131,1127
+Auxiliary Sign,244,447,609
+Directional Sign,177,487,462
+Street Sign,123,272,614
+Roundabout Ahead,76,160,567
+No Through Road (T-Junction),7,43,487
+Tourist Sign,1,9,23

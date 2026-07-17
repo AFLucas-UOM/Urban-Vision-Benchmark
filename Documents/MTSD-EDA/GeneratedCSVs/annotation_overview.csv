@@ -1,0 +1,16 @@
+Metric,Value,Unit
+QA annotation files processed,11,files
+MTSD groups represented,11,groups
+Images listed in QA exports,"7,492",images
+Annotated images,"7,490 (100.0%)",images
+Images without annotations,2 (0.0%),images
+Total annotations (bounding boxes),"20,536",annotations
+Traffic-sign classes in label map,12,classes
+Classes observed in annotations,12,classes
+Annotations per image (all QA images),"mean 2.741, median 2, std 2.563, min 0, q25 1, q75 3, max 24",annotations/image
+Annotations per image (annotated images only),"mean 2.742, median 2, std 2.562, min 1, q25 1, q75 3, max 24",annotations/image
+Images with 0 signs,2 (0.03%),images
+Images with 1 sign,"2,811 (37.52%)",images
+Images with 2 signs,"2,078 (27.74%)",images
+Images with 3 signs,987 (13.17%),images
+Images with >3 signs,"1,614 (21.54%)",images

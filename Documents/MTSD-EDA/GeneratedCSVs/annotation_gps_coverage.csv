@@ -1,0 +1,7 @@
+Metric,Value,Unit
+Annotated images,"7,490",images
+Annotated images with valid GPS,"4,226 (56.4%)",images
+Annotated images without usable GPS,"3,264 (43.6%)",images
+  of which GPS present but outside Malta bounds,0,images
+Annotations in geographic analysis,"11,339 (55.2%)",annotations
+Annotations excluded (no valid GPS),"9,197 (44.8%)",annotations

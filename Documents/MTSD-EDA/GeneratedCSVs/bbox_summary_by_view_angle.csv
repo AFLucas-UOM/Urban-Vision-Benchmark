@@ -1,0 +1,4 @@
+view_angle,annotations,median_bbox_w_px,median_bbox_h_px,median_aspect_w_h,median_rel_width,median_rel_height,median_rel_area_pct,mean_rel_area_pct,pct_small,pct_medium,pct_large
+Front,7989,163.3,168.8,1.017,0.0625,0.0477,0.2908,4.3338,13.48,26.9,59.62
+Side,5110,235.9,688.8,0.457,0.0899,0.1858,1.855,3.99,7.38,17.63,74.99
+Back,7437,209.7,326.4,0.937,0.0863,0.0952,0.9155,5.0461,9.0,26.49,64.52

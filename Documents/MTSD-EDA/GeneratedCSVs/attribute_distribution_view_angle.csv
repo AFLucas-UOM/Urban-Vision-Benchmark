@@ -1,0 +1,6 @@
+attribute,value,value_kind,annotations,pct_of_annotations,images,pct_of_annotated_images,classes
+view_angle,Front,regular,7989,38.9,4121,55.02,12
+view_angle,Side,regular,5110,24.88,3651,48.74,12
+view_angle,Back,regular,7437,36.21,4021,53.68,7
+view_angle,(null value),null,0,0.0,0,0.0,0
+view_angle,(attribute absent),missing,0,0.0,0,0.0,0

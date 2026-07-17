@@ -1,0 +1,10 @@
+metric,value
+num_classes,12.0
+imbalance_ratio,203.84848484848484
+gini_coefficient,0.422
+top1_share_pct,32.76
+top3_share_pct,54.94
+top5_share_pct,70.07
+top10_share_pct,97.22
+classes_for_80pct,7.0
+classes_for_90pct,9.0

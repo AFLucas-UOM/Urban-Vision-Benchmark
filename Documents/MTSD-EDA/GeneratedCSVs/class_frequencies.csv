@@ -1,13 +1,13 @@
 category_name,annotations,share_pct
-Back-Unknown,1740,31.89
-No Entry (One Way),642,11.76
-Other-Unknown,635,11.64
-Blind-Spot Mirror (Convex Mirror),526,9.64
-Stop Sign,402,7.37
-Auxiliary Sign,308,5.64
-Pedestrian Crossing,287,5.26
-Directional Sign,282,5.17
-Street Sign,277,5.08
-Roundabout Ahead,203,3.72
-No Through Road (T-Junction),141,2.58
-Tourist Sign,14,0.26
+Back-Unknown,6727,32.76
+Other-Unknown,2342,11.4
+No Entry (One Way),2214,10.78
+Blind-Spot Mirror (Convex Mirror),1650,8.03
+Pedestrian Crossing,1457,7.09
+Stop Sign,1338,6.52
+Auxiliary Sign,1300,6.33
+Directional Sign,1126,5.48
+Street Sign,1009,4.91
+Roundabout Ahead,803,3.91
+No Through Road (T-Junction),537,2.61
+Tourist Sign,33,0.16

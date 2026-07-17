@@ -1,0 +1,9 @@
+attribute,value,value_kind,annotations,pct_of_annotations,images,pct_of_annotated_images,classes
+sign_shape,Circular,regular,8242,40.13,5125,68.42,11
+sign_shape,Quadrangle,regular,6681,32.53,3904,52.12,12
+sign_shape,Triangular,regular,2935,14.29,1816,24.25,7
+sign_shape,Octagonal,regular,2258,11.0,2121,28.32,6
+sign_shape,Pentagon,regular,389,1.89,270,3.6,8
+sign_shape,Damaged-Unknown,fallback,31,0.15,30,0.4,7
+sign_shape,(null value),null,0,0.0,0,0.0,0
+sign_shape,(attribute absent),missing,0,0.0,0,0.0,0
