@@ -106,6 +106,7 @@ Scripts/MTSD-Scripts/AttributeClassification/
   run_all.py                 manifest update + selected variants/profile + reports
   reset_outputs.py           archive/delete generated outputs for a fresh rerun
   inference/gradio_compare.py  side-by-side checkpoint inference UI
+                             (--port / --no-browser for launcher management)
   tests/                     non-training validation (mocked backbones, profiles,
                              gradient accumulation, reports, plan safety)
   outputs/

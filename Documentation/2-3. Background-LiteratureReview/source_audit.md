@@ -176,3 +176,10 @@ Status column: PR = peer-reviewed; PP = preprint; OD = official documentation / 
 6. **Corporate-author entries** (`meta2025sam3`, NVIDIA entries, DINOv3 "others") must be expanded to full author lists before submission; arXiv pages provide them.
 7. **Entries flagged M** (temel2020traffic, balali2015detection, lu2022computer, cheng2023towards, chen2024lwdetr, wang2022pedestrian, han2024parameter, rad2017computer page range) need a bibliographic re-check before the final bibliography is frozen.
 8. `transport2025masterplan` is in the .bib but currently uncited — remove or cite at final pass.
+
+## Revision 2026-07-16 (commit 2d70be27) — sources added
+
+| Key | Title / description | Year | Type | Ver. | Used in | Supports |
+|---|---|---|---|---|---|---|
+| `fu2026lingbot` | LingBot-Vision: Vision Pretraining for Dense Spatial Perception (Robbyant/Ant Group tech report + HF model cards vit-base/vit-large + GitHub) | 2026 | NPR/OD | W (model card verified 16 July 2026; tech report listed as forthcoming) | LR §LingBot; BG §7; Methodology attribute track | Masked boundary modelling objective; teacher–student with semantic self-distillation + categorical boundary-field guidance; ViT-S/B/L/g at patch 16; recommended frozen normalised patch-token readout. Architecture details (RoPE, 4 register tokens, 512 px global crops, embed dims 768/1024) additionally verified from the installed pinned package configs. |
+The `fu2026lingbot` key was added to `background_literature_references.bib`.

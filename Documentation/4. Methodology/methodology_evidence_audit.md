@@ -53,3 +53,19 @@ Every claim in `methodology.tex` traces to one of the artefacts below, ranked by
 8. **MDWD annotation platform/protocol detail** (reviewer counts, the "~20% visible-object rule"). No repository artefact documents the 20% rule; EUVIP PDF unavailable in workspace. **Excluded from the chapter**; placeholders cover collection period/devices.
 9. **YOLO11l/YOLO26l on MDWD** exist in the archives, but the task brief's final matrix for MDWD lists n/s/m (+26l). The chapter's matrix table follows the brief's final matrix (11 YOLO rows incl. 26l + 3 RF-DETR); the extra archived scale is simply not claimed.
 10. **Summary.md staleness** (five-group counts, 3,098/8,372) superseded by direct QA JSON counts (six groups on disk, 3,808/10,263) — Summary not used for these numbers.
+
+## Revision 2026-07-16/17 (commit 2d70be27) — new/updated claims
+
+| Claim in chapter | Evidence (tier) | Notes |
+|---|---|---|
+| LingBot-Vision identifiers, loader, pooling, RoPE/register/512 px facts, frozen+LoRA-only support | `mtsd_attr/backbones/lingbot_backbone.py` + installed pinned `lingbot_vision` package configs (tier 4) + official HF model card (primary source, accessed 16 July 2026) | embed dims verified by loader probe; pretraining objective (masked boundary modelling) from the model card |
+| 16-variant matrix completed 2026-07-13; per-variant total/trainable params; backends | `outputs/reports/size_ablation.csv` + `size_ablation.md` + `outputs/experiment_log.jsonl` (tier 5, run artefacts) | real runs, not smoke; every variant has best.pt/last.pt + test metrics |
+| Snapshot scope 8 groups / 13,862 crops (11,025/1,397/1,440) | `outputs/manifests/manifest.json` updated_at 2026-07-13T20:45:29Z (tier 2) | GRP-10/11 QA arrived after training; pending auto-ingest flagged as a research decision |
+| Gradient accumulation 16×2 for ViT-L LoRA + ConvNeXt-Large FT; effective batch 32 | `config/default.yaml` training_overrides (tier 6) + `train_common.py` accumulation loop (tier 4) | |
+| V-JEPA 2.1 version-strict loading (no 2.0 fallback for vjepa21_*) | `vjepa_backbone.py` allow_backend_fallback (tier 4) | |
+
+### Conflict status updates
+
+- Conflict 4 (QA gate): still open; fresh audit 2026-07-16 over all 10 Final-QA groups: 30 invalid values (all Damaged-Unknown shapes) + 18 duplicate candidates. Gate refresh (`update_qa_gate.py --apply`) must follow findings resolution — never precede it.
+- Conflict 5 (Prepared/ missing): still open.
+- NEW: attribute crop manifest auto-ingests newly QA'd groups; completed 16-variant matrix is an 8-group snapshot. Chapter now states the snapshot explicitly; final-scope re-run is a pending research decision.

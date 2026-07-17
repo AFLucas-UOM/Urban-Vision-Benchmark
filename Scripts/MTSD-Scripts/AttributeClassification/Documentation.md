@@ -18,9 +18,11 @@ The experiment predicts four attributes jointly:
 The design is multi-task and multi-head: one image crop is passed through one backbone network, and the resulting feature vector is sent to four independent classification heads. Each head predicts one attribute. This is appropriate because the four labels describe different properties of the same traffic-sign instance, and sharing the visual representation avoids training four unrelated models over the same image data.
 
 The **historical completed comparison** (GRP-1–GRP-3 snapshot) contains six
-variants spanning three adaptation modes; a 16-variant model-size ablation has
-since been added on top (Section 1a) without touching these six or their
-outputs:
+variants spanning three adaptation modes; the 16-variant model-size ablation
+added on top (Section 1a) **completed its real (non-smoke) runs on
+2026-07-13** against the eight-group snapshot (GRP-1–3, 5–9; 13,862 crops) —
+see `outputs/reports/size_ablation.{csv,md}` — without touching these six or
+their outputs:
 
 | Variant | Backbone | Training regime | Input size | Feature dim |
 |---|---|---|---:|---:|
@@ -628,8 +630,10 @@ one pretraining family is universally superior.
 The hardest attribute is `condition`. All models show substantially lower macro-F1 for `condition` than for the other attributes. This is expected because condition labels are both imbalanced and visually subtle. `Heavily Damaged` has only 30 labelled test examples, and performance on this class is limited even for ConvNeXt.
 
 The easiest attribute is generally `sign_shape`, while `condition` remains the
-weakest head across all six variants. Shape is a strong geometric signal preserved
-by square padding; condition is both visually subtle and imbalanced.
+weakest head across all six variants of this historical round (the same pattern
+holds across the 16-variant size ablation; see `outputs/reports/size_ablation.md`).
+Shape is a strong geometric signal preserved by square padding; condition is
+both visually subtle and imbalanced.
 
 ## 12. Correctness Review
 

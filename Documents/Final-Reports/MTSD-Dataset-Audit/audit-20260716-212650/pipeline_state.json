@@ -1,0 +1,173 @@
+{
+  "generated_at": "2026-07-16T19:26:40+00:00",
+  "read_only": true,
+  "blockers": [
+    "Final-QA groups outside approved scope (need audit + gate refresh, never auto-approval): ['GRP-7', 'GRP-8', 'GRP-9', 'GRP-10', 'GRP-11']",
+    "QA gate is unresolved; outstanding findings in newest audit: {'invalid_attribute_values': 30, 'duplicate_candidates': 18}; unaudited groups: none"
+  ],
+  "warnings": [
+    "Attribute manifest auto-discovers groups: the next manifest refresh/training run will ingest ['GRP-10', 'GRP-11'], changing the dataset under the completed size-ablation runs (trained on ['GRP-1', 'GRP-2', 'GRP-3', 'GRP-5', 'GRP-6', 'GRP-7', 'GRP-8', 'GRP-9']). Decide the final attribute scope explicitly before any further attribute training.",
+    "No prepared MTSD dataset exists yet (Datasets/MTSD/Prepared). Prompt-based MTSD evaluation and supervised training wait on final preparation."
+  ],
+  "discovery": {
+    "valid_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "invalid_groups": {},
+    "groups_without_final_qa": [
+      "GRP-4"
+    ]
+  },
+  "vocabulary_consistent": true,
+  "expected_class_names": [
+    "Pedestrian Crossing",
+    "Stop Sign",
+    "No Entry (One Way)",
+    "Roundabout Ahead",
+    "No Through Road (T-Junction)",
+    "Blind-Spot Mirror (Convex Mirror)",
+    "Street Sign",
+    "Directional Sign",
+    "Tourist Sign",
+    "Auxiliary Sign",
+    "Back-Unknown",
+    "Other-Unknown"
+  ],
+  "sampled_image_existence": {
+    "GRP-1": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-2": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-3": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-5": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-6": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-7": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-8": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-9": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-10": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-11": {
+      "sampled": 5,
+      "missing": []
+    }
+  },
+  "scope": {
+    "approved_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-5",
+      "GRP-6"
+    ],
+    "discovered_valid_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "pending_unapproved_groups": [
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "approved_but_missing_groups": [],
+    "unexpected_group_policy": "fail"
+  },
+  "qa_gate": {
+    "resolution_status": "unresolved",
+    "gate_audit_path": "Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-20260709-201340",
+    "gate_audited_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-5"
+    ],
+    "newest_audit_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Scripts\\MTSD-Scripts\\MTSD-AnnotationQA\\outputs\\audit-20260716-212105",
+    "newest_audit_timestamp": "2026-07-16T21:21:05",
+    "newest_audit_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "outstanding_findings": {
+      "invalid_attribute_values": 30,
+      "duplicate_candidates": 18
+    },
+    "unaudited_discovered_groups": []
+  },
+  "attribute_manifest": {
+    "ingested_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9"
+    ],
+    "updated_at": "2026-07-13T20:45:29+00:00",
+    "split_sizes": {
+      "train": 11025,
+      "val": 1397,
+      "test": 1440
+    },
+    "groups_pending_auto_ingest": [
+      "GRP-10",
+      "GRP-11"
+    ],
+    "split_policy": "per-source-image salted hash (mtsd-attr-split-v1); crops of one photo share one split by construction"
+  },
+  "prepared": {
+    "present": false
+  },
+  "ready_for_final_preparation": false
+}

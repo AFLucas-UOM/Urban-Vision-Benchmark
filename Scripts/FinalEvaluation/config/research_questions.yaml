@@ -56,21 +56,27 @@ questions:
   - id: RQ3
     question: >
       Which adaptation strategy (frozen linear probe, LoRA, full fine-tuning)
-      over which pretrained backbone (DINOv3, V-JEPA 2.1, ConvNeXt) best
-      supports multi-attribute traffic-sign condition assessment?
+      and model size over which pretrained backbone family (DINOv3, V-JEPA 2.1,
+      ConvNeXt, LingBot-Vision) best supports multi-attribute traffic-sign
+      condition assessment?
     datasets: [MTSD]
     experiments:
-      - "Six-variant attribute-classification round (AttributeClassification/outputs)"
+      - "16-variant size/adaptation matrix, completed 2026-07-13 on the eight-group snapshot (AttributeClassification/outputs/reports/size_ablation.{csv,md})"
+      - "Historical six-variant round, GRP-1..GRP-3 snapshot (AttributeClassification/outputs, comparison.{csv,md})"
     tables:
       - "Documents/Final-Tables (mtsd_attribute_results.csv)"
+      - "AttributeClassification/outputs/reports/size_ablation.csv"
     figures:
       - "AttributeClassification/outputs/reports/comparison_macro_f1.png"
       - "Documents/Final-Figures/Robustness-Slices (per-head / condition figures)"
-    status: historical snapshot
+    status: size-ablation matrix completed on the eight-group snapshot
     limitations: >
-      Valid for the recorded GRP-1..GRP-3 manifest snapshot only; a final-scope
-      round is deferred until the MTSD annotation scope is frozen. The
-      condition head is the weakest (class imbalance).
+      The 16-variant matrix is valid for the recorded eight-group manifest
+      snapshot (GRP-1..GRP-3, GRP-5..GRP-9, 13,862 crops); GRP-10/11 Final-QA
+      arrived after training, so a final-scope decision (freeze the snapshot
+      vs re-run) is pending the annotation freeze. The historical six-variant
+      round remains a GRP-1..GRP-3 snapshot. The condition head is the weakest
+      (class imbalance).
 
   - id: RQ4
     question: >

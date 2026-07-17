@@ -101,5 +101,6 @@ desktop.ini
 .vscode/
 .idea/
 .claude/
-# Local UVB launcher state (reserved for future opt-in recent-launch history)
+# Local UVB launcher state (managed web-app PIDs) and per-app startup logs
 .uvb_launcher_state.json
+.uvb_launcher_logs/

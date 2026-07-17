@@ -108,17 +108,31 @@ function Split-Arguments([string]$Text) {
     ([regex]::Matches($Text, $pattern) | ForEach-Object { $_.Value.Trim('"').Trim("'") })
 }
 
-function Invoke-Logged([string]$Exe, [string[]]$Arguments, [string]$LogPath, [string]$WorkDir) {
+function Invoke-Logged([string]$Exe, [string[]]$Arguments, [string]$LogPath, [string]$WorkDir,
+                       [string]$EnvName = "", [bool]$NoUserSite = $false) {
     Write-Host "  exe : $Exe"
     Write-Host "  args: $($Arguments -join ' ')"
+    Write-Host "  cwd : $WorkDir"
+    if ($EnvName)    { Write-Host "  env : $EnvName" }
+    if ($NoUserSite) { Write-Host "  site: PYTHONNOUSERSITE=1 (python -s)" }
     Write-Host "  log : $LogPath"
-    "=== $(Get-Date -Format o) | $Exe $($Arguments -join ' ')" | Out-File $LogPath -Encoding utf8
+    "=== $(Get-Date -Format o)" | Out-File $LogPath -Encoding utf8
+    "exe : $Exe"                 | Out-File $LogPath -Append -Encoding utf8
+    "args: $($Arguments -join ' ')" | Out-File $LogPath -Append -Encoding utf8
+    "cwd : $WorkDir"             | Out-File $LogPath -Append -Encoding utf8
+    "env : $EnvName"             | Out-File $LogPath -Append -Encoding utf8
+    "PYTHONNOUSERSITE: $(if ($NoUserSite) { '1' } else { '(unset)' })" | Out-File $LogPath -Append -Encoding utf8
     Push-Location $WorkDir
+    $previousNoUserSite = $env:PYTHONNOUSERSITE
     try {
+        if ($NoUserSite) { $env:PYTHONNOUSERSITE = "1" }
         # 2>&1 merges stderr; Tee keeps live console output while logging.
         & $Exe @Arguments 2>&1 | Tee-Object -FilePath $LogPath -Append
         $code = $LASTEXITCODE
-    } finally { Pop-Location }
+    } finally {
+        $env:PYTHONNOUSERSITE = $previousNoUserSite
+        Pop-Location
+    }
     "=== exit code: $code | $(Get-Date -Format o)" | Out-File $LogPath -Append -Encoding utf8
     if ($code -ne 0) { throw "Target exited with code $code (log: $LogPath)" }
     Write-Host "  OK (exit 0)" -ForegroundColor Green
@@ -158,14 +172,18 @@ function Invoke-Target([string]$Name) {
         if ($t.type -eq "notebook") {
             Write-Host "  would execute notebook to: $ExecutedDir\$Name-$stamp.ipynb (papermill or nbconvert, timeout $TimeoutMinutes min/cell)"
         } else {
-            Write-Host "  would run: $python $scriptPath $($effectiveArgs -join ' ')"
+            $siteFlag = if ([bool]$t.PSObject.Properties['noUserSite'] -and [bool]$t.noUserSite) { "-s " } else { "" }
+            Write-Host "  would run: $python $siteFlag$scriptPath $($effectiveArgs -join ' ')"
+            if ($siteFlag) { Write-Host "  with PYTHONNOUSERSITE=1 (user-site packages disabled)" }
         }
         if ($t.training) { Write-Host "  NOTE: training target - requires -AllowTraining for a real run." -ForegroundColor Yellow }
         return
     }
 
     if ($t.type -eq "python") {
-        Invoke-Logged $python (@($scriptPath) + $effectiveArgs) $logPath $RepoRoot
+        $noUserSite = [bool]$t.PSObject.Properties['noUserSite'] -and [bool]$t.noUserSite
+        $pythonArgs = if ($noUserSite) { @("-s", $scriptPath) } else { @($scriptPath) }
+        Invoke-Logged $python ($pythonArgs + $effectiveArgs) $logPath $RepoRoot $t.env $noUserSite
         return
     }
 
@@ -177,7 +195,7 @@ function Invoke-Target([string]$Name) {
     if ($LASTEXITCODE -eq 0) {
         $nbArgs = @("-m", "papermill", $scriptPath, $outNotebook,
                     "--execution-timeout", "$timeoutSeconds", "--cwd", (Split-Path $scriptPath))
-        Invoke-Logged $python $nbArgs $logPath $RepoRoot
+        Invoke-Logged $python $nbArgs $logPath $RepoRoot $t.env
     } else {
         & $python -m jupyter nbconvert --version *> $null
         if ($LASTEXITCODE -ne 0) {
@@ -187,7 +205,7 @@ function Invoke-Target([string]$Name) {
         $nbArgs = @("-m", "jupyter", "nbconvert", "--to", "notebook", "--execute", $scriptPath,
                     "--output", (Split-Path $outNotebook -Leaf), "--output-dir", $ExecutedDir,
                     "--ExecutePreprocessor.timeout=$timeoutSeconds")
-        Invoke-Logged $python $nbArgs $logPath (Split-Path $scriptPath)
+        Invoke-Logged $python $nbArgs $logPath (Split-Path $scriptPath) $t.env
     }
     Write-Host "  executed copy: $outNotebook (source notebook untouched)"
 }

@@ -28,8 +28,8 @@ def _snapshot(path):
 
 def test_plan_is_read_only_and_lists_all_16_variants():
     manifest_before = _snapshot(MANIFEST)
-    new_ckpt_dir = SUBPROJECT / "outputs" / "checkpoints" / "dinov3_vitl_frozen"
-    assert not new_ckpt_dir.exists()
+    ckpt_root = SUBPROJECT / "outputs" / "checkpoints"
+    ckpt_dirs_before = {p.name for p in ckpt_root.iterdir()} if ckpt_root.exists() else set()
 
     result = _run(["run_all.py", "--plan", "--profile", "size_ablation_all"])
     assert result.returncode == 0, result.stderr
@@ -42,9 +42,10 @@ def test_plan_is_read_only_and_lists_all_16_variants():
     assert "vjepa2_1_vit_base_384" in result.stdout
     assert "robbyant/lingbot-vision-vit-large" in result.stdout
 
-    # No manifest refresh, no checkpoint dirs, no W&B init.
+    # No manifest refresh, no new checkpoint dirs, no W&B init.
     assert _snapshot(MANIFEST) == manifest_before
-    assert not new_ckpt_dir.exists()
+    ckpt_dirs_after = {p.name for p in ckpt_root.iterdir()} if ckpt_root.exists() else set()
+    assert ckpt_dirs_after == ckpt_dirs_before
     assert "wandb" not in result.stdout.lower()
 
 

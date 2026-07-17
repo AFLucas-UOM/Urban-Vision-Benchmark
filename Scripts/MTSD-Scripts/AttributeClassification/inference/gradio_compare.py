@@ -817,6 +817,22 @@ def build_demo():
     return demo
 
 
+def parse_args():
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description="Side-by-side MTSD attribute-classifier checkpoint comparison "
+                    "(DINOv3, V-JEPA 2.1, ConvNeXt, LingBot-Vision)")
+    parser.add_argument("--host", default="127.0.0.1", help="Bind address")
+    parser.add_argument("--port", type=int, default=7860, help="Server port")
+    parser.add_argument("--no-browser", action="store_true",
+                        help="Do not open a browser tab (the UVB launcher opens one after readiness)")
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
+    args = parse_args()
     demo = build_demo()
-    demo.launch(theme=getattr(demo, "theme", None), css=getattr(demo, "css", None))
+    demo.launch(server_name=args.host, server_port=args.port,
+                inbrowser=not args.no_browser,
+                theme=getattr(demo, "theme", None), css=getattr(demo, "css", None))

@@ -330,13 +330,31 @@ python launch_uvb.py --dry-run
 python launch_uvb.py promptdetect
 ```
 
-The menu is grouped into model/inference UIs, annotation/QA, dataset analysis,
-evaluation, maintenance, and documentation. It detects the repository root
-from the launcher location, checks ports before localhost apps, uses `conda run`
-for the documented `MDWD`, `mtsd-attrcls`, `mtsd-base`, and `mtsd-la` environments,
-and opens supported Gradio URLs in the browser. If Conda is missing, model UIs
-are refused with an actionable warning; safe commands may use the current
-Python interpreter. Heavy model tools require an explicit confirmation.
+The menu is grouped into local web applications, annotation/QA, dataset
+analysis, evaluation, maintenance, and documentation. It detects the
+repository root from the launcher location and uses `conda run` for the
+documented `MDWD`, `mtsd-attrcls`, `mtsd-base`, and `mtsd-la` environments.
+If Conda is missing, local web applications are refused with an actionable
+warning; safe commands may use the current Python interpreter. Heavy model
+tools require an explicit confirmation.
+
+**Local web applications are managed processes.** The launcher starts each
+app in its own process group, polls the local HTTP port until the server is
+actually ready (configurable `--ready-timeout`; no fixed sleep), and opens
+the browser only after a successful start — a failed or timed-out startup
+opens no tab and prints the app's log tail. Closing a browser tab does NOT
+stop the server (that cannot be detected reliably); instead the main menu
+shows a *Running local web applications* entry from which each app can be
+reopened in the browser, restarted, or stopped. Stopping, `Ctrl+C`, menu
+quit and errors all terminate the app's complete launcher-owned process
+tree (including `conda run` intermediaries and the LocateAnything worker).
+If the same app is already running, the launcher offers reopen/restart/stop
+instead of launching a duplicate; if an unrelated process owns the port, the
+launcher reports it and either picks a verified free port (all managed apps
+accept `--port`) or refuses — it never terminates a process it did not
+start. Per-app startup logs live under `.uvb_launcher_logs/`; leftover PIDs
+from a crashed session are re-verified against their recorded command line
+before the launcher ever offers to stop them.
 
 Navigate the interactive menu with **Up/Down** arrows and **Enter**. Use
 **Esc** or **Backspace** to return, `/` to search by tool name or purpose, and
@@ -346,13 +364,14 @@ arrow keys are inconvenient.
 The launcher never starts training, never auto-applies annotation fixes, never
 deletes anything, and never opens or modifies `label_studio.sqlite3`. The Label
 Studio menu item prints the documented workflow because the existing startup
-script can stop a port-8080 process and writes local Label Studio state. Stop
-localhost applications with `Ctrl+C` in their visible terminal.
+script can stop a port-8080 process and writes local Label Studio state.
 
 To add a tool, add one `Tool(...)` entry to `TOOLS` in `launch_uvb.py`: use a
 repository-relative script path, working directory, environment, safe default
-arguments, and a port only when the target supports it. Keep mutating or heavy
-commands behind `confirm=True` and prefer their documented dry-run flags.
+arguments, and — for a local web application — a port, a `--port`-style
+`port_arg` and a `no_browser_arg` so the launcher can manage it. Keep
+mutating or heavy commands behind `confirm=True` and prefer their documented
+dry-run flags. Launcher lifecycle tests live in `tests/test_launch_uvb.py`.
 
 ### Environments (conda, recommended)
 
