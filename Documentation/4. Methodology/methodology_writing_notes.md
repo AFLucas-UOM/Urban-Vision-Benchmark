@@ -11,15 +11,15 @@ Fill each from the named final artefact once it exists. Search the .tex for `\TB
 | `mdwd-collection-period` | MDWD capture date range | EUVIP paper / collection log (not in repo) |
 | `mdwd-capture-devices` | MDWD capture devices | EUVIP paper / collection log |
 | `mtsd-collection-period` | MTSD capture date range (11 groups) | final MTSD EDA `temporal_summary.csv` |
-| `mtsd-final-annotated-images` (×2) | final annotated-image total | final `QA-GRP*.json` count over 11 groups |
-| `mtsd-final-instances` (×2) | final instance total | same |
+| `mtsd-imgs-final` (×2; renamed from `mtsd-final-annotated-images` 2026-07-17 for table width) | final annotated-image total | final `QA-GRP*.json` count over 11 groups |
+| `mtsd-inst-final` (×2; renamed from `mtsd-final-instances`) | final instance total | same |
 | `mtsd-final-exif-coverage` / `mtsd-final-gps-coverage` | EXIF/GPS coverage % | final EDA `gps_tag_audit.csv` / EXIF summary |
 | `grp4-img`, `grp4-inst`, `grp8-*`, `grp9-*`, `grp10-*`, `grp11-*` | per-group annotated images/instances | final Final-QA JSONs for GRP-4/8/9/10/11 |
 | `cls-*` (12 counts + 12 pct) | final detection-class distribution | regenerated final EDA `class_frequencies.csv` |
 | `va-*`, `mt-*`, `cond-*`, `sh-*` (13 values) | final attribute distribution | regenerated final EDA `attribute_summary.csv` |
 | `mtsd-prepared-train`, `-train-aug`, `-valid`, `-test` | prepared split sizes | prepared-dataset manifest (`Datasets/MTSD/Prepared/.../manifest`) ; note train-aug = 3 × train under copies_per_image: 2 |
 | `attr-final-crops` | final crop-manifest size | refreshed `outputs/manifests/manifest.json` |
-| `rfdetr-n-params`, `rfdetr-s-params`, `rfdetr-m-params` | RF-DETR parameter counts | runtime introspection of final checkpoints (`sum(p.numel())`) |
+| `rfdetr-n`, `rfdetr-s`, `rfdetr-m` (renamed from `rfdetr-*-params`) | RF-DETR parameter counts | runtime introspection of final checkpoints (`sum(p.numel())`) |
 
 Known already-annotated groups were entered as fixed values (GRP-1: 724/1,960; GRP-2: 630/1,621; GRP-3: 617/1,844; GRP-5: 657/1,841; GRP-6: 470/1,106; GRP-7: 710/1,891) — re-verify these do not change during the final QA-resolution pass (duplicate deletions would lower instance counts slightly).
 
@@ -66,3 +66,15 @@ The chapter is written past-tense per the drafting instruction. At commit `cee7d
 2. Whether GRP-4/8–11 annotation will genuinely complete (otherwise this chapter must be rewritten to the actual final scope — the placeholders make the rewrite mechanical).
 3. Whether YOLO26l stays in the ablation (config lists it as optional; chapter includes it only in the matrix, not the ablation trio).
 4. Whether the MDWD collection-details placeholders are filled from the EUVIP paper or dropped.
+
+## Revision 2026-07-16/17 (commit 2d70be27)
+
+Chapter revised for the current attribute-classification state:
+
+1. **Four backbone families.** LingBot-Vision (robbyant/lingbot-vision-vit-base / -vit-large, official `lingbot_vision` loader pinned to upstream commit `151e4632`) added alongside DINOv3, V-JEPA 2.1 and ConvNeXt. Verified from the implementation and model card: RoPE position embeddings, 4 register tokens, 512 px pretraining global crops, evaluated at 224 px, mean of `x_norm_patchtokens` as pooled readout, embed dims 768 (ViT-B) / 1024 (ViT-L), frozen + LoRA (fused `qkv`) only, no full fine-tuning. Described strictly as a backbone inside the shared multi-head classifier.
+2. **Two experiment rounds separated.** Historical six-variant round (GRP-1–3 snapshot; table retained, marked superseded) vs the 16-variant size/adaptation matrix, which COMPLETED real (non-smoke) training + test evaluation 2026-07-13 on the eight-group snapshot (GRP-1–3, 5–9; 13,862 crops: 11,025/1,397/1,440). All parameter counts in the new table were taken from `outputs/reports/size_ablation.csv` (run-time introspection), not vendor figures.
+3. **Gradient accumulation** documented: effective batch 32 everywhere; 16×2 for ViT-L LoRA variants and ConvNeXt-Large fine-tune.
+4. **New citation used:** fu2026lingbot (in the shared .bib).
+5. **Verification gap 1 closed:** V-JEPA pooling confirmed as `tokens.mean(dim=1)` in `mtsd_attr/backbones/vjepa_backbone.py` (both backends).
+6. **Placeholder ledger unchanged** except: `attr-final-crops` remains open — NOTE the crop manifest auto-discovers Final-QA groups, so the next manifest refresh will ingest GRP-10/11 (QA landed 14–16 July) and change the dataset under the completed 16-variant matrix. **Research decision required:** either freeze the attribute scope at the eight-group snapshot (report it as such) or re-run the matrix on the final scope; the chapter currently states the completed snapshot explicitly and defers the final-scope decision.
+7. **Repository reality as of 17 July 2026:** 10 of 11 groups have Final-QA (GRP-4 outstanding); fresh annotation audit (audit-20260716-212105) over all 10 groups found 30 invalid attribute values (all `Damaged-Unknown` sign shapes) + 18 duplicate candidates (1 exact, 1 conflicting, 16 high-overlap); QA gate unresolved; detection approved scope still GRP-1/2/3/5/6; `Datasets/MTSD/Prepared/` still not built.

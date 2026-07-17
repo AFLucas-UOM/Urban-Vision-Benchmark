@@ -73,3 +73,8 @@
 4. Decide whether to keep `transport2025masterplan` (currently uncited) and confirm the exact WasteServ URL.
 5. Compile in the UM template; check page count (target 12–15 pp) and hyphenation of long model names; confirm `\paragraph` styling suits the template (BG §3 class descriptions).
 6. If the MTSD annotation scope changes (GRP-4/7–11 added), the Background needs no numeric edits (it cites no counts), but re-check the "recurrent… within the study's collection scope" phrasing against the refreshed EDA.
+
+## Revision 2026-07-16 (commit 2d70be27)
+
+- **LingBot-Vision added** as the fourth attribute-representation family: new LR section (boundary-centric dense pretraining, vendor-report status flagged, directed shape/condition hypothesis) and BG family-list update. Facts verified against the official HF model card and the installed pinned `lingbot_vision` package (RoPE, 4 register tokens, 512 px pretraining crops, embed dims 768/1024, fused qkv with masked k-bias); the study uses it strictly as a backbone inside the shared multi-head classifier.
+- Adaptation-section closing sentence updated: four backbone families and two model sizes.

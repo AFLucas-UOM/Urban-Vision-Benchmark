@@ -36,6 +36,7 @@ RQ ids are those in `Scripts/FinalEvaluation/config/research_questions.yaml` (co
 | Dataset integrity / QA / leakage motivation | label errors, datasheets, bias | northcutt2021pervasive, gebru2021datasheets, torralba2011unbiased | — | LR §19, §20 | RQ5 | Moderate (deliberately brief; methodology-chapter territory) |
 | Waste datasets | setting taxonomy: clean-background → facility → street; material vs stream labels; policy dependence | yang2016trashnet, proenca2020taco, bashkirova2022zerowaste, kraft2021uavvaste, mittal2016spotgarbage, rad2017computer, abdallah2020artificial, lu2022computer | BG §3 (context) | LR §2 | RQ1, RQ2 | Strong |
 | Traffic-sign datasets | GTSRB/GTSDB/LISA/TT100K/Mapillary/CURE-TSD; condition-annotation scarcity | stallkamp2012man, houben2013detection, mogelmose2012vision, zhu2016traffic, ertler2020mapillary, temel2020traffic, tabernik2020deep, balali2015detection, merolla2025improving | BG §4 (context) | LR §3 | RQ2, RQ3 | Strong |
+| LingBot-Vision | boundary-centric SSL (masked boundary modelling), RoPE + register tokens, 512 px pretraining, frozen patch-token readout; directed shape/condition hypothesis; vendor-report status | fu2026lingbot | BG §7 (family list) | LR §17 (new LingBot section) | RQ3 | Strong on architecture; vendor-only evidence explicitly flagged |
 | Research-gap synthesis | six named gaps → RQ1–RQ5 mapping | (synthesis of all above) | — | LR §20 | all | Strong |
 
 ## Known weak spots (deliberate)
@@ -47,3 +48,9 @@ RQ ids are those in `Scripts/FinalEvaluation/config/research_questions.yaml` (co
 | LocateAnything independent evaluation | Model released mid-2026; no third-party studies exist yet. |
 | YOLO11 primary literature | No first-party peer-reviewed paper exists; only vendor docs + third-party overview. |
 | Malta-specific CV literature | None found — reported as "no identified study", not "none exists". |
+| LingBot-Vision independent evaluation | Model released 2026 with a forthcoming technical report; only the vendor model card/release exists; no third-party studies yet. |
+
+## Revision 2026-07-16 (commit 2d70be27)
+
+- Added LingBot-Vision row (new LR section between ConvNeXt and adaptation strategies; BG representation-family list now names four families).
+- Section numbering beyond LR §16 shifted by +1 relative to the 11 July snapshot.

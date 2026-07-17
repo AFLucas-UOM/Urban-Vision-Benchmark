@@ -176,6 +176,23 @@ def run_training(args, config: dict) -> int:
 
 
 def main(argv: list[str] | None = None) -> int:
+    try:
+        return _main(argv)
+    except (ValueError, PermissionError, FileNotFoundError) as exc:
+        # Policy violations (unexpected groups, unresolved QA gate, missing
+        # sources) are expected states, not crashes: report them clearly.
+        print(f"REFUSED: {exc}", file=sys.stderr)
+        if "outside approved scope" in str(exc):
+            print("\nNew Final-QA groups exist that are not yet approved. The required\n"
+                  "sequence is: (1) run the annotation audit (scan_annotations.py),\n"
+                  "(2) resolve its findings via review_app.py + apply_fixes.py,\n"
+                  "(3) refresh the gate/scope (update_qa_gate.py --apply), then\n"
+                  "(4) re-run this command. Nothing was prepared or modified.",
+                  file=sys.stderr)
+        return 2
+
+
+def _main(argv: list[str] | None = None) -> int:
     arg_parser = parser(); argv = sys.argv[1:] if argv is None else argv
     if not argv: arg_parser.print_help(); return 0
     args = arg_parser.parse_args(argv); config = load_config(args.config)

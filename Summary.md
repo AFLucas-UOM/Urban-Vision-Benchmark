@@ -496,8 +496,15 @@ human glance at the running UI (not launched here).
 - [x] MTSD raw captures in all 11 groups (7,492 images); Final-QA exists for
       GRP-1/2/3/5/6 (3,098 images / 8,372 boxes); GRP-3 image gap resolved
 - [x] MTSD EDA (package, notebook, 21 figures, GPS atlas with clickable image popups)
-- [x] MTSD attribute-classification round: 6 variants trained and compared on the
-      recorded GRP-1--GRP-3 snapshot (best: dinov3_lora, macro-F1 0.873)
+- [x] MTSD attribute-classification, historical round: 6 variants trained and
+      compared on the recorded GRP-1--GRP-3 snapshot (best: dinov3_lora,
+      macro-F1 0.873)
+- [x] MTSD attribute-classification, 16-variant size/adaptation matrix
+      (DINOv3, V-JEPA 2.1, ConvNeXt, LingBot-Vision; base+large;
+      frozen/LoRA/fine-tuned): all 16 real runs completed 2026-07-13 on the
+      eight-group snapshot (GRP-1–3, 5–9; 13,862 crops); consolidated report
+      at `outputs/reports/size_ablation.md` (best: dinov3_vitl_lora, test mean
+      macro-F1 0.894)
 - [x] Annotation path migration (source_image → new layout)
 - [x] Annotation QA **audit** executed on the current five QA groups: 5 duplicate
       candidates and 5 configured drop-value findings, with no missing attributes

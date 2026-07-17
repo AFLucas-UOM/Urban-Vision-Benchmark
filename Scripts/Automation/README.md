@@ -35,17 +35,29 @@ powershell -ExecutionPolicy Bypass -File Scripts/Automation/run_urban_workflows.
   `Scripts/Automation/executed/<Target>-<timestamp>.ipynb` — the **source
   notebook is never modified**. Per-cell timeout via `-TimeoutMinutes`
   (default 240).
-- **Training gate**: targets flagged `"training": true` (all six supervised
-  notebooks) refuse to run without `-AllowTraining`; `-DryRun` always works.
-  Note the MTSD training notebooks additionally ship with `RUN_TRAINING=False`
-  inside — executing them without flipping that cell runs setup only.
+- **Training gate**: targets flagged `"training": true` (supervised notebooks,
+  the MTSD matrices and the attribute size-ablation profiles/smoke) refuse to run without `-AllowTraining`; `-DryRun`
+  always works. Note the MTSD training notebooks additionally ship with
+  `RUN_TRAINING=False` inside — executing them without flipping that cell runs
+  setup only.
 - **Environments**: each target names its conda env (resolved under
   `%USERPROFILE%\anaconda3\envs`); override with `-PythonExe <path>` or
   `-CondaEnvsRoot <dir>`.
+- **User-site isolation**: targets flagged `"noUserSite": true` (all
+  AttributeClassification targets) run as `python -s` with
+  `PYTHONNOUSERSITE=1`, as the `mtsd-attrcls` environment requires; the flag
+  is restored afterwards.
 - **Secrets**: the runner never prints `.env` contents; workflows read
   `WANDB_API_KEY` themselves from the repo-root `.env`.
-- `PromptDetect-App` starts a long-running Gradio server — run it in its own
-  console and stop with Ctrl+C.
+- Long-running local web applications (`PromptDetect-App`, `AttrCls-Compare-UI`,
+  `MTSD-AnnotationQA-Review-UI`) run in the foreground —
+  stop them with Ctrl+C in their console. For managed start/reopen/restart/stop
+  with readiness polling, prefer the UVB launcher (`python launch_uvb.py`).
+- **Intentionally excluded**: MDWD YOLO11 training (completed historical
+  EUVIP runs are preserved under `Results/MDWD-Runs/YOLO11-EUVIP`; no runnable
+  notebook remains) — MTSD YOLO11 is covered by the canonical 13-model matrix.
+  Low-level helpers (annotation-path migration, reset scripts, one-off
+  fixers) are deliberately not registry targets.
 
 ### Periodic execution
 
@@ -67,8 +79,15 @@ existing task requires `-Force`. Don't schedule training targets.
 ### Adding a target
 
 Edit `workflow_targets.json`: `type` (`python`/`notebook`), repo-relative
-`path`, `env`, optional `defaultArgs`, `training` flag, `description`. The
-health check will verify the path exists.
+`path`, `env`, optional `defaultArgs`, `training` flag, optional `noUserSite`
+flag, `description`. The health check verifies the path exists, and
+`tests/test_workflow_registry.py` enforces registry consistency (required
+fields, known types/envs, path/extension match, gating conventions, coverage
+of the principal workflows):
+
+```powershell
+& "$env:USERPROFILE\anaconda3\envs\MDWD\python.exe" -m pytest Scripts/Automation/tests -q
+```
 
 ## `verify_repository_health.py`
 

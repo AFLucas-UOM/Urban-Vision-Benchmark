@@ -28,13 +28,17 @@ def test_qa_gate_final_and_development_policy(tmp_path):
     enforce_qa_gate(gate, final=False, acknowledged_override=True)
 
 
-def test_final_cli_refuses_auto_scope_and_gate_or_raw_overrides():
-    with pytest.raises(PermissionError, match="group_scope=auto"):
-        supervised_main(["--dry-run", "--final", "--group-scope", "auto"])
-    with pytest.raises(ValueError, match="acknowledge-open-qa-gate"):
-        supervised_main(["--dry-run", "--final", "--acknowledge-open-qa-gate"])
-    with pytest.raises(ValueError, match="raw-XML"):
-        supervised_main(["--dry-run", "--final", "--allow-raw-xml-fallback"])
+def test_final_cli_refuses_auto_scope_and_gate_or_raw_overrides(capsys):
+    # Policy refusals exit with code 2 and a clear REFUSED message (no
+    # traceback); nothing is prepared or modified.
+    for args, fragment in (
+        (["--dry-run", "--final", "--group-scope", "auto"], "group_scope=auto"),
+        (["--dry-run", "--final", "--acknowledge-open-qa-gate"], "acknowledge-open-qa-gate"),
+        (["--dry-run", "--final", "--allow-raw-xml-fallback"], "raw-XML"),
+    ):
+        assert supervised_main(args) == 2
+        err = capsys.readouterr().err
+        assert "REFUSED" in err and fragment in err
 
 
 def _variant(root: Path, test_images: int = 1, test_class: int = 0):

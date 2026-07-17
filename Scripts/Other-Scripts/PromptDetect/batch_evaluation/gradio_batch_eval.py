@@ -139,5 +139,18 @@ def build_app():
     return demo
 
 
+def parse_args():
+    import argparse
+
+    parser = argparse.ArgumentParser(description="PromptDetect batch evaluation UI")
+    parser.add_argument("--host", default="127.0.0.1", help="Bind address")
+    parser.add_argument("--port", type=int, default=7860, help="Server port")
+    parser.add_argument("--no-browser", action="store_true",
+                        help="Do not open a browser tab (the UVB launcher opens one after readiness)")
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    build_app().launch(inbrowser=True)
+    args = parse_args()
+    build_app().launch(server_name=args.host, server_port=args.port,
+                       inbrowser=not args.no_browser)

@@ -3,16 +3,21 @@
 % Dissertation: A Comparative Study of Vision-Based Perception Paradigms
 %               for Urban Waste and Infrastructure Monitoring
 %               (MSc, University of Malta, 2026)
-% Drafted against repository commit cee7dc6a (inspected 11 July 2026),
-% under the final-state assumption documented in
-% methodology_writing_notes.md. All procedures are described as executed;
-% numeric values that can only be produced by the assumed-final artefacts
-% are marked with the \TBD{...} placeholder macro and enumerated in the
-% writing notes. No experimental outcomes are reported in this chapter.
+% Drafted against repository commit cee7dc6a (inspected 11 July 2026);
+% revised against commit 2d70be27 (inspected 16 July 2026): the attribute
+% study now covers four backbone families (adding LingBot-Vision), the
+% completed 16-variant size/adaptation matrix. Written under the final-state assumption
+% documented in methodology_writing_notes.md. All procedures are described
+% as executed; numeric values that can only be produced by the assumed-final
+% artefacts are marked with the \TBD{...} placeholder macro and enumerated
+% in the writing notes. Attribute-variant parameter counts were introspected
+% from the saved run artefacts (outputs/reports/size_ablation.csv and
+% checkpoint metadata), not copied from vendor tables. No experimental
+% outcomes are reported in this chapter.
 % Requires: natbib, tikz, (array). Placeholder macro defined below.
 % =========================================================================
 
-\providecommand{\TBD}[1]{\textbf{[TBD:\,#1]}}
+\providecommand{\TBD}[1]{{\footnotesize\textbf{[TBD:\,#1]}}}
 
 \chapter{Methodology}
 \label{ch:methodology}
@@ -38,7 +43,7 @@ Dataset & MDWD; MTSD & MDWD test; MTSD test & MTSD sign crops & MDWD/MTSD test s
 Task & object detection & zero-shot localisation & 4-head classification & inference efficiency \\
 Input unit & full image & full image + text prompt & padded sign crop & image or crop \\
 Output & boxes, classes, scores & boxes (masks; scores where available) & 4 class labels & latency, memory \\
-Model families & YOLO11/12/26, RF-DETR & SAM~3/3.1, LocateAnything, Cosmos Reason2 & DINOv3, V-JEPA~2.1, ConvNeXt & all of the above \\
+Model families & YOLO11/12/26, RF-DETR & SAM~3/3.1, LocateAnything, Cosmos Reason2 & DINOv3, V-JEPA~2.1, ConvNeXt, LingBot-Vision & all of the above \\
 Strategy & fine-tuning from pretrained weights & zero-shot, fixed prompts & frozen probe / LoRA / full fine-tune & fixed-protocol timing \\
 Primary metrics & mAP@50, mAP@50:95, P, R, F1 & P, R, F1, matched IoU & macro-F1, accuracy & latency, throughput, memory \\
 Operational metrics & params, size, latency & runtime, prompt sensitivity & trainable params & checkpoint size, cold start \\
@@ -49,11 +54,11 @@ Analysis & capacity + generation comparison; augmentation ablation & taxonomy-aw
 
 \subsection{Independent and Controlled Variables}
 
-The manipulated variables differed by track. In supervised detection they were detector family (YOLO versus RF-DETR), detector generation (YOLO11, YOLO12, YOLO26), model scale (nano to large), dataset domain (MDWD, MTSD) and, in the dedicated ablation, augmentation condition (augmented versus unaugmented training data). In the prompt-based track they were the model, the prompt wording and the prompt breadth (class-targeted, synonym-comparison, broad). In the attribute track they were the backbone family and the adaptation strategy (frozen linear probe, LoRA, full fine-tuning). In the deployment benchmark, inference batch size was additionally varied where supported.
+The manipulated variables differed by track. In supervised detection they were detector family (YOLO versus RF-DETR), detector generation (YOLO11, YOLO12, YOLO26), model scale (nano to large), dataset domain (MDWD, MTSD) and, in the dedicated ablation, augmentation condition (augmented versus unaugmented training data). In the prompt-based track they were the model, the prompt wording and the prompt breadth (class-targeted, synonym-comparison, broad). In the attribute track they were the backbone family (DINOv3, V-JEPA~2.1, ConvNeXt, LingBot-Vision), the backbone size (base versus large within each family) and the adaptation strategy (frozen linear probe, LoRA, or full fine-tuning where applicable to the family). In the deployment benchmark, inference batch size was additionally varied where supported.
 
 Controlled variables were held constant within each comparison: the underlying dataset split and test set; input resolution (640~px for detection; the backbone-native crop size for attribute models); the epoch budget; the optimiser family (AdamW throughout); the random seed (42 everywhere); the effective batch size (32 for all training); evaluation thresholds and metric implementations; the prompt protocol; the checkpoint-selection rule; and the hardware (Section~\ref{sec:experimental-environment}).
 
-Several controls were only approximately aligned across frameworks, and the design acknowledges this explicitly rather than claiming a perfectly controlled experiment. The models' pretraining corpora differ (COCO for the detectors, web-scale self-supervised corpora for the foundation backbones); the YOLO and RF-DETR implementations come from different frameworks with different internal pipelines; RF-DETR applies internal online augmentation that has no exact Ultralytics equivalent; parameter counts differ substantially across scales and families; the prompt-based systems emit structurally different outputs (with and without masks and calibrated confidences); and the attribute backbones require different native input resolutions (224~px for DINOv3 and ConvNeXt, 384~px for V-JEPA~2.1). Accordingly, the study distinguishes six analysis types of decreasing internal control: (i) the \emph{controlled augmentation ablation}, where only the training-data condition changed; (ii) \emph{model-scale comparisons} within one family and framework; (iii) the \emph{cross-family practical benchmark} between YOLO generations and RF-DETR; (iv) the \emph{adaptation-strategy comparison} within each attribute backbone; (v) the \emph{zero-shot prompt comparison}; and (vi) the \emph{deployment benchmark}. Claims in Chapter~\ref{ch:evaluation} are scoped to the appropriate analysis type.
+Several controls were only approximately aligned across frameworks, and the design acknowledges this explicitly rather than claiming a perfectly controlled experiment. The models' pretraining corpora differ (COCO for the detectors, web-scale self-supervised corpora for the foundation backbones); the YOLO and RF-DETR implementations come from different frameworks with different internal pipelines; RF-DETR applies internal online augmentation that has no exact Ultralytics equivalent; parameter counts differ substantially across scales and families; the prompt-based systems emit structurally different outputs (with and without masks and calibrated confidences); and the attribute backbones run at different input resolutions (224~px for DINOv3, ConvNeXt and LingBot-Vision, 384~px for the V-JEPA~2.1 encoders, whose distilled checkpoints are native to 384~px). Accordingly, the study distinguishes six analysis types of decreasing internal control: (i) the \emph{controlled augmentation ablation}, where only the training-data condition changed; (ii) \emph{model-scale comparisons} within one family and framework; (iii) the \emph{cross-family practical benchmark} between YOLO generations and RF-DETR; (iv) the \emph{adaptation-strategy and model-size comparisons} within each attribute backbone family; (v) the \emph{zero-shot prompt comparison}; and (vi) the \emph{deployment benchmark}. Claims in Chapter~\ref{ch:evaluation} are scoped to the appropriate analysis type.
 
 \section{Experimental Environment}
 \label{sec:experimental-environment}
@@ -75,7 +80,7 @@ System memory & 128~GB & dataset caching \\
 Operating system & Microsoft Windows 11 Pro & host platform \\
 \hline
 Detection env.\ (\texttt{MDWD}) & Python 3.12.11; PyTorch 2.10.0 (CUDA 13.0, cuDNN 9.12); torchvision 0.25.0; Ultralytics 8.4.60; \texttt{rfdetr} 1.3.0; Transformers 4.57.6 & YOLO and RF-DETR training \\
-Attribute env.\ (\texttt{mtsd-attrcls}) & Python 3.11.15; PyTorch 2.11.0 (CUDA 12.8, cuDNN 9.19); torchvision 0.26.0; Transformers 5.12.1; PEFT 0.19.1; timm 1.0.27 & attribute classification \\
+Attribute env.\ (\texttt{mtsd-attrcls}) & Python 3.11.15; PyTorch 2.11.0 (CUDA 12.8, cuDNN 9.19); torchvision 0.26.0; Transformers 5.12.1; PEFT 0.19.1; timm 1.0.27; \texttt{lingbot-vision} 0.1.0 (pinned to upstream commit \texttt{151e4632}) & attribute classification \\
 PromptDetect env.\ (\texttt{mtsd-base}) & Python 3.12.13; PyTorch 2.10.0 (CUDA 12.8); Transformers 5.12.1; Meta \texttt{sam3} package & SAM~3/3.1, Cosmos Reason2 \\
 Grounding env.\ (\texttt{mtsd-la}) & Python 3.12.13; PyTorch 2.11.0 (CUDA 12.8); Transformers 4.57.1; decord 0.6.0 & LocateAnything worker \\
 \hline
@@ -140,7 +145,7 @@ Orange CMD & 14\,872 & 14\,716 & 78 & 78 \\
 \subsection{Maltese Traffic Sign Dataset}
 \label{subsec:mtsd-methodology}
 
-MTSD is a street-level dataset of Maltese traffic-sign and roadside-sign infrastructure collected in eleven groups (GRP-1 through GRP-11) totalling 7\,492 raw smartphone photographs, captured across Maltese localities during \TBD{mtsd-collection-period}. All eleven groups completed annotation and quality assurance, and the final annotation scope comprises all eleven groups: \TBD{mtsd-final-annotated-images} annotated images containing \TBD{mtsd-final-instances} sign instances. Capture used consumer smartphones at pedestrian level; EXIF metadata, including capture time and GPS position where recorded, was profiled during EDA (\TBD{mtsd-final-exif-coverage} of images carried EXIF timestamps and \TBD{mtsd-final-gps-coverage} carried GPS tags in the final scope). Burst near-duplicates were identified during EDA and handled during quality assurance rather than silently deleted. Table~\ref{tab:mtsd-groups} lists the per-group composition.
+MTSD is a street-level dataset of Maltese traffic-sign and roadside-sign infrastructure collected in eleven groups (GRP-1 through GRP-11) totalling 7\,492 raw smartphone photographs, captured across Maltese localities during \TBD{mtsd-collection-period}. All eleven groups completed annotation and quality assurance, and the final annotation scope comprises all eleven groups: \TBD{mtsd-imgs-final} annotated images containing \TBD{mtsd-inst-final} sign instances. Capture used consumer smartphones at pedestrian level; EXIF metadata, including capture time and GPS position where recorded, was profiled during EDA (\TBD{mtsd-final-exif-coverage} of images carried EXIF timestamps and \TBD{mtsd-final-gps-coverage} carried GPS tags in the final scope). Burst near-duplicates were identified during EDA and handled during quality assurance rather than silently deleted. Table~\ref{tab:mtsd-groups} lists the per-group composition.
 
 \begin{table}[htbp]
 \centering
@@ -163,7 +168,7 @@ GRP-9 & 715 & \TBD{grp9-img} & \TBD{grp9-inst} \\
 GRP-10 & 789 & \TBD{grp10-img} & \TBD{grp10-inst} \\
 GRP-11 & 602 & \TBD{grp11-img} & \TBD{grp11-inst} \\
 \hline
-Total & 7\,492 & \TBD{mtsd-final-annotated-images} & \TBD{mtsd-final-instances} \\
+Total & 7\,492 & \TBD{mtsd-imgs-final} & \TBD{mtsd-inst-final} \\
 \hline
 \end{tabular}
 \end{table}
@@ -206,10 +211,22 @@ Other-Unknown & \TBD{cls-ou} & \TBD{cls-ou-pct} \\
 \hline
 \textbf{Attribute} & \textbf{Value} & \textbf{Instances} \\
 \hline
-Viewing angle & Front / Back / Side & \TBD{va-front} / \TBD{va-back} / \TBD{va-side} \\
-Mounting & Pole-Mounted / Wall-Mounted & \TBD{mt-pole} / \TBD{mt-wall} \\
-Condition & Good / Weathered / Heavily Damaged & \TBD{cond-good} / \TBD{cond-weath} / \TBD{cond-hd} \\
-Shape & Circular / Quadrangle / Triangular / Octagonal / Pentagon & \TBD{sh-circ} / \TBD{sh-quad} / \TBD{sh-tri} / \TBD{sh-oct} / \TBD{sh-pent} \\
+Viewing angle & Front & \TBD{va-front} \\
+ & Back & \TBD{va-back} \\
+ & Side & \TBD{va-side} \\
+\hline
+Mounting & Pole-Mounted & \TBD{mt-pole} \\
+ & Wall-Mounted & \TBD{mt-wall} \\
+\hline
+Condition & Good & \TBD{cond-good} \\
+ & Weathered & \TBD{cond-weath} \\
+ & Heavily Damaged & \TBD{cond-hd} \\
+\hline
+Shape & Circular & \TBD{sh-circ} \\
+ & Quadrangle & \TBD{sh-quad} \\
+ & Triangular & \TBD{sh-tri} \\
+ & Octagonal & \TBD{sh-oct} \\
+ & Pentagon & \TBD{sh-pent} \\
 \hline
 \end{tabular}
 \end{table}
@@ -314,26 +331,26 @@ Table~\ref{tab:model-matrix} lists the supervised detectors trained in the final
 
 \begin{table}[htbp]
 \centering
-\caption{Supervised model matrix. Parameter counts were introspected at run time; RF-DETR counts are taken from the final checkpoint metadata.}
+\caption{Supervised model matrix. Parameter counts were introspected at run time; RF-DETR counts are taken from the final checkpoint metadata. YOLO models run under Ultralytics 8.4.60; RF-DETR under \texttt{rfdetr} 1.3.0.}
 \label{tab:model-matrix}
-\small
-\begin{tabular}{llllrr}
+\footnotesize
+\begin{tabular}{lllrr}
 \hline
-\textbf{Model} & \textbf{Family} & \textbf{Framework} & \textbf{Pretraining} & \textbf{Input} & \textbf{Parameters} \\
+\textbf{Model} & \textbf{Family} & \textbf{Pretraining} & \textbf{Input} & \textbf{Parameters} \\
 \hline
-YOLO11n & YOLO11 & Ultralytics 8.4.60 & COCO & 640 & 2\,590\,815 \\
-YOLO11s & YOLO11 & Ultralytics 8.4.60 & COCO & 640 & 9\,429\,727 \\
-YOLO11m & YOLO11 & Ultralytics 8.4.60 & COCO & 640 & 20\,056\,863 \\
-YOLO12n & YOLO12 & Ultralytics 8.4.60 & COCO & 640 & 2\,569\,023 \\
-YOLO12s & YOLO12 & Ultralytics 8.4.60 & COCO & 640 & 9\,255\,071 \\
-YOLO12m & YOLO12 & Ultralytics 8.4.60 & COCO & 640 & 20\,141\,343 \\
-YOLO26n & YOLO26 & Ultralytics 8.4.60 & COCO & 640 & 2\,505\,750 \\
-YOLO26s & YOLO26 & Ultralytics 8.4.60 & COCO & 640 & 9\,951\,734 \\
-YOLO26m & YOLO26 & Ultralytics 8.4.60 & COCO & 640 & 21\,780\,598 \\
-YOLO26l & YOLO26 & Ultralytics 8.4.60 & COCO & 640 & 26\,184\,054 \\
-RF-DETR Nano & RF-DETR & \texttt{rfdetr} 1.3.0 & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-n-params} \\
-RF-DETR Small & RF-DETR & \texttt{rfdetr} 1.3.0 & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-s-params} \\
-RF-DETR Medium & RF-DETR & \texttt{rfdetr} 1.3.0 & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-m-params} \\
+YOLO11n & YOLO11 & COCO & 640 & 2\,590\,815 \\
+YOLO11s & YOLO11 & COCO & 640 & 9\,429\,727 \\
+YOLO11m & YOLO11 & COCO & 640 & 20\,056\,863 \\
+YOLO12n & YOLO12 & COCO & 640 & 2\,569\,023 \\
+YOLO12s & YOLO12 & COCO & 640 & 9\,255\,071 \\
+YOLO12m & YOLO12 & COCO & 640 & 20\,141\,343 \\
+YOLO26n & YOLO26 & COCO & 640 & 2\,505\,750 \\
+YOLO26s & YOLO26 & COCO & 640 & 9\,951\,734 \\
+YOLO26m & YOLO26 & COCO & 640 & 21\,780\,598 \\
+YOLO26l & YOLO26 & COCO & 640 & 26\,184\,054 \\
+RF-DETR Nano & RF-DETR & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-n} \\
+RF-DETR Small & RF-DETR & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-s} \\
+RF-DETR Medium & RF-DETR & COCO (DINOv2 backbone) & 640 & \TBD{rfdetr-m} \\
 \hline
 \end{tabular}
 \end{table}
@@ -347,7 +364,7 @@ A single shared protocol governed all supervised runs on both datasets, with set
 \caption{Shared supervised training hyperparameters (verified from saved run configurations; identical for MDWD and MTSD).}
 \label{tab:supervised-hparams}
 \small
-\begin{tabular}{lll}
+\begin{tabular}{p{0.30\linewidth}p{0.30\linewidth}p{0.30\linewidth}}
 \hline
 \textbf{Setting} & \textbf{YOLO (all generations)} & \textbf{RF-DETR} \\
 \hline
@@ -408,7 +425,7 @@ The zero-shot track evaluated six promptable systems through one common backend 
 \centering
 \caption{PromptDetect model capabilities as exposed through the common evaluation backend.}
 \label{tab:promptdetect-models}
-\small
+\footnotesize
 \begin{tabular}{lp{0.15\linewidth}llp{0.16\linewidth}l}
 \hline
 \textbf{Model} & \textbf{Family} & \textbf{Boxes} & \textbf{Masks} & \textbf{Per-box confidence} & \textbf{Matrix} \\
@@ -452,7 +469,7 @@ All dissertation evaluations ran under a versioned, committed prompt protocol (\
 \centering
 \caption{MTSD prompt-to-taxonomy mapping (protocol \texttt{dissertation-v1}).}
 \label{tab:mtsd-prompts}
-\small
+\footnotesize
 \begin{tabular}{llp{0.40\linewidth}}
 \hline
 \textbf{Prompt} & \textbf{Group} & \textbf{Target class(es)} \\
@@ -491,32 +508,76 @@ Each run persisted: the complete run configuration; the ground-truth index; the 
 
 The attribute study is crop-level multi-task classification: one padded sign crop passes through one shared visual backbone, and four independent heads predict viewing angle, mounting type, physical condition and sign shape, each as one mutually exclusive class from its vocabulary. This is multi-\emph{head}, not multi-\emph{label}, classification---each head solves its own single-label problem over a distinct vocabulary---and it differs from training four separate single-head models in that the backbone computation and representation are shared, quartering inference cost and enabling (but not guaranteeing) beneficial feature sharing. Crops lacking a valid label for some head under the configured masking policy contributed no loss to that head while still training the others.
 
-\subsection{Backbone and Adaptation Matrix}
+\subsection{Backbone Families}
 
-Six variants crossed three pretrained representation families with three adaptation strategies (Table~\ref{tab:attr-variants}). DINOv3 contributed a self-supervised image transformer (ViT-B/16, checkpoint \texttt{facebook/dinov3-vitb16-pretrain-lvd1689m}) \citep{simeoni2025dinov3}; V-JEPA~2.1 contributed a video-pretrained joint-embedding predictive architecture (ViT-L at 384~px, Torch~Hub entry point \texttt{vjepa2\_1\_vit\_large\_384}, distilled checkpoint \texttt{vjepa2\_1\_vitl\_dist\_vitG\_384}) \citep{murlabadia2026vjepa21}; and ConvNeXt-Tiny contributed a supervised ImageNet-pretrained convolutional network \citep{liu2022convnet}. Because V-JEPA~2.1 is a video encoder, each still crop was presented as a two-frame pseudo-clip (the crop repeated along the temporal axis, matching the tubelet size of 2); this adds compute but no information, and is documented as an inherent cost of applying a video backbone to still imagery. The trainable-parameter counts in Table~\ref{tab:attr-variants} were introspected from the instantiated models and show that the comparison spans four orders of magnitude of adaptation capacity; for this reason the study is framed as an adaptation-strategy comparison across representation families, not a controlled backbone ranking---the LoRA adapters differ in capacity across backbones, and full fine-tuning was applied only to the smallest backbone.
+Four pretrained representation families were compared, chosen so that their pretraining objectives span the principal contemporary paradigms. \textbf{DINOv3} contributed general-purpose self-supervised image transformers (ViT-B/16 and ViT-L/16, gated checkpoints \texttt{facebook/\allowbreak dinov3-vitb16-\allowbreak pretrain-\allowbreak lvd1689m} and \texttt{facebook/\allowbreak dinov3-vitl16-\allowbreak pretrain-\allowbreak lvd1689m}, loaded through Hugging Face Transformers) \citep{simeoni2025dinov3}. \textbf{V-JEPA~2.1} contributed video-pretrained joint-embedding predictive encoders (ViT-B/16 and ViT-L/16 at 384~px, Torch~Hub entry points \texttt{vjepa2\_1\_\allowbreak vit\_\allowbreak base\_384} and \texttt{vjepa2\_1\_\allowbreak vit\_\allowbreak large\_384} with the official distilled checkpoints \texttt{vjepa2\_1\_vitb\_\allowbreak dist\_vitG\_384} and \texttt{vjepa2\_1\_vitl\_\allowbreak dist\_vitG\_384}; the loader is version-strict, refusing to substitute a V-JEPA~2.0 checkpoint if the 2.1 load fails) \citep{murlabadia2026vjepa21}. Because V-JEPA is a video encoder, each still crop was presented as a two-frame pseudo-clip (the crop repeated along the temporal axis, matching the tubelet size of 2); this adds compute but no information, and is documented as an inherent cost of applying a video backbone to still imagery. \textbf{ConvNeXt} contributed supervised ImageNet-1k-pretrained convolutional networks (Base and Large in the size matrix; Tiny only in the historical round below), loaded from torchvision with \texttt{IMAGENET1K\_V1} weights \citep{liu2022convnet}.
+
+\textbf{LingBot-Vision} contributed boundary-centric self-supervised transformers (ViT-B/16 and ViT-L/16, official checkpoints \texttt{robbyant/\allowbreak lingbot-\allowbreak vision-\allowbreak vit-\allowbreak base} and \texttt{robbyant/\allowbreak lingbot-\allowbreak vision-\allowbreak vit-\allowbreak large}, loaded through the official \texttt{lingbot\_vision} inference package pinned to a reviewed upstream commit) \citep{fu2026lingbot}. Its masked-boundary-modelling pretraining optimises patch features for boundary and shape preservation, in deliberate contrast to DINOv3's semantic self-distillation, V-JEPA's temporal predictive objective and ConvNeXt's supervised classification features; the scientific motivation is the directed hypothesis, developed in Chapter~\ref{ch:literature-review}, that boundary-oriented dense features transfer preferentially to the outline-governed attributes (sign shape, and the boundary-disruption component of physical condition). Architecturally the LingBot encoders use rotary position embeddings and four register tokens, and were pretrained at 512~px global crops; the rotary embeddings decouple inference resolution from the pretraining resolution, and the study's standard 224~px crop size was used, matching DINOv3 and ConvNeXt. The pooled representation is the mean of the normalised patch tokens (\texttt{x\_norm\_patchtokens}), the readout the official model card recommends for frozen dense features; the loader-reported embedding widths (768 for ViT-B, 1\,024 for ViT-L) were verified against a forward-pass probe at load time. LingBot-Vision supports the frozen and LoRA regimes; full fine-tuning is deliberately not implemented for it in this study.
+
+\subsection{Experiment Rounds: Historical Six-Variant Round and the 16-Variant Size/Adaptation Matrix}
+\label{subsec:attr-rounds}
+
+The attribute experiments were conducted in two clearly separated rounds, and the distinction is preserved throughout the evaluation. The \emph{historical six-variant round} (Table~\ref{tab:attr-legacy-variants}) crossed three families at one size each with the applicable adaptation strategies; it was trained on an early three-group annotation snapshot (GRP-1--GRP-3) and is retained as an immutable historical record---its variant names, checkpoints and metrics folders are never renamed or reused---but it contributes no headline results. The \emph{16-variant size/adaptation matrix} (Table~\ref{tab:attr-size-variants}) is the principal experiment: all four families at two sizes (base and large), each under a frozen linear probe and under its family-appropriate adapted regime (LoRA for the three SSL transformer families; full fine-tuning for ConvNeXt, for which LoRA is not implemented). All sixteen variants completed training and test evaluation on 13 July 2026 against the then-current eight-group annotation snapshot (GRP-1--GRP-3 and GRP-5--GRP-9; 13\,862 crops: 11\,025 train, 1\,397 validation, 1\,440 test). Should the final annotation freeze extend the crop manifest beyond this snapshot, any re-run supersedes these figures and is reported with its own manifest provenance; smoke-test runs (one epoch, 64-crop subsets, checkpoints under \texttt{*-smoke}) exist for every variant purely as pipeline verification and are excluded from all analyses.
 
 \begin{table}[htbp]
 \centering
-\caption{Attribute-classification variant matrix (parameter counts introspected at run time; final-scope run).}
-\label{tab:attr-variants}
+\caption{Historical six-variant round (GRP-1--GRP-3 snapshot; superseded by the 16-variant matrix). Parameter counts introspected at run time.}
+\label{tab:attr-legacy-variants}
 \small
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lp{0.17\linewidth}lllrr}
 \hline
 \textbf{Variant} & \textbf{Backbone} & \textbf{Pretraining} & \textbf{Adaptation} & \textbf{Input} & \textbf{Feat.\ dim} & \textbf{Trainable params} \\
 \hline
 \texttt{dinov3} & DINOv3 ViT-B/16 & SSL, LVD-1689M & frozen + linear probe & 224 & 768 & 9\,997 \\
 \texttt{dinov3\_lora} & DINOv3 ViT-B/16 & SSL & LoRA ($r{=}8$) + heads & 224 & 768 & 304\,909 \\
-\texttt{vjepa} & V-JEPA 2.1 ViT-L/384 & video SSL & frozen + linear probe & 384 & 1\,024 & 13\,325 \\
-\texttt{vjepa\_lora} & V-JEPA 2.1 ViT-L/384 & video SSL & LoRA ($r{=}8$) + heads & 384 & 1\,024 & 799\,757 \\
+\texttt{vjepa} & V-JEPA 2.1 ViT-L/16 & video SSL & frozen + linear probe & 384 & 1\,024 & 13\,325 \\
+\texttt{vjepa\_lora} & V-JEPA 2.1 ViT-L/16 & video SSL & LoRA ($r{=}8$) + heads & 384 & 1\,024 & 799\,757 \\
 \texttt{convnext\_frozen} & ConvNeXt-Tiny & supervised, ImageNet-1k & frozen + linear probe & 224 & 768 & 9\,997 \\
 \texttt{convnext} & ConvNeXt-Tiny & supervised, ImageNet-1k & full fine-tuning & 224 & 768 & 27\,828\,589 \\
 \hline
-\end{tabular}
+\end{tabular}}
 \end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{The 16-variant size/adaptation matrix (completed 13 July 2026 on the eight-group snapshot). Total and trainable parameter counts introspected from the instantiated models and recorded in the run artefacts; LoRA totals exceed their frozen counterparts by the adapter parameters.}
+\label{tab:attr-size-variants}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllrrr}
+\hline
+\textbf{Variant} & \textbf{Architecture} & \textbf{Adaptation} & \textbf{Input} & \textbf{Feat.\ dim} & \textbf{Total params} & \textbf{Trainable} \\
+\hline
+\multicolumn{7}{l}{\emph{DINOv3 (self-supervised image SSL, Hugging Face)}} \\
+\texttt{dinov3\_vitb\_frozen} & ViT-B/16 & frozen probe & 224 & 768 & 85\,670\,413 & 9\,997 \\
+\texttt{dinov3\_vitl\_frozen} & ViT-L/16 & frozen probe & 224 & 1\,024 & 303\,142\,925 & 13\,325 \\
+\texttt{dinov3\_vitb\_lora} & ViT-B/16 & LoRA $r{=}8$ & 224 & 768 & 85\,965\,325 & 304\,909 \\
+\texttt{dinov3\_vitl\_lora} & ViT-L/16 & LoRA $r{=}8$ & 224 & 1\,024 & 303\,929\,357 & 799\,757 \\
+\multicolumn{7}{l}{\emph{V-JEPA 2.1 (video-pretrained JEPA, Torch Hub, version-strict)}} \\
+\texttt{vjepa21\_vitb\_frozen} & ViT-B/16 & frozen probe & 384 & 768 & 86\,843\,149 & 9\,997 \\
+\texttt{vjepa21\_vitl\_frozen} & ViT-L/16 & frozen probe & 384 & 1\,024 & 304\,694\,285 & 13\,325 \\
+\texttt{vjepa21\_vitb\_lora} & ViT-B/16 & LoRA $r{=}8$ & 384 & 768 & 87\,138\,061 & 304\,909 \\
+\texttt{vjepa21\_vitl\_lora} & ViT-L/16 & LoRA $r{=}8$ & 384 & 1\,024 & 305\,480\,717 & 799\,757 \\
+\multicolumn{7}{l}{\emph{ConvNeXt (supervised ImageNet-1k, torchvision)}} \\
+\texttt{convnext\_base\_frozen} & ConvNeXt-Base & frozen probe & 224 & 1\,024 & 87\,577\,741 & 13\,325 \\
+\texttt{convnext\_large\_frozen} & ConvNeXt-Large & frozen probe & 224 & 1\,536 & 196\,247\,245 & 19\,981 \\
+\texttt{convnext\_base\_finetune} & ConvNeXt-Base & full fine-tune & 224 & 1\,024 & 87\,577\,741 & 87\,577\,741 \\
+\texttt{convnext\_large\_finetune} & ConvNeXt-Large & full fine-tune & 224 & 1\,536 & 196\,247\,245 & 196\,247\,245 \\
+\multicolumn{7}{l}{\emph{LingBot-Vision (boundary-centric SSL, official loader)}} \\
+\texttt{lingbot\_vitb\_frozen} & ViT-B/16 & frozen probe & 224 & 768 & 85\,679\,629 & 9\,997 \\
+\texttt{lingbot\_vitl\_frozen} & ViT-L/16 & frozen probe & 224 & 1\,024 & 303\,167\,501 & 13\,325 \\
+\texttt{lingbot\_vitb\_lora} & ViT-B/16 & LoRA $r{=}8$ & 224 & 768 & 85\,974\,541 & 304\,909 \\
+\texttt{lingbot\_vitl\_lora} & ViT-L/16 & LoRA $r{=}8$ & 224 & 1\,024 & 303\,953\,933 & 799\,757 \\
+\hline
+\end{tabular}}
+\end{table}
+
+The trainable-parameter counts show that the comparison spans four orders of magnitude of adaptation capacity (from 9\,997-parameter linear probes to 196M-parameter full fine-tuning); for this reason the study is framed as an adaptation-strategy and model-size comparison across representation families, not a controlled backbone ranking. Adaptation modes are never mixed in one results table without labelling: frozen probes, LoRA adaptation and full fine-tuning are reported as separate strata, because LoRA adapter capacity differs across architectures and full fine-tuning exists only in the ConvNeXt family. Every family--size cell shares the identical crop manifest, split assignment, loss, schedule, seed and selection rule, so within-stratum comparisons vary only the representation.
 
 \subsection{Shared Multi-Head Architecture}
 
-The classifier wraps each backbone behind a uniform interface that yields one pooled feature vector per crop: DINOv3 uses its pooler (CLS) output, ConvNeXt its global average pool, and V-JEPA~2.1 mean-pooled token features. Four independent linear heads---one $d \to |\mathcal{C}_a|$ layer per attribute $a$---map this shared representation to class logits (Figure~\ref{fig:multihead}). Under the \emph{frozen} mode the backbone's parameters carry no gradients and the module is pinned to evaluation mode even while the heads train, so normalisation statistics cannot drift; under \emph{LoRA} the base weights stay frozen while low-rank adapters and heads train; under \emph{finetune} all parameters train.
+The classifier wraps each backbone behind a uniform interface that yields one pooled feature vector per crop: DINOv3 uses its pooler (CLS) output, ConvNeXt its global average pool, V-JEPA~2.1 mean-pooled token features, and LingBot-Vision the mean of its normalised patch tokens. Four independent linear heads---one $d \to |\mathcal{C}_a|$ layer per attribute $a$---map this shared representation to class logits (Figure~\ref{fig:multihead}). LingBot-Vision is thus used strictly as a pretrained visual backbone inside this shared multi-head classifier, exactly like the other three families; it is not a separate end-to-end traffic-sign classifier. Under the \emph{frozen} mode the backbone's parameters carry no gradients and the module is pinned to evaluation mode even while the heads train, so normalisation statistics cannot drift; under \emph{LoRA} the base weights stay frozen while low-rank adapters and heads train; under \emph{finetune} all parameters train.
 
 \begin{figure}[htbp]
 \centering
@@ -526,8 +587,8 @@ The classifier wraps each backbone behind a uniform interface that yields one po
   arr/.style={->, thick}
 ]
 \node[box] (crop) {Traffic-sign crop\\ \footnotesize (padded, resized)};
-\node[box, below=0.55cm of crop] (backbone) {Shared visual backbone\\ \footnotesize DINOv3 / V-JEPA 2.1 / ConvNeXt};
-\node[box, below=0.55cm of backbone] (feat) {Pooled representation\\ \footnotesize $d = 768$ or $1024$};
+\node[box, below=0.55cm of crop] (backbone) {Shared visual backbone\\ \footnotesize DINOv3 / V-JEPA 2.1 / ConvNeXt / LingBot-Vision};
+\node[box, below=0.55cm of backbone] (feat) {Pooled representation\\ \footnotesize $d = 768$, $1024$ or $1536$};
 \node[head, below=0.8cm of feat, xshift=-4.65cm] (h1) {Viewing angle\\ \footnotesize 3 classes};
 \node[head, below=0.8cm of feat, xshift=-1.55cm] (h2) {Mounting\\ \footnotesize 2 classes};
 \node[head, below=0.8cm of feat, xshift=1.55cm] (h3) {Condition\\ \footnotesize 3 classes};
@@ -545,19 +606,20 @@ The classifier wraps each backbone behind a uniform interface that yields one po
 
 \subsection{Training Procedure}
 
-All six variants trained under one shared loop with the configuration in Table~\ref{tab:attr-hparams}. Differential learning rates separated the three parameter groups: newly initialised heads trained at $10^{-3}$; pretrained backbone parameters (fine-tuning only) at $5 \times 10^{-5}$, two orders of magnitude lower, to preserve pretrained structure; and LoRA adapters at $2 \times 10^{-4}$. The cosine schedule spanned the full epoch budget with five warm-up epochs. Early stopping monitored validation mean macro-F1 with patience 10 and minimum delta 0.001, and the best checkpoint was the epoch with the highest validation mean macro-F1; test data played no role in learning-rate selection, early stopping, checkpoint selection or any other model choice, and each selected checkpoint was evaluated exactly once on the test split.
+All variants of both rounds trained under one shared loop with the configuration in Table~\ref{tab:attr-hparams}. Differential learning rates separated the three parameter groups: newly initialised heads trained at $10^{-3}$; pretrained backbone parameters (fine-tuning only) at $5 \times 10^{-5}$, two orders of magnitude lower, to preserve pretrained structure; and LoRA adapters at $2 \times 10^{-4}$. The effective batch size was held at 32 for every variant: most variants used a physical batch of 32, while the four largest-memory configurations (the ViT-L LoRA variants and ConvNeXt-Large fine-tuning) used a physical batch of 16 with two-step gradient accumulation, the optimiser and scheduler stepping once per accumulated pair so that the optimisation trajectory sees the same effective batch everywhere. The cosine schedule spanned the full epoch budget with five warm-up epochs. Early stopping monitored validation mean macro-F1 with patience 10 and minimum delta 0.001, and the best checkpoint was the epoch with the highest validation mean macro-F1; test data played no role in learning-rate selection, early stopping, checkpoint selection or any other model choice, and each selected checkpoint was evaluated exactly once on the test split.
 
 \begin{table}[htbp]
 \centering
-\caption{Attribute-classification training configuration (shared across all six variants; verified from the central configuration and run logs).}
+\caption{Attribute-classification training configuration (shared across all variants of both rounds; verified from the central configuration and run logs).}
 \label{tab:attr-hparams}
 \small
-\begin{tabular}{ll}
+\begin{tabular}{p{0.38\linewidth}p{0.52\linewidth}}
 \hline
 \textbf{Setting} & \textbf{Value} \\
 \hline
 Seed & 42 \\
-Batch size / workers & 32 / 4 \\
+Effective batch size / workers & 32 / 4 \\
+Gradient accumulation & $16 \times 2$ for ViT-L LoRA and ConvNeXt-Large fine-tune; $32 \times 1$ otherwise \\
 Maximum epochs & 150 \\
 Optimiser & AdamW \\
 Learning rates (heads / backbone / LoRA) & $10^{-3}$ / $5\times10^{-5}$ / $2\times10^{-4}$ \\
@@ -593,13 +655,13 @@ Training crops received colour jitter (brightness 0.3, contrast 0.3, saturation 
 \subsection{Adaptation Strategies}
 
 \subsubsection{Frozen Linear Probing}
-In the two \texttt{frozen} variants and \texttt{convnext\_frozen}, the pretrained backbone was placed in evaluation mode with all gradients disabled, and only the four linear heads (9\,997 parameters at $d{=}768$; 13\,325 at $d{=}1\,024$) were optimised. Linear probing was included as the lowest-cost adaptation strategy, as a direct assessment of frozen representation quality on these attributes, and as the operationally attractive baseline: a municipality able to train only a linear layer could deploy it on modest hardware.
+In every \texttt{frozen} variant the pretrained backbone was placed in evaluation mode with all gradients disabled, and only the four linear heads were optimised (9\,997 parameters at $d{=}768$; 13\,325 at $d{=}1\,024$; 19\,981 at $d{=}1\,536$). Linear probing was included as the lowest-cost adaptation strategy, as a direct assessment of frozen representation quality on these attributes, and as the operationally attractive baseline: a municipality able to train only a linear layer could deploy it on modest hardware. Across the frozen stratum of the 16-variant matrix, all eight probes see identical data and optimisation, so differences isolate the representations themselves.
 
 \subsubsection{LoRA}
-The LoRA variants froze all base backbone weights and inserted trainable low-rank updates \citep{hu2022lora} with rank 8, scaling factor $\alpha = 16$ and dropout 0.05, alongside the trainable heads. Adapter placement followed each backbone's architecture: the DINOv3 implementation exposes separate per-block query and value projections, which received adapters (\texttt{q\_proj}, \texttt{v\_proj}), whereas Meta's V-JEPA vision transformer uses one fused QKV projection per block, so the fused \texttt{qkv} linear layer was adapted, jointly affecting queries, keys and values. The two configurations are the closest available analogues but do not yield identical adapter capacity (304\,909 versus 799\,757 trainable parameters), which is reported rather than hidden. LoRA was included as the parameter-efficient middle ground between probing and full fine-tuning.
+The LoRA variants froze all base backbone weights and inserted trainable low-rank updates \citep{hu2022lora} with rank 8, scaling factor $\alpha = 16$ and dropout 0.05, alongside the trainable heads. Adapter placement followed each backbone's architecture: the Hugging Face DINOv3 implementation exposes separate per-block query and value projections, which received adapters (\texttt{q\_proj}, \texttt{v\_proj}); Meta's V-JEPA vision transformer and LingBot-Vision's transformer both use one fused QKV projection per block, so their fused \texttt{qkv} linear layers were adapted, jointly affecting queries, keys and values (the LoRA injector verifies the target module names against the instantiated architecture at load time and fails loudly on mismatch). These configurations are the closest available analogues but do not yield identical adapter capacity (304\,909 trainable parameters at ViT-B versus 799\,757 at ViT-L), which is reported rather than hidden. LoRA was included as the parameter-efficient middle ground between probing and full fine-tuning; it is not implemented for the convolutional ConvNeXt family.
 
 \subsubsection{Full Fine-Tuning}
-The \texttt{convnext} variant trained all backbone and head parameters end to end (27.8~M trainable), providing the maximum-adaptation-capacity reference point against which frozen transfer and parameter-efficient adaptation are compared, at correspondingly higher computational cost and overfitting risk on a dataset of this size. Full fine-tuning of the two foundation-scale transformers was not performed; the design compares each family under the adaptation regimes practical for its size, which is a stated boundary of the comparison.
+The ConvNeXt \texttt{finetune} variants trained all backbone and head parameters end to end (27.8~M for the historical Tiny; 87.6~M for Base and 196.2~M for Large in the size matrix), providing the maximum-adaptation-capacity reference points against which frozen transfer and parameter-efficient adaptation are compared, at correspondingly higher computational cost and overfitting risk on a dataset of this size. Full fine-tuning of the three foundation-scale transformer families (DINOv3, V-JEPA~2.1, LingBot-Vision) was deliberately not performed; the design compares each family under the adaptation regimes practical for its size and architecture, which is a stated boundary of the comparison.
 
 \section{Evaluation Framework}
 \label{sec:evaluation-framework}
@@ -678,7 +740,7 @@ Uncertainty was quantified with seeded percentile-bootstrap confidence intervals
 
 \subsection{Reproducibility Measures}
 
-The study's reproducibility rests on layered, verifiable provenance. All code, configuration and numeric results are version-controlled in the private repository (final chapter state recorded at commit \texttt{cee7dc6a}); every random process used seed 42 with deterministic execution enabled where the framework supports it; and each pipeline reads one central YAML configuration whose effective values are exported verbatim into every run folder. Run directories are immutable and name-encoded, refuse re-use, and carry timestamped outputs; prepared datasets, annotation exports and manifests carry SHA-256 hashes (source annotations, prepared files and split assignments), so any post-hoc modification is detectable; checkpoint metadata records the producing configuration; benchmark image lists are saved; PromptDetect combinations persist atomically and resumably; and the supervised matrix executor fingerprints each run before resuming. Experiment tracking used three Weights~\&~Biases projects---\texttt{MSc-MDWD-EUVIP26} (MDWD detection), \texttt{MSc-MTSD-SupervisedDetection} (MTSD detection) and \texttt{MSc-MTSD-Attributes} (attribute classification)---as a monitoring mirror; the authoritative reproducibility record remains the repository artefacts and local exports. A static evidence dashboard indexes every final table and figure back to its generating artefact, and the final dissertation tables embed source-file provenance.
+The study's reproducibility rests on layered, verifiable provenance. All code, configuration and numeric results are version-controlled in the private repository (chapter drafted at commit \texttt{cee7dc6a} and revised at commit \texttt{2d70be27}); every random process used seed 42 with deterministic execution enabled where the framework supports it; and each pipeline reads one central YAML configuration whose effective values are exported verbatim into every run folder. Run directories are immutable and name-encoded, refuse re-use, and carry timestamped outputs; prepared datasets, annotation exports and manifests carry SHA-256 hashes (source annotations, prepared files and split assignments), so any post-hoc modification is detectable; checkpoint metadata records the producing configuration; benchmark image lists are saved; PromptDetect combinations persist atomically and resumably; and the supervised matrix executor fingerprints each run before resuming. Experiment tracking used three Weights~\&~Biases projects---\texttt{MSc-\allowbreak MDWD-\allowbreak EUVIP26} (MDWD detection), \texttt{MSc-MTSD-\allowbreak SupervisedDetection} (MTSD detection) and \texttt{MSc-\allowbreak MTSD-\allowbreak Attributes} (attribute classification)---as a monitoring mirror; the authoritative reproducibility record remains the repository artefacts and local exports. A static evidence dashboard indexes every final table and figure back to its generating artefact, and the final dissertation tables embed source-file provenance.
 
 \subsection{Privacy and Data Governance}
 

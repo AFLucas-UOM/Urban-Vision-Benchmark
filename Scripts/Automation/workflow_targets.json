@@ -1,5 +1,5 @@
 {
-  "_comment": "Single source of truth for run_urban_workflows.ps1 and verify_repository_health.py. Paths are repo-root-relative. 'env' names a conda environment under %USERPROFILE%/anaconda3/envs (override with -PythonExe). 'training: true' targets refuse to run without -AllowTraining. 'defaultArgs' apply when -Args is not given.",
+  "_comment": "Single source of truth for run_urban_workflows.ps1 and verify_repository_health.py. Paths are repo-root-relative. 'env' names a conda environment under %USERPROFILE%/anaconda3/envs (override with -PythonExe). 'training: true' targets refuse to run without -AllowTraining (this gate also covers heavy inference). 'defaultArgs' apply when -Args is not given. 'noUserSite: true' runs python with -s and PYTHONNOUSERSITE=1 (required by the mtsd-attrcls environment). Intentionally excluded: MDWD YOLO11 training (completed historical EUVIP runs under Results/MDWD-Runs/YOLO11-EUVIP; its notebook predates the current convention and no runnable interface remains) - MTSD YOLO11 is covered by the canonical 13-model matrix.",
   "targets": {
     "MDWD-EDA": {
       "type": "python",
@@ -65,7 +65,7 @@
       "env": "MDWD",
       "defaultArgs": ["--matrix", "dissertation", "--dataset-variant", "augmented", "--final"],
       "training": true,
-      "description": "Runs the resumable 13-model MTSD supervised dissertation matrix."
+      "description": "RUNS TRAINING: the resumable 13-model MTSD supervised dissertation matrix (YOLO11/12/26 + RF-DETR)."
     },
     "MTSD-Supervised-Smoke": {
       "type": "python",
@@ -73,7 +73,31 @@
       "env": "MDWD",
       "defaultArgs": ["--smoke-test", "--dataset-variant", "augmented", "--wandb-mode", "disabled", "--acknowledge-open-qa-gate"],
       "training": true,
-      "description": "Two-epoch YOLO12n + RF-DETR Nano end-to-end smoke test."
+      "description": "RUNS TRAINING (small): two-epoch YOLO12n + RF-DETR Nano end-to-end smoke test."
+    },
+    "MTSD-Validate-Prepared": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py",
+      "env": "MDWD",
+      "defaultArgs": ["--validate-prepared", "--strict"],
+      "training": false,
+      "description": "Strict validation of the prepared MTSD dataset variants (YOLO/COCO layouts, split integrity, hash leakage, class support). Read-only; fails when no prepared dataset exists yet."
+    },
+    "MTSD-Dataset-Audit": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/audit_dataset_pipeline.py",
+      "env": "MDWD",
+      "defaultArgs": ["--dry-run"],
+      "training": false,
+      "description": "Read-only MTSD dataset-pipeline state audit: group discovery, vocabulary consistency, scope vs QA gate reconciliation, attribute-manifest cross-check, prepared-dataset status. Default prints only; drop --dry-run via -Args to write the timestamped JSON+MD report."
+    },
+    "MTSD-Aug-Ablation": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py",
+      "env": "MDWD",
+      "defaultArgs": ["--matrix", "aug_ablation", "--dataset-variant", "unaugmented", "--final"],
+      "training": true,
+      "description": "RUNS TRAINING: MTSD augmentation-ablation arm on the UNAUGMENTED variant (YOLO11m/12m/26m). The augmented arm of the ablation reuses the dissertation-matrix runs on MTSD-Augmented."
     },
     "MTSD-Refresh-QA-Gate": {
       "type": "python",
@@ -119,6 +143,30 @@
       "defaultArgs": ["--dataset", "MTSD", "--split", "test", "--prompts", "traffic sign", "--models", "sam3", "--max-images", "25", "--dry-run"],
       "training": false,
       "description": "PromptDetect batch evaluation. Default args are a safe dry-run; pass -Args for a real run."
+    },
+    "MTSD-AnnotationQA-Review-UI": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-AnnotationQA/review_app.py",
+      "env": "mtsd-base",
+      "defaultArgs": [],
+      "training": false,
+      "description": "Local web app for reviewing the latest annotation audit (saves review decisions only, never edits annotation JSON). Long-running server; stop with Ctrl+C."
+    },
+    "MTSD-AnnotationQA-Apply-Preview": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/MTSD-AnnotationQA/apply_fixes.py",
+      "env": "mtsd-base",
+      "defaultArgs": ["--decisions", "latest", "--dry-run"],
+      "training": false,
+      "description": "Preview what the latest review decisions would change (dry run; annotations untouched). A real apply requires -Args '--decisions latest --apply' and the tool's own confirmations."
+    },
+    "PromptDetect-Dissertation-Plan": {
+      "type": "python",
+      "path": "Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_protocol.py",
+      "env": "mtsd-base",
+      "defaultArgs": ["--dataset", "both", "--split", "test", "--dry-run"],
+      "training": false,
+      "description": "Validate the fixed targeted-v1 PromptDetect dissertation protocol for MDWD+MTSD without loading models (read-only plan)."
     },
     "PromptDetect-Dissertation-MDWD": {
       "type": "python",
@@ -231,6 +279,69 @@
       "defaultArgs": ["--help"],
       "training": false,
       "description": "Error-analysis image sampler (FP/FN/duplicate/low-conf). Needs -Args, e.g. '--dataset PromptDetect --latest'."
+    },
+    "AttrCls-List-Variants": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/AttributeClassification/run_all.py",
+      "env": "mtsd-attrcls",
+      "noUserSite": true,
+      "defaultArgs": ["--list-variants"],
+      "training": false,
+      "description": "List every configured MTSD attribute-classifier variant (DINOv3, V-JEPA 2.1, ConvNeXt, LingBot-Vision; sizes and adaptations) with metadata. Read-only."
+    },
+    "AttrCls-Plan": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/AttributeClassification/run_all.py",
+      "env": "mtsd-attrcls",
+      "noUserSite": true,
+      "defaultArgs": ["--plan", "--profile", "size_ablation_all"],
+      "training": false,
+      "description": "Resolved 16-variant size-ablation experiment plan (read-only: no manifest refresh, no model loading, no training)."
+    },
+    "AttrCls-Size-Ablation-Frozen": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/AttributeClassification/run_all.py",
+      "env": "mtsd-attrcls",
+      "noUserSite": true,
+      "defaultArgs": ["--profile", "size_ablation_frozen"],
+      "training": true,
+      "description": "TRAINS the 8 frozen linear-probe size-ablation variants (all four backbone families, base+large)."
+    },
+    "AttrCls-Size-Ablation-Adapted": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/AttributeClassification/run_all.py",
+      "env": "mtsd-attrcls",
+      "noUserSite": true,
+      "defaultArgs": ["--profile", "size_ablation_adapted"],
+      "training": true,
+      "description": "TRAINS the 8 adapted size-ablation variants (LoRA for the SSL backbones, full fine-tuning for ConvNeXt)."
+    },
+    "AttrCls-Size-Ablation-All": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/AttributeClassification/run_all.py",
+      "env": "mtsd-attrcls",
+      "noUserSite": true,
+      "defaultArgs": ["--profile", "size_ablation_all"],
+      "training": true,
+      "description": "TRAINS the complete 16-variant size-ablation matrix and writes the consolidated reports."
+    },
+    "AttrCls-Smoke": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/AttributeClassification/run_all.py",
+      "env": "mtsd-attrcls",
+      "noUserSite": true,
+      "defaultArgs": ["--smoke-test", "--variants", "convnext_frozen"],
+      "training": true,
+      "description": "One-variant end-to-end smoke test (tiny subset, 1 epoch, W&B disabled, checkpoints under *-smoke). Gated because it refreshes the manifest and loads a model."
+    },
+    "AttrCls-Compare-UI": {
+      "type": "python",
+      "path": "Scripts/MTSD-Scripts/AttributeClassification/inference/gradio_compare.py",
+      "env": "mtsd-attrcls",
+      "noUserSite": true,
+      "defaultArgs": [],
+      "training": false,
+      "description": "Local web app comparing trained attribute-classifier checkpoints side by side (all four families, any size/adaptation). Long-running server; stop with Ctrl+C."
     }
   }
 }

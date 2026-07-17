@@ -341,6 +341,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Review MTSD annotation QA findings (writes decisions only).")
     parser.add_argument("--audit", type=Path, default=None, help="Audit folder (default: latest).")
     parser.add_argument("--port", type=int, default=7861)
+    parser.add_argument("--no-browser", action="store_true",
+                        help="Do not open a browser tab (the UVB launcher opens one after readiness)")
     args = parser.parse_args()
 
     audit_dir = args.audit or config.latest_audit_dir()
@@ -348,7 +350,7 @@ def main() -> int:
         print("No audit found. Run scan_annotations.py first.")
         return 1
     demo = build_app(Path(audit_dir))
-    demo.launch(server_port=args.port, inbrowser=True)
+    demo.launch(server_port=args.port, inbrowser=not args.no_browser)
     return 0
 
 
