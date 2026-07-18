@@ -176,6 +176,55 @@ def build_app(audit_dir: Path):
     duplicate_findings = read_csv(audit_dir / "duplicate_candidates.csv")
     store = DecisionStore(audit_dir)
 
+    decided_attributes = {
+        (d.get("qa_file"), str(d.get("annotation_id")), d.get("attribute"))
+        for d in store.payload.get("decisions", [])
+        if d.get("type") == "set_attribute"
+    }
+    deleted_annotations = {
+        (d.get("qa_file"), str(d.get("annotation_id")))
+        for d in store.payload.get("decisions", [])
+        if d.get("type") == "delete_annotation"
+    }
+    reviewed_duplicate_pairs = {
+        (
+            d.get("qa_file"),
+            frozenset({str(d.get("annotation_id_a")), str(d.get("annotation_id_b"))}),
+        )
+        for d in store.payload.get("decisions", [])
+        if d.get("type") == "keep_both"
+    }
+    attribute_findings = [
+        finding for finding in attribute_findings
+        if (
+            finding.get("qa_file"),
+            str(finding.get("annotation_id")),
+            finding.get("attribute"),
+        ) not in decided_attributes
+        and (
+            finding.get("qa_file"),
+            str(finding.get("annotation_id")),
+        ) not in deleted_annotations
+    ]
+    duplicate_findings = [
+        finding for finding in duplicate_findings
+        if (
+            finding.get("qa_file"),
+            frozenset({
+                str(finding.get("annotation_id_a")),
+                str(finding.get("annotation_id_b")),
+            }),
+        ) not in reviewed_duplicate_pairs
+        and (
+            finding.get("qa_file"),
+            str(finding.get("annotation_id_a")),
+        ) not in deleted_annotations
+        and (
+            finding.get("qa_file"),
+            str(finding.get("annotation_id_b")),
+        ) not in deleted_annotations
+    ]
+
     # ----- attribute tab callbacks -----
     def show_attribute(index: int):
         if not attribute_findings:

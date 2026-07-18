@@ -43627,7 +43627,7 @@
         "view_angle": "Side",
         "mounting": "Pole-Mounted",
         "condition": "Heavily Damaged",
-        "sign_shape": "Triangular",
+        "sign_shape": "Damaged-Unknown",
         "label_studio_region_id": "a4ad4b01f0",
         "label_studio_annotation_id": "a4ad4b01f0",
         "rotation": 0,

@@ -9946,6 +9946,30 @@
       }
     },
     {
+      "id": 58,
+      "image_id": 23,
+      "category_id": 2,
+      "bbox": [
+        2042.8,
+        4785.81,
+        39.54,
+        42.69
+      ],
+      "area": 1687.9626,
+      "iscrowd": 0,
+      "segmentation": [],
+      "attributes": {
+        "view_angle": "Front",
+        "mounting": "Pole-Mounted",
+        "condition": "Good",
+        "sign_shape": "Octagonal",
+        "label_studio_region_id": "a2985f0f4a",
+        "label_studio_annotation_id": "a2985f0f4a",
+        "rotation": 0,
+        "origin": "manual"
+      }
+    },
+    {
       "id": 59,
       "image_id": 23,
       "category_id": 2,
@@ -28418,7 +28442,7 @@
         "view_angle": "Back",
         "mounting": "Pole-Mounted",
         "condition": "Heavily Damaged",
-        "sign_shape": "Triangular",
+        "sign_shape": "Damaged-Unknown",
         "label_studio_region_id": "9345945ee8",
         "label_studio_annotation_id": "9345945ee8",
         "rotation": 0,
@@ -45962,7 +45986,7 @@
         "view_angle": "Back",
         "mounting": "Pole-Mounted",
         "condition": "Heavily Damaged",
-        "sign_shape": "Circular",
+        "sign_shape": "Damaged-Unknown",
         "label_studio_region_id": "5f0c41481e",
         "label_studio_annotation_id": "5f0c41481e",
         "rotation": 0,
