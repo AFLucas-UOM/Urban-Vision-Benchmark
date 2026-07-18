@@ -17,7 +17,7 @@ from .augmentation import augment_image
 from .dataset_validation import validate_prepared
 from .manifests import sha256_file, write_csv, write_manifest
 from .qa_gate import enforce_qa_gate, load_qa_gate
-from .splitting import assign_splits
+from .splitting import ALGORITHM_VERSION as SPLIT_ALGORITHM_VERSION, assign_splits
 from .utils import git_commit
 
 SPLITS = ("train", "valid", "test")
@@ -254,7 +254,7 @@ def prepare(config: dict[str, Any], variants: str = "both", allow_raw_xml: bool 
             "approved_groups": annotation_cfg.get("approved_groups", []),
             "groups": groups, "class_names": CLASS_NAMES, "qa_id_to_contiguous": {str(i + 1): i for i in range(12)},
             "qa_gate": {**gate, "override_used": acknowledge_open_qa_gate},
-            "split": {"algorithm_version": "v1", "ratios": config["split"]["ratios"], "seed": config["split"]["seed"], "mode": "random-per-group"},
+            "split": {"algorithm_version": SPLIT_ALGORITHM_VERSION, "ratios": config["split"]["ratios"], "seed": config["split"]["seed"], "mode": "random-per-group-hash-grouped"},
             "counts": {"original_images": len(records), "original_boxes": sum(len(r["clean_boxes"]) for r in records),
                        "augmented_images": len(aug_rows), "final_images": len(records) + len(aug_rows),
                        "final_boxes": sum(len(r["clean_boxes"]) for r in records) + sum(len(r["clean_boxes"]) for r in records if r["split"] == "train") * (int(config["augmentation"]["copies_per_image"]) if aug_rows else 0),

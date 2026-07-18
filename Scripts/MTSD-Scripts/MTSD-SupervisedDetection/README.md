@@ -11,6 +11,14 @@ python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --va
 
 Preparation creates `MTSD-Augmented` and `MTSD-Unaugmented` from one split assignment, each with YOLO and COCO layouts plus hashed manifests. Final mode requires the explicit GRP-1/2/3/5/6 lock and a resolved `config/qa_gate.yaml`; GRP-6 is listed explicitly but remains pending refreshed-audit approval. Auto discovery is development-only. Raw XML requires both fallback flags, creates a distinct mixed version, and is forbidden in final mode.
 
+Preparation now creates a mild motion-blurred third training copy (`aug3`) automatically. For a dataset that was already prepared with only `aug1` and `aug2`, add `aug3` to both YOLO and COCO layouts with:
+
+```powershell
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/add_mtsd_motion_blur_aug3.py
+```
+
+The command is deterministic and safe to rerun; it updates the augmentation and preparation manifests and validates the resulting dataset.
+
 Training requires `--matrix`, `--models`, or `--smoke-test`. Final dissertation training additionally requires `--final` and the augmented variant. Full runs use W&B project `MSc-MTSD-SupervisedDetection`; run directories and resume state are immutable and fingerprint-checked. The clean augmentation ablation is YOLO11m/12m/26m, with YOLO26l optional; RF-DETR is descriptive because its internal online augmentation is not fully controlled.
 
 ## Keeping the QA gate current
