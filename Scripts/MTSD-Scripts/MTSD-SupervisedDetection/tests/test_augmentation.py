@@ -83,12 +83,13 @@ def test_aug3_uses_motion_blur_recipe(tmp_path):
     destination = tmp_path / "source_aug3.png"
     ops = {**IDENTITY_OPS, "motion_blur": {
         "copy_index": 3, "direction": "horizontal",
-        "kernel_size": 5, "blur_weight": 0.85,
+        "kernel_size": 9, "blur_weight": 0.85,
     }}
     info = augment_image(source, destination, source.name, 3, 42, {"ops": ops})
     applied = json.loads(info["ops_applied"])
     assert set(applied) == {"motion_blur"}
+    assert applied["motion_blur"]["kernel_size"] == 9
     with Image.open(destination) as output:
         values = np.asarray(output)
-    assert values[5, 8, 0] > 0
-    assert values[5, 12, 0] > 0
+    assert values[5, 6, 0] > 0
+    assert values[5, 14, 0] > 0

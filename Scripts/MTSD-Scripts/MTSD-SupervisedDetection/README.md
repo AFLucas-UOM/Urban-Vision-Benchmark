@@ -9,9 +9,9 @@ python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --dr
 python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --validate-prepared --strict
 ```
 
-Preparation creates `MTSD-Augmented` and `MTSD-Unaugmented` from one split assignment, each with YOLO and COCO layouts plus hashed manifests. Final mode requires the explicit GRP-1/2/3/5/6 lock and a resolved `config/qa_gate.yaml`; GRP-6 is listed explicitly but remains pending refreshed-audit approval. Auto discovery is development-only. Raw XML requires both fallback flags, creates a distinct mixed version, and is forbidden in final mode.
+Preparation creates `MTSD-Augmented` and `MTSD-Unaugmented` from one split assignment, each with YOLO and COCO layouts plus hashed manifests. Final mode requires the explicit GRP-1 through GRP-11 lock and a resolved `config/qa_gate.yaml`. Auto discovery is development-only. Raw XML requires both fallback flags, creates a distinct mixed version, and is forbidden in final mode.
 
-Preparation now creates a mild motion-blurred third training copy (`aug3`) automatically. For a dataset that was already prepared with only `aug1` and `aug2`, add `aug3` to both YOLO and COCO layouts with:
+Preparation now creates a horizontal motion-blurred third training copy (`aug3`) automatically using a kernel size of 9 and blur weight of 0.85. For a dataset that was already prepared with only `aug1` and `aug2`, add `aug3` to both YOLO and COCO layouts with:
 
 ```powershell
 python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/add_mtsd_motion_blur_aug3.py
