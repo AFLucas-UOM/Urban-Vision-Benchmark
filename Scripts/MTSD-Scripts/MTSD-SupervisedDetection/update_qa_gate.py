@@ -51,6 +51,7 @@ DEFAULT_QA_GATE_PATH = HERE / "config" / "qa_gate.yaml"
 DEFAULT_ANNOTATIONS_ROOT_REL = "Datasets/MTSD/Annotations"
 DEFAULT_AUDIT_ROOT_REL = "Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs"
 AUDIT_SUMMARY_NAME = "audit_summary.json"
+REVIEWED_DECISIONS_NAME = "reviewed_decisions.json"
 BACKUP_MARKERS = (".bak", "pre-migration", "pre-qa-fix", "backup", ".orig", "_old")
 
 
@@ -181,7 +182,7 @@ def discover_latest_audit(audit_root: Path) -> dict[str, Any]:
     """
     if not audit_root.is_dir():
         return {"found": False, "path": None, "timestamp": None,
-                "audited_groups": [], "finding_counts": {}}
+                "audited_groups": [], "finding_counts": {}, "review": {}}
     candidates: list[tuple[datetime, Path, dict[str, Any]]] = []
     for entry in sorted(p for p in audit_root.glob("audit-*") if p.is_dir()):
         summary_path = entry / AUDIT_SUMMARY_NAME
@@ -203,7 +204,7 @@ def discover_latest_audit(audit_root: Path) -> dict[str, Any]:
         candidates.append((sort_key, entry, payload))
     if not candidates:
         return {"found": False, "path": None, "timestamp": None,
-                "audited_groups": [], "finding_counts": {}}
+                "audited_groups": [], "finding_counts": {}, "review": {}}
     candidates.sort(key=lambda item: item[0])
     _, entry, payload = candidates[-1]
     audited_groups = sorted(
@@ -212,14 +213,59 @@ def discover_latest_audit(audit_root: Path) -> dict[str, Any]:
         key=_group_number,
     )
     totals = payload.get("totals", {})
+    raw_duplicate_count = totals.get("duplicate_pair_findings")
+    reviewed_duplicate_count = count_reviewed_duplicate_candidates(entry)
+    if raw_duplicate_count is None:
+        unresolved_duplicate_count = None
+    else:
+        unresolved_duplicate_count = max(0, int(raw_duplicate_count) - reviewed_duplicate_count)
     finding_counts = {
         "invalid_attribute_values": totals.get("invalid_attribute_findings"),
-        "duplicate_candidates": totals.get("duplicate_pair_findings"),
+        "duplicate_candidates": unresolved_duplicate_count,
         "missing_attributes": totals.get("missing_attribute_findings"),
         "reference_problems": totals.get("reference_problem_findings"),
     }
     return {"found": True, "path": entry, "timestamp": payload.get("generated_at"),
-            "audited_groups": audited_groups, "finding_counts": finding_counts}
+            "audited_groups": audited_groups, "finding_counts": finding_counts,
+            "review": {
+                "raw_duplicate_candidates": raw_duplicate_count,
+                "reviewed_duplicate_candidates": reviewed_duplicate_count,
+                "unresolved_duplicate_candidates": unresolved_duplicate_count,
+            }}
+
+
+def count_reviewed_duplicate_candidates(audit_dir: Path) -> int:
+    """Count duplicate-candidate rows explicitly reviewed as keep-both."""
+    duplicates_path = audit_dir / "duplicate_candidates.csv"
+    decisions_path = audit_dir / REVIEWED_DECISIONS_NAME
+    if not duplicates_path.is_file() or not decisions_path.is_file():
+        return 0
+    try:
+        import csv
+
+        with duplicates_path.open(encoding="utf-8", newline="") as handle:
+            duplicate_pairs = {
+                (
+                    row["qa_file"],
+                    frozenset({str(row["annotation_id_a"]), str(row["annotation_id_b"])}),
+                )
+                for row in csv.DictReader(handle)
+            }
+        decisions = json.loads(decisions_path.read_text(encoding="utf-8")).get("decisions", [])
+    except Exception:
+        return 0
+    reviewed_pairs = {
+        (
+            decision.get("qa_file"),
+            frozenset({
+                str(decision.get("annotation_id_a")),
+                str(decision.get("annotation_id_b")),
+            }),
+        )
+        for decision in decisions
+        if decision.get("type") == "keep_both"
+    }
+    return len(duplicate_pairs & reviewed_pairs)
 
 
 # --- resolution status + acknowledgement ----------------------------------------
@@ -353,6 +399,7 @@ def build_report(*, mode: str, discovery: dict, current_scope: list[str], propos
             "path": _relativize(audit["path"], repo_root) if audit["found"] else None,
             "timestamp": audit["timestamp"],
             "audited_groups": audit["audited_groups"],
+            "review": audit.get("review", {}),
         },
         "approved_but_unaudited_groups": unaudited,
         "invalid_attribute_value_count": gate["finding_counts"]["invalid_attribute_values"],
@@ -389,6 +436,10 @@ def _print_report(report: dict, as_json: bool) -> None:
     print(f"Audit path         : {audit['path']}")
     print(f"Audit timestamp    : {audit['timestamp']}")
     print(f"Audited groups     : {audit['audited_groups']}")
+    review = audit.get("review") or {}
+    if review:
+        print(f"Raw duplicate candidates     : {review.get('raw_duplicate_candidates')}")
+        print(f"Reviewed duplicate candidates: {review.get('reviewed_duplicate_candidates')}")
     print(f"Approved but unaudited groups: {report['approved_but_unaudited_groups'] or '(none)'}")
     print(f"Invalid attribute value count: {report['invalid_attribute_value_count']}")
     print(f"Duplicate candidate count    : {report['duplicate_candidate_count']}")
