@@ -10,6 +10,35 @@ IOU_THRESHOLDS = [round(0.50 + 0.05 * index, 2) for index in range(10)]
 MAX_DETS = [1, 10, 100]
 
 
+def _best_f1_metrics(evaluator) -> dict[str, float]:
+    import numpy as np
+
+    iou_index = int(np.flatnonzero(np.isclose(evaluator.params.iouThrs, 0.50))[0])
+    max_det_index = list(evaluator.params.maxDets).index(100)
+    recall_thresholds = evaluator.params.recThrs
+    raw_precision = evaluator.eval["precision"][iou_index, :, :, 0, max_det_index]
+    raw_scores = evaluator.eval["scores"][iou_index, :, :, 0, max_det_index]
+    precision = raw_precision.astype(float)
+    precision[precision < 0] = np.nan
+    denominator = precision + recall_thresholds[:, None]
+    f1_by_class = np.divide(2 * precision * recall_thresholds[:, None], denominator,
+                            out=np.full_like(precision, np.nan), where=denominator > 0)
+    valid_counts = np.sum(~np.isnan(f1_by_class), axis=1)
+    macro_f1 = np.divide(np.nansum(f1_by_class, axis=1), valid_counts,
+                         out=np.full_like(recall_thresholds, np.nan, dtype=float), where=valid_counts > 0)
+    if np.all(np.isnan(macro_f1)):
+        return {"precision": 0.0, "recall": 0.0, "f1": 0.0, "f1_score_threshold": 0.0}
+    best_index = int(np.nanargmax(macro_f1))
+    valid = raw_precision[best_index] >= 0
+    scores = raw_scores[best_index, valid]
+    return {
+        "precision": float(np.nanmean(precision[best_index])),
+        "recall": float(recall_thresholds[best_index]),
+        "f1": float(macro_f1[best_index]),
+        "f1_score_threshold": float(np.mean(scores)) if scores.size else 0.0,
+    }
+
+
 def safe_unified_evaluation(evaluator, require: bool = False) -> dict[str, Any]:
     try:
         return {"unified_eval_status": "completed", "unified_eval_error": None,
@@ -65,13 +94,16 @@ def coco_eval(annotation_file: Path, predictions_file: Path) -> dict[str, Any]:
                 "max_dets": MAX_DETS, "prediction_count": len(rows),
                 "evaluated_image_count": len(annotation_payload.get("images", []))}
     if not rows:
-        return {"map50_95": 0.0, "map50": 0.0, "map75": 0.0, "ar100": 0.0, **metadata}
+        return {"map50_95": 0.0, "map50": 0.0, "map75": 0.0, "ar100": 0.0,
+                "precision": 0.0, "recall": 0.0, "f1": 0.0,
+                "f1_score_threshold": 0.0, **metadata}
     predictions = truth.loadRes(str(predictions_file))
     evaluator = COCOeval(truth, predictions, "bbox")
     evaluator.params.maxDets = MAX_DETS
     evaluator.evaluate(); evaluator.accumulate(); evaluator.summarize()
     return {"map50_95": float(evaluator.stats[0]), "map50": float(evaluator.stats[1]),
-            "map75": float(evaluator.stats[2]), "ar100": float(evaluator.stats[8]), **metadata}
+            "map75": float(evaluator.stats[2]), "ar100": float(evaluator.stats[8]),
+            **_best_f1_metrics(evaluator), **metadata}
 
 
 def export_yolo_predictions(checkpoint: Path, coco_dir: Path, split: str, output: Path,
