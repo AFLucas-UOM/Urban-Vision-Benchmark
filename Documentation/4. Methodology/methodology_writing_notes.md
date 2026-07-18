@@ -67,6 +67,21 @@ The chapter is written past-tense per the drafting instruction. At commit `cee7d
 3. Whether YOLO26l stays in the ablation (config lists it as optional; chapter includes it only in the matrix, not the ablation trio).
 4. Whether the MDWD collection-details placeholders are filled from the EUVIP paper or dropped.
 
+## Revision 2026-07-18 (commit 0c344db)
+
+Chapter revised against the current repository state (inspected 18 July 2026):
+
+1. **MTSD annotation/QA complete.** All eleven groups have Final-QA; terminal audit `audit-20260718-113454` reports 0 invalid values / 0 duplicate candidates; `qa_gate.yaml` **resolved** over GRP-1..11. The Damaged-Unknown claim ("no value survives") verified directly: 0 of 20,509 annotations.
+2. **Counts corrected and filled from primary artefacts.** Raw/annotated totals are now **7,482 images / 20,509 instances** (GRP-10 = 779 images, not 789; GRP-5 = 1,839 instances, not 1,841; ~10 images and 27 annotations removed in the final QA resolution pass). The stale figure 7,492 was removed from this chapter and the Introduction. Group, class-distribution and attribute-distribution tables filled by direct count over `QA-GRP*.json` (18 July 2026). The on-disk EDA CSVs still reflect the 17 July pre-resolution snapshot (7,492/20,536, 31 Damaged-Unknown) — **regenerate the final EDA** so its CSVs reproduce the chapter's numbers.
+3. **Prepared datasets built** (`mtsd-qa-v1-aug` / `mtsd-qa-v1-noaug`, prepared 18 July 2026): splits 5,986/749/747 images (16,535/1,996/1,978 boxes), 23,944 augmented train images; validation findings (6 clipped boxes, 2 boxless GRP-7 images, 1,273 EXIF-normalised COCO copies) documented in §Dataset Preparation. MTSD training itself **not yet run** (`Results/MTSD-Runs` empty).
+4. **Augmentation recipe updated** to `photometric-v1+motion-blur-v1`: `copies_per_image: 3`; copy 3 = deterministic horizontal motion blur (kernel 9, weight 0.85). Chapter text, table `tab:mtsd-aug` and the ablation wording updated; optional YOLO26-L ablation extension noted.
+5. **Prompt-sensitivity protocol documented** (new §Prompt-Sensitivity Protocol, label `subsec:prompt-sensitivity`): prompt-sensitivity-v1, 9 families x 4 variants = 36 prompts, family validation, spread/degradation statistics, prediction-consistency analysis, dual-stage execution. Source: `batch_evaluation/prompt_protocols/prompt_sensitivity_protocol.yaml` + `Documents/PromptDetect-Prompt-Sensitivity-Protocol.md`.
+6. **Statistical-analysis wording corrected** (closes verification gap 6): the attribute bootstrap reconstructs per-crop outcomes from stored confusion matrices (verified in `bootstrap_uncertainty.py`); the former "per-crop prediction records" sentence was wrong and is fixed, with the cross-head-correlation caveat added.
+7. **MDWD QA:** polygon-format adjudication sentence added (integrity-report FAIL reconciled per Summary.md 2026-07-11 audit note) — closes scope-audit conflict 5.
+8. **New §Automation, Verification and Test Infrastructure** under Reproducibility: workflow registry/runner (training gate, dry-run, headless notebooks), repository health verifier (local pre-commit/pre-push; CI deliberately omitted), dataset-pipeline audit script, pytest suites incl. consumer-compatibility tests, managed application launcher. Label Studio import-preparation and QA-Formatter tooling now described in §MTSD QA.
+9. **Placeholder ledger status:** filled — mtsd-collection-period (Nov 2025–Jan 2026), EXIF/GPS coverage (72.6% timestamps / 57.9% decodable GPS, computed 18 July over all 7,482 files), all grp-*/cls-*/va-mt-cond-sh values, mtsd-prepared-* splits, attr-final-crops (stated as the 13,862-crop eight-group snapshot pending the scope decision), rfdetr-n (30,157,870 from the E001 training log). **Still open:** `mdwd-collection-period`, `mdwd-capture-devices` (EUVIP paper), `rfdetr-s`, `rfdetr-m` (models not yet instantiated).
+10. **Not documented on purpose:** the 2026-07-16/17 interpretability workflow was never committed and no longer exists in the repository; it must not be described in the chapter.
+
 ## Revision 2026-07-16/17 (commit 2d70be27)
 
 Chapter revised for the current attribute-classification state:
