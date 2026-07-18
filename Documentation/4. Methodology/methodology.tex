@@ -6,11 +6,18 @@
 % Drafted against repository commit cee7dc6a (inspected 11 July 2026);
 % revised against commit 2d70be27 (inspected 16 July 2026): the attribute
 % study now covers four backbone families (adding LingBot-Vision), the
-% completed 16-variant size/adaptation matrix. Written under the final-state assumption
-% documented in methodology_writing_notes.md. All procedures are described
-% as executed; numeric values that can only be produced by the assumed-final
-% artefacts are marked with the \TBD{...} placeholder macro and enumerated
-% in the writing notes. Attribute-variant parameter counts were introspected
+% completed 16-variant size/adaptation matrix. Revised against commit
+% 0c344db (inspected 18 July 2026): MTSD annotation/QA complete over all
+% eleven groups (QA gate resolved 18 July 2026); prepared datasets
+% mtsd-qa-v1-aug/-noaug built; augmentation recipe now
+% photometric-v1+motion-blur-v1 (three copies per image); dataset tables
+% filled from the Final-QA exports and prepared-dataset manifests; the
+% prompt-sensitivity protocol (prompt-sensitivity-v1) documented.
+% Written under the final-state assumption documented in
+% methodology_writing_notes.md. All procedures are described as executed;
+% numeric values that can only be produced by the assumed-final artefacts
+% are marked with the \TBD{...} placeholder macro and enumerated in the
+% writing notes. Attribute-variant parameter counts were introspected
 % from the saved run artefacts (outputs/reports/size_ablation.csv and
 % checkpoint metadata), not copied from vendor tables. No experimental
 % outcomes are reported in this chapter.
@@ -145,30 +152,30 @@ Orange CMD & 14\,872 & 14\,716 & 78 & 78 \\
 \subsection{Maltese Traffic Sign Dataset}
 \label{subsec:mtsd-methodology}
 
-MTSD is a street-level dataset of Maltese traffic-sign and roadside-sign infrastructure collected in eleven groups (GRP-1 through GRP-11) totalling 7\,492 raw smartphone photographs, captured across Maltese localities during \TBD{mtsd-collection-period}. All eleven groups completed annotation and quality assurance, and the final annotation scope comprises all eleven groups: \TBD{mtsd-imgs-final} annotated images containing \TBD{mtsd-inst-final} sign instances. Capture used consumer smartphones at pedestrian level; EXIF metadata, including capture time and GPS position where recorded, was profiled during EDA (\TBD{mtsd-final-exif-coverage} of images carried EXIF timestamps and \TBD{mtsd-final-gps-coverage} carried GPS tags in the final scope). Burst near-duplicates were identified during EDA and handled during quality assurance rather than silently deleted. Table~\ref{tab:mtsd-groups} lists the per-group composition.
+MTSD is a street-level dataset of Maltese traffic-sign and roadside-sign infrastructure collected in eleven groups (GRP-1 through GRP-11) totalling 7\,482 curated smartphone photographs, captured across Maltese localities between November 2025 and January 2026. All eleven groups completed annotation and quality assurance, and the final annotation scope comprises the full collection: 7\,482 images containing 20\,509 sign instances (two images, both in GRP-7, contain no object of the annotation taxonomy and carry no boxes). Capture used consumer smartphones at pedestrian level; EXIF metadata, including capture time and GPS position where recorded, was profiled during EDA: in the final scope, 72.6\% of images carried EXIF capture timestamps and 57.9\% carried decodable GPS coordinates, the difference reflecting device settings and messaging-app transfers that strip metadata. Burst near-duplicates were identified during EDA and handled during quality assurance rather than silently deleted; the small number of images removed in that resolution pass is the reason group totals slightly undercut the originally captured volumes. Table~\ref{tab:mtsd-groups} lists the per-group composition.
 
 \begin{table}[htbp]
 \centering
-\caption{MTSD collection groups. Raw counts were verified from the on-disk group folders; annotated-image and instance counts refer to the final Final-QA exports of the complete eleven-group scope.}
+\caption{MTSD collection groups after the final quality-assurance resolution pass. Image counts were verified independently from the on-disk group folders and from the Final-QA exports, which agree exactly; instance counts refer to the Final-QA exports of the complete eleven-group scope. Two GRP-7 images contain no taxonomy object and therefore carry no instances.}
 \label{tab:mtsd-groups}
 \small
-\begin{tabular}{lrrr}
+\begin{tabular}{lrr}
 \hline
-\textbf{Group} & \textbf{Raw images} & \textbf{Annotated images} & \textbf{Instances} \\
+\textbf{Group} & \textbf{Images} & \textbf{Instances} \\
 \hline
-GRP-1 & 724 & 724 & 1\,960 \\
-GRP-2 & 630 & 630 & 1\,621 \\
-GRP-3 & 617 & 617 & 1\,844 \\
-GRP-4 & 875 & \TBD{grp4-img} & \TBD{grp4-inst} \\
-GRP-5 & 657 & 657 & 1\,841 \\
-GRP-6 & 470 & 470 & 1\,106 \\
-GRP-7 & 710 & 710 & 1\,891 \\
-GRP-8 & 703 & \TBD{grp8-img} & \TBD{grp8-inst} \\
-GRP-9 & 715 & \TBD{grp9-img} & \TBD{grp9-inst} \\
-GRP-10 & 789 & \TBD{grp10-img} & \TBD{grp10-inst} \\
-GRP-11 & 602 & \TBD{grp11-img} & \TBD{grp11-inst} \\
+GRP-1 & 724 & 1\,960 \\
+GRP-2 & 630 & 1\,621 \\
+GRP-3 & 617 & 1\,844 \\
+GRP-4 & 875 & 2\,314 \\
+GRP-5 & 657 & 1\,839 \\
+GRP-6 & 470 & 1\,106 \\
+GRP-7 & 710 & 1\,891 \\
+GRP-8 & 703 & 1\,869 \\
+GRP-9 & 715 & 2\,225 \\
+GRP-10 & 779 & 2\,334 \\
+GRP-11 & 602 & 1\,506 \\
 \hline
-Total & 7\,492 & \TBD{mtsd-imgs-final} & \TBD{mtsd-inst-final} \\
+Total & 7\,482 & 20\,509 \\
 \hline
 \end{tabular}
 \end{table}
@@ -179,25 +186,25 @@ Inclusion rules confined annotation to public traffic infrastructure: official t
 
 \begin{table}[htbp]
 \centering
-\caption{MTSD detection-class distribution (final eleven-group scope, regenerated from the final EDA export).}
+\caption{MTSD detection-class distribution (final eleven-group scope, computed from the Final-QA exports; 20\,509 instances).}
 \label{tab:mtsd-class-dist}
 \small
 \begin{tabular}{lrr}
 \hline
 \textbf{Class} & \textbf{Instances} & \textbf{Share (\%)} \\
 \hline
-Pedestrian Crossing & \TBD{cls-pc} & \TBD{cls-pc-pct} \\
-Stop Sign & \TBD{cls-stop} & \TBD{cls-stop-pct} \\
-No Entry (One Way) & \TBD{cls-ne} & \TBD{cls-ne-pct} \\
-Roundabout Ahead & \TBD{cls-ra} & \TBD{cls-ra-pct} \\
-No Through Road (T-Junction) & \TBD{cls-ntr} & \TBD{cls-ntr-pct} \\
-Blind-Spot Mirror (Convex Mirror) & \TBD{cls-bsm} & \TBD{cls-bsm-pct} \\
-Street Sign & \TBD{cls-ss} & \TBD{cls-ss-pct} \\
-Directional Sign & \TBD{cls-ds} & \TBD{cls-ds-pct} \\
-Tourist Sign & \TBD{cls-ts} & \TBD{cls-ts-pct} \\
-Auxiliary Sign & \TBD{cls-as} & \TBD{cls-as-pct} \\
-Back-Unknown & \TBD{cls-bu} & \TBD{cls-bu-pct} \\
-Other-Unknown & \TBD{cls-ou} & \TBD{cls-ou-pct} \\
+Pedestrian Crossing & 1\,456 & 7.10 \\
+Stop Sign & 1\,336 & 6.51 \\
+No Entry (One Way) & 2\,212 & 10.79 \\
+Roundabout Ahead & 801 & 3.91 \\
+No Through Road (T-Junction) & 537 & 2.62 \\
+Blind-Spot Mirror (Convex Mirror) & 1\,647 & 8.03 \\
+Street Sign & 1\,004 & 4.90 \\
+Directional Sign & 1\,126 & 5.49 \\
+Tourist Sign & 33 & 0.16 \\
+Auxiliary Sign & 1\,300 & 6.34 \\
+Back-Unknown & 6\,719 & 32.76 \\
+Other-Unknown & 2\,338 & 11.40 \\
 \hline
 \end{tabular}
 \end{table}
