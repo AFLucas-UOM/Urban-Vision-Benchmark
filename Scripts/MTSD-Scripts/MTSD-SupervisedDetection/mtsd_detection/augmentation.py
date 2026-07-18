@@ -12,7 +12,7 @@ from PIL import Image, ImageEnhance, ImageFilter, ImageOps
 from .utils import sha256_file
 
 
-def mild_motion_blur(image: Image.Image, kernel_size: int = 5,
+def mild_motion_blur(image: Image.Image, kernel_size: int = 9,
                      blur_weight: float = 0.85) -> Image.Image:
     """Apply a short horizontal exposure trail without changing geometry."""
     if kernel_size < 3 or kernel_size % 2 == 0:
@@ -44,7 +44,7 @@ def augment_image(source: Path, destination: Path, out_name: str, copy_index: in
         image = ImageOps.exif_transpose(raw).convert("RGB")
         motion = ops.get("motion_blur", {})
         if motion and copy_index == int(motion.get("copy_index", 3)):
-            kernel_size = int(motion.get("kernel_size", 5))
+            kernel_size = int(motion.get("kernel_size", 9))
             blur_weight = float(motion.get("blur_weight", 0.85))
             image = mild_motion_blur(image, kernel_size, blur_weight)
             applied["motion_blur"] = {

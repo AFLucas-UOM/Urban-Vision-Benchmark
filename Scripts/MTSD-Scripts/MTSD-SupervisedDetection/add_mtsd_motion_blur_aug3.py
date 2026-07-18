@@ -38,8 +38,9 @@ def _save_aug3(source: Path, destination: Path, kernel_size: int) -> None:
         image.save(destination, **save_args)
 
 
-def add_motion_blur_aug3(dataset_root: Path, kernel_size: int = 5,
-                         seed: int = 42) -> dict[str, int]:
+def add_motion_blur_aug3(dataset_root: Path, kernel_size: int = 9,
+                         seed: int = 42,
+                         refresh_existing: bool = False) -> dict[str, int]:
     manifest_path = dataset_root / "prep_manifest.json"
     aug_manifest_path = dataset_root / "augmentation_manifest.csv"
     split_manifest_path = dataset_root / "split_manifest.csv"
@@ -60,6 +61,10 @@ def add_motion_blur_aug3(dataset_root: Path, kernel_size: int = 5,
 
     existing_aug3 = {row["source_out_name"] for row in aug_rows
                      if int(row["copy_index"]) == 3}
+    aug3_rows = {
+        row["source_out_name"]: row for row in aug_rows
+        if int(row["copy_index"]) == 3
+    }
     originals = [row for row in payload["images"]
                  if not row.get("augmented_from") and row["file_name"] in split_rows]
     original_annotations: dict[int, list[dict[str, Any]]] = {}
@@ -69,9 +74,11 @@ def add_motion_blur_aug3(dataset_root: Path, kernel_size: int = 5,
     next_image_id = max((int(row["id"]) for row in payload["images"]), default=0) + 1
     next_annotation_id = max((int(row["id"]) for row in payload["annotations"]), default=0) + 1
     added = 0
+    refreshed = 0
     for original in sorted(originals, key=lambda row: row["file_name"]):
         source_name = original["file_name"]
-        if source_name in existing_aug3:
+        exists = source_name in existing_aug3
+        if exists and not refresh_existing:
             continue
         source = yolo / "images" / source_name
         stem, suffix = Path(source_name).stem, Path(source_name).suffix
@@ -84,21 +91,23 @@ def add_motion_blur_aug3(dataset_root: Path, kernel_size: int = 5,
                      yolo / "labels" / f"{stem}_aug3.txt")
         shutil.copy2(yolo_destination, coco / generated)
 
-        payload["images"].append({
-            "id": next_image_id, "file_name": generated,
-            "width": original["width"], "height": original["height"],
-            "mtsd_group": original.get("mtsd_group"),
-            "augmented_from": source_name,
-        })
-        for annotation in original_annotations.get(int(original["id"]), []):
-            copied = dict(annotation)
-            copied.update({"id": next_annotation_id, "image_id": next_image_id})
-            payload["annotations"].append(copied)
-            next_annotation_id += 1
-        next_image_id += 1
+        if not exists:
+            payload["images"].append({
+                "id": next_image_id, "file_name": generated,
+                "width": original["width"], "height": original["height"],
+                "mtsd_group": original.get("mtsd_group"),
+                "augmented_from": source_name,
+            })
+            for annotation in original_annotations.get(int(original["id"]), []):
+                copied = dict(annotation)
+                copied.update({"id": next_annotation_id, "image_id": next_image_id})
+                payload["annotations"].append(copied)
+                next_annotation_id += 1
+            next_image_id += 1
 
         seed_material = f"{seed}:{source_name}:3:motion-blur-v1"
-        aug_rows.append({
+        row = aug3_rows[source_name] if exists else {}
+        row.update({
             "source_out_name": source_name,
             "source_image_hash": split_rows[source_name]["source_image_sha256"],
             "split": "train", "copy_index": 3,
@@ -109,12 +118,18 @@ def add_motion_blur_aug3(dataset_root: Path, kernel_size: int = 5,
             "generated_image_hash": sha256_file(yolo_destination),
             "label_source": str(yolo / "labels" / f"{stem}.txt"),
         })
-        added += 1
+        if exists:
+            refreshed += 1
+        else:
+            aug_rows.append(row)
+            added += 1
 
-    if added == 0:
-        return {"added_images": 0, "total_aug3_images": len(existing_aug3)}
+    if added == 0 and refreshed == 0:
+        return {"added_images": 0, "refreshed_images": 0,
+                "total_aug3_images": len(existing_aug3)}
 
-    _atomic_json(coco_path, payload)
+    if added:
+        _atomic_json(coco_path, payload)
     fieldnames = list(aug_rows[0])
     write_csv(aug_manifest_path, aug_rows, fieldnames)
 
@@ -144,20 +159,25 @@ def add_motion_blur_aug3(dataset_root: Path, kernel_size: int = 5,
     if not validation["ok"]:
         raise RuntimeError("aug3 was written but dataset validation failed:\n" +
                            json.dumps(validation, indent=2))
-    return {"added_images": added,
+    return {"added_images": added, "refreshed_images": refreshed,
             "total_aug3_images": sum(int(row["copy_index"]) == 3 for row in aug_rows)}
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Add a mild motion-blurred aug3 copy to every MTSD training image.")
+        description="Add a horizontal motion-blurred aug3 copy to every MTSD training image.")
     parser.add_argument(
         "--dataset-root", type=Path,
         default=Path("Datasets/MTSD/Prepared/MTSD-Augmented"))
-    parser.add_argument("--kernel-size", type=int, default=5)
+    parser.add_argument("--kernel-size", type=int, default=9)
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument(
+        "--refresh-existing", action="store_true",
+        help="Overwrite existing aug3 files and refresh their manifest rows.")
     args = parser.parse_args()
-    result = add_motion_blur_aug3(args.dataset_root.resolve(), args.kernel_size, args.seed)
+    result = add_motion_blur_aug3(
+        args.dataset_root.resolve(), args.kernel_size, args.seed,
+        args.refresh_existing)
     print(json.dumps(result, indent=2))
 
 
