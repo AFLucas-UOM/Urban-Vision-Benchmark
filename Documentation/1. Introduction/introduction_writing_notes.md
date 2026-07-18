@@ -2,6 +2,14 @@
 
 Companion to `introduction.tex` and `introduction_scope_audit.md`. Commit `cee7dc6a`, 11 July 2026.
 
+## Revision 2026-07-18 (commit 0c344db)
+
+- **MTSD facts updated to the completed scope:** all eleven groups annotated + QA-resolved (gate resolved 18 July 2026); chapter now states **7,482 images / 20,509 instances** (the old "7,492 raw / six groups / 3,808 / 10,263" wording removed; GRP-10 is 779 images after the QA resolution pass).
+- **Objective 2 widened to MDWD + MTSD** (prepared datasets `mtsd-qa-v1-aug/-noaug` built 18 July; supervised pipeline final; training imminent) and now names the augmentation ablation. Contribution 2 updated to match. This supersedes the earlier "MTSD supervised excluded from objectives" decision.
+- **Objective 4 corrected** to four backbone families (adds LingBot-Vision) at two sizes; the assessment paragraph now says "sixteen-variant matrix" (was "six-variant" — a leftover from the pre-revision draft).
+- **Tightening pass:** Problem Definition ¶1 and ¶4 compressed (the ¶4 dimension list overlapped the Proposed Solution evaluation paragraph); future-work list no longer promises "additional annotated MTSD collection groups" (annotation is complete).
+- Mandated structure, objective enumeration and the verbatim lead-in sentence are unchanged.
+
 ## Unresolved repository conflicts
 
 1. **MDWD source/instance counts vs the EUVIP paper.** Chapter uses the repository-verified 3,598 unique sources and omits a manual-instance count because no repository artefact substantiates the paper's 11,461 figure (and export-level box counts are augmentation-inflated). If the EUVIP paper's 3,697/11,461 refer to a pre-v20 annotation set, decide whether the dissertation reports the collection-level figures (paper) or the working-release figures (repo v20), and state which release the number describes. **Supervisor/author decision required.**
