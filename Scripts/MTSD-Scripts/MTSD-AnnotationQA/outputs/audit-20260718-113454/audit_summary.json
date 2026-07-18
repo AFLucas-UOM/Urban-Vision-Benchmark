@@ -1,0 +1,129 @@
+{
+  "annotations_root": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations",
+  "qa_files_audited": 11,
+  "qa_files": [
+    "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+    "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+    "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+    "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+    "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+    "Datasets\\MTSD\\Annotations\\GRP-4\\Final-QA\\QA-GRP4.json",
+    "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+    "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+    "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+    "Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json",
+    "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json"
+  ],
+  "duplicate_iou": 0.95,
+  "overlap_iou": 0.75,
+  "verify_images": false,
+  "generated_at": "2026-07-18T11:34:55",
+  "schema": {
+    "view_angle": [
+      "Front",
+      "Back",
+      "Side"
+    ],
+    "mounting": [
+      "Pole-Mounted",
+      "Wall-Mounted"
+    ],
+    "condition": [
+      "Good",
+      "Weathered",
+      "Heavily Damaged"
+    ],
+    "sign_shape": [
+      "Circular",
+      "Quadrangle",
+      "Triangular",
+      "Octagonal",
+      "Pentagon"
+    ]
+  },
+  "totals": {
+    "missing_attribute_findings": 0,
+    "invalid_attribute_findings": 0,
+    "duplicate_pair_findings": 14,
+    "reference_problem_findings": 0
+  },
+  "per_group": [
+    {
+      "group": "GRP-1",
+      "annotations": 1960,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 724
+    },
+    {
+      "group": "GRP-10",
+      "annotations": 2334,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 3,
+      "images": 779
+    },
+    {
+      "group": "GRP-11",
+      "annotations": 1506,
+      "dup_conflicting_duplicate": 1,
+      "dup_high_overlap": 2,
+      "images": 602
+    },
+    {
+      "group": "GRP-2",
+      "annotations": 1621,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 3,
+      "images": 630
+    },
+    {
+      "group": "GRP-3",
+      "annotations": 1844,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 617
+    },
+    {
+      "group": "GRP-4",
+      "annotations": 2314,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 875
+    },
+    {
+      "group": "GRP-5",
+      "annotations": 1839,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 657
+    },
+    {
+      "group": "GRP-6",
+      "annotations": 1106,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 470
+    },
+    {
+      "group": "GRP-7",
+      "annotations": 1891,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 710
+    },
+    {
+      "group": "GRP-8",
+      "annotations": 1869,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 703
+    },
+    {
+      "group": "GRP-9",
+      "annotations": 2225,
+      "dup_conflicting_duplicate": 0,
+      "dup_high_overlap": 5,
+      "images": 715
+    }
+  ]
+}

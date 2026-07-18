@@ -81,7 +81,7 @@ Scripts/MTSD-Scripts/AttributeClassification/outputs/crops/
 
 # --- GDPR redaction previews ---------------------------------
 GDPR-Compliance-Preview/
-
+GDPR-Compliance-Preview-SAM31/
 # --- Logs and temporary files --------------------------------
 # Executed notebook copies from the automation runner (regenerable; can be large when training notebooks run headlessly).
 Scripts/Automation/executed/

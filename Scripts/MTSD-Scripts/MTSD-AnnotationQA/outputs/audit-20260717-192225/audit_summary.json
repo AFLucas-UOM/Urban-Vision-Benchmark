@@ -1,0 +1,151 @@
+{
+  "annotations_root": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations",
+  "qa_files_audited": 11,
+  "qa_files": [
+    "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+    "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+    "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+    "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+    "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+    "Datasets\\MTSD\\Annotations\\GRP-4\\Final-QA\\QA-GRP4.json",
+    "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+    "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+    "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+    "Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json",
+    "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json"
+  ],
+  "duplicate_iou": 0.95,
+  "overlap_iou": 0.75,
+  "verify_images": false,
+  "generated_at": "2026-07-17T19:22:25",
+  "schema": {
+    "view_angle": [
+      "Front",
+      "Back",
+      "Side"
+    ],
+    "mounting": [
+      "Pole-Mounted",
+      "Wall-Mounted"
+    ],
+    "condition": [
+      "Good",
+      "Weathered",
+      "Heavily Damaged"
+    ],
+    "sign_shape": [
+      "Circular",
+      "Quadrangle",
+      "Triangular",
+      "Octagonal",
+      "Pentagon"
+    ]
+  },
+  "totals": {
+    "missing_attribute_findings": 0,
+    "invalid_attribute_findings": 31,
+    "duplicate_pair_findings": 18,
+    "reference_problem_findings": 0
+  },
+  "per_group": [
+    {
+      "group": "GRP-1",
+      "annotations": 1960,
+      "attr_known_drop_value": 0,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 724
+    },
+    {
+      "group": "GRP-10",
+      "annotations": 2335,
+      "attr_known_drop_value": 2,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 4,
+      "images": 779
+    },
+    {
+      "group": "GRP-11",
+      "annotations": 1506,
+      "attr_known_drop_value": 4,
+      "dup_conflicting_duplicate": 1,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 2,
+      "images": 602
+    },
+    {
+      "group": "GRP-2",
+      "annotations": 1621,
+      "attr_known_drop_value": 1,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 3,
+      "images": 630
+    },
+    {
+      "group": "GRP-3",
+      "annotations": 1844,
+      "attr_known_drop_value": 1,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 617
+    },
+    {
+      "group": "GRP-4",
+      "annotations": 2314,
+      "attr_known_drop_value": 1,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 875
+    },
+    {
+      "group": "GRP-5",
+      "annotations": 1841,
+      "attr_known_drop_value": 3,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 1,
+      "dup_high_overlap": 1,
+      "images": 657
+    },
+    {
+      "group": "GRP-6",
+      "annotations": 1106,
+      "attr_known_drop_value": 3,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 470
+    },
+    {
+      "group": "GRP-7",
+      "annotations": 1891,
+      "attr_known_drop_value": 7,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 710
+    },
+    {
+      "group": "GRP-8",
+      "annotations": 1869,
+      "attr_known_drop_value": 2,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 0,
+      "images": 703
+    },
+    {
+      "group": "GRP-9",
+      "annotations": 2226,
+      "attr_known_drop_value": 7,
+      "dup_conflicting_duplicate": 0,
+      "dup_exact_duplicate": 0,
+      "dup_high_overlap": 6,
+      "images": 715
+    }
+  ]
+}

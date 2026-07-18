@@ -1,0 +1,424 @@
+{
+  "audit_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Scripts\\MTSD-Scripts\\MTSD-AnnotationQA\\outputs\\audit-20260717-192225",
+  "decisions": [
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "annotation_id": 828,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:24:54"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "annotation_id": 1559,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:25:07"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "annotation_id": 86,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:25:16"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "annotation_id": 667,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Quadrangle",
+      "decided_at": "2026-07-18T11:25:25"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "annotation_id": 1139,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:25:39"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "annotation_id": 1447,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:25:46"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+      "annotation_id": 1529,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:25:52"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "annotation_id": 1078,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:26:12"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-4\\Final-QA\\QA-GRP4.json",
+      "annotation_id": 534,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Quadrangle",
+      "decided_at": "2026-07-18T11:26:23"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "annotation_id": 66,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:26:29"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "annotation_id": 1114,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:26:37"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "annotation_id": 1443,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:26:43"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+      "annotation_id": 165,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:26:54"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+      "annotation_id": 913,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:26:59"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+      "annotation_id": 1067,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:27:05"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "annotation_id": 335,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Quadrangle",
+      "decided_at": "2026-07-18T11:27:11"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "annotation_id": 338,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:27:17"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "annotation_id": 670,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:27:24"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "annotation_id": 726,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:27:47"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "annotation_id": 727,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Quadrangle",
+      "decided_at": "2026-07-18T11:28:01"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "annotation_id": 1074,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Quadrangle",
+      "decided_at": "2026-07-18T11:28:05"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "annotation_id": 1208,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Octagonal",
+      "decided_at": "2026-07-18T11:28:26"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json",
+      "annotation_id": 201,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:28:36"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json",
+      "annotation_id": 1312,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Quadrangle",
+      "decided_at": "2026-07-18T11:29:02"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id": 128,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:29:09"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id": 358,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Quadrangle",
+      "decided_at": "2026-07-18T11:29:15"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id": 1228,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:29:20"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id": 1260,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:29:27"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id": 1356,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Triangular",
+      "decided_at": "2026-07-18T11:29:33"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id": 1413,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Quadrangle",
+      "decided_at": "2026-07-18T11:29:42"
+    },
+    {
+      "type": "set_attribute",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id": 1789,
+      "attribute": "sign_shape",
+      "old_value": "Damaged-Unknown",
+      "new_value": "Circular",
+      "decided_at": "2026-07-18T11:29:52"
+    },
+    {
+      "type": "delete_annotation",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "annotation_id": 58,
+      "reason": "duplicate of annotation 59 (IoU 0.9299, high_overlap)",
+      "decided_at": "2026-07-18T11:30:04"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "annotation_id_a": 1309,
+      "annotation_id_b": 1310,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:09"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "annotation_id_a": 1354,
+      "annotation_id_b": 1355,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:25"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "annotation_id_a": 1357,
+      "annotation_id_b": 1360,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:32"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "annotation_id_a": 269,
+      "annotation_id_b": 270,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:34"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "annotation_id_a": 573,
+      "annotation_id_b": 574,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:36"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "annotation_id_a": 1188,
+      "annotation_id_b": 1190,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:38"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+      "annotation_id_a": 190,
+      "annotation_id_b": 191,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:43"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+      "annotation_id_a": 201,
+      "annotation_id_b": 202,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:45"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+      "annotation_id_a": 1363,
+      "annotation_id_b": 1364,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:30:47"
+    },
+    {
+      "type": "delete_annotation",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "annotation_id": 855,
+      "reason": "duplicate of annotation 857 (IoU 0.8397, high_overlap)",
+      "decided_at": "2026-07-18T11:30:55"
+    },
+    {
+      "type": "delete_annotation",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "annotation_id": 1033,
+      "reason": "duplicate of annotation 1040 (IoU 1.0, exact_duplicate)",
+      "decided_at": "2026-07-18T11:30:59"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id_a": 81,
+      "annotation_id_b": 86,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:31:02"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id_a": 147,
+      "annotation_id_b": 148,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:31:04"
+    },
+    {
+      "type": "delete_annotation",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id": 248,
+      "reason": "duplicate of annotation 249 (IoU 0.7958, high_overlap)",
+      "decided_at": "2026-07-18T11:31:11"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id_a": 1270,
+      "annotation_id_b": 1271,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:31:13"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id_a": 1460,
+      "annotation_id_b": 1461,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:31:17"
+    },
+    {
+      "type": "keep_both",
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "annotation_id_a": 2205,
+      "annotation_id_b": 2208,
+      "note": "reviewed: both annotations are legitimate",
+      "decided_at": "2026-07-18T11:31:22"
+    }
+  ]
+}

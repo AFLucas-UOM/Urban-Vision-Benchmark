@@ -1,0 +1,314 @@
+{
+  "mode": "apply",
+  "decisions_file": "Scripts\\MTSD-Scripts\\MTSD-AnnotationQA\\outputs\\audit-20260717-192225\\reviewed_decisions.json",
+  "run_at": "2026-07-18T11:34:49",
+  "changes": [
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "type": "set_attribute",
+      "annotation_id": 828,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "type": "set_attribute",
+      "annotation_id": 1559,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "type": "delete_annotation",
+      "annotation_id": 58,
+      "status": "applied",
+      "reason": "duplicate of annotation 59 (IoU 0.9299, high_overlap)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "type": "set_attribute",
+      "annotation_id": 86,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "type": "set_attribute",
+      "annotation_id": 667,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "type": "set_attribute",
+      "annotation_id": 1139,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "type": "set_attribute",
+      "annotation_id": 1447,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+      "type": "set_attribute",
+      "annotation_id": 1529,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "type": "set_attribute",
+      "annotation_id": 1078,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-4\\Final-QA\\QA-GRP4.json",
+      "type": "set_attribute",
+      "annotation_id": 534,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "type": "set_attribute",
+      "annotation_id": 66,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "type": "set_attribute",
+      "annotation_id": 1114,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "type": "set_attribute",
+      "annotation_id": 1443,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "type": "delete_annotation",
+      "annotation_id": 855,
+      "status": "applied",
+      "reason": "duplicate of annotation 857 (IoU 0.8397, high_overlap)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "type": "delete_annotation",
+      "annotation_id": 1033,
+      "status": "applied",
+      "reason": "duplicate of annotation 1040 (IoU 1.0, exact_duplicate)"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+      "type": "set_attribute",
+      "annotation_id": 165,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+      "type": "set_attribute",
+      "annotation_id": 913,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+      "type": "set_attribute",
+      "annotation_id": 1067,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "type": "set_attribute",
+      "annotation_id": 335,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "type": "set_attribute",
+      "annotation_id": 338,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "type": "set_attribute",
+      "annotation_id": 670,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "type": "set_attribute",
+      "annotation_id": 726,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "type": "set_attribute",
+      "annotation_id": 727,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "type": "set_attribute",
+      "annotation_id": 1074,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "type": "set_attribute",
+      "annotation_id": 1208,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Octagonal"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json",
+      "type": "set_attribute",
+      "annotation_id": 201,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json",
+      "type": "set_attribute",
+      "annotation_id": 1312,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "type": "set_attribute",
+      "annotation_id": 128,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "type": "set_attribute",
+      "annotation_id": 358,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "type": "set_attribute",
+      "annotation_id": 1228,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "type": "set_attribute",
+      "annotation_id": 1260,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "type": "set_attribute",
+      "annotation_id": 1356,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Triangular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "type": "set_attribute",
+      "annotation_id": 1413,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Quadrangle"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "type": "set_attribute",
+      "annotation_id": 1789,
+      "status": "applied",
+      "attribute": "sign_shape",
+      "old": "Damaged-Unknown",
+      "new": "Circular"
+    },
+    {
+      "qa_file": "Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "type": "delete_annotation",
+      "annotation_id": 248,
+      "status": "applied",
+      "reason": "duplicate of annotation 249 (IoU 0.7958, high_overlap)"
+    }
+  ]
+}
