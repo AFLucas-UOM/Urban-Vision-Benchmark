@@ -1,6 +1,9 @@
-from PIL import Image
+import json
 
-from mtsd_detection.augmentation import augment_image
+from PIL import Image
+import numpy as np
+
+from mtsd_detection.augmentation import augment_image, mild_motion_blur
 
 IDENTITY_OPS = {
     "brightness": {"min": 1, "max": 1}, "contrast": {"min": 1, "max": 1},
@@ -49,3 +52,43 @@ def test_augmented_copy_untagged_image_unchanged_dimensions(tmp_path):
     augment_image(source, destination, "plain.jpg", 1, 42, {"ops": IDENTITY_OPS})
     with Image.open(destination) as out:
         assert out.size == (40, 20)
+
+
+def test_mild_motion_blur_preserves_geometry_and_spreads_horizontally():
+    image = Image.new("RGB", (21, 11), "black")
+    image.putpixel((10, 5), (255, 255, 255))
+    output = mild_motion_blur(image, kernel_size=5)
+    values = np.asarray(output)
+    assert output.size == image.size
+    assert values[5, 8, 0] > 0
+    assert values[5, 12, 0] > 0
+    assert values[3, 10, 0] == 0
+
+
+def test_motion_blur_rejects_even_kernel():
+    image = Image.new("RGB", (10, 10), "black")
+    try:
+        mild_motion_blur(image, kernel_size=4)
+    except ValueError as exc:
+        assert "odd integer" in str(exc)
+    else:
+        raise AssertionError("expected ValueError")
+
+
+def test_aug3_uses_motion_blur_recipe(tmp_path):
+    source = tmp_path / "source.png"
+    image = Image.new("RGB", (21, 11), "black")
+    image.putpixel((10, 5), (255, 255, 255))
+    image.save(source)
+    destination = tmp_path / "source_aug3.png"
+    ops = {**IDENTITY_OPS, "motion_blur": {
+        "copy_index": 3, "direction": "horizontal",
+        "kernel_size": 5, "blur_weight": 0.85,
+    }}
+    info = augment_image(source, destination, source.name, 3, 42, {"ops": ops})
+    applied = json.loads(info["ops_applied"])
+    assert set(applied) == {"motion_blur"}
+    with Image.open(destination) as output:
+        values = np.asarray(output)
+    assert values[5, 8, 0] > 0
+    assert values[5, 12, 0] > 0
