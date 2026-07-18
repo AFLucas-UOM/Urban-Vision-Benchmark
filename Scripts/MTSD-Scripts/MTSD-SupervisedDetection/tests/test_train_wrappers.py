@@ -28,11 +28,14 @@ def test_mocked_yolo_vertical_run_preserves_protocol(tmp_path, monkeypatch):
     assert Path(result["checkpoint_best"]).is_file()
     assert result["native_metrics"]["test"]["metrics/mAP50(B)"] == .5
     assert result["train_args"]["mosaic"] == 0 and result["train_args"]["fliplr"] == 0
+    assert result["train_args"]["plots"] is True
 
 
 def test_mocked_rfdetr_vertical_run_records_native_metrics(tmp_path, monkeypatch):
     class FakeRFDETR:
-        def __init__(self, **kwargs): self.kwargs = kwargs
+        constructed_kwargs = None
+        def __init__(self, **kwargs):
+            type(self).constructed_kwargs = kwargs
         def train(self, **kwargs):
             output = Path(kwargs["output_dir"])
             (output / "checkpoint_best_ema.pth").write_bytes(b"best")
@@ -47,4 +50,15 @@ def test_mocked_rfdetr_vertical_run_records_native_metrics(tmp_path, monkeypatch
     result = train_rfdetr.train(registry()["rfdetr-n"], checkpoint, dataset, tmp_path / "run", TRAINING, smoke=True)
     assert Path(result["checkpoint_best"]).name == "checkpoint_best_ema.pth"
     assert result["native_metrics"]["test"] == {"map": .4}
+    assert FakeRFDETR.constructed_kwargs["resolution"] == 384
+    assert result["model_args"]["resolution"] == 384
     assert result["train_args"]["multi_scale"] is True
+    assert result["train_args"]["wandb"] is False
+    assert result["train_args"]["run_test"] is True
+
+
+def test_rfdetr_uses_native_scale_resolutions():
+    specs = registry()
+    assert train_rfdetr.rfdetr_resolution(specs["rfdetr-n"], TRAINING) == 384
+    assert train_rfdetr.rfdetr_resolution(specs["rfdetr-s"], TRAINING) == 512
+    assert train_rfdetr.rfdetr_resolution(specs["rfdetr-m"], TRAINING) == 576

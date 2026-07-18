@@ -22,7 +22,7 @@ from mtsd_detection.reporting import generate as generate_reports
 from mtsd_detection.qa_gate import enforce_qa_gate, load_qa_gate
 from mtsd_detection.state import atomic_write, load_compatible
 from mtsd_detection.utils import fingerprint, git_commit, hardware_info, safe_name, set_global_seed
-from mtsd_detection.wandb_utils import finish_run, start_run
+from mtsd_detection.wandb_utils import finish_run, log_dataset_artifact, start_run
 
 
 def parser() -> argparse.ArgumentParser:
@@ -108,7 +108,10 @@ def run_training(args, config: dict) -> int:
         if previous == "completed": continue
         if previous == "failed" and args.skip_failed: continue
         slug = "mtsdqa1aug" if args.dataset_variant == "augmented" else "mtsdqa1noaug"
-        name = safe_name(f"E{index:02d}_{spec.key}_{slug}_img{320 if args.smoke_test else training['image_size']}_eb32_e{2 if args.smoke_test else training['epochs']}_adamw_s42")
+        image_size = (train_rfdetr.rfdetr_resolution(spec, training)
+                      if spec.trainer == "rfdetr"
+                      else (320 if args.smoke_test else int(training["image_size"])))
+        name = safe_name(f"E{index:02d}_{spec.key}_{slug}_img{image_size}_eb32_e{2 if args.smoke_test else training['epochs']}_adamw_s42")
         run_dir = Path(config["outputs"]["runs_root"]) / f"{spec.family}-MTSD" / name
         state["current_model"] = spec.key; state["models"][spec.key] = {"status": "running", "run_dir": str(run_dir), "started_at": datetime.now(timezone.utc).isoformat()}; atomic_write(state_path, state)
         checkpoint_info = resolve_checkpoint_info(spec, Path(config["repo_root"]), require_local=True)
@@ -135,23 +138,40 @@ def run_training(args, config: dict) -> int:
         wandb_run = start_run(wandb_config, name, group, args.wandb_mode or config["wandb"]["mode"],
                               [spec.family, spec.scale, manifest["dataset_version"], args.dataset_variant])
         if wandb_run is not None:
-            state["models"][spec.key]["wandb_run_id"] = getattr(wandb_run, "id", None)
+            record.update(wandb_run_id=getattr(wandb_run, "id", None),
+                          wandb_url=getattr(wandb_run, "url", None),
+                          wandb_project=config["wandb"]["project"], wandb_group=group)
+            state["models"][spec.key]["wandb_run_id"] = record["wandb_run_id"]
             atomic_write(state_path, state)
+            if config["wandb"].get("log_dataset_artifact", True):
+                log_dataset_artifact(wandb_run, dataset_root, record)
         try:
             if not checkpoint.is_file(): raise FileNotFoundError(f"Checkpoint not found: {checkpoint}")
             set_global_seed(int(training["seed"]), bool(training["deterministic"]))
             if spec.trainer == "ultralytics":
-                outcome = train_yolo.train(spec, checkpoint, dataset_root / "MTSD-YOLO" / "data.yaml", run_dir, training, args.smoke_test)
+                outcome = train_yolo.train(
+                    spec, checkpoint, dataset_root / "MTSD-YOLO" / "data.yaml", run_dir,
+                    training, args.smoke_test, wandb_run,
+                    int(config["wandb"].get("log_interval_steps", 100)),
+                )
             else:
-                outcome = train_rfdetr.train(spec, checkpoint, dataset_root / "MTSD-COCO", run_dir, training, args.smoke_test)
+                outcome = train_rfdetr.train(
+                    spec, checkpoint, dataset_root / "MTSD-COCO", run_dir,
+                    training, args.smoke_test, wandb_run,
+                    int(config["wandb"].get("log_interval_steps", 100)),
+                )
             predictions = run_dir / "unified_test_predictions.json"
             def unified_call():
                 if spec.trainer == "ultralytics":
                     return export_yolo_predictions(Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
                                                    320 if args.smoke_test else int(training["image_size"]), training.get("device", "auto"))
                 return export_rfdetr_predictions(spec, Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
-                                                  320 if args.smoke_test else int(training["image_size"]), training.get("device", "auto"))
+                                                  train_rfdetr.rfdetr_resolution(spec, training), training.get("device", "auto"))
+            unified_started = datetime.now(timezone.utc)
             unified_result = safe_unified_evaluation(unified_call, require=args.require_unified_eval)
+            unified_result["unified_evaluation_seconds"] = (
+                datetime.now(timezone.utc) - unified_started
+            ).total_seconds()
             record.update(outcome, **unified_result, status="completed", finished_at=datetime.now(timezone.utc).isoformat())
             (run_dir / "run_record.json").write_text(json.dumps(record, indent=2, default=str) + "\n", encoding="utf-8")
             state["models"][spec.key].update(status="completed", finished_at=record["finished_at"])

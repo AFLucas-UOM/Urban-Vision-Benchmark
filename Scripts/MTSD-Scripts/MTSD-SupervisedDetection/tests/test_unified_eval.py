@@ -50,8 +50,9 @@ def test_unified_failure_is_nonfatal_unless_explicitly_required():
 def test_perfect_and_empty_detection(tmp_path):
     perfect = _evaluate(tmp_path, [{"image_id": 1, "category_id": 0, "bbox": [10, 10, 20, 20], "score": .9}])
     assert perfect["map50_95"] > .99 and perfect["max_dets"] == [1, 10, 100]
+    assert perfect["precision"] > .99 and perfect["recall"] > .99 and perfect["f1"] > .99
     empty = _evaluate(tmp_path, [])
-    assert empty["map50_95"] == 0 and empty["evaluated_image_count"] == 1
+    assert empty["map50_95"] == 0 and empty["evaluated_image_count"] == 1 and empty["f1"] == 0
 
 
 def test_high_score_false_positive_and_missed_object_reduce_ap(tmp_path):

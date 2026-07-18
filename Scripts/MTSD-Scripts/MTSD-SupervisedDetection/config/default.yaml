@@ -53,6 +53,8 @@ wandb:
   entity_env: WANDB_ENTITY
   mode: online
   group: dissertation-augmented-v1
+  log_interval_steps: 100
+  log_dataset_artifact: true
 outputs:
   runs_root: Results/MTSD-Runs
   results_root: Results/MTSD-Results
