@@ -5,7 +5,7 @@ dataset:
 annotations:
   source_mode: qa_only
   group_scope: explicit
-  approved_groups: [GRP-1, GRP-2, GRP-3, GRP-5, GRP-6]
+  approved_groups: [GRP-1, GRP-2, GRP-3, GRP-4, GRP-5, GRP-6, GRP-7, GRP-8, GRP-9, GRP-10, GRP-11]
   unexpected_group_policy: fail
   allow_raw_xml_fallback: false
   require_non_qa_confirmation: true

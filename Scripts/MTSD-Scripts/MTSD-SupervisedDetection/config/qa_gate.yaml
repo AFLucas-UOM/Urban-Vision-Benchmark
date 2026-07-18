@@ -1,11 +1,12 @@
 gate_version: qa-gate-v1
-audit_path: Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-20260709-201340
-audit_timestamp: '2026-07-09T20:13:40'
-audited_groups: [GRP-1, GRP-2, GRP-3, GRP-5]
-approved_scope: [GRP-1, GRP-2, GRP-3, GRP-5, GRP-6]
+audit_path: Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-20260718-113454
+audit_timestamp: '2026-07-18T11:34:55'
+audited_groups: [GRP-1, GRP-2, GRP-3, GRP-4, GRP-5, GRP-6, GRP-7, GRP-8, GRP-9, GRP-10, GRP-11]
+approved_scope: [GRP-1, GRP-2, GRP-3, GRP-4, GRP-5, GRP-6, GRP-7, GRP-8, GRP-9, GRP-10, GRP-11]
 finding_counts:
-  invalid_attribute_values: 5
-  duplicate_candidates: 5
-resolution_status: unresolved
+  invalid_attribute_values: 0
+  duplicate_candidates: 0
+resolution_status: resolved
 approved_by: null
-acknowledgement: GRP-6 has a valid Final-QA JSON but is not included in the latest annotation audit.
+acknowledgement: Latest audit covers all approved Final-QA groups and reports no unresolved critical
+  findings.
