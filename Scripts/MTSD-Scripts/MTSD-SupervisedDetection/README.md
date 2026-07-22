@@ -21,6 +21,14 @@ The command is deterministic and safe to rerun; it updates the augmentation and 
 
 Training requires `--matrix`, `--models`, or `--smoke-test`. Final dissertation training additionally requires `--final` and the augmented variant. Full runs use W&B project `MSc-MTSD-SupervisedDetection`; run directories and resume state are immutable and fingerprint-checked. The clean augmentation ablation is YOLO11m/12m/26m, with YOLO26l optional; RF-DETR is descriptive because its internal online augmentation is not fully controlled.
 
+Unified COCO evaluation clamps predictions to the source image, discards boxes that remain degenerate, and converts RF-DETR inputs to RGB. The default evaluation policy drops `Tourist Sign` from both ground truth and predictions while leaving the training taxonomy unchanged for causal comparability. Each evaluation exports predictions, aggregate COCO metrics, per-class AP/AR, IoU-0.50 PR curves, and one micro-averaged confidence-swept F1 threshold. Rerun a completed matrix without retraining with:
+
+```powershell
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/rerun_unified_evaluation.py --device cuda
+```
+
+Overlapping native-image tiles can be evaluated with class-aware NMS using `run_tiled_inference.py`. Registered clean-ablation and 960-pixel pilot runs use `run_followup_experiments.py`; its 1280 stage is conditional on the decision thresholds recorded in that script and its output manifest.
+
 ## Keeping the QA gate current
 
 `config/default.yaml` (`annotations.approved_groups`) and `config/qa_gate.yaml` (audit metadata + `resolution_status`) must always agree, and both drift whenever a group gains or loses a Final-QA JSON or a new annotation audit runs. Refresh them from disk instead of hand-editing either file:
