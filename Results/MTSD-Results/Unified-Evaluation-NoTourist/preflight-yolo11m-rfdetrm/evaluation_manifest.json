@@ -1,0 +1,66 @@
+{
+  "status": "completed",
+  "models": [
+    "yolo11m",
+    "rfdetr-m"
+  ],
+  "model_count": 2,
+  "excluded_categories": [
+    "Tourist Sign"
+  ],
+  "source_state": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\Supervised-Matrix\\20260719-003416\\state.json",
+  "dataset_root": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented\\MTSD-COCO",
+  "completed_at": "2026-07-22T16:47:18.508819+00:00",
+  "model_metrics": [
+    {
+      "model": "yolo11m",
+      "family": "YOLO11",
+      "scale": "m",
+      "image_size": 640,
+      "map50_95": 0.6013632154632181,
+      "map50": 0.6585503341118046,
+      "map75": 0.6297730674924918,
+      "ar100": 0.6326671440290318,
+      "map_small": 0.07070496335347819,
+      "map_medium": 0.3011135231683927,
+      "map_large": 0.7692429861968679,
+      "ar_small": 0.08450305441684752,
+      "ar_medium": 0.36381146779806256,
+      "ar_large": 0.7942005375750362,
+      "precision": 0.9161490683229814,
+      "recall": 0.5974683544303797,
+      "f1": 0.7232608029420777,
+      "f1_score_threshold": 0.7193824648857117,
+      "prediction_count": 2998,
+      "dropped_degenerate_predictions": 15,
+      "clamped_predictions": 15,
+      "evaluation_seconds": 76.69807939999737,
+      "predictions": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Unified-Evaluation-NoTourist\\preflight-yolo11m-rfdetrm\\yolo11m\\predictions.json"
+    },
+    {
+      "model": "rfdetr-m",
+      "family": "RF-DETR",
+      "scale": "m",
+      "image_size": 576,
+      "map50_95": 0.6858703223054243,
+      "map50": 0.784192128149471,
+      "map75": 0.7016710826379898,
+      "ar100": 0.7497611263874577,
+      "map_small": 0.13757117071290267,
+      "map_medium": 0.39102724307687314,
+      "map_large": 0.8736042642658293,
+      "ar_small": 0.2209367930919655,
+      "ar_medium": 0.510215246316952,
+      "ar_large": 0.9245146106031603,
+      "precision": 0.9254823685961411,
+      "recall": 0.7043037974683545,
+      "f1": 0.7998849913743531,
+      "f1_score_threshold": 0.5632337331771851,
+      "prediction_count": 221261,
+      "dropped_degenerate_predictions": 1007,
+      "clamped_predictions": 33856,
+      "evaluation_seconds": 176.65804469992872,
+      "predictions": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Unified-Evaluation-NoTourist\\preflight-yolo11m-rfdetrm\\rfdetr-m\\predictions.json"
+    }
+  ]
+}

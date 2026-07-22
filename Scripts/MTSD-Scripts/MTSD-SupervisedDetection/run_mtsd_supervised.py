@@ -39,6 +39,7 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--reports-only", action="store_true")
     result.add_argument("--wandb-mode", choices=("online", "offline", "disabled")); result.add_argument("--wandb-group")
     result.add_argument("--device", choices=("auto", "cuda", "cpu"))
+    result.add_argument("--image-size", type=int, help="Override the configured YOLO training/evaluation image size")
     result.add_argument("--allow-raw-xml-fallback", action="store_true")
     result.add_argument("--confirm-non-qa-data", action="store_true")
     result.add_argument("--final", action="store_true", help="Enforce locked scope, resolved QA gate, canonical variant, and strict validation")
@@ -101,6 +102,8 @@ def run_training(args, config: dict) -> int:
         atomic_write(state_path, state)
     training = dict(config["training"])
     if args.device: training["device"] = args.device
+    if args.image_size is not None: training["image_size"] = args.image_size
+    excluded_categories = tuple(config.get("evaluation", {}).get("excluded_categories", ()))
     for index, spec in enumerate(specs, start=1):
         previous = state["models"][spec.key].get("status")
         # Completed immutable runs are never re-opened on resume; reruns require
@@ -130,6 +133,8 @@ def run_training(args, config: dict) -> int:
                   "offline_augmentation_variant": args.dataset_variant,
                   "online_augmentation_policy": online_policy, "online_augmentation_controlled": controlled,
                   "ablation_validity": ablation_validity,
+                  "evaluation_excluded_categories": list(excluded_categories),
+                  "evaluation_taxonomy_note": "Training taxonomy retained for comparability; excluded categories are removed from unified evaluation ground truth and predictions.",
                   "git_commit": git_commit(Path(config["repo_root"])), "hardware": hardware_info(), "run_dir": str(run_dir),
                   "checkpoint_path": checkpoint_info["path"], "checkpoint_source": checkpoint_info["source"],
                   "checkpoint_sha256": checkpoint_info["sha256"], "status": "running"}
@@ -161,12 +166,17 @@ def run_training(args, config: dict) -> int:
                     int(config["wandb"].get("log_interval_steps", 100)),
                 )
             predictions = run_dir / "unified_test_predictions.json"
+            evaluation_artifacts = run_dir / "unified_evaluation"
             def unified_call():
                 if spec.trainer == "ultralytics":
                     return export_yolo_predictions(Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
-                                                   320 if args.smoke_test else int(training["image_size"]), training.get("device", "auto"))
+                                                   320 if args.smoke_test else int(training["image_size"]), training.get("device", "auto"),
+                                                   excluded_category_names=excluded_categories,
+                                                   artifacts_dir=evaluation_artifacts)
                 return export_rfdetr_predictions(spec, Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
-                                                  train_rfdetr.rfdetr_resolution(spec, training), training.get("device", "auto"))
+                                                  train_rfdetr.rfdetr_resolution(spec, training), training.get("device", "auto"),
+                                                  excluded_category_names=excluded_categories,
+                                                  artifacts_dir=evaluation_artifacts)
             unified_started = datetime.now(timezone.utc)
             unified_result = safe_unified_evaluation(unified_call, require=args.require_unified_eval)
             unified_result["unified_evaluation_seconds"] = (
@@ -222,6 +232,10 @@ def _main(argv: list[str] | None = None) -> int:
         raise ValueError("--final is incompatible with raw-XML fallback flags")
     if args.group_scope: config["annotations"]["group_scope"] = args.group_scope
     if args.approved_groups: config["annotations"]["approved_groups"] = args.approved_groups
+    if args.image_size is not None:
+        if args.image_size <= 0 or args.image_size % 32:
+            raise ValueError("--image-size must be a positive multiple of 32")
+        config["training"]["image_size"] = args.image_size
     config["config_fingerprint"] = fingerprint({k: v for k, v in config.items() if k != "config_fingerprint"})
     if args.final and config["annotations"].get("group_scope") != "explicit":
         raise PermissionError("--final refuses annotations.group_scope=auto")

@@ -106,7 +106,8 @@ def test_default_scope_wandb_and_clean_ablation_configuration():
     root = find_repo_root(Path(__file__).resolve())
     config = load_config(root / "Scripts/MTSD-Scripts/MTSD-SupervisedDetection/config/default.yaml", root)
     assert config["annotations"]["group_scope"] == "explicit"
-    assert config["annotations"]["approved_groups"] == ["GRP-1", "GRP-2", "GRP-3", "GRP-5", "GRP-6"]
+    assert config["annotations"]["approved_groups"] == [f"GRP-{index}" for index in range(1, 12)]
     assert config["wandb"]["project"] == "MSc-MTSD-SupervisedDetection"
     assert config["matrix"]["aug_ablation"] == ["yolo11m", "yolo12m", "yolo26m"]
     assert config["matrix"]["aug_ablation_optional"] == ["yolo26l"]
+    assert config["evaluation"]["excluded_categories"] == ["Tourist Sign"]

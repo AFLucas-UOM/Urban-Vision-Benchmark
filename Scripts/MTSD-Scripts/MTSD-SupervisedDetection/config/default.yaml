@@ -41,6 +41,9 @@ training:
   deterministic: true
   device: auto
   per_model_overrides: {}
+evaluation:
+  excluded_categories: [Tourist Sign]
+  common_f1_iou: 0.50
 matrix:
   dissertation: [yolo12n, yolo12s, yolo12m, yolo26n, yolo26s, yolo26m, yolo11n, yolo11s, yolo11m, rfdetr-n, rfdetr-s, rfdetr-m, yolo26l]
   aug_ablation: [yolo11m, yolo12m, yolo26m]
