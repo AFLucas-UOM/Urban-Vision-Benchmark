@@ -1,0 +1,121 @@
+{
+  "requested_matrix": [
+    "yolo12n",
+    "yolo12s",
+    "yolo12m",
+    "yolo26n",
+    "yolo26s",
+    "yolo26m",
+    "yolo11n",
+    "yolo11s",
+    "yolo11m",
+    "rfdetr-n",
+    "rfdetr-s",
+    "rfdetr-m",
+    "yolo26l"
+  ],
+  "dataset_version": "mtsd-qa-v1-aug",
+  "prep_manifest_sha256": "c78abac8770d77292cff4a5b94a547d60c072e79679d03758f7c9ac1627e8f47",
+  "split_manifest_sha256": "534f3757aad39dc99f506491b129e59dbcd008ae8ff02c7a0d92bfd63faffb82",
+  "annotation_source_mode": "qa_only",
+  "dataset_variant": "augmented",
+  "config_fingerprint": "fa0d716ca5a249909533512e526bebe1ca6e3d0c0ab80d99314129d6c4956233",
+  "run_label": "20260719-003416",
+  "started_at": "2026-07-18T22:34:16.562597+00:00",
+  "models": {
+    "yolo12n": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO12-MTSD\\E01_yolo12n_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-18T22:34:16.578475+00:00",
+      "wandb_run_id": "jcfhbbs8",
+      "finished_at": "2026-07-19T01:30:14.959178+00:00"
+    },
+    "yolo12s": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO12-MTSD\\E02_yolo12s_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-19T01:30:21.223154+00:00",
+      "wandb_run_id": "p1r1bmq6",
+      "finished_at": "2026-07-19T04:30:14.540625+00:00"
+    },
+    "yolo12m": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO12-MTSD\\E03_yolo12m_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-19T04:30:21.237233+00:00",
+      "wandb_run_id": "o0mny9vx",
+      "finished_at": "2026-07-19T06:59:14.465417+00:00"
+    },
+    "yolo26n": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO26-MTSD\\E04_yolo26n_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-19T06:59:21.770014+00:00",
+      "wandb_run_id": "e1w6wjvr",
+      "finished_at": "2026-07-19T10:37:21.876539+00:00"
+    },
+    "yolo26s": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO26-MTSD\\E05_yolo26s_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-19T10:37:27.787303+00:00",
+      "wandb_run_id": "wam2i7ap",
+      "finished_at": "2026-07-19T13:12:09.479849+00:00"
+    },
+    "yolo26m": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO26-MTSD\\E06_yolo26m_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-19T13:12:16.426951+00:00",
+      "wandb_run_id": "wosvu9o9",
+      "finished_at": "2026-07-19T17:21:56.831548+00:00"
+    },
+    "yolo11n": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\E07_yolo11n_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-19T17:22:04.712971+00:00",
+      "wandb_run_id": "97decar5",
+      "finished_at": "2026-07-19T20:46:46.938470+00:00"
+    },
+    "yolo11s": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\E08_yolo11s_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-19T20:46:53.172669+00:00",
+      "wandb_run_id": "f862dhg7",
+      "finished_at": "2026-07-20T00:35:52.867289+00:00"
+    },
+    "yolo11m": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\E09_yolo11m_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-20T00:35:59.705767+00:00",
+      "wandb_run_id": "2j3eyiq3",
+      "finished_at": "2026-07-20T03:46:57.062876+00:00"
+    },
+    "rfdetr-n": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\E10_rfdetr-n_mtsdqa1aug_img384_eb32_e100_adamw_s42",
+      "started_at": "2026-07-20T03:47:04.628968+00:00",
+      "wandb_run_id": "m25a3dfy",
+      "finished_at": "2026-07-20T17:34:48.550992+00:00"
+    },
+    "rfdetr-s": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\E11_rfdetr-s_mtsdqa1aug_img512_eb32_e100_adamw_s42",
+      "started_at": "2026-07-20T17:35:56.951547+00:00",
+      "wandb_run_id": "rlf4x7bg",
+      "finished_at": "2026-07-21T03:52:29.483451+00:00"
+    },
+    "rfdetr-m": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\E12_rfdetr-m_mtsdqa1aug_img576_eb32_e100_adamw_s42",
+      "started_at": "2026-07-21T03:53:24.071387+00:00",
+      "wandb_run_id": "2ivmuk61",
+      "finished_at": "2026-07-21T22:06:46.373797+00:00"
+    },
+    "yolo26l": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO26-MTSD\\E13_yolo26l_mtsdqa1aug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-21T22:07:44.603561+00:00",
+      "wandb_run_id": "43mf8yjy",
+      "finished_at": "2026-07-22T00:47:40.899708+00:00"
+    }
+  },
+  "current_model": null,
+  "final_status": "completed",
+  "finished_at": "2026-07-22T00:48:08.750887+00:00"
+}
