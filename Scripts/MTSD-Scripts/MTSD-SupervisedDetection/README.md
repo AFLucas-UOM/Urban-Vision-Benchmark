@@ -29,6 +29,8 @@ python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/rerun_unified_evaluation.py
 
 Overlapping native-image tiles can be evaluated with class-aware NMS using `run_tiled_inference.py`. Registered clean-ablation and 960-pixel pilot runs use `run_followup_experiments.py`; its 1280 stage is conditional on the decision thresholds recorded in that script and its output manifest.
 
+The original 640 runs used Ultralytics physical batch 32 with its nominal optimizer batch 64 (two accumulation steps). Resolution pilots preserve that effective optimizer batch with physical batch 16 at 960 and 8 at 1280, avoiding a change in optimization semantics while fitting GPU memory.
+
 ## Keeping the QA gate current
 
 `config/default.yaml` (`annotations.approved_groups`) and `config/qa_gate.yaml` (audit metadata + `resolution_status`) must always agree, and both drift whenever a group gains or loses a Final-QA JSON or a new annotation audit runs. Refresh them from disk instead of hand-editing either file:
