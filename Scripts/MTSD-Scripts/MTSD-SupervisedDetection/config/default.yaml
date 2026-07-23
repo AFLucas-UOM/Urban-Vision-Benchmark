@@ -31,12 +31,15 @@ training:
   epochs: 100
   image_size: 640
   effective_batch: 32
+  ultralytics_optimizer_batch: 64
+  ultralytics_physical_batch_by_image_size: {640: 32, 960: 16, 1280: 8}
   optimizer: AdamW
   lr0: 0.001
   lrf: 0.01
   weight_decay: 0.0005
   warmup_epochs: 3.0
   patience: 10
+  yolo_online_augmentation: disabled
   seed: 42
   deterministic: true
   device: auto

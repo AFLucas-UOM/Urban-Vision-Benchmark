@@ -1,0 +1,11 @@
+{
+  "status": "applied",
+  "generated_at": "2026-07-23T16:00:54.082244+00:00",
+  "source_variant": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented",
+  "target_variant": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Unaugmented",
+  "mismatch_count_before": 0,
+  "mismatch_count_after": 0,
+  "source_policy": "Exact YOLO bytes used by the completed augmented baseline",
+  "source_dataset_modified": false,
+  "rows": []
+}

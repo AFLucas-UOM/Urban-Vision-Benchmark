@@ -138,8 +138,13 @@ def main() -> int:
         "resolution_pilot": {
             "models": list(PILOT_MODELS),
             "dataset_variant": "augmented",
+            "yolo_online_augmentation": "traffic_metric_push",
             "image_sizes": [960, "1280 conditional"],
-            "fixed": {"effective_batch": 32, "optimizer": "AdamW", "seed": 42},
+            "fixed": {
+                "ultralytics_optimizer_effective_batch": 64,
+                "physical_batch_by_image_size": {"640": 32, "960": 16, "1280": 8},
+                "optimizer": "AdamW", "seed": 42,
+            },
             "decision_thresholds": {
                 "mean_small_ap_or_ar_gain": SMALL_METRIC_MIN_GAIN,
                 "maximum_mean_map50_95_drop": MAX_MEAN_MAP_DROP,
@@ -157,7 +162,8 @@ def main() -> int:
     _write_json(manifest_path, manifest)
     _run(common + [
         "--final", "--dataset-variant", "augmented", "--models", *PILOT_MODELS,
-        "--image-size", "960", "--run-label", pilot960_label,
+        "--image-size", "960", "--yolo-online-augmentation", "traffic_metric_push",
+        "--run-label", pilot960_label,
         "--wandb-group", "mtsd-resolution-960-pilot-v1",
     ], manifest, manifest_path, "resolution_960")
     pilot960_state = STATE_ROOT / pilot960_label / "state.json"
@@ -169,7 +175,8 @@ def main() -> int:
     if decision["proceed_to_1280"]:
         _run(common + [
             "--final", "--dataset-variant", "augmented", "--models", *PILOT_MODELS,
-            "--image-size", "1280", "--run-label", pilot1280_label,
+            "--image-size", "1280", "--yolo-online-augmentation", "traffic_metric_push",
+            "--run-label", pilot1280_label,
             "--wandb-group", "mtsd-resolution-1280-conditional-v1",
         ], manifest, manifest_path, "resolution_1280")
         manifest["stages"]["resolution_1280"]["state"] = str((STATE_ROOT / pilot1280_label / "state.json").resolve())

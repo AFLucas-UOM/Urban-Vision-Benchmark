@@ -135,11 +135,17 @@ def validate_prepared(prepared_root: Path, strict: bool = False,
     aug, plain = prepared_root / "MTSD-Augmented", prepared_root / "MTSD-Unaugmented"
     cross = []
     if aug.exists() and plain.exists():
-        for split in ("valid", "test"):
+        for split in ("train", "valid", "test"):
             for relative in (Path("MTSD-YOLO") / split / "images", Path("MTSD-YOLO") / split / "labels"):
                 left, right = aug / relative, plain / relative
-                left_hashes = {p.relative_to(left).as_posix(): sha256_file(p) for p in left.glob("*") if p.is_file()}
                 right_hashes = {p.relative_to(right).as_posix(): sha256_file(p) for p in right.glob("*") if p.is_file()}
+                # Augmented train contains extra offline copies. Compare only the
+                # original names present in the unaugmented shared split.
+                left_hashes = {
+                    name: sha256_file(left / name)
+                    for name in right_hashes
+                    if (left / name).is_file()
+                }
                 if left_hashes != right_hashes: _add(cross, "fatal", "variant_split_hash_mismatch", f"{split}/{relative.name}")
     return {"ok": all(row["ok"] for row in results.values()) and not cross,
             "variants": results, "findings": cross}

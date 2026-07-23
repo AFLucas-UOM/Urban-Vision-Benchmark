@@ -40,6 +40,8 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--wandb-mode", choices=("online", "offline", "disabled")); result.add_argument("--wandb-group")
     result.add_argument("--device", choices=("auto", "cuda", "cpu"))
     result.add_argument("--image-size", type=int, help="Override the configured YOLO training/evaluation image size")
+    result.add_argument("--yolo-online-augmentation", choices=("disabled", "traffic_metric_push"),
+                        help="Override the configured Ultralytics online augmentation preset")
     result.add_argument("--allow-raw-xml-fallback", action="store_true")
     result.add_argument("--confirm-non-qa-data", action="store_true")
     result.add_argument("--final", action="store_true", help="Enforce locked scope, resolved QA gate, canonical variant, and strict validation")
@@ -103,6 +105,10 @@ def run_training(args, config: dict) -> int:
     training = dict(config["training"])
     if args.device: training["device"] = args.device
     if args.image_size is not None: training["image_size"] = args.image_size
+    if args.yolo_online_augmentation is not None:
+        training["yolo_online_augmentation"] = args.yolo_online_augmentation
+    if args.dataset_variant == "unaugmented" and args.yolo_online_augmentation is None:
+        training["yolo_online_augmentation"] = "disabled"
     excluded_categories = tuple(config.get("evaluation", {}).get("excluded_categories", ()))
     for index, spec in enumerate(specs, start=1):
         previous = state["models"][spec.key].get("status")
@@ -119,7 +125,7 @@ def run_training(args, config: dict) -> int:
         state["current_model"] = spec.key; state["models"][spec.key] = {"status": "running", "run_dir": str(run_dir), "started_at": datetime.now(timezone.utc).isoformat()}; atomic_write(state_path, state)
         checkpoint_info = resolve_checkpoint_info(spec, Path(config["repo_root"]), require_local=True)
         checkpoint = Path(checkpoint_info["path"])
-        online_policy = ("disabled-ultralytics-online-augmentation" if spec.trainer == "ultralytics"
+        online_policy = (f"ultralytics-online-augmentation:{training.get('yolo_online_augmentation', 'disabled')}" if spec.trainer == "ultralytics"
                          else "rfdetr-1.3.0-internal-augmentation-uncontrolled")
         controlled = spec.trainer == "ultralytics"
         ablation_validity = ("clean-offline-augmentation-effect" if controlled

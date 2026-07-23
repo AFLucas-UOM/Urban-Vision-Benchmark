@@ -1,0 +1,31 @@
+{
+  "requested_matrix": [
+    "yolo11m",
+    "yolo26s",
+    "yolo11s"
+  ],
+  "dataset_version": "mtsd-qa-v1-aug",
+  "prep_manifest_sha256": "c78abac8770d77292cff4a5b94a547d60c072e79679d03758f7c9ac1627e8f47",
+  "split_manifest_sha256": "534f3757aad39dc99f506491b129e59dbcd008ae8ff02c7a0d92bfd63faffb82",
+  "annotation_source_mode": "qa_only",
+  "dataset_variant": "augmented",
+  "config_fingerprint": "1e35719e9a7fae4c00b315b1fb57c11fc8738a6c5ca1f97229705a3156b29ae3",
+  "run_label": "20260723-resolution-1280-yolo11m-26s-11s",
+  "started_at": "2026-07-23T16:02:26.703118+00:00",
+  "models": {
+    "yolo11m": {
+      "status": "running",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\E01_yolo11m_mtsdqa1aug_img1280_eb32_e100_adamw_s42",
+      "started_at": "2026-07-23T16:02:26.731911+00:00",
+      "wandb_run_id": "0vuh2eub"
+    },
+    "yolo26s": {
+      "status": "pending"
+    },
+    "yolo11s": {
+      "status": "pending"
+    }
+  },
+  "current_model": "yolo11m",
+  "final_status": "running"
+}

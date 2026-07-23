@@ -1,0 +1,41 @@
+{
+  "requested_matrix": [
+    "yolo11m",
+    "yolo12m",
+    "yolo26m"
+  ],
+  "dataset_version": "mtsd-qa-v1-noaug",
+  "prep_manifest_sha256": "1416cb9272146c335e900fba5166f058f85380fe847356e75afbbcaf84dc57ab",
+  "split_manifest_sha256": "534f3757aad39dc99f506491b129e59dbcd008ae8ff02c7a0d92bfd63faffb82",
+  "annotation_source_mode": "qa_only",
+  "dataset_variant": "unaugmented",
+  "config_fingerprint": "f3c212dc50412f680459ce0740c33c4bfeb6b6784adff1ba5269c413e9908bcb",
+  "run_label": "20260722-followups-clean-ablation",
+  "started_at": "2026-07-22T17:32:42.853249+00:00",
+  "models": {
+    "yolo11m": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\E01_yolo11m_mtsdqa1noaug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-22T17:32:42.882354+00:00",
+      "wandb_run_id": "03ufdr44",
+      "finished_at": "2026-07-22T18:55:36.886401+00:00"
+    },
+    "yolo12m": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO12-MTSD\\E02_yolo12m_mtsdqa1noaug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-22T18:55:44.469922+00:00",
+      "wandb_run_id": "zbeglhkd",
+      "finished_at": "2026-07-22T19:55:55.799373+00:00"
+    },
+    "yolo26m": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO26-MTSD\\E03_yolo26m_mtsdqa1noaug_img640_eb32_e100_adamw_s42",
+      "started_at": "2026-07-22T19:56:44.223921+00:00",
+      "wandb_run_id": "soqt4p2m",
+      "finished_at": "2026-07-22T21:13:54.412428+00:00"
+    }
+  },
+  "current_model": null,
+  "final_status": "completed",
+  "finished_at": "2026-07-22T21:14:04.497498+00:00"
+}

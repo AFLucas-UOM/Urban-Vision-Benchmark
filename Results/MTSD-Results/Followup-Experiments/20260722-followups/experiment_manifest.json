@@ -1,0 +1,90 @@
+{
+  "status": "stopped_by_user",
+  "started_at": "2026-07-22T17:32:40.650055+00:00",
+  "baseline_evaluation": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Unified-Evaluation-NoTourist\\20260722-all13\\evaluation_manifest.json",
+  "excluded_evaluation_categories": [
+    "Tourist Sign"
+  ],
+  "training_taxonomy": "unchanged 12-class taxonomy to preserve causal comparability",
+  "clean_ablation": {
+    "models": [
+      "yolo11m",
+      "yolo12m",
+      "yolo26m"
+    ],
+    "dataset_variant": "unaugmented",
+    "split_policy": "existing shared split manifest",
+    "rf_detr_excluded": true
+  },
+  "resolution_pilot": {
+    "models": [
+      "yolo11s",
+      "yolo11m",
+      "yolo12m"
+    ],
+    "dataset_variant": "augmented",
+    "image_sizes": [
+      960,
+      "1280 conditional"
+    ],
+    "fixed": {
+      "effective_batch": 32,
+      "optimizer": "AdamW",
+      "seed": 42
+    },
+    "decision_thresholds": {
+      "mean_small_ap_or_ar_gain": 0.02,
+      "maximum_mean_map50_95_drop": 0.01
+    }
+  },
+  "stages": {
+    "clean_ablation": {
+      "status": "completed",
+      "command": [
+        "C:\\Users\\fridge\\anaconda3\\envs\\mtsd-base\\python.exe",
+        "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Scripts\\MTSD-Scripts\\MTSD-SupervisedDetection\\run_mtsd_supervised.py",
+        "--device",
+        "cuda",
+        "--require-unified-eval",
+        "--dataset-variant",
+        "unaugmented",
+        "--matrix",
+        "aug_ablation",
+        "--run-label",
+        "20260722-followups-clean-ablation",
+        "--wandb-group",
+        "mtsd-clean-augmentation-ablation-v1"
+      ],
+      "started_at": "2026-07-22T17:32:40.651559+00:00",
+      "finished_at": "2026-07-22T21:14:05.714344+00:00",
+      "state": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\Supervised-Matrix\\20260722-followups-clean-ablation\\state.json"
+    },
+    "resolution_960": {
+      "status": "stopped_by_user",
+      "command": [
+        "C:\\Users\\fridge\\anaconda3\\envs\\mtsd-base\\python.exe",
+        "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Scripts\\MTSD-Scripts\\MTSD-SupervisedDetection\\run_mtsd_supervised.py",
+        "--device",
+        "cuda",
+        "--require-unified-eval",
+        "--final",
+        "--dataset-variant",
+        "augmented",
+        "--models",
+        "yolo11s",
+        "yolo11m",
+        "yolo12m",
+        "--image-size",
+        "960",
+        "--run-label",
+        "20260722-followups-resolution-960",
+        "--wandb-group",
+        "mtsd-resolution-960-pilot-v1"
+      ],
+      "started_at": "2026-07-22T21:14:05.714344+00:00",
+      "stop_reason": "Stopped after confirming YOLO12m 960 was progressing but impractically slow. Completed YOLO11s and YOLO11m 960 outputs remain valid.",
+      "finished_at": "2026-07-23T15:35:35.813849+00:00"
+    }
+  },
+  "current_stage": "resolution_960"
+}
