@@ -54,7 +54,8 @@ def yolo_batch_plan(training: dict[str, Any], image_size: int) -> dict[str, int]
 
 def train(spec: ModelSpec, checkpoint: Path, dataset_yaml: Path, run_dir: Path,
           training: dict[str, Any], smoke: bool = False, wandb_run: Any = None,
-          wandb_log_interval_steps: int = 100) -> dict[str, Any]:
+          wandb_log_interval_steps: int = 100,
+          skip_post_training_evaluation: bool = False) -> dict[str, Any]:
     from ultralytics import YOLO
     if run_dir.exists(): raise FileExistsError(f"Immutable run directory already exists: {run_dir}")
     model = YOLO(str(checkpoint))
@@ -71,19 +72,21 @@ def train(spec: ModelSpec, checkpoint: Path, dataset_yaml: Path, run_dir: Path,
                 weight_decay=float(training["weight_decay"]), warmup_epochs=float(training["warmup_epochs"]),
                 patience=int(training["patience"]), seed=int(training["seed"]),
                 deterministic=bool(training["deterministic"]), device=device, plots=True,
+                amp=bool(training.get("amp", True)),
                 project=str(run_dir.parent), name=run_dir.name, exist_ok=False,
                 **yolo_online_augmentation_args(training))
     result = model.train(**args)
     training_seconds = time.perf_counter() - started
     best = run_dir / "weights" / "best.pt"
     if not best.is_file(): raise FileNotFoundError(f"Training completed without best checkpoint: {best}")
-    best_model = YOLO(str(best))
     native = {}
     evaluation_started = time.perf_counter()
-    for split in ("val", "test"):
-        metrics = best_model.val(data=str(dataset_yaml), split=split, imgsz=image_size,
-                                 batch=batch_plan["physical_batch"], device=device)
-        native[split] = dict(getattr(metrics, "results_dict", {}) or {})
+    if not skip_post_training_evaluation:
+        best_model = YOLO(str(best))
+        for split in ("val", "test"):
+            metrics = best_model.val(data=str(dataset_yaml), split=split, imgsz=image_size,
+                                     batch=batch_plan["physical_batch"], device=device)
+            native[split] = dict(getattr(metrics, "results_dict", {}) or {})
     try:
         training_summary = summarize_yolo_results(run_dir)
     except Exception as exc:
@@ -93,4 +96,5 @@ def train(spec: ModelSpec, checkpoint: Path, dataset_yaml: Path, run_dir: Path,
             "native_evaluation_seconds": time.perf_counter() - evaluation_started,
             "native_metrics": native, "training_summary": training_summary,
             "train_args": args, "batch_plan": batch_plan,
+            "post_training_evaluation_skipped": skip_post_training_evaluation,
             "result_type": type(result).__name__}

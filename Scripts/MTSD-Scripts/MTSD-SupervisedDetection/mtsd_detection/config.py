@@ -41,6 +41,25 @@ def load_config(path: Path | str, repo_root: Path | None = None) -> dict[str, An
         raise ValueError("annotations.group_scope must be auto or explicit")
     if scope == "explicit" and not cfg["annotations"].get("approved_groups"):
         raise ValueError("annotations.approved_groups is required for explicit scope")
+    strong = cfg.get("strong_augmentation")
+    if strong:
+        if strong.get("recipe_version") != "strong-offline-v2":
+            raise ValueError("strong_augmentation.recipe_version must be strong-offline-v2")
+        if int(strong.get("copies_per_image", 0)) <= 0:
+            raise ValueError("strong_augmentation.copies_per_image must be positive")
+        mosaic_probability = float(strong.get("mosaic", {}).get("probability", 0))
+        copy_probability = (
+            float(strong.get("copy_paste", {}).get("probability", 0))
+            if strong.get("copy_paste", {}).get("enabled", False) else 0.0
+        )
+        if not 0 <= mosaic_probability <= 1 or not 0 <= copy_probability <= 1:
+            raise ValueError("Strong augmentation probabilities must be between 0 and 1")
+        if mosaic_probability + copy_probability > 1:
+            raise ValueError("Strong mosaic and copy-paste probabilities must not exceed 1 in total")
+        if strong.get("mixup", {}).get("enabled", False):
+            raise ValueError("strong-offline-v2 does not permit MixUp by default")
+    if cfg["training"].get("yolo_online_augmentation") != "disabled":
+        raise ValueError("Default MTSD configuration must keep yolo_online_augmentation disabled")
     cfg = _resolve_paths(cfg, root)
     cfg["repo_root"] = str(root)
     cfg["config_fingerprint"] = fingerprint({k: v for k, v in cfg.items() if k != "config_fingerprint"})

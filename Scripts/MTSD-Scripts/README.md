@@ -12,11 +12,16 @@ Tooling for the **Maltese Traffic Sign Dataset (MTSD)** track of the dissertatio
 | [MTSD-AnnotationQA/](MTSD-AnnotationQA/README.md) | Read-only audit → visual review → guarded-apply workflow for Final-QA attributes, duplicates, references and bboxes |
 | `update_annotation_paths.ps1` | One-off migration of old `source_image` paths in annotation JSONs (see below) |
 
-The configured candidate final scope is GRP-1/2/3/5/6 (3,098 images / 8,372 boxes),
-but it is not yet approved for final execution. The latest audit
-is `MTSD-AnnotationQA/outputs/audit-20260709-201340/`; review its five
-drop-value and five duplicate-candidate findings before preparing the final
-MTSD detection dataset.
+Annotation QA is complete and the gate is resolved over the full eleven-group
+scope, GRP-1…GRP-11 (7,482 images / 20,509 boxes). The terminal audit is
+`MTSD-AnnotationQA/outputs/audit-20260718-113454/` (0 invalid values, 0
+unresolved duplicates). The prepared datasets (`mtsd-qa-v1-aug` /
+`mtsd-qa-v1-noaug`) and the 13-model supervised detection matrix have both
+been executed on this scope — see [Summary.md §2.2](../../Summary.md) for
+results. The attribute-classification track's completed 16-variant matrix
+still reports on an earlier eight-group snapshot (GRP-1–3, 5–9); see
+[AttributeClassification/README.md](AttributeClassification/README.md) and
+Summary.md finding R2 for that separate, still-open scope decision.
 
 ## Annotation path migration (`update_annotation_paths.ps1`)
 

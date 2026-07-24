@@ -317,8 +317,36 @@
     "yolo_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Unaugmented\\MTSD-YOLO",
     "coco_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Unaugmented\\MTSD-COCO"
   },
-  "split_manifest_sha256": "534f3757aad39dc99f506491b129e59dbcd008ae8ff02c7a0d92bfd63faffb82",
+  "split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
   "augmentation_manifest_sha256": "647dbe380ef968ba9be8287e99c0c3c3fe9c15a102d4c574eff5d15ed344e590",
-  "cross_variant_split_manifest_sha256": "534f3757aad39dc99f506491b129e59dbcd008ae8ff02c7a0d92bfd63faffb82",
-  "manifest_fingerprint": "b0785870a4ab9ee4c53c4faf4f203254b36dbd12a501ff02e76f25d016aab03e"
+  "cross_variant_split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
+  "prepared_metadata_repairs": [
+    {
+      "split": "train",
+      "file_name": "grp7_a3907179-IMG_2260.JPG",
+      "recorded_size": [
+        4032,
+        3024
+      ],
+      "actual_size": [
+        3024,
+        4032
+      ],
+      "reason": "empty_image_metadata_dimension_normalization"
+    },
+    {
+      "split": "train",
+      "file_name": "grp7_debd8cdb-IMG_2261.JPG",
+      "recorded_size": [
+        4032,
+        3024
+      ],
+      "actual_size": [
+        3024,
+        4032
+      ],
+      "reason": "empty_image_metadata_dimension_normalization"
+    }
+  ],
+  "manifest_fingerprint": "53a835d8cbe2ba8b5675b0b9b51a868253cd4d225e52087ca8e8dce54fdbd33b"
 }

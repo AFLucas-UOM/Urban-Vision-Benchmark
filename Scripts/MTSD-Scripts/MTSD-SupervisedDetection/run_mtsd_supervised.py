@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse
 import gc
 import json
+import os
 import sys
 import traceback
 from datetime import datetime, timezone
@@ -17,7 +18,12 @@ from mtsd_detection.dataset_validation import validate_prepared, validate_varian
 from mtsd_detection.evaluate import export_rfdetr_predictions, export_yolo_predictions, safe_unified_evaluation
 from mtsd_detection.manifests import sha256_file
 from mtsd_detection.model_registry import DEFAULT_ORDER, resolve_checkpoint_info, validate_model_keys
-from mtsd_detection.prepare_dataset import prepare, preparation_plan
+from mtsd_detection.prepare_dataset import (
+    OFFLINE_AUGMENTATION_TITLES,
+    prepare,
+    preparation_plan,
+    strong_augmentation_smoke_test,
+)
 from mtsd_detection.reporting import generate as generate_reports
 from mtsd_detection.qa_gate import enforce_qa_gate, load_qa_gate
 from mtsd_detection.state import atomic_write, load_compatible
@@ -31,8 +37,17 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--dry-run", action="store_true")
     result.add_argument("--prepare-only", action="store_true")
     result.add_argument("--dataset-variant", choices=("augmented", "unaugmented", "both"), default="augmented")
+    result.add_argument(
+        "--offline-augmentation",
+        choices=("none", "mild", "strong"),
+        help="Select a distinct offline dataset recipe; omitted preserves legacy --dataset-variant behaviour",
+    )
     result.add_argument("--validate-prepared", action="store_true"); result.add_argument("--strict", action="store_true")
     result.add_argument("--smoke-test", action="store_true")
+    result.add_argument("--augmentation-smoke-test", action="store_true",
+                        help="Generate and strictly validate a few samples of each strong offline augmentation type")
+    result.add_argument("--augmentation-smoke-samples", type=int, default=2,
+                        help="Samples per strong augmentation category in --augmentation-smoke-test")
     result.add_argument("--matrix", choices=("dissertation", "aug_ablation")); result.add_argument("--models", nargs="+")
     result.add_argument("--resume", nargs="?", const="auto"); result.add_argument("--skip-completed", action="store_true")
     result.add_argument("--skip-failed", action="store_true"); result.add_argument("--run-label")
@@ -40,6 +55,16 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--wandb-mode", choices=("online", "offline", "disabled")); result.add_argument("--wandb-group")
     result.add_argument("--device", choices=("auto", "cuda", "cpu"))
     result.add_argument("--image-size", type=int, help="Override the configured YOLO training/evaluation image size")
+    result.add_argument("--epochs", type=int, help="Override the configured training duration")
+    result.add_argument(
+        "--output-name",
+        help="Immutable run-directory name; requires exactly one selected model",
+    )
+    result.add_argument(
+        "--feasibility-test",
+        action="store_true",
+        help="Run training only, without duplicate post-training or unified evaluation",
+    )
     result.add_argument("--yolo-online-augmentation", choices=("disabled", "traffic_metric_push"),
                         help="Override the configured Ultralytics online augmentation preset")
     result.add_argument("--allow-raw-xml-fallback", action="store_true")
@@ -53,9 +78,17 @@ def parser() -> argparse.ArgumentParser:
     return result
 
 
-def _dataset(config: dict, variant: str) -> tuple[Path, dict, str]:
+def _dataset(
+    config: dict,
+    variant: str,
+    offline_augmentation: str | None = None,
+) -> tuple[Path, dict, str]:
     if variant == "both": raise ValueError("Training requires one --dataset-variant, not both")
-    title = "MTSD-Augmented" if variant == "augmented" else "MTSD-Unaugmented"
+    title = (
+        OFFLINE_AUGMENTATION_TITLES[offline_augmentation]
+        if offline_augmentation
+        else "MTSD-Augmented" if variant == "augmented" else "MTSD-Unaugmented"
+    )
     root = Path(config["dataset"]["prepared_root"]) / title
     manifest_path = root / "prep_manifest.json"
     if not manifest_path.is_file(): raise FileNotFoundError(f"Prepared dataset missing: {manifest_path}")
@@ -76,9 +109,14 @@ def run_training(args, config: dict) -> int:
     specs = validate_model_keys(list(keys))
     gate = load_qa_gate(Path(config["annotations"]["qa_gate_file"]), Path(config["repo_root"]))
     enforce_qa_gate(gate, final=args.final, acknowledged_override=args.acknowledge_open_qa_gate)
-    if args.final and args.dataset_variant != "augmented":
+    selected_offline = args.offline_augmentation or (
+        "mild" if args.dataset_variant == "augmented" else "none"
+    )
+    if args.final and selected_offline == "none":
         raise PermissionError("Final dissertation training requires the augmented dataset variant")
-    dataset_root, manifest, prep_hash = _dataset(config, args.dataset_variant)
+    dataset_root, manifest, prep_hash = _dataset(
+        config, args.dataset_variant, args.offline_augmentation,
+    )
     validation = validate_variant(dataset_root, strict=True, policy=config["validation"])
     if not validation["ok"]:
         raise RuntimeError(f"Prepared dataset strict validation failed: {validation}")
@@ -92,6 +130,7 @@ def run_training(args, config: dict) -> int:
     expected = {"requested_matrix": list(keys), "dataset_version": manifest["dataset_version"],
                 "prep_manifest_sha256": prep_hash, "split_manifest_sha256": manifest["split_manifest_sha256"],
                 "annotation_source_mode": manifest["annotation_source_mode"], "dataset_variant": args.dataset_variant,
+                "offline_augmentation_selection": selected_offline,
                 "config_fingerprint": config["config_fingerprint"]}
     if args.resume:
         state_path = _resolve_resume(config, args.resume); state = load_compatible(state_path, expected)
@@ -105,6 +144,7 @@ def run_training(args, config: dict) -> int:
     training = dict(config["training"])
     if args.device: training["device"] = args.device
     if args.image_size is not None: training["image_size"] = args.image_size
+    if args.epochs is not None: training["epochs"] = args.epochs
     if args.yolo_online_augmentation is not None:
         training["yolo_online_augmentation"] = args.yolo_online_augmentation
     if args.dataset_variant == "unaugmented" and args.yolo_online_augmentation is None:
@@ -116,17 +156,30 @@ def run_training(args, config: dict) -> int:
         # a new run label/state and therefore cannot duplicate their W&B run.
         if previous == "completed": continue
         if previous == "failed" and args.skip_failed: continue
-        slug = "mtsdqa1aug" if args.dataset_variant == "augmented" else "mtsdqa1noaug"
+        slug = {
+            "none": "mtsdqa1noaug",
+            "mild": "mtsdqa1aug",
+            "strong": "mtsdqa1strong",
+        }[selected_offline]
         image_size = (train_rfdetr.rfdetr_resolution(spec, training)
                       if spec.trainer == "rfdetr"
                       else (320 if args.smoke_test else int(training["image_size"])))
-        name = safe_name(f"E{index:02d}_{spec.key}_{slug}_img{image_size}_eb32_e{2 if args.smoke_test else training['epochs']}_adamw_s42")
+        name = safe_name(
+            args.output_name
+            or f"E{index:02d}_{spec.key}_{slug}_img{image_size}_eb32_e"
+               f"{2 if args.smoke_test else training['epochs']}_adamw_s42"
+        )
         run_dir = Path(config["outputs"]["runs_root"]) / f"{spec.family}-MTSD" / name
         state["current_model"] = spec.key; state["models"][spec.key] = {"status": "running", "run_dir": str(run_dir), "started_at": datetime.now(timezone.utc).isoformat()}; atomic_write(state_path, state)
         checkpoint_info = resolve_checkpoint_info(spec, Path(config["repo_root"]), require_local=True)
         checkpoint = Path(checkpoint_info["path"])
-        online_policy = (f"ultralytics-online-augmentation:{training.get('yolo_online_augmentation', 'disabled')}" if spec.trainer == "ultralytics"
-                         else "rfdetr-1.3.0-internal-augmentation-uncontrolled")
+        online_policy = (
+            f"ultralytics-online-augmentation:{training.get('yolo_online_augmentation', 'disabled')}"
+            if spec.trainer == "ultralytics"
+            else "rfdetr-1.3.0:RandomHorizontalFlip+RandomSelect("
+                 "SquareResize,RandomResize/RandomSizeCrop/SquareResize);"
+                 "multi_scale=true;expanded_scales=true"
+        )
         controlled = spec.trainer == "ultralytics"
         ablation_validity = ("clean-offline-augmentation-effect" if controlled
                              else "descriptive-only-uncontrolled-online-augmentation")
@@ -136,18 +189,26 @@ def run_training(args, config: dict) -> int:
                   "prep_manifest_sha256": prep_hash, "split_manifest_sha256": manifest["split_manifest_sha256"],
                   "group_scope": manifest.get("group_scope"), "approved_groups": manifest.get("approved_groups"),
                   "qa_gate": {**gate, "override_used": args.acknowledge_open_qa_gate},
-                  "offline_augmentation_variant": args.dataset_variant,
+                  "offline_augmentation_variant": selected_offline,
                   "online_augmentation_policy": online_policy, "online_augmentation_controlled": controlled,
                   "ablation_validity": ablation_validity,
                   "evaluation_excluded_categories": list(excluded_categories),
                   "evaluation_taxonomy_note": "Training taxonomy retained for comparability; excluded categories are removed from unified evaluation ground truth and predictions.",
                   "git_commit": git_commit(Path(config["repo_root"])), "hardware": hardware_info(), "run_dir": str(run_dir),
                   "checkpoint_path": checkpoint_info["path"], "checkpoint_source": checkpoint_info["source"],
-                  "checkpoint_sha256": checkpoint_info["sha256"], "status": "running"}
+                  "checkpoint_sha256": checkpoint_info["sha256"], "status": "running",
+                  "run_label": state["run_label"], "output_name": name,
+                  "offline_execution": {
+                      "wandb_mode": args.wandb_mode or config["wandb"]["mode"],
+                      "network_guard_active": os.getenv("UV_OFFLINE_GUARD_ACTIVE") == "1",
+                      "hf_hub_offline": os.getenv("HF_HUB_OFFLINE"),
+                      "transformers_offline": os.getenv("TRANSFORMERS_OFFLINE"),
+                      "torch_hub_disabled_by_network_guard": os.getenv("UV_OFFLINE_GUARD_ACTIVE") == "1",
+                  }}
         group = args.wandb_group or ("smoke" if args.smoke_test else config["wandb"]["group"])
         wandb_config = {**config, "run_metadata": record}
         wandb_run = start_run(wandb_config, name, group, args.wandb_mode or config["wandb"]["mode"],
-                              [spec.family, spec.scale, manifest["dataset_version"], args.dataset_variant])
+                              [spec.family, spec.scale, manifest["dataset_version"], selected_offline])
         if wandb_run is not None:
             record.update(wandb_run_id=getattr(wandb_run, "id", None),
                           wandb_url=getattr(wandb_run, "url", None),
@@ -164,6 +225,7 @@ def run_training(args, config: dict) -> int:
                     spec, checkpoint, dataset_root / "MTSD-YOLO" / "data.yaml", run_dir,
                     training, args.smoke_test, wandb_run,
                     int(config["wandb"].get("log_interval_steps", 100)),
+                    skip_post_training_evaluation=args.feasibility_test,
                 )
             else:
                 outcome = train_rfdetr.train(
@@ -171,23 +233,33 @@ def run_training(args, config: dict) -> int:
                     training, args.smoke_test, wandb_run,
                     int(config["wandb"].get("log_interval_steps", 100)),
                 )
-            predictions = run_dir / "unified_test_predictions.json"
-            evaluation_artifacts = run_dir / "unified_evaluation"
-            def unified_call():
-                if spec.trainer == "ultralytics":
-                    return export_yolo_predictions(Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
-                                                   320 if args.smoke_test else int(training["image_size"]), training.get("device", "auto"),
-                                                   excluded_category_names=excluded_categories,
-                                                   artifacts_dir=evaluation_artifacts)
-                return export_rfdetr_predictions(spec, Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
-                                                  train_rfdetr.rfdetr_resolution(spec, training), training.get("device", "auto"),
-                                                  excluded_category_names=excluded_categories,
-                                                  artifacts_dir=evaluation_artifacts)
-            unified_started = datetime.now(timezone.utc)
-            unified_result = safe_unified_evaluation(unified_call, require=args.require_unified_eval)
-            unified_result["unified_evaluation_seconds"] = (
-                datetime.now(timezone.utc) - unified_started
-            ).total_seconds()
+            if args.feasibility_test:
+                unified_result = {
+                    "unified_eval_status": "not_run_feasibility_test",
+                    "unified_eval_error": None,
+                    "unified_test_metrics": {},
+                    "unified_evaluation_seconds": 0.0,
+                }
+            else:
+                predictions = run_dir / "unified_test_predictions.json"
+                evaluation_artifacts = run_dir / "unified_evaluation"
+
+                def unified_call():
+                    if spec.trainer == "ultralytics":
+                        return export_yolo_predictions(Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
+                                                       320 if args.smoke_test else int(training["image_size"]), training.get("device", "auto"),
+                                                       excluded_category_names=excluded_categories,
+                                                       artifacts_dir=evaluation_artifacts)
+                    return export_rfdetr_predictions(spec, Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
+                                                      train_rfdetr.rfdetr_resolution(spec, training), training.get("device", "auto"),
+                                                      excluded_category_names=excluded_categories,
+                                                      artifacts_dir=evaluation_artifacts)
+
+                unified_started = datetime.now(timezone.utc)
+                unified_result = safe_unified_evaluation(unified_call, require=args.require_unified_eval)
+                unified_result["unified_evaluation_seconds"] = (
+                    datetime.now(timezone.utc) - unified_started
+                ).total_seconds()
             record.update(outcome, **unified_result, status="completed", finished_at=datetime.now(timezone.utc).isoformat())
             (run_dir / "run_record.json").write_text(json.dumps(record, indent=2, default=str) + "\n", encoding="utf-8")
             state["models"][spec.key].update(status="completed", finished_at=record["finished_at"])
@@ -242,24 +314,66 @@ def _main(argv: list[str] | None = None) -> int:
         if args.image_size <= 0 or args.image_size % 32:
             raise ValueError("--image-size must be a positive multiple of 32")
         config["training"]["image_size"] = args.image_size
+    if args.epochs is not None:
+        if args.epochs <= 0:
+            raise ValueError("--epochs must be positive")
+        config["training"]["epochs"] = args.epochs
+    selected_keys = args.models or (config["matrix"].get(args.matrix) if args.matrix else None)
+    if args.output_name and (not selected_keys or len(selected_keys) != 1):
+        raise ValueError("--output-name requires exactly one model selected via --models")
+    if args.feasibility_test:
+        if selected_keys != ["yolo12s"] or args.epochs != 2 or args.image_size != 960:
+            raise ValueError(
+                "--feasibility-test is locked to --models yolo12s --epochs 2 --image-size 960"
+            )
+        if args.smoke_test:
+            raise ValueError("--feasibility-test is incompatible with --smoke-test")
     config["config_fingerprint"] = fingerprint({k: v for k, v in config.items() if k != "config_fingerprint"})
     if args.final and config["annotations"].get("group_scope") != "explicit":
         raise PermissionError("--final refuses annotations.group_scope=auto")
+    if args.augmentation_smoke_samples <= 0:
+        raise ValueError("--augmentation-smoke-samples must be positive")
     if args.dry_run:
-        plan = preparation_plan(config, args.allow_raw_xml_fallback, args.confirm_non_qa_data)
+        plan = preparation_plan(
+            config,
+            args.allow_raw_xml_fallback,
+            args.confirm_non_qa_data,
+            args.offline_augmentation,
+        )
         plan["model_order"] = DEFAULT_ORDER; plan["selected_models"] = args.models or (config["matrix"].get(args.matrix) if args.matrix else None)
         print(json.dumps(plan, indent=2, default=str)); return 0
     if args.validate_prepared:
-        result = validate_prepared(Path(config["dataset"]["prepared_root"]), args.strict, config["validation"])
+        variant_names = (
+            [OFFLINE_AUGMENTATION_TITLES[args.offline_augmentation]]
+            if args.offline_augmentation else None
+        )
+        if (args.offline_augmentation in {"mild", "strong"} and
+                (Path(config["dataset"]["prepared_root"]) / "MTSD-Unaugmented").exists()):
+            variant_names.append("MTSD-Unaugmented")
+        result = validate_prepared(
+            Path(config["dataset"]["prepared_root"]),
+            args.strict,
+            config["validation"],
+            variant_names=variant_names,
+        )
         print(json.dumps(result, indent=2)); return 0 if result["ok"] else 1
+    if args.augmentation_smoke_test:
+        result = strong_augmentation_smoke_test(
+            config,
+            samples_per_category=args.augmentation_smoke_samples,
+            rebuild=args.rebuild,
+            acknowledge_open_qa_gate=args.acknowledge_open_qa_gate,
+        )
+        print(json.dumps(result, indent=2, default=str)); return 0
     if args.prepare_only:
-        if args.final and args.dataset_variant != "both":
+        if args.final and args.offline_augmentation is None and args.dataset_variant != "both":
             raise ValueError("Final preparation must build --dataset-variant both from one authoritative split")
         if args.allow_raw_xml_fallback:
             print("\nWARNING: RAW XML FALLBACK ACTIVE\nThis creates a mixed, non-final-QA dataset version.\n")
         result = prepare(config, args.dataset_variant, args.allow_raw_xml_fallback, args.confirm_non_qa_data,
                          args.rebuild, final=args.final,
-                         acknowledge_open_qa_gate=args.acknowledge_open_qa_gate)
+                         acknowledge_open_qa_gate=args.acknowledge_open_qa_gate,
+                         offline_augmentation=args.offline_augmentation)
         print(json.dumps(result, indent=2, default=str)); return 0
     if args.reports_only:
         output = generate_reports(Path(config["outputs"]["results_root"]), Path(config["outputs"]["runs_root"]))
