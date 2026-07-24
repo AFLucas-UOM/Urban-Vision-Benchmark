@@ -14,18 +14,28 @@
   "started_at": "2026-07-23T16:02:26.703118+00:00",
   "models": {
     "yolo11m": {
-      "status": "running",
+      "status": "completed",
       "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\E01_yolo11m_mtsdqa1aug_img1280_eb32_e100_adamw_s42",
       "started_at": "2026-07-23T16:02:26.731911+00:00",
-      "wandb_run_id": "0vuh2eub"
+      "wandb_run_id": "0vuh2eub",
+      "finished_at": "2026-07-23T20:44:17.419686+00:00"
     },
     "yolo26s": {
-      "status": "pending"
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO26-MTSD\\E02_yolo26s_mtsdqa1aug_img1280_eb32_e100_adamw_s42",
+      "started_at": "2026-07-23T20:45:27.471085+00:00",
+      "wandb_run_id": "dx88mp08",
+      "finished_at": "2026-07-23T23:51:02.547685+00:00"
     },
     "yolo11s": {
-      "status": "pending"
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\E03_yolo11s_mtsdqa1aug_img1280_eb32_e100_adamw_s42",
+      "started_at": "2026-07-23T23:51:09.272640+00:00",
+      "wandb_run_id": "chw04d3o",
+      "finished_at": "2026-07-24T02:49:29.318998+00:00"
     }
   },
-  "current_model": "yolo11m",
-  "final_status": "running"
+  "current_model": null,
+  "final_status": "completed",
+  "finished_at": "2026-07-24T02:49:36.372996+00:00"
 }
