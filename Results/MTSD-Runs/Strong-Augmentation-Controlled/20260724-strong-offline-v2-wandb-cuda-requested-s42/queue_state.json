@@ -1,9 +1,9 @@
 {
   "schema_version": "mtsd-strong-controlled-queue-v1",
   "created_at": "2026-07-24T21:03:24.134341+00:00",
-  "updated_at": "2026-07-25T15:32:55.444662+00:00",
-  "status": "running",
-  "current_job": "yolo12s_960_full",
+  "updated_at": "2026-07-25T17:59:30.610555+00:00",
+  "status": "completed",
+  "current_job": null,
   "qa_report": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\qa_report.json",
   "preflight": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\Strong-Augmentation-Controlled\\20260724-strong-offline-v2-wandb-cuda-requested-s42\\preflight.json",
   "feasibility_outcome": "pending",
@@ -261,7 +261,7 @@
       "label": "strongaug-wandb-cuda-yolo12s-img960-s42",
       "kind": "full",
       "condition": "always",
-      "status": "running",
+      "status": "completed",
       "command": [
         "C:\\Users\\fridge\\anaconda3\\envs\\mtsd-base\\python.exe",
         "Scripts\\MTSD-Scripts\\MTSD-SupervisedDetection\\run_mtsd_supervised.py",
@@ -295,8 +295,13 @@
       "started_at": "2026-07-25T15:32:55.444662+00:00",
       "log_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\Strong-Augmentation-Controlled\\20260724-strong-offline-v2-wandb-cuda-requested-s42\\logs\\strongaug-wandb-cuda-yolo12s-img960-s42.log",
       "pid": 32644,
-      "heartbeat_at": "2026-07-25T17:30:02.105637+00:00",
-      "elapsed_seconds": 7026.658384899958
+      "heartbeat_at": "2026-07-25T17:59:18.746151+00:00",
+      "elapsed_seconds": 8793.41976859991,
+      "finished_at": "2026-07-25T17:59:28.798061+00:00",
+      "return_code": 0,
+      "telemetry_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\Strong-Augmentation-Controlled\\20260724-strong-offline-v2-wandb-cuda-requested-s42\\telemetry\\strongaug-wandb-cuda-yolo12s-img960-s42.json",
+      "timeout_triggered": false
     }
-  }
+  },
+  "finished_at": "2026-07-25T17:59:30.610564+00:00"
 }

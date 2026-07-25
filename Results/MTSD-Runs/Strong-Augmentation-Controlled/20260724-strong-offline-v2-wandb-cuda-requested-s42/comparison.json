@@ -83,5 +83,22 @@
     "precision_difference": null,
     "recall_difference": null,
     "training_time_difference_seconds": -30341.285563300073
+  },
+  {
+    "model": "yolo12s",
+    "image_size": 960,
+    "previous_augmentation_recipe": "missing",
+    "new_augmentation_recipe": "strong-offline-v2",
+    "baseline_run_record": null,
+    "strong_run_record": "Results\\MTSD-Runs\\YOLO12-MTSD\\strongaug-wandb-cuda-yolo12s-img960-s42\\run_record.json",
+    "baseline_map50_95": null,
+    "strong_augmentation_map50_95": 0.6744509331354873,
+    "absolute_map_difference": null,
+    "baseline_f1": null,
+    "strong_augmentation_f1": 0.7762008733624455,
+    "absolute_f1_difference": null,
+    "precision_difference": null,
+    "recall_difference": null,
+    "training_time_difference_seconds": null
   }
 ]

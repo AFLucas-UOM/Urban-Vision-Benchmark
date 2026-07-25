@@ -13,12 +13,14 @@
   "started_at": "2026-07-25T15:33:45.185271+00:00",
   "models": {
     "yolo12s": {
-      "status": "running",
+      "status": "completed",
       "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO12-MTSD\\strongaug-wandb-cuda-yolo12s-img960-s42",
       "started_at": "2026-07-25T15:33:45.211596+00:00",
-      "wandb_run_id": "lxwcy0sp"
+      "wandb_run_id": "lxwcy0sp",
+      "finished_at": "2026-07-25T17:59:15.358236+00:00"
     }
   },
-  "current_model": "yolo12s",
-  "final_status": "running"
+  "current_model": null,
+  "final_status": "completed",
+  "finished_at": "2026-07-25T17:59:22.471706+00:00"
 }
