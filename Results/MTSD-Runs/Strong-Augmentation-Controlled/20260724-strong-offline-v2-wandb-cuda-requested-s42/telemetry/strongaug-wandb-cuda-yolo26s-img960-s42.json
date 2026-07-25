@@ -1,0 +1,20 @@
+{
+  "label": "strongaug-wandb-cuda-yolo26s-img960-s42",
+  "started_at": "2026-07-25T03:08:18.641957+00:00",
+  "finished_at": "2026-07-25T06:01:42.792726+00:00",
+  "elapsed_seconds": 10404.22737019998,
+  "time_per_epoch_seconds": 104.0422737019998,
+  "sample_interval_seconds": 5,
+  "sample_count": 2058,
+  "average_gpu_utilization_percent": 65.89893100097181,
+  "peak_gpu_utilization_percent": 98.0,
+  "peak_vram_mib": 15969.0,
+  "peak_temperature_c": 56.0,
+  "physical_batch": 16,
+  "gradient_accumulation": 4,
+  "effective_batch": 64,
+  "amp_active": true,
+  "return_code": 0,
+  "timeout_seconds": null,
+  "timeout_triggered": false
+}

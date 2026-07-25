@@ -5,12 +5,13 @@ The canonical entry point is `Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_
 ## Annotation and preparation policy
 
 Development may use `annotations.group_scope: auto`, but final preparation and
-training require `group_scope: explicit`. The configured candidate lock is
-GRP-1/2/3/5/6 (3,098 images, 8,372 source boxes). A new Final-QA group outside
-that list fails under the default policy; a missing or invalid approved group
-also fails. GRP-6 is explicitly listed rather than silently admitted by
-discovery, but final methodological approval remains blocked because the latest
-audit predates GRP-6.
+training require `group_scope: explicit`. **As of 2026-07-18 the approved
+lock covers all eleven groups**, GRP-1…GRP-11 (7,482 images, 20,509 source
+boxes), with the QA gate resolved (terminal audit
+`audit-20260718-113454`: 0 unresolved findings). A new Final-QA group outside
+the locked list still fails under the default policy; a missing or invalid
+approved group also still fails. (Earlier candidate lock, superseded: GRP-1/2/3/5/6,
+3,098 images / 8,372 boxes.)
 
 The machine-readable gate is `config/qa_gate.yaml`. It records the audit path,
 timestamp, finding counts, audited/approved scope, resolution status and
@@ -67,10 +68,12 @@ python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --pr
 python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --validate-prepared --strict
 ```
 
-The final preparation command above is expected to refuse while the QA gate is
-unresolved. For isolated development only, replace `--final` with
-`--acknowledge-open-qa-gate`. Use `--rebuild` only when intentionally archiving
-existing variants to `Prepared/_archive/`.
+The final preparation command above refuses whenever the QA gate is
+unresolved (it is currently resolved over all eleven groups, so `--final`
+preparation succeeds). For isolated development against an intentionally
+open gate, replace `--final` with `--acknowledge-open-qa-gate`. Use
+`--rebuild` only when intentionally archiving existing variants to
+`Prepared/_archive/`.
 
 ## Training and evaluation
 
@@ -100,4 +103,6 @@ manifest mismatch, stale annotations and configured minimum-support violations
 as fatal. Rare classes missing from valid/test are warnings by default and do
 not silently trigger a new split.
 
-Final checklist: resolve QA findings; confirm a clean Git state; run dry-run; prepare both variants; pass strict validation; verify checkpoint inventory; run the two-framework smoke test; inspect its records/W&B group; then start the resumable matrix. Real training is deliberately not part of repository implementation.
+Final checklist: resolve QA findings; confirm a clean Git state; run dry-run; prepare both variants; pass strict validation; verify checkpoint inventory; run the two-framework smoke test; inspect its records/W&B group; then start the resumable matrix.
+
+**Executed 19–22 July 2026**: the full 13-model dissertation matrix (`--matrix dissertation`) completed under this pipeline (`Results/MTSD-Runs/Supervised-Matrix/20260719-003416/`, all models `status: completed`), followed by a clean augmentation ablation and resolution follow-up experiments. See [Summary.md §2.2](../Summary.md#22-mtsd-supervised-detection--executed-13-model-matrix--follow-ups-resolution-question-open) for headline results and open items (notably the resolution-scaling decision, R12). A `rerun_unified_evaluation.py` companion script can re-score already-trained checkpoints without retraining; `run_followup_experiments.py` and `run_tiled_inference.py` drive the ablation and tiled-inference experiments respectively.

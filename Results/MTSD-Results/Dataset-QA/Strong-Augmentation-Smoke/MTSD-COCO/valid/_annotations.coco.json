@@ -1,0 +1,93 @@
+{
+  "info": {
+    "description": "MTSD mtsd-qa-v1-strong-offline-v2-smoke valid"
+  },
+  "licenses": [],
+  "categories": [
+    {
+      "id": 0,
+      "name": "Pedestrian Crossing",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 1,
+      "name": "Stop Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 2,
+      "name": "No Entry (One Way)",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 3,
+      "name": "Roundabout Ahead",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 4,
+      "name": "No Through Road (T-Junction)",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 5,
+      "name": "Blind-Spot Mirror (Convex Mirror)",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 6,
+      "name": "Street Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 7,
+      "name": "Directional Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 8,
+      "name": "Tourist Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 9,
+      "name": "Auxiliary Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 10,
+      "name": "Back-Unknown",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 11,
+      "name": "Other-Unknown",
+      "supercategory": "mtsd"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "grp10_IMG_1493.jpg",
+      "width": 4284,
+      "height": 5712,
+      "mtsd_group": "GRP-10"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 2,
+      "bbox": [
+        1563.93,
+        1842.68,
+        1142.61,
+        1095.09
+      ],
+      "area": 1251260.7849,
+      "iscrowd": 0,
+      "segmentation": []
+    }
+  ]
+}

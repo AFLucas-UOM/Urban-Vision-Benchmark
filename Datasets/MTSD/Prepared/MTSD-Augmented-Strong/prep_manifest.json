@@ -1,0 +1,549 @@
+{
+  "dataset_version": "mtsd-qa-v1-strong-offline-v2",
+  "prepared_at": "2026-07-24T20:20:13.695620+00:00",
+  "git_commit": "edf3c07575e9585904c06f07c2bfb0ecb4bd0131",
+  "pipeline_version": "1.0.0",
+  "annotation_source_mode": "qa_only",
+  "group_scope": "explicit",
+  "approved_groups": [
+    "GRP-1",
+    "GRP-2",
+    "GRP-3",
+    "GRP-4",
+    "GRP-5",
+    "GRP-6",
+    "GRP-7",
+    "GRP-8",
+    "GRP-9",
+    "GRP-10",
+    "GRP-11"
+  ],
+  "groups": [
+    {
+      "group": "GRP-1",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
+      "source_sha256": "cc8174a3cd424672344fcc38a76270d6ad66a614c89bb78b6d0fa3776b482817",
+      "images": 724,
+      "boxes": 1960
+    },
+    {
+      "group": "GRP-2",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
+      "source_sha256": "c91e1acfd91e139a38514e872be17ddabfa15c43aebd9e4719a34be855e4f59d",
+      "images": 630,
+      "boxes": 1621
+    },
+    {
+      "group": "GRP-3",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
+      "source_sha256": "5ab98e956354ab66941f80c0081a077491dec5543d50f5f8e710954a7aa5361f",
+      "images": 617,
+      "boxes": 1844
+    },
+    {
+      "group": "GRP-4",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-4\\Final-QA\\QA-GRP4.json",
+      "source_sha256": "452a0527a5e50fceaf145cb002d6582f7c53154a7af19a18bae165f638387afe",
+      "images": 875,
+      "boxes": 2314
+    },
+    {
+      "group": "GRP-5",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
+      "source_sha256": "9f7da0240ee7882eee897e55e5ac6023f51f4922660c3cdafc16988f59328e77",
+      "images": 657,
+      "boxes": 1839
+    },
+    {
+      "group": "GRP-6",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
+      "source_sha256": "7f672019daeb861b77268e7f70fc983b1b8435efd08ca776230743fea18536cb",
+      "images": 470,
+      "boxes": 1106
+    },
+    {
+      "group": "GRP-7",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json",
+      "source_sha256": "75178e6bc702ff7679fcfcc7eedaf57af3ed2ba8ffc21a954ffa22caa07bfd3f",
+      "images": 710,
+      "boxes": 1891
+    },
+    {
+      "group": "GRP-8",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json",
+      "source_sha256": "5a9fa2c071319282748d7a551dbc6e364adff9215ee8522552947deb85ccbdb8",
+      "images": 703,
+      "boxes": 1869
+    },
+    {
+      "group": "GRP-9",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json",
+      "source_sha256": "12a2722781ff0988d9f3631c42c4c25b5a14ba91df496d44424c30eb50463b42",
+      "images": 715,
+      "boxes": 2225
+    },
+    {
+      "group": "GRP-10",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json",
+      "source_sha256": "849b27b1f380441a3a9894be05c52bcf0c79122ccd904e6f0171d1b4639d3e80",
+      "images": 779,
+      "boxes": 2334
+    },
+    {
+      "group": "GRP-11",
+      "status": "included",
+      "source_type": "final_qa",
+      "source_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json",
+      "source_sha256": "e927efdb64e86d31a53b7156608fec80d4868e8850016c0834d5022de7f122f7",
+      "images": 602,
+      "boxes": 1506
+    }
+  ],
+  "class_names": [
+    "Pedestrian Crossing",
+    "Stop Sign",
+    "No Entry (One Way)",
+    "Roundabout Ahead",
+    "No Through Road (T-Junction)",
+    "Blind-Spot Mirror (Convex Mirror)",
+    "Street Sign",
+    "Directional Sign",
+    "Tourist Sign",
+    "Auxiliary Sign",
+    "Back-Unknown",
+    "Other-Unknown"
+  ],
+  "qa_id_to_contiguous": {
+    "1": 0,
+    "2": 1,
+    "3": 2,
+    "4": 3,
+    "5": 4,
+    "6": 5,
+    "7": 6,
+    "8": 7,
+    "9": 8,
+    "10": 9,
+    "11": 10,
+    "12": 11
+  },
+  "qa_gate": {
+    "gate_version": "qa-gate-v1",
+    "audit_path": "Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-20260718-113454",
+    "audit_timestamp": "2026-07-18T11:34:55",
+    "audited_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-4",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "approved_scope": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-4",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "finding_counts": {
+      "invalid_attribute_values": 0,
+      "duplicate_candidates": 0
+    },
+    "resolution_status": "resolved",
+    "approved_by": null,
+    "acknowledgement": "Latest audit covers all approved Final-QA groups and reports no unresolved critical findings.",
+    "gate_file": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Scripts\\MTSD-Scripts\\MTSD-SupervisedDetection\\config\\qa_gate.yaml",
+    "resolved": true,
+    "override_used": false
+  },
+  "split": {
+    "algorithm_version": "v2-hash-grouped",
+    "ratios": {
+      "train": 0.8,
+      "valid": 0.1,
+      "test": 0.1
+    },
+    "seed": 42,
+    "mode": "random-per-group-hash-grouped"
+  },
+  "counts": {
+    "original_images": 7482,
+    "original_boxes": 20509,
+    "augmented_images": 17958,
+    "final_images": 25440,
+    "final_boxes": 129690,
+    "per_split": {
+      "train": {
+        "images": 5986,
+        "boxes": 16535
+      },
+      "valid": {
+        "images": 749,
+        "boxes": 1996
+      },
+      "test": {
+        "images": 747,
+        "boxes": 1978
+      }
+    },
+    "per_class_per_split": {
+      "train": {
+        "Pedestrian Crossing": 1174,
+        "Stop Sign": 1071,
+        "No Entry (One Way)": 1789,
+        "Roundabout Ahead": 648,
+        "No Through Road (T-Junction)": 407,
+        "Blind-Spot Mirror (Convex Mirror)": 1328,
+        "Street Sign": 813,
+        "Directional Sign": 906,
+        "Tourist Sign": 27,
+        "Auxiliary Sign": 1069,
+        "Back-Unknown": 5416,
+        "Other-Unknown": 1887
+      },
+      "valid": {
+        "Pedestrian Crossing": 139,
+        "Stop Sign": 135,
+        "No Entry (One Way)": 212,
+        "Roundabout Ahead": 86,
+        "No Through Road (T-Junction)": 69,
+        "Blind-Spot Mirror (Convex Mirror)": 159,
+        "Street Sign": 97,
+        "Directional Sign": 112,
+        "Tourist Sign": 3,
+        "Auxiliary Sign": 111,
+        "Back-Unknown": 642,
+        "Other-Unknown": 231
+      },
+      "test": {
+        "Pedestrian Crossing": 143,
+        "Stop Sign": 130,
+        "No Entry (One Way)": 211,
+        "Roundabout Ahead": 67,
+        "No Through Road (T-Junction)": 61,
+        "Blind-Spot Mirror (Convex Mirror)": 160,
+        "Street Sign": 94,
+        "Directional Sign": 108,
+        "Tourist Sign": 3,
+        "Auxiliary Sign": 120,
+        "Back-Unknown": 661,
+        "Other-Unknown": 220
+      }
+    }
+  },
+  "offline_augmentation_selection": "strong",
+  "augmentation": {
+    "enabled": true,
+    "recipe_version": "strong-offline-v2",
+    "copies_per_image": 3,
+    "seed": 42,
+    "output": {
+      "jpeg_quality": 92,
+      "workers": 8,
+      "max_long_edge": 1920
+    },
+    "photometric": {
+      "brightness": {
+        "min": 0.65,
+        "max": 1.35,
+        "probability": 0.75
+      },
+      "contrast": {
+        "min": 0.7,
+        "max": 1.3,
+        "probability": 0.75
+      },
+      "saturation_or_color": {
+        "min": 0.8,
+        "max": 1.2,
+        "probability": 0.7
+      },
+      "gamma": {
+        "min": 0.7,
+        "max": 1.35,
+        "probability": 0.7
+      },
+      "gaussian_blur": {
+        "probability": 0.5,
+        "sigma_max": 1.5
+      },
+      "gaussian_noise": {
+        "probability": 0.5,
+        "sigma_max": 0.04
+      },
+      "jpeg_compression": {
+        "probability": 0.6,
+        "quality_min": 45,
+        "quality_max": 90
+      },
+      "motion_blur": {
+        "probability": 0.35,
+        "kernel_sizes": [
+          7,
+          9,
+          11
+        ]
+      },
+      "illumination": {
+        "partial_shadow_probability": 0.25,
+        "gradient_probability": 0.25,
+        "local_change_probability": 0.2,
+        "haze_probability": 0.15
+      }
+    },
+    "geometric": {
+      "translation_fraction": 0.1,
+      "scale_range": [
+        0.75,
+        1.3
+      ],
+      "rotation_degrees": [
+        -5.0,
+        5.0
+      ],
+      "shear_degrees": 2.0,
+      "mild_perspective": {
+        "enabled": true,
+        "distortion_fraction": 0.02
+      },
+      "random_crop": {
+        "enabled": true,
+        "probability": 0.35,
+        "min_retained_fraction": 0.85
+      },
+      "photometric_probability": 0.65,
+      "maximum_border_fraction": 0.18,
+      "horizontal_flip": {
+        "enabled": false,
+        "probability": 0.0,
+        "remap_validated": false,
+        "direction_sensitive_class_ids": [],
+        "class_remap": {}
+      }
+    },
+    "box_filter": {
+      "visible_area_threshold": 0.35,
+      "min_width_px": 2.0,
+      "min_height_px": 2.0,
+      "min_area_px": 9.0
+    },
+    "mosaic": {
+      "probability": 0.4,
+      "canvas_size": [
+        1280,
+        1280
+      ],
+      "centre_range": [
+        0.4,
+        0.6
+      ],
+      "photometric_probability": 0.35,
+      "tiny_object_area_px": 16.0,
+      "max_tiny_object_fraction": 0.7
+    },
+    "copy_paste": {
+      "enabled": true,
+      "probability": 0.2,
+      "rare_class_max_instances": 700,
+      "rare_class_frequency_quantile": 0.3,
+      "maximum_paste_count": 2,
+      "scale_range": [
+        0.8,
+        1.25
+      ],
+      "maximum_sign_width_fraction": 0.2,
+      "maximum_sign_height_fraction": 0.25,
+      "context_fraction": 0.18,
+      "edge_feather_fraction": 0.12,
+      "maximum_iou": 0.2,
+      "maximum_context_iou": 0.1,
+      "placement_attempts": 30,
+      "vertical_jitter_fraction": 0.15,
+      "photometric_probability": 0.45
+    },
+    "mixup": {
+      "enabled": false,
+      "probability": 0.0
+    },
+    "rejection": {
+      "maximum_attempts": 8,
+      "reject_empty_samples": true
+    },
+    "visual_qa": {
+      "samples_per_category": 8
+    },
+    "config_fingerprint": "1519c70ead25d35ea2466c467c2a4335f468ce8d21074d21c4a897f075458b41",
+    "train_only": true,
+    "online_training_augmentation": "disabled",
+    "manifest_format": "jsonl+csv",
+    "allow_empty_augmented_samples": false
+  },
+  "validation_findings": {
+    "box_clipped_to_image": 6,
+    "metadata_dimension_mismatch_exif": 1271,
+    "image_without_valid_boxes": 2
+  },
+  "excluded_records": [],
+  "coco_exif_normalised_images": 1273,
+  "outputs": {
+    "yolo_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\MTSD-YOLO",
+    "coco_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\MTSD-COCO"
+  },
+  "split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
+  "augmentation_manifest_sha256": "e7a50c18785658aaf342add878bfcf32c9e3be24a2da119834c22e32c98134a9",
+  "cross_variant_split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
+  "augmentation_manifest_jsonl_sha256": "3c79dea29ac8dac2dd351f5f9178747329cdd73118d27cb78edc4382330027c1",
+  "strong_augmentation_summary": {
+    "recipe_version": "strong-offline-v2",
+    "recipe_fingerprint": "1519c70ead25d35ea2466c467c2a4335f468ce8d21074d21c4a897f075458b41",
+    "seed": 42,
+    "original_training_images": 5986,
+    "generated_images": 17958,
+    "generated_images_by_category": {
+      "copy_paste": 3569,
+      "geometric": 2414,
+      "mosaic": 7256,
+      "photometric": 4719
+    },
+    "boxes_before_augmentation": 136915,
+    "boxes_after_augmentation": 109181,
+    "boxes_clipped": 5585,
+    "boxes_discarded": 6119,
+    "generated_object_size_distribution": {
+      "large_ge_96sq": 54476,
+      "medium_32sq_to_96sq": 16882,
+      "small_lt_32sq": 37823
+    },
+    "class_distribution_before": {
+      "Pedestrian Crossing": 1174,
+      "Stop Sign": 1071,
+      "No Entry (One Way)": 1789,
+      "Roundabout Ahead": 648,
+      "No Through Road (T-Junction)": 407,
+      "Blind-Spot Mirror (Convex Mirror)": 1328,
+      "Street Sign": 813,
+      "Directional Sign": 906,
+      "Tourist Sign": 27,
+      "Auxiliary Sign": 1069,
+      "Back-Unknown": 5416,
+      "Other-Unknown": 1887
+    },
+    "class_distribution_after_generated_only": {
+      "Pedestrian Crossing": 7461,
+      "Stop Sign": 6927,
+      "No Entry (One Way)": 11259,
+      "Roundabout Ahead": 5871,
+      "No Through Road (T-Junction)": 4420,
+      "Blind-Spot Mirror (Convex Mirror)": 8535,
+      "Street Sign": 5010,
+      "Directional Sign": 5390,
+      "Tourist Sign": 1975,
+      "Auxiliary Sign": 6493,
+      "Back-Unknown": 34103,
+      "Other-Unknown": 11737
+    },
+    "copy_paste_added_by_class": {
+      "Pedestrian Crossing": 0,
+      "Stop Sign": 0,
+      "No Entry (One Way)": 0,
+      "Roundabout Ahead": 1743,
+      "No Through Road (T-Junction)": 1821,
+      "Blind-Spot Mirror (Convex Mirror)": 0,
+      "Street Sign": 0,
+      "Directional Sign": 0,
+      "Tourist Sign": 1803,
+      "Auxiliary Sign": 0,
+      "Back-Unknown": 0,
+      "Other-Unknown": 0
+    },
+    "class_distribution_after_copy_paste_additions": {
+      "Pedestrian Crossing": 1174,
+      "Stop Sign": 1071,
+      "No Entry (One Way)": 1789,
+      "Roundabout Ahead": 2391,
+      "No Through Road (T-Junction)": 2228,
+      "Blind-Spot Mirror (Convex Mirror)": 1328,
+      "Street Sign": 813,
+      "Directional Sign": 906,
+      "Tourist Sign": 1830,
+      "Auxiliary Sign": 1069,
+      "Back-Unknown": 5416,
+      "Other-Unknown": 1887
+    },
+    "rare_classes": [
+      "Roundabout Ahead",
+      "No Through Road (T-Junction)",
+      "Tourist Sign"
+    ],
+    "rejected_augmentation_attempts": 1068,
+    "empty_augmented_samples": 0,
+    "generated_hash_set_fingerprint": "c9e5c8694fb0fc8ade938bfe3d27812714c1e3156ca9d415a80d0bb18a977937",
+    "visual_qa_samples_by_category": {
+      "copy_paste": 8,
+      "geometric": 8,
+      "mosaic": 8,
+      "photometric": 8
+    }
+  },
+  "prepared_metadata_repairs": [
+    {
+      "split": "train",
+      "file_name": "grp7_a3907179-IMG_2260.JPG",
+      "recorded_size": [
+        4032,
+        3024
+      ],
+      "actual_size": [
+        3024,
+        4032
+      ],
+      "reason": "empty_image_metadata_dimension_normalization"
+    },
+    {
+      "split": "train",
+      "file_name": "grp7_debd8cdb-IMG_2261.JPG",
+      "recorded_size": [
+        4032,
+        3024
+      ],
+      "actual_size": [
+        3024,
+        4032
+      ],
+      "reason": "empty_image_metadata_dimension_normalization"
+    }
+  ],
+  "manifest_fingerprint": "a9cd0e377ec9d01669c58e93406f861c15d81e0d16d9e37a1a01f4b35dc967f7"
+}

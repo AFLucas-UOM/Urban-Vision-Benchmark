@@ -47,15 +47,15 @@ Every annotated sign carries all four attributes, which turns the detection inve
 
 ## Experimental tracks and status
 
-| Track | Scope | Status (18 July 2026) |
+| Track | Scope | Status (24 July 2026) |
 | --- | --- | --- |
 | MDWD supervised detection | YOLO11/12/26 (n–l suites) + RF-DETR | **Executed**; runs archived, leakage-checked (RF-DETR nano executed; small/medium pending) |
-| MTSD supervised detection | 13-model matrix: YOLO11/12/26 (n/s/m), YOLO26-L, RF-DETR (n/s/m) + 3-model augmentation ablation | **Prepared datasets built; training starting** (resumable matrix executor, QA-gated) |
+| MTSD supervised detection | 13-model matrix: YOLO11/12/26 (n/s/m), YOLO26-L, RF-DETR (n/s/m) + augmentation and resolution follow-up experiments | **Executed** 19–22 July 2026; best model RF-DETR-M (mAP50-95 0.686, 11-class evaluation) — see [Summary.md §2.2](Summary.md#22-mtsd-supervised-detection--executed-13-model-matrix--follow-ups-resolution-question-open) |
 | Prompt-based localisation | SAM 3/3.1, LocateAnything-3B, Cosmos Reason2 2B/8B (32B opt-in) under `dissertation-v1` + `prompt-sensitivity-v1` (36 prompts, 9 paraphrase families) | Protocols implemented and pilot-verified; full fixed-protocol runs pending |
 | Attribute classification | 16-variant size/adaptation matrix over 4 backbone families × 2 sizes × frozen/adapted | **Executed** 13 July 2026 on the eight-group snapshot (13,862 crops); best variant `dinov3_vitl_lora`, test mean macro-F1 0.894 |
 | Deployment benchmark | latency / throughput / memory across all paradigms | Implemented, dry-run verified; execution pending |
 
-The MTSD training matrix consumes the newly built augmented set, whose third (motion-blur) copy strengthens the earlier two-copy photometric recipe; the controlled ablation (YOLO11m/12m/26m on augmented vs unaugmented data) isolates the augmentation's causal effect.
+The MTSD matrix trained on the augmented set (three offline copies/image, the third a motion-blur copy strengthening the earlier photometric-only recipe); RF-DETR swept the top three ranks by mAP50-95, ahead of every YOLO variant. A clean augmentation ablation (YOLO11m/12m/26m, augmented vs unaugmented) found the offline-augmentation effect small and mixed (±1 pp); a resolution follow-up (640→960→1280 px) found substantial, monotonic mAP50-95 gains that the matrix has not yet been systematically extended to capture — an open scope decision. A further MTSD augmentation recipe is in active development and not yet reflected here.
 
 ---
 
@@ -79,7 +79,7 @@ Urban-Vision-Benchmark/
 ├── Requirements/                      # Pip requirements + conda environment definitions
 ├── Results/
 │   ├── MDWD-Runs/  MDWD-Results/      # Archived MDWD runs + consolidated tables
-│   ├── MTSD-Runs/  MTSD-Results/      # MTSD supervised outputs (matrix in progress)
+│   ├── MTSD-Runs/  MTSD-Results/      # MTSD supervised outputs (13-model matrix executed)
 │   └── PromptDetect/                  # Batch prompt-evaluation runs
 ├── Scripts/
 │   ├── Automation/                    # Workflow registry/runner + repository health verifier

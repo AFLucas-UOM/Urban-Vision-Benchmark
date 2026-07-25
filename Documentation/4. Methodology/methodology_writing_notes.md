@@ -2,6 +2,10 @@
 
 Companion to `methodology.tex` (commit `cee7dc6a`, drafted 11 July 2026 under the final-state assumption).
 
+## Note 2026-07-24 (repository review, not a chapter revision)
+
+Point 3 of the "Revision 2026-07-18" entry below states *"MTSD training itself not yet run (`Results/MTSD-Runs` empty)"* — this is now **stale**. The configured 13-model dissertation matrix ran to completion 19–22 July 2026, followed by a clean augmentation ablation and resolution follow-up experiments (640/960/1280 px) and a tiled-inference pilot. Full results: root `Summary.md` §2.2. `methodology.tex` itself makes no claim about MTSD training status (it describes the protocol/procedure only, not results), so no chapter edit was needed for this; a Results/Evaluation chapter, when drafted, should cite `Results/MTSD-Results/Unified-Evaluation-NoTourist/20260722-all13/` as the headline evidence source. A further MTSD augmentation recipe and additional training were in active, uncommitted development at the time of this note and are out of scope here.
+
 ## Placeholder ledger — every `\TBD{...}` in methodology.tex
 
 Fill each from the named final artefact once it exists. Search the .tex for `\TBD{` — the macro renders as **[TBD: id]**.

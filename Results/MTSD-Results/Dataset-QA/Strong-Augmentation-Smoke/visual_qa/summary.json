@@ -1,0 +1,64 @@
+{
+  "recipe_version": "strong-offline-v2",
+  "recipe_fingerprint": "43462a5ec63542cbf78ae26b995bc1a689f1545ab61e05b1804aa6c83db75343",
+  "seed": 42,
+  "original_training_images": 5986,
+  "generated_images": 8,
+  "generated_images_by_category": {
+    "copy_paste": 2,
+    "geometric": 2,
+    "mosaic": 2,
+    "photometric": 2
+  },
+  "boxes_before_augmentation": 66,
+  "boxes_after_augmentation": 41,
+  "boxes_clipped": 1,
+  "boxes_discarded": 3,
+  "generated_object_size_distribution": {
+    "large_ge_96sq": 17,
+    "medium_32sq_to_96sq": 13,
+    "small_lt_32sq": 11
+  },
+  "class_distribution_before": {
+    "Pedestrian Crossing": 1174,
+    "Stop Sign": 1071,
+    "No Entry (One Way)": 1789,
+    "Roundabout Ahead": 648,
+    "No Through Road (T-Junction)": 407,
+    "Blind-Spot Mirror (Convex Mirror)": 1328,
+    "Street Sign": 813,
+    "Directional Sign": 906,
+    "Tourist Sign": 27,
+    "Auxiliary Sign": 1069,
+    "Back-Unknown": 5416,
+    "Other-Unknown": 1887
+  },
+  "class_distribution_after_generated_only": {
+    "Pedestrian Crossing": 6,
+    "Stop Sign": 4,
+    "No Entry (One Way)": 0,
+    "Roundabout Ahead": 5,
+    "No Through Road (T-Junction)": 2,
+    "Blind-Spot Mirror (Convex Mirror)": 0,
+    "Street Sign": 0,
+    "Directional Sign": 7,
+    "Tourist Sign": 2,
+    "Auxiliary Sign": 0,
+    "Back-Unknown": 11,
+    "Other-Unknown": 4
+  },
+  "rare_classes": [
+    "Roundabout Ahead",
+    "No Through Road (T-Junction)",
+    "Tourist Sign"
+  ],
+  "rejected_augmentation_attempts": 1,
+  "empty_augmented_samples": 0,
+  "generated_hash_set_fingerprint": "65709307dd2944f87453b618a0ef9eddf1dab43cf45ffc6721b829c7f7629756",
+  "visual_qa_samples_by_category": {
+    "copy_paste": 2,
+    "geometric": 2,
+    "mosaic": 2,
+    "photometric": 2
+  }
+}

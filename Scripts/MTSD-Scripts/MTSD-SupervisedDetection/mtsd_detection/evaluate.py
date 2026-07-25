@@ -5,6 +5,7 @@ import csv
 import io
 import json
 import math
+import time
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -442,11 +443,20 @@ def export_yolo_predictions(
     excluded = 0
     model = YOLO(str(checkpoint))
     resolved_device = None if device == "auto" else device
+    try:
+        import torch
+        if torch.cuda.is_available():
+            torch.cuda.reset_peak_memory_stats()
+    except (ImportError, RuntimeError):
+        torch = None
+    inference_started = time.perf_counter()
+    evaluated_images = 0
     for result in model.predict(source=str(coco_dir / split), imgsz=image_size, device=resolved_device,
                                 conf=0.001, iou=0.7, max_det=100, stream=True, verbose=False):
         image = images_by_name.get(Path(result.path).name)
         if image is None:
             continue
+        evaluated_images += 1
         for xyxy, score, class_id in zip(result.boxes.xyxy.cpu().tolist(), result.boxes.conf.cpu().tolist(), result.boxes.cls.cpu().tolist()):
             category_id = int(class_id)
             if category_id in excluded_ids:
@@ -460,12 +470,28 @@ def export_yolo_predictions(
                 dropped += 1
             else:
                 rows.append(row)
+    inference_seconds = time.perf_counter() - inference_started
+    peak_vram_mib = None
+    if torch is not None:
+        try:
+            if torch.cuda.is_available():
+                peak_vram_mib = torch.cuda.max_memory_allocated() / 1024 ** 2
+        except RuntimeError:
+            pass
     _write_json(output, rows)
     metrics = coco_eval(annotation, output, excluded_category_names=excluded_category_names, artifacts_dir=artifacts_dir)
     return _add_prediction_metadata(metrics, artifacts_dir, {
         "dropped_degenerate_predictions": dropped,
         "clamped_predictions": clamped,
         "excluded_predictions_during_export": excluded,
+        "inference_seconds": inference_seconds,
+        "inference_latency_ms_per_image": (
+            1000.0 * inference_seconds / evaluated_images if evaluated_images else None
+        ),
+        "inference_throughput_images_per_second": (
+            evaluated_images / inference_seconds if inference_seconds > 0 else None
+        ),
+        "inference_peak_vram_mib": peak_vram_mib,
     })
 
 
@@ -494,9 +520,16 @@ def export_rfdetr_predictions(
     dropped = 0
     clamped = 0
     excluded = 0
+    try:
+        torch.cuda.reset_peak_memory_stats()
+    except RuntimeError:
+        pass
+    inference_started = time.perf_counter()
+    evaluated_images = 0
     for image in truth["images"]:
         rgb_image = load_rgb_image(coco_dir / split / image["file_name"])
         detections = model.predict(rgb_image, threshold=0.001)
+        evaluated_images += 1
         xyxy = getattr(detections, "xyxy", [])
         confidence = getattr(detections, "confidence", [])
         class_id = getattr(detections, "class_id", [])
@@ -513,6 +546,11 @@ def export_rfdetr_predictions(
                 dropped += 1
             else:
                 rows.append(row)
+    inference_seconds = time.perf_counter() - inference_started
+    try:
+        peak_vram_mib = torch.cuda.max_memory_allocated() / 1024 ** 2
+    except RuntimeError:
+        peak_vram_mib = None
     _write_json(output, rows)
     metrics = coco_eval(annotation, output, excluded_category_names=excluded_category_names, artifacts_dir=artifacts_dir)
     return _add_prediction_metadata(metrics, artifacts_dir, {
@@ -520,4 +558,12 @@ def export_rfdetr_predictions(
         "clamped_predictions": clamped,
         "excluded_predictions_during_export": excluded,
         "input_color_mode": "RGB",
+        "inference_seconds": inference_seconds,
+        "inference_latency_ms_per_image": (
+            1000.0 * inference_seconds / evaluated_images if evaluated_images else None
+        ),
+        "inference_throughput_images_per_second": (
+            evaluated_images / inference_seconds if inference_seconds > 0 else None
+        ),
+        "inference_peak_vram_mib": peak_vram_mib,
     })

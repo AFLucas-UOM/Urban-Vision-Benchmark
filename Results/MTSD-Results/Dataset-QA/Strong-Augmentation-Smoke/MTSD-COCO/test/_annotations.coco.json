@@ -1,0 +1,135 @@
+{
+  "info": {
+    "description": "MTSD mtsd-qa-v1-strong-offline-v2-smoke test"
+  },
+  "licenses": [],
+  "categories": [
+    {
+      "id": 0,
+      "name": "Pedestrian Crossing",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 1,
+      "name": "Stop Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 2,
+      "name": "No Entry (One Way)",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 3,
+      "name": "Roundabout Ahead",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 4,
+      "name": "No Through Road (T-Junction)",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 5,
+      "name": "Blind-Spot Mirror (Convex Mirror)",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 6,
+      "name": "Street Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 7,
+      "name": "Directional Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 8,
+      "name": "Tourist Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 9,
+      "name": "Auxiliary Sign",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 10,
+      "name": "Back-Unknown",
+      "supercategory": "mtsd"
+    },
+    {
+      "id": 11,
+      "name": "Other-Unknown",
+      "supercategory": "mtsd"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "grp10_IMG_1495.jpg",
+      "width": 4284,
+      "height": 5712,
+      "mtsd_group": "GRP-10"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 9,
+      "bbox": [
+        2141.46,
+        4302.9,
+        122.7,
+        444.06
+      ],
+      "area": 54486.162,
+      "iscrowd": 0,
+      "segmentation": []
+    },
+    {
+      "id": 2,
+      "image_id": 1,
+      "category_id": 10,
+      "bbox": [
+        1534.97,
+        2013.28,
+        1484.26,
+        1176.55
+      ],
+      "area": 1746306.103,
+      "iscrowd": 0,
+      "segmentation": []
+    },
+    {
+      "id": 3,
+      "image_id": 1,
+      "category_id": 6,
+      "bbox": [
+        3548.23,
+        4406.72,
+        202.0,
+        117.41
+      ],
+      "area": 23716.82,
+      "iscrowd": 0,
+      "segmentation": []
+    },
+    {
+      "id": 4,
+      "image_id": 1,
+      "category_id": 7,
+      "bbox": [
+        3650.63,
+        4606.28,
+        365.66,
+        140.47
+      ],
+      "area": 51364.2602,
+      "iscrowd": 0,
+      "segmentation": []
+    }
+  ]
+}

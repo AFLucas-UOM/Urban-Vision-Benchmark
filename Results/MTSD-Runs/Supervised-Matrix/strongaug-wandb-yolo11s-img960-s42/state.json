@@ -1,0 +1,27 @@
+{
+  "requested_matrix": [
+    "yolo11s"
+  ],
+  "dataset_version": "mtsd-qa-v1-strong-offline-v2",
+  "prep_manifest_sha256": "730facde9e77cb762063215a2c66069fafac3d64c5e01b11b86c5f30f2db9058",
+  "split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
+  "annotation_source_mode": "qa_only",
+  "dataset_variant": "augmented",
+  "offline_augmentation_selection": "strong",
+  "config_fingerprint": "a42064af62526984425887c2d2df3c8eeed8016d376faee9ac417e8f0d39b0db",
+  "run_label": "strongaug-wandb-yolo11s-img960-s42",
+  "started_at": "2026-07-24T21:01:23.262138+00:00",
+  "models": {
+    "yolo11s": {
+      "status": "failed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\strongaug-wandb-yolo11s-img960-s42",
+      "started_at": "2026-07-24T21:01:23.290859+00:00",
+      "wandb_run_id": "r62b6j8a",
+      "error": "Invalid CUDA 'device=0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.\n\ntorch.cuda.is_available(): False\ntorch.cuda.device_count(): 0\nos.environ['CUDA_VISIBLE_DEVICES']: None\nSee https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.\n",
+      "finished_at": "2026-07-24T21:01:34.289217+00:00"
+    }
+  },
+  "current_model": null,
+  "final_status": "completed_with_failures",
+  "finished_at": "2026-07-24T21:01:43.290346+00:00"
+}
