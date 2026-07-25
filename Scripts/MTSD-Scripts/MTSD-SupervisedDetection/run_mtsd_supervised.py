@@ -322,9 +322,14 @@ def _main(argv: list[str] | None = None) -> int:
     if args.output_name and (not selected_keys or len(selected_keys) != 1):
         raise ValueError("--output-name requires exactly one model selected via --models")
     if args.feasibility_test:
-        if selected_keys != ["yolo12s"] or args.epochs != 2 or args.image_size != 960:
+        if (
+            selected_keys not in (["yolo12s"], ["yolo12m"])
+            or args.epochs != 2
+            or args.image_size not in (960, 1280)
+        ):
             raise ValueError(
-                "--feasibility-test is locked to --models yolo12s --epochs 2 --image-size 960"
+                "--feasibility-test is locked to one YOLO12 model, --epochs 2, "
+                "and --image-size 960 or 1280"
             )
         if args.smoke_test:
             raise ValueError("--feasibility-test is incompatible with --smoke-test")

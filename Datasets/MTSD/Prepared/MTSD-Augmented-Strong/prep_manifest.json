@@ -1,6 +1,6 @@
 {
   "dataset_version": "mtsd-qa-v1-strong-offline-v2",
-  "prepared_at": "2026-07-24T20:20:13.695620+00:00",
+  "prepared_at": "2026-07-24T22:20:13.69562+02:00",
   "git_commit": "edf3c07575e9585904c06f07c2bfb0ecb4bd0131",
   "pipeline_version": "1.0.0",
   "annotation_source_mode": "qa_only",
@@ -421,7 +421,7 @@
     "yolo_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\MTSD-YOLO",
     "coco_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\MTSD-COCO"
   },
-  "split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
+  "split_manifest_sha256": "acd4a151b032425f08ab5160f5bcd0ac55ac5dad013ad2087680119ba31a08b6",
   "augmentation_manifest_sha256": "e7a50c18785658aaf342add878bfcf32c9e3be24a2da119834c22e32c98134a9",
   "cross_variant_split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
   "augmentation_manifest_jsonl_sha256": "3c79dea29ac8dac2dd351f5f9178747329cdd73118d27cb78edc4382330027c1",
@@ -545,5 +545,5 @@
       "reason": "empty_image_metadata_dimension_normalization"
     }
   ],
-  "manifest_fingerprint": "a9cd0e377ec9d01669c58e93406f861c15d81e0d16d9e37a1a01f4b35dc967f7"
+  "manifest_fingerprint": "352bcf0b4ce0243104140a8065e4e69ecbc7a5821ef2000e5a7ba1e98b44fe65"
 }
