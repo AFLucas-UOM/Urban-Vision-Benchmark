@@ -13,6 +13,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = HERE.parents[2]
 if str(HERE) not in sys.path:
@@ -32,6 +34,7 @@ DEFAULT_QA_REPORT = Path(
     "Strong-Augmentation-Final-QA-20260724-R2/qa_report.json"
 )
 RUNNER = Path("Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py")
+DEFAULT_RUNNER_PYTHON = Path(r"C:\Users\fridge\anaconda3\envs\mtsd-base\python.exe")
 
 MODEL_FAMILIES = {
     "yolo11s": "YOLO11",
@@ -45,6 +48,11 @@ def _now() -> str:
     return datetime.now(timezone.utc).isoformat()
 
 
+def _runner_python() -> str:
+    configured = Path(os.environ.get("MTSD_RUNNER_PYTHON", str(DEFAULT_RUNNER_PYTHON)))
+    return str(configured if configured.is_file() else Path(sys.executable))
+
+
 def _atomic_write(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     temporary = path.with_suffix(path.suffix + ".tmp")
@@ -52,17 +60,18 @@ def _atomic_write(path: Path, payload: dict[str, Any]) -> None:
     os.replace(temporary, path)
 
 
-def _offline_environment() -> dict[str, str]:
+def _execution_environment(wandb_mode: str) -> dict[str, str]:
     environment = dict(os.environ)
-    guard = str((HERE / "offline_guard").resolve())
-    existing_pythonpath = environment.get("PYTHONPATH")
-    environment["PYTHONPATH"] = (
-        guard if not existing_pythonpath else guard + os.pathsep + existing_pythonpath
-    )
+    if wandb_mode != "online":
+        guard = str((HERE / "offline_guard").resolve())
+        existing_pythonpath = environment.get("PYTHONPATH")
+        environment["PYTHONPATH"] = (
+            guard if not existing_pythonpath else guard + os.pathsep + existing_pythonpath
+        )
+        environment["UV_OFFLINE_GUARD"] = "1"
+    else:
+        environment.pop("UV_OFFLINE_GUARD", None)
     environment.update({
-        "UV_OFFLINE_GUARD": "1",
-        "WANDB_MODE": "disabled",
-        "WANDB_DISABLED": "true",
         "HF_HUB_OFFLINE": "1",
         "TRANSFORMERS_OFFLINE": "1",
         "HF_DATASETS_OFFLINE": "1",
@@ -71,6 +80,12 @@ def _offline_environment() -> dict[str, str]:
         "PIP_NO_INDEX": "1",
         "PYTHONUNBUFFERED": "1",
     })
+    if wandb_mode == "disabled":
+        environment["WANDB_MODE"] = "disabled"
+        environment["WANDB_DISABLED"] = "true"
+    else:
+        environment["WANDB_MODE"] = wandb_mode
+        environment.pop("WANDB_DISABLED", None)
     return environment
 
 
@@ -82,9 +97,9 @@ def _state_path(job: dict[str, Any]) -> Path:
     return Path("Results/MTSD-Runs/Supervised-Matrix") / job["label"] / "state.json"
 
 
-def _base_command(job: dict[str, Any]) -> list[str]:
+def _base_command(job: dict[str, Any], wandb_mode: str, wandb_group: str) -> list[str]:
     command = [
-        sys.executable,
+        _runner_python(),
         str(RUNNER),
         "--final",
         "--dataset-variant", "augmented",
@@ -94,8 +109,8 @@ def _base_command(job: dict[str, Any]) -> list[str]:
         "--epochs", str(job["epochs"]),
         "--run-label", job["label"],
         "--output-name", job["label"],
-        "--wandb-mode", "disabled",
-        "--wandb-group", "strong-offline-v2-controlled-s42",
+        "--wandb-mode", wandb_mode,
+        "--wandb-group", wandb_group,
         "--device", "cuda",
         "--yolo-online-augmentation", "disabled",
     ]
@@ -106,8 +121,8 @@ def _base_command(job: dict[str, Any]) -> list[str]:
     return command
 
 
-def _jobs() -> list[dict[str, Any]]:
-    return [
+def _jobs(profile: str = "controlled") -> list[dict[str, Any]]:
+    base = [
         {
             "key": "yolo11s_960",
             "model": "yolo11s",
@@ -182,6 +197,27 @@ def _jobs() -> list[dict[str, Any]]:
             "condition": "feasibility_timed_out",
         },
     ]
+    if profile == "requested":
+        requested = [
+            {
+                **job,
+                "label": job["label"].replace("strongaug-", "strongaug-wandb-cuda-"),
+            }
+            for job in base[:5]
+        ]
+        return [
+            *requested,
+            {
+                "key": "yolo12s_960_full",
+                "model": "yolo12s",
+                "image_size": 960,
+                "epochs": 100,
+                "label": "strongaug-wandb-cuda-yolo12s-img960-s42",
+                "kind": "full",
+                "condition": "always",
+            },
+        ]
+    return base
 
 
 def _gpu_sample() -> dict[str, float] | None:
@@ -219,7 +255,24 @@ def _compute_processes() -> list[dict[str, str]]:
             continue
         values = [value.strip() for value in line.split(",", 2)]
         if len(values) == 3:
-            rows.append({"pid": values[0], "process_name": values[1], "memory_mib": values[2]})
+            process_name = values[1]
+            try:
+                numeric_memory = float(values[2])
+            except ValueError:
+                numeric_memory = None
+            is_python = Path(process_name).name.casefold() in {
+                "python", "python.exe", "pythonw", "pythonw.exe",
+            }
+            # WDDM reports ordinary desktop graphics clients in this query with
+            # "[N/A]" memory. They are not CUDA compute holders. Keep Python
+            # rows even when WDDM hides their memory, since trainers are Python.
+            if numeric_memory is None and not is_python:
+                continue
+            rows.append({
+                "pid": values[0],
+                "process_name": process_name,
+                "memory_mib": values[2],
+            })
     return rows
 
 
@@ -254,7 +307,7 @@ def _terminate_tree(process: subprocess.Popen) -> None:
 def _clear_cuda(environment: dict[str, str]) -> None:
     subprocess.run(
         [
-            sys.executable,
+            _runner_python(),
             "-c",
             "import gc; gc.collect(); import torch; "
             "torch.cuda.empty_cache() if torch.cuda.is_available() else None",
@@ -272,7 +325,7 @@ def _clear_cuda(environment: dict[str, str]) -> None:
 
 def _probe_local_models(environment: dict[str, str], checkpoints: dict[str, dict[str, Any]]) -> dict[str, Any]:
     probe = (
-        "import gc,json,os;"
+        "import gc,json,os,torch;"
         "from ultralytics import YOLO;"
         f"paths={json.dumps({key: value['path'] for key, value in checkpoints.items()})};"
         "[YOLO(paths[key]) for key in ('yolo11s','yolo26s','yolo12s')];"
@@ -281,10 +334,13 @@ def _probe_local_models(environment: dict[str, str], checkpoints: dict[str, dict
         "gradient_checkpointing=True,device='cpu');"
         "del model;gc.collect();"
         "print(json.dumps({'offline_guard_active':os.getenv('UV_OFFLINE_GUARD_ACTIVE'),"
+        "'cuda_available':torch.cuda.is_available(),"
+        "'cuda_device_count':torch.cuda.device_count(),"
+        "'torch_version':torch.__version__,"
         "'models_loaded':sorted(paths)}))"
     )
     result = subprocess.run(
-        [sys.executable, "-c", probe],
+        [_runner_python(), "-c", probe],
         cwd=REPO_ROOT,
         env=environment,
         capture_output=True,
@@ -367,7 +423,11 @@ def _protocol_comparisons(config: dict[str, Any]) -> list[dict[str, Any]]:
             })
             continue
         record = json.loads(path.read_text(encoding="utf-8"))
-        train_args = record.get("train_args", {})
+        train_args = dict(record.get("train_args", {}))
+        args_path = path.parent / "args.yaml"
+        if train_args.get("amp") is None and args_path.is_file():
+            saved_args = yaml.safe_load(args_path.read_text(encoding="utf-8")) or {}
+            train_args["amp"] = saved_args.get("amp")
         differences = {
             key: {"baseline": train_args.get(key), "strong": value}
             for key, value in expected.items()
@@ -393,6 +453,9 @@ def preflight(
     queue_root: Path,
     *,
     allow_existing_queue: bool,
+    job_profile: str,
+    wandb_mode: str,
+    wandb_group: str,
 ) -> dict[str, Any]:
     qa = json.loads(qa_report_path.read_text(encoding="utf-8"))
     if qa.get("final_status") != "pass":
@@ -440,10 +503,12 @@ def preflight(
     }
     rf_path, rf_record = _rf_baseline()
     protocol_comparisons = _protocol_comparisons(config)
-    environment = _offline_environment()
+    environment = _execution_environment(wandb_mode)
     model_probe = _probe_local_models(environment, checkpoints)
-    if model_probe.get("offline_guard_active") != "1":
+    if wandb_mode != "online" and model_probe.get("offline_guard_active") != "1":
         raise RuntimeError("Offline network guard did not activate in the model probe")
+    if not model_probe.get("cuda_available") or int(model_probe.get("cuda_device_count") or 0) < 1:
+        raise RuntimeError(f"Selected runner Python cannot see CUDA: {model_probe}")
 
     active_compute = _compute_processes()
     if active_compute:
@@ -451,7 +516,7 @@ def preflight(
     if queue_root.exists() and not allow_existing_queue:
         raise FileExistsError(f"Immutable queue root already exists: {queue_root}")
 
-    jobs = _jobs()
+    jobs = _jobs(job_profile)
     collisions = []
     for job in jobs:
         if _run_directory(job).exists() or _state_path(job).exists():
@@ -481,7 +546,7 @@ def preflight(
         "checkpoints": checkpoints,
         "model_probe": model_probe,
         "offline_environment": {
-            key: environment[key]
+            key: environment.get(key)
             for key in (
                 "UV_OFFLINE_GUARD", "WANDB_MODE", "WANDB_DISABLED",
                 "HF_HUB_OFFLINE", "TRANSFORMERS_OFFLINE", "HF_DATASETS_OFFLINE",
@@ -509,7 +574,7 @@ def preflight(
         "jobs": [
             {
                 **job,
-                "command": _base_command(job),
+                "command": _base_command(job, wandb_mode, wandb_group),
                 "run_directory": str(_run_directory(job)),
                 "state_path": str(_state_path(job)),
             }
@@ -541,11 +606,13 @@ def _run_job(
     queue_state: dict[str, Any],
     state_path: Path,
     environment: dict[str, str],
+    wandb_mode: str,
+    wandb_group: str,
 ) -> dict[str, Any]:
     active = _compute_processes()
     if active:
         raise RuntimeError(f"Refusing to launch {job['label']}; GPU is occupied: {active}")
-    command = _base_command(job)
+    command = _base_command(job, wandb_mode, wandb_group)
     log_path = queue_root / "logs" / f"{job['label']}.log"
     telemetry_path = queue_root / "telemetry" / f"{job['label']}.json"
     log_path.parent.mkdir(parents=True, exist_ok=True)
@@ -742,8 +809,16 @@ def update_comparison(queue_root: Path, jobs: list[dict[str, Any]]) -> None:
         writer.writerows(rows)
 
 
-def run_queue(queue_root: Path, preflight_result: dict[str, Any], resume: bool) -> dict[str, Any]:
-    jobs = _jobs()
+def run_queue(
+    queue_root: Path,
+    preflight_result: dict[str, Any],
+    resume: bool,
+    *,
+    job_profile: str,
+    wandb_mode: str,
+    wandb_group: str,
+) -> dict[str, Any]:
+    jobs = _jobs(job_profile)
     state_path = queue_root / "queue_state.json"
     if resume:
         state = json.loads(state_path.read_text(encoding="utf-8"))
@@ -766,7 +841,7 @@ def run_queue(queue_root: Path, preflight_result: dict[str, Any], resume: bool) 
                         if job["condition"] != "always"
                         else "pending"
                     ),
-                    "command": _base_command(job),
+                    "command": _base_command(job, wandb_mode, wandb_group),
                     "run_directory": str(_run_directory(job)),
                     "state_path": str(_state_path(job)),
                 }
@@ -776,7 +851,7 @@ def run_queue(queue_root: Path, preflight_result: dict[str, Any], resume: bool) 
         _atomic_write(queue_root / "preflight.json", preflight_result)
         _atomic_write(queue_root / "commands.json", {"jobs": preflight_result["jobs"]})
         _atomic_write(state_path, state)
-    environment = _offline_environment()
+    environment = _execution_environment(wandb_mode)
 
     for job in jobs:
         job_state = state["jobs"][job["key"]]
@@ -795,7 +870,7 @@ def run_queue(queue_root: Path, preflight_result: dict[str, Any], resume: bool) 
                 job_state["skip_reason"] = "960 feasibility threshold passed; fallback not permitted"
                 _atomic_write(state_path, state)
             continue
-        telemetry = _run_job(job, queue_root, state, state_path, environment)
+        telemetry = _run_job(job, queue_root, state, state_path, environment, wandb_mode, wandb_group)
         status = state["jobs"][job["key"]]["status"]
         if job["kind"] == "feasibility":
             if status == "completed" and telemetry["elapsed_seconds"] <= 3600:
@@ -849,6 +924,14 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--preflight-only", action="store_true")
     result.add_argument("--launch", action="store_true")
     result.add_argument("--resume", action="store_true")
+    result.add_argument(
+        "--job-profile",
+        choices=("controlled", "requested"),
+        default="controlled",
+        help="Use 'requested' for the six W&B runs requested on 2026-07-24.",
+    )
+    result.add_argument("--wandb-mode", choices=("online", "offline", "disabled"), default="disabled")
+    result.add_argument("--wandb-group", default="strong-offline-v2-controlled-s42")
     return result
 
 
@@ -868,11 +951,21 @@ def main(argv: list[str] | None = None) -> int:
         qa_report,
         queue_root,
         allow_existing_queue=args.resume,
+        job_profile=args.job_profile,
+        wandb_mode=args.wandb_mode,
+        wandb_group=args.wandb_group,
     )
     if args.preflight_only or not args.launch:
         print(json.dumps(result, indent=2))
         return 0
-    state = run_queue(queue_root, result, args.resume)
+    state = run_queue(
+        queue_root,
+        result,
+        args.resume,
+        job_profile=args.job_profile,
+        wandb_mode=args.wandb_mode,
+        wandb_group=args.wandb_group,
+    )
     print(json.dumps({
         "queue_root": str(queue_root),
         "state": str(queue_root / "queue_state.json"),

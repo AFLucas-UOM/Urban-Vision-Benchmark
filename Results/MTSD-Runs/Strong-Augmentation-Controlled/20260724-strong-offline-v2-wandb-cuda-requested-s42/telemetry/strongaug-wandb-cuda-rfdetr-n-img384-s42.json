@@ -1,0 +1,20 @@
+{
+  "label": "strongaug-wandb-cuda-rfdetr-n-img384-s42",
+  "started_at": "2026-07-25T10:07:28.702869+00:00",
+  "finished_at": "2026-07-25T15:32:53.758622+00:00",
+  "elapsed_seconds": 19525.200580999954,
+  "time_per_epoch_seconds": 195.25200580999953,
+  "sample_interval_seconds": 5,
+  "sample_count": 3869,
+  "average_gpu_utilization_percent": 37.10338588782631,
+  "peak_gpu_utilization_percent": 100.0,
+  "peak_vram_mib": 15543.0,
+  "peak_temperature_c": 54.0,
+  "physical_batch": 32,
+  "gradient_accumulation": 1,
+  "effective_batch": 32,
+  "amp_active": false,
+  "return_code": 0,
+  "timeout_seconds": null,
+  "timeout_triggered": false
+}

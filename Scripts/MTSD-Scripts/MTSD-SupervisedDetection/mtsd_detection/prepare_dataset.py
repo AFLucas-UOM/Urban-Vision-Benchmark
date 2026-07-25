@@ -110,7 +110,15 @@ def validate_records(raw: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], d
             clean.append({"class_id": category, "x0": x0, "y0": y0, "x1": x1, "y1": y1,
                           "source_annotation_id": annotation.get("id")})
             annotation_ids.append(annotation.get("id"))
-        if not clean: findings["image_without_valid_boxes"] += 1
+        if not clean:
+            findings["image_without_valid_boxes"] += 1
+            if (width, height) != (displayed_width, displayed_height):
+                # Raw annotation rows can exist but all be rejected. Once an
+                # image has no retained boxes, no annotation coordinate space
+                # remains to preserve; metadata must describe the EXIF-baked
+                # COCO pixels written by _place_coco.
+                width, height = displayed_width, displayed_height
+                findings["empty_image_dimension_normalized"] += 1
         out_name = f"{source['group'].lower().replace('-', '')}_{Path(source['file_name']).name}"
         records.append({**source, "source_path": path, "width": width, "height": height,
                         "clean_boxes": clean, "source_annotation_ids": annotation_ids,

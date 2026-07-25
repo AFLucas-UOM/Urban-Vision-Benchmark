@@ -1,0 +1,112 @@
+{
+  "schema_version": "mtsd-strong-augmentation-qa-v1",
+  "created_at": "2026-07-24T20:38:02.505561+00:00",
+  "dataset_root": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong",
+  "dataset_version": "mtsd-qa-v1-strong-offline-v2",
+  "prep_manifest_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\prep_manifest.json",
+  "prep_manifest_sha256": "730facde9e77cb762063215a2c66069fafac3d64c5e01b11b86c5f30f2db9058",
+  "split_manifest_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\split_manifest.csv",
+  "split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
+  "augmentation_manifest_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\augmentation_manifest.jsonl",
+  "augmentation_manifest_sha256": "3c79dea29ac8dac2dd351f5f9178747329cdd73118d27cb78edc4382330027c1",
+  "recipe_version": "strong-offline-v2",
+  "global_seed": 42,
+  "total_generated_images": 17958,
+  "total_boxes_before_augmentation": 136915,
+  "total_boxes_after_augmentation": 109181,
+  "boxes_clipped": 5585,
+  "boxes_discarded": 6119,
+  "discard_reasons": {
+    "area_below_minimum": 172,
+    "height_below_minimum": 141,
+    "visible_area_below_threshold": 5693,
+    "width_below_minimum": 113
+  },
+  "empty_generated_samples": 0,
+  "empty_samples_rejected_or_retried": 1068,
+  "images_by_augmentation_type": {
+    "copy_paste": 3569,
+    "geometric": 2414,
+    "mosaic": 7256,
+    "photometric": 4719
+  },
+  "operations_observed": {
+    "bbox_aware_geometric": 2414,
+    "brightness": 7855,
+    "category_fallback": 1,
+    "contrast": 7884,
+    "four_image_mosaic": 7256,
+    "gamma": 7286,
+    "gaussian_blur": 3767,
+    "gaussian_noise": 3742,
+    "illumination_gradient": 1930,
+    "jpeg_compression": 4627,
+    "local_illumination": 1539,
+    "mild_haze": 1127,
+    "motion_blur": 2619,
+    "partial_shadow": 1902,
+    "pre_resize": 10358,
+    "rare_class_copy_paste": 3569,
+    "saturation_or_color": 7344
+  },
+  "transformation_checks": {
+    "copy_paste": 5367,
+    "geometric": 6109,
+    "mosaic": 75115,
+    "pre_resize_or_identity": 22590
+  },
+  "yolo_coco_mismatches": 0,
+  "mismatch_counts": {},
+  "split_leakage_findings": 0,
+  "original_split_manifest_unchanged": true,
+  "invalid_classes": 0,
+  "invalid_boxes": 0,
+  "out_of_bounds_boxes": 0,
+  "strict_validator": {
+    "ok": true,
+    "fatal_count": 0,
+    "warning_count": 3,
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "clipped_source_boxes",
+        "detail": "6"
+      },
+      {
+        "severity": "warning",
+        "code": "retained_background_images",
+        "detail": "2"
+      },
+      {
+        "severity": "warning",
+        "code": "within_split_duplicate_hash",
+        "detail": "fcc9c96baa8a786aec355421a3dc11f24f5675a1fad0d814b815273c39d2c7b2 in train"
+      }
+    ]
+  },
+  "automated_errors": [],
+  "automated_error_count": 0,
+  "automated_status": "pass",
+  "transformation_unit_tests": {
+    "status": "pass",
+    "report": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\strong-full-tests-20260724-R2-final.xml"
+  },
+  "visual_qa": {
+    "review_status": "pass",
+    "samples_per_category": 25,
+    "additional_high_risk_samples": 25,
+    "root": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\visual_qa",
+    "html_report": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\visual_qa\\index.html",
+    "contact_sheets": {
+      "photometric": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\visual_qa\\contact_sheet_photometric.jpg",
+      "geometric": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\visual_qa\\contact_sheet_geometric.jpg",
+      "mosaic": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\visual_qa\\contact_sheet_mosaic.jpg",
+      "copy_paste": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\visual_qa\\contact_sheet_copy_paste.jpg",
+      "highest_risk": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\visual_qa\\contact_sheet_highest_risk.jpg"
+    },
+    "reviewed_at": "2026-07-24T20:40:05.061907+00:00",
+    "review_notes": "Reviewed all five 25-sample contact sheets. Photometric signs remain readable; geometric and perspective boxes align; mosaic boxes respect quadrant transforms and clipping; copy-paste boxes match inserted signs; highest-risk clipped/displaced samples remain correctly aligned. No unresolved visual defect."
+  },
+  "final_status": "pass",
+  "finalized_at": "2026-07-24T20:40:05.061907+00:00"
+}

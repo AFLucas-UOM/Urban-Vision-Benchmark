@@ -77,7 +77,7 @@ python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_strong_augmentation_qa.
 The report remains `pending_visual_review` until its contact sheets have been inspected and the focused transformation tests pass. Finalisation records both decisions in `qa_report.json`:
 
 ```powershell
-python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_strong_augmentation_qa.py --finalize-report Results/MTSD-Results/Dataset-QA/Strong-Augmentation-Final-QA-20260724-R2/qa_report.json --visual-decision pass --tests-passed --test-report Results/MTSD-Results/Dataset-QA/strong-transform-tests-20260724-R2.xml --review-notes "Boxes align in all reviewed contact sheets."
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_strong_augmentation_qa.py --finalize-report Results/MTSD-Results/Dataset-QA/Strong-Augmentation-Final-QA-20260724-R2/qa_report.json --visual-decision pass --tests-passed --test-report Results/MTSD-Results/Dataset-QA/strong-full-tests-20260724-R2-final.xml --review-notes "Boxes align in all reviewed contact sheets."
 ```
 
 The controlled queue refuses to start unless that report is a final pass and still hashes to the current prepared dataset. It uses only repository checkpoints, disables W&B, blocks non-loopback network access in every child process, preserves the 64-image YOLO optimiser batch, runs sequentially, and writes immutable command/state/telemetry records. YOLO12-S 960 receives a training-only two-epoch feasibility run with a strict one-hour process-tree timeout; exactly one full YOLO12-S path is then selected:
