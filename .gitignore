@@ -93,6 +93,7 @@ TEMP-*/
 temp-*/
 exports/
 env_backups/
+scratchpad/
 
 # --- OS and editor metadata ----------------------------------
 .DS_Store

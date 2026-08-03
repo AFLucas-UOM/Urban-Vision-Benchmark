@@ -1,9 +1,9 @@
 {
   "schema_version": "mtsd-strong-followup-queue-v1",
   "created_at": "2026-07-25T20:00:30.993857+00:00",
-  "updated_at": "2026-07-26T08:22:41.450557+00:00",
-  "status": "running",
-  "current_job": "yolo12s_1280",
+  "updated_at": "2026-07-26T15:20:07.951446+00:00",
+  "status": "failed",
+  "current_job": null,
   "qa_report": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Results\\Dataset-QA\\Strong-Augmentation-Final-QA-20260724-R2\\qa_report.json",
   "preflight": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\Strong-Augmentation-Followup\\20260725-strong-offline-v2-m-rfdetr-wandb-s42\\preflight.json",
   "feasibility_outcome": "pending",
@@ -114,7 +114,7 @@
       "label": "strongaug-wandb-followup-yolo12s-img1280-s42",
       "kind": "full",
       "condition": "always",
-      "status": "running",
+      "status": "failed",
       "command": [
         "C:\\Users\\fridge\\anaconda3\\envs\\mtsd-base\\python.exe",
         "Scripts\\MTSD-Scripts\\MTSD-SupervisedDetection\\run_mtsd_supervised.py",
@@ -149,7 +149,11 @@
       "log_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\Strong-Augmentation-Followup\\20260725-strong-offline-v2-m-rfdetr-wandb-s42\\logs\\strongaug-wandb-followup-yolo12s-img1280-s42.log",
       "pid": 7136,
       "heartbeat_at": "2026-07-26T15:19:17.533808+00:00",
-      "elapsed_seconds": 24996.22133760003
+      "elapsed_seconds": 25046.682088100002,
+      "finished_at": "2026-07-26T15:20:07.947952+00:00",
+      "return_code": 4294967295,
+      "telemetry_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\Strong-Augmentation-Followup\\20260725-strong-offline-v2-m-rfdetr-wandb-s42\\telemetry\\strongaug-wandb-followup-yolo12s-img1280-s42.json",
+      "timeout_triggered": false
     },
     "rfdetr_m_704": {
       "key": "rfdetr_m_704",
@@ -334,5 +338,6 @@
       "run_directory": "Results\\MTSD-Runs\\YOLO12-MTSD\\strongaug-wandb-followup-yolo12m-img1280-s42",
       "state_path": "Results\\MTSD-Runs\\Supervised-Matrix\\strongaug-wandb-followup-yolo12m-img1280-s42\\state.json"
     }
-  }
+  },
+  "failure_reason": "Required run failed: strongaug-wandb-followup-yolo12s-img1280-s42"
 }

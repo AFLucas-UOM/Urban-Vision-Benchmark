@@ -1,0 +1,14 @@
+{
+  "label": "strongaug-wandb-followup-yolo12s-img1280-s42",
+  "started_at": "2026-07-26T08:22:41.450557+00:00",
+  "finished_at": "2026-07-26T15:20:07.947952+00:00",
+  "elapsed_seconds": 25046.682088100002,
+  "time_per_epoch_seconds": 250.46682088100002,
+  "sample_count": 4965,
+  "average_gpu_utilization_percent": 97.75629405840886,
+  "peak_gpu_utilization_percent": 100.0,
+  "peak_vram_mib": 23996.0,
+  "return_code": 4294967295,
+  "timeout_seconds": null,
+  "timeout_triggered": false
+}
