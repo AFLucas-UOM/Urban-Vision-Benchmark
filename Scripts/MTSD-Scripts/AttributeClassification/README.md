@@ -499,19 +499,24 @@ imbalanced.
 
 ## Outputs and how to read them
 
-- `outputs/metrics/<variant>/{val,test}_metrics.json` — accuracy, macro-F1,
-  per-class F1, support, and confusion matrix per attribute, plus the run id.
-- `outputs/metrics/<variant>/{split}_per_class_f1.csv` — flat per-class F1
-  table for the dissertation.
+- `outputs/metrics/<variant>/{val,test}_metrics.json` — accuracy, macro
+  precision, macro recall, macro-F1, per-class precision/recall/F1, support,
+  and confusion matrix per attribute, plus the run id. Held-out test bundles
+  additionally include percentile-bootstrap 95% CIs for macro-F1.
+- `outputs/metrics/<variant>/{split}_per_class_f1.csv` — flat per-class
+  precision/recall/F1 table for the dissertation (the historical filename is
+  retained for compatibility).
 - `outputs/metrics/<variant>/confusion_{split}_{attr}.png` — row-normalised
   confusion heatmaps with raw counts annotated.
 - `outputs/reports/comparison.{csv,md}` and `comparison_macro_f1.png` — the
   consolidated comparison across **every variant with completed test metrics**
-  (the report never assumes a fixed variant count): macro-F1 and accuracy per
-  attribute, run details (family, architecture, size, adaptation, resolution,
-  best/stopping epoch, stop reason, val score, parameter counts, training
-  duration, loaded backend/version), per-class F1 tables with supports, and
-  links to the confusion matrices. **Macro-F1 is the primary metric**: with
+  (the report never assumes a fixed variant count): macro precision, macro
+  recall, macro-F1 with 95% CIs, accuracy per attribute, run details (family,
+  architecture, size, adaptation, resolution, best/stopping epoch, stop
+  reason, val score, parameter counts, training duration, inference time,
+  throughput, loaded backend/version), per-class precision/recall/F1 tables
+  with supports, and links to the confusion matrices. **Macro-F1 is the
+  primary metric**: with
   Good ~78% of condition labels, accuracy rewards majority-class collapse,
   while macro-F1 weights rare classes (Heavily Damaged, Pentagon) equally.
 - `outputs/reports/size_ablation.{csv,md}` — the model-size ablation report
@@ -521,8 +526,11 @@ imbalanced.
   (3) ConvNeXt full fine-tuning, (4) an all-frozen cross-family ranking —
   each table explicitly labelled with its adaptation mode. Rows carry
   variant, family, size, architecture, adaptation, resolution, parameter
-  counts, best epoch, val/test mean macro-F1, per-head test macro-F1 and
-  accuracy, training duration, test throughput, and backend/version.
+  counts, best epoch, val/test mean macro precision, macro recall and macro-F1
+  with 95% CIs, per-head test macro metrics and accuracy, training duration,
+  inference time, throughput, latency, and backend/version. It also includes a
+  direct inference-efficiency comparison grouped by frozen, LoRA, and
+  fine-tuned adaptation.
 - `outputs/experiment_log.jsonl` — one line per run: run id, variant,
   adaptation, git commit, groups and crop counts used, split sizes, parameter
   breakdown, best/stopping epoch and stop reason, val/test scores, checkpoint

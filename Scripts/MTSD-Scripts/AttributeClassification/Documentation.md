@@ -505,10 +505,18 @@ The evaluation code reports, for each attribute:
 | Metric | Purpose |
 |---|---|
 | Accuracy | Overall proportion correct; useful but can be misleading under imbalance. |
+| Macro-precision | Average precision across classes, weighting each class equally. |
+| Macro-recall | Average recall across classes, weighting each class equally. |
 | Macro-F1 | Primary metric; averages per-class F1 equally. |
-| Per-class F1 | Identifies whether rare classes are handled well. |
+| Bootstrap 95% CI for macro-F1 | Percentile bootstrap uncertainty interval over labelled test crops. |
+| Per-class precision/recall/F1 | Identifies whether rare classes are handled well and whether errors are false-positive or false-negative dominated. |
 | Support | Number of labelled examples per class. |
 | Confusion matrix | Error pattern analysis. |
+
+The reports also record held-out test inference time, images per second, and
+milliseconds per image. These values cover the DataLoader and model forward
+pass, with metric aggregation and bootstrap resampling excluded, and are shown
+separately for frozen, LoRA, and full fine-tuning comparisons.
 
 Macro-F1 is the correct primary metric here. For example, `condition` is dominated by `Good`, so a model can obtain acceptable accuracy while performing poorly on `Weathered` and `Heavily Damaged`.
 

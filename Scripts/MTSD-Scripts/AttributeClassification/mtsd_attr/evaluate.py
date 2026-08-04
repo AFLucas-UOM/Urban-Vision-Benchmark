@@ -16,6 +16,7 @@ import copy
 import csv
 import json
 import logging
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -26,7 +27,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 from matplotlib.colors import LinearSegmentedColormap
-from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
+from sklearn.metrics import (accuracy_score, confusion_matrix, f1_score,
+                             precision_score, recall_score)
 
 from .dataset import MISSING_LABEL
 
@@ -46,21 +48,103 @@ SURFACE = "#fcfcfb"
 CONFUSION_CMAP = LinearSegmentedColormap.from_list("seq_blue", SEQUENTIAL_BLUE)
 
 
-def evaluate_model(model, loader, attributes, device, amp=False):
+def _macro_f1_from_confusion(cm):
+    """Compute macro-F1 from a fixed-label confusion matrix."""
+    cm = np.asarray(cm, dtype=float)
+    true_positive = np.diag(cm)
+    precision = np.divide(
+        true_positive, cm.sum(axis=0), out=np.zeros_like(true_positive),
+        where=cm.sum(axis=0) > 0)
+    recall = np.divide(
+        true_positive, cm.sum(axis=1), out=np.zeros_like(true_positive),
+        where=cm.sum(axis=1) > 0)
+    f1 = np.divide(
+        2.0 * precision * recall, precision + recall,
+        out=np.zeros_like(precision), where=(precision + recall) > 0)
+    return float(np.mean(f1))
+
+
+def _bootstrap_macro_f1_samples(y_true, y_pred, labels, n_bootstrap, seed):
+    """Generate percentile-bootstrap macro-F1 samples with fixed labels."""
+    if n_bootstrap <= 0 or not y_true:
+        return np.asarray([], dtype=float)
+    y_true = np.asarray(y_true, dtype=np.int64)
+    y_pred = np.asarray(y_pred, dtype=np.int64)
+    n_classes = len(labels)
+    rng = np.random.default_rng(seed)
+    samples = np.empty(n_bootstrap, dtype=float)
+    for i in range(n_bootstrap):
+        indices = rng.integers(0, len(y_true), size=len(y_true))
+        flat = n_classes * y_true[indices] + y_pred[indices]
+        cm = np.bincount(flat, minlength=n_classes * n_classes)
+        samples[i] = _macro_f1_from_confusion(cm.reshape(n_classes, n_classes))
+    return samples
+
+
+def _bootstrap_ci(samples, seed=None):
+    """Return a JSON-safe percentile 95% confidence-interval summary."""
+    if len(samples) == 0:
+        return None
+    result = {
+        "level": 0.95,
+        "method": "percentile",
+        "lower": float(np.percentile(samples, 2.5)),
+        "upper": float(np.percentile(samples, 97.5)),
+        "n_bootstrap": int(len(samples)),
+    }
+    if seed is not None:
+        result["seed"] = int(seed)
+    return result
+
+
+def bootstrap_macro_f1(y_true, y_pred, labels, n_bootstrap=2000, seed=42):
+    """Return a reproducible percentile-bootstrap 95% CI for macro-F1."""
+    samples = _bootstrap_macro_f1_samples(
+        y_true, y_pred, labels, int(n_bootstrap), int(seed))
+    return _bootstrap_ci(samples, seed=seed)
+
+
+def _mean_metric(metrics, key):
+    values = [m.get(key) for m in metrics.values() if m.get(key) is not None]
+    return float(np.mean(values)) if values else 0.0
+
+
+def mean_macro_precision(metrics):
+    """Mean of the per-attribute macro-precision scores."""
+    return _mean_metric(metrics, "macro_precision")
+
+
+def mean_macro_recall(metrics):
+    """Mean of the per-attribute macro-recall scores."""
+    return _mean_metric(metrics, "macro_recall")
+
+
+def evaluate_model(model, loader, attributes, device, amp=False,
+                   bootstrap_samples=0, bootstrap_seed=42,
+                   return_timing=False):
     """Run inference over a loader and compute per-attribute metrics.
 
     Crops with a missing label on a head are excluded from that head's metrics.
 
     Returns:
-        dict attribute -> {"n", "accuracy", "macro_f1", "classes",
-        "per_class_f1", "support", "confusion_matrix"}.
+        dict attribute -> {"n", "accuracy", "macro_precision",
+        "macro_recall", "macro_f1", "macro_f1_ci", "classes",
+        "per_class_precision", "per_class_recall", "per_class_f1",
+        "support", "confusion_matrix"}. If return_timing is true, returns
+        ``(metrics, timing)`` where timing covers the DataLoader and model
+        forward pass, with metric aggregation/bootstrap excluded.
     """
     model.eval()
     names = list(attributes)
     preds = {a: [] for a in names}
     trues = {a: [] for a in names}
+    n_images = 0
+    started = time.perf_counter()
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
     with torch.no_grad():
         for images, targets, _ in loader:
+            n_images += len(images)
             images = images.to(device, non_blocking=True)
             with torch.autocast(device_type=device.type, dtype=torch.bfloat16,
                                 enabled=amp):
@@ -72,32 +156,75 @@ def evaluate_model(model, loader, attributes, device, amp=False):
                     p = logits[attr].argmax(dim=1).cpu()
                     preds[attr].extend(p[mask].tolist())
                     trues[attr].extend(t[mask].tolist())
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
+    inference_duration_s = time.perf_counter() - started
     metrics = {}
-    for attr in names:
+    ci_samples_by_attr = []
+    for attr_index, attr in enumerate(names):
         classes = attributes[attr]["classes"]
         labels = list(range(len(classes)))
         y_true, y_pred = trues[attr], preds[attr]
         if not y_true:
             log.warning("Attribute %s: no labelled samples in this split", attr)
-            metrics[attr] = {"n": 0, "accuracy": None, "macro_f1": None,
-                             "classes": classes, "per_class_f1": {},
+            metrics[attr] = {"n": 0, "accuracy": None,
+                             "macro_precision": None, "macro_recall": None,
+                             "macro_f1": None, "macro_f1_ci": None,
+                             "classes": classes, "per_class_precision": {},
+                             "per_class_recall": {}, "per_class_f1": {},
                              "support": {}, "confusion_matrix": []}
             continue
-        per_class = f1_score(y_true, y_pred, labels=labels, average=None,
-                             zero_division=0)
+        per_class_precision = precision_score(
+            y_true, y_pred, labels=labels, average=None, zero_division=0)
+        per_class_recall = recall_score(
+            y_true, y_pred, labels=labels, average=None, zero_division=0)
+        per_class_f1 = f1_score(
+            y_true, y_pred, labels=labels, average=None, zero_division=0)
         cm = confusion_matrix(y_true, y_pred, labels=labels)
+        ci_samples = _bootstrap_macro_f1_samples(
+            y_true, y_pred, labels, int(bootstrap_samples),
+            int(bootstrap_seed) + attr_index)
+        if len(ci_samples):
+            ci_samples_by_attr.append(ci_samples)
         metrics[attr] = {
             "n": len(y_true),
             "accuracy": float(accuracy_score(y_true, y_pred)),
+            "macro_precision": float(precision_score(
+                y_true, y_pred, labels=labels, average="macro",
+                zero_division=0)),
+            "macro_recall": float(recall_score(
+                y_true, y_pred, labels=labels, average="macro",
+                zero_division=0)),
             "macro_f1": float(f1_score(y_true, y_pred, labels=labels,
                                        average="macro", zero_division=0)),
+            "macro_f1_ci": _bootstrap_ci(
+                ci_samples, seed=int(bootstrap_seed) + attr_index),
             "classes": classes,
-            "per_class_f1": {c: float(f) for c, f in zip(classes, per_class)},
+            "per_class_precision": {
+                c: float(value) for c, value in zip(classes, per_class_precision)},
+            "per_class_recall": {
+                c: float(value) for c, value in zip(classes, per_class_recall)},
+            "per_class_f1": {
+                c: float(value) for c, value in zip(classes, per_class_f1)},
             "support": {c: int((np.array(y_true) == i).sum())
                         for i, c in enumerate(classes)},
             "confusion_matrix": cm.tolist(),
         }
-    return metrics
+    timing = {
+        "duration_s": round(inference_duration_s, 4),
+        "n_images": n_images,
+        "images_per_s": round(n_images / inference_duration_s, 2)
+        if inference_duration_s else None,
+        "ms_per_image": round(inference_duration_s * 1000.0 / n_images, 4)
+        if n_images else None,
+    }
+    if ci_samples_by_attr:
+        timing["mean_macro_f1_ci"] = _bootstrap_ci(
+            np.mean(np.stack(ci_samples_by_attr), axis=0),
+            seed=int(bootstrap_seed))
+    else:
+        timing["mean_macro_f1_ci"] = None
+    return (metrics, timing) if return_timing else metrics
 
 
 def mean_macro_f1(metrics):
@@ -137,8 +264,8 @@ def plot_confusion_matrix(cm, classes, title, path):
 
 
 def save_metrics_bundle(metrics_dir, variant, split, metrics, run_id,
-                        smoke_test=False, run_info=None):
-    """Write one split's metrics as JSON + per-class-F1 CSV + confusion PNGs.
+                        smoke_test=False, run_info=None, evaluation_meta=None):
+    """Write one split's metrics as JSON + per-class CSV + confusion PNGs.
 
     Smoke-test outputs go to a "<variant>-smoke" folder so they never mix with
     real results. run_info (best/stopping epoch, stop reason, adaptation mode,
@@ -152,7 +279,10 @@ def save_metrics_bundle(metrics_dir, variant, split, metrics, run_id,
         "split": split,
         "smoke_test": smoke_test,
         "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "mean_macro_precision": mean_macro_precision(metrics),
+        "mean_macro_recall": mean_macro_recall(metrics),
         "mean_macro_f1": mean_macro_f1(metrics),
+        "mean_macro_f1_ci": (evaluation_meta or {}).get("mean_macro_f1_ci"),
         "run_info": run_info or {},
         "attributes": metrics,
     }
@@ -161,11 +291,15 @@ def save_metrics_bundle(metrics_dir, variant, split, metrics, run_id,
     with open(folder / f"{split}_per_class_f1.csv", "w", newline="",
               encoding="utf-8") as f:
         writer = csv.writer(f)
-        writer.writerow(["variant", "split", "attribute", "class", "f1", "support"])
+        writer.writerow(["variant", "split", "attribute", "class",
+                         "precision", "recall", "f1", "support"])
         for attr, m in metrics.items():
             for cls in m["classes"]:
                 writer.writerow([variant, split, attr,
-                                 cls, f"{m['per_class_f1'].get(cls, 0.0):.4f}",
+                                 cls,
+                                 f"{m.get('per_class_precision', {}).get(cls, 0.0):.4f}",
+                                 f"{m.get('per_class_recall', {}).get(cls, 0.0):.4f}",
+                                 f"{m.get('per_class_f1', {}).get(cls, 0.0):.4f}",
                                  m["support"].get(cls, 0)])
     for attr, m in metrics.items():
         if m["confusion_matrix"]:
@@ -270,31 +404,67 @@ def write_comparison_report(cfg, smoke_test=False):
             return meta.get(key, default)
         return default
 
+    def csv_num(value):
+        return f"{value:.4f}" if isinstance(value, (int, float)) else value
+
+    def ci_bounds(metric):
+        ci = metric.get("macro_f1_ci") or {}
+        return ci.get("lower", "n/a"), ci.get("upper", "n/a")
+
     csv_path = reports_dir / f"comparison{suffix}.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(
             ["variant", "run_id", "family", "architecture", "model_size",
-             "adaptation", "resolution"] + attributes
-            + ["mean_macro_f1", "val_mean_macro_f1", "best_epoch",
+             "adaptation", "resolution"]
+            + [f"{a}_macro_precision" for a in attributes]
+            + [f"{a}_macro_recall" for a in attributes]
+            + [f"{a}_macro_f1" for a in attributes]
+            + [f"{a}_macro_f1_ci_lower" for a in attributes]
+            + [f"{a}_macro_f1_ci_upper" for a in attributes]
+            + ["mean_macro_precision", "mean_macro_recall", "mean_macro_f1",
+               "mean_macro_f1_ci_lower", "mean_macro_f1_ci_upper",
+               "val_mean_macro_f1", "best_epoch",
                "stopped_epoch", "stop_reason", "total_params",
                "trainable_params", "trainable_pct", "train_duration_s",
-               "loaded_backend", "loaded_version"])
+               "test_eval_duration_s", "test_images_per_s",
+               "test_ms_per_image", "loaded_backend", "loaded_version"])
         for variant in present:
             val = info(variant, "val_mean_macro_f1")
             meta = vmeta(variant)
+            payload = details[variant]
+            metric_by_attr = payload.get("attributes", {})
+            per_attr_precision = [csv_num(metric_by_attr.get(a, {}).get(
+                "macro_precision", "n/a")) for a in attributes]
+            per_attr_recall = [csv_num(metric_by_attr.get(a, {}).get(
+                "macro_recall", "n/a")) for a in attributes]
+            per_attr_f1 = [csv_num(metric_by_attr.get(a, {}).get(
+                "macro_f1", "n/a")) for a in attributes]
+            ci_lower = [csv_num(ci_bounds(metric_by_attr.get(a, {}))[0])
+                        for a in attributes]
+            ci_upper = [csv_num(ci_bounds(metric_by_attr.get(a, {}))[1])
+                        for a in attributes]
+            mean_ci = payload.get("mean_macro_f1_ci") or {}
             writer.writerow(
                 [variant, details[variant]["run_id"], meta["family"],
                  meta["architecture"], meta["model_size"],
                  info(variant, "adaptation", meta["adaptation"]),
                  meta["resolution"]]
-                + [f"{rows[variant].get(a, float('nan')):.4f}" for a in attributes]
-                + [f"{rows[variant]['mean']:.4f}",
-                   f"{val:.4f}" if isinstance(val, float) else val,
+                + per_attr_precision + per_attr_recall + per_attr_f1
+                + ci_lower + ci_upper
+                + [csv_num(payload.get("mean_macro_precision", "n/a")),
+                   csv_num(payload.get("mean_macro_recall", "n/a")),
+                   csv_num(payload.get("mean_macro_f1", "n/a")),
+                   csv_num(mean_ci.get("lower", "n/a")),
+                   csv_num(mean_ci.get("upper", "n/a")),
+                   csv_num(val),
                    info(variant, "best_epoch"), info(variant, "stopped_epoch"),
                    info(variant, "stop_reason"), pinfo(variant, "total"),
                    pinfo(variant, "trainable"), pinfo(variant, "trainable_pct"),
                    info(variant, "train_duration_s"),
+                   info(variant, "test_eval_duration_s"),
+                   info(variant, "test_images_per_s"),
+                   info(variant, "test_ms_per_image"),
                    bmeta(variant, "loaded_backend"),
                    bmeta(variant, "loaded_version")])
 
@@ -305,15 +475,41 @@ def write_comparison_report(cfg, smoke_test=False):
         "Primary metric: **macro-F1** on the test split (robust to class "
         "imbalance; accuracy shown for reference).",
         "",
-        "## Macro-F1 by attribute",
+        "## Macro metrics by attribute",
         "",
-        "| Variant | " + " | ".join(attributes) + " | Mean |",
-        "|" + "---|" * (len(attributes) + 2),
+        "| Variant | "
+        + " | ".join(f"{a} P" for a in attributes)
+        + " | " + " | ".join(f"{a} R" for a in attributes)
+        + " | " + " | ".join(f"{a} F1" for a in attributes)
+        + " | " + " | ".join(f"{a} F1 95% CI" for a in attributes)
+        + " | Mean P | Mean R | Mean F1 | Mean F1 95% CI |",
+        "|" + "---|" * (len(attributes) * 4 + 5),
     ]
     for variant in present:
-        cells = [f"{rows[variant].get(a, float('nan')):.4f}" for a in attributes]
+        payload = details[variant]
+        attr_metrics = payload.get("attributes", {})
+        def fmt_metric(value):
+            return f"{value:.4f}" if isinstance(value, (int, float)) else "n/a"
+        def fmt_ci(metric):
+            return (f"[{metric.get('lower'):.4f}, {metric.get('upper'):.4f}]"
+                    if isinstance(metric.get("lower"), (int, float))
+                    and isinstance(metric.get("upper"), (int, float))
+                    else "n/a")
+        cells = [fmt_metric(attr_metrics.get(a, {}).get("macro_precision"))
+                 for a in attributes]
+        cells += [fmt_metric(attr_metrics.get(a, {}).get("macro_recall"))
+                  for a in attributes]
+        cells += [fmt_metric(attr_metrics.get(a, {}).get("macro_f1"))
+                  for a in attributes]
+        cells += [fmt_ci(attr_metrics.get(a, {}).get("macro_f1_ci") or {})
+                  for a in attributes]
+        mean_ci = payload.get("mean_macro_f1_ci") or {}
+        cells += [fmt_metric(payload.get("mean_macro_precision")),
+                  fmt_metric(payload.get("mean_macro_recall")),
+                  fmt_metric(payload.get("mean_macro_f1")),
+                  fmt_ci(mean_ci)]
         md_lines.append(f"| {variant} | " + " | ".join(cells)
-                        + f" | **{rows[variant]['mean']:.4f}** |")
+                        + " |")
     md_lines += ["", "## Accuracy by attribute", "",
                  "| Variant | " + " | ".join(attributes) + " |",
                  "|" + "---|" * (len(attributes) + 1)]
@@ -327,8 +523,9 @@ def write_comparison_report(cfg, smoke_test=False):
         "", "## Run details", "",
         "| Variant | Family | Architecture | Size | Adaptation | Res | "
         "Best epoch | Stopped at | Stop reason | Val mean macro-F1 | "
-        "Total params | Trainable | Trainable % | Train time (s) | Backend |",
-        "|" + "---|" * 15,
+        "Total params | Trainable | Trainable % | Train time (s) | "
+        "Inference time (s) | Test im/s | Test ms/image | Backend |",
+        "|" + "---|" * 18,
     ]
     def fmt(value, spec):
         return format(value, spec) if isinstance(value, (int, float)) else str(value)
@@ -351,14 +548,19 @@ def write_comparison_report(cfg, smoke_test=False):
                  fmt(pinfo(variant, "trainable"), ","),
                  str(pinfo(variant, "trainable_pct")),
                  str(info(variant, "train_duration_s")),
+                 str(info(variant, "test_eval_duration_s")),
+                 str(info(variant, "test_images_per_s")),
+                 str(info(variant, "test_ms_per_image")),
                  backend_cell]
         md_lines.append("| " + " | ".join(cells) + " |")
 
     for attr in attributes:
         classes = cfg["attributes"][attr]["classes"]
-        md_lines += ["", f"## Per-class F1: {attr}", "",
-                     "| Class | Support | " + " | ".join(present) + " |",
-                     "|" + "---|" * (len(present) + 2)]
+        md_lines += ["", f"## Per-class precision, recall and F1: {attr}", "",
+                     "| Class | Support | "
+                     + " | ".join(f"{v} precision | {v} recall | {v} F1"
+                                    for v in present) + " |",
+                     "|" + "---|" * (len(present) * 3 + 2)]
         for cls in classes:
             support = next(
                 (details[v]["attributes"][attr]["support"].get(cls, 0)
@@ -366,8 +568,11 @@ def write_comparison_report(cfg, smoke_test=False):
             cells = []
             for variant in present:
                 m = details[variant]["attributes"].get(attr, {})
+                precision = m.get("per_class_precision", {}).get(cls)
+                recall = m.get("per_class_recall", {}).get(cls)
                 f1 = m.get("per_class_f1", {}).get(cls)
-                cells.append(f"{f1:.4f}" if f1 is not None else "n/a")
+                cells += [f"{value:.4f}" if value is not None else "n/a"
+                          for value in (precision, recall, f1)]
             md_lines.append(f"| {cls} | {support} | " + " | ".join(cells) + " |")
 
     md_lines += ["", "## Confusion matrices", ""]
@@ -419,15 +624,25 @@ def _load_variant_row(cfg, variant, metrics_dir, suffix, attributes):
         "trainable_params": parameters.get("trainable", "n/a"),
         "best_epoch": run_info.get("best_epoch", "n/a"),
         "val_mean_macro_f1": run_info.get("val_mean_macro_f1", "n/a"),
+        "test_mean_macro_precision": payload.get("mean_macro_precision"),
+        "test_mean_macro_recall": payload.get("mean_macro_recall"),
         "test_mean_macro_f1": payload.get("mean_macro_f1"),
+        "test_mean_macro_f1_ci_lower": (payload.get("mean_macro_f1_ci") or {}).get("lower"),
+        "test_mean_macro_f1_ci_upper": (payload.get("mean_macro_f1_ci") or {}).get("upper"),
         "train_duration_s": run_info.get("train_duration_s", "n/a"),
+        "test_eval_duration_s": run_info.get("test_eval_duration_s", "n/a"),
         "test_images_per_s": run_info.get("test_images_per_s", "n/a"),
+        "test_ms_per_image": run_info.get("test_ms_per_image", "n/a"),
         "loaded_backend": backbone_meta.get("loaded_backend", "n/a"),
         "loaded_version": backbone_meta.get("loaded_version", "n/a"),
     }
     for attr in attributes:
         m = payload.get("attributes", {}).get(attr, {})
+        row[f"{attr}_macro_precision"] = m.get("macro_precision")
+        row[f"{attr}_macro_recall"] = m.get("macro_recall")
         row[f"{attr}_macro_f1"] = m.get("macro_f1")
+        row[f"{attr}_macro_f1_ci_lower"] = (m.get("macro_f1_ci") or {}).get("lower")
+        row[f"{attr}_macro_f1_ci_upper"] = (m.get("macro_f1_ci") or {}).get("upper")
         row[f"{attr}_accuracy"] = m.get("accuracy")
     return row
 
@@ -440,29 +655,54 @@ def _ablation_md_table(rows, attributes):
 
     header = (["Variant", "Family", "Architecture", "Size", "Adaptation",
                "Res", "Params", "Trainable", "Best epoch",
-               "Val mean macro-F1", "Test mean macro-F1"]
-              + [f"{a} F1" for a in attributes]
+               "Val mean macro-F1", "Test mean macro-Precision",
+               "Test mean macro-Recall", "Test mean macro-F1",
+               "Test mean macro-F1 95% CI"]
+              + [f"{a} macro-P" for a in attributes]
+              + [f"{a} macro-R" for a in attributes]
+              + [f"{a} macro-F1" for a in attributes]
+              + [f"{a} F1 95% CI" for a in attributes]
               + [f"{a} acc" for a in attributes]
-              + ["Train time (s)", "Test im/s", "Backend"])
+              + ["Train time (s)", "Inference time (s)", "Test im/s",
+                 "Test ms/image", "Backend"])
     lines = ["| " + " | ".join(header) + " |",
              "|" + "---|" * len(header)]
     for row in rows:
         backend = row["loaded_backend"]
         if row["loaded_version"] not in (None, "n/a"):
             backend = f"{backend} ({row['loaded_version']})"
+        def ci_text(prefix):
+            lower = row.get(f"{prefix}_lower")
+            upper = row.get(f"{prefix}_upper")
+            if isinstance(lower, (int, float)) and isinstance(upper, (int, float)):
+                return f"[{lower:.4f}, {upper:.4f}]"
+            return "n/a"
+
         cells = ([row["variant"], row["family"], row["architecture"],
                   row["model_size"], row["adaptation"], str(row["resolution"]),
                   num(row["total_params"], ","),
                   num(row["trainable_params"], ","),
                   str(row["best_epoch"]),
                   num(row["val_mean_macro_f1"]),
-                  num(row["test_mean_macro_f1"])]
+                  num(row["test_mean_macro_precision"]),
+                  num(row["test_mean_macro_recall"]),
+                  num(row["test_mean_macro_f1"]),
+                  ci_text("test_mean_macro_f1_ci")]
+                 + [num(row.get(f"{a}_macro_precision"))
+                    if row.get(f"{a}_macro_precision") is not None else "n/a"
+                    for a in attributes]
+                 + [num(row.get(f"{a}_macro_recall"))
+                    if row.get(f"{a}_macro_recall") is not None else "n/a"
+                    for a in attributes]
                  + [num(row.get(f"{a}_macro_f1")) if row.get(f"{a}_macro_f1")
                     is not None else "n/a" for a in attributes]
+                 + [ci_text(f"{a}_macro_f1_ci") for a in attributes]
                  + [num(row.get(f"{a}_accuracy")) if row.get(f"{a}_accuracy")
                     is not None else "n/a" for a in attributes]
                  + [str(row["train_duration_s"]),
-                    str(row["test_images_per_s"]), backend])
+                    str(row["test_eval_duration_s"]),
+                    str(row["test_images_per_s"]),
+                    str(row["test_ms_per_image"]), backend])
         lines.append("| " + " | ".join(str(c) for c in cells) + " |")
     return lines
 
@@ -571,6 +811,21 @@ def write_size_ablation_report(cfg, smoke_test=False):
         md_lines.append("_No completed runs yet._")
     md_lines.append("")
 
+    md_lines += ["## 5. Inference efficiency by adaptation", "",
+                 "Inference time covers the held-out test DataLoader and "
+                 "model forward pass; metric aggregation/bootstrap is "
+                 "excluded. Throughput is images per second.", "",
+                 "| Variant | Family | Adaptation | Params | Inference time (s) | "
+                 "Test im/s | Test ms/image |",
+                 "|---|---|---|---:|---:|---:|---:|"]
+    for row in sorted(rows, key=lambda item: (item["adaptation"],
+                                                item["variant"])):
+        md_lines.append(
+            f"| {row['variant']} | {row['family']} | {row['adaptation']} | "
+            f"{row['total_params']} | {row['test_eval_duration_s']} | "
+            f"{row['test_images_per_s']} | {row['test_ms_per_image']} |")
+    md_lines.append("")
+
     if missing:
         md_lines += [f"Size-ablation variants without saved test metrics: "
                      f"{', '.join(missing)} (skipped or not yet trained).", ""]
@@ -625,7 +880,12 @@ def reevaluate_from_checkpoint(cfg, variant, split="test", checkpoint=None):
                         num_workers=0, pin_memory=device.type == "cuda")
     log.info("Re-evaluating %s (%s, epoch %s) on %d %s crops",
              variant, adaptation, ckpt.get("epoch"), len(dataset), split)
-    metrics = evaluate_model(model, loader, attributes, device)
+    evaluation_cfg = cfg.get("evaluation", {})
+    metrics, evaluation_meta = evaluate_model(
+        model, loader, attributes, device,
+        bootstrap_samples=int(evaluation_cfg.get("bootstrap_samples", 2000)),
+        bootstrap_seed=int(evaluation_cfg.get("bootstrap_seed", cfg["seed"])),
+        return_timing=True)
     for attr, m in metrics.items():
         log.info("  %-12s acc=%s macro_f1=%s", attr,
                  f"{m['accuracy']:.4f}" if m["accuracy"] is not None else "n/a",
@@ -644,9 +904,14 @@ def reevaluate_from_checkpoint(cfg, variant, split="test", checkpoint=None):
         "backbone_meta": (ckpt.get("backbone_meta")
                           or getattr(backbone, "backbone_meta", None)),
         "training_meta": ckpt.get("training_meta"),
+        "test_eval_duration_s": evaluation_meta["duration_s"],
+        "test_images_per_s": evaluation_meta["images_per_s"],
+        "test_ms_per_image": evaluation_meta["ms_per_image"],
+        "test_mean_macro_f1_ci": evaluation_meta.get("mean_macro_f1_ci"),
     }
     save_metrics_bundle(cfg["paths"]["metrics_dir"], variant, split, metrics,
-                        ckpt.get("run_id", "reeval"), run_info=run_info)
+                        ckpt.get("run_id", "reeval"), run_info=run_info,
+                        evaluation_meta=evaluation_meta)
     return metrics
 
 

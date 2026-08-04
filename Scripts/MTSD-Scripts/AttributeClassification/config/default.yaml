@@ -110,6 +110,12 @@ training:
 # Checkpoint selection metric: best epoch = highest mean macro-F1 across heads on val.
 selection_metric: mean_macro_f1
 
+# Evaluation-only settings. Percentile bootstrap CIs are computed for the
+# held-out test metrics, never during validation epochs.
+evaluation:
+  bootstrap_samples: 2000
+  bootstrap_seed: 42
+
 # Head architecture for frozen backbones: "linear" or "mlp".
 probe:
   type: linear

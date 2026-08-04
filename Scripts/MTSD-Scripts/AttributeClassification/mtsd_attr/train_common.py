@@ -31,7 +31,8 @@ from .config import (REPO_ROOT, adaptation_of, apply_smoke_test,
 from .data_manifest import update_manifest
 from .dataset import (AttributeCropDataset, build_transforms,
                       compute_class_weights, subsample_records)
-from .evaluate import evaluate_model, mean_macro_f1, save_metrics_bundle
+from .evaluate import (evaluate_model, mean_macro_f1, mean_macro_precision,
+                       mean_macro_recall, save_metrics_bundle)
 from .multihead_model import (MaskedMultiTaskLoss, MultiHeadClassifier,
                               parameter_breakdown)
 from .variants import variant_metadata
@@ -370,6 +371,8 @@ def run_training(variant, config_path=None, smoke_test=False):
                  time.time() - t0)
         wandb_log = {"epoch": epoch, "train/loss": train_loss,
                      "val/mean_macro_f1": score,
+                     "val/mean_macro_precision": mean_macro_precision(val_metrics),
+                     "val/mean_macro_recall": mean_macro_recall(val_metrics),
                      "train/optimizer_steps": optim_steps,
                      "train/physical_batch_size": training["batch_size"],
                      "train/effective_batch_size":
@@ -379,6 +382,8 @@ def run_training(variant, config_path=None, smoke_test=False):
             wandb_log[f"train/loss_{attr}"] = value
         for attr, m in val_metrics.items():
             wandb_log[f"val/{attr}/macro_f1"] = m["macro_f1"]
+            wandb_log[f"val/{attr}/macro_precision"] = m["macro_precision"]
+            wandb_log[f"val/{attr}/macro_recall"] = m["macro_recall"]
             wandb_log[f"val/{attr}/accuracy"] = m["accuracy"]
 
         if score > best_score:
@@ -421,20 +426,25 @@ def run_training(variant, config_path=None, smoke_test=False):
     best = torch.load(ckpt_dir / "best.pt", map_location=device,
                       weights_only=False)
     _load_checkpoint_state(model, best["model_state"], adaptation)
-    eval_started = time.time()
-    test_metrics = evaluate_model(model, loaders["test"], cfg["attributes"],
-                                  device, amp)
-    test_eval_duration_s = round(time.time() - eval_started, 2)
-    n_test = len(loaders["test"].dataset)
-    test_images_per_s = round(n_test / test_eval_duration_s, 2) \
-        if test_eval_duration_s else None
+    evaluation_cfg = cfg.get("evaluation", {})
+    test_metrics, test_eval = evaluate_model(
+        model, loaders["test"], cfg["attributes"], device, amp,
+        bootstrap_samples=int(evaluation_cfg.get("bootstrap_samples", 2000)),
+        bootstrap_seed=int(evaluation_cfg.get("bootstrap_seed", cfg["seed"])),
+        return_timing=True)
+    test_eval_duration_s = test_eval["duration_s"]
+    n_test = test_eval["n_images"]
+    test_images_per_s = test_eval["images_per_s"]
+    test_ms_per_image = test_eval["ms_per_image"]
     test_score = mean_macro_f1(test_metrics)
     log.info("Test (best epoch %d): mean macro-F1 %.4f (%d crops in %.2fs, "
-             "%.1f im/s)", best_epoch, test_score, n_test,
-             test_eval_duration_s, test_images_per_s or 0.0)
+             "%.1f im/s, %.4f ms/image)", best_epoch, test_score, n_test,
+             test_eval_duration_s, test_images_per_s or 0.0,
+             test_ms_per_image or 0.0)
     for attr, m in test_metrics.items():
-        log.info("  %-12s acc=%.4f macro_f1=%.4f", attr, m["accuracy"],
-                 m["macro_f1"])
+        log.info("  %-12s acc=%.4f macro_p=%.4f macro_r=%.4f macro_f1=%.4f",
+                 attr, m["accuracy"], m["macro_precision"],
+                 m["macro_recall"], m["macro_f1"])
 
     run_info = {
         "adaptation": adaptation,
@@ -450,18 +460,33 @@ def run_training(variant, config_path=None, smoke_test=False):
         "train_duration_s": train_duration_s,
         "test_eval_duration_s": test_eval_duration_s,
         "test_images_per_s": test_images_per_s,
+        "test_ms_per_image": test_ms_per_image,
+        "test_mean_macro_f1_ci": test_eval.get("mean_macro_f1_ci"),
     }
     metrics_dir = cfg["paths"]["metrics_dir"]
     save_metrics_bundle(metrics_dir, variant, "val", best_val_metrics, run_id,
                         smoke_test, run_info=run_info)
     save_metrics_bundle(metrics_dir, variant, "test", test_metrics, run_id,
-                        smoke_test, run_info=run_info)
+                        smoke_test, run_info=run_info,
+                        evaluation_meta=test_eval)
     wandb_run.summary["test/mean_macro_f1"] = test_score
+    wandb_run.summary["test/mean_macro_precision"] = mean_macro_precision(test_metrics)
+    wandb_run.summary["test/mean_macro_recall"] = mean_macro_recall(test_metrics)
+    if test_eval.get("mean_macro_f1_ci"):
+        wandb_run.summary["test/mean_macro_f1_ci_lower"] = \
+            test_eval["mean_macro_f1_ci"]["lower"]
+        wandb_run.summary["test/mean_macro_f1_ci_upper"] = \
+            test_eval["mean_macro_f1_ci"]["upper"]
+    wandb_run.summary["test/eval_duration_s"] = test_eval_duration_s
+    wandb_run.summary["test/images_per_s"] = test_images_per_s
+    wandb_run.summary["test/ms_per_image"] = test_ms_per_image
     wandb_run.summary["best_epoch"] = best_epoch
     wandb_run.summary["stopped_epoch"] = stopped_epoch
     wandb_run.summary["stop_reason"] = stop_reason
     for attr, m in test_metrics.items():
         wandb_run.summary[f"test/{attr}/macro_f1"] = m["macro_f1"]
+        wandb_run.summary[f"test/{attr}/macro_precision"] = m["macro_precision"]
+        wandb_run.summary[f"test/{attr}/macro_recall"] = m["macro_recall"]
         wandb_run.summary[f"test/{attr}/accuracy"] = m["accuracy"]
     wandb_run.finish()
 
@@ -483,6 +508,7 @@ def run_training(variant, config_path=None, smoke_test=False):
         "train_duration_s": train_duration_s,
         "test_eval_duration_s": test_eval_duration_s,
         "test_images_per_s": test_images_per_s,
+        "test_ms_per_image": test_ms_per_image,
         "parameters": params,
         "best_epoch": best_epoch,
         "stopped_epoch": stopped_epoch,
@@ -490,6 +516,13 @@ def run_training(variant, config_path=None, smoke_test=False):
         "max_epochs": max_epochs,
         "val_mean_macro_f1": best_score,
         "test_mean_macro_f1": test_score,
+        "test_mean_macro_precision": mean_macro_precision(test_metrics),
+        "test_mean_macro_recall": mean_macro_recall(test_metrics),
+        "test_mean_macro_f1_ci": test_eval.get("mean_macro_f1_ci"),
+        "test_macro_precision": {
+            a: m["macro_precision"] for a, m in test_metrics.items()},
+        "test_macro_recall": {
+            a: m["macro_recall"] for a, m in test_metrics.items()},
         "test_macro_f1": {a: m["macro_f1"] for a, m in test_metrics.items()},
         "checkpoint": str(ckpt_dir / "best.pt"),
     }
