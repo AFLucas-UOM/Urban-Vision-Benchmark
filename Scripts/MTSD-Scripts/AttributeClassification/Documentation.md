@@ -57,9 +57,9 @@ Design decisions relevant to validity:
 - **Same protocol as the historical round**: identical deterministic
   train/val/test splits, identical four heads and class vocabularies,
   identical crop generation and missing-label masking, identical selection
-  metric (validation mean macro-F1); reports include accuracy, macro-F1,
-  per-class F1, training duration, and test-split inference throughput per
-  variant.
+  metric (validation mean macro-F1); reports include accuracy, macro precision,
+  macro recall, macro-F1, per-class precision/recall/F1, bootstrap CIs,
+  training duration, and split-aware test evaluation efficiency.
 - **Fairness across sizes**: per-variant `batch_size` ×
   `gradient_accumulation_steps` overrides keep the effective batch size at 32
   for every variant (conservative initial settings for a 24 GB RTX 4090).
@@ -106,7 +106,7 @@ The implementation is organised as follows:
 | `mtsd_attr/dataset.py` | Dataset class, image transforms, missing-label encoding, class-weight computation. |
 | `mtsd_attr/multihead_model.py` | Shared multi-head classifier and masked multi-task cross-entropy loss. |
 | `mtsd_attr/train_common.py` | Shared training loop, optimizer, scheduler, checkpointing, W&B logging, evaluation. |
-| `mtsd_attr/evaluate.py` | Accuracy, macro-F1, per-class F1, confusion matrices, consolidated comparison + size-ablation reports. |
+| `mtsd_attr/evaluate.py` | Accuracy, macro precision/recall/F1, shared-crop bootstrap CIs, per-class metrics, confusion matrices, timing, and consolidated reports. |
 | `mtsd_attr/backbones/*.py` | Backbone wrappers for DINOv3 (B/L), V-JEPA 2.0/2.1 (B/L), ConvNeXt (Tiny/Base/Large registry), and LingBot-Vision (B/L). |
 | `train_variant.py` | Generic entry point (`--variant <key>`) for every configured variant. |
 | `train_dinov3.py`, `train_vjepa.py`, `train_convnext.py`, ... | Historical thin entry scripts, kept as compatibility wrappers. |
@@ -116,7 +116,8 @@ The implementation is organised as follows:
 The source code and README describe the implemented behaviour: QA-only data
 ingestion, deterministic image-level split assignment, crop padding, class-weighted
 masked multi-task loss, frozen/LoRA/fine-tuned adaptation modes, and macro-F1 as the
-primary metric.
+primary metric. This is crop-level classification on ground-truth crops, not
+detection, so mAP is not used.
 
 ## 3. Data Source and Inclusion Criteria
 
@@ -513,10 +514,27 @@ The evaluation code reports, for each attribute:
 | Support | Number of labelled examples per class. |
 | Confusion matrix | Error pattern analysis. |
 
-The reports also record held-out test inference time, images per second, and
-milliseconds per image. These values cover the DataLoader and model forward
-pass, with metric aggregation and bootstrap resampling excluded, and are shown
-separately for frozen, LoRA, and full fine-tuning comparisons.
+The reports also record held-out test evaluation efficiency using warm-up plus
+repeated timing passes and the median result. End-to-end throughput includes
+DataLoader iteration, host-to-device transfer, model forward, and prediction
+extraction. Model-forward timing uses already prepared device tensors and
+excludes DataLoader work, transfer, metric aggregation, bootstrap resampling,
+and disk I/O. Hardware, precision mode, batch size, and DataLoader settings
+must remain fixed when comparing models. Bootstrap CIs are test-only by
+default; validation re-evaluation does not populate test metadata.
+
+Each bootstrap iteration samples crop indices once and reuses those indices
+across all attribute heads. Missing labels are masked per head, and the
+overall mean macro-F1 CI averages the available head scores for each shared
+resample. This preserves the correlation between heads because they are
+predictions from the same crops. mAP is not reported because this experiment
+is classification on ground-truth crops, not detection.
+
+New payloads use neutral `eval_end_to_end_*` and `eval_model_forward_*`
+metadata. Historical `test_eval_duration_s` and `test_images_per_s` keys remain
+as compatibility aliases in test summaries; report columns use the clearer
+end-to-end and forward names. Historical payloads without new fields render as
+`n/a`.
 
 Macro-F1 is the correct primary metric here. For example, `condition` is dominated by `Good`, so a model can obtain acceptable accuracy while performing poorly on `Weathered` and `Heavily Damaged`.
 

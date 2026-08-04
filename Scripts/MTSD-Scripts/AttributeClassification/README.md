@@ -76,6 +76,10 @@ single shared backbone per variant:
 This experiment is strictly classification on ground-truth crops. It contains no
 detection or localisation.
 
+Because this is crop-level classification rather than object detection, mAP,
+ROC-AUC, and detection metrics are not used. Macro-F1 remains the primary
+classification metric.
+
 ## Folder structure
 
 ```
@@ -502,7 +506,9 @@ imbalanced.
 - `outputs/metrics/<variant>/{val,test}_metrics.json` — accuracy, macro
   precision, macro recall, macro-F1, per-class precision/recall/F1, support,
   and confusion matrix per attribute, plus the run id. Held-out test bundles
-  additionally include percentile-bootstrap 95% CIs for macro-F1.
+  additionally include percentile-bootstrap 95% CIs for macro-F1. Per-head
+  and overall mean CIs use shared crop resamples across the aligned heads;
+  bootstrap CIs are test-only by default.
 - `outputs/metrics/<variant>/{split}_per_class_f1.csv` — flat per-class
   precision/recall/F1 table for the dissertation (the historical filename is
   retained for compatibility).
@@ -514,7 +520,8 @@ imbalanced.
   recall, macro-F1 with 95% CIs, accuracy per attribute, run details (family,
   architecture, size, adaptation, resolution, best/stopping epoch, stop
   reason, val score, parameter counts, training duration, inference time,
-  throughput, loaded backend/version), per-class precision/recall/F1 tables
+  end-to-end throughput, model-forward latency, loaded backend/version),
+  per-class precision/recall/F1 tables
   with supports, and links to the confusion matrices. **Macro-F1 is the
   primary metric**: with
   Good ~78% of condition labels, accuracy rewards majority-class collapse,
@@ -531,6 +538,17 @@ imbalanced.
   inference time, throughput, latency, and backend/version. It also includes a
   direct inference-efficiency comparison grouped by frozen, LoRA, and
   fine-tuned adaptation.
+- Inference timing uses `evaluation.timing_warmup_batches` warm-up batches and
+  `evaluation.timing_repeats` repeated measurements, reporting the median.
+  End-to-end timing includes DataLoader iteration, host-to-device transfer,
+  model forward, and prediction extraction. Model-forward timing uses already
+  prepared device tensors and excludes DataLoader, transfer, metric
+  aggregation, bootstrap, and disk I/O. Keep hardware, precision mode,
+  batch size, and DataLoader settings fixed when comparing variants.
+- New timing metadata uses `eval_end_to_end_*` and `eval_model_forward_*`.
+  Historical `test_eval_duration_s` and `test_images_per_s` aliases remain in
+  test summaries for compatibility, while reports use clearer end-to-end and
+  forward column names.
 - `outputs/experiment_log.jsonl` — one line per run: run id, variant,
   adaptation, git commit, groups and crop counts used, split sizes, parameter
   breakdown, best/stopping epoch and stop reason, val/test scores, checkpoint

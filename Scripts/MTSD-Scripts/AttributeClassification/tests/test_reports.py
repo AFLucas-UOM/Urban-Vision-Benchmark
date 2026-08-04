@@ -135,9 +135,11 @@ def test_size_ablation_report_grouping(fake_cfg):
 
 
 def test_size_ablation_does_not_touch_historical_report_names(fake_cfg):
-    write_size_ablation_report(fake_cfg)
+    md_path = write_size_ablation_report(fake_cfg)
     reports = {p.name for p in fake_cfg["paths"]["reports_dir"].iterdir()}
     assert reports == {"size_ablation.md", "size_ablation.csv"}
+    assert "None" not in md_path.read_text("utf-8")
+    assert "None" not in (md_path.parent / "size_ablation.csv").read_text("utf-8")
 
 
 def test_comparison_report_metadata_fallback_for_old_payloads(fake_cfg):
@@ -154,3 +156,57 @@ def test_comparison_report_metadata_fallback_for_old_payloads(fake_cfg):
     assert "| dinov3_vitb_frozen | DINOv3 | ViT-B/16 | base | frozen |" in text
     csv_text = (md_path.parent / "comparison.csv").read_text("utf-8")
     assert "family" in csv_text.splitlines()[0]
+    assert "None" not in text
+    assert "None" not in csv_text
+
+
+def test_reports_render_new_metrics_and_neutral_timing(fake_cfg):
+    for folder in (fake_cfg["paths"]["metrics_dir"] / variant
+                   for variant in fake_cfg["models"]):
+        payload = json.loads((folder / "test_metrics.json").read_text("utf-8"))
+        for metric in payload["attributes"].values():
+            metric["macro_precision"] = metric["macro_f1"] - 0.01
+            metric["macro_recall"] = metric["macro_f1"] - 0.02
+            metric["per_class_precision"] = dict(metric["per_class_f1"])
+            metric["per_class_recall"] = dict(metric["per_class_f1"])
+            metric["macro_f1_ci"] = {"level": 0.95, "lower": 0.70,
+                                      "upper": 0.90, "n_bootstrap": 20}
+        payload["mean_macro_precision"] = payload["mean_macro_f1"] - 0.01
+        payload["mean_macro_recall"] = payload["mean_macro_f1"] - 0.02
+        payload["mean_macro_f1_ci"] = {"level": 0.95, "lower": 0.70,
+                                        "upper": 0.90, "n_bootstrap": 20}
+        payload["evaluation_split"] = "test"
+        payload["evaluation"] = {
+            "n_images": 100,
+            "timing_repeats": 3,
+            "timing_warmup_batches": 5,
+            "end_to_end_duration_s": 2.0,
+            "end_to_end_images_per_s": 50.0,
+            "model_forward_duration_s": 1.2,
+            "model_forward_ms_per_image": 12.0,
+        }
+        payload["run_info"].update({
+            "eval_end_to_end_duration_s": 2.0,
+            "eval_end_to_end_images_per_s": 50.0,
+            "eval_model_forward_duration_s": 1.2,
+            "eval_model_forward_ms_per_image": 12.0,
+        })
+        (folder / "test_metrics.json").write_text(
+            json.dumps(payload), encoding="utf-8")
+
+    comparison = write_comparison_report(fake_cfg)
+    size_ablation = write_size_ablation_report(fake_cfg)
+    comparison_csv = comparison.parent / "comparison.csv"
+    size_csv = size_ablation.parent / "size_ablation.csv"
+    comparison_text = comparison.read_text("utf-8")
+    size_text = size_ablation.read_text("utf-8")
+    comparison_csv_text = comparison_csv.read_text("utf-8")
+    size_csv_text = size_csv.read_text("utf-8")
+    assert "test_end_to_end_images_per_s" in comparison_csv_text
+    assert "Forward ms/image" in comparison_text
+    assert "End-to-end im/s" in size_text
+    assert "test_end_to_end_images_per_s" in size_csv_text
+    assert "None" not in comparison_text
+    assert "None" not in size_text
+    assert "None" not in comparison_csv_text
+    assert "None" not in size_csv_text

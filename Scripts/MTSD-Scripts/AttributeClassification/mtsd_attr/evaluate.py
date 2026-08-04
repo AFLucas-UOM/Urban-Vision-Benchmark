@@ -16,6 +16,7 @@ import copy
 import csv
 import json
 import logging
+from statistics import median
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -48,6 +49,11 @@ SURFACE = "#fcfcfb"
 CONFUSION_CMAP = LinearSegmentedColormap.from_list("seq_blue", SEQUENTIAL_BLUE)
 
 
+def _report_value(value, default="n/a"):
+    """Render missing report values consistently without literal ``None``."""
+    return default if value is None else value
+
+
 def _macro_f1_from_confusion(cm):
     """Compute macro-F1 from a fixed-label confusion matrix."""
     cm = np.asarray(cm, dtype=float)
@@ -64,25 +70,10 @@ def _macro_f1_from_confusion(cm):
     return float(np.mean(f1))
 
 
-def _bootstrap_macro_f1_samples(y_true, y_pred, labels, n_bootstrap, seed):
-    """Generate percentile-bootstrap macro-F1 samples with fixed labels."""
-    if n_bootstrap <= 0 or not y_true:
-        return np.asarray([], dtype=float)
-    y_true = np.asarray(y_true, dtype=np.int64)
-    y_pred = np.asarray(y_pred, dtype=np.int64)
-    n_classes = len(labels)
-    rng = np.random.default_rng(seed)
-    samples = np.empty(n_bootstrap, dtype=float)
-    for i in range(n_bootstrap):
-        indices = rng.integers(0, len(y_true), size=len(y_true))
-        flat = n_classes * y_true[indices] + y_pred[indices]
-        cm = np.bincount(flat, minlength=n_classes * n_classes)
-        samples[i] = _macro_f1_from_confusion(cm.reshape(n_classes, n_classes))
-    return samples
-
-
 def _bootstrap_ci(samples, seed=None):
     """Return a JSON-safe percentile 95% confidence-interval summary."""
+    samples = np.asarray(samples, dtype=float)
+    samples = samples[np.isfinite(samples)]
     if len(samples) == 0:
         return None
     result = {
@@ -97,11 +88,62 @@ def _bootstrap_ci(samples, seed=None):
     return result
 
 
+def bootstrap_macro_f1_shared(y_true_by_attr, y_pred_by_attr,
+                              labels_by_attr, n_bootstrap=2000, seed=42):
+    """Bootstrap aligned multi-head macro-F1 scores with shared crop indices.
+
+    Inputs are aligned by crop index and may contain ``MISSING_LABEL`` in the
+    true-label arrays. One crop-index resample is reused across all heads;
+    missing labels are masked per head before computing macro-F1. The mean
+    samples average only heads with valid labels for that iteration, matching
+    :func:`mean_macro_f1`'s exclusion rule.
+    """
+    names = list(y_true_by_attr)
+    if set(names) != set(y_pred_by_attr) or set(names) != set(labels_by_attr):
+        raise ValueError("Bootstrap head mappings must have identical keys")
+    n_samples = len(next(iter(y_true_by_attr.values()), []))
+    if any(len(y_true_by_attr[attr]) != n_samples or
+           len(y_pred_by_attr[attr]) != n_samples for attr in names):
+        raise ValueError("Bootstrap head arrays must be aligned by crop")
+    n_bootstrap = int(n_bootstrap)
+    per_attr = {attr: np.full(n_bootstrap, np.nan, dtype=float)
+                for attr in names}
+    mean_samples = np.full(n_bootstrap, np.nan, dtype=float)
+    if n_bootstrap <= 0 or n_samples == 0:
+        return per_attr, mean_samples
+
+    true_arrays = {attr: np.asarray(y_true_by_attr[attr], dtype=np.int64)
+                   for attr in names}
+    pred_arrays = {attr: np.asarray(y_pred_by_attr[attr], dtype=np.int64)
+                   for attr in names}
+    rng = np.random.default_rng(int(seed))
+    for iteration in range(n_bootstrap):
+        # One crop resample is deliberately reused across every head.
+        indices = rng.integers(0, n_samples, size=n_samples)
+        scores = []
+        for attr in names:
+            y_true = true_arrays[attr][indices]
+            y_pred = pred_arrays[attr][indices]
+            valid = y_true != MISSING_LABEL
+            if not np.any(valid):
+                continue
+            cm = confusion_matrix(
+                y_true[valid], y_pred[valid],
+                labels=list(labels_by_attr[attr]))
+            score = _macro_f1_from_confusion(cm)
+            per_attr[attr][iteration] = score
+            scores.append(score)
+        if scores:
+            mean_samples[iteration] = float(np.mean(scores))
+    return per_attr, mean_samples
+
+
 def bootstrap_macro_f1(y_true, y_pred, labels, n_bootstrap=2000, seed=42):
-    """Return a reproducible percentile-bootstrap 95% CI for macro-F1."""
-    samples = _bootstrap_macro_f1_samples(
-        y_true, y_pred, labels, int(n_bootstrap), int(seed))
-    return _bootstrap_ci(samples, seed=seed)
+    """Return a reproducible percentile-bootstrap 95% CI for one head."""
+    per_attr, _ = bootstrap_macro_f1_shared(
+        {"head": y_true}, {"head": y_pred}, {"head": labels},
+        n_bootstrap=n_bootstrap, seed=seed)
+    return _bootstrap_ci(per_attr["head"], seed=seed)
 
 
 def _mean_metric(metrics, key):
@@ -119,9 +161,123 @@ def mean_macro_recall(metrics):
     return _mean_metric(metrics, "macro_recall")
 
 
+def _cuda_synchronize(device):
+    """Synchronize CUDA only when the evaluation device is CUDA."""
+    if device.type == "cuda":
+        torch.cuda.synchronize(device)
+
+
+def _forward(model, images, device, amp):
+    """Run one model forward pass using the configured autocast mode."""
+    with torch.autocast(device_type=device.type, dtype=torch.bfloat16,
+                        enabled=amp):
+        return model(images)
+
+
+def _timing_warmup(model, loader, attributes, device, amp, warmup_batches):
+    """Run untimed forward batches before repeated timing passes."""
+    if warmup_batches <= 0:
+        return
+    with torch.no_grad():
+        for batch_index, (images, _, _) in enumerate(loader):
+            if batch_index >= warmup_batches:
+                break
+            images = images.to(device, non_blocking=True)
+            logits = _forward(model, images, device, amp)
+            for attr in attributes:
+                logits[attr].argmax(dim=1)
+    _cuda_synchronize(device)
+
+
+def _time_end_to_end(model, loader, attributes, device, amp):
+    """Time loader iteration, transfer, forward, and prediction extraction."""
+    _cuda_synchronize(device)
+    started = time.perf_counter()
+    n_images = 0
+    with torch.no_grad():
+        for images, _, _ in loader:
+            n_images += len(images)
+            images = images.to(device, non_blocking=True)
+            logits = _forward(model, images, device, amp)
+            for attr in attributes:
+                # CPU transfer is part of extracting predictions for metrics.
+                logits[attr].argmax(dim=1).cpu()
+    _cuda_synchronize(device)
+    return n_images, time.perf_counter() - started
+
+
+def _time_model_forward(model, loader, device, amp):
+    """Time only forward passes after each batch is prepared on the device."""
+    total_duration = 0.0
+    n_images = 0
+    with torch.no_grad():
+        for images, _, _ in loader:
+            n_images += len(images)
+            device_images = images.to(device, non_blocking=True)
+            _cuda_synchronize(device)
+            started = time.perf_counter()
+            _forward(model, device_images, device, amp)
+            _cuda_synchronize(device)
+            total_duration += time.perf_counter() - started
+    return n_images, total_duration
+
+
+def _measure_timing(model, loader, attributes, device, amp,
+                    timing_warmup_batches, timing_repeats, n_images):
+    """Return median repeated end-to-end and forward-only timings."""
+    timing_repeats = max(0, int(timing_repeats))
+    warmup_batches = max(0, int(timing_warmup_batches))
+    result = {
+        "n_images": int(n_images),
+        "timing_repeats": timing_repeats,
+        "timing_warmup_batches": warmup_batches,
+        "end_to_end_duration_s": None,
+        "end_to_end_images_per_s": None,
+        "model_forward_duration_s": None,
+        "model_forward_ms_per_image": None,
+        # Historical aliases; populated when timing is measured.
+        "duration_s": None,
+        "images_per_s": None,
+        "ms_per_image": None,
+    }
+    if timing_repeats == 0 or n_images == 0:
+        return result
+    _timing_warmup(model, loader, attributes, device, amp, warmup_batches)
+    end_to_end_durations = []
+    forward_durations = []
+    for _ in range(timing_repeats):
+        measured_images, duration = _time_end_to_end(
+            model, loader, attributes, device, amp)
+        _, forward_duration = _time_model_forward(
+            model, loader, device, amp)
+        if measured_images != n_images:
+            raise RuntimeError("Timing loader size changed between evaluation passes")
+        end_to_end_durations.append(duration)
+        forward_durations.append(forward_duration)
+    end_to_end = float(median(end_to_end_durations))
+    model_forward = float(median(forward_durations))
+    result.update({
+        "end_to_end_duration_s": round(end_to_end, 4),
+        "end_to_end_images_per_s": round(n_images / end_to_end, 2)
+        if end_to_end else None,
+        "model_forward_duration_s": round(model_forward, 4),
+        "model_forward_ms_per_image": round(model_forward * 1000.0 / n_images, 4)
+        if n_images else None,
+    })
+    # Legacy aliases retained for historical callers and payload readers.
+    result.update({
+        "duration_s": result["end_to_end_duration_s"],
+        "images_per_s": result["end_to_end_images_per_s"],
+        "ms_per_image": round(end_to_end * 1000.0 / n_images, 4)
+        if n_images else None,
+    })
+    return result
+
+
 def evaluate_model(model, loader, attributes, device, amp=False,
                    bootstrap_samples=0, bootstrap_seed=42,
-                   return_timing=False):
+                   return_timing=False, timing_warmup_batches=0,
+                   timing_repeats=1):
     """Run inference over a loader and compute per-attribute metrics.
 
     Crops with a missing label on a head are excluded from that head's metrics.
@@ -131,40 +287,43 @@ def evaluate_model(model, loader, attributes, device, amp=False,
         "macro_recall", "macro_f1", "macro_f1_ci", "classes",
         "per_class_precision", "per_class_recall", "per_class_f1",
         "support", "confusion_matrix"}. If return_timing is true, returns
-        ``(metrics, timing)`` where timing covers the DataLoader and model
-        forward pass, with metric aggregation/bootstrap excluded.
+        ``(metrics, timing)`` where timing separates repeated end-to-end
+        evaluation-loop and model-forward measurements.
     """
     model.eval()
     names = list(attributes)
+    # Each head keeps one entry per crop. Positions are the original crop
+    # indices, so shared bootstrap resampling preserves cross-head alignment.
     preds = {a: [] for a in names}
     trues = {a: [] for a in names}
+    sample_indices = []
     n_images = 0
-    started = time.perf_counter()
-    if device.type == "cuda":
-        torch.cuda.synchronize(device)
     with torch.no_grad():
         for images, targets, _ in loader:
+            batch_indices = list(range(n_images, n_images + len(images)))
+            sample_indices.extend(batch_indices)
             n_images += len(images)
             images = images.to(device, non_blocking=True)
-            with torch.autocast(device_type=device.type, dtype=torch.bfloat16,
-                                enabled=amp):
-                logits = model(images)
+            logits = _forward(model, images, device, amp)
             for i, attr in enumerate(names):
                 t = targets[:, i]
-                mask = t != MISSING_LABEL
-                if mask.any():
-                    p = logits[attr].argmax(dim=1).cpu()
-                    preds[attr].extend(p[mask].tolist())
-                    trues[attr].extend(t[mask].tolist())
-    if device.type == "cuda":
-        torch.cuda.synchronize(device)
-    inference_duration_s = time.perf_counter() - started
+                p = logits[attr].argmax(dim=1).cpu()
+                preds[attr].extend(p.tolist())
+                trues[attr].extend(t.tolist())
+    if len(sample_indices) != n_images:
+        raise RuntimeError("Evaluation crop indices are not contiguous")
+    bootstrap_per_attr, bootstrap_mean = bootstrap_macro_f1_shared(
+        trues, preds,
+        {attr: list(range(len(attributes[attr]["classes"]))) for attr in names},
+        n_bootstrap=int(bootstrap_samples), seed=int(bootstrap_seed))
     metrics = {}
-    ci_samples_by_attr = []
-    for attr_index, attr in enumerate(names):
+    for attr in names:
         classes = attributes[attr]["classes"]
         labels = list(range(len(classes)))
-        y_true, y_pred = trues[attr], preds[attr]
+        all_true = np.asarray(trues[attr], dtype=np.int64)
+        all_pred = np.asarray(preds[attr], dtype=np.int64)
+        valid = all_true != MISSING_LABEL
+        y_true, y_pred = all_true[valid].tolist(), all_pred[valid].tolist()
         if not y_true:
             log.warning("Attribute %s: no labelled samples in this split", attr)
             metrics[attr] = {"n": 0, "accuracy": None,
@@ -181,11 +340,6 @@ def evaluate_model(model, loader, attributes, device, amp=False,
         per_class_f1 = f1_score(
             y_true, y_pred, labels=labels, average=None, zero_division=0)
         cm = confusion_matrix(y_true, y_pred, labels=labels)
-        ci_samples = _bootstrap_macro_f1_samples(
-            y_true, y_pred, labels, int(bootstrap_samples),
-            int(bootstrap_seed) + attr_index)
-        if len(ci_samples):
-            ci_samples_by_attr.append(ci_samples)
         metrics[attr] = {
             "n": len(y_true),
             "accuracy": float(accuracy_score(y_true, y_pred)),
@@ -198,7 +352,7 @@ def evaluate_model(model, loader, attributes, device, amp=False,
             "macro_f1": float(f1_score(y_true, y_pred, labels=labels,
                                        average="macro", zero_division=0)),
             "macro_f1_ci": _bootstrap_ci(
-                ci_samples, seed=int(bootstrap_seed) + attr_index),
+                bootstrap_per_attr[attr], seed=int(bootstrap_seed)),
             "classes": classes,
             "per_class_precision": {
                 c: float(value) for c, value in zip(classes, per_class_precision)},
@@ -210,20 +364,21 @@ def evaluate_model(model, loader, attributes, device, amp=False,
                         for i, c in enumerate(classes)},
             "confusion_matrix": cm.tolist(),
         }
-    timing = {
-        "duration_s": round(inference_duration_s, 4),
-        "n_images": n_images,
-        "images_per_s": round(n_images / inference_duration_s, 2)
-        if inference_duration_s else None,
-        "ms_per_image": round(inference_duration_s * 1000.0 / n_images, 4)
-        if n_images else None,
-    }
-    if ci_samples_by_attr:
-        timing["mean_macro_f1_ci"] = _bootstrap_ci(
-            np.mean(np.stack(ci_samples_by_attr), axis=0),
-            seed=int(bootstrap_seed))
+    if return_timing:
+        timing = _measure_timing(
+            model, loader, names, device, amp, timing_warmup_batches,
+            timing_repeats, n_images)
     else:
-        timing["mean_macro_f1_ci"] = None
+        timing = {"n_images": int(n_images), "timing_repeats": 0,
+                  "timing_warmup_batches": 0,
+                  "end_to_end_duration_s": None,
+                  "end_to_end_images_per_s": None,
+                  "model_forward_duration_s": None,
+                  "model_forward_ms_per_image": None,
+                  "duration_s": None, "images_per_s": None,
+                  "ms_per_image": None}
+    timing["mean_macro_f1_ci"] = _bootstrap_ci(
+        bootstrap_mean, seed=int(bootstrap_seed))
     return (metrics, timing) if return_timing else metrics
 
 
@@ -273,6 +428,7 @@ def save_metrics_bundle(metrics_dir, variant, split, metrics, run_id,
     """
     folder = Path(metrics_dir) / (f"{variant}-smoke" if smoke_test else variant)
     folder.mkdir(parents=True, exist_ok=True)
+    evaluation_meta = evaluation_meta or {}
     payload = {
         "run_id": run_id,
         "variant": variant,
@@ -282,7 +438,17 @@ def save_metrics_bundle(metrics_dir, variant, split, metrics, run_id,
         "mean_macro_precision": mean_macro_precision(metrics),
         "mean_macro_recall": mean_macro_recall(metrics),
         "mean_macro_f1": mean_macro_f1(metrics),
-        "mean_macro_f1_ci": (evaluation_meta or {}).get("mean_macro_f1_ci"),
+        "mean_macro_f1_ci": evaluation_meta.get("mean_macro_f1_ci"),
+        "evaluation_split": split,
+        "evaluation": {
+            key: evaluation_meta.get(key)
+            for key in ("n_images", "timing_repeats",
+                        "timing_warmup_batches", "end_to_end_duration_s",
+                        "end_to_end_images_per_s",
+                        "model_forward_duration_s",
+                        "model_forward_ms_per_image")
+            if key in evaluation_meta
+        },
         "run_info": run_info or {},
         "attributes": metrics,
     }
@@ -371,9 +537,14 @@ def write_comparison_report(cfg, smoke_test=False):
             continue
         with open(path, encoding="utf-8") as f:
             payload = json.load(f)
-        rows[variant] = {a: payload["attributes"][a]["macro_f1"]
-                         for a in attributes if a in payload["attributes"]}
-        rows[variant]["mean"] = payload["mean_macro_f1"]
+        attributes_payload = payload.get("attributes", {})
+        rows[variant] = {a: attributes_payload[a].get("macro_f1")
+                         for a in attributes if a in attributes_payload}
+        f1_values = [m.get("macro_f1") for m in attributes_payload.values()
+                     if m.get("macro_f1") is not None]
+        rows[variant]["mean"] = _report_value(
+            payload.get("mean_macro_f1",
+                        float(np.mean(f1_values)) if f1_values else None))
         details[variant] = payload
 
     present = list(rows)
@@ -382,30 +553,46 @@ def write_comparison_report(cfg, smoke_test=False):
         return None
 
     def info(variant, key, default="n/a"):
-        return details[variant].get("run_info", {}).get(key, default)
+        run_info = details[variant].get("run_info") or {}
+        return _report_value(
+            run_info.get(key, default), default)
 
     def pinfo(variant, key):
         parameters = info(variant, "parameters", {})
-        return parameters.get(key, "n/a") if isinstance(parameters, dict) else "n/a"
+        value = parameters.get(key, "n/a") if isinstance(parameters, dict) else "n/a"
+        return _report_value(value)
 
     def vmeta(variant):
         """Variant metadata: prefer the metrics payload's stored metadata;
         fall back to the current config entry (covers historical runs that
         predate metadata recording)."""
-        meta = details[variant].get("run_info", {}).get("variant_meta")
+        meta = (details[variant].get("run_info") or {}).get("variant_meta")
         if isinstance(meta, dict) and meta.get("family"):
             return meta
         from .variants import variant_metadata
         return variant_metadata(cfg["models"][variant], variant)
 
     def bmeta(variant, key, default="n/a"):
-        meta = details[variant].get("run_info", {}).get("backbone_meta")
+        meta = (details[variant].get("run_info") or {}).get("backbone_meta")
         if isinstance(meta, dict):
-            return meta.get(key, default)
+            return _report_value(meta.get(key, default), default)
         return default
 
     def csv_num(value):
+        value = _report_value(value)
         return f"{value:.4f}" if isinstance(value, (int, float)) else value
+
+    def eval_info(variant, key, legacy_key=None):
+        """Read neutral test timing, then new payload, then legacy aliases."""
+        payload = details[variant]
+        run_info = payload.get("run_info") or {}
+        evaluation = payload.get("evaluation") or {}
+        value = run_info.get(key)
+        if value is None:
+            value = evaluation.get(key.removeprefix("eval_"))
+        if value is None and legacy_key:
+            value = run_info.get(legacy_key)
+        return _report_value(value)
 
     def ci_bounds(metric):
         ci = metric.get("macro_f1_ci") or {}
@@ -427,8 +614,10 @@ def write_comparison_report(cfg, smoke_test=False):
                "val_mean_macro_f1", "best_epoch",
                "stopped_epoch", "stop_reason", "total_params",
                "trainable_params", "trainable_pct", "train_duration_s",
-               "test_eval_duration_s", "test_images_per_s",
-               "test_ms_per_image", "loaded_backend", "loaded_version"])
+               "test_end_to_end_duration_s", "test_end_to_end_images_per_s",
+               "test_model_forward_duration_s",
+               "test_model_forward_ms_per_image", "loaded_backend",
+               "loaded_version"])
         for variant in present:
             val = info(variant, "val_mean_macro_f1")
             meta = vmeta(variant)
@@ -462,9 +651,12 @@ def write_comparison_report(cfg, smoke_test=False):
                    info(variant, "stop_reason"), pinfo(variant, "total"),
                    pinfo(variant, "trainable"), pinfo(variant, "trainable_pct"),
                    info(variant, "train_duration_s"),
-                   info(variant, "test_eval_duration_s"),
-                   info(variant, "test_images_per_s"),
-                   info(variant, "test_ms_per_image"),
+                   eval_info(variant, "eval_end_to_end_duration_s",
+                             "test_eval_duration_s"),
+                   eval_info(variant, "eval_end_to_end_images_per_s",
+                             "test_images_per_s"),
+                   eval_info(variant, "eval_model_forward_duration_s"),
+                   eval_info(variant, "eval_model_forward_ms_per_image"),
                    bmeta(variant, "loaded_backend"),
                    bmeta(variant, "loaded_version")])
 
@@ -514,9 +706,11 @@ def write_comparison_report(cfg, smoke_test=False):
                  "| Variant | " + " | ".join(attributes) + " |",
                  "|" + "---|" * (len(attributes) + 1)]
     for variant in present:
-        cells = [f"{details[variant]['attributes'][a]['accuracy']:.4f}"
-                 if a in details[variant]["attributes"] else "n/a"
-                 for a in attributes]
+        cells = [
+            (f"{details[variant]['attributes'][a]['accuracy']:.4f}"
+             if isinstance(details[variant]["attributes"].get(a, {}).get(
+                 "accuracy"), (int, float)) else "n/a")
+            for a in attributes]
         md_lines.append(f"| {variant} | " + " | ".join(cells) + " |")
 
     md_lines += [
@@ -524,10 +718,12 @@ def write_comparison_report(cfg, smoke_test=False):
         "| Variant | Family | Architecture | Size | Adaptation | Res | "
         "Best epoch | Stopped at | Stop reason | Val mean macro-F1 | "
         "Total params | Trainable | Trainable % | Train time (s) | "
-        "Inference time (s) | Test im/s | Test ms/image | Backend |",
+        "End-to-end time (s) | End-to-end im/s | Forward time (s) | "
+        "Forward ms/image | Backend |",
         "|" + "---|" * 18,
     ]
     def fmt(value, spec):
+        value = _report_value(value)
         return format(value, spec) if isinstance(value, (int, float)) else str(value)
 
     for variant in present:
@@ -548,9 +744,12 @@ def write_comparison_report(cfg, smoke_test=False):
                  fmt(pinfo(variant, "trainable"), ","),
                  str(pinfo(variant, "trainable_pct")),
                  str(info(variant, "train_duration_s")),
-                 str(info(variant, "test_eval_duration_s")),
-                 str(info(variant, "test_images_per_s")),
-                 str(info(variant, "test_ms_per_image")),
+                 str(eval_info(variant, "eval_end_to_end_duration_s",
+                               "test_eval_duration_s")),
+                 str(eval_info(variant, "eval_end_to_end_images_per_s",
+                               "test_images_per_s")),
+                 str(eval_info(variant, "eval_model_forward_duration_s")),
+                 str(eval_info(variant, "eval_model_forward_ms_per_image")),
                  backend_cell]
         md_lines.append("| " + " | ".join(cells) + " |")
 
@@ -565,6 +764,7 @@ def write_comparison_report(cfg, smoke_test=False):
             support = next(
                 (details[v]["attributes"][attr]["support"].get(cls, 0)
                  for v in present if attr in details[v]["attributes"]), 0)
+            support = _report_value(support)
             cells = []
             for variant in present:
                 m = details[variant]["attributes"].get(attr, {})
@@ -603,15 +803,33 @@ def _load_variant_row(cfg, variant, metrics_dir, suffix, attributes):
         return None
     with open(path, encoding="utf-8") as f:
         payload = json.load(f)
-    run_info = payload.get("run_info", {})
+    run_info = payload.get("run_info") or {}
     meta = run_info.get("variant_meta")
     if not (isinstance(meta, dict) and meta.get("family")):
         from .variants import variant_metadata
         meta = variant_metadata(cfg["models"][variant], variant)
-    parameters = run_info.get("parameters", {})
-    backbone_meta = run_info.get("backbone_meta", {})
+    parameters = run_info.get("parameters") or {}
+    backbone_meta = run_info.get("backbone_meta") or {}
+    evaluation = payload.get("evaluation", {})
     if not isinstance(backbone_meta, dict):
         backbone_meta = {}
+    attributes_payload = payload.get("attributes") or {}
+    f1_values = [m.get("macro_f1") for m in attributes_payload.values()
+                 if m.get("macro_f1") is not None]
+    mean_f1 = payload.get("mean_macro_f1")
+    if mean_f1 is None and f1_values:
+        mean_f1 = float(np.mean(f1_values))
+
+    def stored(default="n/a", *keys):
+        for key in keys:
+            value = run_info.get(key)
+            if value is None:
+                value = evaluation.get(key.removeprefix("eval_"))
+            if value is None:
+                continue
+            return value
+        return default
+
     row = {
         "variant": variant,
         "run_id": payload.get("run_id", "n/a"),
@@ -620,36 +838,49 @@ def _load_variant_row(cfg, variant, metrics_dir, suffix, attributes):
         "architecture": meta["architecture"],
         "adaptation": run_info.get("adaptation", meta["adaptation"]),
         "resolution": meta["resolution"],
-        "total_params": parameters.get("total", "n/a"),
-        "trainable_params": parameters.get("trainable", "n/a"),
+        "total_params": _report_value(parameters.get("total", "n/a")),
+        "trainable_params": _report_value(parameters.get("trainable", "n/a")),
         "best_epoch": run_info.get("best_epoch", "n/a"),
         "val_mean_macro_f1": run_info.get("val_mean_macro_f1", "n/a"),
-        "test_mean_macro_precision": payload.get("mean_macro_precision"),
-        "test_mean_macro_recall": payload.get("mean_macro_recall"),
-        "test_mean_macro_f1": payload.get("mean_macro_f1"),
-        "test_mean_macro_f1_ci_lower": (payload.get("mean_macro_f1_ci") or {}).get("lower"),
-        "test_mean_macro_f1_ci_upper": (payload.get("mean_macro_f1_ci") or {}).get("upper"),
-        "train_duration_s": run_info.get("train_duration_s", "n/a"),
-        "test_eval_duration_s": run_info.get("test_eval_duration_s", "n/a"),
-        "test_images_per_s": run_info.get("test_images_per_s", "n/a"),
-        "test_ms_per_image": run_info.get("test_ms_per_image", "n/a"),
+        "test_mean_macro_precision": _report_value(
+            payload.get("mean_macro_precision")),
+        "test_mean_macro_recall": _report_value(
+            payload.get("mean_macro_recall")),
+        "test_mean_macro_f1": _report_value(mean_f1),
+        "test_mean_macro_f1_ci_lower": _report_value(
+            (payload.get("mean_macro_f1_ci") or {}).get("lower")),
+        "test_mean_macro_f1_ci_upper": _report_value(
+            (payload.get("mean_macro_f1_ci") or {}).get("upper")),
+        "train_duration_s": _report_value(
+            run_info.get("train_duration_s", "n/a")),
+        "test_end_to_end_duration_s": stored(
+            "n/a", "eval_end_to_end_duration_s", "test_eval_duration_s"),
+        "test_end_to_end_images_per_s": stored(
+            "n/a", "eval_end_to_end_images_per_s", "test_images_per_s"),
+        "test_model_forward_duration_s": stored(
+            "n/a", "eval_model_forward_duration_s"),
+        "test_model_forward_ms_per_image": stored(
+            "n/a", "eval_model_forward_ms_per_image"),
         "loaded_backend": backbone_meta.get("loaded_backend", "n/a"),
         "loaded_version": backbone_meta.get("loaded_version", "n/a"),
     }
     for attr in attributes:
         m = payload.get("attributes", {}).get(attr, {})
-        row[f"{attr}_macro_precision"] = m.get("macro_precision")
-        row[f"{attr}_macro_recall"] = m.get("macro_recall")
-        row[f"{attr}_macro_f1"] = m.get("macro_f1")
-        row[f"{attr}_macro_f1_ci_lower"] = (m.get("macro_f1_ci") or {}).get("lower")
-        row[f"{attr}_macro_f1_ci_upper"] = (m.get("macro_f1_ci") or {}).get("upper")
-        row[f"{attr}_accuracy"] = m.get("accuracy")
+        row[f"{attr}_macro_precision"] = _report_value(m.get("macro_precision"))
+        row[f"{attr}_macro_recall"] = _report_value(m.get("macro_recall"))
+        row[f"{attr}_macro_f1"] = _report_value(m.get("macro_f1"))
+        row[f"{attr}_macro_f1_ci_lower"] = _report_value(
+            (m.get("macro_f1_ci") or {}).get("lower"))
+        row[f"{attr}_macro_f1_ci_upper"] = _report_value(
+            (m.get("macro_f1_ci") or {}).get("upper"))
+        row[f"{attr}_accuracy"] = _report_value(m.get("accuracy"))
     return row
 
 
 def _ablation_md_table(rows, attributes):
     """Markdown table for a group of size-ablation rows."""
     def num(value, spec=".4f"):
+        value = _report_value(value)
         return format(value, spec) if isinstance(value, (int, float)) else \
             str(value)
 
@@ -663,14 +894,16 @@ def _ablation_md_table(rows, attributes):
               + [f"{a} macro-F1" for a in attributes]
               + [f"{a} F1 95% CI" for a in attributes]
               + [f"{a} acc" for a in attributes]
-              + ["Train time (s)", "Inference time (s)", "Test im/s",
-                 "Test ms/image", "Backend"])
+              + ["Train time (s)", "End-to-end time (s)",
+                 "End-to-end im/s", "Forward time (s)",
+                 "Forward ms/image", "Backend"])
     lines = ["| " + " | ".join(header) + " |",
              "|" + "---|" * len(header)]
     for row in rows:
-        backend = row["loaded_backend"]
-        if row["loaded_version"] not in (None, "n/a"):
-            backend = f"{backend} ({row['loaded_version']})"
+        backend = _report_value(row["loaded_backend"])
+        version = _report_value(row["loaded_version"])
+        if version != "n/a":
+            backend = f"{backend} ({version})"
         def ci_text(prefix):
             lower = row.get(f"{prefix}_lower")
             upper = row.get(f"{prefix}_upper")
@@ -699,10 +932,13 @@ def _ablation_md_table(rows, attributes):
                  + [ci_text(f"{a}_macro_f1_ci") for a in attributes]
                  + [num(row.get(f"{a}_accuracy")) if row.get(f"{a}_accuracy")
                     is not None else "n/a" for a in attributes]
-                 + [str(row["train_duration_s"]),
-                    str(row["test_eval_duration_s"]),
-                    str(row["test_images_per_s"]),
-                    str(row["test_ms_per_image"]), backend])
+                 + [str(_report_value(row["train_duration_s"])),
+                    str(_report_value(row["test_end_to_end_duration_s"])),
+                    str(_report_value(row["test_end_to_end_images_per_s"])),
+                    str(_report_value(row["test_model_forward_duration_s"])),
+                    str(_report_value(row["test_model_forward_ms_per_image"])),
+                    backend])
+        cells = [_report_value(c) for c in cells]
         lines.append("| " + " | ".join(str(c) for c in cells) + " |")
     return lines
 
@@ -815,15 +1051,18 @@ def write_size_ablation_report(cfg, smoke_test=False):
                  "Inference time covers the held-out test DataLoader and "
                  "model forward pass; metric aggregation/bootstrap is "
                  "excluded. Throughput is images per second.", "",
-                 "| Variant | Family | Adaptation | Params | Inference time (s) | "
-                 "Test im/s | Test ms/image |",
-                 "|---|---|---|---:|---:|---:|---:|"]
+                 "| Variant | Family | Adaptation | Params | End-to-end time (s) | "
+                 "End-to-end im/s | Forward time (s) | Forward ms/image |",
+                 "|---|---|---|---:|---:|---:|---:|---:|"]
     for row in sorted(rows, key=lambda item: (item["adaptation"],
                                                 item["variant"])):
         md_lines.append(
             f"| {row['variant']} | {row['family']} | {row['adaptation']} | "
-            f"{row['total_params']} | {row['test_eval_duration_s']} | "
-            f"{row['test_images_per_s']} | {row['test_ms_per_image']} |")
+            f"{_report_value(row['total_params'])} | "
+            f"{_report_value(row['test_end_to_end_duration_s'])} | "
+            f"{_report_value(row['test_end_to_end_images_per_s'])} | "
+            f"{_report_value(row['test_model_forward_duration_s'])} | "
+            f"{_report_value(row['test_model_forward_ms_per_image'])} |")
     md_lines.append("")
 
     if missing:
@@ -835,6 +1074,16 @@ def write_size_ablation_report(cfg, smoke_test=False):
     log.info("Size-ablation report written (%d/%d variants): %s, %s",
              len(rows), len(members), csv_path, md_path)
     return md_path
+
+
+def _bootstrap_samples_for_split(cfg, split):
+    """Return bootstrap count, keeping validation bootstrap opt-in."""
+    evaluation = cfg.get("evaluation", {})
+    if split == "test":
+        return int(evaluation.get(
+            "test_bootstrap_samples",
+            evaluation.get("bootstrap_samples", 2000)))
+    return int(evaluation.get(f"{split}_bootstrap_samples", 0))
 
 
 def reevaluate_from_checkpoint(cfg, variant, split="test", checkpoint=None):
@@ -883,8 +1132,11 @@ def reevaluate_from_checkpoint(cfg, variant, split="test", checkpoint=None):
     evaluation_cfg = cfg.get("evaluation", {})
     metrics, evaluation_meta = evaluate_model(
         model, loader, attributes, device,
-        bootstrap_samples=int(evaluation_cfg.get("bootstrap_samples", 2000)),
+        bootstrap_samples=_bootstrap_samples_for_split(cfg, split),
         bootstrap_seed=int(evaluation_cfg.get("bootstrap_seed", cfg["seed"])),
+        timing_warmup_batches=int(
+            evaluation_cfg.get("timing_warmup_batches", 5)),
+        timing_repeats=int(evaluation_cfg.get("timing_repeats", 3)),
         return_timing=True)
     for attr, m in metrics.items():
         log.info("  %-12s acc=%s macro_f1=%s", attr,
@@ -904,11 +1156,32 @@ def reevaluate_from_checkpoint(cfg, variant, split="test", checkpoint=None):
         "backbone_meta": (ckpt.get("backbone_meta")
                           or getattr(backbone, "backbone_meta", None)),
         "training_meta": ckpt.get("training_meta"),
-        "test_eval_duration_s": evaluation_meta["duration_s"],
-        "test_images_per_s": evaluation_meta["images_per_s"],
-        "test_ms_per_image": evaluation_meta["ms_per_image"],
-        "test_mean_macro_f1_ci": evaluation_meta.get("mean_macro_f1_ci"),
+        "evaluation_split": split,
+        "eval_end_to_end_duration_s": evaluation_meta.get(
+            "end_to_end_duration_s"),
+        "eval_end_to_end_images_per_s": evaluation_meta.get(
+            "end_to_end_images_per_s"),
+        "eval_model_forward_duration_s": evaluation_meta.get(
+            "model_forward_duration_s"),
+        "eval_model_forward_ms_per_image": evaluation_meta.get(
+            "model_forward_ms_per_image"),
+        "eval_timing_repeats": evaluation_meta.get("timing_repeats"),
+        "eval_timing_warmup_batches": evaluation_meta.get(
+            "timing_warmup_batches"),
     }
+    if split == "test":
+        # These aliases are intentionally absent from validation re-evaluation.
+        duration = evaluation_meta.get("end_to_end_duration_s")
+        n_images = evaluation_meta.get("n_images")
+        run_info.update({
+            "test_eval_duration_s": duration,
+            "test_images_per_s": evaluation_meta.get(
+                "end_to_end_images_per_s"),
+            "test_ms_per_image": (duration * 1000.0 / n_images
+                                   if duration and n_images else None),
+            "test_mean_macro_f1_ci": evaluation_meta.get(
+                "mean_macro_f1_ci"),
+        })
     save_metrics_bundle(cfg["paths"]["metrics_dir"], variant, split, metrics,
                         ckpt.get("run_id", "reeval"), run_info=run_info,
                         evaluation_meta=evaluation_meta)

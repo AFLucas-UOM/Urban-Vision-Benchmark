@@ -431,22 +431,32 @@ def run_training(variant, config_path=None, smoke_test=False):
         model, loaders["test"], cfg["attributes"], device, amp,
         bootstrap_samples=int(evaluation_cfg.get("bootstrap_samples", 2000)),
         bootstrap_seed=int(evaluation_cfg.get("bootstrap_seed", cfg["seed"])),
+        timing_warmup_batches=int(
+            evaluation_cfg.get("timing_warmup_batches", 5)),
+        timing_repeats=int(evaluation_cfg.get("timing_repeats", 3)),
         return_timing=True)
-    test_eval_duration_s = test_eval["duration_s"]
+    test_end_to_end_duration_s = test_eval["end_to_end_duration_s"]
     n_test = test_eval["n_images"]
-    test_images_per_s = test_eval["images_per_s"]
-    test_ms_per_image = test_eval["ms_per_image"]
+    test_end_to_end_images_per_s = test_eval["end_to_end_images_per_s"]
+    test_model_forward_duration_s = test_eval["model_forward_duration_s"]
+    test_model_forward_ms_per_image = test_eval["model_forward_ms_per_image"]
+    test_eval_duration_s = test_end_to_end_duration_s
+    test_images_per_s = test_end_to_end_images_per_s
+    test_ms_per_image = (test_end_to_end_duration_s * 1000.0 / n_test
+                         if test_end_to_end_duration_s and n_test else None)
     test_score = mean_macro_f1(test_metrics)
-    log.info("Test (best epoch %d): mean macro-F1 %.4f (%d crops in %.2fs, "
-             "%.1f im/s, %.4f ms/image)", best_epoch, test_score, n_test,
-             test_eval_duration_s, test_images_per_s or 0.0,
-             test_ms_per_image or 0.0)
+    log.info("Test (best epoch %d): mean macro-F1 %.4f (%d crops; "
+             "end-to-end %.2fs, %.1f im/s; forward %.2fs, %.4f ms/image)",
+             best_epoch, test_score, n_test, test_end_to_end_duration_s or 0.0,
+             test_end_to_end_images_per_s or 0.0,
+             test_model_forward_duration_s or 0.0,
+             test_model_forward_ms_per_image or 0.0)
     for attr, m in test_metrics.items():
         log.info("  %-12s acc=%.4f macro_p=%.4f macro_r=%.4f macro_f1=%.4f",
                  attr, m["accuracy"], m["macro_precision"],
                  m["macro_recall"], m["macro_f1"])
 
-    run_info = {
+    common_run_info = {
         "adaptation": adaptation,
         "best_epoch": best_epoch,
         "stopped_epoch": stopped_epoch,
@@ -458,16 +468,27 @@ def run_training(variant, config_path=None, smoke_test=False):
         "backbone_meta": backbone_meta,
         "training_meta": training_meta,
         "train_duration_s": train_duration_s,
+    }
+    test_run_info = {
+        **common_run_info,
+        "evaluation_split": "test",
+        "eval_end_to_end_duration_s": test_end_to_end_duration_s,
+        "eval_end_to_end_images_per_s": test_end_to_end_images_per_s,
+        "eval_model_forward_duration_s": test_model_forward_duration_s,
+        "eval_model_forward_ms_per_image": test_model_forward_ms_per_image,
+        "eval_timing_repeats": test_eval["timing_repeats"],
+        "eval_timing_warmup_batches": test_eval["timing_warmup_batches"],
         "test_eval_duration_s": test_eval_duration_s,
         "test_images_per_s": test_images_per_s,
         "test_ms_per_image": test_ms_per_image,
         "test_mean_macro_f1_ci": test_eval.get("mean_macro_f1_ci"),
     }
+    val_run_info = {**common_run_info, "evaluation_split": "val"}
     metrics_dir = cfg["paths"]["metrics_dir"]
     save_metrics_bundle(metrics_dir, variant, "val", best_val_metrics, run_id,
-                        smoke_test, run_info=run_info)
+                        smoke_test, run_info=val_run_info)
     save_metrics_bundle(metrics_dir, variant, "test", test_metrics, run_id,
-                        smoke_test, run_info=run_info,
+                        smoke_test, run_info=test_run_info,
                         evaluation_meta=test_eval)
     wandb_run.summary["test/mean_macro_f1"] = test_score
     wandb_run.summary["test/mean_macro_precision"] = mean_macro_precision(test_metrics)
@@ -477,9 +498,10 @@ def run_training(variant, config_path=None, smoke_test=False):
             test_eval["mean_macro_f1_ci"]["lower"]
         wandb_run.summary["test/mean_macro_f1_ci_upper"] = \
             test_eval["mean_macro_f1_ci"]["upper"]
-    wandb_run.summary["test/eval_duration_s"] = test_eval_duration_s
-    wandb_run.summary["test/images_per_s"] = test_images_per_s
-    wandb_run.summary["test/ms_per_image"] = test_ms_per_image
+    wandb_run.summary["test/end_to_end_duration_s"] = test_end_to_end_duration_s
+    wandb_run.summary["test/end_to_end_images_per_s"] = test_end_to_end_images_per_s
+    wandb_run.summary["test/model_forward_duration_s"] = test_model_forward_duration_s
+    wandb_run.summary["test/model_forward_ms_per_image"] = test_model_forward_ms_per_image
     wandb_run.summary["best_epoch"] = best_epoch
     wandb_run.summary["stopped_epoch"] = stopped_epoch
     wandb_run.summary["stop_reason"] = stop_reason
@@ -506,6 +528,14 @@ def run_training(variant, config_path=None, smoke_test=False):
         "backbone_meta": backbone_meta,
         "training_meta": training_meta,
         "train_duration_s": train_duration_s,
+        "evaluation_split": "test",
+        "eval_end_to_end_duration_s": test_end_to_end_duration_s,
+        "eval_end_to_end_images_per_s": test_end_to_end_images_per_s,
+        "eval_model_forward_duration_s": test_model_forward_duration_s,
+        "eval_model_forward_ms_per_image": test_model_forward_ms_per_image,
+        "eval_timing_repeats": test_eval["timing_repeats"],
+        "eval_timing_warmup_batches": test_eval["timing_warmup_batches"],
+        # Historical aliases retained in the longitudinal log.
         "test_eval_duration_s": test_eval_duration_s,
         "test_images_per_s": test_images_per_s,
         "test_ms_per_image": test_ms_per_image,

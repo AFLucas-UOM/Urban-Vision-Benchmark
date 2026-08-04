@@ -111,10 +111,15 @@ training:
 selection_metric: mean_macro_f1
 
 # Evaluation-only settings. Percentile bootstrap CIs are computed for the
-# held-out test metrics, never during validation epochs.
+# held-out test metrics, never during validation epochs. Checkpoint
+# re-evaluation accepts val_bootstrap_samples as an explicit future override.
 evaluation:
   bootstrap_samples: 2000
   bootstrap_seed: 42
+  # Warm-up occurs before each evaluation timing round; reported values are
+  # medians over repeated end-to-end and model-forward measurements.
+  timing_warmup_batches: 5
+  timing_repeats: 3
 
 # Head architecture for frozen backbones: "linear" or "mlp".
 probe:
