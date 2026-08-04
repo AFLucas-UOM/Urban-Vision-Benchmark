@@ -31,7 +31,7 @@ data:
   crop_padding: 0.25
   # Crops whose bbox min(width, height) in original-resolution pixels is below this
   # are excluded from the manifest (decision 2026-07-03: unreadable at 224x224).
-  min_crop_size: 16
+  min_crop_size: 20
   crop_format: jpg
   crop_quality: 95
   # What to do with attribute values not listed in an attribute's class vocabulary
