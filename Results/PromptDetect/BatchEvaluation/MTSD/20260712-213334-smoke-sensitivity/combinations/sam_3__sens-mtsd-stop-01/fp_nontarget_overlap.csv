@@ -1,3 +1,0 @@
-model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
-SAM 3,sens-mtsd-stop-01,stop sign,GRP-1/091652b2-IMG20260105120954.jpg,1071.35,1205.88,2282.49,2323.0,0.7344,,0.2855
-SAM 3,sens-mtsd-stop-01,stop sign,GRP-1/091652b2-IMG20260105120954.jpg,503.87,1042.26,2765.68,3081.6,0.3301,Auxiliary Sign,0.9703

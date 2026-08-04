@@ -1,3 +1,0 @@
-model,prompt,tp,fp,fn,duplicates,precision,recall,f1,accuracy,mean_matched_iou,ap50,map50_95,n_gt,n_images
-SAM 3.1,garbage bag,22,2,1,1,0.9167,0.9565,0.9362,0.88,0.9308,0.9565,0.8481,23,10
-Cosmos Reason2 2B,garbage bag,8,0,15,0,1.0,0.3478,0.5161,0.3478,0.8921,0.3478,0.2632,23,10

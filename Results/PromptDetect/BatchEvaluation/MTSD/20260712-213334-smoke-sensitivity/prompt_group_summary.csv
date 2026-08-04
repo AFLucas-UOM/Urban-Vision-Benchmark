@@ -1,2 +1,0 @@
-model,prompt_group,n_prompts,precision,recall,f1,accuracy,mean_matched_iou,mean_inference_ms
-SAM 3,paraphrase-sensitivity,20,0.2299,0.55,0.2686,0.1966,0.5792,203.8015

@@ -1,7 +1,0 @@
-model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
-SAM 3,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,GRP-1/02ac92f5-IMG20251123165127.jpg,1441.2,1373.58,2004.9,2860.2,0.7695,Blind-Spot Mirror (Convex Mirror),0.9777
-SAM 3,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,GRP-1/072bd818-IMG_4648.jpeg,1122.18,1419.24,1774.95,3086.48,0.9219,Stop Sign,0.9407
-SAM 3,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,GRP-1/091652b2-IMG20260105120954.jpg,502.07,1035.84,2768.95,3074.35,0.9375,Auxiliary Sign,0.975
-SAM 3,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,GRP-1/091652b2-IMG20260105120954.jpg,1069.28,1210.53,2284.52,2325.44,0.6719,,0.2859
-SAM 3,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,GRP-1/094f8a9f-RV__2.jpeg,1073.57,1205.12,1818.81,1997.19,0.9531,Other-Unknown,0.9829
-SAM 3,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,GRP-1/094f8a9f-RV__2.jpeg,1061.98,592.04,1814.02,1261.47,0.5234,Stop Sign,0.9728

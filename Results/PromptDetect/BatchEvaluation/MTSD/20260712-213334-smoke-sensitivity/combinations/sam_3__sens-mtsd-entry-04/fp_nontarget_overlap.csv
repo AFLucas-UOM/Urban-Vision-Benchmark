@@ -1,8 +1,0 @@
-model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
-SAM 3,sens-mtsd-entry-04,find all no entry signs,GRP-1/091652b2-IMG20260105120954.jpg,1071.89,1210.69,2284.28,2325.71,0.9141,,0.2852
-SAM 3,sens-mtsd-entry-04,find all no entry signs,GRP-1/091652b2-IMG20260105120954.jpg,937.29,585.8,2405.27,1157.39,0.4238,Directional Sign,0.9669
-SAM 3,sens-mtsd-entry-04,find all no entry signs,GRP-1/091652b2-IMG20260105120954.jpg,511.75,1046.95,2761.08,3068.12,0.3203,Auxiliary Sign,0.9592
-SAM 3,sens-mtsd-entry-04,find all no entry signs,GRP-1/094f8a9f-RV__2.jpeg,1073.78,1205.79,1820.05,1998.27,0.7344,Other-Unknown,0.9848
-SAM 3,sens-mtsd-entry-04,find all no entry signs,GRP-1/094f8a9f-RV__2.jpeg,1061.7,592.99,1814.42,1261.53,0.6875,Stop Sign,0.9724
-SAM 3,sens-mtsd-entry-04,find all no entry signs,GRP-1/094f8a9f-RV__2.jpeg,1241.74,1867.64,1718.56,3081.08,0.4941,Pedestrian Crossing,0.9503
-SAM 3,sens-mtsd-entry-04,find all no entry signs,GRP-1/094f8a9f-RV__2.jpeg,1060.47,583.86,1813.82,3085.25,0.3594,,0.3231

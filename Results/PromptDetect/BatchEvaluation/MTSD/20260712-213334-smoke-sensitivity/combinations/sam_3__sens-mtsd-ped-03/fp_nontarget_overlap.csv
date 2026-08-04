@@ -1,8 +1,0 @@
-model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
-SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,GRP-1/091652b2-IMG20260105120954.jpg,932.0,584.43,2403.25,1157.16,0.6562,Directional Sign,0.971
-SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,GRP-1/091652b2-IMG20260105120954.jpg,500.36,1035.26,2765.24,3073.26,0.6289,Auxiliary Sign,0.9739
-SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,GRP-1/091652b2-IMG20260105120954.jpg,1069.37,1199.53,2283.58,2327.3,0.4414,,0.2889
-SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,GRP-1/094f8a9f-RV__2.jpeg,1337.49,2197.43,1686.29,2910.06,0.6172,,0.0
-SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,GRP-1/094f8a9f-RV__2.jpeg,1072.93,1203.22,1818.12,1999.31,0.4219,Other-Unknown,0.9878
-SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,GRP-1/094f8a9f-RV__2.jpeg,1065.65,595.75,1808.32,4032.0,0.3262,,0.2296
-SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,GRP-1/094f8a9f-RV__2.jpeg,174.04,2787.71,332.5,2995.92,0.3223,Auxiliary Sign,0.9519

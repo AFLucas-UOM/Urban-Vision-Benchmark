@@ -1,8 +1,0 @@
-model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
-SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/02ac92f5-IMG20251123165127.jpg,1441.13,1373.27,2004.31,2858.96,0.9141,Blind-Spot Mirror (Convex Mirror),0.9762
-SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/072bd818-IMG_4648.jpeg,1122.13,1418.64,1775.53,3087.22,0.9766,Stop Sign,0.9423
-SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/091652b2-IMG20260105120954.jpg,501.44,1039.82,2768.31,3077.02,0.9531,Auxiliary Sign,0.9743
-SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/091652b2-IMG20260105120954.jpg,931.07,581.27,2404.37,1157.93,0.5508,Directional Sign,0.979
-SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/091652b2-IMG20260105120954.jpg,1070.67,1207.52,2284.38,2325.24,0.543,,0.2862
-SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/094f8a9f-RV__2.jpeg,1061.84,592.62,1814.19,1260.99,0.9258,Stop Sign,0.9717
-SAM 3,sens-mtsd-roundabout-04,find all roundabout ahead signs,GRP-1/094f8a9f-RV__2.jpeg,1076.17,1205.77,1818.62,1996.18,0.7578,Other-Unknown,0.9772

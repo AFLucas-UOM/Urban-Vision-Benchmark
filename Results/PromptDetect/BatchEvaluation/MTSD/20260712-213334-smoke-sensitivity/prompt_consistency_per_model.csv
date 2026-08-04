@@ -1,2 +1,0 @@
-dataset,model,n_families,macro_pairwise_box_f1,macro_pairwise_box_jaccard,macro_matched_pair_iou,least_consistent_family,min_family_pairwise_box_f1
-MTSD,SAM 3,5,0.6716,0.6272,0.9895,mtsd-blind-spot-mirror,0.4833

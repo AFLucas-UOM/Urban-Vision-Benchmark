@@ -1,7 +1,0 @@
-model,prompt,image_id,image_path,x0,y0,x1,y1,score,predicted_label,has_mask,has_confidence,inference_ms,prompt_id
-SAM 3,pedestrian crossing sign,GRP-1/02ac92f5-IMG20251123165127.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\02ac92f5-IMG20251123165127.jpg,,,,,,<no detections>,False,True,486.9,sens-mtsd-ped-01
-SAM 3,pedestrian crossing sign,GRP-1/0608acbd-IMG_4633.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\0608acbd-IMG_4633.jpeg,,,,,,<no detections>,False,True,161.8,sens-mtsd-ped-01
-SAM 3,pedestrian crossing sign,GRP-1/072bd818-IMG_4648.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\072bd818-IMG_4648.jpeg,,,,,,<no detections>,False,True,144.3,sens-mtsd-ped-01
-SAM 3,pedestrian crossing sign,GRP-1/091652b2-IMG20260105120954.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\091652b2-IMG20260105120954.jpg,,,,,,<no detections>,False,True,144.7,sens-mtsd-ped-01
-SAM 3,pedestrian crossing sign,GRP-1/094f8a9f-RV__2.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\094f8a9f-RV__2.jpeg,1337.39,2198.08,1687.85,2909.72,0.375,pedestrian crossing sign,True,True,223.8,sens-mtsd-ped-01
-SAM 3,pedestrian crossing sign,GRP-1/094f8a9f-RV__2.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\094f8a9f-RV__2.jpeg,1239.75,1862.18,1719.04,3079.18,0.7812,pedestrian crossing sign,True,True,223.8,sens-mtsd-ped-01

@@ -1,2 +1,0 @@
-model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
-SAM 3,sens-mtsd-ped-01,pedestrian crossing sign,GRP-1/094f8a9f-RV__2.jpeg,1337.39,2198.08,1687.85,2909.72,0.375,,0.0

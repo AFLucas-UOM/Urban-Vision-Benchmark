@@ -1,6 +1,0 @@
-model,prompt,image_id,image_path,x0,y0,x1,y1,score,predicted_label,has_mask,has_confidence,inference_ms,prompt_id
-SAM 3,blind-spot convex mirror,GRP-1/02ac92f5-IMG20251123165127.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\02ac92f5-IMG20251123165127.jpg,,,,,,<no detections>,False,True,147.8,sens-mtsd-mirror-01
-SAM 3,blind-spot convex mirror,GRP-1/0608acbd-IMG_4633.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\0608acbd-IMG_4633.jpeg,773.62,1921.49,2331.51,3973.05,0.9336,blind-spot convex mirror,True,True,158.5,sens-mtsd-mirror-01
-SAM 3,blind-spot convex mirror,GRP-1/072bd818-IMG_4648.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\072bd818-IMG_4648.jpeg,,,,,,<no detections>,False,True,142.4,sens-mtsd-mirror-01
-SAM 3,blind-spot convex mirror,GRP-1/091652b2-IMG20260105120954.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\091652b2-IMG20260105120954.jpg,,,,,,<no detections>,False,True,146.0,sens-mtsd-mirror-01
-SAM 3,blind-spot convex mirror,GRP-1/094f8a9f-RV__2.jpeg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MTSD\GRP-1\Images\094f8a9f-RV__2.jpeg,,,,,,<no detections>,False,True,144.4,sens-mtsd-mirror-01
