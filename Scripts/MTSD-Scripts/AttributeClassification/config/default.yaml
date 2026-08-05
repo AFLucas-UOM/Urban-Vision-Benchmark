@@ -496,7 +496,7 @@ wandb:
   entity: null
   # Optional W&B run group - set to a fresh label (e.g. "rerun-2026-07") so a
   # clean experiment round is separated from any earlier runs in the project.
-  group: size-ablation-2026-07
+  group: size-ablation-grp1-11-2026-08
   # Optional prefix prepended to every run name (run names are otherwise
   # "<variant>-<timestamp>").
   run_name_prefix: ""
