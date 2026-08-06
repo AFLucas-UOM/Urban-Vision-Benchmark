@@ -1,14 +1,14 @@
-variant,split,attribute,class,f1,support
-lingbot_vitl_lora,val,view_angle,Front,0.9173,548
-lingbot_vitl_lora,val,view_angle,Back,0.9693,509
-lingbot_vitl_lora,val,view_angle,Side,0.8748,340
-lingbot_vitl_lora,val,mounting,Pole-Mounted,0.9824,1190
-lingbot_vitl_lora,val,mounting,Wall-Mounted,0.8986,207
-lingbot_vitl_lora,val,condition,Good,0.9213,1017
-lingbot_vitl_lora,val,condition,Weathered,0.7091,308
-lingbot_vitl_lora,val,condition,Heavily Damaged,0.5954,72
-lingbot_vitl_lora,val,sign_shape,Circular,0.9849,562
-lingbot_vitl_lora,val,sign_shape,Quadrangle,0.9754,425
-lingbot_vitl_lora,val,sign_shape,Triangular,0.9825,198
-lingbot_vitl_lora,val,sign_shape,Octagonal,0.9695,181
-lingbot_vitl_lora,val,sign_shape,Pentagon,0.8571,31
+variant,split,attribute,class,precision,recall,f1,support
+lingbot_vitl_lora,val,view_angle,Front,0.9453,0.9184,0.9317,772
+lingbot_vitl_lora,val,view_angle,Back,0.9553,0.9750,0.9650,679
+lingbot_vitl_lora,val,view_angle,Side,0.8703,0.8859,0.8780,447
+lingbot_vitl_lora,val,mounting,Pole-Mounted,0.9851,0.9845,0.9848,1611
+lingbot_vitl_lora,val,mounting,Wall-Mounted,0.9132,0.9164,0.9148,287
+lingbot_vitl_lora,val,condition,Good,0.9518,0.8500,0.8980,1347
+lingbot_vitl_lora,val,condition,Weathered,0.6214,0.8356,0.7128,438
+lingbot_vitl_lora,val,condition,Heavily Damaged,0.7075,0.6637,0.6849,113
+lingbot_vitl_lora,val,sign_shape,Circular,0.9904,0.9718,0.9811,746
+lingbot_vitl_lora,val,sign_shape,Quadrangle,0.9731,0.9731,0.9731,594
+lingbot_vitl_lora,val,sign_shape,Triangular,0.9861,0.9895,0.9878,287
+lingbot_vitl_lora,val,sign_shape,Octagonal,0.9274,0.9871,0.9563,233
+lingbot_vitl_lora,val,sign_shape,Pentagon,0.8889,0.8421,0.8649,38

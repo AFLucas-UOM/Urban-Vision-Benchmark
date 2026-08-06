@@ -1,14 +1,14 @@
-variant,split,attribute,class,f1,support
-dinov3_vitb_lora,test,view_angle,Front,0.9219,447
-dinov3_vitb_lora,test,view_angle,Back,0.9665,463
-dinov3_vitb_lora,test,view_angle,Side,0.8694,280
-dinov3_vitb_lora,test,mounting,Pole-Mounted,0.9792,1027
-dinov3_vitb_lora,test,mounting,Wall-Mounted,0.8635,163
-dinov3_vitb_lora,test,condition,Good,0.9198,905
-dinov3_vitb_lora,test,condition,Weathered,0.6593,220
-dinov3_vitb_lora,test,condition,Heavily Damaged,0.6271,65
-dinov3_vitb_lora,test,sign_shape,Circular,0.9809,469
-dinov3_vitb_lora,test,sign_shape,Quadrangle,0.9737,385
-dinov3_vitb_lora,test,sign_shape,Triangular,0.9736,169
-dinov3_vitb_lora,test,sign_shape,Octagonal,0.9444,145
-dinov3_vitb_lora,test,sign_shape,Pentagon,0.9362,22
+variant,split,attribute,class,precision,recall,f1,support
+dinov3_vitb_lora,test,view_angle,Front,0.9370,0.9156,0.9262,699
+dinov3_vitb_lora,test,view_angle,Back,0.9686,0.9607,0.9646,738
+dinov3_vitb_lora,test,view_angle,Side,0.8547,0.8962,0.8750,453
+dinov3_vitb_lora,test,mounting,Pole-Mounted,0.9895,0.9834,0.9865,1629
+dinov3_vitb_lora,test,mounting,Wall-Mounted,0.9004,0.9349,0.9173,261
+dinov3_vitb_lora,test,condition,Good,0.9002,0.9164,0.9082,1388
+dinov3_vitb_lora,test,condition,Weathered,0.6309,0.6148,0.6227,392
+dinov3_vitb_lora,test,condition,Heavily Damaged,0.5895,0.5091,0.5463,110
+dinov3_vitb_lora,test,sign_shape,Circular,0.9783,0.9692,0.9737,746
+dinov3_vitb_lora,test,sign_shape,Quadrangle,0.9804,0.9740,0.9772,615
+dinov3_vitb_lora,test,sign_shape,Triangular,0.9684,0.9822,0.9753,281
+dinov3_vitb_lora,test,sign_shape,Octagonal,0.9091,0.9434,0.9259,212
+dinov3_vitb_lora,test,sign_shape,Pentagon,1.0000,0.9722,0.9859,36

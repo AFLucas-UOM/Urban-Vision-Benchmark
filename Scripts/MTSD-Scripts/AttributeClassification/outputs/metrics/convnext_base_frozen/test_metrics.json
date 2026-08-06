@@ -1,17 +1,37 @@
 {
- "run_id": "convnext_base_frozen-20260713-151324",
+ "run_id": "convnext_base_frozen-20260805-050013",
  "variant": "convnext_base_frozen",
  "split": "test",
  "smoke_test": false,
- "timestamp": "2026-07-13T13:41:32+00:00",
- "mean_macro_f1": 0.7782171816312463,
+ "timestamp": "2026-08-05T03:49:37+00:00",
+ "mean_macro_precision": 0.7618878026783789,
+ "mean_macro_recall": 0.8180986777606929,
+ "mean_macro_f1": 0.7815507329291834,
+ "mean_macro_f1_ci": {
+  "level": 0.95,
+  "method": "percentile",
+  "lower": 0.7706842261411235,
+  "upper": 0.792380043385389,
+  "n_bootstrap": 2000,
+  "seed": 42
+ },
+ "evaluation_split": "test",
+ "evaluation": {
+  "n_images": 1890,
+  "timing_repeats": 3,
+  "timing_warmup_batches": 5,
+  "end_to_end_duration_s": 8.3216,
+  "end_to_end_images_per_s": 227.12,
+  "model_forward_duration_s": 1.5045,
+  "model_forward_ms_per_image": 0.796
+ },
  "run_info": {
   "adaptation": "frozen",
-  "best_epoch": 22,
-  "stopped_epoch": 23,
+  "best_epoch": 16,
+  "stopped_epoch": 26,
   "stop_reason": "early_stopping",
   "max_epochs": 150,
-  "val_mean_macro_f1": 0.7733579472764982,
+  "val_mean_macro_f1": 0.7811596200430666,
   "parameters": {
    "total": 87577741,
    "trainable": 13325,
@@ -46,116 +66,200 @@
    "gradient_accumulation_steps": 1,
    "effective_batch_size": 32
   },
-  "train_duration_s": 1650.2,
-  "test_eval_duration_s": 30.96,
-  "test_images_per_s": 38.44
+  "train_duration_s": 2875.9,
+  "evaluation_split": "test",
+  "eval_end_to_end_duration_s": 8.3216,
+  "eval_end_to_end_images_per_s": 227.12,
+  "eval_model_forward_duration_s": 1.5045,
+  "eval_model_forward_ms_per_image": 0.796,
+  "eval_timing_repeats": 3,
+  "eval_timing_warmup_batches": 5,
+  "test_eval_duration_s": 8.3216,
+  "test_images_per_s": 227.12,
+  "test_ms_per_image": 4.402962962962963,
+  "test_mean_macro_f1_ci": {
+   "level": 0.95,
+   "method": "percentile",
+   "lower": 0.7706842261411235,
+   "upper": 0.792380043385389,
+   "n_bootstrap": 2000,
+   "seed": 42
+  }
  },
  "attributes": {
   "view_angle": {
-   "n": 1190,
-   "accuracy": 0.8563025210084033,
-   "macro_f1": 0.8473335366782871,
+   "n": 1890,
+   "accuracy": 0.846031746031746,
+   "macro_precision": 0.8349625726754968,
+   "macro_recall": 0.8423389760714536,
+   "macro_f1": 0.8369712579112312,
+   "macro_f1_ci": {
+    "level": 0.95,
+    "method": "percentile",
+    "lower": 0.8204381253987517,
+    "upper": 0.8541523489386266,
+    "n_bootstrap": 2000,
+    "seed": 42
+   },
    "classes": [
     "Front",
     "Back",
     "Side"
    ],
+   "per_class_precision": {
+    "Front": 0.8714499252615845,
+    "Back": 0.9240687679083095,
+    "Side": 0.7093690248565966
+   },
+   "per_class_recall": {
+    "Front": 0.8340486409155937,
+    "Back": 0.8739837398373984,
+    "Side": 0.8189845474613686
+   },
    "per_class_f1": {
-    "Front": 0.8597081930415263,
-    "Back": 0.9008810572687225,
-    "Side": 0.7814113597246127
+    "Front": 0.8523391812865497,
+    "Back": 0.8983286908077994,
+    "Side": 0.7602459016393442
    },
    "support": {
-    "Front": 447,
-    "Back": 463,
-    "Side": 280
+    "Front": 699,
+    "Back": 738,
+    "Side": 453
    },
    "confusion_matrix": [
     [
-     383,
-     20,
-     44
+     583,
+     27,
+     89
     ],
     [
-     24,
-     409,
-     30
+     30,
+     645,
+     63
     ],
     [
-     37,
-     16,
-     227
+     56,
+     26,
+     371
     ]
    ]
   },
   "mounting": {
-   "n": 1190,
-   "accuracy": 0.9310924369747899,
-   "macro_f1": 0.8606764289304154,
+   "n": 1890,
+   "accuracy": 0.926984126984127,
+   "macro_precision": 0.8299972666876159,
+   "macro_recall": 0.9174234245676425,
+   "macro_f1": 0.8651186843874438,
+   "macro_f1_ci": {
+    "level": 0.95,
+    "method": "percentile",
+    "lower": 0.8432597873905008,
+    "upper": 0.8854044893717766,
+    "n_bootstrap": 2000,
+    "seed": 42
+   },
    "classes": [
     "Pole-Mounted",
     "Wall-Mounted"
    ],
+   "per_class_precision": {
+    "Pole-Mounted": 0.9837767683322518,
+    "Wall-Mounted": 0.6762177650429799
+   },
+   "per_class_recall": {
+    "Pole-Mounted": 0.9306322897483118,
+    "Wall-Mounted": 0.9042145593869731
+   },
    "per_class_f1": {
-    "Pole-Mounted": 0.9597249508840865,
-    "Wall-Mounted": 0.7616279069767442
+    "Pole-Mounted": 0.9564668769716088,
+    "Wall-Mounted": 0.7737704918032787
    },
    "support": {
-    "Pole-Mounted": 1027,
-    "Wall-Mounted": 163
+    "Pole-Mounted": 1629,
+    "Wall-Mounted": 261
    },
    "confusion_matrix": [
     [
-     977,
-     50
+     1516,
+     113
     ],
     [
-     32,
-     131
+     25,
+     236
     ]
    ]
   },
   "condition": {
-   "n": 1190,
-   "accuracy": 0.6848739495798319,
-   "macro_f1": 0.5349166439179514,
+   "n": 1890,
+   "accuracy": 0.6873015873015873,
+   "macro_precision": 0.5135059364699454,
+   "macro_recall": 0.596091465142515,
+   "macro_f1": 0.5338502518411795,
+   "macro_f1_ci": {
+    "level": 0.95,
+    "method": "percentile",
+    "lower": 0.5054936670886359,
+    "upper": 0.5622946841306845,
+    "n_bootstrap": 2000,
+    "seed": 42
+   },
    "classes": [
     "Good",
     "Weathered",
     "Heavily Damaged"
    ],
+   "per_class_precision": {
+    "Good": 0.866938775510204,
+    "Weathered": 0.4080188679245283,
+    "Heavily Damaged": 0.26556016597510373
+   },
+   "per_class_recall": {
+    "Good": 0.7651296829971181,
+    "Weathered": 0.4413265306122449,
+    "Heavily Damaged": 0.5818181818181818
+   },
    "per_class_f1": {
-    "Good": 0.7963190184049079,
-    "Weathered": 0.46557377049180326,
-    "Heavily Damaged": 0.34285714285714286
+    "Good": 0.8128587830080367,
+    "Weathered": 0.42401960784313725,
+    "Heavily Damaged": 0.3646723646723647
    },
    "support": {
-    "Good": 905,
-    "Weathered": 220,
-    "Heavily Damaged": 65
+    "Good": 1388,
+    "Weathered": 392,
+    "Heavily Damaged": 110
    },
    "confusion_matrix": [
     [
-     649,
-     221,
-     35
+     1062,
+     230,
+     96
     ],
     [
-     62,
-     142,
-     16
+     138,
+     173,
+     81
     ],
     [
-     14,
-     27,
-     24
+     25,
+     21,
+     64
     ]
    ]
   },
   "sign_shape": {
-   "n": 1190,
-   "accuracy": 0.8991596638655462,
-   "macro_f1": 0.8699421169983316,
+   "n": 1890,
+   "accuracy": 0.9037037037037037,
+   "macro_precision": 0.8690854348804578,
+   "macro_recall": 0.9165408452611606,
+   "macro_f1": 0.8902627375768791,
+   "macro_f1_ci": {
+    "level": 0.95,
+    "method": "percentile",
+    "lower": 0.8683127738723084,
+    "upper": 0.9079347319747957,
+    "n_bootstrap": 2000,
+    "seed": 42
+   },
    "classes": [
     "Circular",
     "Quadrangle",
@@ -163,47 +267,61 @@
     "Octagonal",
     "Pentagon"
    ],
-   "per_class_f1": {
-    "Circular": 0.9175704989154013,
-    "Quadrangle": 0.9175531914893617,
-    "Triangular": 0.8945868945868946,
-    "Octagonal": 0.82,
+   "per_class_precision": {
+    "Circular": 0.9308437067773168,
+    "Quadrangle": 0.9226973684210527,
+    "Triangular": 0.9049295774647887,
+    "Octagonal": 0.7869565217391304,
     "Pentagon": 0.8
    },
+   "per_class_recall": {
+    "Circular": 0.9021447721179625,
+    "Quadrangle": 0.9121951219512195,
+    "Triangular": 0.9145907473309609,
+    "Octagonal": 0.8537735849056604,
+    "Pentagon": 1.0
+   },
+   "per_class_f1": {
+    "Circular": 0.9162695711368277,
+    "Quadrangle": 0.9174161896974653,
+    "Triangular": 0.9097345132743363,
+    "Octagonal": 0.8190045248868778,
+    "Pentagon": 0.8888888888888888
+   },
    "support": {
-    "Circular": 469,
-    "Quadrangle": 385,
-    "Triangular": 169,
-    "Octagonal": 145,
-    "Pentagon": 22
+    "Circular": 746,
+    "Quadrangle": 615,
+    "Triangular": 281,
+    "Octagonal": 212,
+    "Pentagon": 36
    },
    "confusion_matrix": [
     [
-     423,
-     10,
+     673,
+     27,
      7,
-     23,
+     33,
      6
     ],
     [
-     10,
-     345,
-     17,
-     8,
-     5
+     21,
+     561,
+     18,
+     12,
+     3
     ],
     [
+     9,
+     11,
+     257,
      4,
-     7,
-     157,
-     1,
      0
     ],
     [
-     16,
-     5,
-     1,
-     123,
+     20,
+     9,
+     2,
+     181,
      0
     ],
     [
@@ -211,7 +329,7 @@
      0,
      0,
      0,
-     22
+     36
     ]
    ]
   }

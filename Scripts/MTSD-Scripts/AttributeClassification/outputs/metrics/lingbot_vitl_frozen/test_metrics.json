@@ -1,17 +1,37 @@
 {
- "run_id": "lingbot_vitl_frozen-20260713-165655",
+ "run_id": "lingbot_vitl_frozen-20260805-075734",
  "variant": "lingbot_vitl_frozen",
  "split": "test",
  "smoke_test": false,
- "timestamp": "2026-07-13T15:47:29+00:00",
- "mean_macro_f1": 0.805608139549191,
+ "timestamp": "2026-08-05T07:02:22+00:00",
+ "mean_macro_precision": 0.7960733586264523,
+ "mean_macro_recall": 0.8372730047533257,
+ "mean_macro_f1": 0.8118169512380335,
+ "mean_macro_f1_ci": {
+  "level": 0.95,
+  "method": "percentile",
+  "lower": 0.8001752540001894,
+  "upper": 0.822775824409944,
+  "n_bootstrap": 2000,
+  "seed": 42
+ },
+ "evaluation_split": "test",
+ "evaluation": {
+  "n_images": 1890,
+  "timing_repeats": 3,
+  "timing_warmup_batches": 5,
+  "end_to_end_duration_s": 8.4332,
+  "end_to_end_images_per_s": 224.12,
+  "model_forward_duration_s": 3.0297,
+  "model_forward_ms_per_image": 1.603
+ },
  "run_info": {
   "adaptation": "frozen",
-  "best_epoch": 32,
-  "stopped_epoch": 42,
+  "best_epoch": 24,
+  "stopped_epoch": 34,
   "stop_reason": "early_stopping",
   "max_epochs": 150,
-  "val_mean_macro_f1": 0.7927500018031295,
+  "val_mean_macro_f1": 0.8059231082947143,
   "parameters": {
    "total": 303167501,
    "trainable": 13325,
@@ -47,116 +67,200 @@
    "gradient_accumulation_steps": 1,
    "effective_batch_size": 32
   },
-  "train_duration_s": 2994.8,
-  "test_eval_duration_s": 30.91,
-  "test_images_per_s": 38.5
+  "train_duration_s": 3798.9,
+  "evaluation_split": "test",
+  "eval_end_to_end_duration_s": 8.4332,
+  "eval_end_to_end_images_per_s": 224.12,
+  "eval_model_forward_duration_s": 3.0297,
+  "eval_model_forward_ms_per_image": 1.603,
+  "eval_timing_repeats": 3,
+  "eval_timing_warmup_batches": 5,
+  "test_eval_duration_s": 8.4332,
+  "test_images_per_s": 224.12,
+  "test_ms_per_image": 4.462010582010581,
+  "test_mean_macro_f1_ci": {
+   "level": 0.95,
+   "method": "percentile",
+   "lower": 0.8001752540001894,
+   "upper": 0.822775824409944,
+   "n_bootstrap": 2000,
+   "seed": 42
+  }
  },
  "attributes": {
   "view_angle": {
-   "n": 1190,
-   "accuracy": 0.8773109243697479,
-   "macro_f1": 0.8700433789676589,
+   "n": 1890,
+   "accuracy": 0.8814814814814815,
+   "macro_precision": 0.8721002884049488,
+   "macro_recall": 0.8775438197304218,
+   "macro_f1": 0.8743772315785789,
+   "macro_f1_ci": {
+    "level": 0.95,
+    "method": "percentile",
+    "lower": 0.8591990740590232,
+    "upper": 0.8895687118363592,
+    "n_bootstrap": 2000,
+    "seed": 42
+   },
    "classes": [
     "Front",
     "Back",
     "Side"
    ],
+   "per_class_precision": {
+    "Front": 0.8944281524926686,
+    "Back": 0.9292649098474342,
+    "Side": 0.7926078028747433
+   },
+   "per_class_recall": {
+    "Front": 0.8726752503576538,
+    "Back": 0.907859078590786,
+    "Side": 0.8520971302428256
+   },
    "per_class_f1": {
-    "Front": 0.8777142857142857,
-    "Back": 0.9168490153172867,
-    "Side": 0.8155668358714044
+    "Front": 0.8834178131788559,
+    "Back": 0.9184372858122002,
+    "Side": 0.8212765957446808
    },
    "support": {
-    "Front": 447,
-    "Back": 463,
-    "Side": 280
+    "Front": 699,
+    "Back": 738,
+    "Side": 453
    },
    "confusion_matrix": [
     [
-     384,
-     19,
-     44
+     610,
+     27,
+     62
     ],
     [
-     18,
-     419,
-     26
+     29,
+     670,
+     39
     ],
     [
-     26,
-     13,
-     241
+     43,
+     24,
+     386
     ]
    ]
   },
   "mounting": {
-   "n": 1190,
-   "accuracy": 0.9378151260504202,
-   "macro_f1": 0.8799984737484737,
+   "n": 1890,
+   "accuracy": 0.9486772486772487,
+   "macro_precision": 0.8746631278072683,
+   "macro_recall": 0.9316166042209097,
+   "macro_f1": 0.8999475533730386,
+   "macro_f1_ci": {
+    "level": 0.95,
+    "method": "percentile",
+    "lower": 0.8798258279910453,
+    "upper": 0.9189345785184012,
+    "n_bootstrap": 2000,
+    "seed": 42
+   },
    "classes": [
     "Pole-Mounted",
     "Wall-Mounted"
    ],
+   "per_class_precision": {
+    "Pole-Mounted": 0.9848101265822785,
+    "Wall-Mounted": 0.7645161290322581
+   },
+   "per_class_recall": {
+    "Pole-Mounted": 0.9551872314303254,
+    "Wall-Mounted": 0.9080459770114943
+   },
    "per_class_f1": {
-    "Pole-Mounted": 0.9632936507936508,
-    "Wall-Mounted": 0.7967032967032966
+    "Pole-Mounted": 0.969772514802119,
+    "Wall-Mounted": 0.830122591943958
    },
    "support": {
-    "Pole-Mounted": 1027,
-    "Wall-Mounted": 163
+    "Pole-Mounted": 1629,
+    "Wall-Mounted": 261
    },
    "confusion_matrix": [
     [
-     971,
-     56
+     1556,
+     73
     ],
     [
-     18,
-     145
+     24,
+     237
     ]
    ]
   },
   "condition": {
-   "n": 1190,
-   "accuracy": 0.7327731092436974,
-   "macro_f1": 0.570899995554823,
+   "n": 1890,
+   "accuracy": 0.7248677248677249,
+   "macro_precision": 0.5402429098578664,
+   "macro_recall": 0.6033743154060157,
+   "macro_f1": 0.5578478890702516,
+   "macro_f1_ci": {
+    "level": 0.95,
+    "method": "percentile",
+    "lower": 0.5297550090211347,
+    "upper": 0.587441205891655,
+    "n_bootstrap": 2000,
+    "seed": 42
+   },
    "classes": [
     "Good",
     "Weathered",
     "Heavily Damaged"
    ],
+   "per_class_precision": {
+    "Good": 0.8794992175273866,
+    "Weathered": 0.4748743718592965,
+    "Heavily Damaged": 0.26635514018691586
+   },
+   "per_class_recall": {
+    "Good": 0.8097982708933718,
+    "Weathered": 0.48214285714285715,
+    "Heavily Damaged": 0.5181818181818182
+   },
    "per_class_f1": {
-    "Good": 0.8431603773584906,
-    "Weathered": 0.4870259481037924,
-    "Heavily Damaged": 0.3825136612021858
+    "Good": 0.8432108027006752,
+    "Weathered": 0.47848101265822784,
+    "Heavily Damaged": 0.35185185185185186
    },
    "support": {
-    "Good": 905,
-    "Weathered": 220,
-    "Heavily Damaged": 65
+    "Good": 1388,
+    "Weathered": 392,
+    "Heavily Damaged": 110
    },
    "confusion_matrix": [
     [
-     715,
-     141,
-     49
+     1124,
+     176,
+     88
     ],
     [
-     64,
-     122,
-     34
+     134,
+     189,
+     69
     ],
     [
-     12,
-     18,
-     35
+     20,
+     33,
+     57
     ]
    ]
   },
   "sign_shape": {
-   "n": 1190,
-   "accuracy": 0.9352941176470588,
-   "macro_f1": 0.901490709925808,
+   "n": 1890,
+   "accuracy": 0.9343915343915344,
+   "macro_precision": 0.8972871084357255,
+   "macro_recall": 0.9365572796559553,
+   "macro_f1": 0.9150951309302651,
+   "macro_f1_ci": {
+    "level": 0.95,
+    "method": "percentile",
+    "lower": 0.8949878916016484,
+    "upper": 0.9321275474126082,
+    "n_bootstrap": 2000,
+    "seed": 42
+   },
    "classes": [
     "Circular",
     "Quadrangle",
@@ -164,55 +268,69 @@
     "Octagonal",
     "Pentagon"
    ],
+   "per_class_precision": {
+    "Circular": 0.9476510067114094,
+    "Quadrangle": 0.9727427597955707,
+    "Triangular": 0.9295774647887324,
+    "Octagonal": 0.8225108225108225,
+    "Pentagon": 0.813953488372093
+   },
+   "per_class_recall": {
+    "Circular": 0.9463806970509383,
+    "Quadrangle": 0.9284552845528455,
+    "Triangular": 0.9395017793594306,
+    "Octagonal": 0.8962264150943396,
+    "Pentagon": 0.9722222222222222
+   },
    "per_class_f1": {
-    "Circular": 0.9460043196544277,
-    "Quadrangle": 0.9530026109660574,
-    "Triangular": 0.9464285714285714,
-    "Octagonal": 0.8695652173913043,
-    "Pentagon": 0.7924528301886793
+    "Circular": 0.9470154258886653,
+    "Quadrangle": 0.9500831946755408,
+    "Triangular": 0.9345132743362832,
+    "Octagonal": 0.8577878103837472,
+    "Pentagon": 0.8860759493670886
    },
    "support": {
-    "Circular": 469,
-    "Quadrangle": 385,
-    "Triangular": 169,
-    "Octagonal": 145,
-    "Pentagon": 22
+    "Circular": 746,
+    "Quadrangle": 615,
+    "Triangular": 281,
+    "Octagonal": 212,
+    "Pentagon": 36
    },
    "confusion_matrix": [
     [
-     438,
-     5,
-     4,
+     706,
+     7,
+     6,
+     22,
+     5
+    ],
+    [
      14,
-     8
-    ],
-    [
-     5,
-     365,
-     4,
-     9,
-     2
-    ],
-    [
-     4,
-     5,
-     159,
-     1,
-     0
-    ],
-    [
+     571,
      10,
-     5,
-     0,
-     130,
+     17,
+     3
+    ],
+    [
+     9,
+     6,
+     264,
+     2,
+     0
+    ],
+    [
+     16,
+     3,
+     3,
+     190,
      0
     ],
     [
      0,
+     0,
      1,
      0,
-     0,
-     21
+     35
     ]
    ]
   }

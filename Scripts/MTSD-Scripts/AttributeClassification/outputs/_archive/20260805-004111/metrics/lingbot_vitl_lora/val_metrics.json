@@ -1,0 +1,220 @@
+{
+ "run_id": "lingbot_vitl_lora-20260713-224529",
+ "variant": "lingbot_vitl_lora",
+ "split": "val",
+ "smoke_test": false,
+ "timestamp": "2026-07-13T21:20:05+00:00",
+ "mean_macro_f1": 0.8891890545986632,
+ "run_info": {
+  "adaptation": "lora",
+  "best_epoch": 22,
+  "stopped_epoch": 29,
+  "stop_reason": "early_stopping",
+  "max_epochs": 150,
+  "val_mean_macro_f1": 0.8891890545986632,
+  "parameters": {
+   "total": 303953933,
+   "trainable": 799757,
+   "trainable_pct": 0.2631,
+   "backbone_total": 303940608,
+   "backbone_trainable": 786432,
+   "head_trainable": 13325,
+   "lora_trainable": 786432
+  },
+  "variant_meta": {
+   "variant": "lingbot_vitl_lora",
+   "family": "LingBot-Vision",
+   "backbone": "lingbot",
+   "architecture": "ViT-L/16",
+   "model_size": "large",
+   "adaptation": "lora",
+   "model_id": "robbyant/lingbot-vision-vit-large",
+   "resolution": 224,
+   "display_name": "LingBot-Vision ViT-L/16 LoRA",
+   "legacy": false
+  },
+  "backbone_meta": {
+   "requested_backend": "lingbot_vision",
+   "loaded_backend": "lingbot_vision",
+   "model_id": "robbyant/lingbot-vision-vit-large",
+   "lingbot_variant": "large",
+   "pooling": "mean_patch",
+   "image_size": 224,
+   "feature_dim": 1024
+  },
+  "training_meta": {
+   "physical_batch_size": 16,
+   "gradient_accumulation_steps": 2,
+   "effective_batch_size": 32
+  },
+  "train_duration_s": 2043.5,
+  "test_eval_duration_s": 25.27,
+  "test_images_per_s": 56.98
+ },
+ "attributes": {
+  "view_angle": {
+   "n": 1397,
+   "accuracy": 0.9255547602004295,
+   "macro_f1": 0.9204789484872218,
+   "classes": [
+    "Front",
+    "Back",
+    "Side"
+   ],
+   "per_class_f1": {
+    "Front": 0.9172794117647058,
+    "Back": 0.9693372898120672,
+    "Side": 0.874820143884892
+   },
+   "support": {
+    "Front": 548,
+    "Back": 509,
+    "Side": 340
+   },
+   "confusion_matrix": [
+    [
+     499,
+     4,
+     45
+    ],
+    [
+     13,
+     490,
+     6
+    ],
+    [
+     28,
+     8,
+     304
+    ]
+   ]
+  },
+  "mounting": {
+   "n": 1397,
+   "accuracy": 0.9699355762347889,
+   "macro_f1": 0.9404518329070759,
+   "classes": [
+    "Pole-Mounted",
+    "Wall-Mounted"
+   ],
+   "per_class_f1": {
+    "Pole-Mounted": 0.9823529411764705,
+    "Wall-Mounted": 0.8985507246376812
+   },
+   "support": {
+    "Pole-Mounted": 1190,
+    "Wall-Mounted": 207
+   },
+   "confusion_matrix": [
+    [
+     1169,
+     21
+    ],
+    [
+     21,
+     186
+    ]
+   ]
+  },
+  "condition": {
+   "n": 1397,
+   "accuracy": 0.8582677165354331,
+   "macro_f1": 0.7419397056593015,
+   "classes": [
+    "Good",
+    "Weathered",
+    "Heavily Damaged"
+   ],
+   "per_class_f1": {
+    "Good": 0.9213372664700098,
+    "Weathered": 0.7090620031796503,
+    "Heavily Damaged": 0.5954198473282443
+   },
+   "support": {
+    "Good": 1017,
+    "Weathered": 308,
+    "Heavily Damaged": 72
+   },
+   "confusion_matrix": [
+    [
+     937,
+     76,
+     4
+    ],
+    [
+     69,
+     223,
+     16
+    ],
+    [
+     11,
+     22,
+     39
+    ]
+   ]
+  },
+  "sign_shape": {
+   "n": 1397,
+   "accuracy": 0.9770937723693629,
+   "macro_f1": 0.9538857313410535,
+   "classes": [
+    "Circular",
+    "Quadrangle",
+    "Triangular",
+    "Octagonal",
+    "Pentagon"
+   ],
+   "per_class_f1": {
+    "Circular": 0.9848619768477292,
+    "Quadrangle": 0.9754385964912281,
+    "Triangular": 0.9824561403508771,
+    "Octagonal": 0.9695290858725761,
+    "Pentagon": 0.8571428571428571
+   },
+   "support": {
+    "Circular": 562,
+    "Quadrangle": 425,
+    "Triangular": 198,
+    "Octagonal": 181,
+    "Pentagon": 31
+   },
+   "confusion_matrix": [
+    [
+     553,
+     5,
+     1,
+     3,
+     0
+    ],
+    [
+     2,
+     417,
+     4,
+     1,
+     1
+    ],
+    [
+     0,
+     1,
+     196,
+     1,
+     0
+    ],
+    [
+     5,
+     1,
+     0,
+     175,
+     0
+    ],
+    [
+     1,
+     6,
+     0,
+     0,
+     24
+    ]
+   ]
+  }
+ }
+}

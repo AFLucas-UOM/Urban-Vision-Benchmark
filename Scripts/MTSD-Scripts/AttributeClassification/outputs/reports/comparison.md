@@ -1,129 +1,105 @@
 # Attribute classification: consolidated comparison
 
-Generated 2026-07-13T21:20:23+00:00. Primary metric: **macro-F1** on the test split (robust to class imbalance; accuracy shown for reference).
+Generated 2026-08-05T17:50:30+00:00. Primary metric: **macro-F1** on the test split (robust to class imbalance; accuracy shown for reference).
 
-## Macro-F1 by attribute
+## Macro metrics by attribute
 
-| Variant | view_angle | mounting | condition | sign_shape | Mean |
-|---|---|---|---|---|---|
-| dinov3 | 0.8649 | 0.8458 | 0.5534 | 0.8663 | **0.7826** |
-| dinov3_lora | 0.9129 | 0.8959 | 0.7346 | 0.9503 | **0.8734** |
-| vjepa | 0.8823 | 0.8672 | 0.5110 | 0.8189 | **0.7699** |
-| vjepa_lora | 0.9089 | 0.9054 | 0.5948 | 0.9507 | **0.8400** |
-| convnext_frozen | 0.8426 | 0.8026 | 0.5673 | 0.8389 | **0.7629** |
-| convnext | 0.9054 | 0.8734 | 0.7113 | 0.9663 | **0.8641** |
-| dinov3_vitb_frozen | 0.8672 | 0.8706 | 0.5978 | 0.8853 | **0.8052** |
-| dinov3_vitl_frozen | 0.8581 | 0.8967 | 0.6033 | 0.8898 | **0.8120** |
-| dinov3_vitb_lora | 0.9193 | 0.9213 | 0.7354 | 0.9618 | **0.8844** |
-| dinov3_vitl_lora | 0.9302 | 0.9367 | 0.7343 | 0.9744 | **0.8939** |
-| vjepa21_vitb_frozen | 0.8595 | 0.8470 | 0.5591 | 0.8715 | **0.7843** |
-| vjepa21_vitl_frozen | 0.8809 | 0.8560 | 0.5718 | 0.8827 | **0.7979** |
-| vjepa21_vitb_lora | 0.9112 | 0.9206 | 0.6571 | 0.9566 | **0.8614** |
-| vjepa21_vitl_lora | 0.9178 | 0.9367 | 0.7343 | 0.9618 | **0.8877** |
-| convnext_base_frozen | 0.8473 | 0.8607 | 0.5349 | 0.8699 | **0.7782** |
-| convnext_large_frozen | 0.8356 | 0.8366 | 0.5226 | 0.8985 | **0.7733** |
-| convnext_base_finetune | 0.9264 | 0.9256 | 0.6617 | 0.9543 | **0.8670** |
-| convnext_large_finetune | 0.9236 | 0.9276 | 0.6679 | 0.9677 | **0.8717** |
-| lingbot_vitb_frozen | 0.8575 | 0.8732 | 0.5571 | 0.8919 | **0.7949** |
-| lingbot_vitl_frozen | 0.8700 | 0.8800 | 0.5709 | 0.9015 | **0.8056** |
-| lingbot_vitb_lora | 0.9054 | 0.9209 | 0.7129 | 0.9600 | **0.8748** |
-| lingbot_vitl_lora | 0.9163 | 0.9425 | 0.7381 | 0.9698 | **0.8917** |
+| Variant | view_angle P | mounting P | condition P | sign_shape P | view_angle R | mounting R | condition R | sign_shape R | view_angle F1 | mounting F1 | condition F1 | sign_shape F1 | view_angle F1 95% CI | mounting F1 95% CI | condition F1 95% CI | sign_shape F1 95% CI | Mean P | Mean R | Mean F1 | Mean F1 95% CI |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| dinov3_vitb_frozen | 0.8662 | 0.8717 | 0.5571 | 0.8573 | 0.8723 | 0.9326 | 0.6165 | 0.9187 | 0.8686 | 0.8985 | 0.5767 | 0.8834 | [0.8537, 0.8835] | [0.8778, 0.9177] | [0.5465, 0.6063] | [0.8605, 0.9038] | 0.7881 | 0.8350 | 0.8068 | [0.7949, 0.8188] |
+| dinov3_vitl_frozen | 0.8575 | 0.8888 | 0.5655 | 0.9005 | 0.8611 | 0.9420 | 0.6290 | 0.9197 | 0.8591 | 0.9127 | 0.5835 | 0.9095 | [0.8428, 0.8749] | [0.8932, 0.9298] | [0.5521, 0.6146] | [0.8930, 0.9244] | 0.8031 | 0.8380 | 0.8162 | [0.8050, 0.8269] |
+| dinov3_vitb_lora | 0.9201 | 0.9449 | 0.7069 | 0.9672 | 0.9242 | 0.9591 | 0.6801 | 0.9682 | 0.9219 | 0.9519 | 0.6924 | 0.9676 | [0.9091, 0.9338] | [0.9367, 0.9652] | [0.6573, 0.7241] | [0.9567, 0.9765] | 0.8848 | 0.8829 | 0.8835 | [0.8725, 0.8930] |
+| dinov3_vitl_lora | 0.9288 | 0.9520 | 0.7333 | 0.9771 | 0.9218 | 0.9549 | 0.7281 | 0.9776 | 0.9248 | 0.9535 | 0.7282 | 0.9774 | [0.9122, 0.9366] | [0.9382, 0.9665] | [0.6955, 0.7598] | [0.9700, 0.9840] | 0.8978 | 0.8956 | 0.8959 | [0.8860, 0.9051] |
+| vjepa21_vitb_frozen | 0.8520 | 0.8227 | 0.5391 | 0.8758 | 0.8644 | 0.9233 | 0.5889 | 0.8957 | 0.8523 | 0.8614 | 0.5568 | 0.8846 | [0.8370, 0.8678] | [0.8392, 0.8825] | [0.5257, 0.5867] | [0.8589, 0.9065] | 0.7724 | 0.8181 | 0.7888 | [0.7763, 0.8003] |
+| vjepa21_vitl_frozen | 0.8809 | 0.8569 | 0.5461 | 0.9069 | 0.8815 | 0.9321 | 0.5847 | 0.9018 | 0.8812 | 0.8887 | 0.5601 | 0.9040 | [0.8665, 0.8956] | [0.8689, 0.9076] | [0.5295, 0.5904] | [0.8801, 0.9249] | 0.7977 | 0.8250 | 0.8085 | [0.7969, 0.8201] |
+| vjepa21_vitb_lora | 0.9277 | 0.9465 | 0.7210 | 0.9529 | 0.9262 | 0.9393 | 0.7054 | 0.9585 | 0.9269 | 0.9429 | 0.7126 | 0.9551 | [0.9141, 0.9390] | [0.9265, 0.9580] | [0.6795, 0.7433] | [0.9377, 0.9689] | 0.8870 | 0.8823 | 0.8844 | [0.8736, 0.8946] |
+| vjepa21_vitl_lora | 0.9329 | 0.9393 | 0.7399 | 0.9760 | 0.9272 | 0.9672 | 0.7546 | 0.9706 | 0.9297 | 0.9526 | 0.7470 | 0.9732 | [0.9176, 0.9410] | [0.9379, 0.9663] | [0.7162, 0.7761] | [0.9612, 0.9824] | 0.8970 | 0.9049 | 0.9006 | [0.8912, 0.9095] |
+| convnext_base_frozen | 0.8350 | 0.8300 | 0.5135 | 0.8691 | 0.8423 | 0.9174 | 0.5961 | 0.9165 | 0.8370 | 0.8651 | 0.5339 | 0.8903 | [0.8204, 0.8542] | [0.8433, 0.8854] | [0.5055, 0.5623] | [0.8683, 0.9079] | 0.7619 | 0.8181 | 0.7816 | [0.7707, 0.7924] |
+| convnext_large_frozen | 0.8352 | 0.8590 | 0.5501 | 0.8452 | 0.8416 | 0.9103 | 0.5810 | 0.9222 | 0.8370 | 0.8819 | 0.5538 | 0.8765 | [0.8189, 0.8540] | [0.8602, 0.9020] | [0.5224, 0.5840] | [0.8508, 0.8974] | 0.7724 | 0.8138 | 0.7873 | [0.7752, 0.7991] |
+| convnext_base_finetune | 0.9201 | 0.9371 | 0.6916 | 0.9708 | 0.9166 | 0.9413 | 0.6357 | 0.9615 | 0.9181 | 0.9392 | 0.6502 | 0.9660 | [0.9049, 0.9309] | [0.9234, 0.9542] | [0.6138, 0.6850] | [0.9553, 0.9750] | 0.8799 | 0.8638 | 0.8684 | [0.8570, 0.8789] |
+| convnext_large_finetune | 0.9157 | 0.9464 | 0.7242 | 0.9571 | 0.9196 | 0.9172 | 0.6758 | 0.9713 | 0.9173 | 0.9311 | 0.6955 | 0.9640 | [0.9038, 0.9308] | [0.9146, 0.9479] | [0.6611, 0.7283] | [0.9519, 0.9740] | 0.8859 | 0.8710 | 0.8770 | [0.8666, 0.8865] |
+| lingbot_vitb_frozen | 0.8763 | 0.8762 | 0.5126 | 0.8788 | 0.8838 | 0.9197 | 0.5992 | 0.9275 | 0.8790 | 0.8961 | 0.5306 | 0.9001 | [0.8635, 0.8936] | [0.8768, 0.9151] | [0.5018, 0.5586] | [0.8784, 0.9200] | 0.7860 | 0.8326 | 0.8015 | [0.7900, 0.8122] |
+| lingbot_vitl_frozen | 0.8721 | 0.8747 | 0.5402 | 0.8973 | 0.8775 | 0.9316 | 0.6034 | 0.9366 | 0.8744 | 0.8999 | 0.5578 | 0.9151 | [0.8592, 0.8896] | [0.8798, 0.9189] | [0.5298, 0.5874] | [0.8950, 0.9321] | 0.7961 | 0.8373 | 0.8118 | [0.8002, 0.8228] |
+| lingbot_vitb_lora | 0.9153 | 0.9309 | 0.7260 | 0.9695 | 0.9179 | 0.9529 | 0.6975 | 0.9781 | 0.9165 | 0.9415 | 0.7101 | 0.9735 | [0.9033, 0.9286] | [0.9248, 0.9568] | [0.6755, 0.7419] | [0.9655, 0.9806] | 0.8854 | 0.8866 | 0.8854 | [0.8746, 0.8948] |
+| lingbot_vitl_lora | 0.9291 | 0.9547 | 0.6997 | 0.9772 | 0.9303 | 0.9591 | 0.7278 | 0.9759 | 0.9297 | 0.9569 | 0.7055 | 0.9765 | [0.9175, 0.9409] | [0.9424, 0.9696] | [0.6732, 0.7360] | [0.9668, 0.9844] | 0.8902 | 0.8983 | 0.8921 | [0.8821, 0.9016] |
 
 ## Accuracy by attribute
 
 | Variant | view_angle | mounting | condition | sign_shape |
 |---|---|---|---|---|
-| dinov3 | 0.8748 | 0.9324 | 0.7092 | 0.9026 |
-| dinov3_lora | 0.9205 | 0.9563 | 0.8267 | 0.9602 |
-| vjepa | 0.8907 | 0.9364 | 0.7371 | 0.8628 |
-| vjepa_lora | 0.9165 | 0.9583 | 0.8028 | 0.9662 |
-| convnext_frozen | 0.8549 | 0.9026 | 0.7291 | 0.8887 |
-| convnext | 0.9145 | 0.9503 | 0.8566 | 0.9702 |
-| dinov3_vitb_frozen | 0.8756 | 0.9345 | 0.7815 | 0.9042 |
-| dinov3_vitl_frozen | 0.8672 | 0.9471 | 0.7487 | 0.9008 |
-| dinov3_vitb_lora | 0.9269 | 0.9639 | 0.8555 | 0.9723 |
-| dinov3_vitl_lora | 0.9370 | 0.9689 | 0.8487 | 0.9782 |
-| vjepa21_vitb_frozen | 0.8655 | 0.9202 | 0.7370 | 0.9092 |
-| vjepa21_vitl_frozen | 0.8882 | 0.9269 | 0.7521 | 0.9067 |
-| vjepa21_vitb_lora | 0.9210 | 0.9630 | 0.8134 | 0.9664 |
-| vjepa21_vitl_lora | 0.9252 | 0.9706 | 0.8571 | 0.9706 |
-| convnext_base_frozen | 0.8563 | 0.9311 | 0.6849 | 0.8992 |
-| convnext_large_frozen | 0.8445 | 0.9118 | 0.6916 | 0.9042 |
-| convnext_base_finetune | 0.9333 | 0.9660 | 0.8326 | 0.9625 |
-| convnext_large_finetune | 0.9319 | 0.9674 | 0.8340 | 0.9701 |
-| lingbot_vitb_frozen | 0.8647 | 0.9387 | 0.7076 | 0.9218 |
-| lingbot_vitl_frozen | 0.8773 | 0.9378 | 0.7328 | 0.9353 |
-| lingbot_vitb_lora | 0.9139 | 0.9625 | 0.8438 | 0.9660 |
-| lingbot_vitl_lora | 0.9243 | 0.9729 | 0.8576 | 0.9729 |
+| dinov3_vitb_frozen | 0.8757 | 0.9476 | 0.7354 | 0.9026 |
+| dinov3_vitl_frozen | 0.8672 | 0.9556 | 0.7090 | 0.9111 |
+| dinov3_vitb_lora | 0.9286 | 0.9767 | 0.8302 | 0.9698 |
+| dinov3_vitl_lora | 0.9328 | 0.9778 | 0.8434 | 0.9783 |
+| vjepa21_vitb_frozen | 0.8571 | 0.9233 | 0.7058 | 0.9185 |
+| vjepa21_vitl_frozen | 0.8889 | 0.9413 | 0.7376 | 0.9307 |
+| vjepa21_vitb_lora | 0.9349 | 0.9730 | 0.8328 | 0.9667 |
+| vjepa21_vitl_lora | 0.9370 | 0.9767 | 0.8487 | 0.9767 |
+| convnext_base_frozen | 0.8460 | 0.9270 | 0.6873 | 0.9037 |
+| convnext_large_frozen | 0.8460 | 0.9397 | 0.7392 | 0.9053 |
+| convnext_base_finetune | 0.9270 | 0.9709 | 0.8212 | 0.9683 |
+| convnext_large_finetune | 0.9249 | 0.9683 | 0.8249 | 0.9677 |
+| lingbot_vitb_frozen | 0.8862 | 0.9476 | 0.6646 | 0.9243 |
+| lingbot_vitl_frozen | 0.8815 | 0.9487 | 0.7249 | 0.9344 |
+| lingbot_vitb_lora | 0.9238 | 0.9714 | 0.8339 | 0.9730 |
+| lingbot_vitl_lora | 0.9365 | 0.9794 | 0.8074 | 0.9788 |
 
 ## Run details
 
-| Variant | Family | Architecture | Size | Adaptation | Res | Best epoch | Stopped at | Stop reason | Val mean macro-F1 | Total params | Trainable | Trainable % | Train time (s) | Backend |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| dinov3 | DINOv3 | ViT-B/16 | base | frozen | 224 | 17 | 22 | early_stopping | 0.7697 | 85,670,413 | 9,997 | 0.0117 | n/a | n/a |
-| dinov3_lora | DINOv3 | ViT-B/16 | base | lora | 224 | 16 | 22 | early_stopping | 0.8327 | 85,965,325 | 304,909 | 0.3547 | n/a | n/a |
-| vjepa | V-JEPA | ViT-L/16 | large | frozen | 384 | 19 | 29 | early_stopping | 0.7453 | 304,694,285 | 13,325 | 0.0044 | n/a | n/a |
-| vjepa_lora | V-JEPA | ViT-L/16 | large | lora | 384 | 8 | 18 | early_stopping | 0.8380 | 305,480,717 | 799,757 | 0.2618 | n/a | n/a |
-| convnext_frozen | ConvNeXt | ConvNeXt-Tiny | tiny | frozen | 224 | 37 | 47 | early_stopping | 0.7442 | 27,828,589 | 9,997 | 0.0359 | n/a | n/a |
-| convnext | ConvNeXt | ConvNeXt-Tiny | tiny | finetune | 224 | 21 | 25 | early_stopping | 0.8212 | 27,828,589 | 27,828,589 | 100.0 | n/a | n/a |
-| dinov3_vitb_frozen | DINOv3 | ViT-B/16 | base | frozen | 224 | 21 | 31 | early_stopping | 0.8023 | 85,670,413 | 9,997 | 0.0117 | 2203.5 | transformers |
-| dinov3_vitl_frozen | DINOv3 | ViT-L/16 | large | frozen | 224 | 12 | 19 | early_stopping | 0.8084 | 303,142,925 | 13,325 | 0.0044 | 1344.9 | transformers |
-| dinov3_vitb_lora | DINOv3 | ViT-B/16 | base | lora | 224 | 22 | 24 | early_stopping | 0.8639 | 85,965,325 | 304,909 | 0.3547 | 1738.0 | transformers |
-| dinov3_vitl_lora | DINOv3 | ViT-L/16 | large | lora | 224 | 7 | 17 | early_stopping | 0.8890 | 303,929,357 | 799,757 | 0.2631 | 1310.2 | transformers |
-| vjepa21_vitb_frozen | V-JEPA | ViT-B/16 | base | frozen | 384 | 17 | 27 | early_stopping | 0.7768 | 86,843,149 | 9,997 | 0.0115 | 2317.4 | torch_hub (2.1) |
-| vjepa21_vitl_frozen | V-JEPA | ViT-L/16 | large | frozen | 384 | 14 | 24 | early_stopping | 0.7930 | 304,694,285 | 13,325 | 0.0044 | 2158.0 | torch_hub (2.1) |
-| vjepa21_vitb_lora | V-JEPA | ViT-B/16 | base | lora | 384 | 25 | 32 | early_stopping | 0.8627 | 87,138,061 | 304,909 | 0.3499 | 2913.8 | torch_hub (2.1) |
-| vjepa21_vitl_lora | V-JEPA | ViT-L/16 | large | lora | 384 | 30 | 40 | early_stopping | 0.8841 | 305,480,717 | 799,757 | 0.2618 | 5698.8 | torch_hub (2.1) |
-| convnext_base_frozen | ConvNeXt | ConvNeXt-Base | base | frozen | 224 | 22 | 23 | early_stopping | 0.7734 | 87,577,741 | 13,325 | 0.0152 | 1650.2 | torchvision |
-| convnext_large_frozen | ConvNeXt | ConvNeXt-Large | large | frozen | 224 | 22 | 32 | early_stopping | 0.7746 | 196,247,245 | 19,981 | 0.0102 | 2296.6 | torchvision |
-| convnext_base_finetune | ConvNeXt | ConvNeXt-Base | base | finetune | 224 | 21 | 31 | early_stopping | 0.8704 | 87,577,741 | 87,577,741 | 100.0 | 2144.9 | torchvision |
-| convnext_large_finetune | ConvNeXt | ConvNeXt-Large | large | finetune | 224 | 19 | 21 | early_stopping | 0.8620 | 196,247,245 | 196,247,245 | 100.0 | 1520.7 | torchvision |
-| lingbot_vitb_frozen | LingBot-Vision | ViT-B/16 | base | frozen | 224 | 20 | 30 | early_stopping | 0.7958 | 85,679,629 | 9,997 | 0.0117 | 2137.6 | lingbot_vision |
-| lingbot_vitl_frozen | LingBot-Vision | ViT-L/16 | large | frozen | 224 | 32 | 42 | early_stopping | 0.7928 | 303,167,501 | 13,325 | 0.0044 | 2994.8 | lingbot_vision |
-| lingbot_vitb_lora | LingBot-Vision | ViT-B/16 | base | lora | 224 | 28 | 32 | early_stopping | 0.8713 | 85,974,541 | 304,909 | 0.3547 | 2198.3 | lingbot_vision |
-| lingbot_vitl_lora | LingBot-Vision | ViT-L/16 | large | lora | 224 | 22 | 29 | early_stopping | 0.8892 | 303,953,933 | 799,757 | 0.2631 | 2043.5 | lingbot_vision |
+| Variant | Family | Architecture | Size | Adaptation | Res | Best epoch | Stopped at | Stop reason | Val mean macro-F1 | Total params | Trainable | Trainable % | Train time (s) | End-to-end time (s) | End-to-end im/s | Forward time (s) | Forward ms/image | Backend |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| dinov3_vitb_frozen | DINOv3 | ViT-B/16 | base | frozen | 224 | 18 | 28 | early_stopping | 0.8053 | 85,670,413 | 9,997 | 0.0117 | 2775.9 | 7.6699 | 246.42 | 1.3236 | 0.7003 | transformers |
+| dinov3_vitl_frozen | DINOv3 | ViT-L/16 | large | frozen | 224 | 14 | 24 | early_stopping | 0.8110 | 303,142,925 | 13,325 | 0.0044 | 2376.1 | 7.3265 | 257.97 | 2.9518 | 1.5618 | transformers |
+| dinov3_vitb_lora | DINOv3 | ViT-B/16 | base | lora | 224 | 32 | 42 | early_stopping | 0.8862 | 85,965,325 | 304,909 | 0.3547 | 4616.1 | 8.7758 | 215.37 | 1.618 | 0.8561 | transformers |
+| dinov3_vitl_lora | DINOv3 | ViT-L/16 | large | lora | 224 | 21 | 31 | early_stopping | 0.9056 | 303,929,357 | 799,757 | 0.2631 | 3747.8 | 8.8166 | 214.37 | 4.6788 | 2.4756 | transformers |
+| vjepa21_vitb_frozen | V-JEPA | ViT-B/16 | base | frozen | 384 | 20 | 29 | early_stopping | 0.7879 | 86,843,149 | 9,997 | 0.0115 | 3409.4 | 8.4447 | 223.81 | 3.6234 | 1.9172 | torch_hub (2.1) |
+| vjepa21_vitl_frozen | V-JEPA | ViT-L/16 | large | frozen | 384 | 34 | 44 | early_stopping | 0.8137 | 304,694,285 | 13,325 | 0.0044 | 5323.9 | 11.0222 | 171.47 | 9.9198 | 5.2486 | torch_hub (2.1) |
+| vjepa21_vitb_lora | V-JEPA | ViT-B/16 | base | lora | 384 | 18 | 28 | early_stopping | 0.8743 | 87,138,061 | 304,909 | 0.3499 | 4058.1 | 10.6703 | 177.13 | 5.9426 | 3.1442 | torch_hub (2.1) |
+| vjepa21_vitl_lora | V-JEPA | ViT-L/16 | large | lora | 384 | 12 | 22 | early_stopping | 0.8930 | 305,480,717 | 799,757 | 0.2618 | 5229.1 | 13.3783 | 141.27 | 12.1833 | 6.4462 | torch_hub (2.1) |
+| convnext_base_frozen | ConvNeXt | ConvNeXt-Base | base | frozen | 224 | 16 | 26 | early_stopping | 0.7812 | 87,577,741 | 13,325 | 0.0152 | 2875.9 | 8.3216 | 227.12 | 1.5045 | 0.796 | torchvision |
+| convnext_large_frozen | ConvNeXt | ConvNeXt-Large | large | frozen | 224 | 16 | 26 | early_stopping | 0.7793 | 196,247,245 | 19,981 | 0.0102 | 2951.0 | 8.5593 | 220.81 | 1.7795 | 0.9416 | torchvision |
+| convnext_base_finetune | ConvNeXt | ConvNeXt-Base | base | finetune | 224 | 23 | 33 | early_stopping | 0.8753 | 87,577,741 | 87,577,741 | 100.0 | 3877.8 | 8.8145 | 214.42 | 1.3575 | 0.7183 | torchvision |
+| convnext_large_finetune | ConvNeXt | ConvNeXt-Large | large | finetune | 224 | 18 | 28 | early_stopping | 0.8782 | 196,247,245 | 196,247,245 | 100.0 | 3372.6 | 9.0841 | 208.06 | 2.2178 | 1.1734 | torchvision |
+| lingbot_vitb_frozen | LingBot-Vision | ViT-B/16 | base | frozen | 224 | 33 | 40 | early_stopping | 0.7972 | 85,679,629 | 9,997 | 0.0117 | 4530.9 | 8.4583 | 223.45 | 1.4652 | 0.7752 | lingbot_vision |
+| lingbot_vitl_frozen | LingBot-Vision | ViT-L/16 | large | frozen | 224 | 24 | 34 | early_stopping | 0.8059 | 303,167,501 | 13,325 | 0.0044 | 3798.9 | 8.4332 | 224.12 | 3.0297 | 1.603 | lingbot_vision |
+| lingbot_vitb_lora | LingBot-Vision | ViT-B/16 | base | lora | 224 | 28 | 38 | early_stopping | 0.8879 | 85,974,541 | 304,909 | 0.3547 | 4467.1 | 8.9991 | 210.02 | 2.0646 | 1.0924 | lingbot_vision |
+| lingbot_vitl_lora | LingBot-Vision | ViT-L/16 | large | lora | 224 | 12 | 22 | early_stopping | 0.8981 | 303,953,933 | 799,757 | 0.2631 | 2671.5 | 9.4009 | 201.05 | 3.6029 | 1.9063 | lingbot_vision |
 
-## Per-class F1: view_angle
+## Per-class precision, recall and F1: view_angle
 
-| Class | Support | dinov3 | dinov3_lora | vjepa | vjepa_lora | convnext_frozen | convnext | dinov3_vitb_frozen | dinov3_vitl_frozen | dinov3_vitb_lora | dinov3_vitl_lora | vjepa21_vitb_frozen | vjepa21_vitl_frozen | vjepa21_vitb_lora | vjepa21_vitl_lora | convnext_base_frozen | convnext_large_frozen | convnext_base_finetune | convnext_large_finetune | lingbot_vitb_frozen | lingbot_vitl_frozen | lingbot_vitb_lora | lingbot_vitl_lora |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Front | 185 | 0.8717 | 0.9173 | 0.8976 | 0.9022 | 0.8556 | 0.9202 | 0.8764 | 0.8682 | 0.9219 | 0.9333 | 0.8856 | 0.9001 | 0.9174 | 0.9178 | 0.8597 | 0.8401 | 0.9307 | 0.9345 | 0.8798 | 0.8777 | 0.9141 | 0.9216 |
-| Back | 200 | 0.9196 | 0.9570 | 0.9173 | 0.9561 | 0.9118 | 0.9474 | 0.9130 | 0.9081 | 0.9665 | 0.9711 | 0.8891 | 0.9199 | 0.9634 | 0.9686 | 0.9009 | 0.8999 | 0.9664 | 0.9650 | 0.9010 | 0.9168 | 0.9563 | 0.9646 |
-| Side | 118 | 0.8034 | 0.8644 | 0.8319 | 0.8684 | 0.7603 | 0.8485 | 0.8122 | 0.7979 | 0.8694 | 0.8861 | 0.8039 | 0.8227 | 0.8528 | 0.8670 | 0.7814 | 0.7667 | 0.8821 | 0.8712 | 0.7916 | 0.8156 | 0.8459 | 0.8627 |
+| Class | Support | dinov3_vitb_frozen precision | dinov3_vitb_frozen recall | dinov3_vitb_frozen F1 | dinov3_vitl_frozen precision | dinov3_vitl_frozen recall | dinov3_vitl_frozen F1 | dinov3_vitb_lora precision | dinov3_vitb_lora recall | dinov3_vitb_lora F1 | dinov3_vitl_lora precision | dinov3_vitl_lora recall | dinov3_vitl_lora F1 | vjepa21_vitb_frozen precision | vjepa21_vitb_frozen recall | vjepa21_vitb_frozen F1 | vjepa21_vitl_frozen precision | vjepa21_vitl_frozen recall | vjepa21_vitl_frozen F1 | vjepa21_vitb_lora precision | vjepa21_vitb_lora recall | vjepa21_vitb_lora F1 | vjepa21_vitl_lora precision | vjepa21_vitl_lora recall | vjepa21_vitl_lora F1 | convnext_base_frozen precision | convnext_base_frozen recall | convnext_base_frozen F1 | convnext_large_frozen precision | convnext_large_frozen recall | convnext_large_frozen F1 | convnext_base_finetune precision | convnext_base_finetune recall | convnext_base_finetune F1 | convnext_large_finetune precision | convnext_large_finetune recall | convnext_large_finetune F1 | lingbot_vitb_frozen precision | lingbot_vitb_frozen recall | lingbot_vitb_frozen F1 | lingbot_vitl_frozen precision | lingbot_vitl_frozen recall | lingbot_vitl_frozen F1 | lingbot_vitb_lora precision | lingbot_vitb_lora recall | lingbot_vitb_lora F1 | lingbot_vitl_lora precision | lingbot_vitl_lora recall | lingbot_vitl_lora F1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Front | 699 | 0.8818 | 0.8755 | 0.8787 | 0.8812 | 0.8598 | 0.8704 | 0.9370 | 0.9156 | 0.9262 | 0.9092 | 0.9456 | 0.9271 | 0.9184 | 0.8212 | 0.8671 | 0.8957 | 0.8970 | 0.8964 | 0.9301 | 0.9328 | 0.9314 | 0.9111 | 0.9528 | 0.9315 | 0.8714 | 0.8340 | 0.8523 | 0.8830 | 0.8097 | 0.8448 | 0.9056 | 0.9471 | 0.9259 | 0.9344 | 0.8970 | 0.9153 | 0.9034 | 0.8698 | 0.8863 | 0.8944 | 0.8727 | 0.8834 | 0.9291 | 0.9185 | 0.9237 | 0.9323 | 0.9256 | 0.9289 |
+| Back | 738 | 0.9373 | 0.8916 | 0.9139 | 0.9098 | 0.9024 | 0.9061 | 0.9686 | 0.9607 | 0.9646 | 0.9716 | 0.9743 | 0.9729 | 0.9278 | 0.8537 | 0.8892 | 0.9223 | 0.9173 | 0.9198 | 0.9717 | 0.9783 | 0.9750 | 0.9808 | 0.9702 | 0.9755 | 0.9241 | 0.8740 | 0.8983 | 0.8972 | 0.8984 | 0.8978 | 0.9806 | 0.9593 | 0.9699 | 0.9664 | 0.9743 | 0.9703 | 0.9452 | 0.9119 | 0.9283 | 0.9293 | 0.9079 | 0.9184 | 0.9645 | 0.9566 | 0.9605 | 0.9769 | 0.9756 | 0.9763 |
+| Side | 453 | 0.7794 | 0.8499 | 0.8131 | 0.7815 | 0.8212 | 0.8009 | 0.8547 | 0.8962 | 0.8750 | 0.9054 | 0.8455 | 0.8744 | 0.7099 | 0.9183 | 0.8008 | 0.8246 | 0.8300 | 0.8273 | 0.8812 | 0.8675 | 0.8743 | 0.9068 | 0.8587 | 0.8821 | 0.7094 | 0.8190 | 0.7602 | 0.7255 | 0.8168 | 0.7684 | 0.8741 | 0.8433 | 0.8584 | 0.8463 | 0.8874 | 0.8664 | 0.7802 | 0.8698 | 0.8225 | 0.7926 | 0.8521 | 0.8213 | 0.8522 | 0.8786 | 0.8652 | 0.8780 | 0.8896 | 0.8838 |
 
-## Per-class F1: mounting
+## Per-class precision, recall and F1: mounting
 
-| Class | Support | dinov3 | dinov3_lora | vjepa | vjepa_lora | convnext_frozen | convnext | dinov3_vitb_frozen | dinov3_vitl_frozen | dinov3_vitb_lora | dinov3_vitl_lora | vjepa21_vitb_frozen | vjepa21_vitl_frozen | vjepa21_vitb_lora | vjepa21_vitl_lora | convnext_base_frozen | convnext_large_frozen | convnext_base_finetune | convnext_large_finetune | lingbot_vitb_frozen | lingbot_vitl_frozen | lingbot_vitb_lora | lingbot_vitl_lora |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Pole-Mounted | 444 | 0.9614 | 0.9752 | 0.9630 | 0.9761 | 0.9431 | 0.9721 | 0.9615 | 0.9688 | 0.9792 | 0.9819 | 0.9528 | 0.9570 | 0.9786 | 0.9830 | 0.9597 | 0.9474 | 0.9804 | 0.9813 | 0.9643 | 0.9633 | 0.9783 | 0.9843 |
-| Wall-Mounted | 59 | 0.7302 | 0.8167 | 0.7714 | 0.8346 | 0.6621 | 0.7748 | 0.7797 | 0.8245 | 0.8635 | 0.8915 | 0.7411 | 0.7549 | 0.8625 | 0.8903 | 0.7616 | 0.7258 | 0.8707 | 0.8740 | 0.7821 | 0.7967 | 0.8636 | 0.9008 |
+| Class | Support | dinov3_vitb_frozen precision | dinov3_vitb_frozen recall | dinov3_vitb_frozen F1 | dinov3_vitl_frozen precision | dinov3_vitl_frozen recall | dinov3_vitl_frozen F1 | dinov3_vitb_lora precision | dinov3_vitb_lora recall | dinov3_vitb_lora F1 | dinov3_vitl_lora precision | dinov3_vitl_lora recall | dinov3_vitl_lora F1 | vjepa21_vitb_frozen precision | vjepa21_vitb_frozen recall | vjepa21_vitb_frozen F1 | vjepa21_vitl_frozen precision | vjepa21_vitl_frozen recall | vjepa21_vitl_frozen F1 | vjepa21_vitb_lora precision | vjepa21_vitb_lora recall | vjepa21_vitb_lora F1 | vjepa21_vitl_lora precision | vjepa21_vitl_lora recall | vjepa21_vitl_lora F1 | convnext_base_frozen precision | convnext_base_frozen recall | convnext_base_frozen F1 | convnext_large_frozen precision | convnext_large_frozen recall | convnext_large_frozen F1 | convnext_base_finetune precision | convnext_base_finetune recall | convnext_base_finetune F1 | convnext_large_finetune precision | convnext_large_finetune recall | convnext_large_finetune F1 | lingbot_vitb_frozen precision | lingbot_vitb_frozen recall | lingbot_vitb_frozen F1 | lingbot_vitl_frozen precision | lingbot_vitl_frozen recall | lingbot_vitl_frozen F1 | lingbot_vitb_lora precision | lingbot_vitb_lora recall | lingbot_vitb_lora F1 | lingbot_vitl_lora precision | lingbot_vitl_lora recall | lingbot_vitl_lora F1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Pole-Mounted | 1629 | 0.9854 | 0.9533 | 0.9691 | 0.9874 | 0.9607 | 0.9739 | 0.9895 | 0.9834 | 0.9865 | 0.9877 | 0.9865 | 0.9871 | 0.9869 | 0.9233 | 0.9540 | 0.9865 | 0.9448 | 0.9652 | 0.9829 | 0.9859 | 0.9844 | 0.9925 | 0.9804 | 0.9864 | 0.9838 | 0.9306 | 0.9565 | 0.9785 | 0.9509 | 0.9645 | 0.9840 | 0.9822 | 0.9831 | 0.9757 | 0.9877 | 0.9817 | 0.9805 | 0.9583 | 0.9693 | 0.9848 | 0.9552 | 0.9698 | 0.9882 | 0.9785 | 0.9833 | 0.9889 | 0.9871 | 0.9880 |
+| Wall-Mounted | 261 | 0.7580 | 0.9119 | 0.8278 | 0.7902 | 0.9234 | 0.8516 | 0.9004 | 0.9349 | 0.9173 | 0.9163 | 0.9234 | 0.9198 | 0.6585 | 0.9234 | 0.7687 | 0.7273 | 0.9195 | 0.8122 | 0.9102 | 0.8927 | 0.9014 | 0.8861 | 0.9540 | 0.9188 | 0.6762 | 0.9042 | 0.7738 | 0.7394 | 0.8697 | 0.7993 | 0.8902 | 0.9004 | 0.8952 | 0.9170 | 0.8467 | 0.8805 | 0.7718 | 0.8812 | 0.8229 | 0.7645 | 0.9080 | 0.8301 | 0.8736 | 0.9272 | 0.8996 | 0.9205 | 0.9310 | 0.9257 |
 
-## Per-class F1: condition
+## Per-class precision, recall and F1: condition
 
-| Class | Support | dinov3 | dinov3_lora | vjepa | vjepa_lora | convnext_frozen | convnext | dinov3_vitb_frozen | dinov3_vitl_frozen | dinov3_vitb_lora | dinov3_vitl_lora | vjepa21_vitb_frozen | vjepa21_vitl_frozen | vjepa21_vitb_lora | vjepa21_vitl_lora | convnext_base_frozen | convnext_large_frozen | convnext_base_finetune | convnext_large_finetune | lingbot_vitb_frozen | lingbot_vitl_frozen | lingbot_vitb_lora | lingbot_vitl_lora |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Good | 387 | 0.8216 | 0.8980 | 0.8763 | 0.9027 | 0.8487 | 0.9258 | 0.8806 | 0.8473 | 0.9198 | 0.9164 | 0.8403 | 0.8558 | 0.8990 | 0.9226 | 0.7963 | 0.8153 | 0.9090 | 0.9098 | 0.8244 | 0.8432 | 0.9125 | 0.9241 |
-| Weathered | 85 | 0.4925 | 0.6161 | 0.3681 | 0.5636 | 0.4490 | 0.6199 | 0.5159 | 0.5389 | 0.6593 | 0.6597 | 0.4853 | 0.4856 | 0.5808 | 0.6591 | 0.4656 | 0.4229 | 0.6230 | 0.6299 | 0.4381 | 0.4870 | 0.6528 | 0.6667 |
-| Heavily Damaged | 30 | 0.3462 | 0.6897 | 0.2887 | 0.3182 | 0.4043 | 0.5882 | 0.3969 | 0.4238 | 0.6271 | 0.6269 | 0.3519 | 0.3741 | 0.4915 | 0.6212 | 0.3429 | 0.3297 | 0.4531 | 0.4640 | 0.4088 | 0.3825 | 0.5734 | 0.6234 |
+| Class | Support | dinov3_vitb_frozen precision | dinov3_vitb_frozen recall | dinov3_vitb_frozen F1 | dinov3_vitl_frozen precision | dinov3_vitl_frozen recall | dinov3_vitl_frozen F1 | dinov3_vitb_lora precision | dinov3_vitb_lora recall | dinov3_vitb_lora F1 | dinov3_vitl_lora precision | dinov3_vitl_lora recall | dinov3_vitl_lora F1 | vjepa21_vitb_frozen precision | vjepa21_vitb_frozen recall | vjepa21_vitb_frozen F1 | vjepa21_vitl_frozen precision | vjepa21_vitl_frozen recall | vjepa21_vitl_frozen F1 | vjepa21_vitb_lora precision | vjepa21_vitb_lora recall | vjepa21_vitb_lora F1 | vjepa21_vitl_lora precision | vjepa21_vitl_lora recall | vjepa21_vitl_lora F1 | convnext_base_frozen precision | convnext_base_frozen recall | convnext_base_frozen F1 | convnext_large_frozen precision | convnext_large_frozen recall | convnext_large_frozen F1 | convnext_base_finetune precision | convnext_base_finetune recall | convnext_base_finetune F1 | convnext_large_finetune precision | convnext_large_finetune recall | convnext_large_finetune F1 | lingbot_vitb_frozen precision | lingbot_vitb_frozen recall | lingbot_vitb_frozen F1 | lingbot_vitl_frozen precision | lingbot_vitl_frozen recall | lingbot_vitl_frozen F1 | lingbot_vitb_lora precision | lingbot_vitb_lora recall | lingbot_vitb_lora F1 | lingbot_vitl_lora precision | lingbot_vitl_lora recall | lingbot_vitl_lora F1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Good | 1388 | 0.8743 | 0.8170 | 0.8447 | 0.9061 | 0.7442 | 0.8172 | 0.9002 | 0.9164 | 0.9082 | 0.9326 | 0.8977 | 0.9148 | 0.8734 | 0.7702 | 0.8185 | 0.8705 | 0.8379 | 0.8539 | 0.9058 | 0.9071 | 0.9064 | 0.9226 | 0.9099 | 0.9162 | 0.8669 | 0.7651 | 0.8129 | 0.8384 | 0.8710 | 0.8544 | 0.9082 | 0.8977 | 0.9029 | 0.8960 | 0.9063 | 0.9011 | 0.8909 | 0.7003 | 0.7842 | 0.8795 | 0.8098 | 0.8432 | 0.9041 | 0.9107 | 0.9074 | 0.9446 | 0.8350 | 0.8864 |
+| Weathered | 392 | 0.4901 | 0.5051 | 0.4975 | 0.4186 | 0.6429 | 0.5070 | 0.6309 | 0.6148 | 0.6227 | 0.6253 | 0.7321 | 0.6745 | 0.4194 | 0.5510 | 0.4763 | 0.4665 | 0.4617 | 0.4641 | 0.6309 | 0.6454 | 0.6381 | 0.6593 | 0.6811 | 0.6700 | 0.4080 | 0.4413 | 0.4240 | 0.4672 | 0.3265 | 0.3844 | 0.5930 | 0.6913 | 0.6384 | 0.6099 | 0.6301 | 0.6198 | 0.3989 | 0.5791 | 0.4724 | 0.4749 | 0.4821 | 0.4785 | 0.6325 | 0.6454 | 0.6389 | 0.5429 | 0.7755 | 0.6387 |
+| Heavily Damaged | 110 | 0.3069 | 0.5273 | 0.3880 | 0.3716 | 0.5000 | 0.4264 | 0.5895 | 0.5091 | 0.5463 | 0.6421 | 0.5545 | 0.5951 | 0.3245 | 0.4455 | 0.3755 | 0.3012 | 0.4545 | 0.3623 | 0.6263 | 0.5636 | 0.5933 | 0.6379 | 0.6727 | 0.6549 | 0.2656 | 0.5818 | 0.3647 | 0.3448 | 0.5455 | 0.4225 | 0.5738 | 0.3182 | 0.4094 | 0.6667 | 0.4909 | 0.5654 | 0.2478 | 0.5182 | 0.3353 | 0.2664 | 0.5182 | 0.3519 | 0.6413 | 0.5364 | 0.5842 | 0.6117 | 0.5727 | 0.5915 |
 
-## Per-class F1: sign_shape
+## Per-class precision, recall and F1: sign_shape
 
-| Class | Support | dinov3 | dinov3_lora | vjepa | vjepa_lora | convnext_frozen | convnext | dinov3_vitb_frozen | dinov3_vitl_frozen | dinov3_vitb_lora | dinov3_vitl_lora | vjepa21_vitb_frozen | vjepa21_vitl_frozen | vjepa21_vitb_lora | vjepa21_vitl_lora | convnext_base_frozen | convnext_large_frozen | convnext_base_finetune | convnext_large_finetune | lingbot_vitb_frozen | lingbot_vitl_frozen | lingbot_vitb_lora | lingbot_vitl_lora |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Circular | 226 | 0.9273 | 0.9731 | 0.9065 | 0.9800 | 0.9099 | 0.9823 | 0.9229 | 0.9097 | 0.9809 | 0.9840 | 0.9268 | 0.9423 | 0.9799 | 0.9809 | 0.9176 | 0.9180 | 0.9740 | 0.9750 | 0.9345 | 0.9460 | 0.9729 | 0.9776 |
-| Quadrangle | 148 | 0.9220 | 0.9695 | 0.8961 | 0.9664 | 0.9225 | 0.9764 | 0.9209 | 0.9184 | 0.9737 | 0.9816 | 0.9323 | 0.9245 | 0.9715 | 0.9764 | 0.9176 | 0.9217 | 0.9638 | 0.9762 | 0.9438 | 0.9530 | 0.9742 | 0.9805 |
-| Triangular | 57 | 0.8621 | 0.9402 | 0.8772 | 0.9550 | 0.8780 | 0.9474 | 0.9075 | 0.9054 | 0.9736 | 0.9825 | 0.9096 | 0.8377 | 0.9647 | 0.9558 | 0.8946 | 0.9235 | 0.9545 | 0.9722 | 0.9426 | 0.9464 | 0.9602 | 0.9657 |
-| Octagonal | 61 | 0.8346 | 0.9120 | 0.7006 | 0.9355 | 0.7967 | 0.9256 | 0.8127 | 0.8219 | 0.9444 | 0.9459 | 0.8228 | 0.8394 | 0.9104 | 0.9416 | 0.8200 | 0.7962 | 0.9301 | 0.9326 | 0.8153 | 0.8696 | 0.9284 | 0.9433 |
-| Pentagon | 11 | 0.7857 | 0.9565 | 0.7143 | 0.9167 | 0.6875 | 1.0000 | 0.8627 | 0.8936 | 0.9362 | 0.9778 | 0.7660 | 0.8696 | 0.9565 | 0.9545 | 0.8000 | 0.9333 | 0.9492 | 0.9825 | 0.8235 | 0.7925 | 0.9643 | 0.9818 |
+| Class | Support | dinov3_vitb_frozen precision | dinov3_vitb_frozen recall | dinov3_vitb_frozen F1 | dinov3_vitl_frozen precision | dinov3_vitl_frozen recall | dinov3_vitl_frozen F1 | dinov3_vitb_lora precision | dinov3_vitb_lora recall | dinov3_vitb_lora F1 | dinov3_vitl_lora precision | dinov3_vitl_lora recall | dinov3_vitl_lora F1 | vjepa21_vitb_frozen precision | vjepa21_vitb_frozen recall | vjepa21_vitb_frozen F1 | vjepa21_vitl_frozen precision | vjepa21_vitl_frozen recall | vjepa21_vitl_frozen F1 | vjepa21_vitb_lora precision | vjepa21_vitb_lora recall | vjepa21_vitb_lora F1 | vjepa21_vitl_lora precision | vjepa21_vitl_lora recall | vjepa21_vitl_lora F1 | convnext_base_frozen precision | convnext_base_frozen recall | convnext_base_frozen F1 | convnext_large_frozen precision | convnext_large_frozen recall | convnext_large_frozen F1 | convnext_base_finetune precision | convnext_base_finetune recall | convnext_base_finetune F1 | convnext_large_finetune precision | convnext_large_finetune recall | convnext_large_finetune F1 | lingbot_vitb_frozen precision | lingbot_vitb_frozen recall | lingbot_vitb_frozen F1 | lingbot_vitl_frozen precision | lingbot_vitl_frozen recall | lingbot_vitl_frozen F1 | lingbot_vitb_lora precision | lingbot_vitb_lora recall | lingbot_vitb_lora F1 | lingbot_vitl_lora precision | lingbot_vitl_lora recall | lingbot_vitl_lora F1 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Circular | 746 | 0.9513 | 0.8901 | 0.9197 | 0.9390 | 0.9075 | 0.9230 | 0.9783 | 0.9692 | 0.9737 | 0.9826 | 0.9839 | 0.9833 | 0.9497 | 0.9357 | 0.9426 | 0.9265 | 0.9625 | 0.9441 | 0.9720 | 0.9786 | 0.9753 | 0.9800 | 0.9866 | 0.9833 | 0.9308 | 0.9021 | 0.9163 | 0.9393 | 0.9129 | 0.9259 | 0.9812 | 0.9799 | 0.9805 | 0.9772 | 0.9759 | 0.9765 | 0.9569 | 0.9236 | 0.9400 | 0.9477 | 0.9464 | 0.9470 | 0.9851 | 0.9745 | 0.9798 | 0.9813 | 0.9853 | 0.9833 |
+| Quadrangle | 615 | 0.9232 | 0.9187 | 0.9209 | 0.9276 | 0.9171 | 0.9223 | 0.9804 | 0.9740 | 0.9772 | 0.9853 | 0.9821 | 0.9837 | 0.9241 | 0.9496 | 0.9366 | 0.9693 | 0.9236 | 0.9459 | 0.9677 | 0.9740 | 0.9708 | 0.9710 | 0.9805 | 0.9757 | 0.9227 | 0.9122 | 0.9174 | 0.9461 | 0.8846 | 0.9143 | 0.9614 | 0.9724 | 0.9669 | 0.9752 | 0.9610 | 0.9681 | 0.9521 | 0.9366 | 0.9443 | 0.9727 | 0.9285 | 0.9501 | 0.9803 | 0.9691 | 0.9747 | 0.9901 | 0.9740 | 0.9820 |
+| Triangular | 281 | 0.9107 | 0.9075 | 0.9091 | 0.9062 | 0.9288 | 0.9174 | 0.9684 | 0.9822 | 0.9753 | 0.9786 | 0.9786 | 0.9786 | 0.9216 | 0.8790 | 0.8998 | 0.9453 | 0.9217 | 0.9333 | 0.9579 | 0.9715 | 0.9647 | 0.9854 | 0.9609 | 0.9730 | 0.9049 | 0.9146 | 0.9097 | 0.9020 | 0.9502 | 0.9255 | 0.9510 | 0.9680 | 0.9594 | 0.9681 | 0.9715 | 0.9698 | 0.9458 | 0.9324 | 0.9391 | 0.9296 | 0.9395 | 0.9345 | 0.9786 | 0.9751 | 0.9768 | 0.9788 | 0.9858 | 0.9823 |
+| Octagonal | 212 | 0.7352 | 0.8774 | 0.8000 | 0.7839 | 0.8726 | 0.8259 | 0.9091 | 0.9434 | 0.9259 | 0.9390 | 0.9434 | 0.9412 | 0.8216 | 0.8255 | 0.8235 | 0.8364 | 0.8679 | 0.8519 | 0.9694 | 0.8962 | 0.9314 | 0.9712 | 0.9528 | 0.9619 | 0.7870 | 0.8538 | 0.8190 | 0.7593 | 0.8632 | 0.8079 | 0.9604 | 0.9151 | 0.9372 | 0.9178 | 0.9481 | 0.9327 | 0.7613 | 0.8726 | 0.8132 | 0.8225 | 0.8962 | 0.8578 | 0.9035 | 0.9717 | 0.9364 | 0.9358 | 0.9623 | 0.9488 |
+| Pentagon | 36 | 0.7660 | 1.0000 | 0.8675 | 0.9459 | 0.9722 | 0.9589 | 1.0000 | 0.9722 | 0.9859 | 1.0000 | 1.0000 | 1.0000 | 0.7619 | 0.8889 | 0.8205 | 0.8571 | 0.8333 | 0.8451 | 0.8974 | 0.9722 | 0.9333 | 0.9722 | 0.9722 | 0.9722 | 0.8000 | 1.0000 | 0.8889 | 0.6792 | 1.0000 | 0.8090 | 1.0000 | 0.9722 | 0.9859 | 0.9474 | 1.0000 | 0.9730 | 0.7778 | 0.9722 | 0.8642 | 0.8140 | 0.9722 | 0.8861 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.9722 | 0.9859 |
 
 ## Confusion matrices
 
-- dinov3: [view_angle](../metrics/dinov3/confusion_test_view_angle.png), [mounting](../metrics/dinov3/confusion_test_mounting.png), [condition](../metrics/dinov3/confusion_test_condition.png), [sign_shape](../metrics/dinov3/confusion_test_sign_shape.png)
-- dinov3_lora: [view_angle](../metrics/dinov3_lora/confusion_test_view_angle.png), [mounting](../metrics/dinov3_lora/confusion_test_mounting.png), [condition](../metrics/dinov3_lora/confusion_test_condition.png), [sign_shape](../metrics/dinov3_lora/confusion_test_sign_shape.png)
-- vjepa: [view_angle](../metrics/vjepa/confusion_test_view_angle.png), [mounting](../metrics/vjepa/confusion_test_mounting.png), [condition](../metrics/vjepa/confusion_test_condition.png), [sign_shape](../metrics/vjepa/confusion_test_sign_shape.png)
-- vjepa_lora: [view_angle](../metrics/vjepa_lora/confusion_test_view_angle.png), [mounting](../metrics/vjepa_lora/confusion_test_mounting.png), [condition](../metrics/vjepa_lora/confusion_test_condition.png), [sign_shape](../metrics/vjepa_lora/confusion_test_sign_shape.png)
-- convnext_frozen: [view_angle](../metrics/convnext_frozen/confusion_test_view_angle.png), [mounting](../metrics/convnext_frozen/confusion_test_mounting.png), [condition](../metrics/convnext_frozen/confusion_test_condition.png), [sign_shape](../metrics/convnext_frozen/confusion_test_sign_shape.png)
-- convnext: [view_angle](../metrics/convnext/confusion_test_view_angle.png), [mounting](../metrics/convnext/confusion_test_mounting.png), [condition](../metrics/convnext/confusion_test_condition.png), [sign_shape](../metrics/convnext/confusion_test_sign_shape.png)
 - dinov3_vitb_frozen: [view_angle](../metrics/dinov3_vitb_frozen/confusion_test_view_angle.png), [mounting](../metrics/dinov3_vitb_frozen/confusion_test_mounting.png), [condition](../metrics/dinov3_vitb_frozen/confusion_test_condition.png), [sign_shape](../metrics/dinov3_vitb_frozen/confusion_test_sign_shape.png)
 - dinov3_vitl_frozen: [view_angle](../metrics/dinov3_vitl_frozen/confusion_test_view_angle.png), [mounting](../metrics/dinov3_vitl_frozen/confusion_test_mounting.png), [condition](../metrics/dinov3_vitl_frozen/confusion_test_condition.png), [sign_shape](../metrics/dinov3_vitl_frozen/confusion_test_sign_shape.png)
 - dinov3_vitb_lora: [view_angle](../metrics/dinov3_vitb_lora/confusion_test_view_angle.png), [mounting](../metrics/dinov3_vitb_lora/confusion_test_mounting.png), [condition](../metrics/dinov3_vitb_lora/confusion_test_condition.png), [sign_shape](../metrics/dinov3_vitb_lora/confusion_test_sign_shape.png)
@@ -140,3 +116,5 @@ Generated 2026-07-13T21:20:23+00:00. Primary metric: **macro-F1** on the test sp
 - lingbot_vitl_frozen: [view_angle](../metrics/lingbot_vitl_frozen/confusion_test_view_angle.png), [mounting](../metrics/lingbot_vitl_frozen/confusion_test_mounting.png), [condition](../metrics/lingbot_vitl_frozen/confusion_test_condition.png), [sign_shape](../metrics/lingbot_vitl_frozen/confusion_test_sign_shape.png)
 - lingbot_vitb_lora: [view_angle](../metrics/lingbot_vitb_lora/confusion_test_view_angle.png), [mounting](../metrics/lingbot_vitb_lora/confusion_test_mounting.png), [condition](../metrics/lingbot_vitb_lora/confusion_test_condition.png), [sign_shape](../metrics/lingbot_vitb_lora/confusion_test_sign_shape.png)
 - lingbot_vitl_lora: [view_angle](../metrics/lingbot_vitl_lora/confusion_test_view_angle.png), [mounting](../metrics/lingbot_vitl_lora/confusion_test_mounting.png), [condition](../metrics/lingbot_vitl_lora/confusion_test_condition.png), [sign_shape](../metrics/lingbot_vitl_lora/confusion_test_sign_shape.png)
+
+Variants without saved test metrics: dinov3, dinov3_lora, vjepa, vjepa_lora, convnext_frozen, convnext (skipped or not yet trained).

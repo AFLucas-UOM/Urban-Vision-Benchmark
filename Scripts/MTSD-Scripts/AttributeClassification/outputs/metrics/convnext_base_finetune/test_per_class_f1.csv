@@ -1,14 +1,14 @@
-variant,split,attribute,class,f1,support
-convnext_base_finetune,test,view_angle,Front,0.9307,552
-convnext_base_finetune,test,view_angle,Back,0.9664,555
-convnext_base_finetune,test,view_angle,Side,0.8821,333
-convnext_base_finetune,test,mounting,Pole-Mounted,0.9804,1243
-convnext_base_finetune,test,mounting,Wall-Mounted,0.8707,197
-convnext_base_finetune,test,condition,Good,0.9090,1084
-convnext_base_finetune,test,condition,Weathered,0.6230,280
-convnext_base_finetune,test,condition,Heavily Damaged,0.4531,76
-convnext_base_finetune,test,sign_shape,Circular,0.9740,577
-convnext_base_finetune,test,sign_shape,Quadrangle,0.9638,464
-convnext_base_finetune,test,sign_shape,Triangular,0.9545,199
-convnext_base_finetune,test,sign_shape,Octagonal,0.9301,172
-convnext_base_finetune,test,sign_shape,Pentagon,0.9492,28
+variant,split,attribute,class,precision,recall,f1,support
+convnext_base_finetune,test,view_angle,Front,0.9056,0.9471,0.9259,699
+convnext_base_finetune,test,view_angle,Back,0.9806,0.9593,0.9699,738
+convnext_base_finetune,test,view_angle,Side,0.8741,0.8433,0.8584,453
+convnext_base_finetune,test,mounting,Pole-Mounted,0.9840,0.9822,0.9831,1629
+convnext_base_finetune,test,mounting,Wall-Mounted,0.8902,0.9004,0.8952,261
+convnext_base_finetune,test,condition,Good,0.9082,0.8977,0.9029,1388
+convnext_base_finetune,test,condition,Weathered,0.5930,0.6913,0.6384,392
+convnext_base_finetune,test,condition,Heavily Damaged,0.5738,0.3182,0.4094,110
+convnext_base_finetune,test,sign_shape,Circular,0.9812,0.9799,0.9805,746
+convnext_base_finetune,test,sign_shape,Quadrangle,0.9614,0.9724,0.9669,615
+convnext_base_finetune,test,sign_shape,Triangular,0.9510,0.9680,0.9594,281
+convnext_base_finetune,test,sign_shape,Octagonal,0.9604,0.9151,0.9372,212
+convnext_base_finetune,test,sign_shape,Pentagon,1.0000,0.9722,0.9859,36

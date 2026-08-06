@@ -1,0 +1,224 @@
+{
+ "run_id": "vjepa21_vitl_lora-20260713-192900",
+ "variant": "vjepa21_vitl_lora",
+ "split": "val",
+ "smoke_test": false,
+ "timestamp": "2026-07-13T19:04:38+00:00",
+ "mean_macro_f1": 0.8841361156376641,
+ "run_info": {
+  "adaptation": "lora",
+  "best_epoch": 30,
+  "stopped_epoch": 40,
+  "stop_reason": "early_stopping",
+  "max_epochs": 150,
+  "val_mean_macro_f1": 0.8841361156376641,
+  "parameters": {
+   "total": 305480717,
+   "trainable": 799757,
+   "trainable_pct": 0.2618,
+   "backbone_total": 305467392,
+   "backbone_trainable": 786432,
+   "head_trainable": 13325,
+   "lora_trainable": 786432
+  },
+  "variant_meta": {
+   "variant": "vjepa21_vitl_lora",
+   "family": "V-JEPA",
+   "backbone": "vjepa",
+   "architecture": "ViT-L/16",
+   "model_size": "large",
+   "adaptation": "lora",
+   "model_id": "vjepa2_1_vit_large_384",
+   "resolution": 384,
+   "display_name": "V-JEPA ViT-L/16 LoRA",
+   "legacy": false
+  },
+  "backbone_meta": {
+   "requested_backend": "torch_hub",
+   "loaded_backend": "torch_hub",
+   "requested_version": "2.1",
+   "loaded_version": "2.1",
+   "allow_backend_fallback": false,
+   "entrypoint": "vjepa2_1_vit_large_384",
+   "checkpoint": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+   "model_id": "vjepa2_1_vit_large_384",
+   "image_size": 384,
+   "feature_dim": 1024,
+   "num_frames": 2
+  },
+  "training_meta": {
+   "physical_batch_size": 16,
+   "gradient_accumulation_steps": 2,
+   "effective_batch_size": 32
+  },
+  "train_duration_s": 5698.8,
+  "test_eval_duration_s": 28.36,
+  "test_images_per_s": 41.96
+ },
+ "attributes": {
+  "view_angle": {
+   "n": 1231,
+   "accuracy": 0.9122664500406173,
+   "macro_f1": 0.9059262540111992,
+   "classes": [
+    "Front",
+    "Back",
+    "Side"
+   ],
+   "per_class_f1": {
+    "Front": 0.9054621848739496,
+    "Back": 0.9630459126539753,
+    "Side": 0.8492706645056726
+   },
+   "support": {
+    "Front": 487,
+    "Back": 441,
+    "Side": 303
+   },
+   "confusion_matrix": [
+    [
+     431,
+     10,
+     46
+    ],
+    [
+     5,
+     430,
+     6
+    ],
+    [
+     29,
+     12,
+     262
+    ]
+   ]
+  },
+  "mounting": {
+   "n": 1231,
+   "accuracy": 0.9593826157595451,
+   "macro_f1": 0.9201263444209127,
+   "classes": [
+    "Pole-Mounted",
+    "Wall-Mounted"
+   ],
+   "per_class_f1": {
+    "Pole-Mounted": 0.9761222540592168,
+    "Wall-Mounted": 0.8641304347826086
+   },
+   "support": {
+    "Pole-Mounted": 1047,
+    "Wall-Mounted": 184
+   },
+   "confusion_matrix": [
+    [
+     1022,
+     25
+    ],
+    [
+     25,
+     159
+    ]
+   ]
+  },
+  "condition": {
+   "n": 1231,
+   "accuracy": 0.8708367181153533,
+   "macro_f1": 0.7791349518418321,
+   "classes": [
+    "Good",
+    "Weathered",
+    "Heavily Damaged"
+   ],
+   "per_class_f1": {
+    "Good": 0.9235880398671097,
+    "Weathered": 0.7349177330895795,
+    "Heavily Damaged": 0.6788990825688074
+   },
+   "support": {
+    "Good": 904,
+    "Weathered": 265,
+    "Heavily Damaged": 62
+   },
+   "confusion_matrix": [
+    [
+     834,
+     66,
+     4
+    ],
+    [
+     58,
+     201,
+     6
+    ],
+    [
+     10,
+     15,
+     37
+    ]
+   ]
+  },
+  "sign_shape": {
+   "n": 1231,
+   "accuracy": 0.9699431356620634,
+   "macro_f1": 0.9313569122767124,
+   "classes": [
+    "Circular",
+    "Quadrangle",
+    "Triangular",
+    "Octagonal",
+    "Pentagon"
+   ],
+   "per_class_f1": {
+    "Circular": 0.9780876494023905,
+    "Quadrangle": 0.9731182795698925,
+    "Triangular": 0.9801699716713881,
+    "Octagonal": 0.9526813880126183,
+    "Pentagon": 0.7727272727272727
+   },
+   "support": {
+    "Circular": 505,
+    "Quadrangle": 367,
+    "Triangular": 176,
+    "Octagonal": 157,
+    "Pentagon": 26
+   },
+   "confusion_matrix": [
+    [
+     491,
+     5,
+     3,
+     6,
+     0
+    ],
+    [
+     1,
+     362,
+     1,
+     2,
+     1
+    ],
+    [
+     1,
+     1,
+     173,
+     1,
+     0
+    ],
+    [
+     5,
+     1,
+     0,
+     151,
+     0
+    ],
+    [
+     1,
+     8,
+     0,
+     0,
+     17
+    ]
+   ]
+  }
+ }
+}

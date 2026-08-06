@@ -1,17 +1,22 @@
 {
- "run_id": "vjepa21_vitl_lora-20260713-192900",
+ "run_id": "vjepa21_vitl_lora-20260805-141508",
  "variant": "vjepa21_vitl_lora",
  "split": "val",
  "smoke_test": false,
- "timestamp": "2026-07-13T19:04:38+00:00",
- "mean_macro_f1": 0.8841361156376641,
+ "timestamp": "2026-08-05T13:44:20+00:00",
+ "mean_macro_precision": 0.8908396963903764,
+ "mean_macro_recall": 0.8957848417440605,
+ "mean_macro_f1": 0.8930275154529488,
+ "mean_macro_f1_ci": null,
+ "evaluation_split": "val",
+ "evaluation": {},
  "run_info": {
   "adaptation": "lora",
-  "best_epoch": 30,
-  "stopped_epoch": 40,
+  "best_epoch": 12,
+  "stopped_epoch": 22,
   "stop_reason": "early_stopping",
   "max_epochs": 150,
-  "val_mean_macro_f1": 0.8841361156376641,
+  "val_mean_macro_f1": 0.8930275154529488,
   "parameters": {
    "total": 305480717,
    "trainable": 799757,
@@ -51,116 +56,155 @@
    "gradient_accumulation_steps": 2,
    "effective_batch_size": 32
   },
-  "train_duration_s": 5698.8,
-  "test_eval_duration_s": 28.36,
-  "test_images_per_s": 41.96
+  "train_duration_s": 5229.1,
+  "evaluation_split": "val"
  },
  "attributes": {
   "view_angle": {
-   "n": 1231,
-   "accuracy": 0.9122664500406173,
-   "macro_f1": 0.9059262540111992,
+   "n": 1898,
+   "accuracy": 0.9315068493150684,
+   "macro_precision": 0.9283214774536178,
+   "macro_recall": 0.9207697707285795,
+   "macro_f1": 0.9241560574451166,
+   "macro_f1_ci": null,
    "classes": [
     "Front",
     "Back",
     "Side"
    ],
+   "per_class_precision": {
+    "Front": 0.9160401002506265,
+    "Back": 0.9691629955947136,
+    "Side": 0.8997613365155132
+   },
+   "per_class_recall": {
+    "Front": 0.9468911917098446,
+    "Back": 0.9720176730486009,
+    "Side": 0.843400447427293
+   },
    "per_class_f1": {
-    "Front": 0.9054621848739496,
-    "Back": 0.9630459126539753,
-    "Side": 0.8492706645056726
+    "Front": 0.9312101910828026,
+    "Back": 0.9705882352941176,
+    "Side": 0.8706697459584296
    },
    "support": {
-    "Front": 487,
-    "Back": 441,
-    "Side": 303
+    "Front": 772,
+    "Back": 679,
+    "Side": 447
    },
    "confusion_matrix": [
     [
-     431,
+     731,
+     8,
+     33
+    ],
+    [
      10,
-     46
+     660,
+     9
     ],
     [
-     5,
-     430,
-     6
-    ],
-    [
-     29,
-     12,
-     262
+     57,
+     13,
+     377
     ]
    ]
   },
   "mounting": {
-   "n": 1231,
-   "accuracy": 0.9593826157595451,
-   "macro_f1": 0.9201263444209127,
+   "n": 1898,
+   "accuracy": 0.9694415173867229,
+   "macro_precision": 0.9305109973241176,
+   "macro_recall": 0.954794671649829,
+   "macro_f1": 0.9421216117031233,
+   "macro_f1_ci": null,
    "classes": [
     "Pole-Mounted",
     "Wall-Mounted"
    ],
+   "per_class_precision": {
+    "Pole-Mounted": 0.9880578252671276,
+    "Wall-Mounted": 0.8729641693811075
+   },
+   "per_class_recall": {
+    "Pole-Mounted": 0.9757914338919925,
+    "Wall-Mounted": 0.9337979094076655
+   },
    "per_class_f1": {
-    "Pole-Mounted": 0.9761222540592168,
-    "Wall-Mounted": 0.8641304347826086
+    "Pole-Mounted": 0.9818863210493441,
+    "Wall-Mounted": 0.9023569023569024
    },
    "support": {
-    "Pole-Mounted": 1047,
-    "Wall-Mounted": 184
+    "Pole-Mounted": 1611,
+    "Wall-Mounted": 287
    },
    "confusion_matrix": [
     [
-     1022,
-     25
+     1572,
+     39
     ],
     [
-     25,
-     159
+     19,
+     268
     ]
    ]
   },
   "condition": {
-   "n": 1231,
-   "accuracy": 0.8708367181153533,
-   "macro_f1": 0.7791349518418321,
+   "n": 1898,
+   "accuracy": 0.8445732349841939,
+   "macro_precision": 0.7446349318520592,
+   "macro_recall": 0.7536791258493639,
+   "macro_f1": 0.7490506486471933,
+   "macro_f1_ci": null,
    "classes": [
     "Good",
     "Weathered",
     "Heavily Damaged"
    ],
+   "per_class_precision": {
+    "Good": 0.9165413533834587,
+    "Weathered": 0.6880530973451328,
+    "Heavily Damaged": 0.6293103448275862
+   },
+   "per_class_recall": {
+    "Good": 0.9049740163325909,
+    "Weathered": 0.7100456621004566,
+    "Heavily Damaged": 0.6460176991150443
+   },
    "per_class_f1": {
-    "Good": 0.9235880398671097,
-    "Weathered": 0.7349177330895795,
-    "Heavily Damaged": 0.6788990825688074
+    "Good": 0.9107209562943593,
+    "Weathered": 0.698876404494382,
+    "Heavily Damaged": 0.6375545851528385
    },
    "support": {
-    "Good": 904,
-    "Weathered": 265,
-    "Heavily Damaged": 62
+    "Good": 1347,
+    "Weathered": 438,
+    "Heavily Damaged": 113
    },
    "confusion_matrix": [
     [
-     834,
-     66,
-     4
+     1219,
+     117,
+     11
     ],
     [
-     58,
-     201,
-     6
+     95,
+     311,
+     32
     ],
     [
-     10,
-     15,
-     37
+     16,
+     24,
+     73
     ]
    ]
   },
   "sign_shape": {
-   "n": 1231,
-   "accuracy": 0.9699431356620634,
-   "macro_f1": 0.9313569122767124,
+   "n": 1898,
+   "accuracy": 0.9778714436248683,
+   "macro_precision": 0.9598913789317113,
+   "macro_recall": 0.9538957987484696,
+   "macro_f1": 0.9567817440163617,
+   "macro_f1_ci": null,
    "classes": [
     "Circular",
     "Quadrangle",
@@ -168,55 +212,69 @@
     "Octagonal",
     "Pentagon"
    ],
+   "per_class_precision": {
+    "Circular": 0.9812583668005355,
+    "Quadrangle": 0.9702479338842975,
+    "Triangular": 0.9929824561403509,
+    "Octagonal": 0.9865470852017937,
+    "Pentagon": 0.868421052631579
+   },
+   "per_class_recall": {
+    "Circular": 0.982573726541555,
+    "Quadrangle": 0.9882154882154882,
+    "Triangular": 0.9860627177700348,
+    "Octagonal": 0.944206008583691,
+    "Pentagon": 0.868421052631579
+   },
    "per_class_f1": {
-    "Circular": 0.9780876494023905,
-    "Quadrangle": 0.9731182795698925,
-    "Triangular": 0.9801699716713881,
-    "Octagonal": 0.9526813880126183,
-    "Pentagon": 0.7727272727272727
+    "Circular": 0.9819156061620897,
+    "Quadrangle": 0.9791492910758965,
+    "Triangular": 0.9895104895104895,
+    "Octagonal": 0.9649122807017544,
+    "Pentagon": 0.868421052631579
    },
    "support": {
-    "Circular": 505,
-    "Quadrangle": 367,
-    "Triangular": 176,
-    "Octagonal": 157,
-    "Pentagon": 26
+    "Circular": 746,
+    "Quadrangle": 594,
+    "Triangular": 287,
+    "Octagonal": 233,
+    "Pentagon": 38
    },
    "confusion_matrix": [
     [
-     491,
-     5,
-     3,
-     6,
-     0
-    ],
-    [
-     1,
-     362,
+     733,
+     9,
      1,
      2,
      1
     ],
     [
+     3,
+     587,
      1,
-     1,
-     173,
+     0,
+     3
+    ],
+    [
+     0,
+     3,
+     283,
      1,
      0
     ],
     [
-     5,
-     1,
+     9,
+     3,
      0,
-     151,
-     0
+     220,
+     1
     ],
     [
-     1,
-     8,
+     2,
+     3,
      0,
      0,
-     17
+     33
     ]
    ]
   }
