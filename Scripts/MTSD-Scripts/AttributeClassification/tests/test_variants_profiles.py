@@ -16,7 +16,8 @@ FROZEN_8 = ["dinov3_vitb_frozen", "dinov3_vitl_frozen", "vjepa21_vitb_frozen",
 ADAPTED_8 = ["dinov3_vitb_lora", "dinov3_vitl_lora", "vjepa21_vitb_lora",
              "vjepa21_vitl_lora", "convnext_base_finetune",
              "convnext_large_finetune", "lingbot_vitb_lora",
-             "lingbot_vitl_lora"]
+             "lingbot_vitl_lora", "convnext_base_lora",
+             "convnext_large_lora"]
 
 
 @pytest.fixture(scope="module")
@@ -39,8 +40,8 @@ def test_profile_membership_and_counts(cfg):
     assert resolve_profile(cfg, "size_ablation_frozen") == FROZEN_8
     assert resolve_profile(cfg, "size_ablation_adapted") == ADAPTED_8
     assert resolve_profile(cfg, "size_ablation_all") == FROZEN_8 + ADAPTED_8
-    assert len(FROZEN_8) == 8 and len(ADAPTED_8) == 8
-    assert len(resolve_profile(cfg, "size_ablation_all")) == 16
+    assert len(FROZEN_8) == 8 and len(ADAPTED_8) == 10
+    assert len(resolve_profile(cfg, "size_ablation_all")) == 18
 
 
 def test_legacy_variants_excluded_from_ablation_profiles(cfg):
@@ -120,7 +121,7 @@ def test_selection_precedence(cfg):
 
 def test_plan_rows_and_effective_batch_consistency(cfg):
     rows = build_plan(cfg, resolve_profile(cfg, "size_ablation_all"))
-    assert len(rows) == 16
+    assert len(rows) == 18
     for row in rows:
         assert row["effective_batch_size"] == \
             row["batch_size"] * row["gradient_accumulation_steps"]

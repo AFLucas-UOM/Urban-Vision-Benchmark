@@ -49,8 +49,8 @@ across four backbone families, selected through named profiles
 |---|---:|---|
 | `legacy_default` | 4 | exactly the historical default non-LoRA set (`dinov3`, `vjepa`, `convnext_frozen`, `convnext`) |
 | `size_ablation_frozen` | 8 | DINOv3 ViT-B/L frozen, V-JEPA 2.1 ViT-B/L frozen, ConvNeXt Base/Large frozen, LingBot-Vision ViT-B/L frozen |
-| `size_ablation_adapted` | 8 | DINOv3 ViT-B/L LoRA, V-JEPA 2.1 ViT-B/L LoRA, ConvNeXt Base/Large fully fine-tuned, LingBot-Vision ViT-B/L LoRA |
-| `size_ablation_all` | 16 | union of the two |
+| `size_ablation_adapted` | 10 | DINOv3 ViT-B/L LoRA, V-JEPA 2.1 ViT-B/L LoRA, ConvNeXt Base/Large fully fine-tuned and LoRA, LingBot-Vision ViT-B/L LoRA |
+| `size_ablation_all` | 18 | union of the two |
 
 Design decisions relevant to validity:
 
@@ -472,9 +472,9 @@ The hyperparameters are broadly sensible for the intended comparison:
    test split is not used for stopping; `best.pt` is selected from validation mean
    macro-F1 and then evaluated once on test.
 
-The most important methodological caveat is that the matrix still has unequal
-adaptation coverage: ConvNeXt has a full fine-tune, while DINOv3 and V-JEPA have
-frozen and LoRA variants but no full fine-tune. The existing `convnext_frozen`
+The matrix now includes ConvNeXt frozen, LoRA, and full fine-tuning variants, so
+LoRA adaptation can be compared across all four backbone families. DINOv3 and
+V-JEPA still do not include full fine-tuning. The existing `convnext_frozen`
 baseline improves the comparison, but a pure representation-quality study would
 also require fine-tuned DINOv3/V-JEPA variants.
 

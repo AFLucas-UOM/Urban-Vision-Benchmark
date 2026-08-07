@@ -60,8 +60,9 @@ def apply_lora(model, lora_cfg, context):
     for name, module in model.named_modules():
         if hasattr(module, "lora_A"):
             suffix = name.split(".")[-1]
-            if suffix in matched:
-                matched[suffix] += 1
+            for target in targets:
+                if suffix == target or name.endswith(target):
+                    matched[target] += 1
     unmatched = [t for t, n in matched.items() if n == 0]
     if unmatched:
         available = sorted({

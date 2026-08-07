@@ -38,6 +38,8 @@ family, size, and adaptation):
 | `convnext_large_frozen` | ConvNeXt-Large | torchvision `convnext_large` | 224 | frozen |
 | `convnext_base_finetune` | ConvNeXt-Base | torchvision `convnext_base` | 224 | full fine-tune |
 | `convnext_large_finetune` | ConvNeXt-Large | torchvision `convnext_large` | 224 | full fine-tune |
+| `convnext_base_lora` | ConvNeXt-Base | torchvision `convnext_base` | 224 | LoRA (block.3, block.5) |
+| `convnext_large_lora` | ConvNeXt-Large | torchvision `convnext_large` | 224 | LoRA (block.3, block.5) |
 | `lingbot_vitb_frozen` | LingBot-Vision ViT-B/16 | `robbyant/lingbot-vision-vit-base` | 224 | frozen |
 | `lingbot_vitl_frozen` | LingBot-Vision ViT-L/16 | `robbyant/lingbot-vision-vit-large` | 224 | frozen |
 | `lingbot_vitb_lora` | LingBot-Vision ViT-B/16 | `robbyant/lingbot-vision-vit-base` | 224 | LoRA (fused qkv) |
@@ -57,8 +59,8 @@ Named experiment profiles (`run_all.py --profile NAME`):
 | --- | ---: | --- |
 | `legacy_default` | 4 | exactly the historical default non-LoRA set |
 | `size_ablation_frozen` | 8 | all frozen probes: DINOv3 B/L, V-JEPA 2.1 B/L, ConvNeXt Base/Large, LingBot B/L |
-| `size_ablation_adapted` | 8 | DINOv3 B/L LoRA, V-JEPA 2.1 B/L LoRA, ConvNeXt Base/Large fine-tuned, LingBot B/L LoRA |
-| `size_ablation_all` | 16 | union of the two |
+| `size_ablation_adapted` | 10 | DINOv3 B/L LoRA, V-JEPA 2.1 B/L LoRA, ConvNeXt Base/Large fine-tuned and LoRA, LingBot B/L LoRA |
+| `size_ablation_all` | 18 | union of the two |
 
 The default experiment set (no `--profile`/`--variants`) is unchanged: the
 four legacy non-LoRA variants.
@@ -465,8 +467,8 @@ per epoch and recorded in all metadata.
 Per-variant `training_overrides` keep `effective_batch_size =
 batch_size × gradient_accumulation_steps = 32` everywhere. The shipped values
 are **initial operational settings for a 24 GB RTX 4090** (32×1 for all
-frozen probes and ConvNeXt-Base fine-tuning; 16×2 for the ViT-L LoRA
-variants, ConvNeXt-Large fine-tuning, and all LingBot/V-JEPA-2.1 LoRA
+frozen probes and ConvNeXt-Base fine-tuning/LoRA; 16×2 for the ViT-L LoRA
+variants, ConvNeXt-Large fine-tuning/LoRA, and all LingBot/V-JEPA-2.1 LoRA
 variants); the smoke round establishes whether they fit. Expect the highest
 VRAM pressure from `vjepa21_vitl_lora` (384 px, backprop through ViT-L) and
 `convnext_large_finetune`. **There is no automatic OOM batch-size
@@ -529,8 +531,8 @@ imbalanced.
 - `outputs/reports/size_ablation.{csv,md}` — the model-size ablation report
   (distinct file names; the historical comparison files are never
   overwritten). Covers only the `size_ablation_all` profile members and
-  groups them into: (1) frozen probes per family, (2) LoRA per family,
-  (3) ConvNeXt full fine-tuning, (4) an all-frozen cross-family ranking —
+groups them into: (1) frozen probes per family, (2) LoRA per family,
+(3) ConvNeXt full fine-tuning, (4) an all-frozen cross-family ranking —
   each table explicitly labelled with its adaptation mode. Rows carry
   variant, family, size, architecture, adaptation, resolution, parameter
   counts, best epoch, val/test mean macro precision, macro recall and macro-F1

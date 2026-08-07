@@ -1,0 +1,14 @@
+variant,split,attribute,class,precision,recall,f1,support
+convnext_large_lora,val,view_angle,Front,0.9363,0.8951,0.9152,772
+convnext_large_lora,val,view_angle,Back,0.9720,0.9720,0.9720,679
+convnext_large_lora,val,view_angle,Side,0.8212,0.8837,0.8513,447
+convnext_large_lora,val,mounting,Pole-Mounted,0.9687,0.9801,0.9744,1611
+convnext_large_lora,val,mounting,Wall-Mounted,0.8806,0.8223,0.8505,287
+convnext_large_lora,val,condition,Good,0.8799,0.9354,0.9068,1347
+convnext_large_lora,val,condition,Weathered,0.6950,0.5982,0.6429,438
+convnext_large_lora,val,condition,Heavily Damaged,0.6966,0.5487,0.6139,113
+convnext_large_lora,val,sign_shape,Circular,0.9903,0.9598,0.9748,746
+convnext_large_lora,val,sign_shape,Quadrangle,0.9664,0.9697,0.9681,594
+convnext_large_lora,val,sign_shape,Triangular,0.9435,0.9895,0.9660,287
+convnext_large_lora,val,sign_shape,Octagonal,0.9300,0.9700,0.9496,233
+convnext_large_lora,val,sign_shape,Pentagon,0.8571,0.7895,0.8219,38

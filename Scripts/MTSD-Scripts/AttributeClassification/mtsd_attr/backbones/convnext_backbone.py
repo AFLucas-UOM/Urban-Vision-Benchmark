@@ -7,8 +7,8 @@ Base and Large are the size-ablation variants. The feature dimension is
 derived from the built model's classifier head rather than hard-coded, and
 cross-checked against the registry's expected value.
 
-Adaptation modes: "frozen" (linear probe) or "finetune" (end to end); LoRA is
-not implemented for ConvNeXt.
+Adaptation modes: "frozen" (linear probe), "lora" (pointwise MLP adapters),
+or "finetune" (end to end).
 """
 
 import logging
@@ -39,9 +39,6 @@ class ConvNeXtBackbone(nn.Module):
         from ..config import adaptation_of
 
         self.adaptation = adaptation_of(model_cfg)
-        if self.adaptation == "lora":
-            raise ValueError("LoRA is not implemented for ConvNeXt; use "
-                             "adaptation: frozen or finetune")
         # Old checkpoints (and the legacy variants) predate the model_size
         # key; they were all ConvNeXt-Tiny.
         size = str(model_cfg.get("model_size", "tiny")).lower()
@@ -52,6 +49,10 @@ class ConvNeXtBackbone(nn.Module):
         model = constructor(weights=weights)
         self.features = model.features
         self.avgpool = model.avgpool
+        if self.adaptation == "lora":
+            from .lora import apply_lora
+            self.features = apply_lora(
+                self.features, model_cfg.get("lora", {}), "ConvNeXt")
         self.image_size = model_cfg["image_size"]
         # classifier = [LayerNorm2d, Flatten, Linear]; the Linear's input size
         # is the pooled feature dimension of this architecture.

@@ -60,10 +60,7 @@ def test_registry_dim_mismatch_fails(monkeypatch):
                           "adaptation": "frozen", "image_size": 224})
 
 
-def test_unknown_size_and_lora_fail_clearly():
+def test_unknown_size_fails_clearly():
     with pytest.raises(ValueError, match="model_size"):
         ConvNeXtBackbone({"backbone": "convnext", "model_size": "small",
                           "adaptation": "frozen", "image_size": 224})
-    with pytest.raises(ValueError, match="LoRA"):
-        ConvNeXtBackbone({"backbone": "convnext", "model_size": "base",
-                          "adaptation": "lora", "image_size": 224})

@@ -26,7 +26,7 @@ def _snapshot(path):
     return (stat.st_size, stat.st_mtime_ns)
 
 
-def test_plan_is_read_only_and_lists_all_16_variants():
+def test_plan_is_read_only_and_lists_all_18_variants():
     manifest_before = _snapshot(MANIFEST)
     ckpt_root = SUBPROJECT / "outputs" / "checkpoints"
     ckpt_dirs_before = {p.name for p in ckpt_root.iterdir()} if ckpt_root.exists() else set()
@@ -38,7 +38,7 @@ def test_plan_is_read_only_and_lists_all_16_variants():
                     "convnext_base_frozen", "convnext_large_finetune",
                     "lingbot_vitb_frozen", "lingbot_vitl_lora"):
         assert variant in result.stdout
-    assert "16 variant(s)" in result.stdout
+    assert "18 variant(s)" in result.stdout
     assert "vjepa2_1_vit_base_384" in result.stdout
     assert "robbyant/lingbot-vision-vit-large" in result.stdout
 
@@ -67,7 +67,7 @@ def test_list_profiles_and_variants():
 
     result = _run(["run_all.py", "--list-variants"])
     assert result.returncode == 0, result.stderr
-    assert "22 variant(s)" in result.stdout  # 6 legacy + 16 ablation
+    assert "24 variant(s)" in result.stdout  # 6 legacy + 18 ablation
 
 
 def test_profile_and_variants_are_mutually_exclusive():

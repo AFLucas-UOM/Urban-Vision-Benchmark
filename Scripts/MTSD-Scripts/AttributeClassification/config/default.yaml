@@ -416,6 +416,36 @@ models:
       lr_heads: 4.0e-4
       batch_size: 16
       gradient_accumulation_steps: 2
+  convnext_base_lora:
+    backbone: convnext
+    family: ConvNeXt
+    architecture: ConvNeXt-Base
+    model_size: base
+    adaptation: lora
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [block.3, block.5]
+    image_size: 224
+    training_overrides:
+      lr_backbone: 2.0e-4
+  convnext_large_lora:
+    backbone: convnext
+    family: ConvNeXt
+    architecture: ConvNeXt-Large
+    model_size: large
+    adaptation: lora
+    lora:
+      r: 8
+      alpha: 16
+      dropout: 0.05
+      target_modules: [block.3, block.5]
+    image_size: 224
+    training_overrides:
+      lr_backbone: 2.0e-4
+      batch_size: 16
+      gradient_accumulation_steps: 2
 
   # ---- Size ablation: LingBot-Vision (lingbot_vision loader, HF weights) ----
   # Loaded through the official lingbot_vision.load_pretrained_backbone
@@ -525,8 +555,8 @@ run_all:
       - convnext_large_frozen
       - lingbot_vitb_frozen
       - lingbot_vitl_frozen
-    # Adapted variants: LoRA for the SSL backbones, full fine-tuning for
-    # ConvNeXt (8 variants). Adaptation modes are never mixed in one table
+    # Adapted variants: LoRA for the SSL backbones and ConvNeXt, plus full
+    # fine-tuning for ConvNeXt (10 variants). Adaptation modes are never mixed in one table
     # without labelling.
     size_ablation_adapted:
       - dinov3_vitb_lora
@@ -537,7 +567,9 @@ run_all:
       - convnext_large_finetune
       - lingbot_vitb_lora
       - lingbot_vitl_lora
-    # Union of the frozen and adapted profiles (16 variants).
+      - convnext_base_lora
+      - convnext_large_lora
+    # Union of the frozen and adapted profiles (18 variants).
     size_ablation_all:
       - dinov3_vitb_frozen
       - dinov3_vitl_frozen
@@ -555,6 +587,8 @@ run_all:
       - convnext_large_finetune
       - lingbot_vitb_lora
       - lingbot_vitl_lora
+      - convnext_base_lora
+      - convnext_large_lora
 
 smoke_test:
   max_samples_per_split: 64
