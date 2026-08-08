@@ -35,6 +35,14 @@ against dataset ground truth. A five-image MDWD pilot (SAM 3 + Cosmos Reason2
 dissertation results until fixed, adequately sampled MDWD and MTSD evaluations
 are run.
 
+Fixed batch evaluations log online by default to the W&B project
+`MSc-MDWD-MDWD-PromptDetect` in the same workspace as the existing detection
+runs. Add `WANDB_API_KEY` and (if needed) `WANDB_ENTITY` to the repository-root
+git-ignored `.env`; use `--wandb-mode offline` only for development runs that
+must not upload to the workspace. Each completed evaluation uploads its full
+result directory as a W&B artifact in addition to retaining the local atomic
+outputs.
+
 ---
 
 ## Supported models

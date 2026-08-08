@@ -10,8 +10,8 @@ The versioned YAML contains six MDWD prompts and thirteen primary MTSD prompts, 
 cd Scripts/Other-Scripts/PromptDetect/batch_evaluation
 python run_dissertation_protocol.py --dataset both --split test --dry-run
 python run_dissertation_protocol.py --dataset both --split test --smoke-test --models sam3
-python run_dissertation_protocol.py --dataset MDWD --split test --final
-python run_dissertation_protocol.py --dataset MTSD --split test --final
+python run_dissertation_protocol.py --dataset MDWD --split test --final --wandb-mode online
+python run_dissertation_protocol.py --dataset MTSD --split test --final --wandb-mode online
 python run_dissertation_protocol.py --dataset MTSD --resume <run-dir> --skip-completed
 python run_dissertation_protocol.py --reports-only <run-dir>
 ```
@@ -23,7 +23,7 @@ followed by the controlled prompt-sensitivity protocol
 and reports. Pass `--protocol` to run a single protocol; see
 [PromptDetect-Prompt-Sensitivity-Protocol.md](PromptDetect-Prompt-Sensitivity-Protocol.md).
 
-Use the `mtsd-base` environment; LocateAnything delegates to `mtsd-la`. SAM checkpoints require the documented Hugging Face access. Final MTSD mode requires the canonical prepared unaugmented test split, a valid prep/split manifest, the explicit GRP-1/2/3/5/6 scope, QA-only annotations and a resolved non-overridden QA gate. It rejects QA fallback, mixed/raw-XML datasets, auto scope and stale hashes. Each model×prompt combination is persisted atomically with hashes and thresholds so an interrupted run loses no completed work.
+Use the `mtsd-base` environment; LocateAnything delegates to `mtsd-la`. SAM checkpoints require the documented Hugging Face access. Final MTSD mode requires the canonical prepared unaugmented test split, a valid prep/split manifest, the explicit QA-resolved GRP-1…GRP-11 scope, QA-only annotations and a resolved non-overridden QA gate. It rejects QA fallback, mixed/raw-XML datasets, auto scope and stale hashes. Each model×prompt combination is persisted atomically with hashes and thresholds so an interrupted run loses no completed work.
 
 Headline comparison is the macro average over both `class-targeted` and
 `synonym-comparison` prompts; synonym phrasings remain independent rows. Broad

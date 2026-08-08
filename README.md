@@ -124,9 +124,10 @@ Create a git-ignored `.env` at the repository root for Weights & Biases logging 
 ```
 WANDB_MODE=online
 WANDB_API_KEY=<your key>
+WANDB_ENTITY=mark-bugeja-university-of-malta
 ```
 
-W&B projects: `MSc-MDWD-EUVIP26` (MDWD detection), `MSc-MTSD-SupervisedDetection` (MTSD detection), `MSc-MTSD-Attributes` (attribute classification). W&B is a monitoring mirror; the authoritative record is the repository artefacts.
+W&B projects: `MSc-MDWD-EUVIP26` (MDWD detection), `MSc-MTSD-SupervisedDetection` (MTSD detection), `MSc-MTSD-Attributes` (attribute classification), and `MSc-MDWD-MDWD-PromptDetect` (PromptDetect evaluation). W&B is a monitoring mirror; the authoritative record is the repository artefacts.
 
 ### The UVB launcher
 
@@ -159,7 +160,8 @@ python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --ma
 python Scripts/MTSD-Scripts/AttributeClassification/run_all.py --plan --profile size_ablation_all
 python Scripts/MTSD-Scripts/AttributeClassification/run_all.py --profile size_ablation_all
 
-# Prompt-based evaluation (both protocols, resumable, atomic per model×prompt)
+# Prompt-based evaluation (both protocols, resumable, atomic per model×prompt;
+# online W&B logging defaults to the configured PromptDetect project)
 python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_protocol.py --dataset both --split test --dry-run
 python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_protocol.py --dataset both --split test --final
 

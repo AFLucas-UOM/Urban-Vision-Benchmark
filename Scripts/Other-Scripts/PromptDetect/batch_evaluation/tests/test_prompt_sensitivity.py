@@ -297,7 +297,8 @@ def _synthetic_sensitivity_run(tmp_path):
 def test_reports_only_regenerates_sensitivity_outputs(tmp_path):
     from run_dissertation_protocol import reports_only
     run_dir = _synthetic_sensitivity_run(tmp_path)
-    assert reports_only(run_dir) == 0
+    # Report regeneration is a local unit-test operation; do not contact W&B.
+    assert reports_only(run_dir, "disabled") == 0
     for name in ("prompt_sensitivity_per_prompt.csv", "prompt_sensitivity_per_family.csv",
                  "prompt_sensitivity_variant_differences.csv", "prompt_sensitivity_per_model.csv",
                  "prompt_pair_consistency_per_image.csv", "prompt_pair_consistency.csv",

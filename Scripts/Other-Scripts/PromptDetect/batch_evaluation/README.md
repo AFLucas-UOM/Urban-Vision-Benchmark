@@ -26,8 +26,16 @@ The dissertation headline macro includes `class-targeted` and
 separately. Universal model comparison uses P/R/F1, matched IoU and runtime;
 Cosmos/LocateAnything constant-score AP is marked `ap_meaningful=false` and is
 never a headline ranking field. `--final` MTSD runs require the canonical
-unaugmented prepared test folder, valid prep/split hashes, explicit approved
-scope, QA-only data and a resolved QA gate.
+unaugmented prepared test folder, valid prep/split hashes, the QA-resolved
+explicit GRP-1…GRP-11 scope, QA-only data and a resolved QA gate.
+
+Online W&B tracking is enabled by default for the fixed-protocol runner. Every
+dataset × protocol stage gets one run in `MSc-MDWD-MDWD-PromptDetect` in the
+configured W&B workspace, with
+completion metrics, comparison tables, and a complete result-directory
+artifact. The local run directory remains the authoritative resumable record.
+Set `WANDB_API_KEY` in the repository-root `.env`; `--wandb-mode offline` and
+`--wandb-mode disabled` are development-only modes.
 
 ## Current research status
 

@@ -42,7 +42,9 @@ datasets:
       split: test
       require_manifest: true
       required_group_scope: explicit
-      approved_groups: [GRP-1, GRP-2, GRP-3, GRP-5, GRP-6]
+      # Keep the sensitivity protocol aligned with the canonical prepared
+      # dataset and its QA-resolved eleven-group scope.
+      approved_groups: [GRP-1, GRP-2, GRP-3, GRP-4, GRP-5, GRP-6, GRP-7, GRP-8, GRP-9, GRP-10, GRP-11]
       required_annotation_source_mode: qa_only
     class_vocabulary: [Pedestrian Crossing, Stop Sign, No Entry (One Way), Roundabout Ahead, No Through Road (T-Junction), Blind-Spot Mirror (Convex Mirror), Street Sign, Directional Sign, Tourist Sign, Auxiliary Sign, Back-Unknown, Other-Unknown]
     # "one way sign" is deliberately NOT part of mtsd-no-entry: it is not a

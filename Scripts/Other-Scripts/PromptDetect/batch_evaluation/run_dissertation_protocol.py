@@ -23,6 +23,7 @@ from protocol_reporting import generate
 from run_batch_eval import resolve_models
 from sensitivity_reporting import generate_sensitivity
 from targeted_metrics import evaluate_targeted
+from wandb_utils import log_and_finish, log_combination, start_run, tracking_target
 
 DEFAULT_PROTOCOL = HERE / "prompt_protocols" / "dissertation_protocol.yaml"
 SENSITIVITY_PROTOCOL = HERE / "prompt_protocols" / "prompt_sensitivity_protocol.yaml"
@@ -91,6 +92,9 @@ def parser() -> argparse.ArgumentParser:
     p.add_argument("--allow-qa-fallback", action="store_true", help="Development-only MTSD fallback; incompatible with --final")
     p.add_argument("--run-label")
     p.add_argument("--reports-only", type=Path)
+    p.add_argument("--wandb-mode", choices=("online", "offline", "disabled"), default="online",
+                   help="W&B tracking mode. Final evaluations must use online (default) for "
+                        "the configured PromptDetect project; offline/disabled are development-only.")
     return p
 
 
@@ -136,13 +140,20 @@ def _collect(run_dir: Path) -> tuple[list[dict], list[dict], list[dict], list[di
     return metrics, predictions, per_image, overlaps
 
 
-def reports_only(run_dir: Path) -> int:
+def reports_only(run_dir: Path, wandb_mode: str = "online") -> int:
     cfg = json.loads((run_dir / "run_config.json").read_text(encoding="utf-8"))
+    wandb_run = start_run(run_dir, cfg, wandb_mode)
     rows, predictions, per_image, overlaps = _collect(run_dir)
-    write_csv(run_dir / "predictions.csv", predictions)
-    generate(run_dir, cfg, rows, per_image, overlaps)
-    if has_sensitivity_prompts(cfg.get("prompt_definitions") or []):
-        generate_sensitivity(run_dir, cfg, rows, predictions, _image_ids_from_index(run_dir))
+    try:
+        write_csv(run_dir / "predictions.csv", predictions)
+        summary = generate(run_dir, cfg, rows, per_image, overlaps)
+        if has_sensitivity_prompts(cfg.get("prompt_definitions") or []):
+            summary = generate_sensitivity(run_dir, cfg, rows, predictions, _image_ids_from_index(run_dir))
+        log_and_finish(wandb_run, run_dir, summary)
+    except Exception:
+        if wandb_run is not None:
+            wandb_run.finish(exit_code=1)
+        raise
     print(run_dir); return 0
 
 
@@ -200,6 +211,14 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
                   "n_images": len(gt["records"]), "started_at": datetime.now(timezone.utc).isoformat()}
     write_json(run_dir / "run_config.json", run_config)
     write_csv(run_dir / "ground_truth_index.csv", ground_truth_index_rows(gt))
+    wandb_run = start_run(run_dir, run_config, args.wandb_mode)
+    run_config["wandb"] = {
+        "target": tracking_target(),
+        "mode": args.wandb_mode,
+        "run_id": getattr(wandb_run, "id", None),
+        "url": getattr(wandb_run, "url", None),
+    }
+    write_json(run_dir / "run_config.json", run_config)
 
     def prompt_identity(model: str, prompt: dict) -> dict:
         """Resume/status fingerprint; stale prompt wording or family membership invalidates a cache hit."""
@@ -236,7 +255,14 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
             if "sensitivity_family" in prompt:
                 metric["sensitivity_family"] = prompt["sensitivity_family"]
                 metric["variant_type"] = prompt["variant_type"]
-            infer = [float(row["inference_ms"]) for row in prediction_rows if row.get("inference_ms") not in (None, "")]
+            # Each detection row repeats the image-level inference time. De-dupe
+            # by image so crowded scenes do not artificially dominate runtime.
+            infer_by_image = {
+                row["image_id"]: float(row["inference_ms"])
+                for row in prediction_rows
+                if row.get("inference_ms") not in (None, "")
+            }
+            infer = list(infer_by_image.values())
             metric["mean_inference_ms"] = round(sum(infer) / len(infer), 2) if infer else None
             metric["has_confidence"] = all(str(row.get("has_confidence", True)).lower() == "true" for row in prediction_rows)
             metric["ap_meaningful"] = metric["has_confidence"]
@@ -245,9 +271,14 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
                       "target_gt_count": metric["target_gt_boxes"], "tp": metric["tp"],
                       "fp": metric["fp"], "fn": metric["fn"], "finished_at": datetime.now(timezone.utc).isoformat(), **runtime}
             write_json(directory / "status.json", status)
+            log_combination(wandb_run, metric)
         try:
-            run_models(gt, [row["prompt"] for row in pending], [model], conf, int(defaults["max_detections"]),
-                       on_combination_complete=completed)
+            model_predictions, model_statuses = run_models(
+                gt, [row["prompt"] for row in pending], [model], conf,
+                int(defaults["max_detections"]), on_combination_complete=completed,
+            )
+            run_config.setdefault("model_statuses", []).extend(model_statuses)
+            write_json(run_dir / "run_config.json", run_config)
         except Exception as exc:
             # Preserve every earlier prompt and make each unfinished combination
             # explicitly resumable instead of losing the whole model's progress.
@@ -263,10 +294,17 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
     metrics, predictions, per_image, overlaps = _collect(run_dir)
     write_csv(run_dir / "predictions.csv", predictions)
     run_config["finished_at"] = datetime.now(timezone.utc).isoformat()
-    generate(run_dir, run_config, metrics, per_image, overlaps)
-    if sensitivity:
-        generate_sensitivity(run_dir, run_config, metrics, predictions,
-                             [record["image_id"] for record in gt["records"]])
+    try:
+        summary = generate(run_dir, run_config, metrics, per_image, overlaps)
+        if sensitivity:
+            summary = generate_sensitivity(run_dir, run_config, metrics, predictions,
+                                           [record["image_id"] for record in gt["records"]])
+        write_json(run_dir / "run_config.json", run_config)
+        log_and_finish(wandb_run, run_dir, summary)
+    except Exception:
+        if wandb_run is not None:
+            wandb_run.finish(exit_code=1)
+        raise
     print(run_dir); return run_dir
 
 
@@ -274,7 +312,10 @@ def main(argv: list[str] | None = None) -> int:
     args = parser().parse_args(argv)
     if args.final and args.allow_qa_fallback:
         raise ValueError("--allow-qa-fallback is incompatible with --final")
-    if args.reports_only: return reports_only(args.reports_only)
+    if args.final and not args.dry_run and args.wandb_mode != "online":
+        raise ValueError("Final PromptDetect evaluations require --wandb-mode online so results "
+                         "are uploaded to the configured PromptDetect W&B project")
+    if args.reports_only: return reports_only(args.reports_only, args.wandb_mode)
     datasets = ["MDWD", "MTSD"] if args.dataset.lower() == "both" else [args.dataset.upper()]
     if args.resume and len(datasets) != 1: raise ValueError("--resume requires one dataset")
     # The standard both-dataset evaluation runs the classic dissertation protocol

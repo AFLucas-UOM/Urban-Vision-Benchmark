@@ -317,9 +317,9 @@
     "yolo_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Unaugmented\\MTSD-YOLO",
     "coco_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Unaugmented\\MTSD-COCO"
   },
-  "split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
+  "split_manifest_sha256": "acd4a151b032425f08ab5160f5bcd0ac55ac5dad013ad2087680119ba31a08b6",
   "augmentation_manifest_sha256": "647dbe380ef968ba9be8287e99c0c3c3fe9c15a102d4c574eff5d15ed344e590",
-  "cross_variant_split_manifest_sha256": "e35a7436a95a7f4c090f60edfc9dc45497c401997385b262bb3c571944d558ad",
+  "cross_variant_split_manifest_sha256": "acd4a151b032425f08ab5160f5bcd0ac55ac5dad013ad2087680119ba31a08b6",
   "prepared_metadata_repairs": [
     {
       "split": "train",
@@ -348,5 +348,5 @@
       "reason": "empty_image_metadata_dimension_normalization"
     }
   ],
-  "manifest_fingerprint": "53a835d8cbe2ba8b5675b0b9b51a868253cd4d225e52087ca8e8dce54fdbd33b"
+  "manifest_fingerprint": "5c72f46d8981526e1f917665dcd8d9d1e4b19123c65dddc7402ae20c3b9390d2"
 }

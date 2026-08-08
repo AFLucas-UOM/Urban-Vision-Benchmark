@@ -76,7 +76,7 @@ threshold); duplicates on an already-matched GT box stay false positives; a
 false positive overlapping a non-target object at/above the IoU threshold has
 that class recorded. All confidence/IoU/max-detection defaults, the canonical
 MTSD prepared split, QA-only enforcement, manifest and split-hash validation,
-the approved group scope, and `--final` mode behave exactly as in targeted-v1.
+the QA-resolved GRP-1…GRP-11 approved group scope, and `--final` mode behave exactly as in targeted-v1.
 
 Because prompts in one family share `target_classes`, all four variants see
 identical GT. The dry-run prints, per family, the target classes, number of

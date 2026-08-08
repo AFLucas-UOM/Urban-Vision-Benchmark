@@ -24,6 +24,8 @@ dependencies:
   - pip:
       # ---- App framework ----
       - gradio==6.19.0
+      - wandb==0.28.1
+      - python-dotenv==1.2.2
       # ---- transformers stack (Cosmos Reason2 / Qwen3-VL needs >= 4.57) ----
       - transformers==5.12.1
       - accelerate==1.14.0

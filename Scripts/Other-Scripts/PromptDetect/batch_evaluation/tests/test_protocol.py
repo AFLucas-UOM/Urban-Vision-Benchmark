@@ -10,6 +10,7 @@ from dataset_loader import _load_yolo_split
 from persistence import combination_dir, compatible_complete, write_json
 from run_dissertation_protocol import enforce_final_mtsd, main as protocol_main
 from targeted_metrics import deduplicate_union, evaluate_targeted
+from wandb_utils import start_run, tracking_target
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -24,6 +25,34 @@ def test_protocol_fixed_semantics():
     assert len(all_objects["target_classes"]) == 12
     assert all_objects["group"] == "broad" and all_objects in select_prompts(mtsd)
     assert [row["id"] for row in mtsd["prompts"] if row["group"] == "synonym-comparison"] == ["mtsd-p3", "mtsd-p4", "mtsd-p6", "mtsd-p7"]
+
+
+def test_fixed_protocols_lock_current_eleven_group_mtsd_scope():
+    expected = [f"GRP-{index}" for index in range(1, 12)]
+    for filename in ("dissertation_protocol.yaml", "prompt_sensitivity_protocol.yaml"):
+        protocol = load_protocol(ROOT / "prompt_protocols" / filename)
+        assert protocol["datasets"]["MTSD"]["source"]["approved_groups"] == expected
+
+
+def test_promptdetect_wandb_target_is_fixed_for_final_comparisons():
+    assert tracking_target() == "mark-bugeja-university-of-malta/MSc-MDWD-MDWD-PromptDetect"
+
+
+def test_wandb_init_is_pinned_to_requested_target(tmp_path, monkeypatch):
+    import wandb
+
+    captured = {}
+
+    def fake_init(**kwargs):
+        captured.update(kwargs)
+        return type("Run", (), {"id": "offline-id", "url": None})()
+
+    monkeypatch.setattr(wandb, "init", fake_init)
+    start_run(tmp_path / "run", {"dataset": "MDWD", "evaluation_protocol": "targeted-v1",
+                                  "split": "test"}, "offline")
+    assert captured["entity"] == "mark-bugeja-university-of-malta"
+    assert captured["project"] == "MSc-MDWD-MDWD-PromptDetect"
+    assert captured["mode"] == "offline"
 
 
 def test_unknown_target_rejected_before_models():
