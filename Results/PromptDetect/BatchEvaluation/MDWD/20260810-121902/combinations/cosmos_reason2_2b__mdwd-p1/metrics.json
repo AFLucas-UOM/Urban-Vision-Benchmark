@@ -1,0 +1,39 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "mdwd-p1",
+  "prompt": "black garbage bag",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Mixed Waste"
+  ],
+  "prompt_class_confusion": {
+    "Recyclable Material": 58,
+    "Organic Waste": 63,
+    "Mixed Waste": 89,
+    "Other Waste": 12,
+    "Orange CMD": 20
+  },
+  "tp": 89,
+  "fp": 218,
+  "fn": 245,
+  "duplicates": 0,
+  "precision": 0.2899,
+  "recall": 0.2665,
+  "f1": 0.2777,
+  "accuracy": 0.1612,
+  "mean_matched_iou": 0.8356,
+  "ap50": 0.0934,
+  "map50_95": 0.0544,
+  "n_gt": 334,
+  "n_images": 369,
+  "target_gt_boxes": 334,
+  "positive_images": 126,
+  "negative_images": 243,
+  "fp_overlapping_nontarget": 153,
+  "model_load_ms": 7171.3,
+  "mean_inference_ms": 1534.53,
+  "has_confidence": false,
+  "ap_meaningful": false
+}

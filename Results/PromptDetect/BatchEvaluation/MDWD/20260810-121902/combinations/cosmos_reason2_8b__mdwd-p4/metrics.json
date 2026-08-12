@@ -1,0 +1,39 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 8B",
+  "prompt_id": "mdwd-p4",
+  "prompt": "orange garbage bag",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Orange CMD"
+  ],
+  "prompt_class_confusion": {
+    "Recyclable Material": 80,
+    "Organic Waste": 91,
+    "Mixed Waste": 80,
+    "Other Waste": 17,
+    "Orange CMD": 42
+  },
+  "tp": 42,
+  "fp": 330,
+  "fn": 36,
+  "duplicates": 0,
+  "precision": 0.1129,
+  "recall": 0.5385,
+  "f1": 0.1867,
+  "accuracy": 0.1029,
+  "mean_matched_iou": 0.843,
+  "ap50": 0.133,
+  "map50_95": 0.0784,
+  "n_gt": 78,
+  "n_images": 369,
+  "target_gt_boxes": 78,
+  "positive_images": 37,
+  "negative_images": 332,
+  "fp_overlapping_nontarget": 268,
+  "model_load_ms": 16476.8,
+  "mean_inference_ms": 1905.9,
+  "has_confidence": false,
+  "ap_meaningful": false
+}

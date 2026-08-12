@@ -1,0 +1,37 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "SAM 3.1",
+  "prompt_id": "mdwd-p2",
+  "prompt": "grey recycling bag",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Recyclable Material"
+  ],
+  "prompt_class_confusion": {
+    "Mixed Waste": 14,
+    "Recyclable Material": 12,
+    "Other Waste": 4
+  },
+  "tp": 12,
+  "fp": 22,
+  "fn": 226,
+  "duplicates": 1,
+  "precision": 0.3529,
+  "recall": 0.0504,
+  "f1": 0.0882,
+  "accuracy": 0.0462,
+  "mean_matched_iou": 0.9056,
+  "ap50": 0.0196,
+  "map50_95": 0.0159,
+  "n_gt": 238,
+  "n_images": 369,
+  "target_gt_boxes": 238,
+  "positive_images": 114,
+  "negative_images": 255,
+  "fp_overlapping_nontarget": 18,
+  "model_load_ms": 6374.3,
+  "mean_inference_ms": 108.91,
+  "has_confidence": true,
+  "ap_meaningful": true
+}

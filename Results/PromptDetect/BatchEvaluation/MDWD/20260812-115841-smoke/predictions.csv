@@ -1,0 +1,2 @@
+model,prompt,image_id,image_path,x0,y0,x1,y1,score,predicted_label,has_mask,has_confidence,inference_ms,prompt_id
+SAM 3,black garbage bag,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MDWD\MDWD-YOLO26\test\images\14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,,,,,,<no detections>,False,True,550.2,mdwd-p1

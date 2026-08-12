@@ -153,12 +153,13 @@ def filter_detections(
     min_area: float = 100.0,
     max_area: float = float("inf"),
     max_detections: int = 100,
+    nms_iou_threshold: Optional[float] = None,
 ) -> Tuple[List, List, List, List]:
     """
     Keep only detections that pass confidence, area, and count constraints.
     Returns (boxes, scores, labels, masks) — all lists have matching lengths.
     """
-    out_b, out_s, out_l, out_m = [], [], [], []
+    candidates = []
     masks = masks or []
 
     for i, (box, score, label) in enumerate(zip(boxes, scores, labels)):
@@ -168,14 +169,42 @@ def filter_detections(
         area = abs((x2 - x1) * (y2 - y1))
         if area < min_area or area > max_area:
             continue
-        out_b.append(box)
-        out_s.append(score)
-        out_l.append(label)
-        out_m.append(masks[i] if i < len(masks) else None)
-        if len(out_b) >= max_detections:
+        candidates.append((i, box, float(score), label,
+                           masks[i] if i < len(masks) else None))
+
+    # Apply the cap to the strongest candidates, not merely whichever boxes a
+    # backend happened to emit first. Python's stable sort preserves generation
+    # order for confidence-less VLMs, whose scores are all 1.0.
+    candidates.sort(key=lambda item: -item[2])
+    kept = []
+    for candidate in candidates:
+        if nms_iou_threshold is not None and any(
+            _box_iou(candidate[1], old[1]) >= nms_iou_threshold for old in kept
+        ):
+            continue
+        kept.append(candidate)
+        if len(kept) >= max_detections:
             break
 
+    out_b = [item[1] for item in kept]
+    out_s = [item[2] for item in kept]
+    out_l = [item[3] for item in kept]
+    out_m = [item[4] for item in kept]
+
     return out_b, out_s, out_l, out_m
+
+
+def _box_iou(a: List[float], b: List[float]) -> float:
+    """IoU helper kept local so UI/backend filtering has no eval dependency."""
+    ax0, ay0, ax1, ay1 = (float(value) for value in a)
+    bx0, by0, bx1, by1 = (float(value) for value in b)
+    ix0, iy0 = max(ax0, bx0), max(ay0, by0)
+    ix1, iy1 = min(ax1, bx1), min(ay1, by1)
+    intersection = max(0.0, ix1 - ix0) * max(0.0, iy1 - iy0)
+    area_a = max(0.0, ax1 - ax0) * max(0.0, ay1 - ay0)
+    area_b = max(0.0, bx1 - bx0) * max(0.0, by1 - by0)
+    union = area_a + area_b - intersection
+    return intersection / union if union > 0 else 0.0
 
 
 # ---------------------------------------------------------------------------

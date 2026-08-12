@@ -162,7 +162,7 @@ def collect_promptdetect() -> tuple[list[dict], list[str]]:
         except Exception as exc:
             notes.append(f"unreadable {summary_path.relative_to(ROOT)}: {exc}")
             continue
-        if payload.get("evaluation_protocol") == "prompt-sensitivity-v1":
+        if str(payload.get("evaluation_protocol", "")).startswith("prompt-sensitivity-"):
             # Controlled paraphrase-sensitivity runs are exported separately
             # (collect_prompt_sensitivity) and never blended into this ranking.
             notes.append(f"{summary_path.parent.relative_to(ROOT)} is a prompt-sensitivity run; "

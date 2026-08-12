@@ -1,0 +1,165 @@
+{
+  "evaluation_protocol": "targeted-v1",
+  "protocol_version": "dissertation-v1",
+  "protocol_hash": "277d2761ec0d91245e17cec82ab8641939561a4c59f6897166206bd1b2f781de",
+  "dataset": "MDWD",
+  "split": "test",
+  "source": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MDWD\\MDWD-YOLO26",
+  "source_type": "yolo",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "dataset_manifest": null,
+  "models": [
+    "LocateAnything 3B"
+  ],
+  "prompt_ids": [
+    "mdwd-p1"
+  ],
+  "prompt_definitions": [
+    {
+      "id": "mdwd-p1",
+      "prompt": "black garbage bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Mixed Waste"
+      ]
+    }
+  ],
+  "approved_group_scope": null,
+  "group_scope": null,
+  "final_enforcement": {
+    "final_mode": false
+  },
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 28,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "max_detections_provenance": {
+    "value": 28,
+    "policy": "test-set-max-gt-per-image",
+    "source_split": "test",
+    "source_image_id": "AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg",
+    "source_image_gt_boxes": 28
+  },
+  "nms_iou_threshold": 0.5,
+  "execution_strategy": "isolated-model-prompt-chunks-v1",
+  "vlm_worker_chunk_size": 64,
+  "consistency_iou_threshold": 0.5,
+  "n_images": 1,
+  "started_at": "2026-08-12T09:59:20.994937+00:00",
+  "wandb": {
+    "target": "mark-bugeja-university-of-malta/MSc-MDWD-MDWD-PromptDetect",
+    "mode": "disabled",
+    "run_id": null,
+    "url": null
+  },
+  "combination_execution": [
+    {
+      "model": "LocateAnything 3B",
+      "prompt_id": "mdwd-p1",
+      "model_load_ms": 17451.6,
+      "worker_processes": 1,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 17451.6,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "finished_at": "2026-08-12T09:59:42.061641+00:00",
+  "per_prompt_metrics": [
+    {
+      "dataset": "MDWD",
+      "split": "test",
+      "model": "LocateAnything 3B",
+      "prompt_id": "mdwd-p1",
+      "prompt": "black garbage bag",
+      "prompt_group": "class-targeted",
+      "target_classes": [
+        "Mixed Waste"
+      ],
+      "prompt_class_confusion": {},
+      "max_detections": 28,
+      "max_detections_policy": "test-set-max-gt-per-image",
+      "nms_iou_threshold": 0.5,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "duplicates": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.0,
+      "mean_matched_iou": 0.0,
+      "ap50": 0.0,
+      "map50_95": 0.0,
+      "n_gt": 0,
+      "n_images": 1,
+      "target_gt_boxes": 0,
+      "positive_images": 0,
+      "negative_images": 1,
+      "fp_overlapping_nontarget": 0,
+      "model_load_ms": 17451.6,
+      "worker_processes": 1,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "mean_inference_ms": 858.3,
+      "has_confidence": false,
+      "ap_meaningful": false
+    }
+  ],
+  "per_model_summary": [
+    {
+      "model": "LocateAnything 3B",
+      "headline_prompt_groups": "class-targeted,synonym-comparison",
+      "n_headline_prompts": 1,
+      "ap_used_for_ranking": false,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.0,
+      "mean_matched_iou": 0.0,
+      "mean_inference_ms": 858.3
+    }
+  ],
+  "per_target_class_metrics": [
+    {
+      "model": "LocateAnything 3B",
+      "target_class": "Mixed Waste",
+      "best_prompt_id": "mdwd-p1",
+      "best_prompt": "black garbage bag",
+      "recall": 0.0,
+      "f1": 0.0
+    }
+  ],
+  "prompt_group_summary": [
+    {
+      "model": "LocateAnything 3B",
+      "prompt_group": "class-targeted",
+      "n_prompts": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.0,
+      "mean_matched_iou": 0.0,
+      "mean_inference_ms": 858.3
+    }
+  ],
+  "plots": [
+    "model_f1.png",
+    "precision_recall_scatter.png"
+  ],
+  "notes": [
+    "Unmatched detections are false positives, including on negative images.",
+    "AP for constant-confidence models is not a ranking-quality measure; use P/R/F1 and matched IoU."
+  ]
+}

@@ -26,6 +26,7 @@ def run_models(
     model_labels: list[str],
     conf_threshold: float,
     max_detections: int,
+    nms_iou_threshold: float | None = None,
     progress: ProgressCb | None = None,
     on_combination_complete: CombinationCb | None = None,
 ) -> tuple[list[dict], list[dict]]:
@@ -59,7 +60,8 @@ def run_models(
                 step += 1
                 notify(step / total_steps, f"{model_label} | {prompt} | {record['image_id']}")
                 try:
-                    image = np.array(Image.open(record["image_path"]).convert("RGB"))
+                    with Image.open(record["image_path"]) as opened:
+                        image = np.array(opened.convert("RGB"))
                 except Exception as exc:
                     statuses.append({"model": model_label, "ok": False,
                                      "error": f"unreadable image {record['image_id']}: {exc}"})
@@ -68,11 +70,14 @@ def run_models(
                 result = backend.predict(
                     image=image, text_prompt=prompt,
                     conf_threshold=conf_threshold, max_detections=max_detections,
+                    nms_iou_threshold=nms_iou_threshold,
                 )
                 elapsed_ms = (time.perf_counter() - started) * 1000
                 masks = result.get("masks")
                 if masks is None or len(masks) != len(result["boxes"]):
                     masks = [None] * len(result["boxes"])
+                no_detections = not result["boxes"]
+                has_confidence = result.get("has_confidence", True)
                 for box, score, label, mask in zip(
                     result["boxes"], result["scores"], result["labels"],
                     masks,
@@ -87,21 +92,25 @@ def run_models(
                         "score": round(float(score), 4),
                         "predicted_label": label,
                         "has_mask": mask is not None,
-                        "has_confidence": result.get("has_confidence", True),
+                        "has_confidence": has_confidence,
                         "inference_ms": round(elapsed_ms, 1),
                     }
                     predictions.append(row); combination_rows.append(row)
-                if not result["boxes"]:
+                if no_detections:
                     # keep a zero-detection marker so per-image timing survives
                     row = {
                         "model": model_label, "prompt": prompt,
                         "image_id": record["image_id"], "image_path": str(record["image_path"]),
                         "x0": "", "y0": "", "x1": "", "y1": "", "score": "",
                         "predicted_label": "<no detections>", "has_mask": False,
-                        "has_confidence": result.get("has_confidence", True),
+                        "has_confidence": has_confidence,
                         "inference_ms": round(elapsed_ms, 1),
                     }
                     predictions.append(row); combination_rows.append(row)
+                # Drop image-sized arrays before advancing. The isolated worker
+                # process is still the hard cleanup boundary, but this keeps a
+                # single chunk's resident set stable.
+                del result, masks, image
             if on_combination_complete:
                 on_combination_complete(model_label, prompt, combination_rows,
                                         {"model_load_ms": round(load_ms, 1)})
@@ -110,6 +119,9 @@ def run_models(
     try:
         if backend._loaded is not None:  # noqa: SLF001 - backend has no public close
             backend._loaded.engine.close()
+            backend._loaded = None
+        import gc
+        gc.collect()
     except Exception:
         pass
     return predictions, statuses
@@ -121,11 +133,14 @@ def prediction_boxes(prediction_rows: list[dict], model: str, prompt: str) -> di
     for row in prediction_rows:
         if row["model"] != model or row["prompt"] != prompt or row["x0"] == "":
             continue
+        raw_confidence = row.get("has_confidence", True)
+        has_confidence = (raw_confidence if isinstance(raw_confidence, bool) else
+                          str(raw_confidence).strip().lower() not in {"false", "0", "no"})
         grouped.setdefault(row["image_id"], []).append({
             "x0": float(row["x0"]), "y0": float(row["y0"]),
             "x1": float(row["x1"]), "y1": float(row["y1"]),
             "score": float(row["score"]) if row["score"] != "" else 0.0,
             "prompt": prompt, "predicted_label": row.get("predicted_label", prompt),
-            "has_confidence": row.get("has_confidence", True),
+            "has_confidence": has_confidence,
         })
     return grouped

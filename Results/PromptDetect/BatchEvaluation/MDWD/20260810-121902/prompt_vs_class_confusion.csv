@@ -1,0 +1,142 @@
+model,prompt_id,gt_class,matched_count
+Cosmos Reason2 2B,mdwd-p1,Recyclable Material,58
+Cosmos Reason2 2B,mdwd-p1,Organic Waste,63
+Cosmos Reason2 2B,mdwd-p1,Mixed Waste,89
+Cosmos Reason2 2B,mdwd-p1,Other Waste,12
+Cosmos Reason2 2B,mdwd-p1,Orange CMD,20
+Cosmos Reason2 2B,mdwd-p2,Organic Waste,39
+Cosmos Reason2 2B,mdwd-p2,Recyclable Material,43
+Cosmos Reason2 2B,mdwd-p2,Other Waste,8
+Cosmos Reason2 2B,mdwd-p2,Mixed Waste,56
+Cosmos Reason2 2B,mdwd-p2,Orange CMD,24
+Cosmos Reason2 2B,mdwd-p3,Mixed Waste,48
+Cosmos Reason2 2B,mdwd-p3,Organic Waste,32
+Cosmos Reason2 2B,mdwd-p3,Other Waste,11
+Cosmos Reason2 2B,mdwd-p3,Recyclable Material,33
+Cosmos Reason2 2B,mdwd-p3,Orange CMD,18
+Cosmos Reason2 2B,mdwd-p4,Recyclable Material,49
+Cosmos Reason2 2B,mdwd-p4,Organic Waste,49
+Cosmos Reason2 2B,mdwd-p4,Mixed Waste,73
+Cosmos Reason2 2B,mdwd-p4,Other Waste,13
+Cosmos Reason2 2B,mdwd-p4,Orange CMD,19
+Cosmos Reason2 2B,mdwd-p5,Recyclable Material,94
+Cosmos Reason2 2B,mdwd-p5,Mixed Waste,120
+Cosmos Reason2 2B,mdwd-p5,Organic Waste,64
+Cosmos Reason2 2B,mdwd-p5,Other Waste,19
+Cosmos Reason2 2B,mdwd-p5,Orange CMD,26
+Cosmos Reason2 2B,mdwd-p6,Recyclable Material,100
+Cosmos Reason2 2B,mdwd-p6,Mixed Waste,113
+Cosmos Reason2 2B,mdwd-p6,Other Waste,28
+Cosmos Reason2 2B,mdwd-p6,Organic Waste,66
+Cosmos Reason2 2B,mdwd-p6,Orange CMD,26
+Cosmos Reason2 8B,mdwd-p1,Recyclable Material,75
+Cosmos Reason2 8B,mdwd-p1,Organic Waste,89
+Cosmos Reason2 8B,mdwd-p1,Mixed Waste,211
+Cosmos Reason2 8B,mdwd-p1,Other Waste,7
+Cosmos Reason2 8B,mdwd-p1,Orange CMD,26
+Cosmos Reason2 8B,mdwd-p2,Recyclable Material,125
+Cosmos Reason2 8B,mdwd-p2,Organic Waste,111
+Cosmos Reason2 8B,mdwd-p2,Mixed Waste,150
+Cosmos Reason2 8B,mdwd-p2,Other Waste,12
+Cosmos Reason2 8B,mdwd-p2,Orange CMD,35
+Cosmos Reason2 8B,mdwd-p3,Recyclable Material,107
+Cosmos Reason2 8B,mdwd-p3,Organic Waste,127
+Cosmos Reason2 8B,mdwd-p3,Mixed Waste,103
+Cosmos Reason2 8B,mdwd-p3,Other Waste,22
+Cosmos Reason2 8B,mdwd-p3,Orange CMD,35
+Cosmos Reason2 8B,mdwd-p4,Recyclable Material,80
+Cosmos Reason2 8B,mdwd-p4,Organic Waste,91
+Cosmos Reason2 8B,mdwd-p4,Mixed Waste,80
+Cosmos Reason2 8B,mdwd-p4,Other Waste,17
+Cosmos Reason2 8B,mdwd-p4,Orange CMD,42
+Cosmos Reason2 8B,mdwd-p5,Recyclable Material,127
+Cosmos Reason2 8B,mdwd-p5,Organic Waste,102
+Cosmos Reason2 8B,mdwd-p5,Mixed Waste,150
+Cosmos Reason2 8B,mdwd-p5,Other Waste,24
+Cosmos Reason2 8B,mdwd-p5,Orange CMD,39
+Cosmos Reason2 8B,mdwd-p6,Recyclable Material,116
+Cosmos Reason2 8B,mdwd-p6,Organic Waste,101
+Cosmos Reason2 8B,mdwd-p6,Mixed Waste,135
+Cosmos Reason2 8B,mdwd-p6,Other Waste,21
+Cosmos Reason2 8B,mdwd-p6,Orange CMD,38
+LocateAnything 3B,mdwd-p1,Mixed Waste,240
+LocateAnything 3B,mdwd-p1,Organic Waste,16
+LocateAnything 3B,mdwd-p1,Recyclable Material,41
+LocateAnything 3B,mdwd-p1,Other Waste,15
+LocateAnything 3B,mdwd-p1,Orange CMD,2
+LocateAnything 3B,mdwd-p2,Recyclable Material,191
+LocateAnything 3B,mdwd-p2,Organic Waste,157
+LocateAnything 3B,mdwd-p2,Mixed Waste,239
+LocateAnything 3B,mdwd-p2,Other Waste,50
+LocateAnything 3B,mdwd-p2,Orange CMD,32
+LocateAnything 3B,mdwd-p3,Recyclable Material,185
+LocateAnything 3B,mdwd-p3,Organic Waste,150
+LocateAnything 3B,mdwd-p3,Mixed Waste,120
+LocateAnything 3B,mdwd-p3,Other Waste,56
+LocateAnything 3B,mdwd-p3,Orange CMD,26
+LocateAnything 3B,mdwd-p4,Organic Waste,54
+LocateAnything 3B,mdwd-p4,Mixed Waste,42
+LocateAnything 3B,mdwd-p4,Other Waste,21
+LocateAnything 3B,mdwd-p4,Recyclable Material,28
+LocateAnything 3B,mdwd-p4,Orange CMD,56
+LocateAnything 3B,mdwd-p5,Recyclable Material,196
+LocateAnything 3B,mdwd-p5,Organic Waste,136
+LocateAnything 3B,mdwd-p5,Mixed Waste,259
+LocateAnything 3B,mdwd-p5,Other Waste,113
+LocateAnything 3B,mdwd-p5,Orange CMD,44
+LocateAnything 3B,mdwd-p6,Recyclable Material,216
+LocateAnything 3B,mdwd-p6,Organic Waste,152
+LocateAnything 3B,mdwd-p6,Mixed Waste,282
+LocateAnything 3B,mdwd-p6,Other Waste,134
+LocateAnything 3B,mdwd-p6,Orange CMD,50
+SAM 3.1,mdwd-p1,Mixed Waste,311
+SAM 3.1,mdwd-p1,Other Waste,5
+SAM 3.1,mdwd-p1,Recyclable Material,7
+SAM 3.1,mdwd-p2,Mixed Waste,14
+SAM 3.1,mdwd-p2,Recyclable Material,12
+SAM 3.1,mdwd-p2,Other Waste,4
+SAM 3.1,mdwd-p3,Recyclable Material,177
+SAM 3.1,mdwd-p3,Organic Waste,140
+SAM 3.1,mdwd-p3,Mixed Waste,14
+SAM 3.1,mdwd-p3,Other Waste,19
+SAM 3.1,mdwd-p3,Orange CMD,9
+SAM 3.1,mdwd-p4,Mixed Waste,1
+SAM 3.1,mdwd-p4,Orange CMD,64
+SAM 3.1,mdwd-p4,Other Waste,1
+SAM 3.1,mdwd-p4,Recyclable Material,1
+SAM 3.1,mdwd-p5,Recyclable Material,89
+SAM 3.1,mdwd-p5,Mixed Waste,55
+SAM 3.1,mdwd-p5,Other Waste,30
+SAM 3.1,mdwd-p5,Organic Waste,25
+SAM 3.1,mdwd-p5,Orange CMD,13
+SAM 3.1,mdwd-p6,Recyclable Material,230
+SAM 3.1,mdwd-p6,Organic Waste,175
+SAM 3.1,mdwd-p6,Mixed Waste,313
+SAM 3.1,mdwd-p6,Other Waste,230
+SAM 3.1,mdwd-p6,Orange CMD,65
+SAM 3,mdwd-p1,Mixed Waste,311
+SAM 3,mdwd-p1,Other Waste,5
+SAM 3,mdwd-p1,Orange CMD,1
+SAM 3,mdwd-p1,Recyclable Material,6
+SAM 3,mdwd-p2,Mixed Waste,11
+SAM 3,mdwd-p2,Recyclable Material,8
+SAM 3,mdwd-p2,Other Waste,4
+SAM 3,mdwd-p3,Recyclable Material,158
+SAM 3,mdwd-p3,Organic Waste,137
+SAM 3,mdwd-p3,Mixed Waste,6
+SAM 3,mdwd-p3,Other Waste,14
+SAM 3,mdwd-p3,Orange CMD,8
+SAM 3,mdwd-p4,Mixed Waste,1
+SAM 3,mdwd-p4,Orange CMD,64
+SAM 3,mdwd-p4,Other Waste,1
+SAM 3,mdwd-p4,Recyclable Material,1
+SAM 3,mdwd-p5,Recyclable Material,64
+SAM 3,mdwd-p5,Other Waste,19
+SAM 3,mdwd-p5,Mixed Waste,44
+SAM 3,mdwd-p5,Organic Waste,22
+SAM 3,mdwd-p5,Orange CMD,8
+SAM 3,mdwd-p6,Recyclable Material,230
+SAM 3,mdwd-p6,Organic Waste,174
+SAM 3,mdwd-p6,Mixed Waste,314
+SAM 3,mdwd-p6,Other Waste,224
+SAM 3,mdwd-p6,Orange CMD,65

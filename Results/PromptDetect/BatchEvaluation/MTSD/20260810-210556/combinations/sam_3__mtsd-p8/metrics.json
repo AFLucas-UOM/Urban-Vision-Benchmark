@@ -1,0 +1,37 @@
+{
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "SAM 3",
+  "prompt_id": "mtsd-p8",
+  "prompt": "blind-spot convex mirror",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Blind-Spot Mirror (Convex Mirror)"
+  ],
+  "prompt_class_confusion": {
+    "Blind-Spot Mirror (Convex Mirror)": 69,
+    "Back-Unknown": 8,
+    "Other-Unknown": 1
+  },
+  "tp": 69,
+  "fp": 24,
+  "fn": 91,
+  "duplicates": 1,
+  "precision": 0.7419,
+  "recall": 0.4313,
+  "f1": 0.5455,
+  "accuracy": 0.375,
+  "mean_matched_iou": 0.9639,
+  "ap50": 0.4109,
+  "map50_95": 0.3865,
+  "n_gt": 160,
+  "n_images": 747,
+  "target_gt_boxes": 160,
+  "positive_images": 145,
+  "negative_images": 602,
+  "fp_overlapping_nontarget": 9,
+  "model_load_ms": 6530.0,
+  "mean_inference_ms": 153.64,
+  "has_confidence": true,
+  "ap_meaningful": true
+}

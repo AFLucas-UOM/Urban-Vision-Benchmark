@@ -35,7 +35,8 @@ def write_json(path: Path, payload: Any) -> None:
 # legacy expectations (hash/threshold-only) keep working; when present, a stale
 # prompt wording, target scope or sensitivity definition invalidates the cache.
 RESUME_BASE_KEYS = ("protocol_hash", "dataset_manifest_hash", "model", "prompt_id",
-                    "conf_threshold", "iou_threshold", "split")
+                    "conf_threshold", "iou_threshold", "max_detections",
+                    "max_detections_policy", "nms_iou_threshold", "split")
 RESUME_PROMPT_KEYS = ("prompt", "target_classes", "sensitivity_family", "variant_type")
 
 
@@ -47,4 +48,3 @@ def compatible_complete(path: Path, expected: dict[str, Any]) -> bool:
     differences = {key: (status.get(key), expected.get(key)) for key in keys if status.get(key) != expected.get(key)}
     if differences: raise ValueError(f"Incompatible completed combination {path}: {differences}")
     return status.get("status") == "completed"
-

@@ -166,7 +166,7 @@
       "env": "mtsd-base",
       "defaultArgs": ["--dataset", "both", "--split", "test", "--dry-run"],
       "training": false,
-      "description": "Validate the fixed targeted-v1 PromptDetect dissertation protocol for MDWD+MTSD without loading models (read-only plan)."
+      "description": "Validate the fixed targeted-v2 PromptDetect dissertation protocol for MDWD+MTSD without loading models (read-only plan)."
     },
     "PromptDetect-Dissertation-MDWD": {
       "type": "python",
@@ -174,7 +174,7 @@
       "env": "mtsd-base",
       "defaultArgs": ["--dataset", "MDWD", "--split", "test", "--final"],
       "training": true,
-      "description": "Fixed targeted-v1 PromptDetect dissertation protocol for MDWD (loads heavy inference models)."
+      "description": "Fixed targeted-v2 PromptDetect dissertation protocol for MDWD (loads heavy inference models)."
     },
     "PromptDetect-Dissertation-MTSD": {
       "type": "python",
@@ -182,7 +182,7 @@
       "env": "mtsd-base",
       "defaultArgs": ["--dataset", "MTSD", "--split", "test", "--final"],
       "training": true,
-      "description": "Fixed targeted-v1 PromptDetect dissertation protocol for prepared MTSD (loads heavy inference models)."
+      "description": "Fixed targeted-v2 PromptDetect dissertation protocol for prepared MTSD (loads heavy inference models)."
     },
     "GDPR-Compliance": {
       "type": "python",

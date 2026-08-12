@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "protocol_hash": "277d2761ec0d91245e17cec82ab8641939561a4c59f6897166206bd1b2f781de",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "model": "SAM 3",
+  "prompt_id": "mdwd-p1",
+  "prompt": "black garbage bag",
+  "target_classes": [
+    "Mixed Waste"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 28,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "target_gt_count": 0,
+  "tp": 0,
+  "fp": 0,
+  "fn": 0,
+  "finished_at": "2026-08-12T09:58:54.869779+00:00",
+  "model_load_ms": 10336.9,
+  "worker_processes": 1,
+  "worker_chunk_size": null,
+  "execution_strategy": "isolated-model-prompt-chunks-v1"
+}

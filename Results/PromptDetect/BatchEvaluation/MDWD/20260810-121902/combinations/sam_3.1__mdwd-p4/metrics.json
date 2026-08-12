@@ -1,0 +1,38 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "SAM 3.1",
+  "prompt_id": "mdwd-p4",
+  "prompt": "orange garbage bag",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Orange CMD"
+  ],
+  "prompt_class_confusion": {
+    "Mixed Waste": 1,
+    "Orange CMD": 64,
+    "Other Waste": 1,
+    "Recyclable Material": 1
+  },
+  "tp": 64,
+  "fp": 16,
+  "fn": 14,
+  "duplicates": 2,
+  "precision": 0.8,
+  "recall": 0.8205,
+  "f1": 0.8101,
+  "accuracy": 0.6809,
+  "mean_matched_iou": 0.9207,
+  "ap50": 0.7933,
+  "map50_95": 0.6888,
+  "n_gt": 78,
+  "n_images": 369,
+  "target_gt_boxes": 78,
+  "positive_images": 37,
+  "negative_images": 332,
+  "fp_overlapping_nontarget": 3,
+  "model_load_ms": 6374.3,
+  "mean_inference_ms": 108.9,
+  "has_confidence": true,
+  "ap_meaningful": true
+}

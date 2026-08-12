@@ -47,6 +47,7 @@ import json
 import logging
 import re
 import time
+import gc
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple
@@ -160,13 +161,14 @@ class _Engine:
 
     def predict_raw(
         self, image: np.ndarray, text_prompt: str, conf_threshold: float,
+        max_detections: int = 100,
     ) -> Tuple[List[List[float]], List[float], List[str], List[Optional[np.ndarray]]]:
         """Return (boxes_xyxy_pixels, scores, labels, masks)."""
         raise NotImplementedError
 
     def close(self) -> None:
         """Release resources (GPU memory, worker processes). Default: no-op."""
-        pass
+        _release_torch_memory()
 
 
 class Sam3NativeEngine(_Engine):
@@ -212,7 +214,7 @@ class Sam3NativeEngine(_Engine):
         progress(0.95, "Model loaded ✓")
 
     @torch.inference_mode()
-    def predict_raw(self, image, text_prompt, conf_threshold):
+    def predict_raw(self, image, text_prompt, conf_threshold, max_detections=100):
         pil = Image.fromarray(image).convert("RGB")
         h, w = image.shape[:2]
 
@@ -232,6 +234,10 @@ class Sam3NativeEngine(_Engine):
         ]
         labels = [text_prompt] * len(boxes)
         return boxes, scores, labels, masks
+
+    def close(self) -> None:
+        self._processor = None
+        _release_torch_memory()
 
 
 class CosmosReason2Engine(_Engine):
@@ -279,7 +285,7 @@ class CosmosReason2Engine(_Engine):
         progress(0.95, "Model loaded ✓")
 
     @torch.inference_mode()
-    def predict_raw(self, image, text_prompt, conf_threshold):
+    def predict_raw(self, image, text_prompt, conf_threshold, max_detections=100):
         pil = Image.fromarray(image).convert("RGB")
         h, w = image.shape[:2]
 
@@ -295,7 +301,11 @@ class CosmosReason2Engine(_Engine):
             return_dict=True, return_tensors="pt",
         ).to(self._model.device)
 
-        generated = self._model.generate(**inputs, max_new_tokens=1024, do_sample=False)
+        generated = self._model.generate(
+            **inputs,
+            max_new_tokens=_generation_token_budget(max_detections, tokens_per_box=20),
+            do_sample=False,
+        )
         reply = self._processor.decode(
             generated[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True
         )
@@ -304,6 +314,11 @@ class CosmosReason2Engine(_Engine):
         scores = [1.0] * len(boxes)           # VLM gives no per-box confidence
         masks: List[Optional[np.ndarray]] = []  # boxes only
         return boxes, scores, labels, masks
+
+    def close(self) -> None:
+        self._model = None
+        self._processor = None
+        _release_torch_memory()
 
 
 class LocateAnythingEngine(_Engine):
@@ -368,13 +383,17 @@ class LocateAnythingEngine(_Engine):
             self._mode = "worker"
             self._start_worker(progress)
 
-    def predict_raw(self, image, text_prompt, conf_threshold):
+    def predict_raw(self, image, text_prompt, conf_threshold, max_detections=100):
         if self._mode == "worker":
-            return self._predict_worker(image, text_prompt, conf_threshold)
-        return self._predict_inprocess(image, text_prompt, conf_threshold)
+            return self._predict_worker(image, text_prompt, conf_threshold, max_detections)
+        return self._predict_inprocess(image, text_prompt, conf_threshold, max_detections)
 
     def close(self) -> None:
         self._stop_worker()
+        self._model = None
+        self._processor = None
+        self._tokenizer = None
+        _release_torch_memory()
 
     # ------------------------------------------------------------------
     # In-process path (host transformers ~4.57)
@@ -408,6 +427,7 @@ class LocateAnythingEngine(_Engine):
         try:
             model = AutoModel.from_pretrained(
                 self.repo_id, config=config, dtype=self._dtype, trust_remote_code=True,
+                low_cpu_mem_usage=True,
             )
         except (TypeError, AttributeError) as exc:
             import transformers
@@ -425,7 +445,7 @@ class LocateAnythingEngine(_Engine):
         progress(0.95, "Model loaded ✓")
 
     @torch.inference_mode()
-    def _predict_inprocess(self, image, text_prompt, conf_threshold):
+    def _predict_inprocess(self, image, text_prompt, conf_threshold, max_detections):
         h, w = image.shape[:2]                       # original dims for box mapping
         pil = _downscale_max_side(Image.fromarray(image).convert("RGB"), self._MAX_SIDE)
 
@@ -451,7 +471,7 @@ class LocateAnythingEngine(_Engine):
             attention_mask=inputs["attention_mask"],
             image_grid_hws=inputs.get("image_grid_hws", None),
             tokenizer=self._tokenizer,
-            max_new_tokens=2048,
+            max_new_tokens=_generation_token_budget(max_detections, tokens_per_box=8),
             use_cache=True,
             generation_mode="hybrid",   # MTP w/ AR fallback (model's default)
             do_sample=False,            # deterministic for evaluation
@@ -545,7 +565,7 @@ class LocateAnythingEngine(_Engine):
         self._stop_worker()
         raise RuntimeError("LocateAnything worker did not become ready within 360s.")
 
-    def _predict_worker(self, image, text_prompt, conf_threshold):
+    def _predict_worker(self, image, text_prompt, conf_threshold, max_detections):
         import os
         import tempfile
         import urllib.request
@@ -557,6 +577,7 @@ class LocateAnythingEngine(_Engine):
 
         payload = json.dumps({
             "image_path": frame, "prompt": text_prompt, "conf": conf_threshold,
+            "max_detections": max_detections,
         }).encode("utf-8")
         req = urllib.request.Request(
             self._base_url + "/predict", data=payload,
@@ -645,6 +666,7 @@ class DetectionBackend:
             except Exception:
                 pass
             self._loaded = None
+            gc.collect()
             if self.device.startswith("cuda"):
                 try:
                     torch.cuda.empty_cache()
@@ -685,6 +707,7 @@ class DetectionBackend:
         max_detections: int = 50,
         min_area: float = 100.0,
         max_area: float = float("inf"),
+        nms_iou_threshold: Optional[float] = None,
     ) -> Dict[str, Any]:
         """
         Run the active model on one image.
@@ -710,7 +733,7 @@ class DetectionBackend:
         t_inf = time.perf_counter()
         try:
             boxes, scores, labels, masks = self._loaded.engine.predict_raw(
-                image, text_prompt, conf_threshold
+                image, text_prompt, conf_threshold, max_detections
             )
         except Exception as exc:
             logger.error("Inference failed: %s", exc, exc_info=True)
@@ -725,6 +748,7 @@ class DetectionBackend:
             min_area=min_area,
             max_area=max_area if max_area > 0 else float("inf"),
             max_detections=max_detections,
+            nms_iou_threshold=nms_iou_threshold,
         )
         t_post_end = time.perf_counter()
 
@@ -785,6 +809,21 @@ class DetectionBackend:
 # ---------------------------------------------------------------------------
 # Module-level helpers
 # ---------------------------------------------------------------------------
+
+def _generation_token_budget(max_detections: int, tokens_per_box: int) -> int:
+    """Bound VLM decoding to the number of boxes the caller can retain."""
+    return max(96, min(768, int(max_detections) * tokens_per_box + 64))
+
+
+def _release_torch_memory() -> None:
+    """Best-effort cleanup; process isolation remains the hard memory boundary."""
+    gc.collect()
+    if torch.cuda.is_available():
+        try:
+            torch.cuda.empty_cache()
+            torch.cuda.ipc_collect()
+        except Exception:
+            pass
 
 class _nullcontext:
     def __enter__(self): return None

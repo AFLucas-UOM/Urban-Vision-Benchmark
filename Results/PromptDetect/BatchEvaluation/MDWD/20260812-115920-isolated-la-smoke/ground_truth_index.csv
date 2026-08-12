@@ -1,0 +1,4 @@
+image_id,image_path,class_name,x0,y0,x1,y1
+14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MDWD\MDWD-YOLO26\test\images\14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,Recyclable Material,276.5,181.5,451.5,315.5
+14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MDWD\MDWD-YOLO26\test\images\14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,Recyclable Material,229.0,263.5,352.0,379.5
+14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,E:\2. UM-Student\MSC Dissertation\Urban-Vision-Benchmark\Datasets\MDWD\MDWD-YOLO26\test\images\14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,Recyclable Material,271.5,282.75,498.5,556.25

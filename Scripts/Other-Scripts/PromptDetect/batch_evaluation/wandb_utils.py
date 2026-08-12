@@ -176,8 +176,8 @@ def _log_final_metrics(run: Any, run_dir: Path, summary: dict[str, Any]) -> None
     """Log comparison-ready summary scalars and tables for either protocol."""
     import wandb
 
-    protocol = summary.get("evaluation_protocol", "targeted-v1")
-    if protocol == "prompt-sensitivity-v1":
+    protocol = summary.get("evaluation_protocol", "targeted-v2")
+    if str(protocol).startswith("prompt-sensitivity-"):
         table_files = (
             "prompt_sensitivity_per_prompt.csv",
             "prompt_sensitivity_per_family.csv",

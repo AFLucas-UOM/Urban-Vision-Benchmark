@@ -1,0 +1,39 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mdwd-p1",
+  "prompt": "black garbage bag",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Mixed Waste"
+  ],
+  "prompt_class_confusion": {
+    "Mixed Waste": 240,
+    "Organic Waste": 16,
+    "Recyclable Material": 41,
+    "Other Waste": 15,
+    "Orange CMD": 2
+  },
+  "tp": 240,
+  "fp": 14574,
+  "fn": 94,
+  "duplicates": 6937,
+  "precision": 0.0162,
+  "recall": 0.7186,
+  "f1": 0.0317,
+  "accuracy": 0.0161,
+  "mean_matched_iou": 0.8859,
+  "ap50": 0.0169,
+  "map50_95": 0.0134,
+  "n_gt": 334,
+  "n_images": 369,
+  "target_gt_boxes": 334,
+  "positive_images": 126,
+  "negative_images": 243,
+  "fp_overlapping_nontarget": 1735,
+  "model_load_ms": 16190.2,
+  "mean_inference_ms": 5648.17,
+  "has_confidence": false,
+  "ap_meaningful": false
+}

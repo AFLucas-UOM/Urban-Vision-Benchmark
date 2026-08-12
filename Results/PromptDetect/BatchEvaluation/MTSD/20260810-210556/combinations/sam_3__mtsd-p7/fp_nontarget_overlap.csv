@@ -1,0 +1,4 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,mtsd-p7,T-junction sign,grp11_1ff1325d-IMG_1333.jpg,270.3,0.0,1012.15,314.64,0.3477,Street Sign,0.9599
+SAM 3,mtsd-p7,T-junction sign,grp5_a8752ff5-MelatAssefa_56_Side.jpg,0.0,0.0,1066.17,351.62,0.4297,Street Sign,0.9494
+SAM 3,mtsd-p7,T-junction sign,grp8_b1123daa-front.jpg,611.94,1392.62,1780.32,2424.18,0.3398,Stop Sign,0.9811

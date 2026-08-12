@@ -1,0 +1,45 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,mtsd-p1,pedestrian crossing sign,grp10_IMG_20251123_150542.jpg,956.8,294.39,1295.28,1435.03,0.3906,Roundabout Ahead,0.9818
+SAM 3,mtsd-p1,pedestrian crossing sign,grp10_IMG_20251125_153252.jpg,1403.35,924.24,2062.03,1487.01,0.3242,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp10_IMG_20260113_084947_261.jpg,1447.05,863.67,2365.49,1948.21,0.8867,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp10_WhatsApp Image 2025-11-16 at 17.52.28 (3).jpeg,424.99,704.79,882.33,1083.26,0.3613,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp11_3a5a4d41-Pre_2026_6633.jpg,816.79,1286.57,905.64,1389.34,0.8203,,0.0121
+SAM 3,mtsd-p1,pedestrian crossing sign,grp11_93c9acc6-Pre_2026_6752.jpg,2353.96,529.09,3284.8,1172.34,0.3945,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp11_daaadabb-IMG_1451.jpg,1008.28,313.97,1669.71,1190.48,0.3086,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp11_ee2f066e-IMG_20251125_194701.jpg,1113.08,2593.97,1267.64,2762.01,0.4941,Directional Sign,0.954
+SAM 3,mtsd-p1,pedestrian crossing sign,grp1_094f8a9f-RV__2.jpeg,1337.39,2197.9,1687.89,2909.79,0.375,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp1_8d820602-IMG_4687.jpeg,1408.61,1851.83,1794.43,3027.8,0.4199,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp1_8fe876b9-IMG_4754.jpeg,1778.92,1634.87,2185.15,2781.09,0.3223,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp1_db486299-IMG_5815.jpeg,986.73,1465.31,2174.81,2503.87,0.4902,No Through Road (T-Junction),0.9709
+SAM 3,mtsd-p1,pedestrian crossing sign,grp2_e55dea8e-MP_0157.jpg,1282.63,1300.0,2015.51,2021.9,0.5547,No Through Road (T-Junction),0.9731
+SAM 3,mtsd-p1,pedestrian crossing sign,grp4_20251231_160545.jpg,1230.05,1419.2,1571.8,2420.52,0.625,No Through Road (T-Junction),0.9235
+SAM 3,mtsd-p1,pedestrian crossing sign,grp4_20251231_160556.jpg,1846.01,1933.45,2038.35,2508.32,0.5859,No Through Road (T-Junction),0.9565
+SAM 3,mtsd-p1,pedestrian crossing sign,grp4_8bd079ee-20260107_105937.jpg,601.65,1237.7,986.17,1574.98,0.3184,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp4_abe76f20-20260109_124535.jpg,749.47,285.44,2095.96,2611.68,0.3105,No Through Road (T-Junction),0.9713
+SAM 3,mtsd-p1,pedestrian crossing sign,grp4_d1c1ed24-20260113_130204.jpg,1055.61,1572.18,1835.4,2330.98,0.4824,No Through Road (T-Junction),0.9676
+SAM 3,mtsd-p1,pedestrian crossing sign,grp4_e63ad5ed-WhatsApp_Image_2026-01-14_at_11.10.19_1.jpeg,535.38,758.97,902.83,1120.59,0.3438,No Through Road (T-Junction),0.9772
+SAM 3,mtsd-p1,pedestrian crossing sign,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1065.46,2731.27,1183.57,2856.07,0.377,Other-Unknown,0.9651
+SAM 3,mtsd-p1,pedestrian crossing sign,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,1370.64,1069.81,2156.6,1389.36,0.6016,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp5_704b34ba-BenTaliana_38_Side.jpeg,707.61,1735.33,1148.59,2404.35,0.3652,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp5_9c857801-BenTaliana_43_Side.jpeg,2071.56,3307.71,2585.81,4946.72,0.4512,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1270.14,1772.32,1661.34,2435.98,0.3145,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1298.88,1551.62,2082.93,2319.76,0.6055,No Through Road (T-Junction),0.9711
+SAM 3,mtsd-p1,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1075.33,1668.88,1872.88,2400.62,0.6758,No Through Road (T-Junction),0.9741
+SAM 3,mtsd-p1,pedestrian crossing sign,grp6_255dc793-IMG_0327.JPG,903.15,1571.13,3540.96,2065.64,0.4941,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp6_b1f0ac5c-IMG_0227.JPG,1033.32,692.71,2346.73,2108.52,0.6914,,0.2745
+SAM 3,mtsd-p1,pedestrian crossing sign,grp6_f6200360-IMG_6254.JPG,1375.86,737.95,1764.91,2200.24,0.4414,No Through Road (T-Junction),0.9505
+SAM 3,mtsd-p1,pedestrian crossing sign,grp8_06980edd-front.jpg,3161.42,2736.51,3241.36,2901.25,0.3398,Directional Sign,0.9131
+SAM 3,mtsd-p1,pedestrian crossing sign,grp8_06980edd-front.jpg,2096.12,2625.56,2136.46,2657.52,0.3379,Other-Unknown,0.8722
+SAM 3,mtsd-p1,pedestrian crossing sign,grp8_14aaa44c-IMG_0211.JPG,1749.93,1043.79,3479.04,3073.43,0.8867,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp8_3799bcb2-side.jpg,715.34,1626.0,1102.22,2227.2,0.3164,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp8_4802289d-side.jpg,1409.91,1777.09,1627.54,2401.7,0.3438,,0.0
+SAM 3,mtsd-p1,pedestrian crossing sign,grp8_562e48f6-front.jpg,1431.05,934.04,2558.68,1684.32,0.5469,No Through Road (T-Junction),0.9654
+SAM 3,mtsd-p1,pedestrian crossing sign,grp8_58176912-front.jpg,2316.37,1264.91,2352.32,1295.57,0.3789,,0.001
+SAM 3,mtsd-p1,pedestrian crossing sign,grp9_01ed8620-IMG_20251111_162316.jpg,44.5,2371.55,116.37,2420.06,0.3203,Other-Unknown,0.6052
+SAM 3,mtsd-p1,pedestrian crossing sign,grp9_3cb31cc9-IMG_20251106_141426.jpg,657.02,95.13,2527.24,1572.13,0.3301,Other-Unknown,0.9877
+SAM 3,mtsd-p1,pedestrian crossing sign,grp9_561ba1c4-IMG_20251111_162044.jpg,1882.56,2371.27,1985.68,2468.8,0.3086,Other-Unknown,0.9442
+SAM 3,mtsd-p1,pedestrian crossing sign,grp9_673470fc-IMG_20251111_160954.jpg,1367.66,2401.61,1414.68,2440.67,0.3008,Other-Unknown,0.7911
+SAM 3,mtsd-p1,pedestrian crossing sign,grp9_b775d113-IMG_20251111_162326.jpg,2756.82,2605.17,2846.94,2689.31,0.3652,Other-Unknown,0.9039
+SAM 3,mtsd-p1,pedestrian crossing sign,grp9_b775d113-IMG_20251111_162326.jpg,2771.39,2687.1,2848.22,2765.26,0.3398,Roundabout Ahead,0.8768
+SAM 3,mtsd-p1,pedestrian crossing sign,grp9_df847542-IMG_20251210_141936.jpg,2214.96,2984.59,2583.18,3332.54,0.416,Directional Sign,0.9591
+SAM 3,mtsd-p1,pedestrian crossing sign,grp9_e8b17764-ZC8_front.jpg,1198.52,2275.76,1432.17,2504.91,0.3145,,0.0

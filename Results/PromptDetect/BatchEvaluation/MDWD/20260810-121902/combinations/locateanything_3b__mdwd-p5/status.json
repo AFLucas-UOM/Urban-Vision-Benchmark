@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "protocol_hash": "6732b368e6248621b4903970e542855c70189946cfe21d3ae5c6af3bccabb33a",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mdwd-p5",
+  "prompt": "domestic waste",
+  "target_classes": [
+    "Mixed Waste",
+    "Recyclable Material",
+    "Organic Waste",
+    "Orange CMD",
+    "Other Waste"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "split": "test",
+  "target_gt_count": 1106,
+  "tp": 748,
+  "fp": 33551,
+  "fn": 358,
+  "finished_at": "2026-08-10T15:13:35.266256+00:00",
+  "model_load_ms": 16190.2
+}

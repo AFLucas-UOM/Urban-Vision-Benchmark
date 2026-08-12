@@ -1,0 +1,39 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 8B",
+  "prompt_id": "mdwd-p2",
+  "prompt": "grey recycling bag",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Recyclable Material"
+  ],
+  "prompt_class_confusion": {
+    "Recyclable Material": 125,
+    "Organic Waste": 111,
+    "Mixed Waste": 150,
+    "Other Waste": 12,
+    "Orange CMD": 35
+  },
+  "tp": 126,
+  "fp": 381,
+  "fn": 112,
+  "duplicates": 0,
+  "precision": 0.2485,
+  "recall": 0.5294,
+  "f1": 0.3383,
+  "accuracy": 0.2036,
+  "mean_matched_iou": 0.8735,
+  "ap50": 0.1653,
+  "map50_95": 0.1055,
+  "n_gt": 238,
+  "n_images": 369,
+  "target_gt_boxes": 238,
+  "positive_images": 114,
+  "negative_images": 255,
+  "fp_overlapping_nontarget": 307,
+  "model_load_ms": 16476.8,
+  "mean_inference_ms": 2498.96,
+  "has_confidence": false,
+  "ap_meaningful": false
+}

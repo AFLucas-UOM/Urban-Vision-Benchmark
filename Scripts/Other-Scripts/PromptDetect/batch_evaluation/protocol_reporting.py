@@ -71,7 +71,7 @@ def generate(run_dir: Path, run_config: dict[str, Any], combination_rows: list[d
             fig.tight_layout(); fig.savefig(run_dir / "precision_recall_scatter.png", dpi=200); plt.close(fig); plots.append("precision_recall_scatter.png")
     except ImportError:
         pass
-    summary = {**run_config, "evaluation_protocol": run_config.get("evaluation_protocol", "targeted-v1"),
+    summary = {**run_config, "evaluation_protocol": run_config.get("evaluation_protocol", "targeted-v2"),
                "per_prompt_metrics": combination_rows,
                "per_model_summary": model_rows, "per_target_class_metrics": target_rows,
                "prompt_group_summary": group_rows, "plots": plots,

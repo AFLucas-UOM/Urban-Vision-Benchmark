@@ -110,7 +110,7 @@ def test_rejects_unknown_target_class_and_wrong_family_size(tmp_path):
 
 def test_existing_protocols_still_load():
     classic = load_protocol(ROOT / "prompt_protocols/dissertation_protocol.yaml")
-    assert classic["protocol_version"] == "dissertation-v1"
+    assert classic["protocol_version"] == "dissertation-v2"
     sensitivity = load_protocol(ROOT / "prompt_protocols/prompt_sensitivity_protocol.yaml")
     prompts = [row for spec in sensitivity["datasets"].values() for row in spec["prompts"]]
     families = {}
@@ -260,7 +260,7 @@ def _synthetic_sensitivity_run(tmp_path):
     prompts = _family()
     run_dir = tmp_path / "run"
     run_dir.mkdir()
-    cfg = {"evaluation_protocol": "prompt-sensitivity-v1", "protocol_version": "prompt-sensitivity-v1",
+    cfg = {"evaluation_protocol": "prompt-sensitivity-v2", "protocol_version": "prompt-sensitivity-v2",
            "protocol_hash": "hash", "dataset_manifest_hash": "manifest", "dataset": "MDWD", "split": "test",
            "models": ["M"], "conf_threshold": 0.3, "iou_threshold": 0.5, "consistency_iou_threshold": 0.5,
            "max_detections": 100, "prompt_definitions": prompts,
@@ -306,7 +306,7 @@ def test_reports_only_regenerates_sensitivity_outputs(tmp_path):
                  "prompt_sensitivity_summary.json", "prompt_sensitivity_report.md"):
         assert (run_dir / name).is_file(), f"missing {name}"
     summary = json.loads((run_dir / "prompt_sensitivity_summary.json").read_text(encoding="utf-8"))
-    assert summary["evaluation_protocol"] == "prompt-sensitivity-v1"
+    assert summary["evaluation_protocol"] == "prompt-sensitivity-v2"
     family = summary["per_family_sensitivity"][0]
     assert family["sensitivity_family"] == "famA" and family["n_prompts"] == 4
     # img1: all four prompts predicted the identical box; img2: nobody predicted.
@@ -336,7 +336,7 @@ def test_targeted_v1_outputs_not_removed_or_renamed(tmp_path):
                  "evaluation_summary.json", "dissertation_report.md"):
         assert (tmp_path / name).exists(), f"missing {name}"
     summary = json.loads((tmp_path / "evaluation_summary.json").read_text(encoding="utf-8"))
-    assert summary["evaluation_protocol"] == "targeted-v1"  # default label preserved
+    assert summary["evaluation_protocol"] == "targeted-v2"  # default label preserved
 
 
 def test_resume_rejects_stale_prompt_definition(tmp_path):

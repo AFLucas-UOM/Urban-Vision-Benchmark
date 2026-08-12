@@ -1,0 +1,2 @@
+model,prompt_id,prompt,image_id,n_gt,n_pred,tp,fp,fn,duplicates,precision,recall,f1,accuracy
+LocateAnything 3B,mdwd-p1,black garbage bag,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,0,0,0,0,0,0,0.0,0.0,0.0,0.0

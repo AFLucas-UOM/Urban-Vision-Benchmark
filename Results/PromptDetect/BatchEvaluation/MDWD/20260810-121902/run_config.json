@@ -1,0 +1,154 @@
+{
+  "evaluation_protocol": "targeted-v1",
+  "protocol_version": "dissertation-v1",
+  "protocol_hash": "6732b368e6248621b4903970e542855c70189946cfe21d3ae5c6af3bccabb33a",
+  "dataset": "MDWD",
+  "split": "test",
+  "source": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MDWD\\MDWD-YOLO26",
+  "source_type": "yolo",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "dataset_manifest": null,
+  "models": [
+    "SAM 3",
+    "SAM 3.1",
+    "LocateAnything 3B",
+    "Cosmos Reason2 2B",
+    "Cosmos Reason2 8B"
+  ],
+  "prompt_ids": [
+    "mdwd-p1",
+    "mdwd-p2",
+    "mdwd-p3",
+    "mdwd-p4",
+    "mdwd-p5",
+    "mdwd-p6"
+  ],
+  "prompt_definitions": [
+    {
+      "id": "mdwd-p1",
+      "prompt": "black garbage bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Mixed Waste"
+      ]
+    },
+    {
+      "id": "mdwd-p2",
+      "prompt": "grey recycling bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Recyclable Material"
+      ]
+    },
+    {
+      "id": "mdwd-p3",
+      "prompt": "white organic-waste bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Organic Waste"
+      ]
+    },
+    {
+      "id": "mdwd-p4",
+      "prompt": "orange garbage bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Orange CMD"
+      ]
+    },
+    {
+      "id": "mdwd-p5",
+      "prompt": "domestic waste",
+      "group": "broad",
+      "target_classes": [
+        "Mixed Waste",
+        "Recyclable Material",
+        "Organic Waste",
+        "Orange CMD",
+        "Other Waste"
+      ]
+    },
+    {
+      "id": "mdwd-p6",
+      "prompt": "garbage",
+      "group": "broad",
+      "target_classes": [
+        "Mixed Waste",
+        "Recyclable Material",
+        "Organic Waste",
+        "Orange CMD",
+        "Other Waste"
+      ]
+    }
+  ],
+  "approved_group_scope": null,
+  "group_scope": null,
+  "final_enforcement": {
+    "final_mode": true
+  },
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 100,
+  "consistency_iou_threshold": 0.5,
+  "n_images": 369,
+  "started_at": "2026-08-10T10:19:02.983278+00:00",
+  "wandb": {
+    "target": "mark-bugeja-university-of-malta/MSc-MDWD-MDWD-PromptDetect",
+    "mode": "online",
+    "run_id": "mdwd_targeted_v1_20260810_121902",
+    "url": "https://wandb.ai/mark-bugeja-university-of-malta/MSc-MDWD-MDWD-PromptDetect/runs/mdwd_targeted_v1_20260810_121902"
+  },
+  "model_statuses": [
+    {
+      "model": "SAM 3",
+      "model_load_ms": 8218.0,
+      "ok": true,
+      "label": "SAM 3",
+      "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3\\snapshots\\3c879f39826c281e95690f02c7821c4de09afae7\\sam3.pt",
+      "detail": "Meta sam3 builder (sam3), bf16 autocast",
+      "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+      "error": ""
+    },
+    {
+      "model": "SAM 3.1",
+      "model_load_ms": 6374.3,
+      "ok": true,
+      "label": "SAM 3.1",
+      "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+      "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+      "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+      "error": ""
+    },
+    {
+      "model": "LocateAnything 3B",
+      "model_load_ms": 16190.2,
+      "ok": true,
+      "label": "LocateAnything 3B",
+      "source": "nvidia/LocateAnything-3B",
+      "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+      "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+      "error": ""
+    },
+    {
+      "model": "Cosmos Reason2 2B",
+      "model_load_ms": 7171.3,
+      "ok": true,
+      "label": "Cosmos Reason2 2B",
+      "source": "nvidia/Cosmos-Reason2-2B",
+      "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+      "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+      "error": ""
+    },
+    {
+      "model": "Cosmos Reason2 8B",
+      "model_load_ms": 16476.8,
+      "ok": true,
+      "label": "Cosmos Reason2 8B",
+      "source": "nvidia/Cosmos-Reason2-8B",
+      "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+      "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+      "error": ""
+    }
+  ],
+  "finished_at": "2026-08-10T19:05:21.268491+00:00"
+}

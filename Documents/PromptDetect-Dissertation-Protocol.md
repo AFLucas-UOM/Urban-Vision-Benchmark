@@ -17,13 +17,32 @@ python run_dissertation_protocol.py --reports-only <run-dir>
 ```
 
 With `--dataset both` and no explicit `--protocol`, the runner executes two
-separate stages: this classic protocol (`dissertation-v1`, label `targeted-v1`)
+separate stages: this optimized classic protocol (`dissertation-v2`, label `targeted-v2`)
 followed by the controlled prompt-sensitivity protocol
-(`prompt-sensitivity-v1`), each in its own run directory with its own outputs
+(`prompt-sensitivity-v2`), each in its own run directory with its own outputs
 and reports. Pass `--protocol` to run a single protocol; see
 [PromptDetect-Prompt-Sensitivity-Protocol.md](PromptDetect-Prompt-Sensitivity-Protocol.md).
 
 Use the `mtsd-base` environment; LocateAnything delegates to `mtsd-la`. SAM checkpoints require the documented Hugging Face access. Final MTSD mode requires the canonical prepared unaugmented test split, a valid prep/split manifest, the explicit QA-resolved GRP-1…GRP-11 scope, QA-only annotations and a resolved non-overridden QA gate. It rejects QA fallback, mixed/raw-XML datasets, auto scope and stale hashes. Each model×prompt combination is persisted atomically with hashes and thresholds so an interrupted run loses no completed work.
+
+The final protocol derives its per-image detection cap from the busiest image
+in each complete canonical test split: **28 boxes for MDWD** and **18 boxes for
+MTSD**. It applies class-agnostic NMS at IoU 0.50 before the cap. Both values,
+their source image, the NMS threshold and the protocol hash are stored in the
+run configuration and combination fingerprints; results produced under the
+old 100-box policy cannot be mixed into or resumed as this protocol.
+
+Inference is process-isolated. SAM gets one fresh worker process per
+model×prompt combination. LocateAnything and Cosmos additionally split each
+combination into 64-image workers. Every worker loads one model, persists its
+chunk and exits, making process termination—not Python garbage collection—the
+RAM/VRAM cleanup boundary. Completed chunks and combinations remain resumable.
+
+Pass `--save-visualizations 10` to retain ten deterministic, outcome-stratified
+examples per model/prompt combination. Each compact sheet uses the exact target
+taxonomy and IoU matching used for scoring: matched target GT is blue, FN is
+orange, non-target GT is grey, TP predictions are green, and FP predictions are
+red. Open `visualizations/index.html` in each result directory to browse them.
 
 Headline comparison is the macro average over both `class-targeted` and
 `synonym-comparison` prompts; synonym phrasings remain independent rows. Broad

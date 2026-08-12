@@ -10,7 +10,7 @@ spawned by ``LocateAnythingEngine`` in backend.py.
 
 Protocol (localhost only, JSON):
     GET  /health   -> {"ready": bool, "error": str|null}
-    POST /predict  {"image_path","prompt","conf"}
+    POST /predict  {"image_path","prompt","conf","max_detections"}
                    -> {"boxes": [[x1,y1,x2,y2],...], "scores": [...], "labels": [...]}
     POST /shutdown -> {"ok": true}; stops the server
 """
@@ -96,7 +96,8 @@ class _Handler(BaseHTTPRequestHandler):
             req = json.loads(raw)
             image = np.array(Image.open(req["image_path"]).convert("RGB"))
             boxes, scores, labels, _masks = STATE["engine"].predict_raw(
-                image, req["prompt"], float(req.get("conf", 0.3))
+                image, req["prompt"], float(req.get("conf", 0.3)),
+                int(req.get("max_detections", 100)),
             )
             self._send(200, {"boxes": boxes, "scores": scores, "labels": labels})
         except Exception as exc:  # noqa: BLE001

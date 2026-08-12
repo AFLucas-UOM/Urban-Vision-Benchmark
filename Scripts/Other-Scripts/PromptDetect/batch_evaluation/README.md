@@ -16,8 +16,8 @@ equivalent wordings with identical target GT per family, plus prompt-pair
 prediction-consistency analysis. With `--dataset both` and no explicit
 `--protocol`, `run_dissertation_protocol.py` runs the dissertation protocol
 AND the prompt-sensitivity protocol as separate stages with separate run
-directories (`...-sensitivity`) and protocol labels (`targeted-v1` /
-`prompt-sensitivity-v1`).
+directories (`...-sensitivity`) and protocol labels (`targeted-v2` /
+`prompt-sensitivity-v2`).
 See [the protocol document](../../../../Documents/PromptDetect-Dissertation-Protocol.md)
 and [the prompt-sensitivity document](../../../../Documents/PromptDetect-Prompt-Sensitivity-Protocol.md).
 
@@ -56,9 +56,10 @@ detection-dataset preparation.
      dynamically). Before the prepared dataset exists, `train`/`valid`/`test`
      reproduce the prep notebook's seeded per-group 80/10/10 split; `all`
      evaluates every QA image.
-2. Runs each selected model sequentially (previous model is freed first),
-   feeding every image each of the 1–15 prompts. Zero prompts are accepted
-   for dry-run dataset/model sanity checks only.
+2. Runs every model×prompt in an isolated subprocess. SAM uses one worker per
+   prompt; LocateAnything/Cosmos use fresh 64-image workers so Windows reclaims
+   all model RAM/VRAM regularly. Zero prompts are accepted for dry-run
+   dataset/model sanity checks only.
 3. Matches predictions to GT boxes (greedy IoU matching, threshold
    configurable) and reports: precision, recall, F1, accuracy
    (TP/(TP+FP+FN)), AP@50, mAP@50:95, mean matched IoU, FP/FN counts,
@@ -77,6 +78,10 @@ detection-dataset preparation.
 - Each run writes to its own timestamped folder under
   `Results/PromptDetect/BatchEvaluation/<DATASET>/<timestamp>/` — previous
   results are never overwritten.
+- Fixed protocols derive the output cap from the busiest canonical test image:
+  **28 boxes/image for MDWD** and **18 for MTSD**. Class-agnostic NMS at IoU
+  0.50 runs before the cap. Cap policy and provenance are persisted and form
+  part of resume compatibility.
 
 ## CLI
 
@@ -127,11 +132,18 @@ sheet for every evaluated image/model/prompt and displays the HTML-index path.
 | `visualizations/index.html`, `visualization_index.csv` | browsable visual index and a machine-readable listing of all sheets |
 | `evaluation_summary.json` | everything above, plus model load statuses and caveats |
 
+For the v2 dissertation runner, `--save-visualizations 10` saves ten
+deterministic, TP/FP/FN-stratified examples for every model/prompt combination.
+These sheets use the prompt's target taxonomy exactly as the scorer does;
+unrelated annotated classes are grey context rather than false negatives.
+
 ## Caveats
 
 - Cosmos and LocateAnything emit no per-box confidence (the backend assigns a
   constant 1.0), so their AP@50 / mAP@50:95 collapse to the single
   precision/recall operating point — compare them on P/R/F1 instead.
+- Runs made under the former 100-box policy are historical and are not directly
+  comparable with the derived-cap + NMS protocol.
 - Masks: SAM 3/3.1 produce masks, but neither dataset has mask ground truth,
   so evaluation is box-based (`has_mask` is recorded per prediction).
 - Metrics are class-agnostic per prompt (each prompt scored against **all**

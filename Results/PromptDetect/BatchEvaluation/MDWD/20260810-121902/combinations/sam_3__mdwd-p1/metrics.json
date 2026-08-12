@@ -1,0 +1,38 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "SAM 3",
+  "prompt_id": "mdwd-p1",
+  "prompt": "black garbage bag",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Mixed Waste"
+  ],
+  "prompt_class_confusion": {
+    "Mixed Waste": 311,
+    "Other Waste": 5,
+    "Orange CMD": 1,
+    "Recyclable Material": 6
+  },
+  "tp": 311,
+  "fp": 104,
+  "fn": 23,
+  "duplicates": 17,
+  "precision": 0.7494,
+  "recall": 0.9311,
+  "f1": 0.8304,
+  "accuracy": 0.71,
+  "mean_matched_iou": 0.8771,
+  "ap50": 0.8967,
+  "map50_95": 0.6899,
+  "n_gt": 334,
+  "n_images": 369,
+  "target_gt_boxes": 334,
+  "positive_images": 126,
+  "negative_images": 243,
+  "fp_overlapping_nontarget": 12,
+  "model_load_ms": 8218.0,
+  "mean_inference_ms": 111.19,
+  "has_confidence": true,
+  "ap_meaningful": true
+}

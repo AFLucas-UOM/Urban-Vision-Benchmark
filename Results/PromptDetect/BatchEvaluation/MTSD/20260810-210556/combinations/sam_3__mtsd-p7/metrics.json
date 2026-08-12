@@ -1,0 +1,36 @@
+{
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "SAM 3",
+  "prompt_id": "mtsd-p7",
+  "prompt": "T-junction sign",
+  "prompt_group": "synonym-comparison",
+  "target_classes": [
+    "No Through Road (T-Junction)"
+  ],
+  "prompt_class_confusion": {
+    "Street Sign": 2,
+    "Stop Sign": 1
+  },
+  "tp": 0,
+  "fp": 3,
+  "fn": 61,
+  "duplicates": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "accuracy": 0.0,
+  "mean_matched_iou": 0.0,
+  "ap50": 0.0,
+  "map50_95": 0.0,
+  "n_gt": 61,
+  "n_images": 747,
+  "target_gt_boxes": 61,
+  "positive_images": 57,
+  "negative_images": 690,
+  "fp_overlapping_nontarget": 3,
+  "model_load_ms": 6530.0,
+  "mean_inference_ms": 153.12,
+  "has_confidence": true,
+  "ap_meaningful": true
+}

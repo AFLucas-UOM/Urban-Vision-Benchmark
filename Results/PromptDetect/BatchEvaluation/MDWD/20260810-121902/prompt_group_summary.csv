@@ -1,0 +1,11 @@
+model,prompt_group,n_prompts,precision,recall,f1,accuracy,mean_matched_iou,mean_inference_ms
+Cosmos Reason2 2B,broad,2,0.8099,0.2965,0.4341,0.2772,0.8508,1966.15
+Cosmos Reason2 2B,class-targeted,4,0.1752,0.2177,0.1857,0.1035,0.8482,1414.7925
+Cosmos Reason2 8B,broad,2,0.7926,0.3856,0.5188,0.3503,0.861,2659.99
+Cosmos Reason2 8B,class-targeted,4,0.2589,0.6033,0.3522,0.2192,0.8508,2336.8975
+LocateAnything 3B,broad,2,0.0241,0.7152,0.0465,0.0239,0.8753,13240.815
+LocateAnything 3B,class-targeted,4,0.008,0.7715,0.0157,0.0079,0.8891,8302.045
+SAM 3,broad,2,0.6255,0.5262,0.4146,0.2766,0.874,113.99
+SAM 3,class-targeted,4,0.5681,0.6387,0.5584,0.4475,0.8964,109.1775
+SAM 3.1,broad,2,0.6115,0.5538,0.4453,0.2964,0.8736,112.935
+SAM 3.1,class-targeted,4,0.5607,0.6471,0.5526,0.4369,0.8969,109.3525

@@ -1,0 +1,2 @@
+model,prompt_group,n_prompts,precision,recall,f1,accuracy,mean_matched_iou,mean_inference_ms
+LocateAnything 3B,class-targeted,1,0.0,0.0,0.0,0.0,0.0,858.3

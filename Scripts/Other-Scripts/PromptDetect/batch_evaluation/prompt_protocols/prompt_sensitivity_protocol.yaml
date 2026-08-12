@@ -7,8 +7,14 @@
 # superclass prompts stay in dissertation_protocol.yaml and are never mixed
 # into these statistics. Model definitions, thresholds, dataset sources and
 # vocabularies are copied verbatim from dissertation_protocol.yaml.
-protocol_version: prompt-sensitivity-v1
-defaults: {conf_threshold: 0.30, iou_threshold: 0.5, max_detections: 100}
+protocol_version: prompt-sensitivity-v2
+defaults:
+  conf_threshold: 0.30
+  iou_threshold: 0.5
+  max_detections_policy: test-set-max-gt-per-image
+  nms_iou_threshold: 0.5
+  vlm_worker_chunk_size: 64
+  visualizations_per_combination: 10
 models:
   primary: [sam3, sam3.1, locateanything, cosmos2b, cosmos8b]
   optional_heavy: [cosmos32b]

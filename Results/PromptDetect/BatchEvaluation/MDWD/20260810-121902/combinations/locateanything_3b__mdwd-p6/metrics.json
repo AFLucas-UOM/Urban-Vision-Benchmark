@@ -1,0 +1,43 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mdwd-p6",
+  "prompt": "garbage",
+  "prompt_group": "broad",
+  "target_classes": [
+    "Mixed Waste",
+    "Recyclable Material",
+    "Organic Waste",
+    "Orange CMD",
+    "Other Waste"
+  ],
+  "prompt_class_confusion": {
+    "Recyclable Material": 216,
+    "Organic Waste": 152,
+    "Mixed Waste": 282,
+    "Other Waste": 134,
+    "Orange CMD": 50
+  },
+  "tp": 834,
+  "fp": 30863,
+  "fn": 272,
+  "duplicates": 6084,
+  "precision": 0.0263,
+  "recall": 0.7541,
+  "f1": 0.0508,
+  "accuracy": 0.0261,
+  "mean_matched_iou": 0.8754,
+  "ap50": 0.0253,
+  "map50_95": 0.0182,
+  "n_gt": 1106,
+  "n_images": 369,
+  "target_gt_boxes": 1106,
+  "positive_images": 369,
+  "negative_images": 0,
+  "fp_overlapping_nontarget": 0,
+  "model_load_ms": 16190.2,
+  "mean_inference_ms": 13295.63,
+  "has_confidence": false,
+  "ap_meaningful": false
+}

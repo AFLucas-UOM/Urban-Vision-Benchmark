@@ -1,0 +1,31 @@
+{
+  "status": "completed",
+  "protocol_hash": "6732b368e6248621b4903970e542855c70189946cfe21d3ae5c6af3bccabb33a",
+  "dataset_manifest_hash": "94e139cfa52a4c4c5043d146b7ea996b0b0d8cf7439d09f029d8f61d5dcebace",
+  "model": "SAM 3",
+  "prompt_id": "mtsd-p13",
+  "prompt": "roadside traffic-control object",
+  "target_classes": [
+    "Pedestrian Crossing",
+    "Stop Sign",
+    "No Entry (One Way)",
+    "Roundabout Ahead",
+    "No Through Road (T-Junction)",
+    "Blind-Spot Mirror (Convex Mirror)",
+    "Street Sign",
+    "Directional Sign",
+    "Tourist Sign",
+    "Auxiliary Sign",
+    "Back-Unknown",
+    "Other-Unknown"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "split": "test",
+  "target_gt_count": 1978,
+  "tp": 302,
+  "fp": 526,
+  "fn": 1676,
+  "finished_at": "2026-08-10T19:51:32.334794+00:00",
+  "model_load_ms": 6530.0
+}

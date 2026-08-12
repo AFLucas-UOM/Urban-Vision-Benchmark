@@ -75,9 +75,14 @@ def available_models() -> dict[str, str]:
 
 # Matching / metrics defaults -----------------------------------------------------
 CONF_THRESHOLD = 0.30
-MAX_DETECTIONS = 100
+MAX_DETECTIONS = 28  # fallback only; final protocols derive this per test set
 IOU_MATCH_THRESHOLD = 0.5          # TP threshold for P/R/F1
 MAP_IOU_RANGE = [round(0.5 + 0.05 * i, 2) for i in range(10)]  # 0.50 .. 0.95
+
+# Generative VLMs are reloaded in bounded image chunks. The load overhead is
+# small compared with generation time and guarantees that Windows can reclaim
+# model/checkpoint memory regularly during multi-day evaluations.
+VLM_WORKER_CHUNK_SIZE = 64
 
 
 def new_run_dir(dataset: str, run_label: str | None = None) -> Path:

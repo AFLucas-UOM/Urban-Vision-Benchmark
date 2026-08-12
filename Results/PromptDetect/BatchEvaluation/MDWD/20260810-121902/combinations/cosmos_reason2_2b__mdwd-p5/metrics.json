@@ -1,0 +1,43 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "mdwd-p5",
+  "prompt": "domestic waste",
+  "prompt_group": "broad",
+  "target_classes": [
+    "Mixed Waste",
+    "Recyclable Material",
+    "Organic Waste",
+    "Orange CMD",
+    "Other Waste"
+  ],
+  "prompt_class_confusion": {
+    "Recyclable Material": 94,
+    "Mixed Waste": 120,
+    "Organic Waste": 64,
+    "Other Waste": 19,
+    "Orange CMD": 26
+  },
+  "tp": 323,
+  "fp": 75,
+  "fn": 783,
+  "duplicates": 30,
+  "precision": 0.8116,
+  "recall": 0.292,
+  "f1": 0.4295,
+  "accuracy": 0.2735,
+  "mean_matched_iou": 0.8504,
+  "ap50": 0.2486,
+  "map50_95": 0.1537,
+  "n_gt": 1106,
+  "n_images": 369,
+  "target_gt_boxes": 1106,
+  "positive_images": 369,
+  "negative_images": 0,
+  "fp_overlapping_nontarget": 0,
+  "model_load_ms": 7171.3,
+  "mean_inference_ms": 1816.15,
+  "has_confidence": false,
+  "ap_meaningful": false
+}

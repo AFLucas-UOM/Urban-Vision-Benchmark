@@ -1,16 +1,25 @@
 from pathlib import Path
+import csv
 import hashlib
 import json
 
 import pytest
+from PIL import Image
 
 from protocol import load_protocol, select_prompts, validate_vocabulary
 from protocol_reporting import generate
 from dataset_loader import _load_yolo_split
 from persistence import combination_dir, compatible_complete, write_json
-from run_dissertation_protocol import enforce_final_mtsd, main as protocol_main
+from run_dissertation_protocol import (
+    derive_detection_limit,
+    enforce_final_mtsd,
+    main as protocol_main,
+    worker_chunk_ranges,
+)
 from targeted_metrics import deduplicate_union, evaluate_targeted
+from utils import filter_detections
 from wandb_utils import start_run, tracking_target
+from visualizations import save_visualizations
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -48,7 +57,7 @@ def test_wandb_init_is_pinned_to_requested_target(tmp_path, monkeypatch):
         return type("Run", (), {"id": "offline-id", "url": None})()
 
     monkeypatch.setattr(wandb, "init", fake_init)
-    start_run(tmp_path / "run", {"dataset": "MDWD", "evaluation_protocol": "targeted-v1",
+    start_run(tmp_path / "run", {"dataset": "MDWD", "evaluation_protocol": "targeted-v2",
                                   "split": "test"}, "offline")
     assert captured["entity"] == "mark-bugeja-university-of-malta"
     assert captured["project"] == "MSc-MDWD-MDWD-PromptDetect"
@@ -75,6 +84,80 @@ def test_deduplicated_union_is_deterministic():
     boxes = [{"x0": 0, "y0": 0, "x1": 10, "y1": 10, "score": 1},
              {"x0": 1, "y0": 1, "x1": 9, "y1": 9, "score": 1}]
     assert deduplicate_union(boxes) == [boxes[0]]
+
+
+def test_filter_detections_applies_score_order_nms_then_cap():
+    boxes = [[0, 0, 10, 10], [1, 1, 11, 11], [20, 20, 30, 30]]
+    scores = [.8, .9, .7]
+    kept, kept_scores, _, _ = filter_detections(
+        boxes, scores, ["x"] * 3, max_detections=2, nms_iou_threshold=.5,
+    )
+    assert kept == [boxes[1], boxes[2]]
+    assert kept_scores == [.9, .7]
+
+
+def test_targeted_visualization_uses_prompt_taxonomy_and_limit(tmp_path):
+    image_path = tmp_path / "sample.jpg"
+    Image.new("RGB", (200, 100), "white").save(image_path)
+    gt = {"dataset": "X", "split": "test", "records": [{
+        "image_id": "sample.jpg", "image_path": image_path,
+        "boxes": [
+            {"class_name": "target", "x0": 10, "y0": 10, "x1": 50, "y1": 50},
+            {"class_name": "other", "x0": 100, "y0": 10, "x1": 150, "y1": 50},
+        ],
+    }]}
+    predictions = [{
+        "model": "M", "prompt": "find target", "image_id": "sample.jpg",
+        "x0": 100, "y0": 10, "x1": 150, "y1": 50, "score": 1,
+        "predicted_label": "other", "has_confidence": "False",
+    }]
+    rows = save_visualizations(
+        tmp_path / "run", gt, predictions, ["M"],
+        [{"id": "p1", "prompt": "find target", "target_classes": ["target"]}],
+        .5, max_images=10,
+    )
+    assert len(rows) == 1
+    assert rows[0]["prompt_id"] == "p1"
+    assert rows[0]["tp"] == 0 and rows[0]["fp"] == 1 and rows[0]["fn"] == 1
+    assert (tmp_path / "run" / "visualizations" / "index.html").is_file()
+
+    save_visualizations(
+        tmp_path / "run", gt, [], ["M"],
+        [{"id": "p2", "prompt": "another target wording", "target_classes": ["target"]}],
+        .5, max_images=10,
+    )
+    with (tmp_path / "run" / "visualizations" / "visualization_index.csv").open(
+        encoding="utf-8", newline=""
+    ) as stream:
+        indexed = list(csv.DictReader(stream))
+    assert len(indexed) == 2
+    assert {row["prompt_id"] for row in indexed} == {"p1", "p2"}
+
+
+def test_detection_limit_is_derived_from_complete_test_gt():
+    gt = {"split": "test", "records": [
+        {"image_id": "one", "boxes": [{}]},
+        {"image_id": "busy", "boxes": [{}, {}, {}, {}]},
+    ]}
+    result = derive_detection_limit(gt, {"max_detections_policy": "test-set-max-gt-per-image"})
+    assert result == {
+        "value": 4,
+        "policy": "test-set-max-gt-per-image",
+        "source_split": "test",
+        "source_image_id": "busy",
+        "source_image_gt_boxes": 4,
+    }
+    with pytest.raises(ValueError, match="test split"):
+        derive_detection_limit({**gt, "split": "valid"},
+                               {"max_detections_policy": "test-set-max-gt-per-image"})
+
+
+def test_worker_chunks_are_aggressive_for_vlms_but_not_sam():
+    defaults = {"vlm_worker_chunk_size": 64}
+    assert worker_chunk_ranges("SAM 3", 130, defaults) == [(0, 130)]
+    assert worker_chunk_ranges("LocateAnything 3B", 130, defaults) == [
+        (0, 64), (64, 128), (128, 130),
+    ]
 
 
 def test_duplicate_prediction_and_empty_predictions():
@@ -124,7 +207,7 @@ def test_headline_includes_synonyms_but_excludes_broad_and_ap(tmp_path):
     assert headline["ap_used_for_ranking"] is False
     assert "ap50" not in headline and "map50_95" not in headline
     persisted = json.loads((tmp_path / "evaluation_summary.json").read_text())
-    assert persisted["evaluation_protocol"] == "targeted-v1" and len(persisted["per_prompt_metrics"]) == 3
+    assert persisted["evaluation_protocol"] == "targeted-v2" and len(persisted["per_prompt_metrics"]) == 3
 
 
 def test_partial_resume_skips_only_compatible_completed_combination(tmp_path):
@@ -136,6 +219,8 @@ def test_partial_resume_skips_only_compatible_completed_combination(tmp_path):
     assert not compatible_complete(combination_dir(tmp_path, "M", "two"), {**expected, "prompt_id": "two"})
     with pytest.raises(ValueError, match="Incompatible"):
         compatible_complete(directory, {**expected, "protocol_hash": "changed"})
+    with pytest.raises(ValueError, match="max_detections"):
+        compatible_complete(directory, {**expected, "max_detections": 18})
 
 
 def test_final_mtsd_refuses_qa_fallback():

@@ -1,13 +1,13 @@
 # PromptDetect Prompt-Sensitivity Protocol
 
-`prompt-sensitivity-v1` is a separate, versioned evaluation protocol
+`prompt-sensitivity-v2` is a separate, versioned evaluation protocol
 (`Scripts/Other-Scripts/PromptDetect/batch_evaluation/prompt_protocols/prompt_sensitivity_protocol.yaml`)
 that measures whether a prompt-based vision model produces stable results when
 the *same request* is expressed with semantically equivalent wording. It reuses
-the targeted-v1 evaluator unchanged (same thresholds, matching, dataset sources,
+the targeted-v2 evaluator unchanged (same thresholds, matching, dataset sources,
 final-mode enforcement) and adds sensitivity-specific aggregation, prediction
 consistency and reporting. The classic dissertation protocol
-(`dissertation-v1`, see [PromptDetect-Dissertation-Protocol.md](PromptDetect-Dissertation-Protocol.md))
+(`dissertation-v2`, see [PromptDetect-Dissertation-Protocol.md](PromptDetect-Dissertation-Protocol.md))
 is untouched and remains the headline comparison.
 
 ## Research motivation
@@ -74,9 +74,16 @@ non-target. Target-negative images are retained — any detection on them is a
 false positive. Matching is the existing greedy scheme (score order, best IoU ≥
 threshold); duplicates on an already-matched GT box stay false positives; a
 false positive overlapping a non-target object at/above the IoU threshold has
-that class recorded. All confidence/IoU/max-detection defaults, the canonical
+that class recorded. The detection cap is derived from the busiest image in
+each complete canonical test split (MDWD 28; MTSD 18), and class-agnostic NMS
+at IoU 0.50 is applied before that cap. All confidence/IoU defaults, the canonical
 MTSD prepared split, QA-only enforcement, manifest and split-hash validation,
-the QA-resolved GRP-1…GRP-11 approved group scope, and `--final` mode behave exactly as in targeted-v1.
+the QA-resolved GRP-1…GRP-11 approved group scope, and `--final` mode behave exactly as in targeted-v2.
+
+Model execution is isolated by subprocess. SAM uses one process per prompt;
+LocateAnything and Cosmos use fresh 64-image workers. This bounds RAM/VRAM
+growth during the much larger sensitivity matrix and makes partial chunks
+resumable after interruption.
 
 Because prompts in one family share `target_classes`, all four variants see
 identical GT. The dry-run prints, per family, the target classes, number of
@@ -85,7 +92,7 @@ prompts, positive/negative image counts and target GT box count; the pipeline
 
 ## Metrics
 
-Per prompt (unchanged targeted-v1 metrics): TP, FP, FN, duplicates, precision,
+Per prompt (unchanged targeted-v2 metrics): TP, FP, FN, duplicates, precision,
 recall, F1, accuracy, mean matched IoU, AP50, mAP50–95, target GT box count,
 positive/negative image counts, non-target overlap count, mean inference time,
 confidence availability, `ap_meaningful`.
@@ -157,7 +164,7 @@ Running the standard evaluation over both datasets with no explicit
 executes **two stages**: the classic dissertation protocol and then the
 prompt-sensitivity protocol, each with its own run directory (sensitivity run
 directories carry a `-sensitivity` suffix), outputs, reports and protocol
-label (`targeted-v1` vs `prompt-sensitivity-v1`).
+label (`targeted-v2` vs `prompt-sensitivity-v2`).
 
 Resume behaviour: each model × prompt combination persists atomically and is
 reused only when protocol hash, dataset manifest hash, split, thresholds,
@@ -167,7 +174,7 @@ being silently reused.
 
 ## Output files (per sensitivity run directory)
 
-All targeted-v1 outputs, plus:
+All targeted-v2 outputs, plus:
 
 | File | Contents |
 |---|---|
@@ -217,4 +224,4 @@ runs are never merged into the exploratory or targeted rankings.
 * Some backends use constant confidence, making AP unsuitable as the sole
   universal ranking measure.
 * Results apply to the tested models, prompts, datasets and prompt protocol
-  version (`prompt-sensitivity-v1`).
+  version (`prompt-sensitivity-v2`).

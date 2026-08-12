@@ -1,0 +1,39 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mdwd-p2",
+  "prompt": "grey recycling bag",
+  "prompt_group": "class-targeted",
+  "target_classes": [
+    "Recyclable Material"
+  ],
+  "prompt_class_confusion": {
+    "Recyclable Material": 191,
+    "Organic Waste": 157,
+    "Mixed Waste": 239,
+    "Other Waste": 50,
+    "Orange CMD": 32
+  },
+  "tp": 192,
+  "fp": 34485,
+  "fn": 46,
+  "duplicates": 4766,
+  "precision": 0.0055,
+  "recall": 0.8067,
+  "f1": 0.011,
+  "accuracy": 0.0055,
+  "mean_matched_iou": 0.9049,
+  "ap50": 0.0187,
+  "map50_95": 0.0167,
+  "n_gt": 238,
+  "n_images": 369,
+  "target_gt_boxes": 238,
+  "positive_images": 114,
+  "negative_images": 255,
+  "fp_overlapping_nontarget": 16418,
+  "model_load_ms": 16190.2,
+  "mean_inference_ms": 12726.3,
+  "has_confidence": false,
+  "ap_meaningful": false
+}

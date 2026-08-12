@@ -1,0 +1,43 @@
+{
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "SAM 3.1",
+  "prompt_id": "mdwd-p6",
+  "prompt": "garbage",
+  "prompt_group": "broad",
+  "target_classes": [
+    "Mixed Waste",
+    "Recyclable Material",
+    "Organic Waste",
+    "Orange CMD",
+    "Other Waste"
+  ],
+  "prompt_class_confusion": {
+    "Recyclable Material": 230,
+    "Organic Waste": 175,
+    "Mixed Waste": 313,
+    "Other Waste": 230,
+    "Orange CMD": 65
+  },
+  "tp": 1013,
+  "fp": 1365,
+  "fn": 93,
+  "duplicates": 99,
+  "precision": 0.426,
+  "recall": 0.9159,
+  "f1": 0.5815,
+  "accuracy": 0.41,
+  "mean_matched_iou": 0.8761,
+  "ap50": 0.8465,
+  "map50_95": 0.6505,
+  "n_gt": 1106,
+  "n_images": 369,
+  "target_gt_boxes": 1106,
+  "positive_images": 369,
+  "negative_images": 0,
+  "fp_overlapping_nontarget": 0,
+  "model_load_ms": 6374.3,
+  "mean_inference_ms": 116.16,
+  "has_confidence": true,
+  "ap_meaningful": true
+}
