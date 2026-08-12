@@ -55,7 +55,8 @@ def yolo_batch_plan(training: dict[str, Any], image_size: int) -> dict[str, int]
 def train(spec: ModelSpec, checkpoint: Path, dataset_yaml: Path, run_dir: Path,
           training: dict[str, Any], smoke: bool = False, wandb_run: Any = None,
           wandb_log_interval_steps: int = 100,
-          skip_post_training_evaluation: bool = False) -> dict[str, Any]:
+          skip_post_training_evaluation: bool = False,
+          defer_test_evaluation: bool = False) -> dict[str, Any]:
     from ultralytics import YOLO
     if run_dir.exists(): raise FileExistsError(f"Immutable run directory already exists: {run_dir}")
     model = YOLO(str(checkpoint))
@@ -83,7 +84,8 @@ def train(spec: ModelSpec, checkpoint: Path, dataset_yaml: Path, run_dir: Path,
     evaluation_started = time.perf_counter()
     if not skip_post_training_evaluation:
         best_model = YOLO(str(best))
-        for split in ("val", "test"):
+        splits = ("val",) if defer_test_evaluation else ("val", "test")
+        for split in splits:
             metrics = best_model.val(data=str(dataset_yaml), split=split, imgsz=image_size,
                                      batch=batch_plan["physical_batch"], device=device)
             native[split] = dict(getattr(metrics, "results_dict", {}) or {})
@@ -97,4 +99,5 @@ def train(spec: ModelSpec, checkpoint: Path, dataset_yaml: Path, run_dir: Path,
             "native_metrics": native, "training_summary": training_summary,
             "train_args": args, "batch_plan": batch_plan,
             "post_training_evaluation_skipped": skip_post_training_evaluation,
+            "test_evaluation_deferred": defer_test_evaluation,
             "result_type": type(result).__name__}

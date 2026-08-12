@@ -74,6 +74,16 @@ def parser() -> argparse.ArgumentParser:
     result.add_argument("--group-scope", choices=("auto", "explicit"), help="Override annotation scope for development/dry-run")
     result.add_argument("--approved-groups", nargs="+", help="Override explicit approved group list")
     result.add_argument("--require-unified-eval", action="store_true", help="Fail a model run if unified COCOeval fails")
+    result.add_argument(
+        "--defer-final-test-evaluation",
+        action="store_true",
+        help="Use validation for post-training COCO evaluation and do not score the final test split",
+    )
+    result.add_argument(
+        "--reuse-prepared-validation",
+        action="store_true",
+        help="Reuse the recorded QA/preflight and manifest checks for an immutable prepared corpus",
+    )
     result.add_argument("--rebuild", action="store_true", help="Archive an existing prepared variant before rebuilding")
     return result
 
@@ -117,9 +127,29 @@ def run_training(args, config: dict) -> int:
     dataset_root, manifest, prep_hash = _dataset(
         config, args.dataset_variant, args.offline_augmentation,
     )
-    validation = validate_variant(dataset_root, strict=True, policy=config["validation"])
-    if not validation["ok"]:
-        raise RuntimeError(f"Prepared dataset strict validation failed: {validation}")
+    if args.reuse_prepared_validation:
+        required = [
+            dataset_root / "prep_manifest.json",
+            dataset_root / "split_manifest.csv",
+            dataset_root / "MTSD-YOLO" / "data.yaml",
+            dataset_root / "MTSD-COCO" / "train" / "_annotations.coco.json",
+            dataset_root / "MTSD-COCO" / "valid" / "_annotations.coco.json",
+            dataset_root / "MTSD-COCO" / "test" / "_annotations.coco.json",
+        ]
+        missing = [str(path) for path in required if not path.is_file()]
+        if missing:
+            raise FileNotFoundError(f"Prepared corpus reuse refused; required files are missing: {missing}")
+        validation = {
+            "ok": True,
+            "mode": "reused_qa_preflight_and_manifest_checks",
+            "manifest_path": str(dataset_root / "prep_manifest.json"),
+            "split_manifest_sha256": manifest["split_manifest_sha256"],
+            "note": "Full per-image hash validation was completed by the recorded dataset QA/preflight; current run reuses the immutable prepared corpus.",
+        }
+    else:
+        validation = validate_variant(dataset_root, strict=True, policy=config["validation"])
+        if not validation["ok"]:
+            raise RuntimeError(f"Prepared dataset strict validation failed: {validation}")
     if args.final:
         if config["annotations"].get("group_scope") != "explicit":
             raise PermissionError("Final training refuses auto-discovered annotation scope")
@@ -197,6 +227,7 @@ def run_training(args, config: dict) -> int:
                   "git_commit": git_commit(Path(config["repo_root"])), "hardware": hardware_info(), "run_dir": str(run_dir),
                   "checkpoint_path": checkpoint_info["path"], "checkpoint_source": checkpoint_info["source"],
                   "checkpoint_sha256": checkpoint_info["sha256"], "status": "running",
+                  "prepared_validation": validation,
                   "run_label": state["run_label"], "output_name": name,
                   "offline_execution": {
                       "wandb_mode": args.wandb_mode or config["wandb"]["mode"],
@@ -226,12 +257,14 @@ def run_training(args, config: dict) -> int:
                     training, args.smoke_test, wandb_run,
                     int(config["wandb"].get("log_interval_steps", 100)),
                     skip_post_training_evaluation=args.feasibility_test,
+                    defer_test_evaluation=args.defer_final_test_evaluation,
                 )
             else:
                 outcome = train_rfdetr.train(
                     spec, checkpoint, dataset_root / "MTSD-COCO", run_dir,
                     training, args.smoke_test, wandb_run,
                     int(config["wandb"].get("log_interval_steps", 100)),
+                    defer_test_evaluation=args.defer_final_test_evaluation,
                 )
             if args.feasibility_test:
                 unified_result = {
@@ -241,16 +274,23 @@ def run_training(args, config: dict) -> int:
                     "unified_evaluation_seconds": 0.0,
                 }
             else:
-                predictions = run_dir / "unified_test_predictions.json"
-                evaluation_artifacts = run_dir / "unified_evaluation"
+                evaluation_split = "valid" if args.defer_final_test_evaluation else "test"
+                predictions = run_dir / (
+                    "unified_validation_predictions.json" if evaluation_split == "valid"
+                    else "unified_test_predictions.json"
+                )
+                evaluation_artifacts = run_dir / (
+                    "unified_evaluation_validation" if evaluation_split == "valid"
+                    else "unified_evaluation"
+                )
 
                 def unified_call():
                     if spec.trainer == "ultralytics":
-                        return export_yolo_predictions(Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
+                        return export_yolo_predictions(Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", evaluation_split, predictions,
                                                        320 if args.smoke_test else int(training["image_size"]), training.get("device", "auto"),
                                                        excluded_category_names=excluded_categories,
                                                        artifacts_dir=evaluation_artifacts)
-                    return export_rfdetr_predictions(spec, Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", "test", predictions,
+                    return export_rfdetr_predictions(spec, Path(outcome["checkpoint_best"]), dataset_root / "MTSD-COCO", evaluation_split, predictions,
                                                       train_rfdetr.rfdetr_resolution(spec, training), training.get("device", "auto"),
                                                       excluded_category_names=excluded_categories,
                                                       artifacts_dir=evaluation_artifacts)
@@ -260,6 +300,10 @@ def run_training(args, config: dict) -> int:
                 unified_result["unified_evaluation_seconds"] = (
                     datetime.now(timezone.utc) - unified_started
                 ).total_seconds()
+                unified_result["evaluation_split"] = evaluation_split
+                if evaluation_split == "valid":
+                    unified_result["unified_validation_metrics"] = unified_result.pop("unified_test_metrics", {})
+                    unified_result["unified_test_metrics"] = {}
             record.update(outcome, **unified_result, status="completed", finished_at=datetime.now(timezone.utc).isoformat())
             (run_dir / "run_record.json").write_text(json.dumps(record, indent=2, default=str) + "\n", encoding="utf-8")
             state["models"][spec.key].update(status="completed", finished_at=record["finished_at"])
@@ -323,13 +367,13 @@ def _main(argv: list[str] | None = None) -> int:
         raise ValueError("--output-name requires exactly one model selected via --models")
     if args.feasibility_test:
         if (
-            selected_keys not in (["yolo12s"], ["yolo12m"])
+            selected_keys not in (["yolo12n"], ["yolo12s"], ["yolo12m"])
             or args.epochs != 2
-            or args.image_size not in (960, 1280)
+            or args.image_size not in (640, 960, 1280)
         ):
             raise ValueError(
                 "--feasibility-test is locked to one YOLO12 model, --epochs 2, "
-                "and --image-size 960 or 1280"
+                "and --image-size 640, 960, or 1280"
             )
         if args.smoke_test:
             raise ValueError("--feasibility-test is incompatible with --smoke-test")

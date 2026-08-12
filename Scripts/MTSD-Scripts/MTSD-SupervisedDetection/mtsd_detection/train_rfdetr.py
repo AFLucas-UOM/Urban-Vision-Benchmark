@@ -81,7 +81,8 @@ def normalize_coco_categories(dataset_dir: Path) -> list[str]:
 
 def train(spec: ModelSpec, checkpoint: Path, dataset_dir: Path, run_dir: Path,
           training: dict[str, Any], smoke: bool = False, wandb_run: Any = None,
-          wandb_log_interval_steps: int = 100) -> dict[str, Any]:
+          wandb_log_interval_steps: int = 100,
+          defer_test_evaluation: bool = False) -> dict[str, Any]:
     if run_dir.exists(): raise FileExistsError(f"Immutable run directory already exists: {run_dir}")
     normalize_coco_categories(dataset_dir)
     run_dir.mkdir(parents=True)
@@ -105,7 +106,8 @@ def train(spec: ModelSpec, checkpoint: Path, dataset_dir: Path, run_dir: Path,
                 multi_scale=True, expanded_scales=True, do_random_resize_via_padding=False,
                 square_resize_div_64=True,
                 early_stopping=True, early_stopping_patience=int(training["patience"]),
-                output_dir=str(run_dir), tensorboard=True, run_test=True, wandb=False)
+                output_dir=str(run_dir), tensorboard=True,
+                run_test=not defer_test_evaluation, wandb=False)
     result = model.train(**args)
     candidates = [run_dir / name for name in ("checkpoint_best_total.pth", "checkpoint_best_ema.pth", "checkpoint_best_regular.pth", "checkpoint.pth")]
     best = next((path for path in candidates if path.is_file()), None)
@@ -115,4 +117,5 @@ def train(spec: ModelSpec, checkpoint: Path, dataset_dir: Path, run_dir: Path,
     return {"checkpoint_best": str(best), "training_seconds": time.perf_counter() - started,
             "native_metrics": {"test": native_metrics}, "native_metrics_path": str(native_path),
             "training_summary": summarize_training(run_dir, native_metrics), "train_args": args,
-            "model_args": {"resolution": resolution, "gradient_checkpointing": True, "device": device}}
+            "model_args": {"resolution": resolution, "gradient_checkpointing": True, "device": device},
+            "test_evaluation_deferred": defer_test_evaluation}
