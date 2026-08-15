@@ -9,6 +9,9 @@
 .env
 .env.*
 !.env.example
+
+# Private agent/project status ledger; never publish this file.
+Summary.md
 # Label Studio local databases hold session/auth state and must never be
 # versioned. NOTE: Datasets/MTSD/LabelStudioShared/.../label_studio.sqlite3 was
 # committed before this rule existed and is still tracked; untrack it with
@@ -94,6 +97,24 @@ temp-*/
 exports/
 env_backups/
 scratchpad/
+
+# Regenerable MTSD report views; keep legacy root-level copies out of git.
+/mtsd_complete_experiment_matrix.csv
+/mtsd_augmentation_ablation.csv
+/mtsd_augmentation_ablation.md
+/mtsd_computational_cost.csv
+/mtsd_computational_cost.md
+/mtsd_main_scale_comparison.csv
+/mtsd_main_scale_comparison.md
+/mtsd_missing_failed_report.csv
+/mtsd_missing_failed_report.md
+/mtsd_resolution_ablation.csv
+/mtsd_resolution_ablation.md
+
+# Generated report cache; public documentation should use README.md and
+# validated result artefacts rather than an unreviewed local report dump.
+Documents/Final-Reports/MTSD-SupervisedDetection/*.csv
+Documents/Final-Reports/MTSD-SupervisedDetection/*.md
 
 # --- OS and editor metadata ----------------------------------
 .DS_Store

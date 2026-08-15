@@ -298,14 +298,14 @@ A group is **QA-approved if that file exists** (exactly one match of
 tree had QA-approved JSONs for GRP-1, GRP-2, GRP-3, GRP-5 and GRP-6 (3,098
 images / 8,372 boxes); **all eleven groups are now QA-approved** (7,482
 images / 20,509 boxes, gate resolved 2026-07-18 — see the root
-[Summary.md](../../../Summary.md)), and further groups join automatically
+the root `README.md`), and further groups join automatically
 once their `Final-QA` JSON lands (no config change needed). The completed
 six-model comparison is intentionally a **historical GRP-1--GRP-3 manifest
 snapshot** (1,971 source images and 5,273 retained crops). The completed
 16-variant size/adaptation matrix (2026-07-13) is likewise an **eight-group
 snapshot** (GRP-1--3, 5--9; 13,862 crops) — it predates the eleven-group QA
 completion. Do not rerun only for a partial scope: first finish the
-final-scope decision (Summary.md finding R2 — freeze the eight-group
+final-scope decision — freeze the eight-group
 snapshot as reported, or re-run once on the full eleven-group scope), then
 refresh the manifest and run one
 separately labelled final round. In each QA JSON:

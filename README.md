@@ -47,10 +47,10 @@ Every annotated sign carries all four attributes, which turns the detection inve
 
 ## Experimental tracks and status
 
-| Track | Scope | Status (24 July 2026) |
+| Track | Scope | Status (15 August 2026) |
 | --- | --- | --- |
 | MDWD supervised detection | YOLO11/12/26 (n–l suites) + RF-DETR | **Executed**; runs archived, leakage-checked (RF-DETR nano executed; small/medium pending) |
-| MTSD supervised detection | 13-model matrix: YOLO11/12/26 (n/s/m), YOLO26-L, RF-DETR (n/s/m) + augmentation and resolution follow-up experiments | **Executed** 19–22 July 2026; best model RF-DETR-M (mAP50-95 0.686, 11-class evaluation) — see [Summary.md §2.2](Summary.md#22-mtsd-supervised-detection--executed-13-model-matrix--follow-ups-resolution-question-open) |
+| MTSD supervised detection | 13-model matrix: YOLO11/12/26 (n/s/m), YOLO26-L, RF-DETR (n/s/m) + augmentation and resolution follow-up experiments | **Executed** 19–22 July 2026; best model RF-DETR-M (mAP50-95 0.686, 11-class evaluation). Additional final ablation work is currently in progress. |
 | Prompt-based localisation | SAM 3/3.1, LocateAnything-3B, Cosmos Reason2 2B/8B (32B opt-in) under `dissertation-v1` + `prompt-sensitivity-v1` (36 prompts, 9 paraphrase families) | Protocols implemented and pilot-verified; full fixed-protocol runs pending |
 | Attribute classification | 16-variant size/adaptation matrix over 4 backbone families × 2 sizes × frozen/adapted | **Executed** 13 July 2026 on the eight-group snapshot (13,862 crops); best variant `dinov3_vitl_lora`, test mean macro-F1 0.894 |
 | Deployment benchmark | latency / throughput / memory across all paradigms | Implemented, dry-run verified; execution pending |
@@ -98,8 +98,7 @@ Urban-Vision-Benchmark/
 │       └── PromptDetect/              # Prompt-based evaluation backend, protocols, apps
 ├── tests/                             # Launcher lifecycle tests (pipeline tests live per-package)
 ├── launch_uvb.py / launch_uvb.ps1     # Managed launcher for all interactive tools
-├── README.md                          # This file
-└── Summary.md                         # Detailed status, review findings and next steps
+└── README.md                          # Public project documentation
 ```
 
 ---
@@ -193,4 +192,4 @@ The LaTeX chapters live under [Documentation/](Documentation/) (Introduction; Ba
 
 > A. F. Lucas, *A Comparative Study of Vision-Based Perception Paradigms for Urban Waste and Infrastructure Monitoring* (working title), MSc dissertation, University of Malta, 2026. Repository: `AFLucas-UOM/Urban-Vision-Benchmark`.
 
-Please also see [Summary.md](Summary.md) for the detailed status ledger, the current repository review findings and the prioritised remaining work.
+The private, git-ignored `Summary.md` is maintained locally as an agent/project status ledger. It records what has been completed, what is in progress, evidence locations and the remaining work; it is intentionally excluded from public releases.

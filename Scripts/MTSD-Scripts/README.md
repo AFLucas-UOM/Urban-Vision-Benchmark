@@ -17,11 +17,11 @@ scope, GRP-1…GRP-11 (7,482 images / 20,509 boxes). The terminal audit is
 `MTSD-AnnotationQA/outputs/audit-20260718-113454/` (0 invalid values, 0
 unresolved duplicates). The prepared datasets (`mtsd-qa-v1-aug` /
 `mtsd-qa-v1-noaug`) and the 13-model supervised detection matrix have both
-been executed on this scope — see [Summary.md §2.2](../../Summary.md) for
-results. The attribute-classification track's completed 16-variant matrix
+been executed on this scope — see the root `README.md` and
+`Results/MTSD-Results/` for results. The attribute-classification track's completed 16-variant matrix
 still reports on an earlier eight-group snapshot (GRP-1–3, 5–9); see
 [AttributeClassification/README.md](AttributeClassification/README.md) and
-Summary.md finding R2 for that separate, still-open scope decision.
+the private local status ledger for that separate, still-open scope decision.
 
 ## Annotation path migration (`update_annotation_paths.ps1`)
 

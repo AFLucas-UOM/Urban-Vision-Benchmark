@@ -13,12 +13,14 @@
   "started_at": "2026-08-12T13:03:40.584353+00:00",
   "models": {
     "yolo26n": {
-      "status": "running",
+      "status": "completed",
       "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO26-MTSD\\FINAL_yolo26n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42",
       "started_at": "2026-08-12T13:03:40.626921+00:00",
-      "wandb_run_id": "8htci8s4"
+      "wandb_run_id": "8htci8s4",
+      "finished_at": "2026-08-12T18:06:05.291331+00:00"
     }
   },
-  "current_model": "yolo26n",
-  "final_status": "running"
+  "current_model": null,
+  "final_status": "completed",
+  "finished_at": "2026-08-12T18:06:11.572083+00:00"
 }

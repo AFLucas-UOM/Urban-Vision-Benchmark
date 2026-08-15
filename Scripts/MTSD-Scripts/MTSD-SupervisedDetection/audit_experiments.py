@@ -2,8 +2,8 @@
 
 The script intentionally only reads existing run folders, orchestration state,
 local W&B metadata, prepared-dataset manifests, and checkpoints.  It writes a
-CSV and a Markdown report at the repository root; it never edits an experiment
-directory or a dataset.
+canonical CSV at the repository root and a human-readable report under
+Documents; it never edits an experiment directory or a dataset.
 """
 from __future__ import annotations
 
@@ -29,7 +29,8 @@ REPO = HERE.parents[2]
 RUNS = REPO / "Results" / "MTSD-Runs"
 PREPARED = REPO / "Datasets" / "MTSD" / "Prepared"
 CSV_OUT = REPO / "existing_mtSD_experiment_audit.csv"
-MD_OUT = REPO / "existing_mtSD_experiment_audit.md"
+REPORT_DIR = REPO / "Documents" / "Final-Reports" / "MTSD-SupervisedDetection"
+MD_OUT = REPORT_DIR / "existing_mtSD_experiment_audit.md"
 
 CSV_FIELDS = [
     "inventory_id", "source_type", "run_path", "architecture", "model_scale",
@@ -337,6 +338,7 @@ def git_head() -> str:
 
 
 def write_report(rows: list[dict[str, Any]], datasets: dict[str, dict[str, Any]], wb_count: int, state_count: int) -> None:
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
     with CSV_OUT.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=CSV_FIELDS, extrasaction="ignore")
         writer.writeheader()
