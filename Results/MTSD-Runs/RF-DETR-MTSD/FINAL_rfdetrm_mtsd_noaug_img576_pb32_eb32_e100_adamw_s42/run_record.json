@@ -267,11 +267,11 @@
     "gradient_checkpointing": true,
     "device": "cuda"
   },
-  "test_evaluation_deferred": true,
+"test_evaluation_deferred": false,
   "unified_eval_status": "completed",
   "unified_eval_error": null,
-  "unified_evaluation_seconds": 153.220337,
-  "evaluation_split": "valid",
+"unified_evaluation_seconds": 149.24837240000488,
+"evaluation_split": "test",
   "unified_validation_metrics": {
     "map50_95": 0.6959231192017208,
     "map50": 0.802497642873443,
@@ -438,6 +438,29 @@
     "inference_throughput_images_per_second": 5.211213430338154,
     "inference_peak_vram_mib": 1263.45068359375
   },
-  "unified_test_metrics": {},
+"unified_test_metrics": {
+"map50_95": 0.6881755959952016,
+"map50": 0.792865230934019,
+"map75": 0.703341737023767,
+"ar100": 0.7560320102626599,
+"map_small": 0.08450515030069779,
+"map_medium": 0.3793732961314776,
+"map_large": 0.8816821967366575,
+"ar_small": 0.15127995567650743,
+"ar_medium": 0.5294752575855681,
+"ar_large": 0.9323229329261585,
+"precision": 0.8873591989987485,
+"recall": 0.7179746835443038,
+"f1": 0.7937307584662748,
+"f1_score_threshold": 0.41543465852737427,
+"prediction_count": 220445,
+"dropped_degenerate_predictions": 6,
+"clamped_predictions": 19962,
+"evaluator": "pycocotools.COCOeval",
+"evaluated_image_count": 747,
+"evaluated_category_count": 11,
+"excluded_category_names": ["Tourist Sign"],
+"evaluation_artifact": "Results/MTSD-Results/Unified-Evaluation-NoTourist/20260815-validation-only-noaug/RF-DETR-M-NoAug-576/evaluation_record.json"
+},
   "finished_at": "2026-08-15T05:41:39.477544+00:00"
 }

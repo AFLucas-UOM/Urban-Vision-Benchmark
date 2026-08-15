@@ -196,12 +196,12 @@
     "gradient_accumulation_steps": 8
   },
   "post_training_evaluation_skipped": false,
-  "test_evaluation_deferred": true,
+  "test_evaluation_deferred": false,
   "result_type": "DetMetrics",
   "unified_eval_status": "completed",
   "unified_eval_error": null,
-  "unified_evaluation_seconds": 76.712555,
-  "evaluation_split": "valid",
+  "unified_evaluation_seconds": 72.96509900002275,
+  "evaluation_split": "test",
   "unified_validation_metrics": {
     "map50_95": 0.712149657813753,
     "map50": 0.797440287219709,
@@ -367,6 +367,6 @@
     "inference_throughput_images_per_second": 9.979154252900956,
     "inference_peak_vram_mib": 235.107421875
   },
-  "unified_test_metrics": {},
+  "unified_test_metrics": {"map50_95": 0.6917283072438003, "map50": 0.7736367299958864, "map75": 0.7293281354344711, "ar100": 0.7518750740291065, "map_small": 0.15181237186002916, "map_medium": 0.4883470960714318, "map_large": 0.8242136829722709, "ar_small": 0.24129811759122102, "ar_medium": 0.6173273284719986, "ar_large": 0.8675391817626505, "precision": 0.85381861575179, "recall": 0.7245569620253165, "f1": 0.7838948233360724, "f1_score_threshold": 0.4011174738407135, "prediction_count": 12325, "dropped_degenerate_predictions": 0, "clamped_predictions": 0, "evaluator": "pycocotools.COCOeval", "evaluated_image_count": 749, "evaluated_category_count": 11, "excluded_category_names": ["Tourist Sign"], "evaluation_artifact": "Results/MTSD-Results/Unified-Evaluation-NoTourist/20260815-validation-only-strong/YOLO11-N-Strong-1280/evaluation_record.json"},
   "finished_at": "2026-08-12T20:14:56.020700+00:00"
 }

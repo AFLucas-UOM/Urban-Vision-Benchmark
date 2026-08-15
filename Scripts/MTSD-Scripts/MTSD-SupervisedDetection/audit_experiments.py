@@ -28,9 +28,9 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
 RUNS = REPO / "Results" / "MTSD-Runs"
 PREPARED = REPO / "Datasets" / "MTSD" / "Prepared"
-CSV_OUT = REPO / "existing_mtSD_experiment_audit.csv"
+CSV_OUT = REPO / "MTSD-SupervisedOD_ExperimentAudit.csv"
 REPORT_DIR = REPO / "Documents" / "Final-Reports" / "MTSD-SupervisedDetection"
-MD_OUT = REPORT_DIR / "existing_mtSD_experiment_audit.md"
+MD_OUT = REPORT_DIR / "MTSD-SupervisedOD_ExperimentAudit.md"
 
 CSV_FIELDS = [
     "inventory_id", "source_type", "run_path", "architecture", "model_scale",

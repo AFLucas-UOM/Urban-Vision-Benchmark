@@ -1,0 +1,183 @@
+{
+  "status": "completed",
+  "model": "rfdetr-m",
+  "label": "RF-DETR-M-Strong-576",
+  "family": "RF-DETR",
+  "scale": "m",
+  "checkpoint": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\FINAL_rfdetrm_mtsd_strong_img576_pb32_eb32_e100_adamw_s42\\checkpoint_best_total.pth",
+  "checkpoint_sha256": "6921810991b53a27767eb0b1daeec624546d9cea0518105ea3ad5807bbf1c4bf",
+  "dataset_root": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\MTSD-COCO",
+  "annotation_sha256": "d0aed866be38e6a07f4e6c461a1a2dbe4517641d5d92fd98b4d64e50f53ed9c4",
+  "excluded_categories": [
+    "Tourist Sign"
+  ],
+  "image_size": 576,
+  "evaluation_seconds": 144.96609300002456,
+  "completed_at": "2026-08-15T15:46:49.237723+00:00",
+  "metrics": {
+    "map50_95": 0.6918949465611922,
+    "map50": 0.7894924539543967,
+    "map75": 0.7086504696214335,
+    "map_small": 0.12071680358671306,
+    "map_medium": 0.3936727315071508,
+    "map_large": 0.8796537573643405,
+    "ar1": 0.6606763723108378,
+    "ar10": 0.7559557812320423,
+    "ar100": 0.767196023062828,
+    "ar_small": 0.2399161279333693,
+    "ar_medium": 0.5471592719092581,
+    "ar_large": 0.928927998851672,
+    "precision": 0.8989460632362059,
+    "recall": 0.7341772151898734,
+    "f1": 0.8082497212931996,
+    "f1_score_threshold": 0.4665292203426361,
+    "per_class": [
+      {
+        "category_id": 0,
+        "category_name": "Pedestrian Crossing",
+        "ground_truth_count": 143,
+        "ap50_95": 0.7028568222372987,
+        "ap50": 0.8445884730442007,
+        "ap75": 0.7086318574043681,
+        "ar100": 0.7804195804195804,
+        "ar50": 0.951048951048951
+      },
+      {
+        "category_id": 1,
+        "category_name": "Stop Sign",
+        "ground_truth_count": 130,
+        "ap50_95": 0.861052807209676,
+        "ap50": 0.9126803975369844,
+        "ap75": 0.8696610016411409,
+        "ar100": 0.8853846153846152,
+        "ar50": 0.9461538461538461
+      },
+      {
+        "category_id": 2,
+        "category_name": "No Entry (One Way)",
+        "ground_truth_count": 211,
+        "ap50_95": 0.8406866566915906,
+        "ap50": 0.9027766032498604,
+        "ap75": 0.8667125652584854,
+        "ar100": 0.8682464454976303,
+        "ar50": 0.9383886255924171
+      },
+      {
+        "category_id": 3,
+        "category_name": "Roundabout Ahead",
+        "ground_truth_count": 67,
+        "ap50_95": 0.7841526150164446,
+        "ap50": 0.8424743393053092,
+        "ap75": 0.8039523370277922,
+        "ar100": 0.8865671641791044,
+        "ar50": 0.9701492537313433
+      },
+      {
+        "category_id": 4,
+        "category_name": "No Through Road (T-Junction)",
+        "ground_truth_count": 61,
+        "ap50_95": 0.9475558208348399,
+        "ap50": 0.9801021446230646,
+        "ap75": 0.9711545832002556,
+        "ar100": 0.9655737704918034,
+        "ar50": 1.0
+      },
+      {
+        "category_id": 5,
+        "category_name": "Blind-Spot Mirror (Convex Mirror)",
+        "ground_truth_count": 160,
+        "ap50_95": 0.8378565989822099,
+        "ap50": 0.8927545025792173,
+        "ap75": 0.8500724084416786,
+        "ar100": 0.865625,
+        "ar50": 0.95625
+      },
+      {
+        "category_id": 6,
+        "category_name": "Street Sign",
+        "ground_truth_count": 94,
+        "ap50_95": 0.6150240439134206,
+        "ap50": 0.7175955792832439,
+        "ap75": 0.6770412291492887,
+        "ar100": 0.6957446808510638,
+        "ar50": 0.8404255319148937
+      },
+      {
+        "category_id": 7,
+        "category_name": "Directional Sign",
+        "ground_truth_count": 108,
+        "ap50_95": 0.5223332012701293,
+        "ap50": 0.710577613784505,
+        "ap75": 0.5297738669581468,
+        "ar100": 0.6361111111111112,
+        "ar50": 0.8981481481481481
+      },
+      {
+        "category_id": 9,
+        "category_name": "Auxiliary Sign",
+        "ground_truth_count": 120,
+        "ap50_95": 0.3467705654557738,
+        "ap50": 0.4775532613524382,
+        "ap75": 0.3691585155307493,
+        "ar100": 0.5366666666666666,
+        "ar50": 0.7916666666666666
+      },
+      {
+        "category_id": 10,
+        "category_name": "Back-Unknown",
+        "ground_truth_count": 661,
+        "ap50_95": 0.6403888905789428,
+        "ap50": 0.7627670100244959,
+        "ap75": 0.6428909916171843,
+        "ar100": 0.6806354009077156,
+        "ar50": 0.8260211800302572
+      },
+      {
+        "category_id": 11,
+        "category_name": "Other-Unknown",
+        "ground_truth_count": 220,
+        "ap50_95": 0.5121663899827879,
+        "ap50": 0.640547068715045,
+        "ap75": 0.5061058096066792,
+        "ar100": 0.6381818181818181,
+        "ar50": 0.8681818181818182
+      }
+    ],
+    "evaluator": "pycocotools.COCOeval",
+    "iou_thresholds": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "max_dets": [
+      1,
+      10,
+      100
+    ],
+    "prediction_count": 197981,
+    "input_prediction_count": 197981,
+    "excluded_prediction_count": 0,
+    "evaluated_image_count": 747,
+    "evaluated_category_count": 11,
+    "excluded_category_names": [
+      "Tourist Sign"
+    ],
+    "common_f1_iou": 0.5,
+    "common_f1_averaging": "micro",
+    "dropped_degenerate_predictions": 80,
+    "clamped_predictions": 17905,
+    "excluded_predictions_during_export": 26039,
+    "input_color_mode": "RGB",
+    "inference_seconds": 135.01040979998652,
+    "inference_latency_ms_per_image": 180.7368270414813,
+    "inference_throughput_images_per_second": 5.532906692948018,
+    "inference_peak_vram_mib": 1255.01318359375
+  }
+}

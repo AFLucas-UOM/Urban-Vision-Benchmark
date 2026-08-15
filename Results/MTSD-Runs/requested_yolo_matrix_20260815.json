@@ -1,0 +1,18 @@
+{
+  "started_at": "2026-08-15T17:33:48.782841+00:00",
+  "status": "running",
+  "jobs": [
+    {
+      "index": 1,
+      "model": "yolo11n",
+      "augmentation": "strong",
+      "dataset": "augmented",
+      "image_size": 640,
+      "name": "FINAL_yolo11n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42",
+      "final": true,
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO11-MTSD\\FINAL_yolo11n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42",
+      "started_at": "2026-08-15T17:33:48.782841+00:00",
+      "status": "running"
+    }
+  ]
+}
