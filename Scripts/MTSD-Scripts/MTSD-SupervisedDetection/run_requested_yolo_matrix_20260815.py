@@ -43,8 +43,6 @@ JOBS = [
      "name": "FINAL_yolo12n_mtsd_strong_img960_pb16_eb64_e100_adamw_s42", "final": True},
     {"model": "yolo12n", "augmentation": "strong", "dataset": "augmented", "image_size": 1280,
      "name": "FINAL_yolo12n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42", "final": True},
-    {"model": "yolo12s", "augmentation": "strong", "dataset": "augmented", "image_size": 1280,
-     "name": "FINAL_yolo12s_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42", "final": True},
     {"model": "yolo26n", "augmentation": "strong", "dataset": "augmented", "image_size": 640,
      "name": "FINAL_yolo26n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42", "final": True},
     {"model": "yolo26n", "augmentation": "strong", "dataset": "augmented", "image_size": 960,

@@ -1,0 +1,26 @@
+{
+  "requested_matrix": [
+    "yolo12n"
+  ],
+  "dataset_version": "mtsd-qa-v1-strong-offline-v2",
+  "prep_manifest_sha256": "c757fac0b47b1a18173ee2c5e278a4e3722c47f9a54185f2686d8a0912399f1a",
+  "split_manifest_sha256": "acd4a151b032425f08ab5160f5bcd0ac55ac5dad013ad2087680119ba31a08b6",
+  "annotation_source_mode": "qa_only",
+  "dataset_variant": "augmented",
+  "offline_augmentation_selection": "strong",
+  "config_fingerprint": "b386562dffcbea71272d3c2b8a758065e6bec8efb57506e5dd42d1ba33d4195b",
+  "run_label": "20260816-092548",
+  "started_at": "2026-08-16T07:25:48.366544+00:00",
+  "models": {
+    "yolo12n": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO12-MTSD\\FINAL_yolo12n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42",
+      "started_at": "2026-08-16T07:25:48.398386+00:00",
+      "wandb_run_id": "2l9lvm1q",
+      "finished_at": "2026-08-16T12:05:28.226403+00:00"
+    }
+  },
+  "current_model": null,
+  "final_status": "completed",
+  "finished_at": "2026-08-16T12:05:34.056797+00:00"
+}
