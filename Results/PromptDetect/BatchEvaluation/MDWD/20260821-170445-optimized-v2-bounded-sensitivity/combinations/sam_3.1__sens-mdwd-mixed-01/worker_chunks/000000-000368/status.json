@@ -1,0 +1,33 @@
+{
+  "protocol_hash": "9559386e86fe19dbcaeaec5d29f631f93c1a11a46e6317792050446236f26792",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "model": "SAM 3.1",
+  "prompt_id": "sens-mdwd-mixed-01",
+  "prompt": "black garbage bag",
+  "target_classes": [
+    "Mixed Waste"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 28,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "sensitivity_family": "mdwd-mixed-waste",
+  "variant_type": "canonical",
+  "status": "completed",
+  "execution_strategy": "isolated-model-prompt-chunks-v1",
+  "image_start": 0,
+  "image_end": 369,
+  "model_status": {
+    "model": "SAM 3.1",
+    "model_load_ms": 9119.9,
+    "ok": true,
+    "label": "SAM 3.1",
+    "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+    "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "finished_at": "2026-08-21T15:20:27.823765+00:00"
+}

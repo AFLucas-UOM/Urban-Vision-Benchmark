@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "SAM 3",
+  "prompt_id": "mtsd-p7",
+  "prompt": "T-junction sign",
+  "image_start": 0,
+  "image_end": 747,
+  "n_images": 747,
+  "n_prediction_rows": 747,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "model_status": {
+    "model": "SAM 3",
+    "model_load_ms": 8454.9,
+    "ok": true,
+    "label": "SAM 3",
+    "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3\\snapshots\\3c879f39826c281e95690f02c7821c4de09afae7\\sam3.pt",
+    "detail": "Meta sam3 builder (sam3), bf16 autocast",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-18T12:06:37.553878+00:00",
+  "finished_at": "2026-08-18T12:09:30.678672+00:00"
+}

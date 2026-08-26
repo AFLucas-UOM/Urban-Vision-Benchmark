@@ -1,0 +1,398 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_1564.jpg,1628.24,3152.27,2811.02,4796.86,0.668,Other-Unknown,0.9738
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_1564.jpg,1818.41,2041.28,2485.21,3338.45,0.3438,Stop Sign,0.97
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_1575.jpg,469.66,684.71,1077.58,1249.11,0.3145,No Entry (One Way),0.9846
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251123_141219.jpg,852.41,1167.09,1115.13,1936.68,0.5234,No Entry (One Way),0.9748
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251123_150542.jpg,956.58,292.51,1296.75,1437.11,0.7695,Roundabout Ahead,0.9812
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251123_150542.jpg,942.99,312.39,1466.72,4624.0,0.3789,,0.1693
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_121131.jpg,0.0,1953.61,516.78,3732.83,0.6953,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_121142.jpg,40.67,3656.01,303.76,4006.53,0.4902,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_121957.jpg,1706.72,2604.1,1823.64,2785.84,0.3398,Auxiliary Sign,0.9103
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_122125.jpg,867.9,2027.54,1306.51,2977.93,0.3164,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_122225.jpg,3217.77,2392.68,3393.46,2641.79,0.4609,Auxiliary Sign,0.9197
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_124400.jpg,554.69,1541.93,1515.8,3278.06,0.7188,No Through Road (T-Junction),0.9762
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_153252.jpg,2146.18,2526.73,2225.85,2625.34,0.3223,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_153252.jpg,2526.53,2615.98,2596.71,2661.56,0.3086,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251125_153559.jpg,1624.14,711.73,1938.2,1879.9,0.4141,No Entry (One Way),0.8369
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251126_123524.jpg,1863.02,3643.93,2080.0,4285.94,0.6016,Auxiliary Sign,0.9494
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20251126_123910.jpg,592.82,2037.31,1575.41,2975.44,0.4902,Other-Unknown,0.9816
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20260106_160010_253.jpg,1004.63,743.97,2071.44,1655.23,0.3359,Roundabout Ahead,0.9635
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20260106_161746_914.jpg,992.95,537.49,2558.45,2097.62,0.4863,No Entry (One Way),0.9737
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20260110_171243_436.jpg,971.8,1036.13,1937.45,1967.03,0.6523,Other-Unknown,0.9883
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20260113_083821_567.jpg,3412.45,582.76,3614.69,725.39,0.3242,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_IMG_20260113_084947_261.jpg,1449.73,864.55,2364.8,1947.19,0.8594,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_wall_stop.jpeg,705.01,1738.1,2123.01,3844.19,0.5391,Auxiliary Sign,0.9502
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_wall_stop.jpeg,842.39,561.58,2066.7,1727.78,0.459,No Entry (One Way),0.9643
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_WhatsApp Image 2025-11-16 at 17.52.28 (3).jpeg,424.44,704.15,882.32,1083.15,0.5508,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_WhatsApp Image 2025-11-16 at 17.52.29.jpeg,475.07,748.84,1002.64,1195.25,0.5039,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 12.38.32 (2).jpeg,298.66,625.38,1070.64,1264.44,0.793,Other-Unknown,0.9924
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 12.38.37 (2).jpeg,1164.69,1807.98,1315.32,2040.0,0.4785,No Through Road (T-Junction),0.9709
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,1755.39,1828.7,1803.02,1877.08,0.4199,Street Sign,0.7958
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,2142.96,1970.07,2221.55,2046.64,0.3848,Directional Sign,0.9111
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,1122.29,1880.17,1195.17,1933.67,0.3711,Other-Unknown,0.8863
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,1122.22,1814.29,1187.65,1884.19,0.3574,Other-Unknown,0.896
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,1756.85,1783.57,1799.36,1829.14,0.334,Other-Unknown,0.8249
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_08da688f-IMG_6393.jpeg,0.0,709.63,3483.35,2766.84,0.6406,Other-Unknown,0.562
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_12031735-Pre_2026_6669.jpg,643.63,907.3,1324.85,1567.42,0.543,No Entry (One Way),0.9763
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_1346633a-IMG_20251125_195535.jpg,271.72,1975.73,425.23,2113.71,0.3984,Directional Sign,0.9401
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_1346633a-IMG_20251125_195535.jpg,900.91,1780.05,1551.71,2422.23,0.3008,Other-Unknown,0.9761
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_1c6ec821-IMG_20251125_194942.jpg,1055.4,1163.58,1820.08,1928.65,0.5078,Other-Unknown,0.9907
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_1ff1325d-IMG_1333.jpg,270.29,0.0,1012.5,315.74,0.3848,Street Sign,0.9637
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_2d64dcc1-IMG_20251125_194650.jpg,1176.83,966.77,1958.33,1701.37,0.3691,No Entry (One Way),0.9763
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_3a5a4d41-Pre_2026_6633.jpg,816.66,1287.24,905.6,1390.27,0.8477,,0.0122
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_3a5a4d41-Pre_2026_6633.jpg,639.57,796.97,1500.35,4000.0,0.3105,,0.2665
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_4029b5b7-Pre_2026_6760.jpg,2165.44,662.92,2695.55,1231.35,0.5469,,0.0115
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_4a8ce21e-IMG_20251125_194252.jpg,2533.42,2315.5,2767.35,2444.0,0.5234,,0.006
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_4a8ce21e-IMG_20251125_194252.jpg,1723.31,2481.96,1833.32,2579.09,0.4551,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_4a8ce21e-IMG_20251125_194252.jpg,1838.71,2773.0,2288.93,2919.95,0.4492,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_4a8ce21e-IMG_20251125_194252.jpg,133.8,1871.44,347.31,2104.54,0.4062,Other-Unknown,0.8118
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_578f49cf-IMG_6367.jpeg,342.06,1254.98,2042.59,1987.56,0.4141,,0.1309
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_5cef4344-Pre_2026_6674.jpg,568.18,148.35,1664.2,1005.91,0.4121,No Entry (One Way),0.9867
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_6d1c0888-IMG_20251125_191657.jpg,1501.32,996.12,1617.01,1634.28,0.3066,Directional Sign,0.9263
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_7041f709-IMG_1379.jpg,1110.38,860.37,1756.82,2250.79,0.3828,Directional Sign,0.9831
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_87a2a97d-IMG_6417.jpeg,1578.03,1886.09,4093.36,5443.96,0.7695,Other-Unknown,0.9809
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_93c9acc6-Pre_2026_6752.jpg,2353.07,530.01,3283.31,1172.59,0.8398,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_9adb1ffc-IMG_1447.jpg,1192.98,771.38,2072.31,1564.56,0.4531,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_a9ff1854-IMG_6408.jpeg,1840.99,667.06,3124.26,1836.14,0.4766,,0.4192
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_b40e574e-IMG_1307.jpg,1226.99,272.97,1987.84,1058.37,0.4922,Other-Unknown,0.9681
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_b40e574e-IMG_1307.jpg,1055.04,1852.27,1165.09,2007.79,0.3438,Directional Sign,0.8862
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_b40e574e-IMG_1307.jpg,713.34,0.0,1507.19,306.47,0.3145,,0.0137
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_b4a34518-Pre_2026_6659.jpg,688.01,1060.29,1209.21,1578.54,0.4492,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_b4a34518-Pre_2026_6659.jpg,585.96,832.65,1303.26,3974.68,0.3516,,0.1535
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_bab711b8-IMG_20251125_192613.jpg,1217.76,996.55,1762.3,1553.57,0.4434,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_bab711b8-IMG_20251125_192613.jpg,1118.19,788.3,1844.91,3986.92,0.3672,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_cb23d6ca-IMG_20251125_190938.jpg,1352.37,1592.68,1654.77,2618.87,0.5742,Directional Sign,0.9508
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_cb23d6ca-IMG_20251125_190938.jpg,1356.75,682.78,1648.17,1610.99,0.4609,Other-Unknown,0.947
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_cb23d6ca-IMG_20251125_190938.jpg,998.99,2138.2,1172.26,2333.13,0.3457,Other-Unknown,0.9535
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_cb23d6ca-IMG_20251125_190938.jpg,1373.29,2592.28,1674.9,3655.12,0.3457,Other-Unknown,0.9755
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_cf483702-IMG_20251125_195623.jpg,2583.09,2505.3,2798.18,2634.93,0.5117,,0.0088
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_cf483702-IMG_20251125_195623.jpg,2604.97,2405.85,2753.15,2506.29,0.4121,Auxiliary Sign,0.9673
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_d9b50eb1-Pre_2026_6691.jpg,664.43,1667.07,1289.74,2209.51,0.5,Other-Unknown,0.9554
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_d9b50eb1-Pre_2026_6691.jpg,657.21,2188.62,1288.66,2409.95,0.3477,Auxiliary Sign,0.9593
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_daaadabb-IMG_1451.jpg,1008.78,314.41,1668.56,1189.07,0.5234,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_ebb70ae4-Pre_2026_6672.jpg,822.61,1366.28,1728.21,2082.61,0.3867,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_ee2f066e-IMG_20251125_194701.jpg,1113.49,2594.03,1267.75,2764.37,0.6094,Directional Sign,0.943
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_ee2f066e-IMG_20251125_194701.jpg,521.65,993.46,1459.28,3982.98,0.3535,,0.0088
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_f0c7f95a-IMG_6420.jpeg,710.04,1139.11,3420.54,2083.95,0.3125,,0.3056
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_f3e6cd7a-IMG_6398.jpeg,2642.8,4703.94,2750.36,4861.04,0.5859,Other-Unknown,0.9085
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp11_fbaad6ff-IMG_1423.jpg,993.66,440.57,2002.03,1373.44,0.3027,No Entry (One Way),0.9703
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_091652b2-IMG20260105120954.jpg,931.94,584.94,2402.96,1157.17,0.6406,Directional Sign,0.97
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_091652b2-IMG20260105120954.jpg,500.88,1035.14,2764.88,3073.27,0.6172,Auxiliary Sign,0.9735
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_091652b2-IMG20260105120954.jpg,1069.09,1198.57,2283.29,2327.68,0.4219,,0.2892
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_094f8a9f-RV__2.jpeg,1337.64,2197.33,1686.05,2909.97,0.6172,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_094f8a9f-RV__2.jpeg,1072.89,1203.22,1817.98,1999.37,0.4414,Other-Unknown,0.9878
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_094f8a9f-RV__2.jpeg,173.93,2788.44,332.22,2995.39,0.3359,Auxiliary Sign,0.9473
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_094f8a9f-RV__2.jpeg,1067.11,596.94,1807.68,4032.0,0.3301,,0.23
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_0dd8c85f-RV_001_114.jpeg,1924.83,3196.21,2051.34,3377.53,0.3008,Other-Unknown,0.936
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_1bc3cf13-IMG_5516.jpeg,853.11,1530.24,897.93,1602.78,0.4434,No Through Road (T-Junction),0.9391
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_1bc3cf13-IMG_5516.jpeg,841.47,1451.72,912.95,1533.71,0.4141,Other-Unknown,0.9426
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_1bc3cf13-IMG_5516.jpeg,846.89,1672.16,909.88,1712.25,0.3691,Street Sign,0.9503
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_25ff97a8-IMG20260105132835.jpg,475.87,860.84,2722.15,2790.74,0.6172,No Through Road (T-Junction),0.9791
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_25ff97a8-IMG20260105132835.jpg,729.31,86.34,2067.75,1028.41,0.457,Street Sign,0.9859
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_25ff97a8-IMG20260105132835.jpg,1059.81,1074.73,1971.71,2504.3,0.3086,,0.2944
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_265aa6a6-IMG_5573.jpeg,1320.54,1964.34,1692.61,2758.38,0.3887,No Entry (One Way),0.9732
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_2a767150-RV_001_64.jpeg,911.15,2599.29,1930.7,3646.18,0.3496,Directional Sign,0.9697
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_2f062204-IMG_5549.jpeg,1184.88,1776.28,1882.91,2482.25,0.3262,No Entry (One Way),0.9695
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_3b1bbe25-IMG_4677.jpeg,776.21,1524.3,2386.7,2952.91,0.3516,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_46552970-IMG_5766.jpeg,1049.75,1631.57,1943.07,2622.38,0.6211,No Through Road (T-Junction),0.9678
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_46552970-IMG_5766.jpeg,951.28,2619.13,2002.55,3357.88,0.3047,Auxiliary Sign,0.9869
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_4b0be6d1-IMG20260105131256.jpg,876.28,1346.13,2148.89,2991.81,0.3184,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_5068c583-IMG_4683.jpeg,901.93,1810.46,1796.7,2745.57,0.5391,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_578dabe6-IMG_4802.jpeg,795.92,965.98,2293.68,2199.63,0.3418,No Entry (One Way),0.985
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_598f8dcc-IMG_5777.jpeg,380.7,751.3,999.62,1356.41,0.5625,No Through Road (T-Junction),0.9729
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_598f8dcc-IMG_5777.jpeg,916.94,1423.29,984.22,1506.74,0.4863,No Through Road (T-Junction),0.9332
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_64a36757-IMG20251230164429.jpg,570.52,974.81,2257.48,2452.54,0.4941,No Entry (One Way),0.9875
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_69e094db-IMG20260103164903.jpg,418.38,647.64,2380.18,2719.41,0.6523,No Through Road (T-Junction),0.984
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_7fcdb608-IMG_5767.jpeg,1291.62,1347.45,1704.72,2668.06,0.334,No Through Road (T-Junction),0.9795
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_8135c353-IMG_4634.jpeg,1044.88,3811.53,1528.75,4032.0,0.4648,Roundabout Ahead,0.7825
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_8d820602-IMG_4687.jpeg,1408.17,1852.12,1793.53,3028.59,0.5938,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_8fe876b9-IMG_4754.jpeg,1777.67,1636.37,2184.94,2781.83,0.5312,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_aa406f9d-IMG_4615.jpeg,818.61,1587.53,2041.34,2940.79,0.4375,No Entry (One Way),0.9702
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_cb282f25-RV_001_112.jpeg,1041.83,2033.13,2055.82,2957.67,0.7031,No Through Road (T-Junction),0.9662
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_d64c06cd-IMG20260103165218.jpg,688.42,880.67,2559.04,2851.98,0.5312,No Through Road (T-Junction),0.98
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_d64c06cd-IMG20260103165218.jpg,473.79,2755.59,3072.0,3986.82,0.4062,Directional Sign,0.9629
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_db486299-IMG_5815.jpeg,987.03,1466.24,2173.1,2503.74,0.8008,No Through Road (T-Junction),0.9683
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_dbac3098-IMG_4803.jpeg,1295.42,949.63,2221.32,2675.51,0.4043,No Entry (One Way),0.9727
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_f4371c23-IMG_5562.jpeg,1133.11,1835.66,1558.61,2555.87,0.4043,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_f468f4a5-IMG_5772.jpeg,835.65,1331.58,1993.61,2863.81,0.7148,No Through Road (T-Junction),0.9627
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_fa18c1a9-IMG_5810.jpeg,1921.25,3322.35,1962.75,3408.2,0.332,Back-Unknown,0.6004
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_fd97d901-IMG20260105125535.jpg,1267.54,1224.21,1793.97,2659.11,0.6406,No Through Road (T-Junction),0.9748
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp1_fdedfd29-IMG_4737.jpeg,1174.96,575.57,1985.53,3302.0,0.6641,No Through Road (T-Junction),0.982
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_1f7e1b10-20251224_132557.jpg,661.7,2020.77,1154.12,3072.19,0.5938,Directional Sign,0.687
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_1f7e1b10-20251224_132557.jpg,1075.69,2173.91,1981.81,2563.14,0.4082,Auxiliary Sign,0.9684
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_32305793-MP_0024.jpg,831.2,188.36,2040.96,1150.29,0.4453,Other-Unknown,0.9741
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_331688ad-20251223_152821.jpg,1598.52,1047.96,1850.66,1990.58,0.3105,No Entry (One Way),0.9818
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_339c8d04-26.side.jpg,2130.7,1911.97,2227.94,1947.2,0.377,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_339c8d04-26.side.jpg,906.35,500.37,1266.81,3557.28,0.3711,,0.1094
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_339c8d04-26.side.jpg,899.57,1145.59,1285.39,1482.65,0.3496,Back-Unknown,0.974
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_3855fec5-20251223_150427.jpg,1502.66,698.62,1806.99,2210.08,0.3105,No Through Road (T-Junction),0.9716
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_5dd50184-MP_0013.jpg,1271.74,1134.73,1369.07,1601.31,0.3926,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_5e8f002c-IMG_20251223_132013.jpg,1253.05,1196.47,1782.08,1729.45,0.5469,No Through Road (T-Junction),0.9652
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_5e8f002c-IMG_20251223_132013.jpg,2653.87,1909.32,2763.79,2189.6,0.4258,,0.2998
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_5e8f002c-IMG_20251223_132013.jpg,2676.51,2012.89,2753.22,2100.58,0.3203,Auxiliary Sign,0.6591
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_8042282f-20251223_150231.jpg,1158.76,0.0,1752.8,1978.06,0.3809,No Entry (One Way),0.9667
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_86560763-IMG_20251223_113000.jpg,147.26,2068.35,249.94,2191.64,0.418,Roundabout Ahead,0.6937
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_888b1f4f-MP_0074.jpg,479.37,866.26,1175.29,1493.38,0.6016,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_983dc626-30.side.jpg,1290.77,1066.59,1377.62,1595.34,0.3477,No Entry (One Way),0.9839
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_bf551d52-MP_0136.jpg,608.78,1332.84,2452.62,1612.04,0.3359,,0.0248
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_c96ca64e-MP_0098.jpg,99.6,819.06,881.57,1599.71,0.7266,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_c96ca64e-MP_0098.jpg,99.81,811.15,3950.79,1604.01,0.3145,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_d1fa2493-20251230_123128.jpg,763.67,539.11,2104.46,1897.68,0.4453,No Entry (One Way),0.9716
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_d71e8065-MP_0021.jpg,1338.7,2175.42,1376.67,2268.07,0.3008,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_e074406f-IMG_20251223_115520.jpg,806.61,3118.23,874.68,3176.0,0.3477,Other-Unknown,0.8592
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_e55dea8e-MP_0157.jpg,1283.75,1301.48,2014.7,2020.58,0.7305,No Through Road (T-Junction),0.9697
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_e55dea8e-MP_0157.jpg,1281.3,2025.17,2033.61,2406.55,0.4492,Auxiliary Sign,0.9766
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp2_ed201818-17.back.jpg,707.64,832.17,1464.61,1503.41,0.3125,Other-Unknown,0.984
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_09e3faa9-IMG_20251203_121602.jpg,1204.26,880.34,2231.82,1736.83,0.5625,No Entry (One Way),0.9783
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_09e3faa9-IMG_20251203_121602.jpg,833.09,1246.24,1274.21,2692.26,0.3594,,0.0242
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_09e3faa9-IMG_20251203_121602.jpg,903.98,2161.23,1009.44,2397.91,0.3262,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_16b18930-IMG_4415.jpeg,1311.99,1446.58,1832.61,1951.46,0.3359,No Entry (One Way),0.9843
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_22c38c39-IMG_4293.jpeg,1320.2,1658.15,2095.6,2510.65,0.5469,,0.0559
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_2b9ed5a1-IMG_4416.jpeg,1375.39,1030.15,1996.54,2026.01,0.4629,No Entry (One Way),0.9763
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_4d14c289-20251129_122448.jpg,1325.21,1151.88,1808.12,1765.05,0.3906,No Entry (One Way),0.985
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_5a5ec99c-IMG_4369.jpeg,1127.12,1332.04,2109.69,2244.21,0.3828,No Entry (One Way),0.984
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_5a849df3-20251129_113801.jpg,2576.26,2580.99,2634.97,2655.23,0.3945,Other-Unknown,0.898
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_5a849df3-20251129_113801.jpg,1099.25,724.34,1829.56,1449.51,0.3477,Other-Unknown,0.9749
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_5e7ebbc1-IMG_4337.jpeg,2099.26,1469.13,2658.93,1680.6,0.3926,,0.3068
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_6a5c994c-IMG_9361.jpg,1613.6,3879.27,2736.54,4986.4,0.3945,,0.0253
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_6a5c994c-IMG_9361.jpg,1830.67,1150.5,2521.44,2734.58,0.3594,Other-Unknown,0.9414
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_72ce7bb8-IMG_20251203_121930.jpg,1343.42,921.84,1923.32,1589.19,0.4199,Directional Sign,0.9767
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_72ce7bb8-IMG_20251203_121930.jpg,1344.71,288.26,1875.25,939.27,0.4082,No Entry (One Way),0.9766
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_8c6aa47e-IMG_20251203_121607.jpg,1162.18,432.0,1706.04,1579.72,0.418,No Entry (One Way),0.9765
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_8c6aa47e-IMG_20251203_121607.jpg,670.4,2231.8,900.09,2421.42,0.3652,,0.0345
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_913cab50-IMG_20251204_094538.jpg,755.31,1525.61,2134.6,2947.17,0.4258,No Entry (One Way),0.9745
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_915b758c-IMG_4287.jpeg,1358.22,1427.32,1845.15,1983.11,0.4863,No Entry (One Way),0.9659
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_915b758c-IMG_4287.jpeg,1356.86,1414.07,1849.14,4032.0,0.3242,,0.2413
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_ae42a8a0-20251129_121839.jpg,1122.0,1794.6,1883.1,2542.12,0.498,Other-Unknown,0.9841
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_aebbbcad-IMG_9204.jpg,1318.82,3655.74,1576.51,3852.37,0.3633,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_aebbbcad-IMG_9204.jpg,2426.62,3576.66,2629.84,3786.18,0.3594,Directional Sign,0.9755
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_c0cc3ce0-IMG_20251203_115646.jpg,1146.4,533.56,2039.42,1586.53,0.4316,Other-Unknown,0.9834
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_c0cc3ce0-IMG_20251203_115646.jpg,1287.16,1509.2,1941.25,2343.09,0.3555,No Entry (One Way),0.9843
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_e0a623d6-IMG_9293.jpg,2012.83,1451.31,2511.86,2814.62,0.7891,No Through Road (T-Junction),0.942
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_e0a623d6-IMG_9293.jpg,2002.77,1439.51,2579.07,5712.0,0.4258,,0.2878
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_e17ffb83-20251129_115005.jpg,1210.82,1465.34,1546.39,2366.91,0.3828,No Entry (One Way),0.9548
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_e337de9a-IMG_4362.jpeg,980.4,656.74,2143.09,1629.11,0.4902,Other-Unknown,0.9823
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_e337de9a-IMG_4362.jpeg,1146.34,1585.29,1996.6,1891.59,0.4121,Auxiliary Sign,0.9213
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_e337de9a-IMG_4362.jpeg,2114.68,2924.08,2154.0,3011.16,0.3672,Directional Sign,0.8395
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp3_f6ba6aba-IMG_4397.jpeg,1168.3,1483.59,1900.14,2175.94,0.3262,No Entry (One Way),0.9825
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,305.71,1099.59,456.73,1267.44,0.6523,No Through Road (T-Junction),0.9722
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,296.56,1683.64,371.62,1826.51,0.4355,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_20251130_120143.jpg,1537.2,2143.59,1642.9,2857.06,0.3574,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_20251229_150136.jpg,0.0,1381.31,460.43,2631.43,0.4551,Directional Sign,0.9278
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_20251229_151051.jpg,1024.61,1150.51,2385.2,2379.96,0.3535,Other-Unknown,0.9741
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_20251229_151051.jpg,1226.95,2405.81,2355.9,3653.83,0.332,Roundabout Ahead,0.9749
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_20251231_160526.jpg,992.3,1497.29,2010.46,2435.43,0.7305,No Through Road (T-Junction),0.9703
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_20251231_160545.jpg,1230.81,1423.87,1571.14,2419.37,0.7695,No Through Road (T-Junction),0.9144
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_20251231_160556.jpg,1845.48,1933.98,2037.83,2508.12,0.5586,No Through Road (T-Junction),0.9554
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_219a5ac5-20251116_164504.jpg,772.94,2410.96,1154.24,4030.69,0.5625,,0.0277
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_219a5ac5-20251116_164504.jpg,665.79,1175.47,1307.71,2507.22,0.5547,No Entry (One Way),0.9708
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_2659e726-20260107_105845.jpg,509.71,0.0,1586.05,1213.68,0.5508,Other-Unknown,0.9885
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_2659e726-20260107_105845.jpg,476.9,1101.3,1630.18,2661.51,0.373,Roundabout Ahead,0.9653
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_3a0abdfb-20251116_161259.jpg,816.66,1576.22,1452.79,2230.87,0.6289,Auxiliary Sign,0.948
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_420a4dea-20251222_131729.jpg,820.74,716.36,2363.18,2471.01,0.3496,No Entry (One Way),0.9831
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_53b94993-WhatsApp_Image_2026-01-14_at_11.10.30_2.jpeg,559.13,1171.5,836.07,1510.95,0.6875,Directional Sign,0.9632
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_53b94993-WhatsApp_Image_2026-01-14_at_11.10.30_2.jpeg,592.22,767.4,854.93,1200.41,0.5156,No Entry (One Way),0.9849
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_53b94993-WhatsApp_Image_2026-01-14_at_11.10.30_2.jpeg,571.94,765.54,856.29,1994.29,0.3457,,0.3287
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_5996dfea-20251116_163330.jpg,1034.54,1558.72,1163.84,2149.63,0.3203,No Entry (One Way),0.8686
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_5c62b2f6-20251117_104837.jpg,667.84,1513.67,1453.22,2214.54,0.3145,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_5e204826-WhatsApp_Image_2026-01-14_at_11.11.36.jpeg,586.3,790.63,777.74,978.34,0.4492,No Entry (One Way),0.9705
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_5e204826-WhatsApp_Image_2026-01-14_at_11.11.36.jpeg,584.09,785.31,780.05,1778.33,0.3125,,0.1898
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_63c4320e-WhatsApp_Image_2026-01-14_at_11.10.32_3.jpeg,585.54,683.87,827.27,915.17,0.3848,No Through Road (T-Junction),0.9631
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_66eacd8c-20260109_124456.jpg,842.47,851.73,1894.9,2651.96,0.5391,No Through Road (T-Junction),0.9682
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,1172.85,951.9,1239.32,1017.71,0.5977,Directional Sign,0.9665
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,1390.26,1045.66,1413.83,1069.71,0.3555,Other-Unknown,0.9139
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,953.43,1053.07,971.5,1080.71,0.3086,Other-Unknown,0.8655
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_7b6a28a6-WhatsApp_Image_2026-01-14_at_11.10.25_4.jpeg,571.18,671.07,882.12,977.27,0.6406,No Through Road (T-Junction),0.9639
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_82399059-20251116_165140.jpg,581.45,2089.93,1898.19,3486.1,0.3105,Other-Unknown,0.707
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_8bd079ee-20260107_105937.jpg,602.14,1238.15,985.02,1574.16,0.5625,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_94287dbf-20260113_132935.jpg,942.05,1334.94,1779.54,2820.73,0.5195,No Through Road (T-Junction),0.9764
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_a3952dcd-20251116_170721.jpg,486.32,740.45,1189.67,2169.31,0.373,No Entry (One Way),0.9845
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_abe76f20-20260109_124535.jpg,750.59,285.61,2095.3,2611.36,0.7227,No Through Road (T-Junction),0.9698
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_abe76f20-20260109_124535.jpg,1202.32,762.77,1777.44,2293.33,0.3047,,0.273
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_b3745e21-20251222_142059.jpg,807.37,573.26,1729.69,2230.77,0.4219,No Entry (One Way),0.9738
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_c909a40a-20251222_142239.jpg,728.47,822.82,1853.44,1762.43,0.5234,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_d1c1ed24-20260113_130204.jpg,1056.03,1573.28,1834.66,2330.67,0.5586,No Through Road (T-Junction),0.9643
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_d8a007d5-20260109_123932.jpg,713.21,132.31,1703.64,2297.1,0.6094,No Through Road (T-Junction),0.9718
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_d8a007d5-20260109_123932.jpg,532.98,2157.0,1895.33,4000.0,0.3418,Other-Unknown,0.9913
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_ddd42f22-20251116_162542.jpg,922.69,1804.61,1392.2,2292.92,0.3359,No Entry (One Way),0.9751
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_e63ad5ed-WhatsApp_Image_2026-01-14_at_11.10.19_1.jpeg,535.54,759.04,902.63,1120.42,0.7812,No Through Road (T-Junction),0.9761
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_e63ad5ed-WhatsApp_Image_2026-01-14_at_11.10.19_1.jpeg,535.57,756.48,900.43,1987.3,0.3516,,0.2976
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_f1d0d896-WhatsApp_Image_2026-01-14_at_11.12.20.jpeg,543.16,835.43,828.1,1224.5,0.543,No Through Road (T-Junction),0.9713
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,571.12,557.25,787.25,1132.48,0.7734,No Through Road (T-Junction),0.9408
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,569.91,552.36,789.81,2000.0,0.3535,,0.4016
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp4_ffdc6f75-WhatsApp_Image_2026-01-14_at_11.10.20.jpeg,716.87,1153.96,881.96,1386.77,0.5078,Directional Sign,0.9528
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_13ab0dbb-BenTaliana_59_Front.jpeg,1152.25,1598.07,3517.28,3780.49,0.6914,No Through Road (T-Junction),0.9607
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_13ab0dbb-BenTaliana_59_Front.jpeg,1672.92,1890.96,2915.35,3293.51,0.334,,0.3243
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_13ab0dbb-BenTaliana_59_Front.jpeg,1103.07,1585.56,3571.93,8064.0,0.3105,,0.3887
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_1f171b80-MelatAssefa_5_Front.jpg,1576.64,528.31,2380.76,1264.78,0.6133,No Entry (One Way),0.99
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_28809400-MelatAssefa_23_Front.jpg,1052.75,537.28,1835.73,1346.23,0.5508,No Entry (One Way),0.9849
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1065.1,2730.42,1184.34,2856.4,0.5,Other-Unknown,0.9732
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1269.18,1240.37,2020.74,4066.85,0.3535,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_2da1aa64-AlisonAttard_27_Front.jpeg,1967.42,1311.11,2471.27,1804.71,0.625,,0.2778
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_30980873-BenTaliana_12_Front.jpeg,1175.04,2147.91,3419.76,4144.29,0.4238,No Entry (One Way),0.9839
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_3d564b26-AlisonAttard_15_Back.jpeg,1508.2,925.26,2680.67,1962.09,0.5156,No Entry (One Way),0.6691
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2770.69,1125.5,4032.0,1646.41,0.4922,,0.0597
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2870.05,1253.25,3271.85,1477.9,0.332,,0.0198
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,1371.06,1070.89,2155.17,1389.23,0.7383,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1230.07,1607.2,1931.63,2293.61,0.6914,No Through Road (T-Junction),0.9418
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1538.3,2659.71,1645.12,2775.22,0.3281,No Through Road (T-Junction),0.9469
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1225.0,1604.79,1928.58,4079.05,0.3242,,0.2819
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_48cba720-BenTaliana_30_Front.jpeg,973.33,1750.76,3140.75,3657.52,0.3359,No Entry (One Way),0.9766
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,2899.71,2390.58,2973.0,2497.22,0.332,Back-Unknown,0.6
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1943.32,2223.99,2115.76,2399.19,0.3164,Other-Unknown,0.9858
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1467.81,2381.68,1522.33,2460.75,0.3125,Other-Unknown,0.8509
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1320.36,749.13,1924.5,1374.9,0.375,No Entry (One Way),0.8994
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_704b34ba-BenTaliana_38_Side.jpeg,709.7,1734.55,1147.75,2401.13,0.5547,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_770e5bfc-BenTaliana_60_Side.jpeg,1088.98,808.13,1564.65,1740.4,0.3086,Other-Unknown,0.9634
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_7ae28afa-MelatAssefa_15_Front.jpg,1191.78,620.22,2010.59,1261.47,0.3438,No Entry (One Way),0.9784
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2055.26,1492.68,3089.68,1709.51,0.3203,,0.002
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_85f27713-MelatAssefa_35_Side.jpg,1410.34,1790.83,2043.21,3209.12,0.3828,No Entry (One Way),0.9778
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_9c857801-BenTaliana_43_Side.jpeg,2071.1,3307.59,2583.77,4943.56,0.625,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_9c857801-BenTaliana_43_Side.jpeg,4285.39,6379.52,4458.83,6712.69,0.4082,Directional Sign,0.8997
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_a5ec0025-BenTaliana_11_Front.jpeg,309.17,1809.52,3594.73,4366.37,0.5273,No Entry (One Way),0.9744
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,1209.56,1048.39,1856.47,2193.0,0.3281,No Entry (One Way),0.9509
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,819.88,1009.82,1384.23,2000.56,0.6836,No Entry (One Way),0.971
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,821.97,1007.96,1383.41,4028.52,0.334,,0.3298
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,1264.8,1641.22,2662.84,4700.71,0.5742,No Through Road (T-Junction),0.9831
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_bbdd8a43-BenTaliana_44_Front.jpeg,973.09,2318.72,3550.71,4708.74,0.7188,No Entry (One Way),0.9847
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,741.98,1111.07,1544.84,2267.11,0.5859,No Entry (One Way),0.9758
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_cc77abda-MelatAssefa_34_Side.jpg,1500.54,903.64,2674.68,2556.85,0.3848,No Entry (One Way),0.9798
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_d29347ca-MelatAssefa_51_Side.jpg,1274.0,235.24,1803.69,2048.24,0.4102,No Entry (One Way),0.9774
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_dad74922-BenTaliana_41_Front.jpeg,706.55,1885.32,3277.14,3931.94,0.4395,No Entry (One Way),0.982
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1269.03,1772.18,1662.38,2436.46,0.4629,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1155.21,1412.01,1716.56,4080.0,0.4004,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_e0bfe536-MelatAssefa_22_Front.jpg,1074.67,988.88,1860.37,1717.51,0.375,No Entry (One Way),0.9808
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_e2a22cf0-BenTaliana_9_Front.jpeg,455.59,1046.93,1772.73,2121.74,0.6016,No Entry (One Way),0.9673
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_e2a22cf0-BenTaliana_9_Front.jpeg,1374.99,2668.81,1475.71,2743.21,0.3379,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_e390d90e-MelatAssefa_55_Side.jpg,1596.44,956.21,2205.39,2095.03,0.3906,No Entry (One Way),0.9657
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_e43a48bc-BenTaliana_53_Side.jpeg,980.32,1500.27,1315.36,2055.94,0.3789,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1299.68,1552.86,2082.33,2318.93,0.8008,No Through Road (T-Junction),0.9668
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1297.04,1550.72,2086.23,4080.0,0.3301,,0.3082
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_e897b21c-MelatAssefa_52_Front.jpg,2147.16,5280.68,2318.24,5523.06,0.3652,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_ec52a808-MichaelFarrugia_58_Side.jpg,1241.31,1468.25,1773.8,2438.24,0.3691,Roundabout Ahead,0.9691
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1076.04,1669.84,1872.13,2400.59,0.8438,No Through Road (T-Junction),0.971
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,855.56,3198.47,896.75,3241.48,0.3652,No Through Road (T-Junction),0.7404
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_0d61ecda-IMG_6112.JPG,834.84,54.55,1987.13,1234.25,0.457,No Entry (One Way),0.9849
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_255dc793-IMG_0327.JPG,903.1,1571.02,3541.18,2065.35,0.8555,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_255dc793-IMG_0327.JPG,1770.09,1698.06,3190.14,1947.8,0.3652,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_37c705bd-IMG_6247.JPG,827.17,1609.67,1848.51,2271.43,0.3066,Other-Unknown,0.9426
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_3ce4063d-IMG_0217.JPG,1544.75,1398.12,2126.56,1732.95,0.4961,,0.2628
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_8d7bc213-IMG_0237.JPG,880.81,1282.5,2537.08,2283.91,0.6289,,0.3347
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_8dee1009-IMG_6205.JPG,1046.61,1315.07,1769.37,2186.07,0.4023,No Entry (One Way),0.9826
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_92b4ef64-IMG_6151.JPG,832.87,1226.44,2261.59,2504.69,0.3613,No Entry (One Way),0.9764
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_92b4ef64-IMG_6151.JPG,986.44,2526.6,2111.01,3777.96,0.3164,Directional Sign,0.954
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_9e256948-IMG_0275.JPG,1682.46,1301.93,2122.26,1883.65,0.6484,,0.3329
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_9e256948-IMG_0275.JPG,2246.32,489.66,2649.9,1822.47,0.4512,,0.1336
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_9e256948-IMG_0275.JPG,1365.56,857.25,1654.09,1623.37,0.3789,,0.1095
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_b1f0ac5c-IMG_0227.JPG,1034.23,693.24,2344.7,2107.32,0.832,,0.2747
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_b1f0ac5c-IMG_0227.JPG,2287.09,316.92,2896.32,677.05,0.4883,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_c2b7f6e2-IMG_0300.JPG,1211.75,566.16,2954.22,2580.3,0.457,,0.4794
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_c2b7f6e2-IMG_0300.JPG,2205.16,0.0,4032.0,2693.53,0.3867,,0.2393
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_c8db20f0-IMG_6257.JPG,1493.56,753.14,1715.93,1855.16,0.418,No Through Road (T-Junction),0.9761
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_e18d6d29-IMG_0313.JPG,3411.45,2218.72,3650.82,2436.96,0.3809,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_e18d6d29-IMG_0313.JPG,3652.83,2234.47,3786.3,2471.17,0.3535,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_ec035947-IMG_6142.JPG,774.86,655.9,2170.78,1787.78,0.3047,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp6_f6200360-IMG_6254.JPG,1376.06,739.89,1764.65,2199.87,0.6172,No Through Road (T-Junction),0.9513
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_0c807ae1-IMG_1804.jpg,1242.4,145.35,3397.81,2770.06,0.6875,,0.4461
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_17ffbc31-IMG_6632.jpeg,1336.93,1443.44,1459.89,1662.39,0.3535,Auxiliary Sign,0.8571
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_17ffbc31-IMG_6632.jpeg,1320.7,936.84,1463.89,3129.81,0.3457,,0.0996
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_3199d5af-IMG_6619.jpeg,391.6,2122.11,511.16,2275.8,0.5859,Other-Unknown,0.7165
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_3199d5af-IMG_6619.jpeg,1216.03,1334.8,1371.39,3311.19,0.3711,,0.1049
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_3199d5af-IMG_6619.jpeg,1229.9,1752.99,1368.57,1966.21,0.3379,Auxiliary Sign,0.9183
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_3335816b-IMG_1863.jpg,0.0,0.0,1334.65,1388.41,0.5195,,0.1092
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_57ce1f54-20251215_150337.jpg,1060.29,1093.63,1269.99,2064.19,0.4062,No Entry (One Way),0.9801
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_6dd51e97-IMG_6617.jpeg,1234.63,1483.27,1299.79,2800.58,0.4121,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_81ace7bd-IMG_1823.jpg,1666.29,688.23,3332.57,2788.37,0.459,,0.3508
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_87ab4012-IMG_1929.jpg,1840.33,141.05,3474.18,2337.2,0.625,,0.2781
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_8e1e7992-IMG_6659.jpeg,1739.77,1722.09,1850.77,1865.8,0.4141,Other-Unknown,0.9031
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_8e1e7992-IMG_6659.jpeg,2968.28,1829.6,3024.0,1931.49,0.3203,Back-Unknown,0.6097
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_917e5bd8-IMG_2117.JPG,1032.94,193.88,3592.09,2749.27,0.5273,No Entry (One Way),0.5996
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_998eacf2-IMG_6613.jpeg,1572.48,1320.52,1658.98,2588.96,0.4473,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_cddeeb7f-IMG_6636.jpeg,1245.35,1855.06,1307.77,1919.92,0.3613,Other-Unknown,0.8808
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp7_d5464bd2-IMG_6729.jpeg,2640.2,2135.65,2692.98,2191.46,0.3438,Other-Unknown,0.7275
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_06980edd-front.jpg,2096.29,2624.18,2137.13,2657.27,0.4707,Other-Unknown,0.8723
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_06980edd-front.jpg,1376.42,0.0,2636.1,885.7,0.4082,Other-Unknown,0.988
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_06980edd-front.jpg,2095.26,2588.69,2135.05,2630.29,0.4062,Other-Unknown,0.8313
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_06980edd-front.jpg,3160.71,2736.19,3242.44,2903.18,0.4043,Directional Sign,0.8844
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_06980edd-front.jpg,2667.53,2536.12,2742.97,2615.07,0.373,Back-Unknown,0.8992
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_06980edd-front.jpg,1333.13,895.44,2605.54,2096.7,0.3398,Roundabout Ahead,0.9854
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_06980edd-front.jpg,3245.24,2394.15,3342.57,2495.73,0.3164,Back-Unknown,0.9041
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_06980edd-front.jpg,3747.01,2510.25,3791.35,2589.32,0.3027,Back-Unknown,0.8167
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_0d18b07a-IMG_0224.JPG,1273.21,1926.73,4001.41,2958.85,0.3184,,0.3386
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_1023d97f-front.jpg,3764.29,2859.75,3824.88,2938.61,0.3711,Other-Unknown,0.771
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_1023d97f-front.jpg,3792.91,2935.69,3838.44,3004.19,0.3301,Roundabout Ahead,0.8547
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_14aaa44c-IMG_0211.JPG,1750.99,1047.91,3477.98,3072.8,0.9062,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_14aaa44c-IMG_0211.JPG,2127.04,1296.96,3202.88,2905.91,0.334,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_1e3225cd-IMG_0085.jpg,1276.95,917.58,2245.87,2794.03,0.4453,No Entry (One Way),0.9788
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_2aed70e2-front.jpg,396.0,821.84,1855.68,1882.86,0.3867,No Entry (One Way),0.9755
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_2d237c79-side.jpg,1901.96,955.85,2133.72,1847.42,0.707,No Through Road (T-Junction),0.9278
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_3799bcb2-side.jpg,717.88,1626.21,1102.53,2224.5,0.4941,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_3799bcb2-side.jpg,120.36,2856.03,231.96,3007.44,0.4824,Directional Sign,0.9216
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_3799bcb2-side.jpg,1123.0,2561.18,1405.49,2777.52,0.3672,Roundabout Ahead,0.8981
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_3ab29317-front.jpg,657.97,1355.02,1672.27,2439.49,0.4238,No Through Road (T-Junction),0.9843
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_3b4e798b-front.jpg,1129.4,1906.02,1713.26,2427.0,0.4766,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_4802289d-side.jpg,1409.54,1774.73,1625.91,2399.53,0.5156,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_4c496fb4-side.jpg,742.71,1556.94,936.55,2182.6,0.3574,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_4fe75feb-IMG_0243.JPG,4917.93,3792.39,5187.47,4070.35,0.3789,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_4fe75feb-IMG_0243.JPG,5201.95,3858.86,5435.3,4087.09,0.3398,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_562e48f6-front.jpg,1431.73,934.01,2557.98,1683.37,0.8359,No Through Road (T-Junction),0.963
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_58176912-front.jpg,2316.02,1264.62,2352.32,1296.3,0.4355,,0.0011
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_5abf970a-side.jpg,1911.19,1166.84,2174.73,1898.86,0.3535,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_646a4174-side.jpg,909.41,867.97,1806.68,2824.05,0.3203,Auxiliary Sign,0.8599
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_70a9ea7f-side.jpg,982.63,514.75,1668.3,1548.4,0.543,No Entry (One Way),0.9749
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_70a9ea7f-side.jpg,100.45,3698.25,302.39,3932.37,0.3809,No Entry (One Way),0.9259
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_8bd74996-side.jpg,1888.29,955.74,2162.29,1810.14,0.3125,No Entry (One Way),0.9742
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_8dc5354c-IMG_0141.JPG,1415.3,1162.32,2987.27,3087.27,0.5117,,0.3336
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_8edb630b-IMG_0208.JPG,1904.15,1134.74,3363.43,3007.8,0.5234,,0.4167
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_aec35ad8-back.jpg,1216.29,0.0,2626.13,704.98,0.3418,Back-Unknown,0.9923
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_aec35ad8-back.jpg,1070.76,714.76,2799.82,1879.53,0.3262,Back-Unknown,0.9686
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_b6ae6e3d-back.jpg,1132.08,2981.62,1208.16,3057.97,0.5352,Other-Unknown,0.8948
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_b9028e28-side.jpg,808.17,1548.76,1768.1,2629.56,0.5312,Directional Sign,0.9761
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_b9028e28-side.jpg,913.26,694.17,1552.04,1819.4,0.4258,,0.1097
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_b9028e28-side.jpg,587.29,431.27,1768.14,4096.0,0.4004,,0.245
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_b9028e28-side.jpg,1581.67,3058.14,1701.27,3164.31,0.3105,Directional Sign,0.9367
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_c89fb86b-IMG_0117.jpg,1881.45,1450.37,2500.53,3398.07,0.6797,No Through Road (T-Junction),0.9559
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_c96fcc1a-IMG_0217.JPG,2022.98,1453.74,3258.01,2611.12,0.6133,No Entry (One Way),0.5086
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_d8e91d56-side.jpg,1788.54,870.36,2055.42,1772.33,0.5625,No Entry (One Way),0.9679
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_d8e91d56-side.jpg,3464.23,2358.89,3738.6,2618.06,0.3926,No Entry (One Way),0.9797
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_d8e91d56-side.jpg,3482.69,2180.38,3594.39,2436.09,0.3789,No Entry (One Way),0.9632
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_dd88f02c-IMG_0092.jpg,1681.92,1569.87,2734.94,3662.32,0.3125,No Entry (One Way),0.9808
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_ea4926f3-side.jpg,1132.01,750.44,1961.07,2455.36,0.6445,Roundabout Ahead,0.9753
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_edb6fab3-IMG_0189.JPG,2110.46,991.15,4433.11,3594.63,0.4883,,0.4887
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_f5d48b4c-front.jpg,3479.05,2549.47,3598.4,2668.09,0.3691,Directional Sign,0.936
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_fc124a5b-Back.jpg,528.78,2324.77,1689.37,3007.55,0.5078,Auxiliary Sign,0.9424
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp8_fc124a5b-Back.jpg,478.89,50.58,1670.61,4085.41,0.3125,,0.1838
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_01ed8620-IMG_20251111_162316.jpg,43.85,2371.57,116.38,2420.65,0.4961,Other-Unknown,0.5927
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_29bd496f-IMG_20251106_153126.jpg,1066.89,2210.19,1680.69,3111.04,0.4141,,0.004
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_29bd496f-IMG_20251106_153126.jpg,10.22,2654.44,335.15,2847.5,0.3418,Auxiliary Sign,0.9113
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_3cb31cc9-IMG_20251106_141426.jpg,657.47,91.92,2527.87,1575.36,0.5273,Other-Unknown,0.9883
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_42edbee1-IMG_20251210_142157.jpg,1283.67,1996.78,1868.61,2497.46,0.3652,Roundabout Ahead,0.9748
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_4319ca3a-WhatsApp_Image_2026-01-03_at_18.45.41.jpeg,645.84,871.65,755.13,1158.12,0.543,Roundabout Ahead,0.9694
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_4319ca3a-WhatsApp_Image_2026-01-03_at_18.45.41.jpeg,674.04,541.03,768.38,883.89,0.4688,Other-Unknown,0.9192
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,532.5,713.91,829.76,963.19,0.4883,No Through Road (T-Junction),0.9666
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_4a9c7d83-IMG_20251111_143857.jpg,1398.41,2067.42,1813.51,2437.43,0.6758,Other-Unknown,0.944
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_561ba1c4-IMG_20251111_162044.jpg,1882.98,2369.75,1985.89,2468.62,0.6172,Other-Unknown,0.9267
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_561ba1c4-IMG_20251111_162044.jpg,1900.22,2469.65,1977.84,2552.44,0.3945,Roundabout Ahead,0.9258
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_561ba1c4-IMG_20251111_162044.jpg,1158.1,2585.47,1188.57,2636.89,0.3789,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_673470fc-IMG_20251111_160954.jpg,1367.74,2400.62,1414.55,2440.24,0.4902,Other-Unknown,0.781
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_673470fc-IMG_20251111_160954.jpg,1367.01,2361.0,1412.8,2405.8,0.3594,Other-Unknown,0.9164
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_673470fc-IMG_20251111_160954.jpg,2049.85,2313.47,2123.61,2391.83,0.332,Back-Unknown,0.9118
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_673470fc-IMG_20251111_160954.jpg,2757.2,2286.16,2821.92,2360.51,0.3066,Back-Unknown,0.9618
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_6867b383-IMG_20251111_160020.jpg,1271.47,1684.83,1730.45,2132.85,0.6719,No Through Road (T-Junction),0.9709
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_6adfb65e-WhatsApp_Image_2026-01-01_at_18.13.00_2.jpeg,1137.3,1896.55,1472.16,1977.6,0.3945,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_6e84abf6-IMG_20251106_145409.jpg,1014.87,1059.28,2325.32,1943.06,0.3301,Other-Unknown,0.9803
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_76700fa1-IMG_20251111_162238.jpg,1459.65,2340.92,1534.35,2398.24,0.3711,Other-Unknown,0.8424
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_76700fa1-IMG_20251111_162238.jpg,1467.94,1558.15,1888.17,1939.25,0.334,Other-Unknown,0.9792
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_76700fa1-IMG_20251111_162238.jpg,536.72,2115.75,642.5,2304.85,0.3242,Auxiliary Sign,0.9367
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_76700fa1-IMG_20251111_162238.jpg,1514.65,1943.14,1814.93,2257.64,0.3203,Roundabout Ahead,0.9822
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_7b22f970-IMG_20251106_152243.jpg,1056.23,2053.62,1937.87,3058.11,0.3301,Other-Unknown,0.976
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_ae723934-WhatsApp_Image_2026-01-03_at_18.45.36.jpeg,560.22,710.55,750.68,883.07,0.543,No Through Road (T-Junction),0.983
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_b775d113-IMG_20251111_162326.jpg,2771.46,2687.59,2848.28,2766.17,0.4609,Roundabout Ahead,0.8736
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_b775d113-IMG_20251111_162326.jpg,2756.92,2605.11,2846.89,2690.23,0.3906,Other-Unknown,0.912
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_cedb2f14-NE3_front.jpg,1484.49,1687.09,1914.49,2126.55,0.4473,No Entry (One Way),0.8674
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_df847542-IMG_20251210_141936.jpg,2213.94,2985.97,2582.74,3333.71,0.7539,Directional Sign,0.96
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_e8541d39-IMG_20251106_145533.jpg,1027.85,1759.53,1990.84,2724.8,0.4863,Other-Unknown,0.9823
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_e8541d39-IMG_20251106_145533.jpg,2703.47,3186.1,3000.0,3518.09,0.3477,Directional Sign,0.9783
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_e8b17764-ZC8_front.jpg,1198.27,2277.64,1432.75,2506.89,0.4219,,0.0
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_f36aabf5-WhatsApp_Image_2026-01-03_at_18.45.21_2.jpeg,429.27,534.3,709.67,988.08,0.7734,Other-Unknown,0.9846
+SAM 3,sens-mtsd-ped-03,sign indicating a pedestrian crossing,grp9_f36aabf5-WhatsApp_Image_2026-01-03_at_18.45.21_2.jpeg,476.34,653.72,679.55,823.81,0.4082,,0.2675

@@ -1,0 +1,294 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_1645.jpg,1032.44,2359.06,2741.76,4244.02,1.0,Blind-Spot Mirror (Convex Mirror),0.9771
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20251123_141844.jpg,418.08,1248.48,759.2,2182.53,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20251123_141844.jpg,1035.84,1322.46,1291.68,2034.56,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20251123_165832.jpg,634.4,1840.35,1212.64,2880.75,1.0,Blind-Spot Mirror (Convex Mirror),0.9331
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20251125_121131.jpg,0.0,1951.33,515.84,3773.18,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20251125_121142.jpg,41.6,3671.46,309.92,4004.38,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260106_162304_258.jpg,1085.28,556.03,2399.04,2402.3,1.0,,0.3678
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260110_172451_501.jpg,2235.84,1198.08,2937.6,2214.91,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260110_173056_747.jpg,1007.76,841.73,2390.88,1609.73,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260110_173308_202.jpg,3712.8,783.36,4075.92,1259.52,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_083600_409.jpg,738.48,832.51,2260.32,2626.56,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_083728_516.jpg,697.68,614.4,2476.56,2657.28,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_083759_046.jpg,1456.56,1019.9,2390.88,2107.39,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_083821_567.jpg,3402.72,592.9,3602.64,737.28,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_084856_622.jpg,1831.92,878.59,2598.96,2049.02,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_084947_261.jpg,1448.4,866.3,2374.56,1966.08,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_085011_841.jpg,918.0,359.42,2868.24,2500.61,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_085024_440.jpg,1309.68,875.52,2268.48,2027.52,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp10_IMG_20260113_085024_440.jpg,2276.64,814.08,3357.84,1895.42,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_00ffbbb0-IMG_20251125_195040.jpg,1095.0,1796.0,1161.0,1912.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_00ffbbb0-IMG_20251125_195040.jpg,1767.0,1844.0,1803.0,1904.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_0ac2eda8-IMG_6412.jpeg,2478.96,2092.09,4382.0,3098.7,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_243ba713-IMG_6313.jpg,3919.1,5241.6,4027.97,5402.88,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_2960150f-Pre_2026_6705.jpg,310.78,2196.0,1227.34,3500.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_387a3e09-IMG_6403.jpeg,1102.69,846.38,2568.67,2651.36,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_3a5a4d41-Pre_2026_6633.jpg,815.22,1300.0,896.3,1408.0,1.0,,0.0116
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_4029b5b7-Pre_2026_6760.jpg,2168.0,662.09,2692.0,1231.84,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_4a8ce21e-IMG_20251125_194252.jpg,2532.0,2328.0,2769.0,2448.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_4a8ce21e-IMG_20251125_194252.jpg,1722.0,2476.0,1830.0,2608.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_578f49cf-IMG_6367.jpeg,346.75,1254.96,2072.45,2255.9,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_59f96d19-IMG_6251.jpeg,705.98,340.7,1017.2,1216.49,1.0,Blind-Spot Mirror (Convex Mirror),0.9757
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_6d03b071-IMG_6395.jpeg,1124.93,1164.24,2499.84,2407.1,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_8297098a-IMG_6326.jpeg,1266.05,1016.06,2935.3,2933.28,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_8d5205a5-IMG_6322.jpeg,2165.18,963.38,2642.04,2319.84,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_8d5205a5-IMG_6322.jpeg,859.2,1153.48,2156.59,2219.96,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_93c9acc6-Pre_2026_6752.jpg,2348.0,526.97,3280.0,1177.8,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_9e3f1527-IMG_6303.jpeg,1310.4,583.63,2580.48,2446.42,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_a9ff1854-IMG_6408.jpeg,596.74,577.58,1830.53,1838.59,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_a9ff1854-IMG_6408.jpeg,1838.59,668.3,3120.77,1847.66,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_aff5c880-IMG_6324.jpeg,2419.72,3462.58,2480.94,3591.46,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_aff5c880-IMG_6324.jpeg,1904.2,3501.24,1968.64,3630.12,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_b25d900c-Pre_2026_6648.jpg,722.89,924.0,1319.67,1608.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9824
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_bdad925f-IMG_20251125_194953.jpg,1086.0,1284.0,1860.0,3040.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_cf483702-IMG_20251125_195623.jpg,2583.0,2500.0,2793.0,2644.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_ee2f066e-IMG_20251125_194701.jpg,1845.0,2356.0,1887.0,2476.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp11_f0c7f95a-IMG_6420.jpeg,711.51,1145.02,3435.05,2095.66,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_02ac92f5-IMG20251123165127.jpg,1431.55,1376.26,2012.16,2871.3,1.0,Blind-Spot Mirror (Convex Mirror),0.9824
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_0dd8c85f-RV_001_114.jpeg,1908.14,3072.38,2044.22,3374.78,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_2f062204-IMG_5549.jpeg,2497.82,3536.06,2540.16,3685.25,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_52634fe4-IMG_20260108_180144.jpg,2082.82,2207.74,2144.26,2297.86,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_71268279-IMG_4702.jpeg,1031.18,1612.8,2029.1,2745.79,1.0,Blind-Spot Mirror (Convex Mirror),0.9722
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_831c366a-IMG_5656.jpeg,394.0,720.3,1246.62,2097.9,1.0,Blind-Spot Mirror (Convex Mirror),0.5637
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_8941e841-RV_001_100.jpeg,45.36,3600.58,93.74,3709.44,1.0,Blind-Spot Mirror (Convex Mirror),0.6749
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_9dfbd54a-IMG_5537.jpeg,526.38,808.5,1059.07,1356.6,1.0,Blind-Spot Mirror (Convex Mirror),0.9711
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_e3c71733-IMG_5538.jpeg,1303.34,1451.52,1871.86,2568.38,1.0,Blind-Spot Mirror (Convex Mirror),0.9681
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_e9043741-IMG_4709.jpeg,1814.4,96.77,2001.89,471.74,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_ec712362-IMG_5803.jpeg,471.22,1644.3,505.9,1703.1,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_ec712362-IMG_5803.jpeg,315.2,1654.8,332.54,1707.3,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_ec712362-IMG_5803.jpeg,671.38,1661.1,688.71,1703.1,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_ec712362-IMG_5803.jpeg,687.14,1661.1,699.74,1698.9,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_ec712362-IMG_5803.jpeg,699.74,1661.1,712.35,1698.9,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_ec712362-IMG_5803.jpeg,712.35,1661.1,724.96,1698.9,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_ec712362-IMG_5803.jpeg,724.96,1661.1,737.57,1698.9,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp1_fb9922e7-IMG_4700.jpeg,1079.57,3632.83,1391.04,4027.97,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_1cd6f44d-20251223_152650.jpg,162.18,2313.36,1389.24,3255.84,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_21220c6f-IMG_20251223_114958.jpg,417.0,2508.0,498.0,2608.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_24fcf1af-MP_0080.jpg,1079.57,1822.46,1109.05,1866.82,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_32305793-MP_0024.jpg,1201.15,2248.7,1652.74,2633.73,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_32305793-MP_0024.jpg,2052.1,2473.98,2128.9,2633.73,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_339c8d04-26.side.jpg,1045.55,1987.78,1102.25,2132.93,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_33c8250b-MP_0150.jpeg,384.0,771.12,1409.28,1038.96,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_3855fec5-20251223_150427.jpg,1104.66,2146.08,2108.34,4059.6,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_3d2ae4e7-IMG_20251223_114602.jpg,1359.0,1304.0,1629.0,1556.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_76c73962-MP_0139.jpg,1104.77,1374.41,2794.18,1741.82,1.0,,0.0805
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_86560763-IMG_20251223_113000.jpg,1461.0,2108.0,1524.0,2228.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_888b1f4f-MP_0074.jpg,483.84,864.11,1193.47,1496.88,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_9c71fd6a-20251223_153024.jpg,0.0,1432.08,153.0,2052.24,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_a8531ee5-IMG_20251223_131712.jpg,879.0,1584.0,924.0,1652.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_b430b918-IMG_20251223_132103.jpg,1527.0,1000.0,1578.0,1660.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_b9e760b0-IMG_20251223_125447.jpg,888.0,880.0,1998.0,1948.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9887
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_bf551d52-MP_0136.jpg,608.83,1329.05,2455.49,1635.23,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_c96ca64e-MP_0098.jpg,92.74,818.75,895.1,1608.01,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_d71e8065-MP_0021.jpg,2942.98,1953.79,3068.93,2166.78,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_d71e8065-MP_0021.jpg,2860.03,2048.0,2936.83,2297.86,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_d71e8065-MP_0021.jpg,2537.47,2142.21,2589.7,2215.94,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_d71e8065-MP_0021.jpg,2537.47,2183.17,2589.7,2240.51,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_d71e8065-MP_0021.jpg,2537.47,2215.94,2589.7,2273.28,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_d71e8065-MP_0021.jpg,2537.47,2248.7,2589.7,2273.28,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_d71e8065-MP_0021.jpg,2537.47,2265.09,2589.7,2273.28,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_e074406f-IMG_20251223_115520.jpg,1773.0,3188.0,1836.0,3244.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_e074406f-IMG_20251223_115520.jpg,1785.0,3212.0,1833.0,3340.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_e44be02a-MP_0116.jpg,391.1,836.89,2068.42,1263.28,1.0,,0.0678
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_e46067a0-MP_0166.jpg,1400.83,1257.47,1539.07,1609.73,1.0,Blind-Spot Mirror (Convex Mirror),0.7339
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp2_ee20554d-MP_0115.jpg,749.95,315.25,1737.79,1603.48,1.0,,0.1357
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_17e38feb-20251129_115024.jpg,2744.82,3125.28,2809.08,3194.64,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_17e38feb-20251129_115024.jpg,1820.7,3231.36,1878.84,3308.88,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_22c38c39-IMG_4293.jpeg,1318.46,1660.18,2100.67,2522.02,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_22c38c39-IMG_4293.jpeg,1846.66,1106.78,2403.07,1732.75,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_25e08496-IMG_9116.jpg,2934.54,3364.37,4279.72,5386.42,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_4daf8454-IMG_4356.jpeg,740.88,2745.79,949.54,3092.54,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_4daf8454-IMG_4356.jpeg,1291.25,2995.78,1363.82,3088.51,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_4daf8454-IMG_4356.jpeg,2180.3,3040.13,2231.71,3116.74,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_4daf8454-IMG_4356.jpeg,2700.43,3040.13,2763.94,3120.77,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_5881a320-IMG_9141.jpg,2086.31,3210.14,2866.0,4581.02,1.0,Blind-Spot Mirror (Convex Mirror),0.9645
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_5a849df3-20251129_113801.jpg,2573.46,2590.8,2628.54,2684.64,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_5e7ebbc1-IMG_4337.jpeg,1584.58,1478.74,2140.99,1702.51,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_5e7ebbc1-IMG_4337.jpeg,2104.7,1478.74,2665.15,1684.37,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_5e7ebbc1-IMG_4337.jpeg,1907.14,1134.0,2100.67,1472.69,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_6a5c994c-IMG_9361.jpg,1602.22,3878.45,2746.04,4992.29,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_8d66655f-IMG_4305.jpeg,1427.33,1318.46,1953.5,1882.94,1.0,Blind-Spot Mirror (Convex Mirror),0.9502
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_9e3990fa-20251129_124245.jpg,615.06,1391.28,2347.02,2974.32,1.0,Blind-Spot Mirror (Convex Mirror),0.9848
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_9eaf77cf-IMG_4402.jpeg,1346.69,1109.81,2056.32,1835.57,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_a5739f60-IMG_20251203_120925.jpg,1453.5,3321.12,1548.36,3835.2,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_a9724b83-20251129_122439.jpg,1967.58,2684.64,2062.44,2860.08,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_b05e6955-IMG_4433.jpeg,1427.33,816.48,2806.27,2119.82,1.0,Blind-Spot Mirror (Convex Mirror),0.6569
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_cb90b89e-IMG_9211.jpg,1306.62,1576.51,2574.68,2673.22,1.0,Blind-Spot Mirror (Convex Mirror),0.9776
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_d3cfa1f7-IMG_20251204_133658.jpg,976.14,1113.84,1655.46,1595.28,1.0,,0.1389
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_eb95b9a8-IMG_9119.jpg,3560.0,5649.17,3851.32,5706.29,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_ec385cc7-IMG_20251203_121353.jpg,290.7,3341.52,327.42,3431.28,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_ecbe9be3-IMG_20251204_100152.jpg,1392.3,816.0,2640.78,4075.92,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp3_faf213d1-IMG_20251203_120236.jpg,716.04,3137.52,752.76,3182.4,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,295.5,1686.0,372.0,1836.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_1d0747c0-20260107_105907.jpg,657.54,2414.37,1019.93,2686.69,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_20251115_125732.jpg,2235.0,3324.0,2280.0,3428.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_20251130_115129.jpg,1074.0,3404.0,1119.0,3524.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_20251229_150338.jpg,1833.0,3716.0,1908.0,3900.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_20251229_150338.jpg,2493.0,3880.0,2538.0,3956.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_219a5ac5-20251116_164504.jpg,769.16,2411.28,1157.18,4035.12,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_27645844-20260107_151619.jpg,621.61,1140.8,684.11,1279.68,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_27645844-20260107_151619.jpg,1056.85,1176.51,1114.88,1283.65,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_27645844-20260107_151619.jpg,972.04,1184.45,1023.37,1253.89,1.0,Blind-Spot Mirror (Convex Mirror),0.7243
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_27f66596-20260109_125516.jpg,1030.97,977.26,1097.82,1090.42,1.0,,0.0032
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_303a684b-WhatsApp_Image_2026-01-14_at_11.12.36_1.jpeg,1282.5,1530.0,1314.0,1582.0,1.0,,0.4213
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_5c62b2f6-20251117_104837.jpg,913.81,2725.44,945.95,2802.96,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_5c62b2f6-20251117_104837.jpg,2025.07,2729.52,2070.99,2802.96,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,874.5,628.0,1087.5,848.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,1456.5,1008.0,1498.5,1054.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,1381.5,1028.0,1408.5,1072.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_91f6056a-20251116_163806.jpg,463.79,1187.28,2009.0,2745.84,1.0,Blind-Spot Mirror (Convex Mirror),0.9742
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_bdef9845-20260109_130552.jpg,744.0,1276.0,1983.0,2364.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9775
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_cbb400e9-WhatsApp_Image_2026-01-14_at_11.10.25.jpeg,1078.5,1222.0,1135.5,1266.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_d2b85a88-20251116_163522.jpg,936.61,2170.61,963.19,2224.3,1.0,,0.0022
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_df0bccf2-WhatsApp_Image_2026-01-14_at_11.12.00.jpeg,1058.0,820.5,1076.0,844.5,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp4_fe8b41fc-WhatsApp_Image_2026-01-14_at_11.10.21_3.jpeg,642.0,588.0,907.5,1096.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9088
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_05facbdc-BenTaliana_23_Front.jpeg,716.69,6797.95,789.26,6894.72,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_2da1aa64-AlisonAttard_27_Front.jpeg,1967.62,1315.44,2475.65,1811.38,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_32b2eadc-AlisonAttard_7_Side.jpeg,3278.02,2573.42,3519.94,2848.61,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2778.05,1143.07,4027.97,1642.03,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,1374.91,1073.52,2161.15,1391.04,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,2531.33,2443.92,2580.48,2570.4,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1870.85,2484.72,1904.64,2558.16,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_559514d7-AlisonAttard_13_Side.jpeg,2366.78,1103.76,2826.43,1696.46,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_57e0ac5f-AlisonAttard_27_Back.jpeg,1612.8,1581.55,2842.56,1977.7,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_6bb6fe17-BenTaliana_15_Back.jpeg,839.16,2322.43,2526.55,4411.01,1.0,Blind-Spot Mirror (Convex Mirror),0.9815
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_6cdcc943-AlisonAttard_14_Back.jpeg,1169.28,979.78,2382.91,2237.76,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2052.29,1493.86,3088.51,1717.63,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_85f27713-MelatAssefa_35_Side.jpg,1362.31,3044.5,1837.84,4346.83,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_a7e73d18-AlisonAttard_29_Back.jpeg,1770.05,1146.1,2636.93,1660.18,1.0,,0.3435
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_bc59500b-AlisonAttard_47_Side.jpeg,2640.96,1176.34,3177.22,2277.07,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_bc59500b-AlisonAttard_47_Side.jpeg,1391.04,1693.44,2520.0,1874.88,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_e64b6a10-AlisonAttard_20_Side.jpeg,2403.07,1239.84,3221.57,1351.73,1.0,,0.0126
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp5_fc84e1fb-BenTaliana_3_Back.jpeg,814.21,1794.24,1698.73,3955.39,1.0,,0.0051
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_0126954d-IMG_0235.JPG,729.79,1236.82,2374.85,2119.82,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_255dc793-IMG_0327.JPG,915.26,1572.48,3544.13,2089.58,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_264240ca-IMG_0303.JPG,1209.6,737.86,3648.96,2080.51,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_280e9cbc-IMG_0220.JPG,1556.35,1400.11,2201.47,1971.65,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_3721037e-IMG_0363.JPG,2286.14,1245.89,4027.97,1802.3,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_3721037e-IMG_0363.JPG,1717.63,1394.06,3116.74,1678.32,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_3ce4063d-IMG_0217.JPG,1544.26,1400.11,2132.93,1735.78,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_6f66549b-IMG_0289.JPG,1733.76,988.85,2761.92,2416.18,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_6f66549b-IMG_0289.JPG,2640.96,713.66,4027.97,2857.68,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_7a1ad0b4-IMG_0319.JPG,346.75,1055.38,3064.32,2585.52,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_8d7bc213-IMG_0237.JPG,883.01,1282.18,2540.16,2301.26,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_9e256948-IMG_0275.JPG,2245.82,486.86,2644.99,1829.52,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_9e256948-IMG_0275.JPG,1370.88,858.82,1657.15,1632.96,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_9e256948-IMG_0275.JPG,1685.38,1309.39,2124.86,1893.02,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_ad8b6cea-IMG_0342.JPG,1467.65,0.0,4027.97,2322.43,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_b1f0ac5c-IMG_0227.JPG,1036.22,692.5,2362.75,2210.54,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_b1f0ac5c-IMG_0227.JPG,2120.83,834.62,2761.92,2035.15,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_ba6a303c-IMG_0314.JPG,2633.9,3552.19,2679.26,3604.61,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_bf61cf6e-Screenshot_2025-12-05_142746.png,195.62,158.66,215.4,184.92,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_c2b7f6e2-IMG_0300.JPG,1209.6,550.37,2967.55,2591.57,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_c2b7f6e2-IMG_0300.JPG,2197.44,0.0,4027.97,2706.48,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_cebbcc7c-Screenshot_2025-12-05_141232.png,62.5,62.74,95.88,104.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_d33c21c3-IMG_6246.JPG,641.09,931.39,1152.14,1979.71,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_d33c21c3-IMG_6246.JPG,1593.65,874.94,2074.46,2036.16,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_e18d6d29-IMG_0313.JPG,1173.31,1091.66,2306.3,2304.29,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_e18d6d29-IMG_0313.JPG,2318.4,1158.19,3556.22,2328.48,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_e18d6d29-IMG_0313.JPG,3407.04,2234.74,3644.93,2461.54,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_e18d6d29-IMG_0313.JPG,3644.93,2249.86,3786.05,2479.68,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_e4766ab1-Screenshot_2025-12-05_134942.png,173.44,0.0,261.21,69.89,1.0,,0.0874
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp6_fb7a099a-Screenshot_2025-12-05_134245.png,81.74,37.84,149.01,178.19,1.0,Blind-Spot Mirror (Convex Mirror),0.8134
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_0c242d9c-IMG_1860.jpg,1552.32,1288.22,4027.97,1527.12,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_0c807ae1-IMG_1804.jpg,1245.89,145.15,3407.04,2776.03,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_27403473-IMG_2301.JPG,923.33,1886.98,1141.06,2751.84,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_3335816b-IMG_1863.jpg,0.0,0.0,1322.5,1406.16,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_3335816b-IMG_1863.jpg,1036.22,214.7,3076.42,2896.99,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_3335816b-IMG_1863.jpg,2495.81,492.91,3806.21,2479.68,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_36174e45-IMG_6745.jpeg,1321.49,1467.65,1548.29,1959.55,1.0,Blind-Spot Mirror (Convex Mirror),0.9051
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_3acb0651-IMG_1793.jpg,540.29,1430.35,3495.74,1766.02,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_4c22ebaa-IMG_6807.jpeg,1502.93,1971.65,1935.36,2471.62,1.0,Blind-Spot Mirror (Convex Mirror),0.9758
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_50fb19de-IMG_1779.jpg,778.18,1439.42,3790.08,1756.94,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_65ce4c26-IMG_1752.jpg,443.52,1303.34,2584.51,1823.47,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_65ce4c26-IMG_1752.jpg,2278.08,1306.37,4027.97,1708.56,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_66312f27-IMG_1789.jpg,943.49,1436.4,3870.72,1635.98,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_81ace7bd-IMG_1823.jpg,1665.22,692.5,3334.46,2794.18,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_85e21f65-IMG_1888.jpg,1544.26,783.22,2604.67,2763.94,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_87ab4012-IMG_1929.jpg,1842.62,139.1,3479.62,2343.6,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_8e1e7992-IMG_6659.jpeg,2068.42,1907.14,2165.18,2036.16,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_9ceccc7e-IMG_2183.JPG,161.28,701.57,1411.2,2080.51,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_9ceccc7e-IMG_2183.JPG,2774.02,1254.96,3697.34,1657.15,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_b1489edd-IMG_1891.jpg,927.36,1403.14,3479.62,1684.37,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_bd29943d-IMG_1733.jpg,1467.65,1106.78,3765.89,1273.1,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_c1e32eff-IMG_1769.jpg,1999.87,2736.72,2366.78,3020.98,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_c21d51bf-IMG_6622.jpeg,1006.99,1741.82,1055.38,1794.24,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_c21d51bf-IMG_6622.jpeg,1079.57,1757.95,1112.83,1814.4,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_d5464bd2-IMG_6729.jpeg,2621.81,2100.67,2688.34,2193.41,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_d5464bd2-IMG_6729.jpeg,2884.9,2104.7,2927.23,2189.38,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_d5464bd2-IMG_6729.jpeg,2621.81,2181.31,2688.34,2245.82,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_d7ded33c-IMG_6742.jpeg,1859.76,2076.48,1914.19,2177.28,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_d7ded33c-IMG_6742.jpeg,1862.78,2149.06,1886.98,2193.41,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_db87303d-20251215_144613.jpg,1183.9,2120.83,1642.03,3205.44,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_dfd0a665-IMG_2360.JPG,529.2,2229.7,583.63,2282.11,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_dfd0a665-IMG_2360.JPG,976.75,2282.11,1003.97,2334.53,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_e16f743b-IMG_1838.jpg,919.3,1460.59,3644.93,1753.92,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_f5c11235-IMG_2319.JPG,1536.19,771.12,1810.37,895.1,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_f5c11235-IMG_2319.JPG,2052.29,2742.77,2181.31,2794.18,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_f6c47dc2-IMG_2182.JPG,1536.19,1490.83,2870.78,1732.75,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp7_f74b48d8-IMG_1768.jpg,1528.13,6.05,3669.12,2791.15,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_06980edd-front.jpg,3713.47,2425.25,3782.02,2600.64,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_06980edd-front.jpg,3161.09,2528.06,3213.5,2603.66,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_06980edd-front.jpg,2092.61,2591.57,2140.99,2661.12,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_06980edd-front.jpg,2326.46,2606.69,2374.85,2688.34,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_06980edd-front.jpg,2556.29,2609.71,2592.58,2646.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_06980edd-front.jpg,2556.29,2633.9,2592.58,2661.12,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_0d18b07a-IMG_0224.JPG,1290.91,1949.22,4004.11,2990.23,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_14aaa44c-IMG_0211.JPG,1747.87,1041.01,3495.74,3105.9,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_1b5dcc93-back.jpg,686.59,2838.53,1437.7,3149.82,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_2aed70e2-front.jpg,412.42,2273.28,1873.15,3084.29,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_3e16c892-IMG_0188.JPG,2507.57,1302.34,4204.03,2874.56,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_4682619f-back.jpg,2903.04,2776.03,3019.97,3020.98,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_4682619f-back.jpg,2209.54,2800.22,2286.14,2972.59,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_4682619f-back.jpg,2128.9,2869.78,2177.28,2972.59,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_4fe75feb-IMG_0243.JPG,873.94,775.4,3467.18,3358.66,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_4fe75feb-IMG_0243.JPG,4895.18,3791.34,5186.5,4082.65,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_4fe75feb-IMG_0243.JPG,5180.78,3868.45,5432.11,4091.22,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_58176912-front.jpg,2314.37,1267.06,2354.69,1309.39,1.0,,0.0016
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_73e17aa1-back.jpg,358.85,1551.31,504.0,1732.75,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_77233a9d-IMG_0190_Blurred.JPG,582.62,4603.87,672.59,4718.11,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_77233a9d-IMG_0190_Blurred.JPG,775.4,4632.43,929.63,4775.23,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_87d39243-IMG_0210.JPG,1964.93,1113.84,3632.83,3191.58,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_8dc5354c-IMG_0141.JPG,1422.29,1160.96,3004.51,3123.04,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_8edb630b-IMG_0208.JPG,1902.1,1130.98,3375.79,3028.79,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_8ff667a0-IMG_0209.JPG,1707.89,1790.71,3752.78,2788.88,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_ad4861cb-back.jpg,1564.42,1657.15,1955.52,2391.98,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_ad4861cb-back.jpg,2108.74,1850.69,2306.3,2458.51,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_ebf4ab1a-IMG_0198.JPG,0.0,1525.1,708.29,2120.58,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_edb6fab3-IMG_0189.JPG,2107.73,989.6,4415.38,3607.13,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp8_fc124a5b-Back.jpg,769.54,1372.16,1760.26,2375.68,1.0,Blind-Spot Mirror (Convex Mirror),0.9319
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_00e70ac4-IMG_20251111_140913.jpg,0.0,2724.0,348.0,3492.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_14b6af7e-IMG_20251106_142858.jpg,1089.09,1003.68,4178.94,4067.2,1.0,Blind-Spot Mirror (Convex Mirror),0.9824
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_1f50c9e9-WhatsApp_Image_2026-01-01_at_18.13.18.jpeg,949.25,1032.19,986.11,1114.11,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_29bd496f-IMG_20251106_153126.jpg,1062.0,2216.0,1686.0,3128.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_31a93fb3-20251122_141601.jpg,1620.0,1732.0,1779.0,1864.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_3724af9d-IMG_20251106_144506.jpg,1050.0,1160.0,2388.0,2984.0,1.0,Blind-Spot Mirror (Convex Mirror),0.989
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_37f0c8a3-IMG_20251111_162207.jpg,648.0,2676.0,693.0,2732.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_37f0c8a3-IMG_20251111_162207.jpg,756.0,2676.0,819.0,2732.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_48f9d230-IMG_20251112_155513.jpg,1805.4,2778.48,1869.66,2909.04,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_561ba1c4-IMG_20251111_162044.jpg,1881.0,2380.0,1992.0,2544.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_673470fc-IMG_20251111_160954.jpg,1365.0,2372.0,1407.0,2440.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_673470fc-IMG_20251111_160954.jpg,1665.0,2404.0,1710.0,2464.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_76700fa1-IMG_20251111_162238.jpg,756.0,2208.0,795.0,2324.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_b775d113-IMG_20251111_162326.jpg,2754.0,2608.0,2847.0,2776.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_c7a4a215-20251122_140026.jpg,1359.0,2524.0,1434.0,2624.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_c7a4a215-20251122_140026.jpg,1662.0,2500.0,1740.0,2624.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_c8f9e8c2-M8_back.jpg,1278.0,1904.0,1593.0,2260.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9311
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d09450b2-IMG_20251112_155615.jpg,1992.06,2423.52,2089.98,2998.8,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1407.0,2144.0,1440.0,2188.0,1.0,,0.0094
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1440.0,2144.0,1461.0,2188.0,1.0,,0.006
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1461.0,2144.0,1482.0,2188.0,1.0,,0.006
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1482.0,2144.0,1503.0,2188.0,1.0,,0.006
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1503.0,2144.0,1521.0,2188.0,1.0,,0.0051
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1521.0,2144.0,1539.0,2188.0,1.0,,0.0051
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1539.0,2144.0,1560.0,2188.0,1.0,,0.006
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1560.0,2144.0,1578.0,2188.0,1.0,,0.0051
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1578.0,2144.0,1596.0,2188.0,1.0,,0.0051
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1596.0,2144.0,1614.0,2188.0,1.0,,0.0051
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1614.0,2144.0,1632.0,2188.0,1.0,,0.0046
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_d5f4aa18-20251122_140237.jpg,1632.0,2144.0,1650.0,2188.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_dfbf929f-IMG_20251106_154024.jpg,1271.81,2281.47,1406.98,3747.84,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_e2932f32-20251122_134050.jpg,1350.0,1856.0,1512.0,1980.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_e2932f32-20251122_134050.jpg,774.0,2096.0,822.0,2144.0,1.0,,0.0
+Cosmos Reason2 8B,mtsd-p12,traffic sign,grp9_f109e3eb-IMG_20251111_144036.jpg,1164.0,1336.0,1947.0,2240.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9829

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "protocol_hash": "60787d37184e3d7185c9ca8b0e8e3744505b5aba4729db032c07b755a54dfda1",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mdwd-p4",
+  "prompt": "orange garbage bag",
+  "target_classes": [
+    "Orange CMD"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 28,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "target_gt_count": 78,
+  "tp": 57,
+  "fp": 390,
+  "fn": 21,
+  "finished_at": "2026-08-18T08:26:10.912783+00:00",
+  "model_load_ms": 73768.4,
+  "worker_processes": 6,
+  "worker_chunk_size": 64,
+  "execution_strategy": "isolated-model-prompt-chunks-v1"
+}

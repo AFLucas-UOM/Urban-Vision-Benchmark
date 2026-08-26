@@ -1,0 +1,691 @@
+model,prompt_id,gt_class,matched_count
+Cosmos Reason2 2B,mtsd-p1,Auxiliary Sign,8
+Cosmos Reason2 2B,mtsd-p1,Stop Sign,54
+Cosmos Reason2 2B,mtsd-p1,Pedestrian Crossing,73
+Cosmos Reason2 2B,mtsd-p1,Other-Unknown,50
+Cosmos Reason2 2B,mtsd-p1,Back-Unknown,83
+Cosmos Reason2 2B,mtsd-p1,Blind-Spot Mirror (Convex Mirror),51
+Cosmos Reason2 2B,mtsd-p1,No Entry (One Way),80
+Cosmos Reason2 2B,mtsd-p1,No Through Road (T-Junction),43
+Cosmos Reason2 2B,mtsd-p1,Roundabout Ahead,11
+Cosmos Reason2 2B,mtsd-p1,Directional Sign,11
+Cosmos Reason2 2B,mtsd-p1,Street Sign,3
+Cosmos Reason2 2B,mtsd-p10,Directional Sign,18
+Cosmos Reason2 2B,mtsd-p10,Stop Sign,52
+Cosmos Reason2 2B,mtsd-p10,Pedestrian Crossing,61
+Cosmos Reason2 2B,mtsd-p10,Other-Unknown,42
+Cosmos Reason2 2B,mtsd-p10,Back-Unknown,86
+Cosmos Reason2 2B,mtsd-p10,Blind-Spot Mirror (Convex Mirror),49
+Cosmos Reason2 2B,mtsd-p10,No Entry (One Way),79
+Cosmos Reason2 2B,mtsd-p10,Roundabout Ahead,24
+Cosmos Reason2 2B,mtsd-p10,No Through Road (T-Junction),36
+Cosmos Reason2 2B,mtsd-p10,Auxiliary Sign,8
+Cosmos Reason2 2B,mtsd-p10,Street Sign,10
+Cosmos Reason2 2B,mtsd-p10,Tourist Sign,1
+Cosmos Reason2 2B,mtsd-p11,Back-Unknown,111
+Cosmos Reason2 2B,mtsd-p11,Stop Sign,56
+Cosmos Reason2 2B,mtsd-p11,Pedestrian Crossing,47
+Cosmos Reason2 2B,mtsd-p11,No Entry (One Way),61
+Cosmos Reason2 2B,mtsd-p11,Blind-Spot Mirror (Convex Mirror),43
+Cosmos Reason2 2B,mtsd-p11,Other-Unknown,39
+Cosmos Reason2 2B,mtsd-p11,Roundabout Ahead,12
+Cosmos Reason2 2B,mtsd-p11,No Through Road (T-Junction),30
+Cosmos Reason2 2B,mtsd-p11,Auxiliary Sign,10
+Cosmos Reason2 2B,mtsd-p11,Directional Sign,10
+Cosmos Reason2 2B,mtsd-p11,Street Sign,2
+Cosmos Reason2 2B,mtsd-p12,Auxiliary Sign,16
+Cosmos Reason2 2B,mtsd-p12,Stop Sign,75
+Cosmos Reason2 2B,mtsd-p12,Pedestrian Crossing,77
+Cosmos Reason2 2B,mtsd-p12,Other-Unknown,65
+Cosmos Reason2 2B,mtsd-p12,Back-Unknown,96
+Cosmos Reason2 2B,mtsd-p12,Blind-Spot Mirror (Convex Mirror),43
+Cosmos Reason2 2B,mtsd-p12,No Entry (One Way),105
+Cosmos Reason2 2B,mtsd-p12,No Through Road (T-Junction),38
+Cosmos Reason2 2B,mtsd-p12,Roundabout Ahead,27
+Cosmos Reason2 2B,mtsd-p12,Directional Sign,21
+Cosmos Reason2 2B,mtsd-p12,Street Sign,14
+Cosmos Reason2 2B,mtsd-p12,Tourist Sign,1
+Cosmos Reason2 2B,mtsd-p13,Back-Unknown,51
+Cosmos Reason2 2B,mtsd-p13,Stop Sign,42
+Cosmos Reason2 2B,mtsd-p13,Pedestrian Crossing,33
+Cosmos Reason2 2B,mtsd-p13,Other-Unknown,15
+Cosmos Reason2 2B,mtsd-p13,Blind-Spot Mirror (Convex Mirror),51
+Cosmos Reason2 2B,mtsd-p13,No Entry (One Way),58
+Cosmos Reason2 2B,mtsd-p13,No Through Road (T-Junction),26
+Cosmos Reason2 2B,mtsd-p13,Directional Sign,8
+Cosmos Reason2 2B,mtsd-p13,Roundabout Ahead,12
+Cosmos Reason2 2B,mtsd-p13,Auxiliary Sign,2
+Cosmos Reason2 2B,mtsd-p13,Street Sign,2
+Cosmos Reason2 2B,mtsd-p2,Auxiliary Sign,7
+Cosmos Reason2 2B,mtsd-p2,Stop Sign,87
+Cosmos Reason2 2B,mtsd-p2,Pedestrian Crossing,48
+Cosmos Reason2 2B,mtsd-p2,Back-Unknown,99
+Cosmos Reason2 2B,mtsd-p2,Blind-Spot Mirror (Convex Mirror),39
+Cosmos Reason2 2B,mtsd-p2,No Entry (One Way),103
+Cosmos Reason2 2B,mtsd-p2,Other-Unknown,50
+Cosmos Reason2 2B,mtsd-p2,No Through Road (T-Junction),39
+Cosmos Reason2 2B,mtsd-p2,Roundabout Ahead,7
+Cosmos Reason2 2B,mtsd-p2,Street Sign,2
+Cosmos Reason2 2B,mtsd-p2,Directional Sign,4
+Cosmos Reason2 2B,mtsd-p3,Auxiliary Sign,13
+Cosmos Reason2 2B,mtsd-p3,Stop Sign,51
+Cosmos Reason2 2B,mtsd-p3,Back-Unknown,111
+Cosmos Reason2 2B,mtsd-p3,Pedestrian Crossing,44
+Cosmos Reason2 2B,mtsd-p3,Other-Unknown,61
+Cosmos Reason2 2B,mtsd-p3,Blind-Spot Mirror (Convex Mirror),30
+Cosmos Reason2 2B,mtsd-p3,No Entry (One Way),109
+Cosmos Reason2 2B,mtsd-p3,No Through Road (T-Junction),37
+Cosmos Reason2 2B,mtsd-p3,Roundabout Ahead,9
+Cosmos Reason2 2B,mtsd-p3,Street Sign,7
+Cosmos Reason2 2B,mtsd-p3,Directional Sign,6
+Cosmos Reason2 2B,mtsd-p4,Auxiliary Sign,7
+Cosmos Reason2 2B,mtsd-p4,Stop Sign,39
+Cosmos Reason2 2B,mtsd-p4,Back-Unknown,100
+Cosmos Reason2 2B,mtsd-p4,Pedestrian Crossing,49
+Cosmos Reason2 2B,mtsd-p4,Other-Unknown,49
+Cosmos Reason2 2B,mtsd-p4,Blind-Spot Mirror (Convex Mirror),49
+Cosmos Reason2 2B,mtsd-p4,No Entry (One Way),95
+Cosmos Reason2 2B,mtsd-p4,Roundabout Ahead,16
+Cosmos Reason2 2B,mtsd-p4,No Through Road (T-Junction),42
+Cosmos Reason2 2B,mtsd-p4,Directional Sign,19
+Cosmos Reason2 2B,mtsd-p4,Street Sign,5
+Cosmos Reason2 2B,mtsd-p4,Tourist Sign,1
+Cosmos Reason2 2B,mtsd-p5,Back-Unknown,92
+Cosmos Reason2 2B,mtsd-p5,Stop Sign,46
+Cosmos Reason2 2B,mtsd-p5,Pedestrian Crossing,42
+Cosmos Reason2 2B,mtsd-p5,Other-Unknown,33
+Cosmos Reason2 2B,mtsd-p5,Blind-Spot Mirror (Convex Mirror),86
+Cosmos Reason2 2B,mtsd-p5,No Entry (One Way),94
+Cosmos Reason2 2B,mtsd-p5,Roundabout Ahead,26
+Cosmos Reason2 2B,mtsd-p5,Auxiliary Sign,5
+Cosmos Reason2 2B,mtsd-p5,No Through Road (T-Junction),35
+Cosmos Reason2 2B,mtsd-p5,Directional Sign,6
+Cosmos Reason2 2B,mtsd-p5,Street Sign,3
+Cosmos Reason2 2B,mtsd-p6,Auxiliary Sign,9
+Cosmos Reason2 2B,mtsd-p6,Stop Sign,46
+Cosmos Reason2 2B,mtsd-p6,Back-Unknown,97
+Cosmos Reason2 2B,mtsd-p6,Pedestrian Crossing,34
+Cosmos Reason2 2B,mtsd-p6,Other-Unknown,49
+Cosmos Reason2 2B,mtsd-p6,Blind-Spot Mirror (Convex Mirror),40
+Cosmos Reason2 2B,mtsd-p6,No Entry (One Way),98
+Cosmos Reason2 2B,mtsd-p6,Roundabout Ahead,13
+Cosmos Reason2 2B,mtsd-p6,No Through Road (T-Junction),39
+Cosmos Reason2 2B,mtsd-p6,Street Sign,6
+Cosmos Reason2 2B,mtsd-p6,Directional Sign,8
+Cosmos Reason2 2B,mtsd-p6,Tourist Sign,1
+Cosmos Reason2 2B,mtsd-p7,Auxiliary Sign,5
+Cosmos Reason2 2B,mtsd-p7,Stop Sign,54
+Cosmos Reason2 2B,mtsd-p7,Pedestrian Crossing,50
+Cosmos Reason2 2B,mtsd-p7,Other-Unknown,35
+Cosmos Reason2 2B,mtsd-p7,Back-Unknown,62
+Cosmos Reason2 2B,mtsd-p7,Blind-Spot Mirror (Convex Mirror),37
+Cosmos Reason2 2B,mtsd-p7,No Entry (One Way),78
+Cosmos Reason2 2B,mtsd-p7,Roundabout Ahead,14
+Cosmos Reason2 2B,mtsd-p7,No Through Road (T-Junction),38
+Cosmos Reason2 2B,mtsd-p7,Directional Sign,9
+Cosmos Reason2 2B,mtsd-p7,Street Sign,8
+Cosmos Reason2 2B,mtsd-p7,Tourist Sign,1
+Cosmos Reason2 2B,mtsd-p8,Back-Unknown,108
+Cosmos Reason2 2B,mtsd-p8,Other-Unknown,17
+Cosmos Reason2 2B,mtsd-p8,Blind-Spot Mirror (Convex Mirror),105
+Cosmos Reason2 2B,mtsd-p8,No Entry (One Way),35
+Cosmos Reason2 2B,mtsd-p8,Roundabout Ahead,4
+Cosmos Reason2 2B,mtsd-p8,No Through Road (T-Junction),15
+Cosmos Reason2 2B,mtsd-p8,Pedestrian Crossing,7
+Cosmos Reason2 2B,mtsd-p8,Stop Sign,6
+Cosmos Reason2 2B,mtsd-p8,Directional Sign,2
+Cosmos Reason2 2B,mtsd-p8,Auxiliary Sign,2
+Cosmos Reason2 2B,mtsd-p9,Directional Sign,16
+Cosmos Reason2 2B,mtsd-p9,Stop Sign,73
+Cosmos Reason2 2B,mtsd-p9,Pedestrian Crossing,70
+Cosmos Reason2 2B,mtsd-p9,Other-Unknown,49
+Cosmos Reason2 2B,mtsd-p9,Back-Unknown,89
+Cosmos Reason2 2B,mtsd-p9,Blind-Spot Mirror (Convex Mirror),32
+Cosmos Reason2 2B,mtsd-p9,No Entry (One Way),89
+Cosmos Reason2 2B,mtsd-p9,Street Sign,23
+Cosmos Reason2 2B,mtsd-p9,No Through Road (T-Junction),37
+Cosmos Reason2 2B,mtsd-p9,Roundabout Ahead,26
+Cosmos Reason2 2B,mtsd-p9,Auxiliary Sign,17
+Cosmos Reason2 2B,mtsd-p9,Tourist Sign,1
+Cosmos Reason2 8B,mtsd-p1,Auxiliary Sign,8
+Cosmos Reason2 8B,mtsd-p1,Back-Unknown,129
+Cosmos Reason2 8B,mtsd-p1,Pedestrian Crossing,89
+Cosmos Reason2 8B,mtsd-p1,Blind-Spot Mirror (Convex Mirror),29
+Cosmos Reason2 8B,mtsd-p1,No Entry (One Way),64
+Cosmos Reason2 8B,mtsd-p1,Stop Sign,8
+Cosmos Reason2 8B,mtsd-p1,No Through Road (T-Junction),48
+Cosmos Reason2 8B,mtsd-p1,Roundabout Ahead,9
+Cosmos Reason2 8B,mtsd-p1,Other-Unknown,31
+Cosmos Reason2 8B,mtsd-p1,Street Sign,4
+Cosmos Reason2 8B,mtsd-p1,Directional Sign,16
+Cosmos Reason2 8B,mtsd-p10,Directional Sign,32
+Cosmos Reason2 8B,mtsd-p10,Stop Sign,50
+Cosmos Reason2 8B,mtsd-p10,Back-Unknown,183
+Cosmos Reason2 8B,mtsd-p10,Pedestrian Crossing,70
+Cosmos Reason2 8B,mtsd-p10,Other-Unknown,47
+Cosmos Reason2 8B,mtsd-p10,No Entry (One Way),106
+Cosmos Reason2 8B,mtsd-p10,Blind-Spot Mirror (Convex Mirror),38
+Cosmos Reason2 8B,mtsd-p10,Roundabout Ahead,41
+Cosmos Reason2 8B,mtsd-p10,Street Sign,19
+Cosmos Reason2 8B,mtsd-p10,Auxiliary Sign,11
+Cosmos Reason2 8B,mtsd-p10,No Through Road (T-Junction),47
+Cosmos Reason2 8B,mtsd-p10,Tourist Sign,1
+Cosmos Reason2 8B,mtsd-p11,Back-Unknown,245
+Cosmos Reason2 8B,mtsd-p11,Stop Sign,47
+Cosmos Reason2 8B,mtsd-p11,Pedestrian Crossing,46
+Cosmos Reason2 8B,mtsd-p11,No Entry (One Way),95
+Cosmos Reason2 8B,mtsd-p11,Blind-Spot Mirror (Convex Mirror),47
+Cosmos Reason2 8B,mtsd-p11,Roundabout Ahead,8
+Cosmos Reason2 8B,mtsd-p11,Other-Unknown,34
+Cosmos Reason2 8B,mtsd-p11,No Through Road (T-Junction),40
+Cosmos Reason2 8B,mtsd-p11,Auxiliary Sign,11
+Cosmos Reason2 8B,mtsd-p11,Street Sign,4
+Cosmos Reason2 8B,mtsd-p11,Directional Sign,6
+Cosmos Reason2 8B,mtsd-p12,Back-Unknown,220
+Cosmos Reason2 8B,mtsd-p12,Auxiliary Sign,32
+Cosmos Reason2 8B,mtsd-p12,Directional Sign,42
+Cosmos Reason2 8B,mtsd-p12,Stop Sign,100
+Cosmos Reason2 8B,mtsd-p12,Pedestrian Crossing,90
+Cosmos Reason2 8B,mtsd-p12,Other-Unknown,102
+Cosmos Reason2 8B,mtsd-p12,No Entry (One Way),143
+Cosmos Reason2 8B,mtsd-p12,Blind-Spot Mirror (Convex Mirror),30
+Cosmos Reason2 8B,mtsd-p12,Roundabout Ahead,45
+Cosmos Reason2 8B,mtsd-p12,No Through Road (T-Junction),49
+Cosmos Reason2 8B,mtsd-p12,Street Sign,15
+Cosmos Reason2 8B,mtsd-p12,Tourist Sign,1
+Cosmos Reason2 8B,mtsd-p13,Back-Unknown,72
+Cosmos Reason2 8B,mtsd-p13,Stop Sign,64
+Cosmos Reason2 8B,mtsd-p13,Other-Unknown,34
+Cosmos Reason2 8B,mtsd-p13,Blind-Spot Mirror (Convex Mirror),46
+Cosmos Reason2 8B,mtsd-p13,No Entry (One Way),84
+Cosmos Reason2 8B,mtsd-p13,Roundabout Ahead,13
+Cosmos Reason2 8B,mtsd-p13,No Through Road (T-Junction),39
+Cosmos Reason2 8B,mtsd-p13,Pedestrian Crossing,40
+Cosmos Reason2 8B,mtsd-p13,Directional Sign,9
+Cosmos Reason2 8B,mtsd-p13,Auxiliary Sign,7
+Cosmos Reason2 8B,mtsd-p2,Auxiliary Sign,6
+Cosmos Reason2 8B,mtsd-p2,Stop Sign,104
+Cosmos Reason2 8B,mtsd-p2,Back-Unknown,127
+Cosmos Reason2 8B,mtsd-p2,No Entry (One Way),143
+Cosmos Reason2 8B,mtsd-p2,Blind-Spot Mirror (Convex Mirror),28
+Cosmos Reason2 8B,mtsd-p2,Other-Unknown,46
+Cosmos Reason2 8B,mtsd-p2,No Through Road (T-Junction),45
+Cosmos Reason2 8B,mtsd-p2,Roundabout Ahead,5
+Cosmos Reason2 8B,mtsd-p2,Pedestrian Crossing,16
+Cosmos Reason2 8B,mtsd-p2,Directional Sign,2
+Cosmos Reason2 8B,mtsd-p2,Street Sign,1
+Cosmos Reason2 8B,mtsd-p3,Auxiliary Sign,10
+Cosmos Reason2 8B,mtsd-p3,Back-Unknown,104
+Cosmos Reason2 8B,mtsd-p3,Other-Unknown,63
+Cosmos Reason2 8B,mtsd-p3,No Entry (One Way),140
+Cosmos Reason2 8B,mtsd-p3,Blind-Spot Mirror (Convex Mirror),24
+Cosmos Reason2 8B,mtsd-p3,Roundabout Ahead,6
+Cosmos Reason2 8B,mtsd-p3,Pedestrian Crossing,18
+Cosmos Reason2 8B,mtsd-p3,Stop Sign,20
+Cosmos Reason2 8B,mtsd-p3,No Through Road (T-Junction),46
+Cosmos Reason2 8B,mtsd-p3,Directional Sign,4
+Cosmos Reason2 8B,mtsd-p3,Street Sign,1
+Cosmos Reason2 8B,mtsd-p4,Directional Sign,34
+Cosmos Reason2 8B,mtsd-p4,Back-Unknown,127
+Cosmos Reason2 8B,mtsd-p4,Other-Unknown,40
+Cosmos Reason2 8B,mtsd-p4,Blind-Spot Mirror (Convex Mirror),20
+Cosmos Reason2 8B,mtsd-p4,No Entry (One Way),109
+Cosmos Reason2 8B,mtsd-p4,Roundabout Ahead,23
+Cosmos Reason2 8B,mtsd-p4,Auxiliary Sign,7
+Cosmos Reason2 8B,mtsd-p4,No Through Road (T-Junction),49
+Cosmos Reason2 8B,mtsd-p4,Street Sign,6
+Cosmos Reason2 8B,mtsd-p4,Pedestrian Crossing,31
+Cosmos Reason2 8B,mtsd-p4,Stop Sign,7
+Cosmos Reason2 8B,mtsd-p4,Tourist Sign,1
+Cosmos Reason2 8B,mtsd-p5,Back-Unknown,103
+Cosmos Reason2 8B,mtsd-p5,Other-Unknown,30
+Cosmos Reason2 8B,mtsd-p5,Blind-Spot Mirror (Convex Mirror),43
+Cosmos Reason2 8B,mtsd-p5,No Entry (One Way),106
+Cosmos Reason2 8B,mtsd-p5,Roundabout Ahead,44
+Cosmos Reason2 8B,mtsd-p5,Pedestrian Crossing,17
+Cosmos Reason2 8B,mtsd-p5,No Through Road (T-Junction),42
+Cosmos Reason2 8B,mtsd-p5,Directional Sign,19
+Cosmos Reason2 8B,mtsd-p5,Stop Sign,2
+Cosmos Reason2 8B,mtsd-p5,Auxiliary Sign,3
+Cosmos Reason2 8B,mtsd-p5,Street Sign,1
+Cosmos Reason2 8B,mtsd-p6,Back-Unknown,71
+Cosmos Reason2 8B,mtsd-p6,Pedestrian Crossing,35
+Cosmos Reason2 8B,mtsd-p6,Other-Unknown,62
+Cosmos Reason2 8B,mtsd-p6,No Entry (One Way),136
+Cosmos Reason2 8B,mtsd-p6,Blind-Spot Mirror (Convex Mirror),19
+Cosmos Reason2 8B,mtsd-p6,Roundabout Ahead,10
+Cosmos Reason2 8B,mtsd-p6,Auxiliary Sign,7
+Cosmos Reason2 8B,mtsd-p6,Stop Sign,15
+Cosmos Reason2 8B,mtsd-p6,No Through Road (T-Junction),45
+Cosmos Reason2 8B,mtsd-p6,Directional Sign,16
+Cosmos Reason2 8B,mtsd-p6,Street Sign,2
+Cosmos Reason2 8B,mtsd-p7,Directional Sign,18
+Cosmos Reason2 8B,mtsd-p7,Back-Unknown,138
+Cosmos Reason2 8B,mtsd-p7,Pedestrian Crossing,64
+Cosmos Reason2 8B,mtsd-p7,Other-Unknown,58
+Cosmos Reason2 8B,mtsd-p7,Blind-Spot Mirror (Convex Mirror),28
+Cosmos Reason2 8B,mtsd-p7,No Entry (One Way),95
+Cosmos Reason2 8B,mtsd-p7,Roundabout Ahead,11
+Cosmos Reason2 8B,mtsd-p7,Stop Sign,37
+Cosmos Reason2 8B,mtsd-p7,Auxiliary Sign,5
+Cosmos Reason2 8B,mtsd-p7,No Through Road (T-Junction),47
+Cosmos Reason2 8B,mtsd-p7,Street Sign,9
+Cosmos Reason2 8B,mtsd-p7,Tourist Sign,1
+Cosmos Reason2 8B,mtsd-p8,Back-Unknown,153
+Cosmos Reason2 8B,mtsd-p8,Blind-Spot Mirror (Convex Mirror),115
+Cosmos Reason2 8B,mtsd-p8,No Entry (One Way),26
+Cosmos Reason2 8B,mtsd-p8,No Through Road (T-Junction),6
+Cosmos Reason2 8B,mtsd-p8,Directional Sign,5
+Cosmos Reason2 8B,mtsd-p8,Auxiliary Sign,2
+Cosmos Reason2 8B,mtsd-p8,Other-Unknown,7
+Cosmos Reason2 8B,mtsd-p8,Stop Sign,3
+Cosmos Reason2 8B,mtsd-p8,Roundabout Ahead,2
+Cosmos Reason2 8B,mtsd-p8,Pedestrian Crossing,1
+Cosmos Reason2 8B,mtsd-p8,Street Sign,1
+Cosmos Reason2 8B,mtsd-p9,Back-Unknown,207
+Cosmos Reason2 8B,mtsd-p9,Auxiliary Sign,32
+Cosmos Reason2 8B,mtsd-p9,Directional Sign,42
+Cosmos Reason2 8B,mtsd-p9,Stop Sign,95
+Cosmos Reason2 8B,mtsd-p9,Pedestrian Crossing,91
+Cosmos Reason2 8B,mtsd-p9,Other-Unknown,94
+Cosmos Reason2 8B,mtsd-p9,No Entry (One Way),133
+Cosmos Reason2 8B,mtsd-p9,Blind-Spot Mirror (Convex Mirror),35
+Cosmos Reason2 8B,mtsd-p9,Roundabout Ahead,44
+Cosmos Reason2 8B,mtsd-p9,Street Sign,29
+Cosmos Reason2 8B,mtsd-p9,No Through Road (T-Junction),47
+Cosmos Reason2 8B,mtsd-p9,Tourist Sign,1
+LocateAnything 3B,mtsd-p1,Pedestrian Crossing,75
+LocateAnything 3B,mtsd-p1,Back-Unknown,37
+LocateAnything 3B,mtsd-p1,Blind-Spot Mirror (Convex Mirror),11
+LocateAnything 3B,mtsd-p1,Roundabout Ahead,6
+LocateAnything 3B,mtsd-p1,Street Sign,3
+LocateAnything 3B,mtsd-p1,Directional Sign,7
+LocateAnything 3B,mtsd-p1,Other-Unknown,7
+LocateAnything 3B,mtsd-p1,No Through Road (T-Junction),18
+LocateAnything 3B,mtsd-p1,No Entry (One Way),11
+LocateAnything 3B,mtsd-p1,Auxiliary Sign,5
+LocateAnything 3B,mtsd-p1,Stop Sign,6
+LocateAnything 3B,mtsd-p10,Directional Sign,40
+LocateAnything 3B,mtsd-p10,Pedestrian Crossing,31
+LocateAnything 3B,mtsd-p10,Other-Unknown,45
+LocateAnything 3B,mtsd-p10,Stop Sign,8
+LocateAnything 3B,mtsd-p10,Back-Unknown,110
+LocateAnything 3B,mtsd-p10,Blind-Spot Mirror (Convex Mirror),25
+LocateAnything 3B,mtsd-p10,Roundabout Ahead,32
+LocateAnything 3B,mtsd-p10,Street Sign,9
+LocateAnything 3B,mtsd-p10,No Through Road (T-Junction),44
+LocateAnything 3B,mtsd-p10,No Entry (One Way),31
+LocateAnything 3B,mtsd-p10,Auxiliary Sign,16
+LocateAnything 3B,mtsd-p10,Tourist Sign,1
+LocateAnything 3B,mtsd-p11,Auxiliary Sign,29
+LocateAnything 3B,mtsd-p11,Street Sign,20
+LocateAnything 3B,mtsd-p11,Directional Sign,26
+LocateAnything 3B,mtsd-p11,Back-Unknown,292
+LocateAnything 3B,mtsd-p11,Stop Sign,47
+LocateAnything 3B,mtsd-p11,Other-Unknown,60
+LocateAnything 3B,mtsd-p11,Blind-Spot Mirror (Convex Mirror),61
+LocateAnything 3B,mtsd-p11,No Entry (One Way),88
+LocateAnything 3B,mtsd-p11,No Through Road (T-Junction),33
+LocateAnything 3B,mtsd-p11,Pedestrian Crossing,37
+LocateAnything 3B,mtsd-p11,Roundabout Ahead,19
+LocateAnything 3B,mtsd-p12,Directional Sign,51
+LocateAnything 3B,mtsd-p12,Stop Sign,95
+LocateAnything 3B,mtsd-p12,Back-Unknown,198
+LocateAnything 3B,mtsd-p12,Other-Unknown,99
+LocateAnything 3B,mtsd-p12,Pedestrian Crossing,84
+LocateAnything 3B,mtsd-p12,No Entry (One Way),145
+LocateAnything 3B,mtsd-p12,Blind-Spot Mirror (Convex Mirror),42
+LocateAnything 3B,mtsd-p12,Roundabout Ahead,43
+LocateAnything 3B,mtsd-p12,Auxiliary Sign,29
+LocateAnything 3B,mtsd-p12,Street Sign,19
+LocateAnything 3B,mtsd-p12,No Through Road (T-Junction),51
+LocateAnything 3B,mtsd-p12,Tourist Sign,1
+LocateAnything 3B,mtsd-p13,Back-Unknown,203
+LocateAnything 3B,mtsd-p13,Auxiliary Sign,25
+LocateAnything 3B,mtsd-p13,Street Sign,17
+LocateAnything 3B,mtsd-p13,Directional Sign,45
+LocateAnything 3B,mtsd-p13,Stop Sign,88
+LocateAnything 3B,mtsd-p13,Other-Unknown,108
+LocateAnything 3B,mtsd-p13,Pedestrian Crossing,69
+LocateAnything 3B,mtsd-p13,No Entry (One Way),139
+LocateAnything 3B,mtsd-p13,Blind-Spot Mirror (Convex Mirror),86
+LocateAnything 3B,mtsd-p13,Roundabout Ahead,39
+LocateAnything 3B,mtsd-p13,No Through Road (T-Junction),46
+LocateAnything 3B,mtsd-p2,Auxiliary Sign,8
+LocateAnything 3B,mtsd-p2,Stop Sign,103
+LocateAnything 3B,mtsd-p2,Back-Unknown,90
+LocateAnything 3B,mtsd-p2,Other-Unknown,44
+LocateAnything 3B,mtsd-p2,No Entry (One Way),160
+LocateAnything 3B,mtsd-p2,Pedestrian Crossing,12
+LocateAnything 3B,mtsd-p2,Blind-Spot Mirror (Convex Mirror),25
+LocateAnything 3B,mtsd-p2,Street Sign,16
+LocateAnything 3B,mtsd-p2,Directional Sign,12
+LocateAnything 3B,mtsd-p2,Roundabout Ahead,4
+LocateAnything 3B,mtsd-p2,No Through Road (T-Junction),19
+LocateAnything 3B,mtsd-p3,Auxiliary Sign,18
+LocateAnything 3B,mtsd-p3,Street Sign,14
+LocateAnything 3B,mtsd-p3,Directional Sign,21
+LocateAnything 3B,mtsd-p3,Stop Sign,54
+LocateAnything 3B,mtsd-p3,Pedestrian Crossing,41
+LocateAnything 3B,mtsd-p3,Other-Unknown,69
+LocateAnything 3B,mtsd-p3,No Entry (One Way),146
+LocateAnything 3B,mtsd-p3,Back-Unknown,105
+LocateAnything 3B,mtsd-p3,Blind-Spot Mirror (Convex Mirror),24
+LocateAnything 3B,mtsd-p3,Roundabout Ahead,20
+LocateAnything 3B,mtsd-p3,No Through Road (T-Junction),41
+LocateAnything 3B,mtsd-p4,Pedestrian Crossing,36
+LocateAnything 3B,mtsd-p4,Back-Unknown,56
+LocateAnything 3B,mtsd-p4,Blind-Spot Mirror (Convex Mirror),15
+LocateAnything 3B,mtsd-p4,No Entry (One Way),63
+LocateAnything 3B,mtsd-p4,Other-Unknown,30
+LocateAnything 3B,mtsd-p4,Roundabout Ahead,10
+LocateAnything 3B,mtsd-p4,No Through Road (T-Junction),48
+LocateAnything 3B,mtsd-p4,Street Sign,7
+LocateAnything 3B,mtsd-p4,Directional Sign,17
+LocateAnything 3B,mtsd-p4,Auxiliary Sign,8
+LocateAnything 3B,mtsd-p4,Stop Sign,8
+LocateAnything 3B,mtsd-p5,Auxiliary Sign,29
+LocateAnything 3B,mtsd-p5,Directional Sign,32
+LocateAnything 3B,mtsd-p5,Stop Sign,65
+LocateAnything 3B,mtsd-p5,Back-Unknown,208
+LocateAnything 3B,mtsd-p5,Pedestrian Crossing,72
+LocateAnything 3B,mtsd-p5,Other-Unknown,91
+LocateAnything 3B,mtsd-p5,No Entry (One Way),148
+LocateAnything 3B,mtsd-p5,Blind-Spot Mirror (Convex Mirror),75
+LocateAnything 3B,mtsd-p5,Roundabout Ahead,42
+LocateAnything 3B,mtsd-p5,Street Sign,20
+LocateAnything 3B,mtsd-p5,No Through Road (T-Junction),51
+LocateAnything 3B,mtsd-p6,Stop Sign,41
+LocateAnything 3B,mtsd-p6,Back-Unknown,159
+LocateAnything 3B,mtsd-p6,Other-Unknown,67
+LocateAnything 3B,mtsd-p6,Pedestrian Crossing,47
+LocateAnything 3B,mtsd-p6,No Entry (One Way),141
+LocateAnything 3B,mtsd-p6,Blind-Spot Mirror (Convex Mirror),32
+LocateAnything 3B,mtsd-p6,Roundabout Ahead,24
+LocateAnything 3B,mtsd-p6,Street Sign,16
+LocateAnything 3B,mtsd-p6,No Through Road (T-Junction),47
+LocateAnything 3B,mtsd-p6,Directional Sign,21
+LocateAnything 3B,mtsd-p6,Auxiliary Sign,19
+LocateAnything 3B,mtsd-p7,Back-Unknown,107
+LocateAnything 3B,mtsd-p7,Other-Unknown,52
+LocateAnything 3B,mtsd-p7,Pedestrian Crossing,37
+LocateAnything 3B,mtsd-p7,Stop Sign,33
+LocateAnything 3B,mtsd-p7,No Entry (One Way),77
+LocateAnything 3B,mtsd-p7,Blind-Spot Mirror (Convex Mirror),25
+LocateAnything 3B,mtsd-p7,Roundabout Ahead,26
+LocateAnything 3B,mtsd-p7,Street Sign,10
+LocateAnything 3B,mtsd-p7,No Through Road (T-Junction),51
+LocateAnything 3B,mtsd-p7,Directional Sign,19
+LocateAnything 3B,mtsd-p7,Auxiliary Sign,11
+LocateAnything 3B,mtsd-p8,Back-Unknown,71
+LocateAnything 3B,mtsd-p8,Blind-Spot Mirror (Convex Mirror),101
+LocateAnything 3B,mtsd-p8,Other-Unknown,6
+LocateAnything 3B,mtsd-p8,No Through Road (T-Junction),2
+LocateAnything 3B,mtsd-p8,Auxiliary Sign,2
+LocateAnything 3B,mtsd-p8,No Entry (One Way),8
+LocateAnything 3B,mtsd-p8,Directional Sign,3
+LocateAnything 3B,mtsd-p8,Street Sign,2
+LocateAnything 3B,mtsd-p8,Stop Sign,4
+LocateAnything 3B,mtsd-p8,Pedestrian Crossing,3
+LocateAnything 3B,mtsd-p9,Directional Sign,47
+LocateAnything 3B,mtsd-p9,Stop Sign,105
+LocateAnything 3B,mtsd-p9,Back-Unknown,228
+LocateAnything 3B,mtsd-p9,Other-Unknown,109
+LocateAnything 3B,mtsd-p9,Pedestrian Crossing,83
+LocateAnything 3B,mtsd-p9,No Entry (One Way),162
+LocateAnything 3B,mtsd-p9,Blind-Spot Mirror (Convex Mirror),58
+LocateAnything 3B,mtsd-p9,Roundabout Ahead,43
+LocateAnything 3B,mtsd-p9,Auxiliary Sign,26
+LocateAnything 3B,mtsd-p9,Street Sign,23
+LocateAnything 3B,mtsd-p9,No Through Road (T-Junction),50
+LocateAnything 3B,mtsd-p9,Tourist Sign,1
+SAM 3.1,mtsd-p1,Pedestrian Crossing,82
+SAM 3.1,mtsd-p1,Roundabout Ahead,2
+SAM 3.1,mtsd-p1,Directional Sign,3
+SAM 3.1,mtsd-p1,No Through Road (T-Junction),10
+SAM 3.1,mtsd-p1,Other-Unknown,6
+SAM 3.1,mtsd-p10,Directional Sign,78
+SAM 3.1,mtsd-p10,Auxiliary Sign,70
+SAM 3.1,mtsd-p10,Back-Unknown,394
+SAM 3.1,mtsd-p10,Street Sign,45
+SAM 3.1,mtsd-p10,Stop Sign,111
+SAM 3.1,mtsd-p10,Pedestrian Crossing,121
+SAM 3.1,mtsd-p10,Other-Unknown,173
+SAM 3.1,mtsd-p10,No Entry (One Way),176
+SAM 3.1,mtsd-p10,Blind-Spot Mirror (Convex Mirror),76
+SAM 3.1,mtsd-p10,Roundabout Ahead,57
+SAM 3.1,mtsd-p10,No Through Road (T-Junction),56
+SAM 3.1,mtsd-p10,Tourist Sign,1
+SAM 3.1,mtsd-p11,Back-Unknown,335
+SAM 3.1,mtsd-p11,Stop Sign,102
+SAM 3.1,mtsd-p11,Pedestrian Crossing,101
+SAM 3.1,mtsd-p11,Other-Unknown,126
+SAM 3.1,mtsd-p11,No Entry (One Way),164
+SAM 3.1,mtsd-p11,Blind-Spot Mirror (Convex Mirror),49
+SAM 3.1,mtsd-p11,Roundabout Ahead,51
+SAM 3.1,mtsd-p11,Auxiliary Sign,30
+SAM 3.1,mtsd-p11,No Through Road (T-Junction),52
+SAM 3.1,mtsd-p11,Directional Sign,52
+SAM 3.1,mtsd-p11,Street Sign,8
+SAM 3.1,mtsd-p11,Tourist Sign,1
+SAM 3.1,mtsd-p12,Back-Unknown,381
+SAM 3.1,mtsd-p12,Directional Sign,79
+SAM 3.1,mtsd-p12,Auxiliary Sign,65
+SAM 3.1,mtsd-p12,Stop Sign,110
+SAM 3.1,mtsd-p12,Pedestrian Crossing,120
+SAM 3.1,mtsd-p12,Other-Unknown,170
+SAM 3.1,mtsd-p12,No Entry (One Way),176
+SAM 3.1,mtsd-p12,Blind-Spot Mirror (Convex Mirror),63
+SAM 3.1,mtsd-p12,Roundabout Ahead,57
+SAM 3.1,mtsd-p12,Street Sign,23
+SAM 3.1,mtsd-p12,No Through Road (T-Junction),56
+SAM 3.1,mtsd-p12,Tourist Sign,1
+SAM 3.1,mtsd-p13,Pedestrian Crossing,27
+SAM 3.1,mtsd-p13,No Entry (One Way),56
+SAM 3.1,mtsd-p13,Roundabout Ahead,12
+SAM 3.1,mtsd-p13,Blind-Spot Mirror (Convex Mirror),24
+SAM 3.1,mtsd-p13,Stop Sign,41
+SAM 3.1,mtsd-p13,Other-Unknown,55
+SAM 3.1,mtsd-p13,Auxiliary Sign,7
+SAM 3.1,mtsd-p13,No Through Road (T-Junction),2
+SAM 3.1,mtsd-p13,Directional Sign,35
+SAM 3.1,mtsd-p13,Back-Unknown,28
+SAM 3.1,mtsd-p13,Street Sign,2
+SAM 3.1,mtsd-p13,Tourist Sign,1
+SAM 3.1,mtsd-p2,Stop Sign,110
+SAM 3.1,mtsd-p2,Other-Unknown,23
+SAM 3.1,mtsd-p2,No Entry (One Way),169
+SAM 3.1,mtsd-p2,Back-Unknown,38
+SAM 3.1,mtsd-p2,Blind-Spot Mirror (Convex Mirror),6
+SAM 3.1,mtsd-p2,Auxiliary Sign,3
+SAM 3.1,mtsd-p2,Pedestrian Crossing,2
+SAM 3.1,mtsd-p2,Roundabout Ahead,1
+SAM 3.1,mtsd-p3,Auxiliary Sign,38
+SAM 3.1,mtsd-p3,Directional Sign,27
+SAM 3.1,mtsd-p3,Stop Sign,109
+SAM 3.1,mtsd-p3,Back-Unknown,79
+SAM 3.1,mtsd-p3,Pedestrian Crossing,45
+SAM 3.1,mtsd-p3,Other-Unknown,92
+SAM 3.1,mtsd-p3,No Entry (One Way),172
+SAM 3.1,mtsd-p3,Blind-Spot Mirror (Convex Mirror),22
+SAM 3.1,mtsd-p3,Roundabout Ahead,22
+SAM 3.1,mtsd-p3,No Through Road (T-Junction),47
+SAM 3.1,mtsd-p3,Street Sign,15
+SAM 3.1,mtsd-p3,Tourist Sign,1
+SAM 3.1,mtsd-p4,Stop Sign,37
+SAM 3.1,mtsd-p4,Pedestrian Crossing,98
+SAM 3.1,mtsd-p4,Other-Unknown,68
+SAM 3.1,mtsd-p4,No Entry (One Way),102
+SAM 3.1,mtsd-p4,Back-Unknown,22
+SAM 3.1,mtsd-p4,Roundabout Ahead,26
+SAM 3.1,mtsd-p4,No Through Road (T-Junction),47
+SAM 3.1,mtsd-p4,Auxiliary Sign,12
+SAM 3.1,mtsd-p4,Directional Sign,35
+SAM 3.1,mtsd-p4,Street Sign,1
+SAM 3.1,mtsd-p4,Tourist Sign,1
+SAM 3.1,mtsd-p5,Stop Sign,102
+SAM 3.1,mtsd-p5,Pedestrian Crossing,28
+SAM 3.1,mtsd-p5,Other-Unknown,51
+SAM 3.1,mtsd-p5,No Entry (One Way),151
+SAM 3.1,mtsd-p5,Blind-Spot Mirror (Convex Mirror),33
+SAM 3.1,mtsd-p5,Roundabout Ahead,45
+SAM 3.1,mtsd-p5,Back-Unknown,54
+SAM 3.1,mtsd-p5,Auxiliary Sign,14
+SAM 3.1,mtsd-p5,No Through Road (T-Junction),14
+SAM 3.1,mtsd-p5,Directional Sign,30
+SAM 3.1,mtsd-p5,Street Sign,6
+SAM 3.1,mtsd-p5,Tourist Sign,1
+SAM 3.1,mtsd-p6,Stop Sign,77
+SAM 3.1,mtsd-p6,Pedestrian Crossing,79
+SAM 3.1,mtsd-p6,Other-Unknown,76
+SAM 3.1,mtsd-p6,No Entry (One Way),141
+SAM 3.1,mtsd-p6,Roundabout Ahead,35
+SAM 3.1,mtsd-p6,Auxiliary Sign,29
+SAM 3.1,mtsd-p6,No Through Road (T-Junction),40
+SAM 3.1,mtsd-p6,Directional Sign,33
+SAM 3.1,mtsd-p6,Street Sign,7
+SAM 3.1,mtsd-p6,Back-Unknown,9
+SAM 3.1,mtsd-p6,Blind-Spot Mirror (Convex Mirror),1
+SAM 3.1,mtsd-p6,Tourist Sign,1
+SAM 3.1,mtsd-p7,Street Sign,2
+SAM 3.1,mtsd-p7,Stop Sign,1
+SAM 3.1,mtsd-p8,Blind-Spot Mirror (Convex Mirror),72
+SAM 3.1,mtsd-p8,Back-Unknown,8
+SAM 3.1,mtsd-p8,Other-Unknown,1
+SAM 3.1,mtsd-p9,Directional Sign,84
+SAM 3.1,mtsd-p9,Auxiliary Sign,73
+SAM 3.1,mtsd-p9,Back-Unknown,428
+SAM 3.1,mtsd-p9,Street Sign,60
+SAM 3.1,mtsd-p9,Stop Sign,111
+SAM 3.1,mtsd-p9,Pedestrian Crossing,123
+SAM 3.1,mtsd-p9,Other-Unknown,178
+SAM 3.1,mtsd-p9,No Entry (One Way),178
+SAM 3.1,mtsd-p9,Blind-Spot Mirror (Convex Mirror),112
+SAM 3.1,mtsd-p9,Roundabout Ahead,57
+SAM 3.1,mtsd-p9,No Through Road (T-Junction),56
+SAM 3.1,mtsd-p9,Tourist Sign,1
+SAM 3,mtsd-p1,Pedestrian Crossing,84
+SAM 3,mtsd-p1,Roundabout Ahead,2
+SAM 3,mtsd-p1,Directional Sign,3
+SAM 3,mtsd-p1,No Through Road (T-Junction),11
+SAM 3,mtsd-p1,Other-Unknown,7
+SAM 3,mtsd-p10,Directional Sign,76
+SAM 3,mtsd-p10,Auxiliary Sign,65
+SAM 3,mtsd-p10,Back-Unknown,387
+SAM 3,mtsd-p10,Street Sign,43
+SAM 3,mtsd-p10,Stop Sign,111
+SAM 3,mtsd-p10,Pedestrian Crossing,119
+SAM 3,mtsd-p10,Other-Unknown,172
+SAM 3,mtsd-p10,No Entry (One Way),176
+SAM 3,mtsd-p10,Blind-Spot Mirror (Convex Mirror),62
+SAM 3,mtsd-p10,Roundabout Ahead,57
+SAM 3,mtsd-p10,No Through Road (T-Junction),56
+SAM 3,mtsd-p10,Tourist Sign,1
+SAM 3,mtsd-p11,Back-Unknown,315
+SAM 3,mtsd-p11,Stop Sign,97
+SAM 3,mtsd-p11,Pedestrian Crossing,97
+SAM 3,mtsd-p11,Other-Unknown,115
+SAM 3,mtsd-p11,No Entry (One Way),158
+SAM 3,mtsd-p11,Blind-Spot Mirror (Convex Mirror),39
+SAM 3,mtsd-p11,Roundabout Ahead,48
+SAM 3,mtsd-p11,Auxiliary Sign,23
+SAM 3,mtsd-p11,No Through Road (T-Junction),52
+SAM 3,mtsd-p11,Directional Sign,48
+SAM 3,mtsd-p11,Street Sign,6
+SAM 3,mtsd-p11,Tourist Sign,1
+SAM 3,mtsd-p12,Directional Sign,77
+SAM 3,mtsd-p12,Auxiliary Sign,66
+SAM 3,mtsd-p12,Back-Unknown,371
+SAM 3,mtsd-p12,Stop Sign,110
+SAM 3,mtsd-p12,Pedestrian Crossing,117
+SAM 3,mtsd-p12,Other-Unknown,166
+SAM 3,mtsd-p12,No Entry (One Way),176
+SAM 3,mtsd-p12,Blind-Spot Mirror (Convex Mirror),58
+SAM 3,mtsd-p12,Roundabout Ahead,57
+SAM 3,mtsd-p12,Street Sign,23
+SAM 3,mtsd-p12,No Through Road (T-Junction),56
+SAM 3,mtsd-p12,Tourist Sign,1
+SAM 3,mtsd-p13,Pedestrian Crossing,26
+SAM 3,mtsd-p13,No Entry (One Way),59
+SAM 3,mtsd-p13,Roundabout Ahead,14
+SAM 3,mtsd-p13,Blind-Spot Mirror (Convex Mirror),24
+SAM 3,mtsd-p13,Stop Sign,44
+SAM 3,mtsd-p13,Other-Unknown,56
+SAM 3,mtsd-p13,Auxiliary Sign,9
+SAM 3,mtsd-p13,No Through Road (T-Junction),2
+SAM 3,mtsd-p13,Directional Sign,34
+SAM 3,mtsd-p13,Back-Unknown,26
+SAM 3,mtsd-p13,Street Sign,2
+SAM 3,mtsd-p13,Tourist Sign,1
+SAM 3,mtsd-p2,Stop Sign,109
+SAM 3,mtsd-p2,Other-Unknown,22
+SAM 3,mtsd-p2,No Entry (One Way),169
+SAM 3,mtsd-p2,Back-Unknown,42
+SAM 3,mtsd-p2,Blind-Spot Mirror (Convex Mirror),5
+SAM 3,mtsd-p2,Auxiliary Sign,3
+SAM 3,mtsd-p2,Pedestrian Crossing,2
+SAM 3,mtsd-p2,Roundabout Ahead,1
+SAM 3,mtsd-p3,Auxiliary Sign,37
+SAM 3,mtsd-p3,Directional Sign,26
+SAM 3,mtsd-p3,Stop Sign,108
+SAM 3,mtsd-p3,Back-Unknown,81
+SAM 3,mtsd-p3,Pedestrian Crossing,46
+SAM 3,mtsd-p3,Other-Unknown,91
+SAM 3,mtsd-p3,No Entry (One Way),172
+SAM 3,mtsd-p3,Blind-Spot Mirror (Convex Mirror),19
+SAM 3,mtsd-p3,Roundabout Ahead,22
+SAM 3,mtsd-p3,No Through Road (T-Junction),47
+SAM 3,mtsd-p3,Street Sign,14
+SAM 3,mtsd-p3,Tourist Sign,1
+SAM 3,mtsd-p4,Stop Sign,39
+SAM 3,mtsd-p4,Pedestrian Crossing,96
+SAM 3,mtsd-p4,Other-Unknown,69
+SAM 3,mtsd-p4,No Entry (One Way),104
+SAM 3,mtsd-p4,Back-Unknown,22
+SAM 3,mtsd-p4,Roundabout Ahead,25
+SAM 3,mtsd-p4,Auxiliary Sign,13
+SAM 3,mtsd-p4,No Through Road (T-Junction),48
+SAM 3,mtsd-p4,Directional Sign,35
+SAM 3,mtsd-p4,Street Sign,1
+SAM 3,mtsd-p4,Tourist Sign,1
+SAM 3,mtsd-p5,Stop Sign,101
+SAM 3,mtsd-p5,Pedestrian Crossing,22
+SAM 3,mtsd-p5,Other-Unknown,50
+SAM 3,mtsd-p5,No Entry (One Way),147
+SAM 3,mtsd-p5,Blind-Spot Mirror (Convex Mirror),27
+SAM 3,mtsd-p5,Roundabout Ahead,45
+SAM 3,mtsd-p5,Back-Unknown,47
+SAM 3,mtsd-p5,Auxiliary Sign,13
+SAM 3,mtsd-p5,No Through Road (T-Junction),13
+SAM 3,mtsd-p5,Directional Sign,27
+SAM 3,mtsd-p5,Street Sign,6
+SAM 3,mtsd-p5,Tourist Sign,1
+SAM 3,mtsd-p6,Stop Sign,82
+SAM 3,mtsd-p6,Pedestrian Crossing,84
+SAM 3,mtsd-p6,Other-Unknown,80
+SAM 3,mtsd-p6,No Entry (One Way),144
+SAM 3,mtsd-p6,Roundabout Ahead,36
+SAM 3,mtsd-p6,Auxiliary Sign,30
+SAM 3,mtsd-p6,No Through Road (T-Junction),43
+SAM 3,mtsd-p6,Directional Sign,36
+SAM 3,mtsd-p6,Street Sign,9
+SAM 3,mtsd-p6,Back-Unknown,9
+SAM 3,mtsd-p6,Blind-Spot Mirror (Convex Mirror),1
+SAM 3,mtsd-p6,Tourist Sign,1
+SAM 3,mtsd-p7,Street Sign,2
+SAM 3,mtsd-p7,Stop Sign,1
+SAM 3,mtsd-p8,Blind-Spot Mirror (Convex Mirror),69
+SAM 3,mtsd-p8,Back-Unknown,8
+SAM 3,mtsd-p8,Other-Unknown,1
+SAM 3,mtsd-p9,Directional Sign,83
+SAM 3,mtsd-p9,Auxiliary Sign,71
+SAM 3,mtsd-p9,Back-Unknown,423
+SAM 3,mtsd-p9,Street Sign,59
+SAM 3,mtsd-p9,Stop Sign,111
+SAM 3,mtsd-p9,Pedestrian Crossing,120
+SAM 3,mtsd-p9,Other-Unknown,177
+SAM 3,mtsd-p9,No Entry (One Way),178
+SAM 3,mtsd-p9,Blind-Spot Mirror (Convex Mirror),108
+SAM 3,mtsd-p9,Roundabout Ahead,57
+SAM 3,mtsd-p9,No Through Road (T-Junction),56
+SAM 3,mtsd-p9,Tourist Sign,1

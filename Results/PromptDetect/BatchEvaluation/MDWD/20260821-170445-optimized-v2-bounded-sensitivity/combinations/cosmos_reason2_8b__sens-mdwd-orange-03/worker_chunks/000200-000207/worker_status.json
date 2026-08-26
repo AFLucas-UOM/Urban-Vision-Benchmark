@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 8B",
+  "prompt_id": "sens-mdwd-orange-03",
+  "prompt": "orange bag containing domestic waste",
+  "image_start": 200,
+  "image_end": 208,
+  "n_images": 8,
+  "n_prediction_rows": 8,
+  "max_detections": 28,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "Cosmos Reason2 8B",
+    "model_load_ms": 14803.6,
+    "ok": true,
+    "label": "Cosmos Reason2 8B",
+    "source": "nvidia/Cosmos-Reason2-8B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-22T07:46:36.396666+00:00",
+  "finished_at": "2026-08-22T07:47:07.086359+00:00"
+}

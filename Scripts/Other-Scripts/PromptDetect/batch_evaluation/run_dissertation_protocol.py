@@ -148,15 +148,22 @@ def derive_detection_limit(gt: dict, defaults: dict) -> dict:
     }
 
 
+def worker_chunk_size(model: str, n_images: int, defaults: dict) -> int:
+    """Resolve a model-specific process lifetime in images."""
+    if model.startswith("SAM "):
+        return n_images
+    if model.startswith("Cosmos Reason2"):
+        return int(defaults.get("cosmos_worker_chunk_size", config.COSMOS_WORKER_CHUNK_SIZE))
+    return int(defaults.get("vlm_worker_chunk_size", config.VLM_WORKER_CHUNK_SIZE))
+
+
 def worker_chunk_ranges(model: str, n_images: int, defaults: dict) -> list[tuple[int, int]]:
-    """SAM uses one process/prompt; generative VLMs use bounded 64-image workers."""
+    """SAM uses one process/prompt; Cosmos uses stricter bounded workers."""
     if n_images <= 0:
         return []
-    chunk_size = n_images if model.startswith("SAM ") else int(
-        defaults.get("vlm_worker_chunk_size", config.VLM_WORKER_CHUNK_SIZE)
-    )
+    chunk_size = worker_chunk_size(model, n_images, defaults)
     if chunk_size <= 0:
-        raise ValueError("vlm_worker_chunk_size must be positive")
+        raise ValueError("worker chunk size must be positive")
     return [(start, min(start + chunk_size, n_images))
             for start in range(0, n_images, chunk_size)]
 
@@ -222,6 +229,7 @@ def _run_isolated_prediction(
             environment = dict(os.environ)
             environment.setdefault("TOKENIZERS_PARALLELISM", "false")
             environment.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
+            environment["PROMPTDETECT_COSMOS_MAX_SIDE"] = str(config.cosmos_max_side(model))
             log_path = chunk_dir / "worker.log"
             with log_path.open("w", encoding="utf-8") as log_stream:
                 completed = subprocess.run(
@@ -256,9 +264,14 @@ def _run_isolated_prediction(
         "model_load_ms": round(sum(load_ms), 1),
         "worker_processes": len(ranges),
         "worker_chunk_size": (None if model.startswith("SAM ") else
-                              int(defaults.get("vlm_worker_chunk_size", config.VLM_WORKER_CHUNK_SIZE))),
+                              worker_chunk_size(model, len(gt["records"]), defaults)),
         "execution_strategy": EXECUTION_STRATEGY,
     }
+    if model.startswith("Cosmos Reason2"):
+        runtime.update(
+            cosmos_max_side=config.cosmos_max_side(model),
+            cosmos_execution_revision=config.COSMOS_EXECUTION_REVISION,
+        )
     return rows, runtime, worker_statuses
 
 
@@ -337,6 +350,12 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
             "nms_iou_threshold": nms_iou,
             "execution_strategy": EXECUTION_STRATEGY,
             "vlm_worker_chunk_size": int(defaults.get("vlm_worker_chunk_size", config.VLM_WORKER_CHUNK_SIZE)),
+            "cosmos_worker_chunk_size": int(defaults.get("cosmos_worker_chunk_size", config.COSMOS_WORKER_CHUNK_SIZE)),
+            "cosmos_max_side_by_model": {
+                model: config.cosmos_max_side(model)
+                for model in models if model.startswith("Cosmos Reason2")
+            },
+            "cosmos_execution_revision": config.COSMOS_EXECUTION_REVISION,
             "visualizations_per_combination": ("all" if visualization_count == -1
                                                 else visualization_count)}
     if sensitivity:
@@ -377,6 +396,13 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
                   "nms_iou_threshold": nms_iou,
                   "execution_strategy": EXECUTION_STRATEGY,
                   "vlm_worker_chunk_size": int(defaults.get("vlm_worker_chunk_size", config.VLM_WORKER_CHUNK_SIZE)),
+                  "cosmos_worker_chunk_size": int(defaults.get("cosmos_worker_chunk_size", config.COSMOS_WORKER_CHUNK_SIZE)),
+                  "cosmos_max_side_by_model": {
+                      model: config.cosmos_max_side(model)
+                      for model in models if model.startswith("Cosmos Reason2")
+                  },
+                  "cosmos_execution_revision": config.COSMOS_EXECUTION_REVISION,
+                  "wandb_run_revision": config.WANDB_RUN_REVISION,
                   "visualizations_per_combination": ("all" if visualization_count == -1
                                                       else visualization_count),
                   "consistency_iou_threshold": args.consistency_iou,
@@ -403,6 +429,14 @@ def run_dataset(args, protocol: dict, dataset: str, model_aliases: list[str]) ->
         if "sensitivity_family" in prompt:
             identity["sensitivity_family"] = prompt["sensitivity_family"]
             identity["variant_type"] = prompt["variant_type"]
+        if model.startswith("Cosmos Reason2"):
+            identity.update(
+                cosmos_max_side=config.cosmos_max_side(model),
+                cosmos_worker_chunk_size=int(defaults.get(
+                    "cosmos_worker_chunk_size", config.COSMOS_WORKER_CHUNK_SIZE
+                )),
+                cosmos_execution_revision=config.COSMOS_EXECUTION_REVISION,
+            )
         return identity
 
     def update_combination_visuals(model: str, prompt: dict,

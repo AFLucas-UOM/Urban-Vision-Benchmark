@@ -1,0 +1,625 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_1510.jpg,1754.5,897.09,2718.98,2668.31,0.6992,Stop Sign,0.9852
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_1557.jpg,1379.05,2631.41,3063.24,4053.25,0.375,Pedestrian Crossing,0.9815
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_1564.jpg,1628.83,3153.22,2809.98,4795.51,0.7969,Other-Unknown,0.9722
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_1564.jpg,1819.15,2040.92,2484.1,3336.12,0.5039,Stop Sign,0.9658
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_1575.jpg,471.3,683.72,1077.66,1248.65,0.7422,No Entry (One Way),0.983
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_1575.jpg,470.41,680.75,1076.18,2188.07,0.3398,,0.3781
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_1645.jpg,1033.53,2342.46,2727.84,4210.7,0.3105,Blind-Spot Mirror (Convex Mirror),0.9856
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251123_141219.jpg,852.08,1165.74,1115.08,1937.52,0.7773,No Entry (One Way),0.9742
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251123_150542.jpg,931.07,1172.29,1461.85,2291.98,0.3418,Pedestrian Crossing,0.9764
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251123_164433.jpg,589.26,1751.13,1305.55,2926.88,0.7812,No Entry (One Way),0.9736
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251123_164446.jpg,384.81,1862.25,1745.35,3205.73,0.3164,Back-Unknown,0.99
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251123_165832.jpg,626.42,1827.26,1209.24,2846.66,0.332,Blind-Spot Mirror (Convex Mirror),0.9726
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_112108.jpg,1029.41,525.07,2282.66,1667.45,0.6953,Stop Sign,0.9801
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_112108.jpg,1030.65,527.12,2280.42,4624.0,0.4336,,0.2784
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_113833.jpg,1374.25,574.26,2646.04,1816.53,0.6016,Stop Sign,0.9808
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_113833.jpg,926.28,1665.62,1119.83,2038.09,0.5391,No Entry (One Way),0.9419
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_114450.jpg,1774.14,489.52,2686.53,1924.5,0.7422,Stop Sign,0.9839
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_120326.jpg,2915.37,0.0,3472.0,942.04,0.4805,Other-Unknown,0.9489
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_120326.jpg,1540.36,821.7,2981.91,2793.22,0.3984,Blind-Spot Mirror (Convex Mirror),0.9757
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_121131.jpg,0.0,1954.62,515.69,3733.83,0.3984,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_121556.jpg,362.79,1634.6,1625.74,2810.12,0.7695,Stop Sign,0.9801
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_121957.jpg,1707.21,2601.35,1824.72,2785.82,0.4453,Auxiliary Sign,0.9362
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_122225.jpg,795.89,499.18,2909.72,2317.64,0.7383,Stop Sign,0.978
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_122515.jpg,880.56,1556.43,1628.52,2862.13,0.6758,Stop Sign,0.9682
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_122819+1.jpg,1288.94,1003.2,1781.14,2430.07,0.6836,No Entry (One Way),0.9774
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_123112.jpg,242.96,1522.22,1543.16,2721.76,0.7227,Stop Sign,0.9885
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_124400.jpg,554.81,1538.23,1514.3,3282.65,0.3281,No Through Road (T-Junction),0.9781
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251125_153559.jpg,1626.36,710.37,1936.96,1879.36,0.7539,No Entry (One Way),0.8474
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251126_123510.jpg,1665.24,3940.72,1717.21,4004.2,0.3516,Directional Sign,0.8274
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251126_123524.jpg,1864.02,3642.38,2080.0,4285.21,0.7656,Auxiliary Sign,0.9462
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251126_123524.jpg,1931.5,3673.4,2080.0,3976.18,0.3984,,0.3064
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251126_123910.jpg,593.54,2040.15,1574.95,2975.37,0.8086,Other-Unknown,0.9776
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20251126_123910.jpg,632.81,1250.14,1525.52,2040.86,0.5195,Stop Sign,0.9696
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20260106_160010_253.jpg,1022.67,1602.01,2049.21,2008.58,0.3047,Auxiliary Sign,0.9296
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20260106_160549_637.jpg,1029.93,947.66,2222.99,2083.66,0.6875,Stop Sign,0.9479
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20260106_160608_331.jpg,989.69,937.09,2343.02,2280.84,0.6992,No Entry (One Way),0.8089
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20260106_161746_914.jpg,994.68,536.85,2557.24,2099.5,0.6211,No Entry (One Way),0.9735
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20260110_171243_436.jpg,971.88,1035.95,1937.81,1966.72,0.8281,Other-Unknown,0.9891
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20260110_171243_436.jpg,968.26,1030.8,1937.62,4080.0,0.3965,,0.3026
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20260110_173056_747.jpg,1004.88,842.09,2376.91,1601.47,0.4141,,0.4244
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_20260113_085024_440.jpg,2274.36,813.16,3360.73,1885.52,0.9062,,0.2572
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_8791.jpeg,605.47,411.79,2292.09,2035.62,0.7773,No Entry (One Way),0.9849
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_IMG_8791.jpeg,521.49,2056.95,2369.41,3960.09,0.6328,Directional Sign,0.9816
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_wall_stop.jpeg,845.36,562.38,2065.85,1730.15,0.8242,No Entry (One Way),0.9639
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-16 at 17.52.23 (3).jpeg,161.12,730.95,1281.68,1758.09,0.5039,Stop Sign,0.9772
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-16 at 17.52.27.jpeg,123.91,711.98,941.29,1453.4,0.6602,No Entry (One Way),0.971
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-17 at 12.38.32 (2).jpeg,299.08,626.17,1071.23,1264.79,0.8828,Other-Unknown,0.9909
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-17 at 12.38.34.jpeg,253.36,636.92,1276.19,1555.89,0.7773,No Entry (One Way),0.9816
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-17 at 15.01.27 - Edited.jpg,236.94,1578.73,266.32,1610.95,0.373,No Entry (One Way),0.8854
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-17 at 15.01.44.jpeg,785.57,544.48,875.34,1469.67,0.6953,No Entry (One Way),0.897
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-17 at 15.01.50 (1).jpeg,854.4,458.44,968.5,1739.55,0.375,Back-Unknown,0.8093
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-17 at 15.01.56 (1).jpeg,504.64,655.36,1317.49,1373.67,0.7227,Stop Sign,0.9651
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-17 at 15.02.00.jpeg,425.97,794.93,1206.95,1481.9,0.5586,Stop Sign,0.9702
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp10_WhatsApp Image 2025-11-20 at 16.03.01 (1).jpeg,636.44,673.18,1066.03,2040.0,0.3691,,0.3138
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_00ffbbb0-IMG_20251125_195040.jpg,2142.66,1970.53,2222.13,2047.85,0.3262,Directional Sign,0.9411
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_089d4626-IMG_20251125_192354.jpg,1435.46,995.61,2171.5,1773.16,0.8711,Other-Unknown,0.9697
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_08da688f-IMG_6393.jpeg,0.0,709.94,3482.4,2767.68,0.5078,Other-Unknown,0.5615
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_12031735-Pre_2026_6669.jpg,643.7,906.06,1324.5,1566.87,0.832,No Entry (One Way),0.9731
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_1346633a-IMG_20251125_195535.jpg,901.08,1782.47,1551.56,2421.88,0.7031,Other-Unknown,0.9714
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_1346633a-IMG_20251125_195535.jpg,893.85,1111.86,1524.78,1767.82,0.5547,Stop Sign,0.974
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_1346633a-IMG_20251125_195535.jpg,261.73,1834.3,414.92,1977.21,0.4688,Other-Unknown,0.9637
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_1346633a-IMG_20251125_195535.jpg,271.92,1974.57,424.83,2111.92,0.3945,Directional Sign,0.9345
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_1346633a-IMG_20251125_195535.jpg,890.09,1110.69,1541.23,3997.42,0.332,,0.224
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_1c6ec821-IMG_20251125_194942.jpg,1055.97,1163.54,1820.33,1927.51,0.8516,Other-Unknown,0.9887
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_1ff1325d-IMG_1333.jpg,796.15,604.7,1840.58,1663.69,0.3496,Blind-Spot Mirror (Convex Mirror),0.9798
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_217d0bb2-IMG_1445.jpg,550.82,269.44,1551.61,2000.1,0.3633,Pedestrian Crossing,0.9753
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_243ba713-IMG_6313.jpg,1732.4,2049.99,3623.31,3850.24,0.7734,No Entry (One Way),0.9788
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_243ba713-IMG_6313.jpg,3416.11,5385.64,3535.49,5571.65,0.3945,Stop Sign,0.9102
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_243ba713-IMG_6313.jpg,1731.05,2051.72,3620.52,8064.0,0.3125,,0.3013
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_243ba713-IMG_6313.jpg,3915.04,5227.44,4024.48,5339.92,0.3086,No Entry (One Way),0.7152
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_2960150f-Pre_2026_6705.jpg,719.67,1217.59,1402.03,2098.63,0.3711,Blind-Spot Mirror (Convex Mirror),0.9763
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_2a7d15c7-Pre_2026_6626.jpg,676.2,685.7,1662.87,1663.06,0.3691,Pedestrian Crossing,0.9783
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_2d64dcc1-IMG_20251125_194650.jpg,1178.21,966.23,1957.34,1701.72,0.793,No Entry (One Way),0.9745
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_2d64dcc1-IMG_20251125_194650.jpg,1170.42,955.71,1962.31,4000.0,0.3301,,0.2439
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_2dae9065-IMG_20251125_195604.jpg,1327.83,258.38,1755.93,1221.86,0.9023,Other-Unknown,0.9076
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_2dae9065-IMG_20251125_195604.jpg,1339.25,1148.5,1808.61,2122.64,0.7188,Directional Sign,0.9426
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_2dae9065-IMG_20251125_195604.jpg,1327.66,278.28,1778.35,4000.0,0.3125,,0.2549
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_3a5a4d41-Pre_2026_6633.jpg,641.57,789.33,1500.53,1650.96,0.3535,Blind-Spot Mirror (Convex Mirror),0.9843
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_3a5a4d41-Pre_2026_6633.jpg,638.94,787.97,1500.98,4000.0,0.3184,,0.2694
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_3f9be580-IMG_1323.jpg,1052.04,371.88,2282.96,1550.51,0.4512,Back-Unknown,0.9857
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_4029b5b7-Pre_2026_6760.jpg,2167.35,663.96,2695.51,1232.01,0.7734,,0.0105
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_41188dd2-IMG_1440.jpg,555.08,3075.54,924.37,3453.07,0.4941,No Entry (One Way),0.9342
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_4a7fe027-Pre_2026_6682.jpg,281.18,806.86,1644.43,2205.04,0.5938,Blind-Spot Mirror (Convex Mirror),0.9731
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_578f49cf-IMG_6367.jpeg,343.93,1255.62,2040.8,1988.24,0.4336,,0.1305
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_5cef4344-Pre_2026_6674.jpg,568.11,148.17,1663.41,1007.23,0.8242,No Entry (One Way),0.9848
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_6bd01c27-IMG_1442.jpg,1079.35,426.24,1803.82,1643.22,0.334,Pedestrian Crossing,0.9846
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_6d03b071-IMG_6395.jpeg,1118.36,1152.03,2499.99,2397.37,0.75,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_6d1c0888-IMG_20251125_191657.jpg,1501.92,994.97,1617.18,1632.98,0.7539,Directional Sign,0.9194
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_6d1c0888-IMG_20251125_191657.jpg,1495.66,980.12,1656.4,3276.4,0.4648,,0.2043
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_7041f709-IMG_1379.jpg,1108.37,860.55,1757.31,2251.29,0.7852,Directional Sign,0.9871
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_8d5205a5-IMG_6322.jpeg,861.1,1148.08,2141.39,2204.61,0.7109,,0.2046
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_8da30211-IMG_1389.jpg,984.34,319.96,2142.16,1556.53,0.6562,Back-Unknown,0.9857
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_8da30211-IMG_1389.jpg,982.72,320.69,2145.77,4032.0,0.3457,,0.3343
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_92113811-IMG_1371.jpg,725.81,0.0,2383.78,1561.62,0.4336,Back-Unknown,0.9973
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_93c9acc6-Pre_2026_6752.jpg,2356.49,529.12,3285.17,1172.94,0.5078,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_94c2771c-IMG_1367.jpg,1092.42,361.95,1969.43,2034.4,0.6992,Directional Sign,0.9803
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_94c2771c-IMG_1367.jpg,1145.09,0.0,1890.71,309.47,0.3809,Back-Unknown,0.9822
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_9adb1ffc-IMG_1447.jpg,1067.38,491.73,2223.11,1743.79,0.5625,Pedestrian Crossing,0.9627
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_9aea0791-Pre_2026_6686.jpg,650.23,690.14,1238.6,1684.7,0.7109,Stop Sign,0.9862
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_9aea0791-Pre_2026_6686.jpg,546.9,694.66,1242.15,4000.0,0.4434,,0.2563
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_9e3f1527-IMG_6303.jpeg,1315.37,582.63,2573.67,2433.73,0.3457,,0.3466
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_a9ff1854-IMG_6408.jpeg,1841.6,667.48,3122.42,1835.93,0.8164,,0.4184
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_a9ff1854-IMG_6408.jpeg,596.2,578.0,1822.86,1827.84,0.4531,,0.0658
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_aff5c880-IMG_6324.jpeg,1135.49,1256.09,1973.89,2150.78,0.793,Other-Unknown,0.9928
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_b40e574e-IMG_1307.jpg,713.7,0.0,1507.38,303.38,0.3906,,0.0127
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_bab711b8-IMG_20251125_192613.jpg,1123.2,781.87,1843.99,1682.78,0.4023,Pedestrian Crossing,0.9553
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_bdad925f-IMG_20251125_194953.jpg,1100.56,1272.18,1859.83,2070.29,0.4746,Back-Unknown,0.9853
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_bdad925f-IMG_20251125_194953.jpg,1097.53,1268.07,1859.59,3027.62,0.4434,,0.4548
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_cb23d6ca-IMG_20251125_190938.jpg,1373.4,2595.98,1674.77,3654.99,0.8125,Other-Unknown,0.9712
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_cb23d6ca-IMG_20251125_190938.jpg,1352.97,1591.37,1655.48,2621.86,0.6914,Directional Sign,0.9567
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_cb23d6ca-IMG_20251125_190938.jpg,2851.82,2071.68,3000.0,2552.85,0.3105,Back-Unknown,0.9325
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_d9b50eb1-Pre_2026_6691.jpg,801.11,1235.62,1147.24,1678.06,0.5859,Stop Sign,0.9532
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_daaadabb-IMG_1451.jpg,920.55,0.0,1814.33,1382.66,0.3359,Pedestrian Crossing,0.9698
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_e27435a0-IMG_20251125_194217.jpg,812.69,1007.11,1634.37,1900.27,0.3418,Back-Unknown,0.9654
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_ee2f066e-IMG_20251125_194701.jpg,1113.59,2594.56,1267.79,2763.86,0.5117,Directional Sign,0.9491
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_f3e6cd7a-IMG_6398.jpeg,1450.76,960.19,2384.05,3087.35,0.7695,Stop Sign,0.9799
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_fbaad6ff-IMG_1423.jpg,995.2,440.59,2001.16,1370.77,0.7539,No Entry (One Way),0.9707
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp11_fbaad6ff-IMG_1423.jpg,993.69,439.83,2001.35,4032.0,0.4688,,0.255
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_072bd818-IMG_4648.jpeg,1123.25,1419.59,1774.41,3088.47,0.3828,Stop Sign,0.9393
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_091652b2-IMG20260105120954.jpg,501.08,1037.19,2765.5,3072.14,0.668,Auxiliary Sign,0.9722
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_091652b2-IMG20260105120954.jpg,1070.38,1204.73,2284.09,2323.94,0.5898,,0.2866
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_091652b2-IMG20260105120954.jpg,932.32,582.06,2403.71,1158.29,0.375,Directional Sign,0.977
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_094f8a9f-RV__2.jpeg,1073.63,1204.88,1819.43,1996.23,0.6914,Other-Unknown,0.9828
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_094f8a9f-RV__2.jpeg,1061.49,593.29,1814.41,1260.11,0.6484,Stop Sign,0.9701
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_094f8a9f-RV__2.jpeg,1059.78,574.89,1809.58,4032.0,0.3066,,0.2349
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_0dd8c85f-RV_001_114.jpeg,1925.28,3195.65,2052.03,3377.64,0.5977,Other-Unknown,0.9468
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_0dd8c85f-RV_001_114.jpeg,1908.87,3062.97,2034.67,3217.77,0.4082,Stop Sign,0.9496
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_0ea4c27e-RV_001_43.jpeg,919.91,1868.41,2137.18,2944.9,0.7148,Stop Sign,0.9733
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_1e8d03ef-IMG_4745.jpeg,788.86,763.22,2415.21,2360.08,0.3359,Back-Unknown,0.9772
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_213f8e9b-IMG20260105131202.jpg,264.96,845.26,2511.22,2990.01,0.8008,No Entry (One Way),0.9722
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_22a1d833-RV_001_174.jpeg,1077.26,2005.07,2162.75,3073.42,0.3145,Back-Unknown,0.9785
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_22c68da3-IMG_4717.jpeg,747.05,1149.73,2373.81,2461.66,0.7422,Stop Sign,0.9788
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_2493a507-RV_001_172.jpeg,971.09,1438.09,1992.27,4032.0,0.3633,,0.3189
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_25ff97a8-IMG20260105132835.jpg,730.05,88.92,2069.33,1027.85,0.4609,Street Sign,0.9855
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_265aa6a6-IMG_5573.jpeg,1320.94,1964.68,1693.02,2759.58,0.6445,No Entry (One Way),0.9751
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_265aa6a6-IMG_5573.jpeg,1320.35,1962.14,1694.59,4031.15,0.3984,,0.3846
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_2a767150-RV_001_64.jpeg,910.59,2601.65,1931.83,3646.7,0.6953,Directional Sign,0.9696
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_2f062204-IMG_5549.jpeg,1182.98,1775.96,1883.22,2483.27,0.7812,No Entry (One Way),0.9745
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_2f062204-IMG_5549.jpeg,1777.48,3496.05,1838.02,3581.01,0.3594,Other-Unknown,0.9226
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_335c2601-IMG_4793.jpeg,749.41,788.1,2235.82,2244.89,0.6406,Stop Sign,0.9798
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_335c2601-IMG_4793.jpeg,571.87,3763.78,1273.91,4031.13,0.5547,Other-Unknown,0.9325
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_335c2601-IMG_4793.jpeg,716.75,787.78,2242.26,4029.23,0.3027,,0.4451
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_46552970-IMG_5766.jpeg,952.8,2618.52,2001.23,3359.57,0.4668,Auxiliary Sign,0.9873
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_46552970-IMG_5766.jpeg,1047.97,1630.3,1945.53,2623.87,0.3438,No Through Road (T-Junction),0.9751
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_4b0be6d1-IMG20260105131256.jpg,780.24,395.54,2471.0,3291.65,0.3555,Pedestrian Crossing,0.9718
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_5068c583-IMG_4683.jpeg,768.74,1406.47,1995.48,3001.32,0.4727,Pedestrian Crossing,0.9529
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_52634fe4-IMG_20260108_180144.jpg,1297.39,13.55,2282.9,4060.52,0.3516,,0.2696
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_52634fe4-IMG_20260108_180144.jpg,1202.23,2108.7,1245.73,2189.55,0.3398,Stop Sign,0.9321
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_53e7c3c2-IMG_5568.jpeg,1074.4,1702.85,1693.61,2781.07,0.8672,No Entry (One Way),0.9723
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_578dabe6-IMG_4802.jpeg,796.44,966.41,2293.45,2199.5,0.8398,No Entry (One Way),0.984
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_64a36757-IMG20251230164429.jpg,571.32,975.27,2258.11,2451.47,0.793,No Entry (One Way),0.9864
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_69e094db-IMG20260103164903.jpg,419.95,647.29,2378.6,2723.23,0.373,No Through Road (T-Junction),0.9844
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_7052b6a6-IMG_5704.jpeg,888.86,1487.76,1993.98,2490.45,0.3398,Back-Unknown,0.9833
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_7fcdb608-IMG_5767.jpeg,983.27,2559.77,1831.11,3591.26,0.4199,Auxiliary Sign,0.9698
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_831c366a-IMG_5656.jpeg,395.1,716.84,1243.19,1493.11,0.6641,Blind-Spot Mirror (Convex Mirror),0.9816
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_8fe876b9-IMG_4754.jpeg,1633.05,846.78,2263.1,3125.53,0.3359,Pedestrian Crossing,0.9719
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_9dfbd54a-IMG_5537.jpeg,529.89,802.24,1057.49,1347.19,0.4883,Blind-Spot Mirror (Convex Mirror),0.9862
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_a7df285e-RV_001_147.jpeg,1380.0,3295.53,1482.46,3448.95,0.3457,No Entry (One Way),0.9753
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_aa406f9d-IMG_4615.jpeg,819.82,1587.97,2039.57,2941.09,0.8086,No Entry (One Way),0.9677
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_c74547eb-RV_001_38.jpeg,1248.74,1634.45,1816.68,2630.56,0.6484,No Entry (One Way),0.9825
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_ca48394e-RV_001_125.jpeg,1307.33,1986.05,1680.73,2992.31,0.625,Stop Sign,0.9586
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_ca48394e-RV_001_125.jpeg,2269.86,3384.71,2326.65,3447.47,0.3438,Back-Unknown,0.8874
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_ce09cd20-IMG_4692.jpeg,748.01,2220.93,2174.61,3638.98,0.8203,Stop Sign,0.9734
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_d64c06cd-IMG20260103165218.jpg,686.62,880.53,2559.27,2853.27,0.3457,No Through Road (T-Junction),0.9818
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_d681b797-IMG20260105132903.jpg,1022.99,483.23,2232.11,3272.94,0.6719,Stop Sign,0.9752
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_db486299-IMG_5815.jpeg,987.97,1462.2,2174.49,2506.08,0.3535,No Through Road (T-Junction),0.9746
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_dbac3098-IMG_4803.jpeg,1296.72,948.72,2221.88,2677.13,0.7227,No Entry (One Way),0.9733
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_e1306f94-IMG20251230164545.jpg,536.94,1045.86,2684.87,3014.03,0.8203,Stop Sign,0.9855
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_e3c71733-IMG_5538.jpeg,1309.97,1437.53,1864.36,2548.94,0.707,Blind-Spot Mirror (Convex Mirror),0.97
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_ec712362-IMG_5803.jpeg,841.33,1633.39,909.39,1709.66,0.332,Directional Sign,0.9764
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_f28bdb6c-RV_001_29.jpeg,1450.72,1261.52,2102.03,2436.34,0.7539,No Entry (One Way),0.9765
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_f28bdb6c-RV_001_29.jpeg,1447.88,1258.8,2106.97,4032.0,0.3164,,0.4232
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_f4371c23-IMG_5562.jpeg,1045.22,1481.62,1602.86,2710.37,0.3887,Pedestrian Crossing,0.9592
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp1_fb9922e7-IMG_4700.jpeg,1030.88,1461.3,2164.27,2812.77,0.4668,Blind-Spot Mirror (Convex Mirror),0.9843
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_0cd46f17-MP_0097.jpg,1091.39,1170.79,2039.86,2363.26,0.5,Back-Unknown,0.9809
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_0cd46f17-MP_0097.jpg,978.03,560.44,1224.6,1428.47,0.4336,Blind-Spot Mirror (Convex Mirror),0.9575
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_0cd46f17-MP_0097.jpg,981.33,552.56,2039.2,4032.0,0.3066,,0.3041
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_1d09be1b-MP_0034.jpg,1422.13,341.29,1535.84,1228.95,0.5547,Stop Sign,0.9543
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_1d09be1b-MP_0034.jpg,989.64,1209.23,1805.07,1639.52,0.5039,Street Sign,0.9632
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_1d09be1b-MP_0034.jpg,1225.4,381.41,1362.32,1223.22,0.3652,Back-Unknown,0.9569
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_1d09be1b-MP_0034.jpg,490.93,1804.37,712.46,2022.25,0.3145,Back-Unknown,0.9686
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_24c5c7cd-20251223_155820.jpg,1977.9,1566.85,2293.61,2086.7,0.625,Other-Unknown,0.9856
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_24c5c7cd-20251223_155820.jpg,1352.11,1015.82,2167.26,1859.44,0.6016,Stop Sign,0.9703
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_24fcf1af-MP_0080.jpg,753.51,1613.1,870.1,1755.49,0.6172,Stop Sign,0.943
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_24fcf1af-MP_0080.jpg,1074.75,1754.69,1117.46,1805.2,0.3633,Other-Unknown,0.7206
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_31ecc6f6-20251230_124942.jpg,990.17,1057.9,2223.16,2139.11,0.3438,Back-Unknown,0.9812
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_331688ad-20251223_152821.jpg,1599.2,1048.34,1851.21,1990.77,0.8359,No Entry (One Way),0.9811
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_3e9d99d7-IMG_20251223_122636.jpg,1223.69,1516.97,1743.53,2029.68,0.3594,Back-Unknown,0.9842
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_477681c7-21.front.jpg,867.48,1036.98,1342.02,1509.95,0.7383,No Entry (One Way),0.9731
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_477681c7-21.front.jpg,864.91,1029.31,1343.58,3242.63,0.3477,,0.2111
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_4acb7340-20251223_155105.jpg,1165.49,1188.8,1939.53,1968.71,0.4941,Back-Unknown,0.9831
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_4acb7340-20251223_155105.jpg,1166.83,1187.35,1937.65,4080.0,0.4375,,0.2679
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_5061299f-MP_0130.jpg,771.93,572.15,1586.19,1570.38,0.3848,Back-Unknown,0.9904
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_62c50d8e-20251230_121740.jpg,1468.16,1027.9,1792.36,2069.27,0.6445,Stop Sign,0.9693
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_62c50d8e-20251230_121740.jpg,1466.07,1036.33,1870.91,4060.56,0.3008,,0.2784
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_797d9987-MP_0038.jpg,783.95,183.7,1861.65,1262.16,0.6289,Stop Sign,0.919
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_7ad50d73-MP_0075.jpg,586.14,140.01,1563.43,1080.86,0.4727,Back-Unknown,0.975
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_7bccf907-IMG_20251223_114643.jpg,719.89,1644.88,915.95,1833.19,0.7227,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_8042282f-20251223_150231.jpg,1160.15,0.0,1752.93,1978.18,0.7852,No Entry (One Way),0.9647
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_85bab424-IMG_20251223_120632.jpg,1341.16,1194.57,1798.5,1701.89,0.3477,Back-Unknown,0.9855
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_888b1f4f-MP_0074.jpg,480.17,866.3,1175.74,1493.83,0.6914,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_9272e80b-20251230_124926.jpg,1067.3,1188.21,2355.68,2493.87,0.7852,Stop Sign,0.9754
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_983dc626-30.side.jpg,1291.22,1066.28,1378.09,1594.59,0.4141,No Entry (One Way),0.9736
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ab84ff33-MP_0056.jpg,966.31,203.01,1856.04,1096.02,0.7852,No Entry (One Way),0.9839
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ab84ff33-MP_0056.jpg,963.62,215.02,1854.67,4086.53,0.3672,,0.2259
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ab9b17dd-34.back.jpg,1418.8,2128.98,1501.18,2210.95,0.6797,Other-Unknown,0.9796
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ab9b17dd-34.back.jpg,2042.85,2230.75,2097.14,2285.82,0.3379,Other-Unknown,0.8524
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_b7da3d82-20251230_123417.jpg,1217.36,970.53,2062.35,1818.56,0.8008,Stop Sign,0.9813
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_b9e760b0-IMG_20251223_125447.jpg,882.35,2251.05,965.46,2333.47,0.4102,No Entry (One Way),0.902
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_b9e760b0-IMG_20251223_125447.jpg,1447.15,2280.22,1522.14,2360.53,0.4023,No Entry (One Way),0.9593
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_bf551d52-MP_0136.jpg,608.6,1332.67,2453.27,1613.24,0.377,,0.0248
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_c96ca64e-MP_0098.jpg,99.46,819.97,882.13,1600.16,0.7539,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_c96ca64e-MP_0098.jpg,91.39,819.81,3956.35,1603.1,0.4473,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ccff3003-MP_0047.jpg,2707.37,1631.12,2957.74,1871.61,0.6719,No Entry (One Way),0.9053
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ccff3003-MP_0047.jpg,2700.17,1624.43,2958.64,2376.56,0.4531,,0.301
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ccff3003-MP_0047.jpg,1005.62,770.21,1162.46,1536.25,0.3301,No Entry (One Way),0.9106
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ced8bffa-14.front.jpg,637.35,1033.05,1252.85,1653.74,0.3496,Pedestrian Crossing,0.9475
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_d1fa2493-20251230_123128.jpg,764.15,535.83,2102.28,1899.06,0.7773,No Entry (One Way),0.973
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_d201b393-MP_0004.jpg,889.89,1082.15,1893.28,2065.5,0.7852,No Entry (One Way),0.9839
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_d201b393-MP_0004.jpg,2856.09,1095.06,3072.0,1896.9,0.5547,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_d201b393-MP_0004.jpg,887.28,1079.62,1897.61,4096.0,0.3965,,0.3261
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_d201b393-MP_0004.jpg,513.69,2345.33,551.57,2391.44,0.3203,No Entry (One Way),0.6734
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_d3fe8c38-MP_0046.jpg,960.09,338.17,1855.22,1286.72,0.5664,Back-Unknown,0.9857
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_d3fe8c38-MP_0046.jpg,958.69,342.24,1854.88,4024.0,0.3867,,0.2572
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_e55dea8e-MP_0157.jpg,1282.71,1300.46,2015.25,2023.51,0.3652,No Through Road (T-Junction),0.9744
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_e55dea8e-MP_0157.jpg,1281.65,2024.49,2031.23,2409.22,0.3105,Auxiliary Sign,0.9656
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_ed201818-17.back.jpg,708.25,831.85,1464.72,1504.13,0.3047,Other-Unknown,0.9848
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp2_f6e60d8b-33.front.back.jpg,902.72,1524.14,1357.73,1967.57,0.7656,No Entry (One Way),0.9664
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_09e3faa9-IMG_20251203_121602.jpg,1203.99,881.82,2229.8,1736.86,0.7578,No Entry (One Way),0.9749
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_13fcb840-IMG_20251203_093318.jpg,1145.34,316.54,2012.4,1372.07,0.3945,Back-Unknown,0.9811
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_13fcb840-IMG_20251203_093318.jpg,1147.26,305.67,2009.73,4080.0,0.3164,,0.2793
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_16b18930-IMG_4415.jpeg,1310.62,1446.41,1832.58,1952.07,0.6875,No Entry (One Way),0.9885
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_17e38feb-20251129_115024.jpg,884.39,1699.4,1669.03,2538.48,0.5586,Stop Sign,0.9617
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_17e38feb-20251129_115024.jpg,2755.0,3113.8,2811.07,3178.7,0.3594,No Entry (One Way),0.7462
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_17e38feb-20251129_115024.jpg,883.08,1694.73,1669.78,4080.0,0.3262,,0.3443
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_19cc8708-IMG_20251203_095416.jpg,1155.71,1071.33,1821.47,1648.28,0.8516,No Entry (One Way),0.9927
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_22c38c39-IMG_4293.jpeg,1320.84,1658.4,2095.16,2510.94,0.8672,,0.0558
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_25e08496-IMG_9116.jpg,2941.75,3364.88,4284.0,5361.14,0.3711,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_2b9ed5a1-IMG_4416.jpeg,1375.8,1030.11,1995.79,2028.77,0.7656,No Entry (One Way),0.9772
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_2b9ed5a1-IMG_4416.jpeg,1371.86,1023.76,1990.05,4032.0,0.3438,,0.3311
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_3cee3d85-IMG_4285.jpeg,1193.34,1822.0,1936.73,2549.76,0.6562,Stop Sign,0.9725
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_3cee3d85-IMG_4285.jpeg,1384.46,2906.59,1496.2,3029.3,0.3535,Stop Sign,0.8861
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_4d14c289-20251129_122448.jpg,1326.52,1152.2,1807.53,1765.33,0.6602,No Entry (One Way),0.9825
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_4d14c289-20251129_122448.jpg,1398.21,2545.89,1506.75,2691.29,0.3691,No Entry (One Way),0.9221
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_4d14c289-20251129_122448.jpg,1262.63,1923.93,1796.42,2602.47,0.3008,Back-Unknown,0.9847
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_4daf8454-IMG_4356.jpeg,735.93,3079.93,892.13,3246.56,0.5039,No Entry (One Way),0.9612
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_4daf8454-IMG_4356.jpeg,294.55,2956.43,339.19,3040.12,0.3223,Other-Unknown,0.8139
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5a350ee3-IMG_9144.jpg,1526.64,1912.58,2597.05,2916.68,0.6836,Stop Sign,0.978
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5a350ee3-IMG_9144.jpg,1762.89,3234.26,1883.53,3847.13,0.3945,Directional Sign,0.9615
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5a350ee3-IMG_9144.jpg,1540.45,1903.89,2597.83,5712.0,0.3223,,0.2645
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5a5ec99c-IMG_4369.jpeg,1128.44,1333.98,2109.55,2245.13,0.7891,No Entry (One Way),0.9815
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5a5ec99c-IMG_4369.jpeg,1260.42,2893.93,1388.79,3060.49,0.3984,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5a849df3-20251129_113801.jpg,1111.12,726.52,1831.6,4080.0,0.3926,,0.2141
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5e7ebbc1-IMG_4337.jpeg,2100.64,1467.96,2659.12,1680.65,0.7266,,0.3091
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5e7ebbc1-IMG_4337.jpeg,1584.16,1470.29,2134.79,1697.33,0.5664,,0.1986
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5e84f6fa-20251129_114532.jpg,782.41,1261.74,1842.27,2247.92,0.8086,No Entry (One Way),0.9743
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_5e84f6fa-20251129_114532.jpg,2903.74,2767.15,2949.08,2813.35,0.3672,No Entry (One Way),0.7563
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_62bcab50-IMG_20251203_121207.jpg,1055.34,490.66,2224.31,1697.03,0.4238,Back-Unknown,0.9848
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_66257b80-IMG_9242.jpg,2023.32,585.39,2493.74,1908.96,0.7539,No Entry (One Way),0.9798
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_6a5c994c-IMG_9361.jpg,1615.34,3880.24,2737.13,4985.81,0.3848,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_729363da-IMG_4319.jpeg,1384.26,1507.17,1980.62,2157.85,0.6875,Stop Sign,0.9709
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_729363da-IMG_4319.jpeg,1384.37,1500.46,1981.99,4032.0,0.3984,,0.2593
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_72ce7bb8-IMG_20251203_121930.jpg,1343.6,921.89,1924.65,1591.46,0.6758,Directional Sign,0.9819
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_72ce7bb8-IMG_20251203_121930.jpg,1345.13,289.78,1875.08,940.13,0.5781,No Entry (One Way),0.9746
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_72ce7bb8-IMG_20251203_121930.jpg,1335.76,292.01,1905.07,4080.0,0.3555,,0.1746
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_7b58307a-IMG_20251203_094229.jpg,1093.48,336.61,2253.91,1512.63,0.5625,Back-Unknown,0.9885
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_7b58307a-IMG_20251203_094229.jpg,1091.56,292.06,2252.08,4080.0,0.4199,,0.3101
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_87ee400a-IMG_9122.jpg,1933.63,1324.27,2250.1,2680.68,0.6328,Stop Sign,0.9779
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_8c6aa47e-IMG_20251203_121607.jpg,1163.65,432.31,1707.31,1581.05,0.6953,No Entry (One Way),0.9777
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_913cab50-IMG_20251204_094538.jpg,756.08,1524.51,2133.61,2946.61,0.7891,No Entry (One Way),0.9736
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_915b758c-IMG_4287.jpeg,1359.7,1427.84,1844.21,1982.03,0.7109,No Entry (One Way),0.9583
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_915b758c-IMG_4287.jpeg,1356.58,1417.14,1848.19,4032.0,0.3945,,0.2419
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_940c99a8-IMG_9166.jpg,2072.82,2822.01,2520.64,4070.53,0.8047,Other-Unknown,0.9675
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_940c99a8-IMG_9166.jpg,2137.63,1733.22,2458.85,2916.95,0.4258,Stop Sign,0.9538
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_940c99a8-IMG_9166.jpg,2082.03,1732.96,2503.82,5711.46,0.375,,0.3057
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_9e3990fa-20251129_124245.jpg,621.48,1391.19,2339.86,2960.42,0.4766,Blind-Spot Mirror (Convex Mirror),0.9788
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_9ff54512-IMG_20251203_093925.jpg,1019.88,195.16,2025.52,1184.31,0.7031,Stop Sign,0.9721
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_9ff54512-IMG_20251203_093925.jpg,1018.25,199.95,2024.96,4080.0,0.4004,,0.2568
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_9ff54512-IMG_20251203_093925.jpg,1192.19,2146.75,1228.73,2185.88,0.3359,Stop Sign,0.5697
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ae42a8a0-20251129_121839.jpg,1122.68,1795.25,1882.7,2541.07,0.6836,Other-Unknown,0.984
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ae42a8a0-20251129_121839.jpg,1107.45,1139.72,1821.62,1814.59,0.625,Stop Sign,0.9825
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ae42a8a0-20251129_121839.jpg,1105.93,1139.12,1852.13,4080.0,0.3848,,0.2464
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_aebbbcad-IMG_9204.jpg,1634.2,1050.07,2739.59,2157.35,0.7578,Stop Sign,0.9231
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_aebbbcad-IMG_9204.jpg,2430.39,3575.37,2632.31,3786.12,0.375,Directional Sign,0.9463
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_aebbbcad-IMG_9204.jpg,1632.94,1044.57,2735.77,5712.0,0.3496,,0.2211
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_c0cc3ce0-IMG_20251203_115646.jpg,1286.52,1510.71,1939.7,2346.82,0.6445,No Entry (One Way),0.9891
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ca162d3e-20251129_114653.jpg,940.31,1386.92,1851.06,2317.77,0.6367,No Entry (One Way),0.9366
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ca162d3e-20251129_114653.jpg,2172.19,2590.84,2251.02,2713.25,0.4902,No Entry (One Way),0.8482
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ca162d3e-20251129_114653.jpg,939.05,1381.83,1857.44,4074.97,0.3926,,0.3253
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_cb90b89e-IMG_9211.jpg,2697.38,4135.66,2909.5,4284.92,0.3633,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_d3cfa1f7-IMG_20251204_133658.jpg,1058.82,301.08,2029.17,1397.22,0.3105,Blind-Spot Mirror (Convex Mirror),0.987
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_def908c3-IMG_4315.jpeg,1246.73,1387.3,1918.63,2019.72,0.3691,Back-Unknown,0.9894
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_e17ffb83-20251129_115005.jpg,1211.49,1466.21,1547.14,2367.34,0.8555,No Entry (One Way),0.9506
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_eb95b9a8-IMG_9119.jpg,3559.08,5659.49,3862.38,5712.0,0.375,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ec385cc7-IMG_20251203_121353.jpg,847.42,490.57,2345.88,1832.39,0.375,Blind-Spot Mirror (Convex Mirror),0.9859
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ecbe9be3-IMG_20251204_100152.jpg,1395.03,808.77,2638.16,2374.69,0.6367,Other-Unknown,0.9647
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_ecbe9be3-IMG_20251204_100152.jpg,1390.49,804.93,2639.53,4080.0,0.4492,,0.4778
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_f2a7e32a-IMG_4334.jpeg,1913.84,3159.82,2131.19,3212.29,0.4707,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_f2a7e32a-IMG_4334.jpeg,1254.3,1772.25,1835.39,2344.18,0.3105,Back-Unknown,0.9926
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_f2a7e32a-IMG_4334.jpeg,1255.73,1770.14,1833.96,4032.0,0.3086,,0.2516
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_f6ba6aba-IMG_4397.jpeg,1168.27,1482.42,1900.03,2175.33,0.7617,No Entry (One Way),0.9835
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_f6ba6aba-IMG_4397.jpeg,1164.07,1473.04,1900.61,4032.0,0.4395,,0.2711
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_facbf33e-IMG_9197.jpg,1832.85,2075.64,2084.46,3058.46,0.6445,No Entry (One Way),0.9676
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp3_facbf33e-IMG_9197.jpg,1840.34,2073.64,2228.6,5703.75,0.3438,,0.1703
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_0da97af9-20251222_133337.jpg,541.92,985.45,1908.35,2317.2,0.75,Stop Sign,0.9856
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_20251130_115129.jpg,863.3,2225.65,2082.86,3490.31,0.8555,No Entry (One Way),0.9874
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_20251130_115532.jpg,732.6,1426.09,1955.84,2396.8,0.7188,Stop Sign,0.9754
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_20251130_115532.jpg,1662.0,1486.38,2594.65,3247.28,0.3633,Street Sign,0.9722
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_20251130_115613.jpg,1182.46,1474.82,1442.38,3055.91,0.4668,Pedestrian Crossing,0.9325
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_20251130_120143.jpg,1522.65,1683.88,1719.96,3066.12,0.418,Pedestrian Crossing,0.9193
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_20251231_160526.jpg,993.42,1495.96,2012.05,2435.71,0.3125,No Through Road (T-Junction),0.9724
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_219a5ac5-20251116_164504.jpg,667.05,1176.01,1308.25,2507.28,0.7617,No Entry (One Way),0.9693
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_219a5ac5-20251116_164504.jpg,774.28,2413.46,1153.53,4029.81,0.5312,,0.027
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_219a5ac5-20251116_164504.jpg,808.55,2558.78,1077.31,3307.26,0.5039,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_21c64815-20251116_163111.jpg,561.97,1170.82,1764.83,2170.42,0.7773,Stop Sign,0.9645
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_22bb020a-20251222_131805.jpg,495.04,679.44,2377.35,2695.21,0.3828,Back-Unknown,0.9709
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_25671e9a-WhatsApp_Image_2026-01-14_at_11.11.43_3.jpeg,1091.84,960.29,1112.98,986.86,0.3125,Other-Unknown,0.839
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_27f66596-20260109_125516.jpg,594.97,151.13,1886.34,1921.84,0.3809,Blind-Spot Mirror (Convex Mirror),0.982
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_27f66596-20260109_125516.jpg,1032.45,973.98,1100.54,1089.05,0.3262,,0.0034
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_3a5008ad-20251222_141011.jpg,1023.84,422.95,2162.36,2116.23,0.7266,No Entry (One Way),0.981
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_3a5008ad-20251222_141011.jpg,678.91,418.93,2170.04,4000.0,0.4375,,0.365
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_420a4dea-20251222_131729.jpg,822.64,717.44,2362.53,2471.22,0.8086,No Entry (One Way),0.981
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_53b94993-WhatsApp_Image_2026-01-14_at_11.10.30_2.jpeg,593.47,767.81,855.44,1199.58,0.7578,No Entry (One Way),0.9811
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_53b94993-WhatsApp_Image_2026-01-14_at_11.10.30_2.jpeg,573.21,766.2,855.27,1995.25,0.3242,,0.3291
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_5886bc7f-20251116_161202.jpg,1244.48,1404.81,1399.64,1884.39,0.6875,Stop Sign,0.9519
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_5996dfea-20251116_163330.jpg,1034.46,1558.04,1162.3,2148.92,0.582,No Entry (One Way),0.8795
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_5c62b2f6-20251117_104837.jpg,639.68,575.98,1448.51,1395.14,0.75,Stop Sign,0.9471
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_5e204826-WhatsApp_Image_2026-01-14_at_11.11.36.jpeg,586.33,790.94,777.52,978.88,0.6719,No Entry (One Way),0.9649
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_5e204826-WhatsApp_Image_2026-01-14_at_11.11.36.jpeg,584.09,785.8,778.3,1781.08,0.4297,,0.1899
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_66eacd8c-20260109_124456.jpg,842.97,850.62,1894.74,2654.46,0.4805,No Through Road (T-Junction),0.9696
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_763f17c4-20260107_150842.jpg,1649.0,2888.73,1755.6,3007.29,0.4141,Directional Sign,0.9477
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_81d58d34-20251222_132612.jpg,691.49,886.3,2016.61,2190.74,0.8281,No Entry (One Way),0.9851
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_82399059-20251116_165140.jpg,575.81,2086.11,1872.02,3493.52,0.6133,Other-Unknown,0.7016
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_86e58e1e-WhatsApp_Image_2026-01-14_at_11.10.21.jpeg,643.68,752.74,814.84,1199.38,0.4023,No Entry (One Way),0.9235
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_86e58e1e-WhatsApp_Image_2026-01-14_at_11.10.21.jpeg,762.38,337.86,956.22,791.57,0.334,Blind-Spot Mirror (Convex Mirror),0.968
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_86e58e1e-WhatsApp_Image_2026-01-14_at_11.10.21.jpeg,644.95,337.22,955.21,2000.0,0.3047,,0.1723
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,587.23,948.98,822.29,1183.67,0.6641,Other-Unknown,0.9752
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,118.66,1169.3,191.42,1240.65,0.4023,Other-Unknown,0.9508
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,652.56,1208.07,681.63,1247.25,0.3809,No Entry (One Way),0.8928
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_8b497905-20260107_150756.jpg,174.11,2630.87,271.25,2733.24,0.5117,Directional Sign,0.9317
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_8bd079ee-20260107_105937.jpg,542.65,1108.45,1064.29,1644.51,0.3398,Pedestrian Crossing,0.9767
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_9c4db066-WhatsApp_Image_2026-01-14_at_10.34.44_2.jpeg,158.06,416.94,405.04,672.7,0.3926,Stop Sign,0.9857
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_a3952dcd-20251116_170721.jpg,487.29,740.66,1190.33,2167.79,0.7852,No Entry (One Way),0.9848
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_a59df063-20251116_165440.jpg,225.0,882.84,1319.8,2239.66,0.7734,No Entry (One Way),0.9681
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_a59df063-20251116_165440.jpg,1809.52,3074.36,1883.03,3155.48,0.373,No Entry (One Way),0.9382
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_abe76f20-20260109_124535.jpg,749.67,286.44,2095.44,2613.35,0.4531,No Through Road (T-Junction),0.971
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_b3745e21-20251222_142059.jpg,807.96,572.9,1728.91,2231.82,0.7344,No Entry (One Way),0.972
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_b3d0eaa4-20251116_163427.jpg,30.27,469.69,918.43,2502.2,0.6875,Auxiliary Sign,0.9872
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_b3d0eaa4-20251116_163427.jpg,288.83,835.46,663.32,1386.46,0.6211,,0.1128
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_bdef9845-20260109_130552.jpg,742.36,1265.52,1974.96,2347.04,0.3691,Blind-Spot Mirror (Convex Mirror),0.9845
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_c909a40a-20251222_142239.jpg,528.43,562.65,2030.6,2012.72,0.3086,Pedestrian Crossing,0.9809
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_d1c1ed24-20260113_130204.jpg,1055.69,1572.4,1835.04,2331.3,0.3633,No Through Road (T-Junction),0.9672
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_d5aaacb6-20251116_165125.jpg,269.91,3095.79,495.64,3354.49,0.4727,No Entry (One Way),0.9514
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_d78448ea-20251117_105829.jpg,12.74,3245.67,226.54,3459.55,0.459,Stop Sign,0.9528
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_d8a007d5-20260109_123932.jpg,531.2,2157.37,1895.36,3998.78,0.8906,Other-Unknown,0.991
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_dd2a03a9-20251222_132847.jpg,394.43,765.1,2092.86,3996.58,0.3398,Blind-Spot Mirror (Convex Mirror),0.5674
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_ddd42f22-20251116_162542.jpg,922.32,1804.72,1392.18,2294.61,0.5352,No Entry (One Way),0.9778
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_df0bccf2-WhatsApp_Image_2026-01-14_at_11.12.00.jpeg,1587.0,649.57,1709.99,764.51,0.3281,No Entry (One Way),0.8606
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_df0bccf2-WhatsApp_Image_2026-01-14_at_11.12.00.jpeg,368.91,699.78,457.81,783.51,0.3145,No Entry (One Way),0.9738
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_e3a6bacf-20251222_140739.jpg,860.35,789.73,1744.21,2098.23,0.7422,No Entry (One Way),0.9708
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_e3a6bacf-20251222_140739.jpg,859.5,789.66,1741.6,4000.0,0.4414,,0.4047
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_e47a8d80-20251116_163051.jpg,989.05,1229.05,1365.34,2917.87,0.7617,No Entry (One Way),0.962
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp4_ffdc6f75-WhatsApp_Image_2026-01-14_at_11.10.20.jpeg,717.55,1152.85,882.66,1387.35,0.4082,Directional Sign,0.9518
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_0f660dba-MichaelFarrugia_49_Back.jpg,1114.91,1086.63,1953.34,1914.23,0.3672,Back-Unknown,0.9789
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_1f171b80-MelatAssefa_5_Front.jpg,1578.32,530.28,2380.35,1265.64,0.8867,No Entry (One Way),0.9884
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_2141c95b-MelatAssefa_28_Side.jpg,677.79,331.64,1645.51,1741.3,0.6484,Stop Sign,0.9573
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_2141c95b-MelatAssefa_28_Side.jpg,664.4,324.59,1876.64,4032.0,0.3809,,0.3171
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_27622289-BenTaliana_10_Front.jpeg,743.06,1825.29,3673.94,4635.52,0.8633,No Entry (One Way),0.9741
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_28809400-MelatAssefa_23_Front.jpg,1053.1,537.5,1835.35,1346.37,0.7852,No Entry (One Way),0.9835
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_30980873-BenTaliana_12_Front.jpeg,1178.45,2151.5,3421.0,4148.22,0.8906,No Entry (One Way),0.9861
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_3cd9a2bc-MelatAssefa_45_Side.jpg,913.93,814.21,2066.76,2917.0,0.7773,Stop Sign,0.9746
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_3d564b26-AlisonAttard_15_Back.jpeg,1509.7,925.22,2678.94,1963.08,0.7266,No Entry (One Way),0.6683
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2872.7,1253.69,3271.11,1478.71,0.5312,,0.0193
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2773.84,1123.78,4032.0,1647.29,0.4297,,0.0587
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,1371.8,1070.04,2157.32,1389.54,0.3223,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1229.9,1605.66,1932.87,2294.52,0.3965,No Through Road (T-Junction),0.9471
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_48cba720-BenTaliana_30_Front.jpeg,975.17,1751.65,3139.59,3659.25,0.6953,No Entry (One Way),0.9757
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_48cba720-BenTaliana_30_Front.jpeg,3326.15,5365.24,3406.25,5466.61,0.375,No Entry (One Way),0.6335
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1943.1,2224.12,2116.75,2402.36,0.8125,Other-Unknown,0.977
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1320.46,751.71,1922.59,1373.16,0.7656,No Entry (One Way),0.8979
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1312.1,742.66,1928.03,4032.0,0.4609,,0.1678
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_6bb6fe17-BenTaliana_15_Back.jpeg,840.51,2320.68,2517.33,4374.08,0.3047,Blind-Spot Mirror (Convex Mirror),0.9931
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_6cdcc943-AlisonAttard_14_Back.jpeg,1165.96,975.87,2373.15,2220.96,0.7266,,0.4569
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_770e5bfc-BenTaliana_60_Side.jpeg,1089.82,808.22,1564.33,1739.97,0.6758,Other-Unknown,0.9606
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_770e5bfc-BenTaliana_60_Side.jpeg,1087.67,1609.72,1555.6,2921.16,0.4883,Stop Sign,0.9162
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_770e5bfc-BenTaliana_60_Side.jpeg,842.67,753.42,1568.24,4019.73,0.3105,,0.2826
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_7ae28afa-MelatAssefa_15_Front.jpg,1192.43,620.49,2010.38,1260.64,0.832,No Entry (One Way),0.9757
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_85f27713-MelatAssefa_35_Side.jpg,1411.84,1792.13,2043.58,3210.5,0.7734,No Entry (One Way),0.9801
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_85f27713-MelatAssefa_35_Side.jpg,1370.54,3031.47,1841.08,4327.61,0.3125,,0.0551
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_85f27713-MelatAssefa_35_Side.jpg,1383.2,1798.12,2042.09,5691.45,0.3086,,0.3464
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_9c857801-BenTaliana_43_Side.jpeg,126.38,7074.03,258.46,7236.93,0.4785,Other-Unknown,0.9292
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_9c857801-BenTaliana_43_Side.jpeg,4287.48,6383.16,4460.73,6715.86,0.4414,Directional Sign,0.9115
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_9c857801-BenTaliana_43_Side.jpeg,546.86,7179.27,622.43,7269.88,0.3281,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a1a873a2-MichaelFarrugia_21_Side.jpg,1196.88,974.54,1759.63,1736.71,0.625,Stop Sign,0.967
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a1a873a2-MichaelFarrugia_21_Side.jpg,1194.03,987.49,2133.53,4077.54,0.3613,,0.1475
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a1ced4bc-BenTaliana_22_Front.jpeg,563.67,1036.24,2641.69,2742.48,0.7539,Stop Sign,0.9784
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a1ced4bc-BenTaliana_22_Front.jpeg,2075.39,3132.58,3131.89,4240.32,0.3555,Back-Unknown,0.974
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a1ced4bc-BenTaliana_22_Front.jpeg,553.13,1036.78,2660.28,5988.0,0.3086,,0.3448
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a5ec0025-BenTaliana_11_Front.jpeg,310.88,1813.58,3594.15,4367.37,0.8555,No Entry (One Way),0.9725
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a5ec0025-BenTaliana_11_Front.jpeg,919.23,6648.44,1041.11,6803.87,0.3359,No Entry (One Way),0.8376
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,1210.64,1048.57,1856.27,2193.99,0.8242,No Entry (One Way),0.9503
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,819.23,1010.09,1384.3,2002.93,0.6797,No Entry (One Way),0.9721
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,819.89,1003.84,1382.21,4032.0,0.3164,,0.3287
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a8752ff5-MelatAssefa_56_Side.jpg,1361.99,586.14,1986.67,1704.5,0.7383,Stop Sign,0.9843
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_a8752ff5-MelatAssefa_56_Side.jpg,0.0,0.0,1066.95,354.05,0.3594,Street Sign,0.9567
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_ab2f9697-MichaelFarrugia_48_Side.jpg,1161.99,1944.39,1511.81,2583.97,0.7266,Other-Unknown,0.9721
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_ab2f9697-MichaelFarrugia_48_Side.jpg,1169.0,1355.47,1514.51,1988.16,0.582,Stop Sign,0.9667
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_ab2f9697-MichaelFarrugia_48_Side.jpg,1155.15,1356.56,1519.93,4080.0,0.4277,,0.2273
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_afdc6e4d-MelatAssefa_1_Side.jpg,1158.39,304.85,1611.38,1032.55,0.6055,No Entry (One Way),0.9722
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_bbdd8a43-BenTaliana_44_Front.jpeg,974.23,2318.28,3549.39,4708.88,0.832,No Entry (One Way),0.984
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_bc59500b-AlisonAttard_47_Side.jpeg,1394.2,1693.84,2519.1,1862.53,0.7227,,0.1128
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,743.07,1112.22,1544.91,2266.81,0.8438,No Entry (One Way),0.9753
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_cc77abda-MelatAssefa_34_Side.jpg,1500.35,899.7,2676.24,2556.03,0.8477,No Entry (One Way),0.9819
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_cc77abda-MelatAssefa_34_Side.jpg,1448.52,909.63,2672.88,5690.88,0.3848,,0.3307
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_cdd70210-BenTaliana_10_Side.jpeg,1498.15,1545.07,3360.45,4816.3,0.875,No Entry (One Way),0.9881
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_d29347ca-MelatAssefa_51_Side.jpg,2756.86,3350.63,3024.0,3623.97,0.707,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_d29347ca-MelatAssefa_51_Side.jpg,1275.13,236.15,1803.79,2049.6,0.6953,No Entry (One Way),0.9743
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_d29347ca-MelatAssefa_51_Side.jpg,1277.64,230.66,1800.34,4032.0,0.3418,,0.4695
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_dad74922-BenTaliana_41_Front.jpeg,708.82,1887.94,3277.03,3936.4,0.7734,No Entry (One Way),0.9825
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_dad74922-BenTaliana_41_Front.jpeg,691.47,1873.64,3284.77,7584.0,0.3457,,0.3611
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e0bfe536-MelatAssefa_22_Front.jpg,1075.62,988.74,1859.84,1719.73,0.7461,No Entry (One Way),0.9845
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e0bfe536-MelatAssefa_22_Front.jpg,1077.44,987.98,1859.55,4032.0,0.4316,,0.2402
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e2a22cf0-BenTaliana_9_Front.jpeg,456.55,1047.85,1772.24,2119.72,0.7773,No Entry (One Way),0.9636
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e2a22cf0-BenTaliana_9_Front.jpeg,452.21,1039.6,1777.55,4032.0,0.3145,,0.367
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e390d90e-MelatAssefa_55_Side.jpg,1600.23,956.79,2206.66,2092.67,0.6172,No Entry (One Way),0.9712
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e3df78e1-MichaelFarrugia_48_Back.jpg,1284.81,2158.38,1825.6,2787.67,0.3379,Back-Unknown,0.9914
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e43a48bc-BenTaliana_53_Side.jpeg,897.36,1216.73,1345.82,2168.26,0.3574,Pedestrian Crossing,0.9619
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1300.63,1549.93,2084.53,2319.01,0.4082,No Through Road (T-Junction),0.9688
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e897b21c-MelatAssefa_52_Front.jpg,1514.74,2678.83,2527.09,3659.13,0.6562,Stop Sign,0.9244
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e897b21c-MelatAssefa_52_Front.jpg,3277.11,5103.85,3518.08,5371.7,0.457,Directional Sign,0.9517
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_e897b21c-MelatAssefa_52_Front.jpg,1511.05,2671.32,2522.92,5712.0,0.418,,0.3001
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_ec52a808-MichaelFarrugia_58_Side.jpg,1238.95,2224.78,1759.47,2772.22,0.3047,Auxiliary Sign,0.9843
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_f3d53558-BenTaliana_52_Front.jpeg,731.43,1989.34,3508.94,8064.0,0.3477,,0.2001
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_fea9ceb6-MichaelFarrugia_19_Back.jpg,1455.79,2005.01,2232.76,2976.02,0.5664,Street Sign,0.9714
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp5_ff6aaac1-MichaelFarrugia_43_Front.jpg,1244.36,1656.49,1955.01,2336.51,0.8828,No Entry (One Way),0.9772
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_0126954d-IMG_0235.JPG,721.72,1236.86,2362.96,2099.55,0.3418,,0.2714
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_0d61ecda-IMG_6112.JPG,836.55,56.23,1987.69,1235.3,0.832,No Entry (One Way),0.9834
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_1fffe58c-IMG_6250.JPG,1018.58,857.59,2058.45,1796.45,0.7617,No Entry (One Way),0.9824
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_255dc793-IMG_0327.JPG,904.01,1569.91,3536.97,2065.6,0.5078,,0.1471
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_264240ca-IMG_0303.JPG,1204.51,738.65,3644.87,2065.37,0.7422,,0.4731
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_34078a23-Screenshot_2025-12-05_144602.png,89.52,44.39,211.02,163.6,0.7031,Stop Sign,0.9876
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_34078a23-Screenshot_2025-12-05_144602.png,89.21,43.65,210.95,586.32,0.4453,,0.2165
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_344c75b8-Screenshot_2025-12-05_150942.png,87.5,40.51,192.29,144.05,0.3809,Back-Unknown,0.972
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_3ce4063d-IMG_0217.JPG,1546.35,1396.63,2126.91,1732.11,0.7305,,0.2656
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_4c7d6d30-IMG_6226.JPG,1086.51,912.63,2110.55,1759.81,0.8359,No Entry (One Way),0.9893
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_4c7d6d30-IMG_6226.JPG,1080.22,905.79,2112.16,4032.0,0.4395,,0.2715
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_674b294f-Screenshot_2025-12-05_140949.png,49.31,111.62,142.89,237.62,0.8164,Other-Unknown,0.9467
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_674b294f-Screenshot_2025-12-05_140949.png,365.65,41.7,530.43,201.92,0.3945,Blind-Spot Mirror (Convex Mirror),0.9578
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_674b294f-Screenshot_2025-12-05_140949.png,48.63,110.18,160.08,371.67,0.3281,,0.4179
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_7608155e-Screenshot_2025-12-05_135221.png,46.9,44.71,134.75,150.51,0.7617,Stop Sign,0.9684
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_7608155e-Screenshot_2025-12-05_135221.png,46.71,44.45,136.02,499.67,0.3281,,0.2318
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_8be98e2c-IMG_6200.JPG,1138.59,835.06,1441.91,2267.43,0.6758,No Entry (One Way),0.9725
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_8be98e2c-IMG_6200.JPG,1076.88,836.04,1443.59,4032.0,0.3516,,0.3658
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_8d7bc213-IMG_0237.JPG,881.93,1282.14,2536.01,2284.45,0.8438,,0.3351
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_8dee1009-IMG_6205.JPG,1046.86,1314.53,1769.04,2185.89,0.7617,No Entry (One Way),0.9822
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_8dee1009-IMG_6205.JPG,1040.4,1309.04,1767.02,4032.0,0.3066,,0.3214
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_92b4ef64-IMG_6151.JPG,833.83,1227.21,2261.51,2505.5,0.8086,No Entry (One Way),0.977
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_92b4ef64-IMG_6151.JPG,985.87,2527.36,2110.31,3781.05,0.6875,Directional Sign,0.9557
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_9c79fb63-Screenshot_2025-12-05_143920.png,47.55,56.11,77.94,113.08,0.5625,No Entry (One Way),0.9431
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_9c79fb63-Screenshot_2025-12-05_143920.png,127.93,34.01,190.17,104.25,0.4199,Back-Unknown,0.9712
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_9c79fb63-Screenshot_2025-12-05_143920.png,47.12,55.89,77.54,274.66,0.3242,,0.2561
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_9e084d7c-IMG_0221.JPG,1535.71,1510.97,1938.81,1935.85,0.6992,Stop Sign,0.9792
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_9e084d7c-IMG_0221.JPG,1529.85,1508.2,1942.21,3218.79,0.4688,,0.247
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_9e084d7c-IMG_0221.JPG,2879.92,2614.62,3017.23,2977.96,0.334,Back-Unknown,0.532
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_a1b61997-Screenshot_2025-12-05_133641.png,147.63,48.35,249.77,219.73,0.6641,No Entry (One Way),0.9797
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_a1b61997-Screenshot_2025-12-05_133641.png,148.64,49.03,250.31,679.29,0.3906,,0.2677
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_a7041b20-IMG_6175.JPG,945.34,892.27,2109.99,1893.89,0.7852,No Entry (One Way),0.9872
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_a7041b20-IMG_6175.JPG,938.76,887.27,2113.29,4032.0,0.3633,,0.319
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_ad8b6cea-IMG_0342.JPG,1475.18,319.52,3133.12,2294.48,0.3867,,0.135
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_ad8b6cea-IMG_0342.JPG,2387.1,0.0,4032.0,2314.69,0.3047,,0.1288
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_b1f0ac5c-IMG_0227.JPG,2290.22,318.15,2897.79,674.66,0.3262,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_c2b7f6e2-IMG_0300.JPG,1208.3,566.28,2953.41,2581.07,0.4219,,0.2375
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_cebbcc7c-Screenshot_2025-12-05_141232.png,77.28,20.05,113.99,284.47,0.375,,0.2542
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_e18d6d29-IMG_0313.JPG,3412.71,2220.27,3650.87,2436.14,0.6406,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_e4194181-Screenshot_2025-12-05_124458.png,518.49,76.34,634.18,213.47,0.793,Stop Sign,0.9872
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_e4194181-Screenshot_2025-12-05_124458.png,517.38,75.53,635.06,710.7,0.4648,,0.2146
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp6_f6200360-IMG_6254.JPG,1375.6,740.12,1765.67,2201.68,0.4395,No Through Road (T-Junction),0.9538
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_0c807ae1-IMG_1804.jpg,1243.83,146.94,3397.72,2769.45,0.8828,,0.4461
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_0cc91b71-IMG_2114.JPG,375.37,126.4,2990.78,2766.91,0.6562,Stop Sign,0.5849
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_133305c1-IMG_6701.jpeg,1105.95,1364.47,1278.43,1868.51,0.7344,Stop Sign,0.9618
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_133305c1-IMG_6701.jpeg,1103.43,1360.82,1281.29,3605.96,0.4473,,0.2238
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_17ffbc31-IMG_6632.jpeg,1331.38,938.55,1463.34,1662.37,0.4199,Pedestrian Crossing,0.7335
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_17ffbc31-IMG_6632.jpeg,1321.77,933.49,1463.82,3131.3,0.3047,,0.2388
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_18034905-IMG_6798.jpeg,1296.37,1803.94,1388.53,2069.56,0.7109,No Entry (One Way),0.9741
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_21763d41-IMG_1815.jpg,1111.58,407.99,3571.35,2809.15,0.3438,Back-Unknown,0.5998
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_3335816b-IMG_1863.jpg,0.0,0.0,1323.22,1388.53,0.4375,,0.1083
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_3dfa77dc-20251215_142747.jpg,686.74,1110.17,1494.6,1880.84,0.75,No Entry (One Way),0.984
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_3dfa77dc-20251215_142747.jpg,683.09,1103.48,1489.86,4032.0,0.5078,,0.2634
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_46129e9c-IMG_6657.jpeg,1143.26,1309.13,1437.33,1609.05,0.7227,Stop Sign,0.986
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_46129e9c-IMG_6657.jpeg,1138.47,1301.69,1437.52,2590.83,0.3438,,0.2305
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_4c22ebaa-IMG_6807.jpeg,1498.21,1977.29,1929.48,2463.67,0.3262,Blind-Spot Mirror (Convex Mirror),0.9729
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_50fb19de-IMG_1779.jpg,771.08,1438.32,3789.91,1737.49,0.4551,,0.0711
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_55fe17bd-IMG_6660.jpeg,1260.75,1017.7,1614.46,1408.89,0.7773,No Entry (One Way),0.9823
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_55fe17bd-IMG_6660.jpeg,2896.8,1585.26,2946.72,1671.21,0.5391,Other-Unknown,0.8745
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_57ce1f54-20251215_150337.jpg,1061.23,1092.85,1270.32,2064.9,0.7539,No Entry (One Way),0.9787
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_57ce1f54-20251215_150337.jpg,1059.36,1090.3,1314.37,4032.0,0.416,,0.2755
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_5fe0adac-IMG_2351.JPG,795.6,2436.18,911.08,2554.27,0.6055,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_5fe0adac-IMG_2351.JPG,1101.46,971.63,1805.52,1781.1,0.4473,Back-Unknown,0.9846
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_5fe0adac-IMG_2351.JPG,1098.65,966.7,1804.99,4027.24,0.3301,,0.2643
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_81ace7bd-IMG_1823.jpg,1668.25,690.43,3331.64,2787.78,0.832,,0.3509
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_87ab4012-IMG_1929.jpg,1841.35,141.75,3473.87,2339.67,0.8086,,0.2787
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_897df19a-IMG_2311.JPG,359.92,1915.98,493.72,2046.0,0.4844,Directional Sign,0.9761
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_897df19a-IMG_2311.JPG,2213.3,1342.51,2462.46,1757.49,0.3594,Back-Unknown,0.9932
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_8c70ced7-IMG_6778.jpeg,1184.32,1388.73,1535.37,1746.47,0.7188,Stop Sign,0.9846
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_8c70ced7-IMG_6778.jpeg,1179.18,1382.37,1537.77,2958.58,0.4355,,0.2208
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_8e1e7992-IMG_6659.jpeg,1740.5,1720.35,1850.42,1865.53,0.5312,Other-Unknown,0.895
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_8e1e7992-IMG_6659.jpeg,1373.7,1169.69,1524.18,1638.15,0.3535,Stop Sign,0.9562
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_8e1e7992-IMG_6659.jpeg,1736.79,1723.48,1849.31,2338.06,0.3281,,0.2083
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_90de2b4a-IMG_6620.jpeg,1711.51,1639.0,1759.85,1817.24,0.3008,Stop Sign,0.8885
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_917e5bd8-IMG_2117.JPG,1034.55,194.78,3590.65,2749.04,0.8711,No Entry (One Way),0.5993
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_93d54be7-IMG_6607.jpeg,1002.07,1215.37,1100.78,1535.82,0.5586,Stop Sign,0.9244
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_ab2ec440-IMG_2148.JPG,358.18,878.47,1118.92,3076.03,0.5625,Blind-Spot Mirror (Convex Mirror),0.9834
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_b552bf33-20251215_150109.jpg,1014.57,1040.98,1191.52,1920.92,0.6641,Stop Sign,0.9665
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_b552bf33-20251215_150109.jpg,1012.97,1033.36,1279.88,4029.32,0.3711,,0.1971
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_b65b2b8e-20251215_143141.jpg,798.25,1011.3,1638.91,1407.58,0.5469,Street Sign,0.9565
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_c1d05649-IMG_2109.JPG,455.01,303.57,2805.74,2776.34,0.543,Stop Sign,0.5526
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_cddeeb7f-IMG_6636.jpeg,1245.41,1855.0,1308.39,1920.8,0.5469,Other-Unknown,0.8605
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_d36e330f-20251215_150902.jpg,738.56,1079.23,1659.95,1936.24,0.7305,Stop Sign,0.9722
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_d5464bd2-IMG_6729.jpeg,56.46,2200.69,220.3,2433.05,0.6055,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_d5464bd2-IMG_6729.jpeg,1650.76,1423.14,1884.5,2018.89,0.6055,Stop Sign,0.9923
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_d5464bd2-IMG_6729.jpeg,1645.85,1414.5,1892.61,4025.55,0.3828,,0.2171
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_d7ded33c-IMG_6742.jpeg,1852.68,2058.82,1908.44,2124.14,0.5859,Other-Unknown,0.8106
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_d7ded33c-IMG_6742.jpeg,1868.92,2119.39,1897.73,2178.68,0.3379,Other-Unknown,0.7101
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_ef873d66-20251215_143818.jpg,945.27,1170.55,1150.13,1966.79,0.6094,No Entry (One Way),0.9522
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_f5c11235-IMG_2319.JPG,1535.35,770.16,1803.88,887.48,0.5508,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_f6c47dc2-IMG_2182.JPG,1525.88,1485.98,2858.57,1733.85,0.3555,,0.1453
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_fb3a590f-IMG_6793.jpeg,1283.54,1553.1,1654.45,1925.38,0.5898,Stop Sign,0.9799
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_fb3a590f-IMG_6793.jpeg,1279.49,1547.0,1655.09,3175.14,0.3887,,0.2295
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_fb3a590f-IMG_6793.jpeg,2274.46,2155.85,2328.07,2275.0,0.3672,No Entry (One Way),0.9342
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_ffcca6e4-IMG_6603.jpeg,1422.59,1841.4,1738.38,2176.44,0.7227,Stop Sign,0.9763
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp7_ffcca6e4-IMG_6603.jpeg,1415.16,1833.5,1736.55,3068.38,0.4199,,0.2656
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_0487e0f7-front.jpg,1410.12,695.55,2530.61,1765.05,0.7773,Stop Sign,0.9775
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_1e3225cd-IMG_0085.jpg,1277.26,916.7,2245.24,2793.86,0.7383,No Entry (One Way),0.9782
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_2aed70e2-front.jpg,397.19,823.25,1856.24,1883.45,0.8242,No Entry (One Way),0.9743
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_2aed70e2-front.jpg,15.17,2273.16,1873.51,3059.98,0.4512,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_2e0ed656-front.jpg,1304.19,851.28,2670.89,2066.48,0.8008,Stop Sign,0.966
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_3b4e798b-front.jpg,1834.45,3518.47,1906.63,3603.44,0.3379,Stop Sign,0.8962
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_4802289d-side.jpg,1321.38,1388.77,1652.12,2585.81,0.4199,Pedestrian Crossing,0.9822
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_4c496fb4-side.jpg,728.33,1274.04,973.0,2296.97,0.3555,Pedestrian Crossing,0.9561
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_4fe75feb-IMG_0243.JPG,5204.7,3860.97,5434.72,4087.46,0.5156,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_4fe75feb-IMG_0243.JPG,4917.51,3793.55,5185.01,4068.18,0.3047,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_5043579c-side.jpg,1389.1,842.89,1927.66,2383.69,0.5508,Stop Sign,0.9681
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_5abf970a-side.jpg,1872.8,724.65,2261.08,2091.06,0.3145,Pedestrian Crossing,0.9693
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_70a9ea7f-side.jpg,983.92,515.72,1668.44,1549.33,0.6406,No Entry (One Way),0.9732
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_70a9ea7f-side.jpg,100.18,3697.95,302.3,3932.55,0.5078,No Entry (One Way),0.9268
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_77233a9d-IMG_0190_Blurred.JPG,1029.88,1344.59,2274.63,4333.48,0.7695,No Entry (One Way),0.9557
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_77233a9d-IMG_0190_Blurred.JPG,3916.24,4697.6,3992.38,4798.9,0.4199,Other-Unknown,0.8366
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_8bd74996-side.jpg,1889.84,955.13,2161.96,1808.04,0.6328,No Entry (One Way),0.9658
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_8bd74996-side.jpg,1888.56,950.14,2158.83,3024.0,0.3965,,0.4075
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_8dc5354c-IMG_0141.JPG,1417.4,1162.52,2988.64,3088.44,0.8438,,0.334
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_8e544be4-side.jpg,1547.6,1027.99,1951.17,2123.35,0.7109,Stop Sign,0.9567
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_8edb630b-IMG_0208.JPG,1904.89,1135.41,3364.81,3009.02,0.7227,,0.4167
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_8ff667a0-IMG_0209.JPG,1709.24,1791.03,3746.38,2774.0,0.7422,,0.4783
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_9a101d8f-side.jpg,1301.91,413.55,1707.92,2199.1,0.7266,Stop Sign,0.9357
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_9f69e083-Front.jpg,947.91,1681.01,1424.63,2156.02,0.75,Stop Sign,0.9553
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_aa3bff09-side.jpg,1027.37,1028.99,1363.31,2037.83,0.6836,Stop Sign,0.9543
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_aafe9a1b-front.jpg,1102.8,786.64,2053.23,1710.41,0.793,Stop Sign,0.9818
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_aeadaf7d-Side.jpg,763.59,716.69,1430.11,2171.45,0.5898,No Entry (One Way),0.9633
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_b1123daa-front.jpg,612.09,1393.24,1779.63,2424.54,0.8516,Stop Sign,0.98
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_c01f5341-IMG_0123.jpg,1818.52,954.33,2815.62,2946.04,0.7422,No Entry (One Way),0.9798
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_c96fcc1a-IMG_0217.JPG,2024.01,1453.49,3257.86,2611.54,0.8086,No Entry (One Way),0.5087
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_d8e91d56-side.jpg,1789.54,871.3,2054.86,1772.24,0.6406,No Entry (One Way),0.9703
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_d8e91d56-side.jpg,3465.19,2359.25,3737.94,2618.28,0.4473,No Entry (One Way),0.9739
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_d8e91d56-side.jpg,3482.56,2182.3,3593.14,2437.48,0.3418,No Entry (One Way),0.9709
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_dd88f02c-IMG_0092.jpg,1683.56,1571.56,2735.21,3661.36,0.8164,No Entry (One Way),0.9811
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_edb6fab3-IMG_0189.JPG,2111.94,989.23,4549.93,3596.56,0.7773,,0.4703
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_f07ed5ce-Side.jpg,910.31,1127.79,1454.06,2351.14,0.7344,Stop Sign,0.9723
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_f3e45a2c-front.jpg,1012.98,1491.77,1486.27,2209.45,0.7773,Stop Sign,0.9623
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_f5d48b4c-front.jpg,1566.82,1012.84,2620.42,1986.07,0.5586,Stop Sign,0.985
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_f5d48b4c-front.jpg,3479.95,2549.54,3597.92,2667.39,0.4121,Directional Sign,0.9276
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_f5d48b4c-front.jpg,1564.1,1011.25,2623.92,3024.0,0.332,,0.4828
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp8_fc124a5b-Back.jpg,528.6,2321.24,1689.42,3011.32,0.3047,Auxiliary Sign,0.9526
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_00e70ac4-IMG_20251111_140913.jpg,0.0,2725.78,341.41,3484.18,0.8555,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_00e70ac4-IMG_20251111_140913.jpg,0.0,42.66,332.11,497.67,0.3105,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_04c8a7cf-IMG_20251211_162331.jpg,1407.78,2054.66,2044.69,2674.4,0.4473,Back-Unknown,0.9828
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_04c8a7cf-IMG_20251211_162331.jpg,1406.14,2052.36,2045.82,4080.0,0.3594,,0.3059
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_10b6edc4-IMG_20251112_160648.jpg,1378.18,3273.13,1539.32,3481.72,0.6523,Stop Sign,0.9564
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_10b6edc4-IMG_20251112_160648.jpg,1373.4,3271.99,1546.33,4080.0,0.3887,,0.2445
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_14b6af7e-IMG_20251106_142858.jpg,1090.32,991.72,4168.44,4035.15,0.5195,Blind-Spot Mirror (Convex Mirror),0.9911
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_29bd496f-IMG_20251106_153126.jpg,1068.23,2209.63,1679.22,3110.58,0.6367,,0.0042
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_29bd496f-IMG_20251106_153126.jpg,1259.08,2258.4,1471.84,2515.8,0.4102,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_3724af9d-IMG_20251106_144506.jpg,1055.75,1158.03,2386.23,2969.15,0.4102,Blind-Spot Mirror (Convex Mirror),0.9919
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_37f0c8a3-IMG_20251111_162207.jpg,1876.58,2664.18,1961.84,2791.95,0.4785,Directional Sign,0.906
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_48f9d230-IMG_20251112_155513.jpg,753.39,1845.82,1276.16,4080.0,0.4277,,0.2274
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_48f9d230-IMG_20251112_155513.jpg,752.38,1852.02,1279.45,2362.17,0.418,Back-Unknown,0.9935
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_48f9d230-IMG_20251112_155513.jpg,843.64,2652.17,931.3,2770.93,0.377,Other-Unknown,0.7502
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_4a9c7d83-IMG_20251111_143857.jpg,1392.36,1652.15,1739.02,2075.79,0.3496,Blind-Spot Mirror (Convex Mirror),0.9823
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_4a9c7d83-IMG_20251111_143857.jpg,1397.51,2066.92,1812.07,2437.56,0.3184,Other-Unknown,0.9443
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_4d9da647-IMG_20251112_160636.jpg,864.9,1441.66,1737.07,2285.71,0.75,Stop Sign,0.9862
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_58c8b920-IMG_20251106_153249.jpg,1382.03,1595.07,1819.02,1985.02,0.625,Back-Unknown,0.9845
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_5b67e831-IMG_20251106_155530.jpg,1000.52,1008.03,1888.11,1801.56,0.3125,Back-Unknown,0.9891
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_673470fc-IMG_20251111_160954.jpg,1366.48,2359.62,1412.44,2405.52,0.3086,Other-Unknown,0.8911
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_6adfb65e-WhatsApp_Image_2026-01-01_at_18.13.00_2.jpeg,331.2,1053.59,652.48,1357.8,0.5781,Stop Sign,0.9737
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_7b22f970-IMG_20251106_152243.jpg,1056.55,2056.18,1938.32,3058.38,0.6562,Other-Unknown,0.9739
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_7b22f970-IMG_20251106_152243.jpg,1103.16,823.48,1925.46,1792.45,0.5781,Stop Sign,0.9738
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_91c9ea8f-IMG_20251112_162243.jpg,1178.71,1650.27,1657.03,2085.88,0.707,No Entry (One Way),0.9664
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_91c9ea8f-IMG_20251112_162243.jpg,1221.4,2079.71,1649.57,2620.02,0.3281,Auxiliary Sign,0.9659
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_a133d565-WhatsApp_Image_2026-01-01_at_18.13.09.jpeg,602.62,1058.99,785.02,1244.98,0.6445,Stop Sign,0.8745
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_a745c9e2-IMG_20251106_152554.jpg,1385.88,2049.9,2168.91,2879.82,0.5391,Back-Unknown,0.969
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_a745c9e2-IMG_20251106_152554.jpg,1382.42,2046.75,2165.44,4096.0,0.3164,,0.4064
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_a7e54ad2-IMG_20251210_141604.jpg,1397.84,1125.65,1597.84,2218.85,0.6836,No Entry (One Way),0.9588
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_a7e54ad2-IMG_20251210_141604.jpg,1072.0,3567.11,1828.58,4079.97,0.3613,,0.0
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_cedb2f14-NE3_front.jpg,1483.02,1687.58,1914.2,2130.71,0.7188,No Entry (One Way),0.855
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_cedb2f14-NE3_front.jpg,1471.79,1679.4,1914.53,3940.8,0.457,,0.1695
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_d09450b2-IMG_20251112_155615.jpg,1413.36,1521.28,1999.2,2148.28,0.3711,Back-Unknown,0.9859
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_d4f4f35a-WhatsApp_Image_2026-01-01_at_18.12.59_1.jpeg,553.65,798.57,683.63,1353.49,0.5781,No Entry (One Way),0.9591
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_d4f4f35a-WhatsApp_Image_2026-01-01_at_18.12.59_1.jpeg,552.51,797.48,868.19,2045.1,0.375,,0.182
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_dbd6345f-IMG_20251106_155229.jpg,1092.04,998.36,2102.71,2090.47,0.334,Back-Unknown,0.9826
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_df847542-IMG_20251210_141936.jpg,984.1,970.36,1889.69,2252.84,0.6211,Stop Sign,0.9642
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_df847542-IMG_20251210_141936.jpg,844.5,2279.93,2130.03,3025.87,0.3086,Tourist Sign,0.9815
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_dfbf929f-IMG_20251106_154024.jpg,725.23,1138.31,1839.21,2237.34,0.7617,No Entry (One Way),0.929
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e2932f32-20251122_134050.jpg,1284.09,1560.2,1610.72,1879.81,0.332,Back-Unknown,0.9721
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e2932f32-20251122_134050.jpg,464.27,2073.97,520.96,2129.52,0.3184,Other-Unknown,0.8853
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e2932f32-20251122_134050.jpg,779.09,2088.36,823.21,2130.82,0.3066,Other-Unknown,0.7662
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e65623ae-20251122_135723.jpg,1400.79,1855.01,1617.62,2159.73,0.6055,Stop Sign,0.9647
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e65623ae-20251122_135723.jpg,1835.95,2026.37,2092.39,2344.98,0.4629,Auxiliary Sign,0.9533
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e65623ae-20251122_135723.jpg,1396.16,1846.25,1621.03,3525.41,0.3984,,0.1814
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e690fe37-IMG_20251111_162300.jpg,2399.22,2762.06,2501.08,2874.39,0.5469,Directional Sign,0.9321
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e8541d39-IMG_20251106_145533.jpg,1027.28,1759.88,1989.7,2725.51,0.7617,Other-Unknown,0.9816
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e8541d39-IMG_20251106_145533.jpg,2702.92,3186.24,3000.0,3518.07,0.5742,Directional Sign,0.9797
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_e8541d39-IMG_20251106_145533.jpg,1021.4,857.87,1967.96,1760.74,0.5078,Stop Sign,0.9862
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_f109e3eb-IMG_20251111_144036.jpg,1169.98,1328.04,1945.17,2225.59,0.3203,Blind-Spot Mirror (Convex Mirror),0.9779
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_f36aabf5-WhatsApp_Image_2026-01-03_at_18.45.21_2.jpeg,429.62,532.98,709.95,988.78,0.7266,Other-Unknown,0.9887
+SAM 3,sens-mtsd-roundabout-01,roundabout ahead sign,grp9_f456c0fd-IMG_20251106_153809.jpg,1046.49,1147.81,2205.52,2224.42,0.7305,No Entry (One Way),0.9879

@@ -1,0 +1,125 @@
+{
+  "amendment_id": "cosmos-bounded-model-specific-v2",
+  "date": "2026-08-20",
+  "reason": "The original full-resolution Cosmos worker had unbounded visual-token memory and impractical runtime. The run was stopped before further Cosmos combinations were accepted.",
+  "stopped_processes": {
+    "coordinator_pid": 31160,
+    "worker_pid": 22560,
+    "completed_combinations_at_stop": 70,
+    "failed_combinations_at_stop": 0
+  },
+  "preserved_results": {
+    "total_compatible_combinations": 69,
+    "MDWD_targeted": 30,
+    "MTSD_targeted": 39,
+    "MTSD_breakdown": {
+      "SAM_3": 13,
+      "SAM_3_1": 13,
+      "LocateAnything_3B": 13
+    }
+  },
+  "quarantined_results": {
+    "reason": "Cosmos outputs were generated under the retired full-resolution execution policy and cannot be mixed with the amended protocol.",
+    "path": "Results/PromptDetect/Discarded/20260820-cosmos-full-resolution",
+    "combinations": [
+      "cosmos_reason2_2b__mtsd-p1",
+      "cosmos_reason2_2b__mtsd-p2"
+    ],
+    "old_visualizations_archived": true
+  },
+  "memory_observation": {
+    "before_worker_exit": {
+      "gpu_memory_gb": 23.7,
+      "worker_private_memory_gb": 98.0
+    },
+    "after_worker_exit": {
+      "gpu_memory_gb": 0.7,
+      "free_system_ram_gb": 108.2
+    },
+    "conclusion": "Process exit reliably releases retained CUDA and host allocations; bounded subprocesses are the cleanup boundary."
+  },
+  "selected_execution_policy": {
+    "revision": "bounded-model-specific-2b2560-8b1536-chunk8-v2",
+    "worker_chunk_size_images": 8,
+    "maximum_detections_per_image": 18,
+    "maximum_detections_provenance": "Highest total GT-box count in any MTSD test image (grp8_06980edd-front.jpg)",
+    "maximum_input_side_by_model": {
+      "Cosmos Reason2 2B": 2560,
+      "Cosmos Reason2 8B": 1536
+    },
+    "box_coordinate_space": "Predictions are decoded on the model's normalized 0..1000 grid and mapped back to original image dimensions before scoring."
+  },
+  "verification": {
+    "Cosmos_Reason2_2B_primary_slice_8_images": {
+      "indices": "338:346",
+      "target_gt_boxes": 9,
+      "full_resolution": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 7,
+        "f1": 0.2857,
+        "ap50": 0.0889,
+        "map50_95": 0.0289,
+        "mean_inference_ms": 55193.6
+      },
+      "bounded_2560": {
+        "tp": 4,
+        "fp": 4,
+        "fn": 5,
+        "f1": 0.4706,
+        "ap50": 0.2222,
+        "map50_95": 0.0919,
+        "mean_inference_ms": 2792.0
+      }
+    },
+    "Cosmos_Reason2_2B_independent_slice_32_images": {
+      "indices": "674:706",
+      "target_gt_boxes": 16,
+      "full_resolution": {
+        "tp": 5,
+        "fp": 26,
+        "fn": 11,
+        "f1": 0.2128,
+        "ap50": 0.224,
+        "map50_95": 0.2142,
+        "mean_inference_ms": 92788.5
+      },
+      "bounded_2560": {
+        "tp": 6,
+        "fp": 26,
+        "fn": 10,
+        "f1": 0.25,
+        "ap50": 0.244,
+        "map50_95": 0.2209,
+        "mean_inference_ms": 2635.4
+      }
+    },
+    "Cosmos_Reason2_8B_slice_8_images": {
+      "indices": "338:346",
+      "target_gt_boxes": 9,
+      "bounded_1536": {
+        "tp": 4,
+        "fp": 3,
+        "fn": 5,
+        "f1": 0.5,
+        "ap50": 0.254,
+        "map50_95": 0.2138,
+        "mean_inference_ms": 2370.1
+      }
+    },
+    "rejected_candidate": {
+      "Cosmos_Reason2_2B_1024": "Rejected because TP fell from 2 to 0 on the primary validation slice.",
+      "Cosmos_Reason2_8B_2560": "Rejected because visual context saturated the 24 GB GPU and restored impractical per-image latency."
+    },
+    "automated_tests": "43 passed",
+    "python_compilation": "passed"
+  },
+  "wandb": {
+    "entity": "mark-bugeja-university-of-malta",
+    "project": "MSc-MDWD-MDWD-PromptDetect",
+    "deleted_incomplete_run_id": "mtsd_targeted_v2_20260818_134723_optimized_v2",
+    "delete_verified": true,
+    "replacement_run_id": "mtsd_targeted_v2_20260818_134723_optimized_v2_bounded_v2",
+    "resume_behavior": "W&B tombstones deleted IDs, so the corrected coordinator publishes to the fresh versioned replacement ID while retaining the same project/display name. Only compatible preserved combinations plus newly recomputed Cosmos results are included."
+  }
+}

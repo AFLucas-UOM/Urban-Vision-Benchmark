@@ -1,0 +1,26 @@
+model,target_class,best_prompt_id,best_prompt,recall,f1
+Cosmos Reason2 2B,Mixed Waste,mdwd-p6,garbage,0.302,0.4483
+Cosmos Reason2 2B,Orange CMD,mdwd-p6,garbage,0.302,0.4483
+Cosmos Reason2 2B,Organic Waste,mdwd-p6,garbage,0.302,0.4483
+Cosmos Reason2 2B,Other Waste,mdwd-p6,garbage,0.302,0.4483
+Cosmos Reason2 2B,Recyclable Material,mdwd-p6,garbage,0.302,0.4483
+Cosmos Reason2 8B,Mixed Waste,mdwd-p5,domestic waste,0.3969,0.5341
+Cosmos Reason2 8B,Orange CMD,mdwd-p5,domestic waste,0.3969,0.5341
+Cosmos Reason2 8B,Organic Waste,mdwd-p5,domestic waste,0.3969,0.5341
+Cosmos Reason2 8B,Other Waste,mdwd-p5,domestic waste,0.3969,0.5341
+Cosmos Reason2 8B,Recyclable Material,mdwd-p5,domestic waste,0.3969,0.5341
+LocateAnything 3B,Mixed Waste,mdwd-p1,black garbage bag,0.7305,0.5922
+LocateAnything 3B,Orange CMD,mdwd-p5,domestic waste,0.6682,0.5328
+LocateAnything 3B,Organic Waste,mdwd-p5,domestic waste,0.6682,0.5328
+LocateAnything 3B,Other Waste,mdwd-p5,domestic waste,0.6682,0.5328
+LocateAnything 3B,Recyclable Material,mdwd-p5,domestic waste,0.6682,0.5328
+SAM 3,Mixed Waste,mdwd-p1,black garbage bag,0.9281,0.8516
+SAM 3,Orange CMD,mdwd-p4,orange garbage bag,0.8205,0.8312
+SAM 3,Organic Waste,mdwd-p6,garbage,0.8924,0.6206
+SAM 3,Other Waste,mdwd-p6,garbage,0.8924,0.6206
+SAM 3,Recyclable Material,mdwd-p6,garbage,0.8924,0.6206
+SAM 3.1,Mixed Waste,mdwd-p1,black garbage bag,0.9281,0.8412
+SAM 3.1,Orange CMD,mdwd-p4,orange garbage bag,0.8205,0.8312
+SAM 3.1,Organic Waste,mdwd-p6,garbage,0.8978,0.6162
+SAM 3.1,Other Waste,mdwd-p6,garbage,0.8978,0.6162
+SAM 3.1,Recyclable Material,mdwd-p6,garbage,0.8978,0.6162

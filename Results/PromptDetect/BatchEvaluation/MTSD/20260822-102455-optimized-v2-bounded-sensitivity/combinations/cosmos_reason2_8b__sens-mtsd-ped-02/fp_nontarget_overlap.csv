@@ -1,0 +1,352 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_1495.jpg,2146.28,4323.98,2274.8,4746.67,1.0,Auxiliary Sign,0.8448
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_1527.jpg,1512.25,2581.82,2347.63,4792.37,1.0,Back-Unknown,0.9937
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_1593.jpg,454.1,1765.01,2583.25,4244.02,1.0,Back-Unknown,0.6587
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_1597.jpg,1135.26,2290.51,3054.49,4226.88,1.0,Back-Unknown,0.6483
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_1645.jpg,1032.44,2359.06,2741.76,4244.02,1.0,Blind-Spot Mirror (Convex Mirror),0.9771
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251123_141219.jpg,867.36,1160.62,1114.88,1946.7,1.0,No Entry (One Way),0.9018
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251123_141844.jpg,418.08,1248.48,759.2,2182.53,1.0,,0.3821
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251123_141844.jpg,1035.84,1322.46,1295.84,2034.56,1.0,,0.2167
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251123_164433.jpg,1447.68,3833.3,1505.92,4101.49,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251123_165832.jpg,634.4,1840.35,1212.64,2880.75,1.0,Blind-Spot Mirror (Convex Mirror),0.9331
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_113833.jpg,1336.72,2270.38,1413.1,2432.22,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_113844.jpg,868.0,906.3,2152.64,2224.14,1.0,Back-Unknown,0.975
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_114450.jpg,2544.98,688.98,3468.53,2094.67,1.0,Back-Unknown,0.968
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_121131.jpg,844.48,2261.14,1383.2,2913.12,1.0,Blind-Spot Mirror (Convex Mirror),0.9661
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_121142.jpg,39.52,3676.08,309.92,4009.01,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_121957.jpg,1791.55,619.62,2430.4,2150.16,1.0,Back-Unknown,0.9804
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_122225.jpg,3222.02,2395.23,3399.09,2654.18,1.0,Auxiliary Sign,0.9105
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_122819+1.jpg,1274.22,1003.41,1781.14,2450.72,1.0,No Entry (One Way),0.9441
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_122826.jpg,295.12,2353.62,2128.34,4577.76,1.0,Back-Unknown,0.9715
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_123112.jpg,1177.28,2594.06,1268.8,2931.62,1.0,,0.0076
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_124400.jpg,557.44,1558.29,1516.32,3306.16,1.0,No Through Road (T-Junction),0.9667
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251125_153559.jpg,1614.48,712.1,1940.85,1895.84,1.0,No Entry (One Way),0.7944
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20251126_123524.jpg,1853.28,3639.09,2077.92,4286.45,1.0,Auxiliary Sign,0.9687
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260106_160010_253.jpg,998.4,738.48,2073.6,2015.52,1.0,Roundabout Ahead,0.7168
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260106_160549_637.jpg,362.5,2709.12,448.51,2811.12,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260106_160608_331.jpg,983.04,938.4,2347.01,2288.88,1.0,No Entry (One Way),0.8064
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260106_161746_914.jpg,992.26,538.56,2562.05,2125.68,1.0,No Entry (One Way),0.9838
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260110_172451_501.jpg,2235.84,1198.08,2949.84,2211.84,1.0,,0.2149
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260110_173056_747.jpg,1195.44,1152.0,2394.96,1904.64,1.0,,0.4267
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260110_173308_202.jpg,3712.8,783.36,4075.92,1259.52,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260113_083600_409.jpg,738.48,829.44,2260.32,2629.63,1.0,,0.3178
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260113_083728_516.jpg,697.68,614.4,2476.56,2657.28,1.0,,0.3171
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260113_083759_046.jpg,1456.56,1019.9,2386.8,2107.39,1.0,,0.4739
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260113_083821_567.jpg,1032.24,946.18,2986.56,2377.73,1.0,Back-Unknown,0.5369
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_IMG_20260113_084947_261.jpg,1448.4,866.3,2374.56,1966.08,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-16 at 17.52.25 (1).jpeg,110.16,416.16,622.71,1693.2,1.0,Back-Unknown,0.5492
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-16 at 17.52.27.jpeg,148.41,1727.88,186.66,1782.96,1.0,Back-Unknown,0.6506
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 12.38.32 (2).jpeg,296.82,626.28,1072.53,1272.96,1.0,Other-Unknown,0.9789
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 12.38.34.jpeg,252.45,636.48,1277.55,1566.72,1.0,No Entry (One Way),0.98
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 12.38.37 (2).jpeg,1164.33,1811.52,1311.21,2037.96,1.0,No Through Road (T-Junction),0.9239
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 15.01.27 - Edited.jpg,543.15,459.0,1196.46,993.48,1.0,Other-Unknown,0.9714
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 15.01.44.jpeg,784.89,540.6,911.88,2037.96,1.0,,0.4564
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 15.01.45 (3).jpeg,229.5,526.32,1233.18,1538.16,1.0,Back-Unknown,0.9836
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-17 at 15.01.54.jpeg,648.72,1189.32,980.73,1956.36,1.0,Back-Unknown,0.9795
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp10_WhatsApp Image 2025-11-20 at 16.03.01 (1).jpeg,625.77,671.16,1083.24,1115.88,1.0,Other-Unknown,0.9767
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,1101.0,1832.0,1149.0,1920.0,1.0,,0.4865
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,1674.0,1840.0,1710.0,1912.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,1137.0,1884.0,1188.0,1944.0,1.0,Other-Unknown,0.6043
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_00ffbbb0-IMG_20251125_195040.jpg,2145.0,1976.0,2223.0,2072.0,1.0,Directional Sign,0.7269
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_08da688f-IMG_6393.jpeg,0.0,703.08,3490.11,2788.76,1.0,Other-Unknown,0.5603
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_12031735-Pre_2026_6669.jpg,400.86,1556.0,1373.72,2388.0,1.0,Back-Unknown,0.9643
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_243ba713-IMG_6313.jpg,3066.34,4507.78,3235.68,5031.94,1.0,Back-Unknown,0.8842
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_387a3e09-IMG_6403.jpeg,1406.15,2478.24,2688.35,3202.79,1.0,,0.0038
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_3a5a4d41-Pre_2026_6633.jpg,815.22,1300.0,900.8,1408.0,1.0,,0.0123
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_4029b5b7-Pre_2026_6760.jpg,2168.0,662.09,2692.0,1231.84,1.0,,0.0102
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_41188dd2-IMG_1440.jpg,622.94,0.0,2461.54,1314.43,1.0,Back-Unknown,0.7947
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_4a8ce21e-IMG_20251125_194252.jpg,123.0,1872.0,354.0,2112.0,1.0,Other-Unknown,0.8521
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_5c71ae7e-IMG_6256.jpeg,1971.65,3136.9,2107.73,3294.14,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_5cef4344-Pre_2026_6674.jpg,63.06,940.0,1709.27,2504.0,1.0,Back-Unknown,0.97
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_6d1c0888-IMG_20251125_191657.jpg,1503.0,1004.0,1620.0,1640.0,1.0,Directional Sign,0.9483
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_8da30211-IMG_1389.jpg,979.78,330.62,2150.06,1576.51,1.0,Back-Unknown,0.9778
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_92113811-IMG_1371.jpg,722.74,0.0,2388.96,1576.51,1.0,Back-Unknown,0.9853
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_93c9acc6-Pre_2026_6752.jpg,2348.0,526.97,3280.0,1177.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_aff5c880-IMG_6324.jpeg,2419.72,3462.58,2480.94,3591.46,1.0,,0.4991
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_b40e574e-IMG_1307.jpg,1215.65,270.14,1989.79,1068.48,1.0,Other-Unknown,0.9849
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_badbe466-IMG_20251125_194752.jpg,780.0,1368.0,1404.0,2092.0,1.0,Back-Unknown,0.9483
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_bdad925f-IMG_20251125_194953.jpg,1086.0,1284.0,1860.0,3040.0,1.0,,0.4403
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_cb23d6ca-IMG_20251125_190938.jpg,993.0,2144.0,1167.0,2340.0,1.0,Other-Unknown,0.8825
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_cf483702-IMG_20251125_195623.jpg,2583.0,2524.0,2793.0,2644.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_d9b50eb1-Pre_2026_6691.jpg,662.09,1668.0,1292.65,2228.0,1.0,Other-Unknown,0.9506
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_e27435a0-IMG_20251125_194217.jpg,825.0,996.0,1638.0,3996.0,1.0,,0.2908
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp11_f71868de-IMG_20251125_191832.jpg,303.0,356.0,1002.0,1328.0,1.0,Back-Unknown,0.9703
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_02ac92f5-IMG20251123165127.jpg,1431.55,1376.26,2012.16,2871.3,1.0,Blind-Spot Mirror (Convex Mirror),0.9824
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_0dd8c85f-RV_001_114.jpeg,1923.26,3076.42,2047.25,3374.78,1.0,Other-Unknown,0.5668
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_1e8d03ef-IMG_4745.jpeg,1049.33,0.0,2080.51,753.98,1.0,Back-Unknown,0.9782
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_25ff97a8-IMG20260105132835.jpg,470.02,860.16,2743.3,2805.76,1.0,No Through Road (T-Junction),0.9917
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_2f062204-IMG_5549.jpeg,2497.82,3536.06,2543.18,3701.38,1.0,,0.2646
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_37e4fc9d-RV_001_33.jpeg,1006.99,1891.01,2119.82,3003.84,1.0,Back-Unknown,0.9788
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_39fe0c0b-IMG_4673.jpeg,940.46,0.0,2543.18,971.71,1.0,Back-Unknown,0.9844
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_46552970-IMG_5766.jpeg,1043.28,1628.93,1953.5,2628.86,1.0,No Through Road (T-Junction),0.9819
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_52634fe4-IMG_20260108_180144.jpg,1287.17,868.35,1784.83,3252.22,1.0,Roundabout Ahead,0.9739
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_598f8dcc-IMG_5777.jpeg,923.54,1434.3,978.7,1518.3,1.0,No Through Road (T-Junction),0.6316
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_5eb024cb-IMG_20260108_180228.jpg,549.89,933.89,2568.19,2924.54,1.0,Back-Unknown,0.9867
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_69e094db-IMG20260103164903.jpg,408.58,655.36,2383.87,2740.22,1.0,No Through Road (T-Junction),0.9866
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_7052b6a6-IMG_5704.jpeg,2745.79,3487.68,2812.32,3721.54,1.0,,0.3571
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_7fcdb608-IMG_5767.jpeg,1291.25,1346.69,1714.61,2681.28,1.0,No Through Road (T-Junction),0.9681
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_831c366a-IMG_5656.jpeg,394.0,720.3,1246.62,2097.9,1.0,Blind-Spot Mirror (Convex Mirror),0.5637
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_9f52d58a-IMG_5554.jpeg,0.0,431.42,704.59,3721.54,1.0,Back-Unknown,0.6492
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_a7df285e-RV_001_147.jpeg,1158.19,1939.39,1953.5,2669.18,1.0,Back-Unknown,0.965
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_cb282f25-RV_001_112.jpeg,1037.23,2032.13,2065.39,2975.62,1.0,No Through Road (T-Junction),0.9765
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_d64c06cd-IMG20260103165218.jpg,675.84,880.64,2568.19,2871.3,1.0,No Through Road (T-Junction),0.9897
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_db486299-IMG_5815.jpeg,985.82,1467.65,2180.3,2515.97,1.0,No Through Road (T-Junction),0.9816
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_ec712362-IMG_5803.jpeg,466.5,1516.2,505.9,1589.7,1.0,,0.4378
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_f468f4a5-IMG_5772.jpeg,834.62,1338.62,2004.91,2882.88,1.0,No Through Road (T-Junction),0.974
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp1_fd97d901-IMG20260105125535.jpg,1259.52,1224.7,1803.26,2670.59,1.0,No Through Road (T-Junction),0.9777
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_0cd46f17-MP_0097.jpg,1090.91,1181.38,2041.2,2382.91,1.0,Back-Unknown,0.9686
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_1a942391-IMG_20251224_114123.jpg,1551.0,1556.0,1623.0,1812.0,1.0,Auxiliary Sign,0.7654
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_1cd6f44d-20251223_152650.jpg,165.24,2313.36,1389.24,3255.84,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_1d09be1b-MP_0034.jpg,989.18,1212.42,1812.48,1646.59,1.0,Street Sign,0.9812
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_21220c6f-IMG_20251223_114958.jpg,1296.0,1096.0,1899.0,2356.0,1.0,,0.3935
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_32305793-MP_0024.jpg,2798.59,2609.15,2841.6,2678.78,1.0,Back-Unknown,0.6858
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_331688ad-20251223_152821.jpg,1600.38,1052.64,1851.3,2007.36,1.0,No Entry (One Way),0.9636
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_33c8250b-MP_0150.jpeg,384.0,771.12,1409.28,1038.96,1.0,,0.0979
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_3855fec5-20251223_150427.jpg,1104.66,2150.16,2108.34,4059.6,1.0,,0.0085
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_3d2ae4e7-IMG_20251223_114602.jpg,1395.0,1304.0,1629.0,1548.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_421f593e-20251224_132616.jpg,835.38,938.4,2331.72,2709.12,1.0,Back-Unknown,0.6879
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_4acb7340-20251223_155105.jpg,45.9,2766.24,91.8,2888.64,1.0,No Through Road (T-Junction),0.6938
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_5e8f002c-IMG_20251223_132013.jpg,1248.0,1196.0,1788.0,1740.0,1.0,No Through Road (T-Junction),0.9722
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_76c73962-MP_0139.jpg,1104.77,1374.41,2794.18,1741.82,1.0,,0.0805
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_85bab424-IMG_20251223_120632.jpg,1338.0,1196.0,1803.0,1708.0,1.0,Back-Unknown,0.9693
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_86560763-IMG_20251223_113000.jpg,1455.0,2108.0,1524.0,2240.0,1.0,,0.3764
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_9288cb02-IMG_20251223_114539.jpg,1350.0,1476.0,1899.0,2032.0,1.0,Back-Unknown,0.9307
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_983dc626-30.side.jpg,1297.3,1072.51,1388.02,1608.77,1.0,No Entry (One Way),0.787
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_b7da3d82-20251230_123417.jpg,1756.44,1607.52,2279.7,2170.56,1.0,Back-Unknown,0.8929
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_b9e760b0-IMG_20251223_125447.jpg,1446.0,2284.0,1524.0,2372.0,1.0,No Entry (One Way),0.8001
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_bf4582b0-IMG_20251223_113056.jpg,681.0,1492.0,1458.0,2340.0,1.0,Back-Unknown,0.9412
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_bf551d52-MP_0136.jpg,0.0,1880.17,1221.7,2249.86,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_ccff3003-MP_0047.jpg,2706.43,1884.16,2942.98,2117.63,1.0,Back-Unknown,0.8677
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_d201b393-MP_0004.jpg,709.63,1789.95,949.25,1990.66,1.0,Back-Unknown,0.8725
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_d3fe8c38-MP_0046.jpg,955.39,348.16,1861.63,1298.43,1.0,Back-Unknown,0.9792
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_d71e8065-MP_0021.jpg,811.01,237.57,1824.77,1576.96,1.0,Back-Unknown,0.7388
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_e074406f-IMG_20251223_115520.jpg,804.0,3120.0,867.0,3192.0,1.0,Other-Unknown,0.6581
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_e44be02a-MP_0116.jpg,395.14,839.16,2068.42,1263.28,1.0,,0.0676
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_e46067a0-MP_0166.jpg,1385.47,1249.28,1539.07,1609.73,1.0,Blind-Spot Mirror (Convex Mirror),0.65
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_ee20554d-MP_0115.jpg,749.95,315.25,1737.79,1603.48,1.0,,0.1357
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp2_f69ebb76-IMG_20251227_110428.jpg,1044.0,1452.0,1689.0,2016.0,1.0,Back-Unknown,0.8509
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_09e3faa9-IMG_20251203_121602.jpg,1202.58,877.2,2236.86,1750.32,1.0,No Entry (One Way),0.9944
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_13fcb840-IMG_20251203_093318.jpg,1138.32,322.32,2016.54,1387.2,1.0,Back-Unknown,0.9751
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_17e38feb-20251129_115024.jpg,1820.7,3235.44,1878.84,3308.88,1.0,,0.385
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_19cc8708-IMG_20251203_095416.jpg,1156.68,1073.04,1826.82,1664.64,1.0,No Entry (One Way),0.9644
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_25e08496-IMG_9116.jpg,2934.54,3364.37,4279.72,5386.42,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_3cee3d85-IMG_4285.jpeg,1378.94,2923.2,1493.86,3052.22,1.0,Stop Sign,0.7672
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_458db4bf-IMG_9314.jpg,1015.31,2039.18,1657.91,3055.92,1.0,Street Sign,0.9594
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_4d14c289-20251129_122448.jpg,1533.06,3822.96,1866.6,4075.92,1.0,Directional Sign,0.8919
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_4daf8454-IMG_4356.jpeg,1291.25,2995.78,1363.82,3088.51,1.0,,0.2225
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_5a350ee3-IMG_9144.jpg,1765.01,3238.7,1880.68,3867.02,1.0,Directional Sign,0.9223
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_5a5ec99c-IMG_4369.jpeg,1124.93,1346.69,2110.75,2261.95,1.0,No Entry (One Way),0.9572
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_62bcab50-IMG_20251203_121207.jpg,1049.58,501.84,2224.62,1701.36,1.0,Back-Unknown,0.9829
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_64c9c943-IMG_20251203_121935.jpg,1303.56,505.92,1897.2,1256.64,1.0,Back-Unknown,0.9588
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_6a5c994c-IMG_9361.jpg,1829.27,1148.11,2510.42,2747.47,1.0,Other-Unknown,0.9372
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_76fb906e-20251129_122552.jpg,547.74,558.96,1976.76,1876.8,1.0,Back-Unknown,0.9847
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_81a84d18-IMG_9109.jpg,1610.78,1370.88,2874.56,2610.38,1.0,Back-Unknown,0.9752
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_874592da-20251129_122245.jpg,1015.92,1970.64,1878.84,2823.36,1.0,Back-Unknown,0.9765
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_8d66655f-IMG_4305.jpeg,1427.33,1318.46,1953.5,1882.94,1.0,Blind-Spot Mirror (Convex Mirror),0.9502
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_915b758c-IMG_4287.jpeg,1366.85,1927.3,1835.57,2576.45,1.0,Back-Unknown,0.9371
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_9ff54512-IMG_20251203_093925.jpg,2793.78,2125.68,2833.56,2231.76,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_a5739f60-IMG_20251203_120925.jpg,2028.78,2786.64,2074.68,2839.68,1.0,,0.144
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_a9724b83-20251129_122439.jpg,1178.1,1003.68,1465.74,1982.88,1.0,Other-Unknown,0.9522
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_b05e6955-IMG_4433.jpeg,1427.33,816.48,2806.27,2119.82,1.0,Blind-Spot Mirror (Convex Mirror),0.6569
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_ca162d3e-20251129_114653.jpg,933.3,1391.28,1863.54,2346.0,1.0,No Entry (One Way),0.8948
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_cb90b89e-IMG_9211.jpg,1306.62,1576.51,2574.68,2673.22,1.0,Blind-Spot Mirror (Convex Mirror),0.9776
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_def908c3-IMG_4315.jpeg,1242.86,1399.1,1926.29,2032.13,1.0,Back-Unknown,0.9565
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_e0a623d6-IMG_9293.jpg,2026.33,1450.85,2523.28,2827.44,1.0,No Through Road (T-Junction),0.9056
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_e337de9a-IMG_4362.jpeg,970.7,669.31,2147.04,1641.02,1.0,Other-Unknown,0.965
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_eb512649-IMG_4353.jpeg,1248.91,2032.13,1886.98,2653.06,1.0,Back-Unknown,0.9639
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_ecbe9be3-IMG_20251204_100152.jpg,1392.3,816.0,2640.78,4075.92,1.0,,0.4743
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp3_faf213d1-IMG_20251203_120236.jpg,716.04,3137.52,752.76,3182.4,1.0,,0.1868
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,306.0,1104.0,456.0,1274.0,1.0,No Through Road (T-Junction),0.9223
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251130_114937.jpg,993.0,2016.0,1839.0,3464.0,1.0,Back-Unknown,0.978
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251130_115523.jpg,2235.0,2868.0,2346.0,3004.0,1.0,Back-Unknown,0.7131
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251130_120206.jpg,1032.0,1528.0,2205.0,2820.0,1.0,Back-Unknown,0.9835
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251219_134240.jpg,933.0,1992.0,2079.0,3196.0,1.0,Back-Unknown,0.9845
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251229_142249.jpg,708.0,2032.0,1857.0,3120.0,1.0,Back-Unknown,0.9912
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251229_144322.jpg,912.0,1676.0,2217.0,2896.0,1.0,Back-Unknown,0.9825
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251229_145129.jpg,216.0,1448.0,2187.0,3736.0,1.0,Back-Unknown,0.6592
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251229_150136.jpg,0.0,1380.0,462.0,2656.0,1.0,Directional Sign,0.9502
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251229_152158.jpg,450.0,1316.0,2508.0,3300.0,1.0,Back-Unknown,0.9859
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251231_160526.jpg,990.0,1508.0,2016.0,2444.0,1.0,No Through Road (T-Junction),0.9755
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251231_160545.jpg,1227.0,1420.0,1572.0,2464.0,1.0,No Through Road (T-Junction),0.9282
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_20251231_160556.jpg,1848.0,1932.0,2043.0,2532.0,1.0,No Through Road (T-Junction),0.9131
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_25671e9a-WhatsApp_Image_2026-01-14_at_11.11.43_3.jpeg,1344.0,854.0,1498.5,1082.0,1.0,Back-Unknown,0.8964
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_27645844-20260107_151619.jpg,559.12,1366.98,593.71,1466.18,1.0,Directional Sign,0.8081
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_27f66596-20260109_125516.jpg,1246.93,2208.28,1414.05,2249.42,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_420a4dea-20251222_131729.jpg,288.0,0.0,993.0,1708.0,1.0,Back-Unknown,0.9835
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_5996dfea-20251116_163330.jpg,1030.9,1570.8,1168.66,2162.4,1.0,No Entry (One Way),0.7994
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_5e204826-WhatsApp_Image_2026-01-14_at_11.11.36.jpeg,585.0,790.0,774.0,982.0,1.0,No Entry (One Way),0.9437
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_63c4320e-WhatsApp_Image_2026-01-14_at_11.10.32_3.jpeg,585.0,686.0,828.0,920.0,1.0,No Through Road (T-Junction),0.9604
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_66eacd8c-20260109_124456.jpg,840.0,852.0,1905.0,2676.0,1.0,No Through Road (T-Junction),0.9813
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,952.5,1042.0,972.0,1092.0,1.0,Other-Unknown,0.5236
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_7b6a28a6-WhatsApp_Image_2026-01-14_at_11.10.25_4.jpeg,570.0,680.0,883.5,986.0,1.0,No Through Road (T-Junction),0.942
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_83705e8e-WhatsApp_Image_2026-01-14_at_11.10.28_3.jpeg,924.0,1260.0,957.0,1308.0,1.0,Other-Unknown,0.5286
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_86e58e1e-WhatsApp_Image_2026-01-14_at_11.10.21.jpeg,642.0,756.0,810.0,1208.0,1.0,No Entry (One Way),0.9142
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,580.5,730.0,816.0,954.0,1.0,No Through Road (T-Junction),0.9151
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_94287dbf-20260113_132935.jpg,939.0,1344.0,1782.0,2844.0,1.0,No Through Road (T-Junction),0.9778
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_9a8f607e-20251222_141532.jpg,375.0,680.0,2130.0,2316.0,1.0,Back-Unknown,0.9854
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_9c4db066-WhatsApp_Image_2026-01-14_at_10.34.44_2.jpeg,132.66,875.2,144.2,912.0,1.0,,0.4773
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_abe76f20-20260109_124535.jpg,747.0,288.0,2103.0,2640.0,1.0,No Through Road (T-Junction),0.9819
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_bdef9845-20260109_130552.jpg,675.0,2424.0,1800.0,3664.0,1.0,Back-Unknown,0.9791
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_c3a633b2-20251116_162903.jpg,297.94,1179.31,488.28,1797.2,1.0,Back-Unknown,0.9046
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_cdcb1057-WhatsApp_Image_2026-01-14_at_11.11.40_1.jpeg,236.0,750.0,262.0,775.5,1.0,Other-Unknown,0.504
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_d1c1ed24-20260113_130204.jpg,1056.0,1584.0,1836.0,2364.0,1.0,No Through Road (T-Junction),0.9601
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_d3d2c193-20260109_124357.jpg,385.84,589.52,1943.83,2533.95,1.0,Back-Unknown,0.9783
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_d78448ea-20251117_105829.jpg,438.54,854.07,2132.98,2665.99,1.0,Back-Unknown,0.9797
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_d8a007d5-20260109_123932.jpg,708.0,132.0,1716.0,2316.0,1.0,No Through Road (T-Junction),0.9863
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_db6dffba-WhatsApp_Image_2026-01-14_at_11.12.35_1.jpeg,1209.0,1182.0,1266.0,1340.0,1.0,Directional Sign,0.8979
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_ddd42f22-20251116_162542.jpg,902.33,2109.36,1425.82,2550.0,1.0,Back-Unknown,0.94
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_df0bccf2-WhatsApp_Image_2026-01-14_at_11.12.00.jpeg,696.0,828.0,716.0,846.0,1.0,,0.4965
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_e47a8d80-20251116_163051.jpg,987.28,1240.32,1368.42,2945.76,1.0,No Entry (One Way),0.945
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_e63ad5ed-WhatsApp_Image_2026-01-14_at_11.10.19_1.jpeg,534.0,760.0,906.0,1128.0,1.0,No Through Road (T-Junction),0.9775
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_f171227c-20251222_132239.jpg,0.0,0.0,1446.0,1172.0,1.0,Other-Unknown,0.9914
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_f1d0d896-WhatsApp_Image_2026-01-14_at_11.12.20.jpeg,543.0,840.0,828.0,1234.0,1.0,No Through Road (T-Junction),0.9522
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,571.5,560.0,789.0,1142.0,1.0,No Through Road (T-Junction),0.9559
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp4_fe8b41fc-WhatsApp_Image_2026-01-14_at_11.10.21_3.jpeg,642.0,1084.0,1093.5,1568.0,1.0,Back-Unknown,0.9809
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_13ab0dbb-BenTaliana_59_Front.jpeg,1138.54,1612.8,3538.08,3838.46,1.0,No Through Road (T-Junction),0.9656
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_2da1aa64-AlisonAttard_27_Front.jpeg,1967.62,1315.44,2475.65,1811.38,1.0,,0.2825
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_30980873-BenTaliana_12_Front.jpeg,1174.82,2177.28,3420.14,4217.47,1.0,No Entry (One Way),0.9487
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_32b2eadc-AlisonAttard_7_Side.jpeg,3278.02,2573.42,3519.94,2848.61,1.0,,0.0093
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2774.02,1143.07,4027.97,1642.03,1.0,,0.0592
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,1374.91,1073.52,2161.15,1391.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1228.8,1611.6,1941.5,2309.28,1.0,No Through Road (T-Junction),0.9717
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_48cba720-BenTaliana_30_Front.jpeg,1211.11,3451.39,3687.77,5539.97,1.0,Back-Unknown,0.9718
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_559514d7-AlisonAttard_13_Side.jpeg,2366.78,1103.76,2826.43,1696.46,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1315.44,753.98,1923.26,1374.91,1.0,No Entry (One Way),0.8854
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2052.29,1493.86,3088.51,1717.63,1.0,,0.0032
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_9fd3af21-MichaelFarrugia_11_Back.jpg,1231.87,1415.76,1846.27,2199.12,1.0,Back-Unknown,0.9675
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_a1ced4bc-BenTaliana_22_Front.jpeg,2071.32,3131.72,3128.87,4287.41,1.0,Back-Unknown,0.9692
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,1201.15,1052.64,1864.7,2215.44,1.0,No Entry (One Way),0.9606
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1925.53,2536.13,1982.23,2713.54,1.0,No Entry (One Way),0.6112
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_a8752ff5-MelatAssefa_56_Side.jpg,0.0,2826.43,93.74,3193.34,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,1261.01,1669.25,2680.78,4749.7,1.0,No Through Road (T-Junction),0.9768
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_bc59500b-AlisonAttard_47_Side.jpeg,1391.04,1696.46,2520.0,1874.88,1.0,,0.1162
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_cc1fcae2-AlisonAttard_9_Back.jpeg,867.89,1931.33,2010.96,3189.31,1.0,Back-Unknown,0.9713
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_cdd70210-BenTaliana_10_Side.jpeg,1492.34,1556.35,3365.71,4846.46,1.0,No Entry (One Way),0.9807
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_d29347ca-MelatAssefa_51_Side.jpg,1635.98,2834.5,1705.54,3411.07,1.0,No Entry (One Way),0.7079
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_e3df78e1-MichaelFarrugia_48_Back.jpg,1281.02,2158.32,1827.84,2798.88,1.0,Back-Unknown,0.9762
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1293.31,1558.56,2088.96,2321.52,1.0,No Through Road (T-Junction),0.974
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_ec52a808-MichaelFarrugia_58_Side.jpg,869.38,3137.52,933.89,3243.6,1.0,Back-Unknown,0.647
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1072.13,1680.96,1883.14,2415.36,1.0,No Through Road (T-Junction),0.95
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_fc84e1fb-BenTaliana_3_Back.jpeg,410.51,983.81,1791.72,2153.09,1.0,Back-Unknown,0.9786
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp5_fea9ceb6-MichaelFarrugia_19_Back.jpg,1213.44,1224.0,2128.9,2284.8,1.0,Back-Unknown,0.9496
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_0126954d-IMG_0235.JPG,729.79,1236.82,2374.85,2119.82,1.0,,0.2706
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_205fffc2-Screenshot_2025-12-05_135424.png,118.22,185.7,153.17,326.77,1.0,No Through Road (T-Junction),0.7388
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_255dc793-IMG_0327.JPG,915.26,1572.48,3544.13,2089.58,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_34078a23-Screenshot_2025-12-05_144602.png,14.49,329.55,66.47,476.45,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_344c75b8-Screenshot_2025-12-05_150942.png,92.56,42.61,186.42,153.28,1.0,Back-Unknown,0.8195
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_3721037e-IMG_0363.JPG,1717.63,1391.04,3116.74,1693.44,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_674b294f-Screenshot_2025-12-05_140949.png,366.15,43.38,529.45,202.88,1.0,Blind-Spot Mirror (Convex Mirror),0.9449
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_8387f659-Screenshot_2025-12-05_134458.png,114.11,131.31,143.26,183.74,1.0,,0.4344
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_8be98e2c-IMG_6200.JPG,1130.98,842.69,1445.47,2278.08,1.0,No Entry (One Way),0.9463
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_8dee1009-IMG_6205.JPG,275.18,3374.78,613.87,3761.86,1.0,Back-Unknown,0.9367
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_92b4ef64-IMG_6151.JPG,2104.7,3096.58,2322.43,3350.59,1.0,Back-Unknown,0.8937
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_98681b01-IMG_6123_2.JPG,1127.95,229.82,2667.17,1858.75,1.0,Back-Unknown,0.9901
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_9c79fb63-Screenshot_2025-12-05_143920.png,135.0,40.91,182.7,101.25,1.0,Back-Unknown,0.6651
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_9e256948-IMG_0275.JPG,1685.38,1306.37,2128.9,1896.05,1.0,,0.3253
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_a7041b20-IMG_6175.JPG,2860.7,3249.79,2936.3,3354.62,1.0,Other-Unknown,0.6444
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_b1f0ac5c-IMG_0227.JPG,1036.22,692.5,2362.75,2192.4,1.0,,0.2631
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_ba6a303c-IMG_0314.JPG,2446.42,3487.68,2506.9,3568.32,1.0,Other-Unknown,0.504
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_bf61cf6e-Screenshot_2025-12-05_142746.png,195.62,161.34,215.4,188.14,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_c8db20f0-IMG_6257.JPG,1493.86,753.98,1720.66,1858.75,1.0,No Through Road (T-Junction),0.9846
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_cebbcc7c-Screenshot_2025-12-05_141232.png,62.5,34.44,114.5,85.25,1.0,Other-Unknown,0.5541
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,72.36,30.15,160.66,91.98,1.0,Back-Unknown,0.5428
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_d33c21c3-IMG_6246.JPG,641.09,931.39,1152.14,1979.71,1.0,,0.3168
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_d33c21c3-IMG_6246.JPG,1590.62,874.94,2074.46,2036.16,1.0,,0.3302
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_e4194181-Screenshot_2025-12-05_124458.png,504.05,299.47,529.33,368.05,1.0,Directional Sign,0.7756
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_f6200360-IMG_6254.JPG,1375.92,741.89,1769.04,2209.54,1.0,No Through Road (T-Junction),0.9669
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp6_fb7a099a-Screenshot_2025-12-05_134245.png,80.4,37.84,149.01,178.19,1.0,Blind-Spot Mirror (Convex Mirror),0.8302
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_27403473-IMG_2301.JPG,923.33,1893.02,1145.09,2751.84,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_3acb0651-IMG_1793.jpg,540.29,1436.4,3495.74,1766.02,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_3dfa77dc-20251215_142747.jpg,687.2,1112.83,1494.61,1895.04,1.0,No Entry (One Way),0.9728
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_40a131c0-20251215_144819.jpg,1054.62,1225.73,1238.33,3786.05,1.0,,0.1298
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_41dd064f-IMG_2332.JPG,1536.19,931.39,2020.03,1556.35,1.0,Back-Unknown,0.7108
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_4c22ebaa-IMG_6807.jpeg,1502.93,1971.65,1935.36,2471.62,1.0,Blind-Spot Mirror (Convex Mirror),0.9758
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_50fb19de-IMG_1779.jpg,778.18,1445.47,3790.08,1756.94,1.0,,0.0727
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_51efaffb-IMG_2323.JPG,1605.74,1604.74,1920.24,1955.52,1.0,Back-Unknown,0.8158
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_55fe17bd-IMG_6660.jpeg,1254.96,1020.1,1614.82,1427.33,1.0,No Entry (One Way),0.9248
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_5fe0adac-IMG_2351.JPG,0.0,3310.27,647.14,4027.97,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_65ce4c26-IMG_1752.jpg,443.52,1303.34,4027.97,1823.47,1.0,,0.0182
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_66312f27-IMG_1789.jpg,943.49,1309.39,3870.72,1635.98,1.0,,0.0628
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_85e21f65-IMG_1888.jpg,1544.26,783.22,2604.67,2763.94,1.0,,0.4661
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_897df19a-IMG_2311.JPG,359.86,1927.3,492.91,2052.29,1.0,Directional Sign,0.8455
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_90de2b4a-IMG_6620.jpeg,1085.62,1008.0,1560.38,1673.28,1.0,Back-Unknown,0.7254
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_9ceccc7e-IMG_2183.JPG,2782.08,1254.96,3697.34,1657.15,1.0,,0.0579
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_a685cd57-IMG_2291.JPG,1684.37,1616.83,1723.68,2016.0,1.0,Auxiliary Sign,0.818
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_b1489edd-IMG_1891.jpg,927.36,1403.14,3479.62,1684.37,1.0,,0.0652
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_b45f5f31-IMG_2274.JPG,1052.35,1520.06,1502.93,1979.71,1.0,Back-Unknown,0.9362
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_b65b2b8e-20251215_143141.jpg,1099.98,1278.14,1272.35,2326.46,1.0,No Through Road (T-Junction),0.8483
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_c1e32eff-IMG_1769.jpg,1999.87,2736.72,2366.78,3020.98,1.0,,0.0396
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_c21d51bf-IMG_6622.jpeg,1209.6,943.49,1711.58,1576.51,1.0,Back-Unknown,0.7071
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_d5464bd2-IMG_6729.jpeg,2621.81,2100.67,2688.34,2201.47,1.0,,0.319
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_d7ded33c-IMG_6742.jpeg,1215.65,1838.59,1602.72,2120.83,1.0,Back-Unknown,0.8851
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_f5c11235-IMG_2319.JPG,2052.29,2742.77,2181.31,2794.18,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_f6c47dc2-IMG_2182.JPG,1536.19,1490.83,2870.78,1732.75,1.0,,0.1431
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_f7f0f5bb-IMG_6628.jpeg,1233.79,1080.58,1714.61,1608.77,1.0,Back-Unknown,0.9419
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp7_fb3a590f-IMG_6793.jpeg,2271.02,2165.18,2328.48,2302.27,1.0,No Entry (One Way),0.6603
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_04258956-back.jpg,1717.63,1388.02,2020.03,2144.02,1.0,Back-Unknown,0.9657
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_0d18b07a-IMG_0224.JPG,1285.2,1949.22,4009.82,2994.52,1.0,,0.3419
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_14aaa44c-IMG_0211.JPG,1747.87,1041.01,3495.74,3105.9,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_15b9a2f4-Back.jpg,557.57,675.84,1730.3,1908.74,1.0,Back-Unknown,0.9576
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_1b5dcc93-back.jpg,571.39,831.49,1677.31,1683.46,1.0,Back-Unknown,0.9691
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_2aed70e2-front.jpg,393.98,831.49,1852.42,1908.74,1.0,No Entry (One Way),0.9709
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_2d237c79-side.jpg,1907.14,949.54,2140.99,1859.76,1.0,No Through Road (T-Junction),0.9063
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_3ab29317-front.jpg,654.34,1368.06,1675.01,2453.5,1.0,No Through Road (T-Junction),0.9794
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_4682619f-back.jpg,2120.83,2803.25,2282.11,2978.64,1.0,,0.1858
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_4682619f-back.jpg,2903.04,2803.25,3019.97,2978.64,1.0,,0.3934
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_562e48f6-front.jpg,1431.36,937.44,2564.35,1696.46,1.0,No Through Road (T-Junction),0.9602
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_58176912-front.jpg,2310.34,1267.06,2354.69,1312.42,1.0,,0.0018
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_59dbbf2e-side.jpg,520.13,2497.82,697.54,2803.25,1.0,Back-Unknown,0.572
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_77233a9d-IMG_0190_Blurred.JPG,591.19,4626.72,655.45,4718.11,1.0,,0.3212
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_838e07cd-IMG_0097.jpg,929.63,2730.34,3311.53,5140.8,1.0,Back-Unknown,0.9785
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_8ff667a0-IMG_0209.JPG,1707.89,1790.71,3752.78,2788.88,1.0,,0.4825
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_a27e76cc-back.jpg,942.0,1336.0,2088.0,2260.0,1.0,Back-Unknown,0.9763
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_ad4861cb-back.jpg,1568.45,828.58,2612.74,1823.47,1.0,Back-Unknown,0.9456
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_aec35ad8-back.jpg,1024.13,1865.81,2866.75,2494.8,1.0,Back-Unknown,0.951
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_b6ae6e3d-back.jpg,942.0,1532.0,2094.0,2664.0,1.0,Back-Unknown,0.9774
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_c01f5341-IMG_0123.jpg,1675.04,4592.45,1803.56,4906.61,1.0,No Entry (One Way),0.8245
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_c89fb86b-IMG_0117.jpg,1867.82,1445.14,2514.71,3410.06,1.0,No Through Road (T-Junction),0.985
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_d8e91d56-side.jpg,3455.42,2189.38,3737.66,2624.83,1.0,No Entry (One Way),0.5661
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp8_ea4926f3-side.jpg,1125.0,752.0,1962.0,2476.0,1.0,Roundabout Ahead,0.98
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_00e70ac4-IMG_20251111_140913.jpg,0.0,2724.0,348.0,3492.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_01e24ee9-IMG_20251106_145403.jpg,1115.14,3342.34,1148.93,3407.87,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_04c8a7cf-IMG_20251211_162331.jpg,1404.54,2060.4,2047.14,2688.72,1.0,Back-Unknown,0.9766
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_109ae844-20251122_134645.jpg,1251.0,1432.0,1359.0,1724.0,1.0,Back-Unknown,0.8561
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_10b6edc4-IMG_20251112_160648.jpg,1138.32,1150.56,2649.96,2558.16,1.0,Blind-Spot Mirror (Convex Mirror),0.9882
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_14b6af7e-IMG_20251106_142858.jpg,1089.09,1003.68,4178.94,4067.2,1.0,Blind-Spot Mirror (Convex Mirror),0.9824
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_1792c5c3-WhatsApp_Image_2026-01-03_at_18.45.37.jpeg,489.6,804.8,860.4,1147.2,1.0,Back-Unknown,0.9794
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_21d58e17-S3_back.jpg,309.0,2056.0,369.0,2144.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_24a6f4e2-20251122_141915.jpg,1044.0,2068.0,1197.0,2244.0,1.0,Street Sign,0.8685
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_29bd496f-IMG_20251106_153126.jpg,24.0,2668.0,324.0,2856.0,1.0,Auxiliary Sign,0.8062
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_37f0c8a3-IMG_20251111_162207.jpg,648.0,2600.0,693.0,2672.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_4319ca3a-WhatsApp_Image_2026-01-03_at_18.45.41.jpeg,674.4,539.2,771.6,884.8,1.0,Other-Unknown,0.9498
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_441ca6d9-WhatsApp_Image_2026-01-03_at_18.45.36_2.jpeg,69.6,1508.8,111.6,1598.4,1.0,,0.3524
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,534.0,715.2,832.8,968.0,1.0,No Through Road (T-Junction),0.968
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_4a9c7d83-IMG_20251111_143857.jpg,1395.0,2064.0,1821.0,2452.0,1.0,Other-Unknown,0.9514
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_5b67e831-IMG_20251106_155530.jpg,873.0,1812.0,1917.0,2812.0,1.0,Back-Unknown,0.9732
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_6867b383-IMG_20251111_160020.jpg,1266.0,1692.0,1731.0,2148.0,1.0,No Through Road (T-Junction),0.9558
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_6ad958e6-IMG_20251112_155635.jpg,1230.12,1268.88,1710.54,2150.16,1.0,Back-Unknown,0.9693
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_6adfb65e-WhatsApp_Image_2026-01-01_at_18.13.00_2.jpeg,1135.1,1447.94,1164.29,1517.57,1.0,,0.4374
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_6e84abf6-IMG_20251106_145409.jpg,1004.54,1056.77,2334.72,1957.89,1.0,Other-Unknown,0.9811
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_73c5c90a-IMG_20251106_152941.jpg,1410.0,1648.0,1518.0,2240.0,1.0,Roundabout Ahead,0.8243
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_7d690022-WhatsApp_Image_2026-01-03_at_18.45.17_5.jpeg,621.6,276.8,726.0,708.8,1.0,Back-Unknown,0.9256
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_815852c2-IMG_20251112_155220.jpg,459.0,2374.56,737.46,2525.52,1.0,Back-Unknown,0.9086
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_a133d565-WhatsApp_Image_2026-01-01_at_18.13.09.jpeg,579.07,1060.86,784.9,1249.28,1.0,Stop Sign,0.7687
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_a3c63c83-IMG_20251112_162857.jpg,1315.8,2631.6,1814.58,3496.56,1.0,Back-Unknown,0.9439
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_a745c9e2-IMG_20251106_152554.jpg,2009.09,3764.22,2098.18,3919.87,1.0,,0.4891
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_a7e54ad2-IMG_20251210_141604.jpg,1398.42,1126.08,1600.38,2227.68,1.0,No Entry (One Way),0.9744
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_ae723934-WhatsApp_Image_2026-01-03_at_18.45.36.jpeg,560.4,710.4,751.2,883.2,1.0,No Through Road (T-Junction),0.9882
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_b8edf87e-IMG_20251106_153308.jpg,1200.0,1964.0,1587.0,2324.0,1.0,Back-Unknown,0.9493
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_c7a4a215-20251122_140026.jpg,1302.0,1000.0,2379.0,2264.0,1.0,Back-Unknown,0.7733
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_d4f4f35a-WhatsApp_Image_2026-01-01_at_18.12.59_1.jpeg,549.89,804.86,669.7,1366.02,1.0,No Entry (One Way),0.8775
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_d5f4aa18-20251122_140237.jpg,1398.0,2132.0,1482.0,2244.0,1.0,,0.061
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_dbd6345f-IMG_20251106_155229.jpg,1084.42,999.42,2107.39,2105.34,1.0,Back-Unknown,0.9844
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_de518e6b-WhatsApp_Image_2026-01-03_at_18.46.56.jpeg,470.4,760.0,837.6,1099.2,1.0,Back-Unknown,0.9768
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_dfbf929f-IMG_20251106_154024.jpg,718.85,1138.69,1840.13,2244.61,1.0,No Entry (One Way),0.9205
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_e0e8c13e-IMG_20251113_163444.jpg,1266.84,1268.88,1358.64,2313.36,1.0,Back-Unknown,0.7364
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_e1897726-WhatsApp_Image_2026-01-03_at_18.45.38_3.jpeg,434.4,371.2,830.4,1089.6,1.0,,0.4279
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_e2932f32-20251122_134050.jpg,1281.0,1564.0,1614.0,1892.0,1.0,Back-Unknown,0.927
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_e65623ae-20251122_135723.jpg,1839.0,2036.0,2097.0,2364.0,1.0,Auxiliary Sign,0.9204
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_e690fe37-IMG_20251111_162300.jpg,1458.0,1948.0,1563.0,2412.0,1.0,Roundabout Ahead,0.9562
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_f109e3eb-IMG_20251111_144036.jpg,1164.0,1336.0,1947.0,2244.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9786
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_f36aabf5-WhatsApp_Image_2026-01-03_at_18.45.21_2.jpeg,427.2,536.0,711.6,990.4,1.0,Other-Unknown,0.9858
+Cosmos Reason2 8B,sens-mtsd-ped-02,road sign for a pedestrian crossing,grp9_f456c0fd-IMG_20251106_153809.jpg,543.0,2880.0,678.0,3192.0,1.0,,0.0

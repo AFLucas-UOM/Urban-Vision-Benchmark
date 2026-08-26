@@ -1,0 +1,151 @@
+dataset,model,sensitivity_family,prompt_id_a,prompt_id_b,variant_type_a,variant_type_b,n_images,n_both_empty,mean_pairwise_box_f1,mean_pairwise_box_jaccard,mean_matched_pair_iou,total_matched,total_unmatched_a,total_unmatched_b
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-02,canonical,lexical-paraphrase,747,59,0.5823,0.5823,0.9629,376,307,224
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-03,canonical,descriptive-paraphrase,747,69,0.6379,0.6377,0.9696,408,275,201
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-04,canonical,instruction,747,15,0.3749,0.3734,0.9567,269,414,770
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-03,lexical-paraphrase,descriptive-paraphrase,747,90,0.672,0.672,0.9682,412,188,197
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-04,lexical-paraphrase,instruction,747,29,0.3382,0.3373,0.9637,225,375,814
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-03,sens-mtsd-mirror-04,descriptive-paraphrase,instruction,747,45,0.392,0.3902,0.9677,252,357,787
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-02,canonical,lexical-paraphrase,747,53,0.7626,0.7624,0.978,520,145,144
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-03,canonical,descriptive-paraphrase,747,61,0.7749,0.7738,0.9791,521,144,142
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-04,canonical,instruction,747,19,0.5163,0.5133,0.9722,374,291,154
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-03,lexical-paraphrase,descriptive-paraphrase,747,75,0.8753,0.8742,0.9824,582,82,81
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-04,lexical-paraphrase,instruction,747,24,0.4855,0.4832,0.968,345,319,183
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-03,sens-mtsd-entry-04,descriptive-paraphrase,instruction,747,23,0.4746,0.4716,0.9607,338,325,190
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-02,canonical,lexical-paraphrase,747,67,0.7921,0.7918,0.9839,526,135,141
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-03,canonical,descriptive-paraphrase,747,46,0.7613,0.761,0.9737,524,137,173
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-04,canonical,instruction,747,13,0.5652,0.5617,0.9781,416,245,184
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-03,lexical-paraphrase,descriptive-paraphrase,747,48,0.8286,0.8286,0.9755,572,95,125
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-04,lexical-paraphrase,instruction,747,13,0.5627,0.5596,0.9733,413,254,187
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-03,sens-mtsd-ped-04,descriptive-paraphrase,instruction,747,9,0.5734,0.5703,0.9668,425,272,175
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-02,canonical,lexical-paraphrase,747,89,0.668,0.668,0.9717,410,240,176
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-03,canonical,descriptive-paraphrase,747,89,0.6765,0.676,0.9647,417,233,178
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-04,canonical,instruction,747,22,0.7474,0.7456,0.9804,539,111,193
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-03,lexical-paraphrase,descriptive-paraphrase,747,131,0.805,0.8046,0.9825,471,115,124
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-04,lexical-paraphrase,instruction,747,23,0.5631,0.5616,0.9664,400,186,332
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-03,sens-mtsd-roundabout-04,descriptive-paraphrase,instruction,747,25,0.5921,0.5897,0.9684,421,174,311
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-02,canonical,lexical-paraphrase,747,57,0.7492,0.749,0.9824,503,166,119
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-03,canonical,descriptive-paraphrase,747,47,0.7961,0.7952,0.9769,549,120,119
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-04,canonical,instruction,747,31,0.705,0.7021,0.9795,500,169,108
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-03,lexical-paraphrase,descriptive-paraphrase,747,79,0.8527,0.8521,0.9829,560,62,108
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-04,lexical-paraphrase,instruction,747,26,0.5663,0.5636,0.9777,402,220,206
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-03,sens-mtsd-stop-04,descriptive-paraphrase,instruction,747,16,0.6263,0.6229,0.9812,458,210,150
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-02,canonical,lexical-paraphrase,747,167,0.7193,0.7182,0.9728,377,209,80
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-03,canonical,descriptive-paraphrase,747,167,0.6564,0.656,0.9733,329,257,64
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-04,canonical,instruction,747,153,0.3878,0.3849,0.9505,143,443,111
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-03,lexical-paraphrase,descriptive-paraphrase,747,274,0.8121,0.8119,0.9812,339,118,54
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-04,lexical-paraphrase,instruction,747,270,0.5602,0.5573,0.9562,155,302,99
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-03,sens-mtsd-mirror-04,descriptive-paraphrase,instruction,747,323,0.6194,0.6165,0.9687,146,247,108
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-02,canonical,lexical-paraphrase,747,149,0.7885,0.7881,0.986,451,101,108
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-03,canonical,descriptive-paraphrase,747,158,0.7029,0.7025,0.9894,372,180,90
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-04,canonical,instruction,747,164,0.8086,0.8024,0.9845,458,94,115
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-03,lexical-paraphrase,descriptive-paraphrase,747,178,0.7725,0.7717,0.9897,405,154,57
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-04,lexical-paraphrase,instruction,747,158,0.7705,0.7655,0.9809,436,123,137
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-03,sens-mtsd-entry-04,descriptive-paraphrase,instruction,747,172,0.7059,0.7008,0.9832,367,95,206
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-02,canonical,lexical-paraphrase,747,160,0.7131,0.7124,0.9844,379,210,58
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-03,canonical,descriptive-paraphrase,747,159,0.5997,0.5997,0.9779,292,297,41
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-04,canonical,instruction,747,143,0.5886,0.587,0.9774,305,284,116
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-03,lexical-paraphrase,descriptive-paraphrase,747,309,0.7849,0.7847,0.9833,281,156,52
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-04,lexical-paraphrase,instruction,747,267,0.7067,0.7049,0.9769,270,167,151
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-03,sens-mtsd-ped-04,descriptive-paraphrase,instruction,747,317,0.7407,0.7396,0.9727,241,92,180
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-02,canonical,lexical-paraphrase,747,203,0.6118,0.6118,0.9828,255,266,103
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-03,canonical,descriptive-paraphrase,747,221,0.5765,0.5756,0.9826,212,309,45
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-04,canonical,instruction,747,152,0.7407,0.739,0.9903,405,116,111
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-03,lexical-paraphrase,descriptive-paraphrase,747,378,0.7626,0.7617,0.9888,194,164,63
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-04,lexical-paraphrase,instruction,747,184,0.5453,0.5442,0.9773,226,132,290
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-03,sens-mtsd-roundabout-04,descriptive-paraphrase,instruction,747,209,0.5274,0.5254,0.9807,189,68,327
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-02,canonical,lexical-paraphrase,747,134,0.67,0.6678,0.986,375,250,22
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-03,canonical,descriptive-paraphrase,747,136,0.691,0.6885,0.9895,388,237,21
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-04,canonical,instruction,747,138,0.8406,0.8385,0.9936,511,114,33
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-03,lexical-paraphrase,descriptive-paraphrase,747,299,0.859,0.8588,0.9942,347,50,62
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-04,lexical-paraphrase,instruction,747,220,0.7632,0.7595,0.9872,361,36,183
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-03,sens-mtsd-stop-04,descriptive-paraphrase,instruction,747,218,0.7775,0.7735,0.992,373,36,171
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-02,canonical,lexical-paraphrase,747,388,0.6671,0.6333,0.9122,432,889,1183
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-03,canonical,descriptive-paraphrase,747,279,0.5199,0.485,0.8991,400,921,1717
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-04,canonical,instruction,747,374,0.5955,0.5695,0.8809,322,999,1579
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-03,lexical-paraphrase,descriptive-paraphrase,747,292,0.6276,0.5932,0.9357,696,919,1421
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-04,lexical-paraphrase,instruction,747,345,0.6008,0.5759,0.914,512,1103,1389
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-03,sens-mtsd-mirror-04,descriptive-paraphrase,instruction,747,245,0.45,0.4269,0.9242,441,1676,1460
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-02,canonical,lexical-paraphrase,747,185,0.5654,0.5088,0.9385,996,851,1990
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-03,canonical,descriptive-paraphrase,747,120,0.4468,0.3872,0.9272,928,919,2605
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-04,canonical,instruction,747,270,0.6343,0.5791,0.9358,794,1053,1382
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-03,lexical-paraphrase,descriptive-paraphrase,747,120,0.6428,0.5731,0.9413,1796,1190,1737
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-04,lexical-paraphrase,instruction,747,177,0.5611,0.5041,0.9513,1126,1860,1050
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-03,sens-mtsd-entry-04,descriptive-paraphrase,instruction,747,121,0.4963,0.4343,0.9393,1271,2262,905
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-02,canonical,lexical-paraphrase,747,186,0.3399,0.3175,0.9219,340,366,2919
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-03,canonical,descriptive-paraphrase,747,285,0.4796,0.4575,0.9222,342,364,2123
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-04,canonical,instruction,747,496,0.7385,0.7204,0.9025,292,414,1289
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-03,lexical-paraphrase,descriptive-paraphrase,747,177,0.6609,0.6132,0.9548,1695,1564,770
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-04,lexical-paraphrase,instruction,747,184,0.423,0.3956,0.9437,874,2385,707
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-03,sens-mtsd-ped-04,descriptive-paraphrase,instruction,747,279,0.5484,0.5217,0.9424,851,1614,730
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-02,canonical,lexical-paraphrase,747,71,0.4606,0.3678,0.927,1082,1322,2408
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-03,canonical,descriptive-paraphrase,747,91,0.4682,0.3749,0.9259,1103,1301,2750
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-04,canonical,instruction,747,124,0.4734,0.3936,0.9306,991,1413,2320
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-03,lexical-paraphrase,descriptive-paraphrase,747,71,0.6826,0.6113,0.9523,2413,1077,1440
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-04,lexical-paraphrase,instruction,747,76,0.5382,0.4696,0.9393,1795,1695,1516
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-03,sens-mtsd-roundabout-04,descriptive-paraphrase,instruction,747,92,0.567,0.5012,0.9395,1951,1902,1360
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-02,canonical,lexical-paraphrase,747,168,0.4826,0.4284,0.9295,759,771,2256
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-03,canonical,descriptive-paraphrase,747,158,0.4659,0.4116,0.9219,739,791,2274
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-04,canonical,instruction,747,350,0.7066,0.6588,0.934,673,857,1219
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-03,lexical-paraphrase,descriptive-paraphrase,747,142,0.7134,0.6521,0.953,1872,1143,1141
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-04,lexical-paraphrase,instruction,747,167,0.4892,0.4393,0.9477,931,2084,961
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-03,sens-mtsd-stop-04,descriptive-paraphrase,instruction,747,157,0.4979,0.4501,0.9441,1039,1974,853
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-02,canonical,lexical-paraphrase,747,426,0.6656,0.6576,0.9497,90,2,490
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-03,canonical,descriptive-paraphrase,747,28,0.1156,0.1024,0.9354,86,6,1827
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-04,canonical,instruction,747,405,0.647,0.6439,0.9805,85,7,392
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-03,lexical-paraphrase,descriptive-paraphrase,747,21,0.2506,0.219,0.9662,327,253,1586
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-04,lexical-paraphrase,instruction,747,314,0.6233,0.6037,0.948,225,355,252
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-03,sens-mtsd-mirror-04,descriptive-paraphrase,instruction,747,22,0.2957,0.2514,0.9455,346,1567,131
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-02,canonical,lexical-paraphrase,747,149,0.7291,0.6954,0.9889,837,137,471
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-03,canonical,descriptive-paraphrase,747,123,0.6791,0.6282,0.978,891,83,831
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-04,canonical,instruction,747,178,0.7073,0.6588,0.9859,556,418,155
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-03,lexical-paraphrase,descriptive-paraphrase,747,134,0.7876,0.7338,0.9763,1214,94,508
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-04,lexical-paraphrase,instruction,747,157,0.6902,0.6295,0.9824,635,673,76
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-03,sens-mtsd-entry-04,descriptive-paraphrase,instruction,747,132,0.6231,0.5422,0.9761,666,1056,45
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-02,canonical,lexical-paraphrase,747,312,0.513,0.5025,0.9889,124,3,987
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-03,canonical,descriptive-paraphrase,747,453,0.7059,0.6942,0.9893,126,1,368
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-04,canonical,instruction,747,299,0.5158,0.5104,0.9858,120,7,524
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-03,lexical-paraphrase,descriptive-paraphrase,747,311,0.7332,0.7028,0.9893,458,653,36
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-04,lexical-paraphrase,instruction,747,269,0.7759,0.7273,0.9808,567,544,77
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-03,sens-mtsd-ped-04,descriptive-paraphrase,instruction,747,299,0.7472,0.7263,0.9848,384,110,260
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-02,canonical,lexical-paraphrase,747,189,0.7453,0.7107,0.9897,538,132,287
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-03,canonical,descriptive-paraphrase,747,82,0.6024,0.5622,0.9899,654,16,806
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-04,canonical,instruction,747,51,0.5887,0.5521,0.9869,537,133,443
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-03,lexical-paraphrase,descriptive-paraphrase,747,74,0.6685,0.6149,0.9872,769,56,691
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-04,lexical-paraphrase,instruction,747,49,0.7004,0.6617,0.9832,683,142,297
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-03,sens-mtsd-roundabout-04,descriptive-paraphrase,instruction,747,45,0.7662,0.6948,0.9734,905,555,75
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-02,canonical,lexical-paraphrase,747,139,0.4656,0.4183,0.9696,368,39,1193
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-03,canonical,descriptive-paraphrase,747,180,0.5405,0.4954,0.9844,393,14,1120
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-04,canonical,instruction,747,101,0.5321,0.5172,0.9824,387,20,550
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-03,lexical-paraphrase,descriptive-paraphrase,747,143,0.8134,0.7583,0.9719,1245,316,268
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-04,lexical-paraphrase,instruction,747,77,0.6095,0.5212,0.9576,746,815,191
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-03,sens-mtsd-stop-04,descriptive-paraphrase,instruction,747,87,0.6548,0.5806,0.9675,773,740,164
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-02,canonical,lexical-paraphrase,747,395,0.6246,0.6149,0.9549,96,2,601
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-03,canonical,descriptive-paraphrase,747,22,0.1106,0.0958,0.9401,93,5,1938
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,sens-mtsd-mirror-04,canonical,instruction,747,378,0.6137,0.6101,0.9816,90,8,464
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-03,lexical-paraphrase,descriptive-paraphrase,747,16,0.2612,0.2261,0.9664,374,323,1657
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-02,sens-mtsd-mirror-04,lexical-paraphrase,instruction,747,284,0.5918,0.5697,0.9528,249,448,305
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-03,sens-mtsd-mirror-04,descriptive-paraphrase,instruction,747,15,0.2992,0.2504,0.9479,375,1656,179
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-02,canonical,lexical-paraphrase,747,157,0.7291,0.6968,0.9885,867,136,472
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-03,canonical,descriptive-paraphrase,747,120,0.6772,0.631,0.9766,940,63,881
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-01,sens-mtsd-entry-04,canonical,instruction,747,184,0.7053,0.6529,0.9865,574,429,169
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-03,lexical-paraphrase,descriptive-paraphrase,747,126,0.7741,0.7194,0.9753,1258,81,563
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-02,sens-mtsd-entry-04,lexical-paraphrase,instruction,747,163,0.7009,0.6365,0.9821,673,666,70
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-03,sens-mtsd-entry-04,descriptive-paraphrase,instruction,747,121,0.6089,0.527,0.9753,700,1121,43
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-02,canonical,lexical-paraphrase,747,313,0.5064,0.4957,0.9884,121,6,1007
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-03,canonical,descriptive-paraphrase,747,488,0.747,0.7365,0.989,127,0,334
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-01,sens-mtsd-ped-04,canonical,instruction,747,299,0.5085,0.5027,0.986,120,7,545
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-03,lexical-paraphrase,descriptive-paraphrase,747,311,0.6905,0.6623,0.9894,423,705,38
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-02,sens-mtsd-ped-04,lexical-paraphrase,instruction,747,270,0.7732,0.7237,0.9805,578,550,87
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-03,sens-mtsd-ped-04,descriptive-paraphrase,instruction,747,299,0.7012,0.6808,0.9834,351,110,314
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-02,canonical,lexical-paraphrase,747,174,0.7474,0.7077,0.9901,589,146,314
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-03,canonical,descriptive-paraphrase,747,74,0.6132,0.5712,0.9898,715,20,847
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,sens-mtsd-roundabout-04,canonical,instruction,747,50,0.6042,0.5625,0.9867,577,158,430
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-03,lexical-paraphrase,descriptive-paraphrase,747,66,0.6767,0.6154,0.9872,840,63,722
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-02,sens-mtsd-roundabout-04,lexical-paraphrase,instruction,747,47,0.7149,0.6725,0.9804,732,171,275
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-03,sens-mtsd-roundabout-04,descriptive-paraphrase,instruction,747,45,0.7654,0.6877,0.9727,945,617,62
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-02,canonical,lexical-paraphrase,747,149,0.4754,0.4286,0.9689,369,42,1189
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-03,canonical,descriptive-paraphrase,747,185,0.5413,0.4954,0.9837,397,14,1164
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-01,sens-mtsd-stop-04,canonical,instruction,747,99,0.5252,0.5089,0.9826,388,23,568
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-03,lexical-paraphrase,descriptive-paraphrase,747,150,0.8099,0.7556,0.97,1253,305,308
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-02,sens-mtsd-stop-04,lexical-paraphrase,instruction,747,81,0.6104,0.5229,0.9599,751,807,205
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-03,sens-mtsd-stop-04,descriptive-paraphrase,instruction,747,86,0.6448,0.5679,0.9684,785,776,171

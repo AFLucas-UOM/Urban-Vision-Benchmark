@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "sens-mdwd-recycling-01",
+  "prompt": "grey recycling bag",
+  "image_start": 192,
+  "image_end": 256,
+  "n_images": 64,
+  "n_prediction_rows": 186,
+  "max_detections": 28,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 14010.7,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-21T16:32:39.104706+00:00",
+  "finished_at": "2026-08-21T16:35:46.696453+00:00"
+}

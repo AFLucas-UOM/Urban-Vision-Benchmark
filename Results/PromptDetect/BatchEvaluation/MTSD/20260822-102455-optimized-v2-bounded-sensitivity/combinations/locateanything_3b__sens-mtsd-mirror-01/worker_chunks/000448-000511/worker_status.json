@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "sens-mtsd-mirror-01",
+  "prompt": "blind-spot convex mirror",
+  "image_start": 448,
+  "image_end": 512,
+  "n_images": 64,
+  "n_prediction_rows": 145,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 13317.3,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-23T16:31:33.428146+00:00",
+  "finished_at": "2026-08-23T16:34:51.450002+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "sens-mtsd-ped-03",
+  "prompt": "sign indicating a pedestrian crossing",
+  "image_start": 320,
+  "image_end": 384,
+  "n_images": 64,
+  "n_prediction_rows": 225,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 12659.5,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-22T15:08:08.290775+00:00",
+  "finished_at": "2026-08-22T15:11:48.378633+00:00"
+}

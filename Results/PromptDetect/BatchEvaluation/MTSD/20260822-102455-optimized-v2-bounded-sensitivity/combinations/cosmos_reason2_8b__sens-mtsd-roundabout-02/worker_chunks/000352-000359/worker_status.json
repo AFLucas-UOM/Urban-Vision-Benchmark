@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "Cosmos Reason2 8B",
+  "prompt_id": "sens-mtsd-roundabout-02",
+  "prompt": "warning sign for a roundabout ahead",
+  "image_start": 352,
+  "image_end": 360,
+  "n_images": 8,
+  "n_prediction_rows": 8,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "Cosmos Reason2 8B",
+    "model_load_ms": 16572.3,
+    "ok": true,
+    "label": "Cosmos Reason2 8B",
+    "source": "nvidia/Cosmos-Reason2-8B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-25T04:04:04.726844+00:00",
+  "finished_at": "2026-08-25T04:04:39.124182+00:00"
+}

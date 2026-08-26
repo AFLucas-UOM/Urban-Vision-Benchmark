@@ -1,0 +1,21 @@
+model,target_class,best_prompt_id,best_prompt,recall,f1
+Cosmos Reason2 2B,Mixed Waste,sens-mdwd-mixed-04,find all black mixed-waste bags,0.518,0.4251
+Cosmos Reason2 2B,Orange CMD,sens-mdwd-orange-04,find all orange waste bags,0.4615,0.169
+Cosmos Reason2 2B,Organic Waste,sens-mdwd-organic-04,find all white organic-waste bags,0.6124,0.3249
+Cosmos Reason2 2B,Recyclable Material,sens-mdwd-recycling-04,find all grey recycling bags,0.6176,0.3843
+Cosmos Reason2 8B,Mixed Waste,sens-mdwd-mixed-01,black garbage bag,0.6347,0.5222
+Cosmos Reason2 8B,Orange CMD,sens-mdwd-orange-04,find all orange waste bags,0.5513,0.2598
+Cosmos Reason2 8B,Organic Waste,sens-mdwd-organic-01,white organic-waste bag,0.7191,0.4142
+Cosmos Reason2 8B,Recyclable Material,sens-mdwd-recycling-04,find all grey recycling bags,0.6597,0.395
+LocateAnything 3B,Mixed Waste,sens-mdwd-mixed-01,black garbage bag,0.7305,0.5922
+LocateAnything 3B,Orange CMD,sens-mdwd-orange-02,orange refuse bag,0.7436,0.2886
+LocateAnything 3B,Organic Waste,sens-mdwd-organic-02,white domestic organic-waste bag,0.7921,0.2762
+LocateAnything 3B,Recyclable Material,sens-mdwd-recycling-02,grey household recycling bag,0.7983,0.3028
+SAM 3,Mixed Waste,sens-mdwd-mixed-02,black refuse bag,0.9251,0.856
+SAM 3,Orange CMD,sens-mdwd-orange-01,orange garbage bag,0.8205,0.8312
+SAM 3,Organic Waste,sens-mdwd-organic-02,white domestic organic-waste bag,0.6011,0.5323
+SAM 3,Recyclable Material,sens-mdwd-recycling-02,grey household recycling bag,0.6303,0.4021
+SAM 3.1,Mixed Waste,sens-mdwd-mixed-02,black refuse bag,0.9222,0.8427
+SAM 3.1,Orange CMD,sens-mdwd-orange-01,orange garbage bag,0.8205,0.8312
+SAM 3.1,Organic Waste,sens-mdwd-organic-02,white domestic organic-waste bag,0.6685,0.5372
+SAM 3.1,Recyclable Material,sens-mdwd-recycling-03,grey bag containing recyclable household material,0.5756,0.4108

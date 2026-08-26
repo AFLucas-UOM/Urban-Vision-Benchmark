@@ -1,0 +1,516 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1495.jpg,1537.96,2016.34,3011.65,3193.01,1.0,Back-Unknown,0.9876
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1510.jpg,2953.18,2325.4,3000.75,2721.78,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1527.jpg,1520.82,2587.54,2347.63,4792.37,1.0,Back-Unknown,0.9809
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1557.jpg,1362.31,2644.66,3067.34,4084.08,1.0,Pedestrian Crossing,0.9675
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1564.jpg,1636.49,3158.74,2814.59,4809.5,1.0,Other-Unknown,0.9812
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1575.jpg,1011.67,1502.21,1057.74,1736.86,1.0,,0.2176
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1593.jpg,475.52,1770.72,2574.68,4238.3,1.0,Back-Unknown,0.6675
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1597.jpg,1135.26,2296.22,3045.92,5700.58,1.0,,0.3687
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1599.jpg,1820.7,4015.54,2351.92,4569.6,1.0,Back-Unknown,0.9597
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1606.jpg,0.0,439.82,398.41,976.75,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_1612.jpg,1306.62,2941.68,2934.54,4678.13,1.0,Back-Unknown,0.979
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251123_141219.jpg,848.64,1169.87,1110.72,1946.7,1.0,No Entry (One Way),0.9568
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251123_141844.jpg,416.0,1253.1,1287.52,2182.53,1.0,Back-Unknown,0.9714
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251123_143317.jpg,484.64,855.44,1474.72,4614.75,1.0,,0.2695
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251123_150542.jpg,921.44,300.56,1453.92,2312.0,1.0,Pedestrian Crossing,0.5454
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251123_164433.jpg,216.32,1831.1,339.04,1951.33,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251123_164446.jpg,380.64,1863.47,1747.2,4619.38,1.0,,0.4861
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_113833.jpg,1350.61,2251.89,1420.05,2436.85,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_113844.jpg,1892.24,3296.91,2086.67,3440.26,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_114450.jpg,1864.46,3259.92,1951.26,3361.65,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_121957.jpg,1795.02,624.24,2423.46,2159.41,1.0,Back-Unknown,0.967
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_122125.jpg,667.68,1743.25,1393.6,4614.75,1.0,,0.4925
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_122225.jpg,1926.96,3606.72,2680.38,4614.75,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_122515.jpg,759.2,4462.16,863.2,4619.38,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_122819+1.jpg,1284.64,1017.28,1784.61,2436.85,1.0,No Entry (One Way),0.9701
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_123112.jpg,1137.76,2658.8,1270.88,2922.37,1.0,,0.0056
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_124400.jpg,1476.8,4073.74,1612.0,4587.01,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_153252.jpg,1819.33,231.2,2135.28,698.22,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251125_153559.jpg,1614.48,707.47,1937.38,1905.09,1.0,No Entry (One Way),0.7996
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251126_123510.jpg,1112.8,2034.56,1220.96,2140.91,1.0,,0.0083
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251126_123524.jpg,881.92,1849.6,1023.36,2053.06,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20251126_123910.jpg,1175.2,3810.18,2075.84,4614.75,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260106_160010_253.jpg,998.4,734.4,2073.6,1656.48,1.0,Roundabout Ahead,0.9818
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260106_160549_637.jpg,1483.78,2093.04,1913.86,3170.16,1.0,Back-Unknown,0.8505
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260106_160608_331.jpg,1210.37,2109.36,1674.24,4071.84,1.0,,0.3862
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260106_161746_914.jpg,986.11,538.56,2552.83,2101.2,1.0,No Entry (One Way),0.969
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260110_171243_436.jpg,657.41,3268.08,1889.28,4071.84,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260110_172745_673.jpg,1367.04,1623.84,1797.12,2031.84,1.0,,0.0715
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260113_083600_409.jpg,3647.52,2202.62,4075.92,2549.76,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260113_083728_516.jpg,685.44,617.47,4075.92,2657.28,1.0,,0.2781
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260113_084856_622.jpg,1052.64,1231.87,1652.4,1806.34,1.0,,0.1072
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_20260113_085011_841.jpg,913.92,359.42,2864.16,2500.61,1.0,,0.4061
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_8791.jpeg,523.15,2044.22,2370.82,3971.52,1.0,Directional Sign,0.9831
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_IMG_8810.jpeg,1334.59,710.64,2741.76,2098.66,1.0,Back-Unknown,0.6261
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_wall_stop.jpeg,565.49,3205.44,716.69,3370.75,1.0,,0.0015
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-16 at 17.52.27.jpeg,628.83,1560.6,676.26,1687.08,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-16 at 17.52.29.jpeg,377.91,638.52,1087.83,2035.92,1.0,,0.4801
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-17 at 12.38.34.jpeg,0.0,0.0,153.0,224.4,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-17 at 12.38.37 (2).jpeg,989.91,540.6,1072.53,2035.92,1.0,,0.3995
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-17 at 15.01.27 - Edited.jpg,501.84,456.96,1193.4,2035.92,1.0,,0.3337
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-17 at 15.01.45 (3).jpeg,229.5,528.36,1231.65,1527.96,1.0,Back-Unknown,0.984
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-17 at 15.01.50 (1).jpeg,849.15,463.08,971.55,1736.04,1.0,Back-Unknown,0.8656
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-17 at 15.01.54.jpeg,263.16,197.88,1314.27,2035.92,1.0,Back-Unknown,0.5372
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-17 at 15.01.56 (1).jpeg,1332.63,1638.12,1367.82,1736.04,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-17 at 15.02.00.jpeg,775.71,0.0,878.22,805.8,1.0,,0.0024
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp10_WhatsApp Image 2025-11-20 at 16.03.01 (1).jpeg,624.24,675.24,1084.77,1117.92,1.0,Other-Unknown,0.9698
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_00ffbbb0-IMG_20251125_195040.jpg,1491.0,836.0,1563.0,940.0,1.0,,0.0084
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_089d4626-IMG_20251125_192354.jpg,1431.0,1000.0,2172.0,3644.0,1.0,,0.2921
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_08da688f-IMG_6393.jpeg,0.0,709.8,3485.62,2782.03,1.0,Other-Unknown,0.5592
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_12031735-Pre_2026_6669.jpg,619.3,2668.0,905.3,3328.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_1346633a-IMG_20251125_195535.jpg,798.0,2836.0,2046.0,3556.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_217d0bb2-IMG_1445.jpg,547.34,286.27,1557.36,4023.94,1.0,,0.4594
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_2d64dcc1-IMG_20251125_194650.jpg,537.0,1144.0,702.0,1336.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_2dae9065-IMG_20251125_195604.jpg,1329.0,252.0,1746.0,1236.0,1.0,Other-Unknown,0.8953
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_4029b5b7-Pre_2026_6760.jpg,3732.0,0.0,3996.0,355.82,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_41188dd2-IMG_1440.jpg,1496.88,0.0,2461.54,1314.43,1.0,,0.3276
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_4a8ce21e-IMG_20251125_194252.jpg,1665.0,1164.0,1935.0,1820.0,1.0,,0.4669
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_5c71ae7e-IMG_6256.jpeg,825.55,1024.13,2131.92,2084.54,1.0,Back-Unknown,0.9829
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_5cef4344-Pre_2026_6674.jpg,56.3,948.0,1711.52,2484.0,1.0,Back-Unknown,0.9811
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_6bd01c27-IMG_1442.jpg,1502.93,0.0,2234.74,592.7,1.0,,0.041
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_6d1c0888-IMG_20251125_191657.jpg,1551.0,900.0,1665.0,3284.0,1.0,,0.2351
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_7041f709-IMG_1379.jpg,1103.76,858.82,1759.97,3548.16,1.0,Directional Sign,0.514
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_80f216ed-Pre_2026_6647.jpg,880.53,808.0,1542.62,3992.0,1.0,,0.0003
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_87a2a97d-IMG_6417.jpeg,1566.72,1892.77,4101.76,5475.26,1.0,Other-Unknown,0.9879
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_8d5205a5-IMG_6322.jpeg,2148.0,963.38,2642.04,2319.84,1.0,,0.1844
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_8da30211-IMG_1389.jpg,982.8,334.66,2140.99,1560.38,1.0,Back-Unknown,0.9767
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_92113811-IMG_1371.jpg,1224.72,1681.34,2234.74,3511.87,1.0,Back-Unknown,0.9835
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_93c9acc6-Pre_2026_6752.jpg,2348.0,533.72,3284.0,1177.8,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_94c2771c-IMG_1367.jpg,1155.17,0.0,1902.1,310.46,1.0,Back-Unknown,0.9597
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_9adb1ffc-IMG_1447.jpg,1409.18,104.83,2020.03,612.86,1.0,,0.0433
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_9aea0791-Pre_2026_6686.jpg,544.98,720.0,880.53,1696.0,1.0,Back-Unknown,0.8727
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_aff5c880-IMG_6324.jpeg,1134.14,1263.02,1975.09,2156.59,1.0,Other-Unknown,0.9786
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_b40e574e-IMG_1307.jpg,2343.6,2761.92,2482.7,2923.2,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_b4a34518-Pre_2026_6659.jpg,578.76,1600.0,1029.16,2364.0,1.0,Back-Unknown,0.9539
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_badbe466-IMG_20251125_194752.jpg,1965.0,2096.0,2133.0,2376.0,1.0,Back-Unknown,0.6194
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_bdad925f-IMG_20251125_194953.jpg,1095.0,1284.0,1863.0,3028.0,1.0,,0.4468
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_cb23d6ca-IMG_20251125_190938.jpg,2835.0,2068.0,2997.0,2564.0,1.0,Back-Unknown,0.9148
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_cf483702-IMG_20251125_195623.jpg,1431.0,588.0,2139.0,2696.0,1.0,,0.4814
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_daaadabb-IMG_1451.jpg,1817.42,0.0,2180.3,657.22,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_ebb70ae4-Pre_2026_6672.jpg,900.8,596.0,1630.45,1372.0,1.0,Back-Unknown,0.9499
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_ee2f066e-IMG_20251125_194701.jpg,2283.0,2820.0,2997.0,3992.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp11_f3e6cd7a-IMG_6398.jpeg,75.49,635.64,1537.55,2886.87,1.0,Back-Unknown,0.9363
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_072bd818-IMG_4648.jpeg,1654.13,3398.98,3020.98,4023.94,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_091652b2-IMG20260105120954.jpg,1824.77,3076.1,2113.54,3293.18,1.0,,0.0001
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_094f8a9f-RV__2.jpeg,1230.77,1858.75,1723.68,3092.54,1.0,Pedestrian Crossing,0.96
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_0dd8c85f-RV_001_114.jpeg,2697.41,1786.18,2782.08,1899.07,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_0ea4c27e-RV_001_43.jpeg,913.25,1866.82,2147.04,2963.52,1.0,Stop Sign,0.9847
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_1bc3cf13-IMG_5516.jpeg,841.58,1453.2,914.08,1604.4,1.0,Other-Unknown,0.5112
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_1e8d03ef-IMG_4745.jpeg,780.19,745.92,2419.2,2386.94,1.0,Back-Unknown,0.9863
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_1ea7fc82-IMG_4719.jpeg,598.75,1169.28,2385.94,3092.54,1.0,Back-Unknown,0.989
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_213f8e9b-IMG20260105131202.jpg,261.12,839.68,2519.04,3002.37,1.0,No Entry (One Way),0.9855
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_2493a507-RV_001_172.jpeg,961.63,1439.42,1992.82,2278.08,1.0,Other-Unknown,0.9762
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_25ff97a8-IMG20260105132835.jpg,473.09,864.26,2737.15,4087.81,1.0,No Through Road (T-Junction),0.5972
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_265aa6a6-IMG_5573.jpeg,1321.49,1971.65,1690.42,2778.05,1.0,No Entry (One Way),0.9539
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_2f062204-IMG_5549.jpeg,1330.56,1318.46,1811.38,1786.18,1.0,,0.0094
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_335c2601-IMG_4793.jpeg,577.58,3753.79,1282.18,4023.94,1.0,Other-Unknown,0.9261
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_37e4fc9d-RV_001_33.jpeg,1006.99,1878.91,2116.8,3003.84,1.0,Back-Unknown,0.9687
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_39fe0c0b-IMG_4673.jpeg,870.91,753.98,2074.46,2511.94,1.0,Back-Unknown,0.9855
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_3b1bbe25-IMG_4677.jpeg,477.79,1008.0,2522.02,3278.02,1.0,Pedestrian Crossing,0.9812
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_46552970-IMG_5766.jpeg,1043.28,1632.96,1950.48,2636.93,1.0,No Through Road (T-Junction),0.9834
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_4b0be6d1-IMG20260105131256.jpg,1348.61,258.05,2104.32,1044.48,1.0,,0.0983
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_5068c583-IMG_4683.jpeg,1451.52,2963.52,1557.36,3108.67,1.0,,0.0037
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_52634fe4-IMG_20260108_180144.jpg,1305.6,0.0,2288.64,1126.4,1.0,Back-Unknown,0.9877
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_531e767b-IMG_4685.jpeg,317.52,1318.46,1968.62,3479.62,1.0,Back-Unknown,0.977
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_53e7c3c2-IMG_5568.jpeg,1717.63,2100.67,1838.59,2265.98,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_578dabe6-IMG_4802.jpeg,689.47,2173.25,1130.98,4023.94,1.0,,0.0039
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_598f8dcc-IMG_5777.jpeg,1048.04,1900.5,1208.79,2083.2,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_5eb024cb-IMG_20260108_180228.jpg,549.89,933.89,2565.12,2916.35,1.0,Back-Unknown,0.9895
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_64a36757-IMG20251230164429.jpg,648.19,2543.62,1981.44,4055.04,1.0,Back-Unknown,0.9834
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_69e094db-IMG20260103164903.jpg,420.86,647.17,2380.8,4087.81,1.0,No Through Road (T-Junction),0.6017
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_6ad1ae03-IMG_4778.jpeg,1481.76,0.0,2192.4,310.46,1.0,Other-Unknown,0.8627
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_7fcdb608-IMG_5767.jpeg,1288.22,1350.72,1708.56,2689.34,1.0,No Through Road (T-Junction),0.9774
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_8d820602-IMG_4687.jpeg,1654.13,3463.49,1753.92,3604.61,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_8fe876b9-IMG_4754.jpeg,1639.01,858.82,2264.98,3124.8,1.0,Pedestrian Crossing,0.9631
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_9082eb51-IMG20251230170110.jpg,1158.14,806.91,1972.22,4087.81,1.0,Roundabout Ahead,0.7525
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_a7df285e-RV_001_147.jpeg,1303.34,1209.6,1805.33,4023.94,1.0,,0.2236
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_a9638634-IMG20260105131308.jpg,989.18,724.99,2082.82,3252.22,1.0,Roundabout Ahead,0.9762
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_aa406f9d-IMG_4615.jpeg,819.5,1584.58,2041.2,2963.52,1.0,No Entry (One Way),0.9753
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_c74547eb-RV_001_38.jpeg,1242.86,1636.99,1817.42,3765.89,1.0,,0.4647
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_ca48394e-RV_001_125.jpeg,1708.56,2342.59,1871.86,2709.5,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_cb282f25-RV_001_112.jpeg,1911.17,1616.83,1998.86,1709.57,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_ce09cd20-IMG_4692.jpeg,423.22,3013.46,798.07,3773.44,1.0,,0.0157
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_d341fc22-IMG20260105131647.jpg,629.76,1024.0,2546.69,3141.63,1.0,Back-Unknown,0.9939
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_d64c06cd-IMG20260103165218.jpg,681.98,888.83,2568.19,2867.2,1.0,No Through Road (T-Junction),0.9846
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_d681b797-IMG20260105132903.jpg,2368.51,1232.9,3068.93,3489.79,1.0,Other-Unknown,0.9797
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_db486299-IMG_5815.jpeg,988.85,1471.68,2174.26,2515.97,1.0,No Through Road (T-Junction),0.9741
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_dbac3098-IMG_4803.jpeg,1294.27,959.62,2228.69,4023.94,1.0,No Entry (One Way),0.5576
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_e1306f94-IMG20251230164545.jpg,586.75,3018.75,2294.78,4087.81,1.0,Back-Unknown,0.9879
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_ec712362-IMG_5803.jpeg,846.31,1627.5,906.2,1793.4,1.0,,0.4337
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_f28bdb6c-RV_001_29.jpeg,1221.7,3511.87,1639.01,4023.94,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_f3f0450d-IMG20260105132606.jpg,638.98,1003.52,2279.42,4087.81,1.0,,0.3582
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_f4371c23-IMG_5562.jpeg,2219.62,907.2,2271.02,955.58,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_fa18c1a9-IMG_5810.jpeg,1209.6,0.0,1648.08,1641.02,1.0,Other-Unknown,0.9622
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_fd97d901-IMG20260105125535.jpg,2672.64,1978.37,2853.89,2199.55,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp1_fdedfd29-IMG_4737.jpeg,1170.29,580.61,1989.79,3310.27,1.0,No Through Road (T-Junction),0.994
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_1a942391-IMG_20251224_114123.jpg,1551.0,1136.0,1605.0,1660.0,1.0,No Through Road (T-Junction),0.7564
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_1d09be1b-MP_0034.jpg,1222.66,364.54,1357.82,1257.47,1.0,Back-Unknown,0.879
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_1f7e1b10-20251224_132557.jpg,1061.82,1485.12,1979.82,2235.84,1.0,Pedestrian Crossing,0.9756
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_21220c6f-IMG_20251223_114958.jpg,1296.0,1100.0,1893.0,3992.0,1.0,,0.1732
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_24c5c7cd-20251223_155820.jpg,2249.1,2533.68,2616.3,3280.32,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_24fcf1af-MP_0080.jpg,811.94,108.86,1546.78,3556.22,1.0,,0.2143
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_31ecc6f6-20251230_124942.jpg,982.26,1056.72,2218.5,2150.16,1.0,Back-Unknown,0.984
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_32305793-MP_0024.jpg,2104.32,1937.41,2644.99,4087.81,1.0,,0.0013
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_331688ad-20251223_152821.jpg,1588.14,1052.64,1848.24,2040.0,1.0,No Entry (One Way),0.9039
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_339c8d04-26.side.jpg,907.2,1141.06,1285.96,1499.9,1.0,Back-Unknown,0.922
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_3855fec5-20251223_150427.jpg,1502.46,701.76,1805.4,2223.6,1.0,No Through Road (T-Junction),0.9628
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_3d2ae4e7-IMG_20251223_114602.jpg,1341.0,1304.0,1626.0,3100.0,1.0,,0.0281
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_421f593e-20251224_132616.jpg,835.38,946.56,2331.72,4071.84,1.0,,0.3871
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_5061299f-MP_0130.jpg,766.58,584.64,1585.33,3798.14,1.0,,0.3037
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_5dd50184-MP_0013.jpg,1102.85,671.74,1333.25,1888.26,1.0,,0.1822
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_5e8f002c-IMG_20251223_132013.jpg,1824.0,2440.0,1905.0,2580.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_62c50d8e-20251230_121740.jpg,1162.8,1170.96,1260.72,1272.96,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_797d9987-MP_0038.jpg,1840.13,2732.03,3068.93,4087.81,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_7bccf907-IMG_20251223_114643.jpg,1335.0,1472.0,1455.0,1696.0,1.0,,0.0404
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_8042282f-20251223_150231.jpg,1162.8,0.0,1747.26,1982.88,1.0,No Entry (One Way),0.9534
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_85bab424-IMG_20251223_120632.jpg,1335.0,1196.0,1800.0,3628.0,1.0,,0.2057
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_86560763-IMG_20251223_113000.jpg,1161.0,1060.0,1404.0,1380.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_888b1f4f-MP_0074.jpg,1116.86,1090.91,3673.15,1183.9,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_9288cb02-IMG_20251223_114539.jpg,1110.0,1028.0,1473.0,1600.0,1.0,,0.0338
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_983dc626-30.side.jpg,1292.76,1068.48,1372.14,1596.67,1.0,No Entry (One Way),0.8994
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_ab84ff33-MP_0056.jpg,964.61,208.9,1861.63,4091.9,1.0,,0.2275
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_ab9b17dd-34.back.jpg,902.66,758.02,1363.07,1306.37,1.0,Back-Unknown,0.8818
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_b430b918-IMG_20251223_132103.jpg,1233.0,552.0,1797.0,1020.0,1.0,,0.0041
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_b7da3d82-20251230_123417.jpg,1759.5,1603.44,2273.58,2174.64,1.0,Back-Unknown,0.8981
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_bf4582b0-IMG_20251223_113056.jpg,924.0,1168.0,1239.0,3992.0,1.0,,0.2029
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_bf551d52-MP_0136.jpg,608.83,1331.32,2459.52,1843.88,1.0,,0.018
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_c39d026a-IMG_20251223_125605.jpg,1305.0,1096.0,1587.0,3992.0,1.0,,0.2406
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_c96ca64e-MP_0098.jpg,2173.25,1535.44,2237.76,1594.4,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_ccff3003-MP_0047.jpg,998.4,782.34,1446.91,4087.81,1.0,,0.0854
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_d1fa2493-20251230_123128.jpg,765.0,542.64,2105.28,1897.2,1.0,No Entry (One Way),0.9684
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_d201b393-MP_0004.jpg,1059.84,749.57,1096.7,1269.76,1.0,,0.007
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_d3fe8c38-MP_0046.jpg,958.46,352.26,1855.49,4022.27,1.0,,0.2546
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_d71e8065-MP_0021.jpg,1320.96,1830.91,1357.82,1904.64,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_e55dea8e-MP_0157.jpg,1281.02,1314.82,2012.16,2404.35,1.0,No Through Road (T-Junction),0.6406
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_ed201818-17.back.jpg,827.82,955.58,1335.85,1520.06,1.0,Back-Unknown,0.5582
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_ee20554d-MP_0115.jpg,798.34,322.06,1733.76,1603.48,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_f082e9d0-02.side.jpg,1059.16,334.66,1236.06,1116.86,1.0,Back-Unknown,0.5382
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_f69ebb76-IMG_20251227_110428.jpg,1050.0,1388.0,1689.0,2008.0,1.0,Back-Unknown,0.9709
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp2_f6e60d8b-33.front.back.jpg,748.44,2068.42,884.52,2197.44,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_09e3faa9-IMG_20251203_121602.jpg,1205.64,885.36,2236.86,1754.4,1.0,No Entry (One Way),0.9776
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_13fcb840-IMG_20251203_093318.jpg,1141.38,330.48,2013.48,4071.84,1.0,,0.2768
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_16b18930-IMG_4415.jpeg,1557.36,2415.17,1605.74,2503.87,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_17e38feb-20251129_115024.jpg,1832.94,3733.2,1881.9,3822.96,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_19cc8708-IMG_20251203_095416.jpg,1676.88,2211.36,1716.66,2305.2,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_2b9ed5a1-IMG_4416.jpeg,1542.24,3052.22,1708.56,3229.63,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_3cee3d85-IMG_4285.jpeg,1209.6,1310.4,1902.1,1882.94,1.0,Back-Unknown,0.9198
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_458db4bf-IMG_9314.jpg,1829.27,2221.97,2660.36,2810.3,1.0,Back-Unknown,0.953
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_4d14c289-20251129_122448.jpg,1260.72,1929.84,1796.22,2615.28,1.0,Back-Unknown,0.9545
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_4daf8454-IMG_4356.jpeg,759.02,2729.66,958.61,3657.02,1.0,,0.1991
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_5a350ee3-IMG_9144.jpg,2913.12,3598.56,2985.95,4649.57,1.0,,0.0929
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_5a5ec99c-IMG_4369.jpeg,1019.09,3185.28,1194.48,3378.82,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_5a849df3-20251129_113801.jpg,1095.48,722.16,1832.94,1464.72,1.0,Other-Unknown,0.971
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_5e84f6fa-20251129_114532.jpg,1217.88,2223.6,1422.9,4071.84,1.0,,0.0052
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_64c9c943-IMG_20251203_121935.jpg,1306.62,501.84,1897.2,2003.28,1.0,,0.4912
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_66257b80-IMG_9242.jpg,2022.05,594.05,2497.57,1942.08,1.0,No Entry (One Way),0.9593
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_6a5c994c-IMG_9361.jpg,1379.45,2816.02,1593.65,3055.92,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_72ce7bb8-IMG_20251203_121930.jpg,2001.24,2403.12,2096.1,2480.64,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_733addec-IMG_9083.jpg,432.68,3512.88,449.82,3547.15,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_76fb906e-20251129_122552.jpg,780.3,1880.88,1970.64,3121.2,1.0,Back-Unknown,0.9812
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_7b58307a-IMG_20251203_094229.jpg,1086.3,338.64,2258.28,1534.08,1.0,Back-Unknown,0.982
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_81a84d18-IMG_9109.jpg,1606.5,1359.46,2870.28,2598.96,1.0,Back-Unknown,0.9877
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_874592da-20251129_122245.jpg,1022.04,1970.64,1881.9,2815.2,1.0,Back-Unknown,0.9786
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_87ee400a-IMG_9122.jpg,1932.08,1330.9,2253.38,5700.58,1.0,,0.3086
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_8d66655f-IMG_4305.jpeg,1424.3,1322.5,1950.48,2415.17,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_913cab50-IMG_20251204_094538.jpg,749.7,297.84,2135.88,4071.84,1.0,,0.3806
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_915b758c-IMG_4287.jpeg,895.1,2963.52,949.54,3052.22,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_940c99a8-IMG_9166.jpg,2107.73,1730.74,2471.87,2935.97,1.0,Stop Sign,0.8953
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_9ff54512-IMG_20251203_093925.jpg,1943.1,2313.36,2004.3,2427.6,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_a9724b83-20251129_122439.jpg,1398.42,1219.92,1575.9,1880.88,1.0,Back-Unknown,0.9411
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_ae42a8a0-20251129_121839.jpg,1499.4,2525.52,1643.22,4071.84,1.0,,0.004
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_c0cc3ce0-IMG_20251203_115646.jpg,1141.38,542.64,2041.02,2354.16,1.0,Other-Unknown,0.5732
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_c7a58be8-IMG_20251203_121028.jpg,1269.9,399.84,2053.26,4071.84,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_ca162d3e-20251129_114653.jpg,1477.98,2802.96,1572.84,2998.8,1.0,Directional Sign,0.8047
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_def908c3-IMG_4315.jpeg,1242.86,1399.1,1917.22,2024.06,1.0,Back-Unknown,0.9684
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_e0a623d6-IMG_9293.jpg,2004.91,1445.14,2514.71,2827.44,1.0,No Through Road (T-Junction),0.965
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_e17ffb83-20251129_115005.jpg,2628.54,1607.52,2717.28,1676.88,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_e337de9a-IMG_4362.jpeg,1124.93,1882.94,1992.82,2709.5,1.0,Back-Unknown,0.9598
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_eb512649-IMG_4353.jpeg,1245.89,2024.06,1880.93,2653.06,1.0,Back-Unknown,0.9681
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_eb95b9a8-IMG_9119.jpg,1550.81,1742.16,1786.43,5700.58,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_ecbe9be3-IMG_20251204_100152.jpg,1386.18,811.92,2640.78,4071.84,1.0,,0.4773
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_f2a7e32a-IMG_4334.jpeg,1251.94,1786.18,1838.59,4023.94,1.0,,0.2451
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_f6ba6aba-IMG_4397.jpeg,1775.09,3624.77,2071.44,4023.94,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_facbf33e-IMG_9197.jpg,1824.98,2073.46,2077.74,3067.34,1.0,No Entry (One Way),0.9502
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp3_faf213d1-IMG_20251203_120236.jpg,942.48,950.64,2047.14,1729.92,1.0,Back-Unknown,0.7909
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_1d0747c0-20260107_105907.jpg,666.88,2414.37,1016.19,2683.37,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251130_114937.jpg,1131.0,1880.0,1215.0,2032.0,1.0,,0.001
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251130_115129.jpg,855.0,2224.0,2085.0,3992.0,1.0,No Entry (One Way),0.713
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251130_115523.jpg,993.0,1428.0,2034.0,3992.0,1.0,,0.4167
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251130_115532.jpg,1251.0,2848.0,1581.0,3776.0,1.0,Back-Unknown,0.9634
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251130_115613.jpg,1176.0,1468.0,1443.0,3992.0,1.0,Pedestrian Crossing,0.6129
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251130_115807.jpg,1611.0,1508.0,1683.0,1616.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251130_120143.jpg,1515.0,1688.0,1725.0,3084.0,1.0,Pedestrian Crossing,0.9472
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251130_120206.jpg,1035.0,1524.0,2205.0,2812.0,1.0,Back-Unknown,0.9906
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251219_134240.jpg,1167.0,1052.0,1845.0,1748.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251229_142249.jpg,915.0,1604.0,1215.0,1952.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251229_144322.jpg,909.0,1676.0,2223.0,2892.0,1.0,Back-Unknown,0.9846
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251229_145129.jpg,225.0,1448.0,2187.0,3992.0,1.0,Back-Unknown,0.5957
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251229_150338.jpg,714.0,2468.0,1887.0,3684.0,1.0,Roundabout Ahead,0.9856
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251229_151051.jpg,1014.0,1156.0,2388.0,3656.0,1.0,,0.4877
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251229_152158.jpg,456.0,1316.0,2511.0,3992.0,1.0,Back-Unknown,0.7333
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251231_160526.jpg,993.0,1496.0,2013.0,2448.0,1.0,No Through Road (T-Junction),0.9811
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251231_160545.jpg,1941.0,1640.0,2016.0,1776.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_20251231_160556.jpg,1845.0,1924.0,2043.0,2536.0,1.0,No Through Road (T-Junction),0.9295
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_219a5ac5-20251116_164504.jpg,679.62,1170.96,1311.02,2525.52,1.0,No Entry (One Way),0.9578
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_22bb020a-20251222_131805.jpg,2820.0,3388.0,2997.0,3992.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_25671e9a-WhatsApp_Image_2026-01-14_at_11.11.43_3.jpeg,1338.0,848.0,1498.5,1150.0,1.0,Back-Unknown,0.6692
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_2659e726-20260107_105845.jpg,475.27,1105.68,1632.46,2684.64,1.0,Roundabout Ahead,0.9802
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_303a684b-WhatsApp_Image_2026-01-14_at_11.12.36_1.jpeg,603.0,654.0,816.0,1996.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_3a0abdfb-20251116_161259.jpg,1033.2,412.08,1090.6,448.8,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_3a5008ad-20251222_141011.jpg,672.0,428.0,2163.0,3992.0,1.0,,0.362
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_420a4dea-20251222_131729.jpg,813.0,720.0,2367.0,2484.0,1.0,No Entry (One Way),0.9943
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_5996dfea-20251116_163330.jpg,1026.31,1562.64,1164.07,2150.16,1.0,No Entry (One Way),0.8256
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_5c62b2f6-20251117_104837.jpg,929.88,2354.16,1191.62,4071.84,1.0,,0.0012
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_5e204826-WhatsApp_Image_2026-01-14_at_11.11.36.jpeg,573.0,254.0,648.0,484.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_63c4320e-WhatsApp_Image_2026-01-14_at_11.10.32_3.jpeg,376.5,982.0,585.0,1314.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_66eacd8c-20260109_124456.jpg,1905.0,3496.0,2031.0,3644.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_763f17c4-20260107_150842.jpg,1085.78,2740.86,1361.16,3024.04,1.0,,0.0132
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,886.5,530.0,1065.0,670.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_7b6a28a6-WhatsApp_Image_2026-01-14_at_11.10.25_4.jpeg,685.5,1154.0,706.5,1188.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_81d58d34-20251222_132612.jpg,1515.0,2740.0,1566.0,2976.0,1.0,,0.4145
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_83705e8e-WhatsApp_Image_2026-01-14_at_11.10.28_3.jpeg,546.0,642.0,939.0,1044.0,1.0,Back-Unknown,0.9405
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,661.5,1214.0,682.5,1414.0,1.0,,0.1344
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_8b497905-20260107_150756.jpg,1037.79,2574.48,1244.43,2721.36,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_8bd079ee-20260107_105937.jpg,537.82,1114.17,1066.04,1652.96,1.0,Pedestrian Crossing,0.9766
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_935db33c-20260107_105737.jpg,642.88,1064.88,1577.35,4071.84,1.0,,0.2541
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_94287dbf-20260113_132935.jpg,936.0,1348.0,1791.0,2860.0,1.0,No Through Road (T-Junction),0.964
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_9a8f607e-20251222_141532.jpg,381.0,680.0,2130.0,3992.0,1.0,,0.4861
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_9c4db066-WhatsApp_Image_2026-01-14_at_10.34.44_2.jpeg,133.38,875.2,145.64,907.2,1.0,Directional Sign,0.6255
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_a3952dcd-20251116_170721.jpg,487.82,416.02,918.59,1188.64,1.0,,0.1665
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_abe76f20-20260109_124535.jpg,1761.0,3320.0,2997.0,3992.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_b3745e21-20251222_142059.jpg,804.0,572.0,1734.0,3992.0,1.0,,0.4804
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_b3d0eaa4-20251116_163427.jpg,888.55,1248.48,1421.22,2341.92,1.0,No Entry (One Way),0.9711
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_c909a40a-20251222_142239.jpg,2016.0,1167.19,2490.0,1278.78,1.0,,0.0013
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_cdcb1057-WhatsApp_Image_2026-01-14_at_11.11.40_1.jpeg,1010.0,772.5,1062.0,817.5,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_d1c1ed24-20260113_130204.jpg,1056.0,1572.0,1830.0,2348.0,1.0,No Through Road (T-Junction),0.9822
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_d3d2c193-20260109_124357.jpg,383.39,596.03,1934.06,2524.18,1.0,Back-Unknown,0.9753
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_d4ed28aa-20251222_141346.jpg,588.0,528.0,2181.0,3992.0,1.0,Back-Unknown,0.5138
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_d78448ea-20251117_105829.jpg,443.13,858.06,2132.98,2654.02,1.0,Back-Unknown,0.9813
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_d8a007d5-20260109_123932.jpg,1710.0,1660.0,1905.0,2316.0,1.0,,0.012
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_ddd42f22-20251116_162542.jpg,904.62,1795.2,1379.9,2533.68,1.0,No Entry (One Way),0.6323
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_dfec1b25-20260107_105532.jpg,349.86,1109.29,1199.13,1894.33,1.0,Back-Unknown,0.9755
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_e3a6bacf-20251222_140739.jpg,1149.0,2060.0,1335.0,3992.0,1.0,,0.0053
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_e47a8d80-20251116_163051.jpg,1003.35,1228.08,1370.71,2933.52,1.0,No Entry (One Way),0.9305
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_e63ad5ed-WhatsApp_Image_2026-01-14_at_11.10.19_1.jpeg,535.5,758.0,904.5,1130.0,1.0,No Through Road (T-Junction),0.9823
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,577.5,562.0,786.0,1138.0,1.0,No Through Road (T-Junction),0.9088
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_0f660dba-MichaelFarrugia_49_Back.jpg,1112.06,1101.6,1959.94,1921.68,1.0,Back-Unknown,0.9799
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_13ab0dbb-BenTaliana_59_Front.jpeg,907.2,3814.27,3769.42,6539.9,1.0,Back-Unknown,0.9634
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_1a462468-MichaelFarrugia_24_Back.jpg,1293.31,1219.92,2055.17,2688.72,1.0,Back-Unknown,0.5384
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_1f171b80-MelatAssefa_5_Front.jpg,1533.17,536.26,2373.84,1278.14,1.0,No Entry (One Way),0.9111
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_2141c95b-MelatAssefa_28_Side.jpg,1203.55,512.06,1877.9,1774.08,1.0,Back-Unknown,0.7987
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_27622289-BenTaliana_10_Front.jpeg,725.76,1830.53,3683.23,4660.99,1.0,No Entry (One Way),0.9842
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_28809400-MelatAssefa_23_Front.jpg,1381.97,2294.21,1578.53,2620.8,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1099.78,2733.6,1188.86,3259.92,1.0,,0.2026
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_30980873-BenTaliana_12_Front.jpeg,1583.06,120.96,2662.63,1241.86,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_3cd9a2bc-MelatAssefa_45_Side.jpg,910.22,810.43,2059.34,2939.33,1.0,Stop Sign,0.9832
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_3d564b26-AlisonAttard_15_Back.jpeg,1499.9,804.38,2709.5,1977.7,1.0,No Entry (One Way),0.6361
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,826.56,716.69,1358.78,1276.13,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1529.86,2656.08,1643.52,2782.56,1.0,No Through Road (T-Junction),0.8606
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_48cba720-BenTaliana_30_Front.jpeg,1292.76,3443.33,3705.91,8047.87,1.0,,0.4522
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1569.79,905.76,1876.99,1448.4,1.0,,0.0194
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_559514d7-AlisonAttard_13_Side.jpeg,1866.82,1003.97,1963.58,1158.19,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_57e0ac5f-AlisonAttard_27_Back.jpeg,1608.77,1575.5,2834.5,1977.7,1.0,,0.2961
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1623.89,2278.08,1669.25,2346.62,1.0,,0.4268
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_704b34ba-BenTaliana_38_Side.jpeg,759.78,971.71,1322.24,4023.94,1.0,,0.3636
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_770e5bfc-BenTaliana_60_Side.jpeg,827.82,745.92,1088.64,1701.5,1.0,,0.0041
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_7ae28afa-MelatAssefa_15_Front.jpg,1406.16,3923.14,1466.64,4023.94,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_85f27713-MelatAssefa_35_Side.jpg,2951.68,3073.06,3063.06,3227.28,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_9c857801-BenTaliana_43_Side.jpeg,3424.68,7410.82,3515.4,7620.48,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_9fd3af21-MichaelFarrugia_11_Back.jpg,1234.94,1415.76,1837.06,2195.04,1.0,Back-Unknown,0.9648
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_a1ced4bc-BenTaliana_22_Front.jpeg,2078.06,3095.8,3243.38,4263.46,1.0,Back-Unknown,0.8712
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_a5ec0025-BenTaliana_11_Front.jpeg,344.74,1814.4,3592.51,4394.88,1.0,No Entry (One Way),0.9707
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,1210.37,1056.72,1846.27,2211.36,1.0,No Entry (One Way),0.9515
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_a7e73d18-AlisonAttard_29_Back.jpeg,1770.05,1143.07,2636.93,1657.15,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1129.46,3205.44,1165.75,3302.21,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_a8752ff5-MelatAssefa_56_Side.jpg,1938.38,1153.15,2047.25,1270.08,1.0,,0.0086
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_ab2f9697-MichaelFarrugia_48_Side.jpg,1170.43,1954.32,1511.42,2598.96,1.0,Other-Unknown,0.9237
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_afdc6e4d-MelatAssefa_1_Side.jpg,1003.97,334.66,1614.82,1116.86,1.0,Back-Unknown,0.7117
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,1256.47,1677.31,2680.78,4749.7,1.0,No Through Road (T-Junction),0.9712
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_bbdd8a43-BenTaliana_44_Front.jpeg,2163.67,6168.96,2245.32,6604.42,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,743.9,1108.8,1546.78,2278.08,1.0,No Entry (One Way),0.9819
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_cc1fcae2-AlisonAttard_9_Back.jpeg,931.39,814.46,1989.79,3161.09,1.0,Back-Unknown,0.5021
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_cc77abda-MelatAssefa_34_Side.jpg,1520.82,902.5,2677.5,2553.26,1.0,No Entry (One Way),0.9638
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_cdd70210-BenTaliana_10_Side.jpeg,1487.81,1540.22,3361.18,4830.34,1.0,No Entry (One Way),0.9879
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_d29347ca-MelatAssefa_51_Side.jpg,1273.1,245.95,1799.28,2044.22,1.0,No Entry (One Way),0.9639
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1158.14,1423.92,1723.39,4071.84,1.0,,0.4415
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_e0bfe536-MelatAssefa_22_Front.jpg,1950.48,3350.59,2056.32,3407.04,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_e390d90e-MelatAssefa_55_Side.jpg,1593.65,959.62,2214.83,2096.3,1.0,No Entry (One Way),0.9709
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_e43a48bc-BenTaliana_53_Side.jpeg,489.89,1673.28,889.06,2197.44,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_e64b6a10-AlisonAttard_20_Side.jpeg,1334.59,1152.14,2628.86,1787.18,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1296.38,1542.24,2079.74,2337.84,1.0,No Through Road (T-Junction),0.9688
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_f3d53558-BenTaliana_52_Front.jpeg,743.9,1991.81,3506.33,8047.87,1.0,,0.3422
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1075.2,1672.8,1876.99,2411.28,1.0,No Through Road (T-Junction),0.9732
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_fc84e1fb-BenTaliana_3_Back.jpeg,471.74,2826.43,2265.73,3999.74,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_fea9ceb6-MichaelFarrugia_19_Back.jpg,1216.51,1219.92,2131.97,2272.56,1.0,Back-Unknown,0.9642
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp5_ff6aaac1-MichaelFarrugia_43_Front.jpg,0.0,1285.2,2838.53,2721.36,1.0,,0.1213
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_0d61ecda-IMG_6112.JPG,1140.05,1169.28,1254.96,1753.92,1.0,,0.0056
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_0dbbcef1-IMG_6167.JPG,1164.24,584.64,1466.64,2548.22,1.0,Pedestrian Crossing,0.9433
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_1fffe58c-IMG_6250.JPG,1829.52,866.88,1886.98,931.39,1.0,,0.0037
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_255dc793-IMG_0327.JPG,907.2,1569.46,3540.1,2083.54,1.0,,0.1503
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_264240ca-IMG_0303.JPG,2358.72,792.29,2572.42,922.32,1.0,,0.0019
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_34078a23-Screenshot_2025-12-05_144602.png,15.44,325.65,64.26,468.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_344c75b8-Screenshot_2025-12-05_150942.png,82.42,66.78,89.7,96.67,1.0,,0.0069
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_37c705bd-IMG_6247.JPG,1000.94,802.37,1034.21,850.75,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_386a5fef-IMG_6231.JPG,895.1,983.81,2032.13,2459.52,1.0,Back-Unknown,0.972
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_4c7d6d30-IMG_6226.JPG,1085.62,919.3,2110.75,1761.98,1.0,No Entry (One Way),0.985
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_5dd0fd95-IMG_6225.JPG,1049.33,584.64,2280.1,4023.94,1.0,,0.319
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_674b294f-Screenshot_2025-12-05_140949.png,365.0,47.85,527.73,348.99,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_6b4047ef-IMG_6230.JPG,1079.57,592.7,1584.58,4023.94,1.0,Stop Sign,0.5493
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_8387f659-Screenshot_2025-12-05_134458.png,81.76,14.43,121.03,168.83,1.0,No Entry (One Way),0.6137
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_8dee1009-IMG_6205.JPG,1037.23,1334.59,1772.06,2197.44,1.0,No Entry (One Way),0.9588
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_92b4ef64-IMG_6151.JPG,2162.16,3092.54,2322.43,3350.59,1.0,Back-Unknown,0.6787
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_98681b01-IMG_6123_2.JPG,1623.89,2253.89,3020.98,4023.94,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_9c79fb63-Screenshot_2025-12-05_143920.png,133.2,32.0,185.62,103.28,1.0,Back-Unknown,0.8295
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_9e084d7c-IMG_0221.JPG,2866.75,2620.8,3020.98,3003.84,1.0,,0.4628
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_a1b61997-Screenshot_2025-12-05_133641.png,161.0,227.22,168.74,246.59,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_a7041b20-IMG_6175.JPG,1094.69,3221.57,1194.48,3443.33,1.0,,0.3244
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_ba6a303c-IMG_0314.JPG,250.99,850.75,2210.54,4023.94,1.0,,0.3793
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_c8db20f0-IMG_6257.JPG,1593.65,3084.48,2416.18,3229.63,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_cebbcc7c-Screenshot_2025-12-05_141232.png,69.62,76.38,77.38,104.0,1.0,,0.0004
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,113.85,121.11,127.77,181.92,1.0,,0.163
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_d33c21c3-IMG_6246.JPG,644.11,806.4,2065.39,2036.16,1.0,Back-Unknown,0.9428
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_e4766ab1-Screenshot_2025-12-05_134942.png,132.31,21.45,197.81,260.19,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_ec035947-IMG_6142.JPG,1548.29,2294.21,1890.0,2931.26,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp6_f6200360-IMG_6254.JPG,1527.12,2729.66,1557.36,2782.08,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_01ba126c-IMG_1741.jpg,907.2,87.7,3415.1,2461.54,1.0,Pedestrian Crossing,0.5929
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_0c807ae1-IMG_1804.jpg,1229.76,151.2,3394.94,2773.01,1.0,,0.4479
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_0cc91b71-IMG_2114.JPG,2979.65,2404.08,3229.63,2546.21,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_17ffbc31-IMG_6632.jpeg,1233.79,2157.12,1366.85,2415.17,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_18034905-IMG_6798.jpeg,1291.25,1802.3,1394.06,2076.48,1.0,No Entry (One Way),0.8886
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_3199d5af-IMG_6619.jpeg,1657.15,2177.28,1705.54,2237.76,1.0,Pedestrian Crossing,0.8588
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_3335816b-IMG_1863.jpg,1028.16,223.78,3802.18,2893.97,1.0,,0.4955
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_40a131c0-20251215_144819.jpg,1059.16,1229.76,1258.74,4023.94,1.0,,0.1091
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_4c22ebaa-IMG_6807.jpeg,1496.88,1971.65,1929.31,3673.15,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_4f01ce86-IMG_1927.jpg,1419.26,93.74,3201.41,2585.52,1.0,,0.3828
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_51efaffb-IMG_2323.JPG,1569.46,1249.92,1844.64,1596.67,1.0,Back-Unknown,0.8504
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_55fe17bd-IMG_6660.jpeg,1527.12,1761.98,1557.36,1822.46,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_57ce1f54-20251215_150337.jpg,1059.16,1096.7,1272.35,4023.94,1.0,,0.3285
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_5fe0adac-IMG_2351.JPG,1097.71,983.81,1811.38,1786.18,1.0,Back-Unknown,0.9789
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_65ce4c26-IMG_1752.jpg,455.62,1303.34,4027.97,1826.5,1.0,,0.1388
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_66312f27-IMG_1789.jpg,927.36,1309.39,4027.97,1639.01,1.0,,0.0607
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_70806c3a-20251206_161309.jpg,855.04,1193.47,1617.08,1907.14,1.0,Back-Unknown,0.98
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_81ace7bd-IMG_1823.jpg,1657.15,695.52,3334.46,2797.2,1.0,,0.3521
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_87ab4012-IMG_1929.jpg,1830.53,145.15,3479.62,2549.23,1.0,,0.3419
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_8a80058d-20251215_151420.jpg,968.44,1116.86,1295.03,2016.0,1.0,Other-Unknown,0.9082
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_8b5130c3-IMG_1856.jpg,1326.53,1436.4,4027.97,1775.09,1.0,,0.0378
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_917e5bd8-IMG_2117.JPG,1020.1,202.61,3592.51,2754.86,1.0,No Entry (One Way),0.6027
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_93d54be7-IMG_6607.jpeg,1811.38,2205.5,1829.52,2237.76,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_9ceccc7e-IMG_2183.JPG,1399.1,710.64,2778.05,2116.8,1.0,Back-Unknown,0.5792
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_a685cd57-IMG_2291.JPG,1593.65,3858.62,2252.88,4023.94,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_b3afe886-IMG_1875.jpg,1229.76,1466.64,3374.78,1654.13,1.0,,0.0555
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_b45f5f31-IMG_2274.JPG,1055.38,1512.0,1502.93,1979.71,1.0,Back-Unknown,0.9592
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_b552bf33-20251215_150109.jpg,1031.94,213.7,1213.38,520.13,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_b65b2b8e-20251215_143141.jpg,1090.91,1253.95,1295.03,2326.46,1.0,No Through Road (T-Junction),0.9647
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_c1d05649-IMG_2109.JPG,3576.38,1103.76,4027.97,1678.32,1.0,,0.0126
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_c21d51bf-IMG_6622.jpeg,1224.72,947.52,1714.61,2790.14,1.0,,0.2386
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_c3ab6f98-IMG_2186.JPG,612.86,105.84,3229.63,2878.85,1.0,Back-Unknown,0.5507
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_cddeeb7f-IMG_6636.jpeg,1351.73,1350.72,1397.09,1415.23,1.0,,0.009
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_d36e330f-20251215_150902.jpg,1530.9,971.71,2265.73,1326.53,1.0,,0.0329
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_d7ded33c-IMG_6742.jpeg,1224.72,1455.55,1635.98,2124.86,1.0,Back-Unknown,0.5516
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_db87303d-20251215_144613.jpg,1081.84,729.79,1236.06,2044.22,1.0,No Entry (One Way),0.9052
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_dfd0a665-IMG_2360.JPG,1536.19,1128.96,1817.42,1761.98,1.0,Back-Unknown,0.9407
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_ef873d66-20251215_143818.jpg,1598.94,2278.08,1973.16,2653.06,1.0,Back-Unknown,0.9549
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_f5c11235-IMG_2319.JPG,2261.95,1339.63,2382.91,1448.5,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_f74b48d8-IMG_1768.jpg,1528.13,3.02,3661.06,3017.95,1.0,,0.3829
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_f7f0f5bb-IMG_6628.jpeg,1043.28,0.0,1261.01,3544.13,1.0,,0.0139
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp7_fb3a590f-IMG_6793.jpeg,1381.97,2310.34,1657.15,2955.46,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_04258956-back.jpg,1709.57,1388.02,2020.03,2144.02,1.0,Back-Unknown,0.9454
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_06980edd-front.jpg,1338.62,898.13,2608.7,2116.8,1.0,Roundabout Ahead,0.9655
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_1023d97f-front.jpg,1483.78,0.0,2653.06,928.37,1.0,Other-Unknown,0.9849
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_14aaa44c-IMG_0211.JPG,3204.43,1636.49,5706.29,2206.26,1.0,,0.1466
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_15b9a2f4-Back.jpg,1126.66,561.15,1246.46,765.95,1.0,,0.0087
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_1b5dcc93-back.jpg,569.09,1699.84,1539.07,2600.96,1.0,Back-Unknown,0.9587
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_1e3225cd-IMG_0085.jpg,1276.63,913.92,2244.82,5700.58,1.0,,0.3923
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_2aed70e2-front.jpg,472.32,2240.51,1868.54,3059.71,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_2d237c79-side.jpg,2520.0,1394.06,2886.91,1805.33,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_2e0ed656-front.jpg,1294.27,852.77,2681.28,2071.44,1.0,Stop Sign,0.9825
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_3799bcb2-side.jpg,1278.72,1863.68,1739.52,2306.05,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_3ab29317-front.jpg,654.34,1355.78,1679.62,4087.81,1.0,,0.397
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_3b4e798b-front.jpg,1209.0,1204.0,1695.0,1680.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_3e16c892-IMG_0188.JPG,2507.57,1306.62,4209.74,2870.28,1.0,,0.3759
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_4682619f-back.jpg,1427.33,756.0,2669.18,1859.76,1.0,Back-Unknown,0.9755
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_4802289d-side.jpg,1233.0,1368.0,1593.0,1892.0,1.0,,0.3132
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_4c496fb4-side.jpg,1370.88,1462.27,1813.25,2011.14,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_4fe75feb-IMG_0243.JPG,873.94,779.69,3467.18,3350.09,1.0,,0.4331
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_5043579c-side.jpg,1731.0,3660.0,2031.0,3992.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_555bcf3a-front.jpg,1299.0,836.0,2151.0,3992.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_58621eda-IMG_0203.JPG,1416.58,1156.68,3775.63,2780.32,1.0,Pedestrian Crossing,0.5979
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_5f257ae9-IMG_0112.jpg,1199.52,1153.82,3842.75,5700.58,1.0,Back-Unknown,0.6048
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_646a4174-side.jpg,903.0,860.0,1821.0,2860.0,1.0,Auxiliary Sign,0.8811
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_6b72502b-back.jpg,506.88,872.45,1850.11,4087.81,1.0,,0.4275
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_70a9ea7f-side.jpg,975.0,520.0,1665.0,1556.0,1.0,No Entry (One Way),0.9816
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_77233a9d-IMG_0190_Blurred.JPG,1019.59,1342.32,2960.24,5700.58,1.0,,0.4543
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_838e07cd-IMG_0097.jpg,929.63,2724.62,3302.96,5135.09,1.0,Back-Unknown,0.977
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_8bd74996-side.jpg,1882.94,958.61,2161.15,3017.95,1.0,,0.4095
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_8e544be4-side.jpg,1599.0,308.0,1746.0,632.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_8edb630b-IMG_0208.JPG,2564.69,3105.9,3570.0,4275.43,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_8ff667a0-IMG_0209.JPG,3718.51,1195.24,3969.84,1413.72,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_9a101d8f-side.jpg,1212.0,1820.0,1515.0,3996.0,1.0,,0.0638
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_9f69e083-Front.jpg,972.29,1683.46,1426.18,2166.78,1.0,Stop Sign,0.9052
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_a27e76cc-back.jpg,945.0,1336.0,2085.0,3992.0,1.0,,0.3418
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_aa3bff09-side.jpg,1854.72,765.95,2101.25,1052.67,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_aafe9a1b-front.jpg,1233.0,3872.0,1521.0,3996.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_ad4861cb-back.jpg,1532.16,1657.15,2310.34,2434.32,1.0,Back-Unknown,0.9375
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_aeadaf7d-Side.jpg,725.76,720.9,1430.78,4087.81,1.0,,0.4124
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_b1123daa-front.jpg,953.86,2732.03,1103.62,2793.47,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_b6ae6e3d-back.jpg,945.0,1524.0,2097.0,3992.0,1.0,,0.456
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_b9028e28-side.jpg,1946.88,2994.18,2209.54,3256.32,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_c01f5341-IMG_0123.jpg,1816.42,948.19,2814.59,2953.1,1.0,No Entry (One Way),0.9873
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_c89fb86b-IMG_0117.jpg,1876.39,1445.14,2506.14,3410.06,1.0,No Through Road (T-Junction),0.9762
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_c96fcc1a-IMG_0217.JPG,2010.62,1460.84,3261.55,2634.66,1.0,No Entry (One Way),0.5011
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_d8e91d56-side.jpg,1790.21,873.94,2060.35,1781.14,1.0,No Entry (One Way),0.9822
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_dd88f02c-IMG_0092.jpg,2069.17,3312.96,2377.62,5700.58,1.0,,0.0393
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_ea4926f3-side.jpg,1065.0,2868.0,1212.0,3036.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_f3e45a2c-front.jpg,1048.32,3354.62,1661.18,3420.16,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp8_f5d48b4c-front.jpg,1443.46,2815.34,1596.67,3017.95,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_01e24ee9-IMG_20251106_145403.jpg,1354.75,864.26,1806.34,2977.79,1.0,Back-Unknown,0.5566
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_01ed8620-IMG_20251111_162316.jpg,909.0,1308.0,1146.0,3808.0,1.0,,0.1704
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_04c8a7cf-IMG_20251211_162331.jpg,1404.54,2060.4,2044.08,4071.84,1.0,,0.3062
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_109ae844-20251122_134645.jpg,1263.0,1428.0,1383.0,2680.0,1.0,,0.1912
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_1792c5c3-WhatsApp_Image_2026-01-03_at_18.45.37.jpeg,488.4,808.0,860.4,1596.8,1.0,,0.4188
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_21d58e17-S3_back.jpg,465.0,2140.0,615.0,2220.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_29bd496f-IMG_20251106_153126.jpg,1311.0,1480.0,1446.0,2236.0,1.0,No Entry (One Way),0.9141
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_2c12e74f-IMG_20251106_141727.jpg,1468.42,1433.13,1661.95,4028.93,1.0,,0.1209
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_31a93fb3-20251122_141601.jpg,1485.0,1440.0,1743.0,3836.0,1.0,,0.0469
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_37f0c8a3-IMG_20251111_162207.jpg,1530.0,1828.0,1626.0,2416.0,1.0,Roundabout Ahead,0.8826
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_3cb31cc9-IMG_20251106_141426.jpg,654.34,1544.57,2334.72,3003.1,1.0,Pedestrian Crossing,0.8858
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_42edbee1-IMG_20251210_142157.jpg,1276.02,1995.12,1872.72,4071.84,1.0,,0.2421
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_4319ca3a-WhatsApp_Image_2026-01-03_at_18.45.41.jpeg,670.8,539.2,766.8,891.2,1.0,Other-Unknown,0.9245
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,642.0,1448.0,662.4,1483.2,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_48f9d230-IMG_20251112_155513.jpg,1817.64,2668.32,1872.72,2966.16,1.0,,0.1772
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_561ba1c4-IMG_20251111_162044.jpg,2016.0,2600.0,2997.0,3800.0,1.0,,0.0005
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_58c8b920-IMG_20251106_153249.jpg,1385.47,1593.34,1815.55,1986.56,1.0,Back-Unknown,0.9816
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_5b67e831-IMG_20251106_155530.jpg,936.0,1012.0,1902.0,1820.0,1.0,Back-Unknown,0.898
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_636a2125-IMG_20251111_155635.jpg,1317.0,1528.0,1932.0,2036.0,1.0,Back-Unknown,0.9337
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_673470fc-IMG_20251111_160954.jpg,2001.0,2496.0,2055.0,2660.0,1.0,Directional Sign,0.5682
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_6867b383-IMG_20251111_160020.jpg,1194.0,1688.0,1725.0,2892.0,1.0,,0.3212
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_6ad958e6-IMG_20251112_155635.jpg,1230.12,1272.96,1707.48,4071.84,1.0,,0.3081
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_6e84abf6-IMG_20251106_145409.jpg,1007.62,1064.96,2328.58,4087.81,1.0,,0.2897
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_73c5c90a-IMG_20251106_152941.jpg,141.0,3136.0,981.0,3684.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_76700fa1-IMG_20251111_162238.jpg,2115.0,2616.0,2187.0,2856.0,1.0,Directional Sign,0.7083
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_7b22f970-IMG_20251106_152243.jpg,2673.0,1420.0,2850.0,2088.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_7d690022-WhatsApp_Image_2026-01-03_at_18.45.17_5.jpeg,620.4,273.6,882.0,1596.8,1.0,,0.1224
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_91c9ea8f-IMG_20251112_162243.jpg,1468.8,554.88,2448.0,734.4,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_93cceec3-IMG_20251112_162528.jpg,985.32,718.08,2659.14,2443.92,1.0,Back-Unknown,0.9844
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_a3c63c83-IMG_20251112_162857.jpg,1291.32,1175.04,1722.78,2040.0,1.0,Back-Unknown,0.9446
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_a745c9e2-IMG_20251106_152554.jpg,1385.47,2048.0,2171.9,4087.81,1.0,,0.409
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_a7e54ad2-IMG_20251210_141604.jpg,1392.3,1130.16,1594.26,2223.6,1.0,No Entry (One Way),0.9329
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_ae723934-WhatsApp_Image_2026-01-03_at_18.45.36.jpeg,750.0,875.2,800.4,1046.4,1.0,Street Sign,0.8852
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_b775d113-IMG_20251111_162326.jpg,2094.0,1296.0,2211.0,1428.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_b8edf87e-IMG_20251106_153308.jpg,1263.0,2300.0,1545.0,2624.0,1.0,Back-Unknown,0.8719
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_c7a4a215-20251122_140026.jpg,0.0,2032.0,195.0,3640.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_cedb2f14-NE3_front.jpg,1476.0,1696.0,1914.0,3936.0,1.0,,0.173
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_d4f4f35a-WhatsApp_Image_2026-01-01_at_18.12.59_1.jpeg,551.42,796.67,867.84,2045.95,1.0,,0.1831
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_d7c813cb-IMG_20251112_163545.jpg,1952.28,2598.96,2096.1,3280.32,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_dbd6345f-IMG_20251106_155229.jpg,1084.42,1003.52,2110.46,2093.06,1.0,Back-Unknown,0.9807
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_dfbf929f-IMG_20251106_154024.jpg,1158.14,487.42,1222.66,618.5,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_e0e8c13e-IMG_20251113_163444.jpg,1269.9,1272.96,1533.06,4071.84,1.0,,0.1631
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_e1897726-WhatsApp_Image_2026-01-03_at_18.45.38_3.jpeg,436.8,376.0,906.0,1094.4,1.0,,0.4398
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_e2932f32-20251122_134050.jpg,1296.0,2140.0,2187.0,2960.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_e65623ae-20251122_135723.jpg,1845.0,2044.0,2091.0,2368.0,1.0,Auxiliary Sign,0.8518
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_e690fe37-IMG_20251111_162300.jpg,1215.0,2616.0,1263.0,2812.0,1.0,,0.1629
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_e8541d39-IMG_20251106_145533.jpg,1176.0,2660.0,1716.0,3100.0,1.0,,0.0358
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_e8b17764-ZC8_front.jpg,1131.0,2212.0,1482.0,2560.0,1.0,Pedestrian Crossing,0.9059
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_f109e3eb-IMG_20251111_144036.jpg,1167.0,1340.0,1947.0,3992.0,1.0,,0.0
+Cosmos Reason2 2B,sens-mtsd-mirror-02,roadside convex mirror for blind spots,grp9_f456c0fd-IMG_20251106_153809.jpg,1431.0,2628.0,1500.0,3028.0,1.0,,0.0

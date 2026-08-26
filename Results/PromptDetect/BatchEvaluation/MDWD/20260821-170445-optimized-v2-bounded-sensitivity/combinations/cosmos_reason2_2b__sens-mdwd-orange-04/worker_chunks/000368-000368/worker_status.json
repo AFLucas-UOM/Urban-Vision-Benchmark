@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "sens-mdwd-orange-04",
+  "prompt": "find all orange waste bags",
+  "image_start": 368,
+  "image_end": 369,
+  "n_images": 1,
+  "n_prediction_rows": 1,
+  "max_detections": 28,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 2560,
+  "model_status": {
+    "model": "Cosmos Reason2 2B",
+    "model_load_ms": 9790.8,
+    "ok": true,
+    "label": "Cosmos Reason2 2B",
+    "source": "nvidia/Cosmos-Reason2-2B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-22T00:28:25.590847+00:00",
+  "finished_at": "2026-08-22T00:28:39.217658+00:00"
+}

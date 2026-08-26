@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "SAM 3.1",
+  "prompt_id": "sens-mtsd-mirror-03",
+  "prompt": "convex traffic mirror used to improve road visibility",
+  "image_start": 0,
+  "image_end": 747,
+  "n_images": 747,
+  "n_prediction_rows": 2053,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "SAM 3.1",
+    "model_load_ms": 8828.7,
+    "ok": true,
+    "label": "SAM 3.1",
+    "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+    "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-22T10:36:19.783933+00:00",
+  "finished_at": "2026-08-22T10:40:20.496738+00:00"
+}

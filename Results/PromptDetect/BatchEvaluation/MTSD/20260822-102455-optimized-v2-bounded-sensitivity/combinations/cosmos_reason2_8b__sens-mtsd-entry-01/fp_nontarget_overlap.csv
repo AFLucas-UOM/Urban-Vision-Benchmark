@@ -1,0 +1,412 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_1495.jpg,2146.28,4323.98,2274.8,4746.67,1.0,Auxiliary Sign,0.8448
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_1527.jpg,779.69,953.9,2394.76,2644.66,1.0,Back-Unknown,0.9805
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_1564.jpg,1623.64,3170.16,2814.59,4803.79,1.0,Other-Unknown,0.9751
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_1593.jpg,454.1,1765.01,2583.25,4244.02,1.0,Back-Unknown,0.6587
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_1597.jpg,1135.26,2290.51,3054.49,4226.88,1.0,Back-Unknown,0.6483
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_1606.jpg,1426.57,2421.89,2373.34,3964.13,1.0,Back-Unknown,0.9701
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_1612.jpg,1366.6,1365.17,2964.53,2970.24,1.0,Back-Unknown,0.9895
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_1645.jpg,1032.44,2359.06,2741.76,4244.02,1.0,Blind-Spot Mirror (Convex Mirror),0.9771
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251123_141844.jpg,418.08,1248.48,759.2,2182.53,1.0,,0.3821
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251123_141844.jpg,1035.84,1322.46,1291.68,2034.56,1.0,,0.2175
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251123_143317.jpg,488.8,864.69,1478.88,1886.59,1.0,Back-Unknown,0.9748
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251123_150542.jpg,958.88,291.31,1295.84,1447.31,1.0,Roundabout Ahead,0.9697
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251123_165832.jpg,634.4,1840.35,1212.64,2880.75,1.0,Blind-Spot Mirror (Convex Mirror),0.9331
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_113844.jpg,868.0,906.3,2152.64,2224.14,1.0,Back-Unknown,0.975
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_121131.jpg,846.56,2261.14,1383.2,2913.12,1.0,Blind-Spot Mirror (Convex Mirror),0.9624
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_121142.jpg,39.52,3676.08,309.92,4009.01,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_121957.jpg,1704.75,2594.06,1819.33,2806.77,1.0,Auxiliary Sign,0.8451
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_122125.jpg,669.76,1757.12,1397.76,3195.18,1.0,Pedestrian Crossing,0.9571
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_122225.jpg,3222.02,2399.86,3399.09,2654.18,1.0,Auxiliary Sign,0.8936
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_122826.jpg,295.12,2353.62,2128.34,4577.76,1.0,Back-Unknown,0.9715
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_123112.jpg,241.28,1512.05,1545.44,2751.28,1.0,Stop Sign,0.975
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251125_124400.jpg,557.44,1558.29,1516.32,3306.16,1.0,No Through Road (T-Junction),0.9667
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251126_123524.jpg,1859.52,3643.71,2077.92,4286.45,1.0,Auxiliary Sign,0.9567
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20251126_123910.jpg,594.88,2043.81,1576.64,3005.6,1.0,Other-Unknown,0.9442
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260106_160010_253.jpg,998.4,742.56,2076.67,2023.68,1.0,Roundabout Ahead,0.7106
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260106_160549_637.jpg,1655.81,1754.4,2168.83,2097.12,1.0,,0.403
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260110_171243_436.jpg,967.68,1040.4,1944.58,1978.8,1.0,Other-Unknown,0.9669
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260110_172451_501.jpg,2235.84,1198.08,2937.6,2214.91,1.0,,0.2115
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260110_173056_747.jpg,1187.28,1152.0,2394.96,1904.64,1.0,,0.4246
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260113_083600_409.jpg,738.48,832.51,2260.32,2629.63,1.0,,0.3167
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260113_083728_516.jpg,697.68,620.54,2476.56,2657.28,1.0,,0.3147
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260113_083821_567.jpg,3402.72,592.9,3602.64,737.28,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260113_084856_622.jpg,1831.92,878.59,2598.96,2049.02,1.0,,0.3293
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260113_085011_841.jpg,918.0,531.46,2227.68,2466.82,1.0,,0.3448
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_IMG_20260113_085024_440.jpg,1305.6,878.59,2272.56,2027.52,1.0,,0.4073
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-16 at 17.52.23 (3).jpeg,156.06,726.24,1288.26,1762.56,1.0,Stop Sign,0.9837
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-16 at 17.52.25 (1).jpeg,110.16,416.16,598.23,1164.84,1.0,Back-Unknown,0.9785
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-17 at 12.38.32 (2).jpeg,296.82,626.28,1072.53,1272.96,1.0,Other-Unknown,0.9789
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-17 at 12.38.37 (2).jpeg,1164.33,1811.52,1311.21,2037.96,1.0,No Through Road (T-Junction),0.9239
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-17 at 15.01.27 - Edited.jpg,543.15,456.96,1196.46,997.56,1.0,Other-Unknown,0.9679
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-17 at 15.01.44.jpeg,166.77,1966.56,188.19,1997.16,1.0,,0.108
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-17 at 15.01.45 (3).jpeg,229.5,526.32,1233.18,1538.16,1.0,Back-Unknown,0.9836
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-17 at 15.01.54.jpeg,263.16,197.88,1314.27,1201.56,1.0,Back-Unknown,0.9767
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp10_WhatsApp Image 2025-11-20 at 16.03.01 (1).jpeg,625.77,671.16,1083.24,1115.88,1.0,Other-Unknown,0.9767
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_00ffbbb0-IMG_20251125_195040.jpg,1110.0,1796.0,1179.0,1916.0,1.0,,0.4468
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_089d4626-IMG_20251125_192354.jpg,1437.0,1004.0,2175.0,1788.0,1.0,Other-Unknown,0.9521
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_08da688f-IMG_6393.jpeg,0.0,703.08,3494.59,2788.76,1.0,Other-Unknown,0.5612
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_0ac2eda8-IMG_6412.jpeg,2478.96,2092.09,4382.0,3098.7,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_1346633a-IMG_20251125_195535.jpg,897.0,1776.0,1554.0,2444.0,1.0,Other-Unknown,0.9601
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_1c6ec821-IMG_20251125_194942.jpg,1050.0,1164.0,1824.0,1948.0,1.0,Other-Unknown,0.9606
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_387a3e09-IMG_6403.jpeg,1102.69,846.38,2564.4,2651.36,1.0,,0.4254
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_4029b5b7-Pre_2026_6760.jpg,2168.0,662.09,2692.0,1231.84,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_4a7fe027-Pre_2026_6682.jpg,1508.84,2252.0,1837.63,2544.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_4a8ce21e-IMG_20251125_194252.jpg,126.0,1872.0,354.0,2112.0,1.0,Other-Unknown,0.8413
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_578f49cf-IMG_6367.jpeg,346.75,1254.96,2072.45,2255.9,1.0,,0.1085
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_5c71ae7e-IMG_6256.jpeg,1971.65,3136.9,2107.73,3298.18,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_6d03b071-IMG_6395.jpeg,1124.93,1164.24,2499.84,2407.1,1.0,,0.3915
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_87a2a97d-IMG_6417.jpeg,1566.72,1885.52,4101.76,5504.27,1.0,Other-Unknown,0.9832
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_8d5205a5-IMG_6322.jpeg,859.2,1153.48,2156.59,2219.96,1.0,,0.2048
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_8da30211-IMG_1389.jpg,979.78,330.62,2150.06,1576.51,1.0,Back-Unknown,0.9778
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_93c9acc6-Pre_2026_6752.jpg,2348.0,526.97,3280.0,1177.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_9e3f1527-IMG_6303.jpeg,1310.4,583.63,2584.51,2446.42,1.0,,0.3481
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_a9ff1854-IMG_6408.jpeg,1838.59,665.28,3120.77,1847.66,1.0,,0.4171
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_aff5c880-IMG_6324.jpeg,1130.92,1254.43,1978.31,2160.89,1.0,Other-Unknown,0.9786
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_b25d900c-Pre_2026_6648.jpg,722.89,924.0,1319.67,1608.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9824
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_b40e574e-IMG_1307.jpg,1218.67,270.14,1989.79,1068.48,1.0,Other-Unknown,0.9887
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_badbe466-IMG_20251125_194752.jpg,2001.0,2096.0,2124.0,2324.0,1.0,Back-Unknown,0.5772
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_bdad925f-IMG_20251125_194953.jpg,2427.0,1084.0,2523.0,1364.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_e27435a0-IMG_20251125_194217.jpg,813.0,1124.0,1638.0,1908.0,1.0,Back-Unknown,0.8798
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_ebb70ae4-Pre_2026_6672.jpg,414.37,2276.0,781.44,2388.0,1.0,Other-Unknown,0.8351
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_ee2f066e-IMG_20251125_194701.jpg,1848.0,2356.0,1890.0,2476.0,1.0,,0.3925
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_f09e9bf4-Pre_2026_6657.jpg,502.2,508.0,1650.72,1764.0,1.0,Pedestrian Crossing,0.9753
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_f0c7f95a-IMG_6420.jpeg,711.51,1145.02,3435.05,2095.66,1.0,,0.3058
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_f3e6cd7a-IMG_6398.jpeg,67.54,646.23,1613.04,2876.27,1.0,Back-Unknown,0.9835
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp11_f71868de-IMG_20251125_191832.jpg,303.0,356.0,1002.0,1328.0,1.0,Back-Unknown,0.9703
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_02ac92f5-IMG20251123165127.jpg,1431.55,1380.35,2012.16,2871.3,1.0,Blind-Spot Mirror (Convex Mirror),0.9797
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_072bd818-IMG_4648.jpeg,1106.78,1431.36,1784.16,3100.61,1.0,Stop Sign,0.9773
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_091652b2-IMG20260105120954.jpg,485.38,1028.1,2777.09,3076.1,1.0,Auxiliary Sign,0.9873
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_094f8a9f-RV__2.jpeg,1067.47,1205.57,1826.5,2007.94,1.0,Other-Unknown,0.9754
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_0dd8c85f-RV_001_114.jpeg,1923.26,3177.22,2059.34,3382.85,1.0,Other-Unknown,0.8355
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_0ea4c27e-RV_001_43.jpeg,916.27,1866.82,2147.04,2959.49,1.0,Stop Sign,0.9859
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_1bc3cf13-IMG_5516.jpeg,841.58,1530.9,896.74,1606.5,1.0,No Through Road (T-Junction),0.7535
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_1e8d03ef-IMG_4745.jpeg,1049.33,0.0,2080.51,749.95,1.0,Back-Unknown,0.973
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_1ea7fc82-IMG_4719.jpeg,598.75,1173.31,2388.96,3096.58,1.0,Back-Unknown,0.9865
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_22a1d833-RV_001_174.jpeg,1043.28,995.9,2249.86,1999.87,1.0,Back-Unknown,0.9863
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_2493a507-RV_001_172.jpeg,958.61,1435.39,1995.84,2278.08,1.0,Other-Unknown,0.9787
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_25ff97a8-IMG20260105132835.jpg,470.02,860.16,2743.3,2805.76,1.0,No Through Road (T-Junction),0.9917
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_3b1bbe25-IMG_4677.jpeg,465.7,1008.0,2528.06,3286.08,1.0,Pedestrian Crossing,0.9865
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_46552970-IMG_5766.jpeg,1040.26,1628.93,1953.5,2636.93,1.0,No Through Road (T-Junction),0.9834
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_52634fe4-IMG_20260108_180144.jpg,1201.15,2121.73,1238.02,2187.26,1.0,Stop Sign,0.6472
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_598f8dcc-IMG_5777.jpeg,379.82,749.7,1005.49,1365.0,1.0,No Through Road (T-Junction),0.979
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_5eb024cb-IMG_20260108_180228.jpg,672.77,0.0,2168.83,962.56,1.0,Back-Unknown,0.9782
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_69e094db-IMG20260103164903.jpg,408.58,655.36,2383.87,2740.22,1.0,No Through Road (T-Junction),0.9866
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_7052b6a6-IMG_5704.jpeg,2745.79,3487.68,2812.32,3721.54,1.0,,0.3571
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_7fcdb608-IMG_5767.jpeg,1291.25,1346.69,1714.61,2677.25,1.0,No Through Road (T-Junction),0.971
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_831c366a-IMG_5656.jpeg,394.0,720.3,1246.62,2097.9,1.0,Blind-Spot Mirror (Convex Mirror),0.5637
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_8941e841-RV_001_100.jpeg,42.34,3604.61,93.74,3709.44,1.0,Blind-Spot Mirror (Convex Mirror),0.7426
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_8b994555-IMG_5798.jpeg,795.31,459.65,2150.06,1552.32,1.0,Back-Unknown,0.973
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_8fe876b9-IMG_4754.jpeg,1635.98,850.75,2268.0,3140.93,1.0,Pedestrian Crossing,0.971
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_9f52d58a-IMG_5554.jpeg,958.61,1616.83,2195.42,2584.51,1.0,Back-Unknown,0.968
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_a9638634-IMG20260105131308.jpg,1142.78,0.0,1855.49,1183.74,1.0,Other-Unknown,0.977
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_cb282f25-RV_001_112.jpeg,1037.23,2032.13,2065.39,2979.65,1.0,No Through Road (T-Junction),0.9724
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_ce09cd20-IMG_4692.jpeg,749.7,2227.01,2173.54,3648.66,1.0,Stop Sign,0.9754
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_d64c06cd-IMG20260103165218.jpg,675.84,880.64,2568.19,2871.3,1.0,No Through Road (T-Junction),0.9897
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_db486299-IMG_5815.jpeg,985.82,1467.65,2180.3,2515.97,1.0,No Through Road (T-Junction),0.9816
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_ec712362-IMG_5803.jpeg,494.86,260.4,1117.38,867.3,1.0,Other-Unknown,0.9731
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_f3f0450d-IMG20260105132606.jpg,635.9,1011.71,2282.5,2121.73,1.0,Back-Unknown,0.9775
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_f468f4a5-IMG_5772.jpeg,834.62,1338.62,2004.91,2882.88,1.0,No Through Road (T-Junction),0.974
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_fa18c1a9-IMG_5810.jpeg,1197.5,0.0,1642.03,1632.96,1.0,Other-Unknown,0.9745
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_fd97d901-IMG20260105125535.jpg,1259.52,1224.7,1803.26,2670.59,1.0,No Through Road (T-Junction),0.9777
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp1_fdedfd29-IMG_4737.jpeg,1164.24,584.64,1995.84,3318.34,1.0,No Through Road (T-Junction),0.9822
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_0cd46f17-MP_0097.jpg,1090.91,1181.38,2041.2,2382.91,1.0,Back-Unknown,0.9686
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_1a942391-IMG_20251224_114123.jpg,1548.0,1136.0,1608.0,1580.0,1.0,No Through Road (T-Junction),0.8032
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_1d09be1b-MP_0034.jpg,1434.62,339.97,1539.07,1236.99,1.0,Stop Sign,0.8831
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_1f7e1b10-20251224_132557.jpg,507.96,2023.68,1153.62,3100.8,1.0,Directional Sign,0.9084
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_21220c6f-IMG_20251223_114958.jpg,1293.0,1096.0,1899.0,1596.0,1.0,Back-Unknown,0.9746
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_24fcf1af-MP_0080.jpg,1079.57,1761.98,1109.05,1826.5,1.0,Other-Unknown,0.5122
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_31ecc6f6-20251230_124942.jpg,976.14,1064.88,2227.68,2154.24,1.0,Back-Unknown,0.9774
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_32305793-MP_0024.jpg,829.44,192.51,2045.95,1159.17,1.0,Other-Unknown,0.9784
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_339c8d04-26.side.jpg,995.65,512.06,1177.09,1249.92,1.0,Pedestrian Crossing,0.9505
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_33c8250b-MP_0150.jpeg,384.0,771.12,1409.28,1038.96,1.0,,0.0979
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_3855fec5-20251223_150427.jpg,1104.66,2150.16,2108.34,4059.6,1.0,,0.0085
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_3e9d99d7-IMG_20251223_122636.jpg,1200.0,868.0,1863.0,1524.0,1.0,Back-Unknown,0.9667
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_421f593e-20251224_132616.jpg,835.38,938.4,2331.72,2709.12,1.0,Back-Unknown,0.6879
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_4acb7340-20251223_155105.jpg,1159.74,1191.36,1943.1,1978.8,1.0,Back-Unknown,0.9816
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_5061299f-MP_0130.jpg,768.85,588.67,1587.6,1592.64,1.0,Back-Unknown,0.9592
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_5dd50184-MP_0013.jpg,1265.66,864.26,1403.9,1634.3,1.0,Pedestrian Crossing,0.8203
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_5e8f002c-IMG_20251223_132013.jpg,1248.0,1204.0,1788.0,1740.0,1.0,No Through Road (T-Junction),0.9577
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_76c73962-MP_0139.jpg,1104.77,1374.41,2794.18,1741.82,1.0,,0.0805
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_797d9987-MP_0038.jpg,740.35,176.13,1870.85,1257.47,1.0,Stop Sign,0.9723
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_7bccf907-IMG_20251223_114643.jpg,1494.0,2180.0,1533.0,2264.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_85bab424-IMG_20251223_120632.jpg,1338.0,1196.0,1803.0,1708.0,1.0,Back-Unknown,0.9693
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_86560763-IMG_20251223_113000.jpg,156.0,2076.0,249.0,2184.0,1.0,Roundabout Ahead,0.6351
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_888b1f4f-MP_0074.jpg,483.84,864.11,1197.5,1496.88,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_9288cb02-IMG_20251223_114539.jpg,12.0,1944.0,93.0,2068.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_a8531ee5-IMG_20251223_131712.jpg,879.0,1584.0,924.0,1652.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_ab9b17dd-34.back.jpg,1426.57,2132.93,1503.68,2229.7,1.0,Other-Unknown,0.7076
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_b7da3d82-20251230_123417.jpg,1756.44,1607.52,2279.7,2170.56,1.0,Back-Unknown,0.8929
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_bf4582b0-IMG_20251223_113056.jpg,681.0,1492.0,1458.0,2372.0,1.0,Back-Unknown,0.9075
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_bf551d52-MP_0136.jpg,604.8,1329.05,2455.49,1635.23,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_c39d026a-IMG_20251223_125605.jpg,1302.0,1092.0,1608.0,1812.0,1.0,Pedestrian Crossing,0.9064
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_c96ca64e-MP_0098.jpg,92.74,818.75,895.1,1608.01,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_d3fe8c38-MP_0046.jpg,955.39,348.16,1858.56,1298.43,1.0,Back-Unknown,0.9785
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_d71e8065-MP_0021.jpg,2942.98,1953.79,3068.93,2174.98,1.0,,0.4543
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_e074406f-IMG_20251223_115520.jpg,813.0,3120.0,867.0,3188.0,1.0,Other-Unknown,0.6627
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_e44be02a-MP_0116.jpg,391.1,839.16,2068.42,1263.28,1.0,,0.0675
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_e55dea8e-MP_0157.jpg,1277.95,1310.72,2021.38,2027.52,1.0,No Through Road (T-Junction),0.9667
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_ee20554d-MP_0115.jpg,749.95,315.25,1737.79,1603.48,1.0,,0.1357
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp2_f69ebb76-IMG_20251227_110428.jpg,1434.0,2000.0,1482.0,2084.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_17e38feb-20251129_115024.jpg,1820.7,3235.44,1875.78,3308.88,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_22c38c39-IMG_4293.jpeg,1318.46,1660.18,2100.67,2522.02,1.0,,0.0551
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_3cee3d85-IMG_4285.jpeg,1378.94,2931.26,1493.86,3052.22,1.0,Stop Sign,0.7137
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_458db4bf-IMG_9314.jpg,1015.31,2039.18,1657.91,3055.92,1.0,Street Sign,0.9594
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_5a849df3-20251129_113801.jpg,1092.42,726.24,1832.94,1468.8,1.0,Other-Unknown,0.9586
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_5e7ebbc1-IMG_4337.jpeg,2104.7,1472.69,2665.15,1684.37,1.0,,0.2875
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_62bcab50-IMG_20251203_121207.jpg,1049.58,501.84,2224.62,1701.36,1.0,Back-Unknown,0.9829
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_6a5c994c-IMG_9361.jpg,1829.27,1148.11,2510.42,2747.47,1.0,Other-Unknown,0.9372
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_729363da-IMG_4319.jpeg,1381.97,1524.1,1989.79,2177.28,1.0,Stop Sign,0.9482
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_76fb906e-20251129_122552.jpg,547.74,558.96,1976.76,1876.8,1.0,Back-Unknown,0.9847
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_81a84d18-IMG_9109.jpg,1610.78,1370.88,2874.56,2610.38,1.0,Back-Unknown,0.9752
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_874592da-20251129_122245.jpg,1043.46,1268.88,1839.06,1974.72,1.0,Back-Unknown,0.9911
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_8d66655f-IMG_4305.jpeg,1427.33,1318.46,1953.5,1882.94,1.0,Blind-Spot Mirror (Convex Mirror),0.9502
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_940c99a8-IMG_9166.jpg,2069.17,2827.44,2523.28,4089.79,1.0,Other-Unknown,0.9819
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_9e3990fa-20251129_124245.jpg,615.06,1391.28,2347.02,2974.32,1.0,Blind-Spot Mirror (Convex Mirror),0.9848
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_9eaf77cf-IMG_4402.jpeg,1346.69,1109.81,2056.32,1835.57,1.0,,0.2378
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_9ff54512-IMG_20251203_093925.jpg,1190.34,2166.48,1227.06,2215.44,1.0,,0.1959
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_a2b6698c-IMG_4431.jpeg,2080.51,1152.14,2140.99,1224.72,1.0,,0.0046
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_a5739f60-IMG_20251203_120925.jpg,1453.5,3325.2,1551.42,3835.2,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_a9724b83-20251129_122439.jpg,1178.1,1003.68,1465.74,1982.88,1.0,Other-Unknown,0.9522
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_ae42a8a0-20251129_121839.jpg,1116.9,1799.28,1888.02,2570.4,1.0,Other-Unknown,0.9539
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_b05e6955-IMG_4433.jpeg,1427.33,816.48,2806.27,2119.82,1.0,Blind-Spot Mirror (Convex Mirror),0.6569
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_cb90b89e-IMG_9211.jpg,1306.62,1576.51,2574.68,2673.22,1.0,Blind-Spot Mirror (Convex Mirror),0.9776
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_def908c3-IMG_4315.jpeg,1242.86,1399.1,1926.29,2032.13,1.0,Back-Unknown,0.9565
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_e0a623d6-IMG_9293.jpg,2026.33,1450.85,2523.28,2827.44,1.0,No Through Road (T-Junction),0.9056
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_e337de9a-IMG_4362.jpeg,970.7,669.31,2147.04,1645.06,1.0,Other-Unknown,0.9611
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_eb512649-IMG_4353.jpeg,1261.01,1520.06,1880.93,2044.22,1.0,Back-Unknown,0.9365
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_ecbe9be3-IMG_20251204_100152.jpg,865.98,432.48,985.32,579.36,1.0,Back-Unknown,0.8133
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp3_faf213d1-IMG_20251203_120236.jpg,716.04,3137.52,752.76,3182.4,1.0,,0.1868
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,295.5,1686.0,372.0,1836.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_1d0747c0-20260107_105907.jpg,347.45,601.1,1344.96,1570.83,1.0,Other-Unknown,0.9732
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251130_114937.jpg,993.0,2016.0,1839.0,3464.0,1.0,Back-Unknown,0.978
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251130_115523.jpg,2235.0,2868.0,2346.0,3004.0,1.0,Back-Unknown,0.7131
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251130_115613.jpg,1170.0,1488.0,1446.0,3068.0,1.0,Pedestrian Crossing,0.9587
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251130_115807.jpg,714.0,2476.0,1329.0,3744.0,1.0,Pedestrian Crossing,0.9857
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251130_120143.jpg,1518.0,1680.0,1710.0,3100.0,1.0,Pedestrian Crossing,0.9002
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251219_134240.jpg,930.0,1992.0,2076.0,3196.0,1.0,Back-Unknown,0.9832
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251229_144322.jpg,717.0,524.0,2100.0,1640.0,1.0,Back-Unknown,0.9619
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251229_145129.jpg,288.0,1448.0,2187.0,3016.0,1.0,Back-Unknown,0.9874
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251229_150136.jpg,618.0,1132.0,1941.0,2080.0,1.0,Back-Unknown,0.9726
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251229_150338.jpg,723.0,1460.0,1950.0,2464.0,1.0,Other-Unknown,0.9721
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251229_151051.jpg,1017.0,1152.0,2391.0,2396.0,1.0,Other-Unknown,0.9826
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251229_152158.jpg,450.0,1316.0,2511.0,3300.0,1.0,Back-Unknown,0.9874
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251231_160526.jpg,990.0,1508.0,2016.0,2444.0,1.0,No Through Road (T-Junction),0.9755
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251231_160545.jpg,1227.0,1420.0,1572.0,2464.0,1.0,No Through Road (T-Junction),0.9282
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_20251231_160556.jpg,1848.0,1932.0,2043.0,2532.0,1.0,No Through Road (T-Junction),0.9131
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_21c64815-20251116_163111.jpg,560.22,1179.12,1774.81,2186.88,1.0,Stop Sign,0.9797
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_22bb020a-20251222_131805.jpg,492.0,684.0,2385.0,2720.0,1.0,Back-Unknown,0.9762
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_25671e9a-WhatsApp_Image_2026-01-14_at_11.11.43_3.jpeg,454.5,320.0,948.0,770.0,1.0,Other-Unknown,0.9747
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_2659e726-20260107_105845.jpg,507.42,0.0,1575.06,1228.08,1.0,Other-Unknown,0.9855
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_27645844-20260107_151619.jpg,91.51,39.68,530.1,636.86,1.0,Other-Unknown,0.9588
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_27f66596-20260109_125516.jpg,1030.97,977.26,1097.82,1090.42,1.0,,0.0032
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_3a0abdfb-20251116_161259.jpg,835.74,897.6,1350.05,1901.28,1.0,Pedestrian Crossing,0.947
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_5886bc7f-20251116_161202.jpg,1244.43,1428.0,1407.45,1909.44,1.0,Stop Sign,0.8895
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_5c62b2f6-20251117_104837.jpg,422.46,1334.16,1650.82,2370.48,1.0,Pedestrian Crossing,0.9651
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_63c4320e-WhatsApp_Image_2026-01-14_at_11.10.32_3.jpeg,585.0,686.0,828.0,920.0,1.0,No Through Road (T-Junction),0.9604
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_66eacd8c-20260109_124456.jpg,837.0,852.0,1905.0,2676.0,1.0,No Through Road (T-Junction),0.9841
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,1380.0,1028.0,1404.0,1062.0,1.0,,0.21
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_7b6a28a6-WhatsApp_Image_2026-01-14_at_11.10.25_4.jpeg,568.5,680.0,883.5,986.0,1.0,No Through Road (T-Junction),0.9416
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_82399059-20251116_165140.jpg,321.44,2015.52,1983.74,3545.52,1.0,Other-Unknown,0.9682
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_83705e8e-WhatsApp_Image_2026-01-14_at_11.10.28_3.jpeg,922.5,1132.0,966.0,1252.0,1.0,Auxiliary Sign,0.503
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,120.0,1178.0,189.0,1250.0,1.0,Other-Unknown,0.7185
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_8b497905-20260107_150756.jpg,704.87,803.76,1448.78,1521.84,1.0,Other-Unknown,0.9797
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_91f6056a-20251116_163806.jpg,463.79,1187.28,2009.0,2745.84,1.0,Blind-Spot Mirror (Convex Mirror),0.9742
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_935db33c-20260107_105737.jpg,645.18,1064.88,1575.06,1836.0,1.0,Other-Unknown,0.9757
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_94287dbf-20260113_132935.jpg,939.0,1344.0,1782.0,2844.0,1.0,No Through Road (T-Junction),0.9778
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_9a8f607e-20251222_141532.jpg,375.0,680.0,2130.0,2316.0,1.0,Back-Unknown,0.9854
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_9c4db066-WhatsApp_Image_2026-01-14_at_10.34.44_2.jpeg,132.66,875.2,144.2,912.0,1.0,,0.4773
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_abe76f20-20260109_124535.jpg,747.0,284.0,2103.0,2640.0,1.0,No Through Road (T-Junction),0.9835
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_b3d0eaa4-20251116_163427.jpg,27.55,473.28,909.22,2529.6,1.0,Auxiliary Sign,0.9706
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_bdef9845-20260109_130552.jpg,744.0,1276.0,1983.0,2364.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9775
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_c3a633b2-20251116_162903.jpg,297.94,1179.31,488.28,1797.2,1.0,Back-Unknown,0.9046
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_cdcb1057-WhatsApp_Image_2026-01-14_at_11.11.40_1.jpeg,236.0,750.0,262.0,775.5,1.0,Other-Unknown,0.504
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_cdcb1057-WhatsApp_Image_2026-01-14_at_11.11.40_1.jpeg,354.0,852.0,404.0,889.5,1.0,Directional Sign,0.5542
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_d1c1ed24-20260113_130204.jpg,1056.0,1584.0,1836.0,2364.0,1.0,No Through Road (T-Junction),0.9601
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_d4ed28aa-20251222_141346.jpg,585.0,532.0,2184.0,2316.0,1.0,Back-Unknown,0.9862
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_d8a007d5-20260109_123932.jpg,708.0,132.0,1716.0,2316.0,1.0,No Through Road (T-Junction),0.9863
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_db6dffba-WhatsApp_Image_2026-01-14_at_11.12.35_1.jpeg,1141.5,1162.0,1192.5,1326.0,1.0,Blind-Spot Mirror (Convex Mirror),0.8769
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_dddb030d-20251230_104127.jpg,414.0,900.0,2205.0,2696.0,1.0,Back-Unknown,0.9698
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_dfec1b25-20260107_105532.jpg,231.87,307.19,1255.38,1109.29,1.0,Back-Unknown,0.9813
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_e63ad5ed-WhatsApp_Image_2026-01-14_at_11.10.19_1.jpeg,532.5,760.0,906.0,1128.0,1.0,No Through Road (T-Junction),0.9736
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_f171227c-20251222_132239.jpg,0.0,0.0,1446.0,1172.0,1.0,Other-Unknown,0.9914
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_f1d0d896-WhatsApp_Image_2026-01-14_at_11.12.20.jpeg,543.0,840.0,828.0,1236.0,1.0,No Through Road (T-Junction),0.9475
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,571.5,560.0,789.0,1142.0,1.0,No Through Road (T-Junction),0.9559
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp4_fe8b41fc-WhatsApp_Image_2026-01-14_at_11.10.21_3.jpeg,961.5,1284.0,1039.5,1406.0,1.0,,0.0432
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_0f660dba-MichaelFarrugia_49_Back.jpg,1108.99,1101.6,1963.01,1921.68,1.0,Back-Unknown,0.9762
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_13ab0dbb-BenTaliana_59_Front.jpeg,1138.54,1612.8,3538.08,3838.46,1.0,No Through Road (T-Junction),0.9656
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_1a462468-MichaelFarrugia_24_Back.jpg,1293.31,1219.92,2055.17,2023.68,1.0,Back-Unknown,0.9764
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1059.84,2733.6,1173.5,2876.4,1.0,Other-Unknown,0.7209
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_2da1aa64-AlisonAttard_27_Front.jpeg,1967.62,1315.44,2475.65,1811.38,1.0,,0.2825
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_32b2eadc-AlisonAttard_7_Side.jpeg,3278.02,2573.42,3519.94,2848.61,1.0,,0.0093
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,1374.91,1076.54,2161.15,1391.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1225.73,1611.6,1941.5,2305.2,1.0,No Through Road (T-Junction),0.9709
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_57e0ac5f-AlisonAttard_27_Back.jpeg,1612.8,1581.55,2842.56,1977.7,1.0,,0.2901
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_6bb6fe17-BenTaliana_15_Back.jpeg,839.16,2322.43,2526.55,4411.01,1.0,Blind-Spot Mirror (Convex Mirror),0.9815
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_770e5bfc-BenTaliana_60_Side.jpeg,1090.91,814.46,1567.19,1749.89,1.0,Other-Unknown,0.9577
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2052.29,1493.86,3088.51,1717.63,1.0,,0.0032
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_a1ced4bc-BenTaliana_22_Front.jpeg,2074.69,3131.72,3128.87,4287.41,1.0,Back-Unknown,0.9662
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_a7e73d18-AlisonAttard_29_Back.jpeg,1770.05,1149.12,2636.93,1660.18,1.0,,0.3448
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_a8752ff5-MelatAssefa_56_Side.jpg,1357.78,592.7,1992.82,1713.6,1.0,Stop Sign,0.9856
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_ab2f9697-MichaelFarrugia_48_Side.jpg,1161.22,1954.32,1508.35,2598.96,1.0,Other-Unknown,0.934
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,1261.01,1669.25,2680.78,4749.7,1.0,No Through Road (T-Junction),0.9768
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_bc59500b-AlisonAttard_47_Side.jpeg,1395.07,1693.44,2520.0,1874.88,1.0,,0.1175
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_cc1fcae2-AlisonAttard_9_Back.jpeg,867.89,1931.33,2010.96,3189.31,1.0,Back-Unknown,0.9713
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_e3df78e1-MichaelFarrugia_48_Back.jpg,1314.82,1615.68,1815.55,2203.2,1.0,Back-Unknown,0.9702
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1293.31,1558.56,2088.96,2321.52,1.0,No Through Road (T-Junction),0.974
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_ec52a808-MichaelFarrugia_58_Side.jpg,869.38,3137.52,933.89,3243.6,1.0,Back-Unknown,0.647
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1072.13,1680.96,1883.14,2415.36,1.0,No Through Road (T-Junction),0.95
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_fc84e1fb-BenTaliana_3_Back.jpeg,410.51,983.81,1791.72,2153.09,1.0,Back-Unknown,0.9786
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp5_fea9ceb6-MichaelFarrugia_19_Back.jpg,1213.44,1224.0,2128.9,2284.8,1.0,Back-Unknown,0.9496
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_0126954d-IMG_0235.JPG,729.79,1236.82,2374.85,2119.82,1.0,,0.2706
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_0dbbcef1-IMG_6167.JPG,48.38,3088.51,244.94,3370.75,1.0,Back-Unknown,0.9251
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_205fffc2-Screenshot_2025-12-05_135424.png,93.8,36.66,219.99,180.12,1.0,Blind-Spot Mirror (Convex Mirror),0.9166
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_255dc793-IMG_0327.JPG,915.26,1572.48,3544.13,2089.58,1.0,,0.151
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_264240ca-IMG_0303.JPG,1209.6,737.86,3652.99,2080.51,1.0,,0.4775
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_280e9cbc-IMG_0220.JPG,1556.35,1400.11,2201.47,1971.65,1.0,,0.2611
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_34078a23-Screenshot_2025-12-05_144602.png,90.09,45.5,206.64,165.75,1.0,Stop Sign,0.9449
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_344c75b8-Screenshot_2025-12-05_150942.png,92.56,44.52,186.42,153.28,1.0,Back-Unknown,0.8042
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_3721037e-IMG_0363.JPG,1717.63,1391.04,3116.74,1693.44,1.0,,0.162
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_37c705bd-IMG_6247.JPG,940.46,983.81,1823.47,1689.41,1.0,Roundabout Ahead,0.9741
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_386a5fef-IMG_6231.JPG,895.1,971.71,2056.32,2455.49,1.0,Back-Unknown,0.9712
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_3ce4063d-IMG_0217.JPG,1544.26,1400.11,2132.93,1735.78,1.0,,0.2623
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_674b294f-Screenshot_2025-12-05_140949.png,51.0,110.37,159.29,243.72,1.0,Other-Unknown,0.798
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_6b4047ef-IMG_6230.JPG,1073.52,596.74,1584.58,2536.13,1.0,Stop Sign,0.9588
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_6f66549b-IMG_0289.JPG,1733.76,988.85,2761.92,2416.18,1.0,,0.3514
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_7608155e-Screenshot_2025-12-05_135221.png,249.7,62.05,309.4,130.02,1.0,Pedestrian Crossing,0.8233
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_8387f659-Screenshot_2025-12-05_134458.png,100.28,34.15,125.97,120.25,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_8d7bc213-IMG_0237.JPG,883.01,1282.18,2540.16,2301.26,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_98681b01-IMG_6123_2.JPG,1127.95,229.82,2667.17,1858.75,1.0,Back-Unknown,0.9901
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_9e256948-IMG_0275.JPG,1685.38,1306.37,2128.9,1896.05,1.0,,0.3253
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_b1f0ac5c-IMG_0227.JPG,2294.21,320.54,2894.98,683.42,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_ba6a303c-IMG_0314.JPG,2422.22,3483.65,2506.9,3568.32,1.0,Other-Unknown,0.5682
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_c8db20f0-IMG_6257.JPG,1493.86,753.98,1720.66,1858.75,1.0,No Through Road (T-Junction),0.9846
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_cebbcc7c-Screenshot_2025-12-05_141232.png,57.75,18.41,114.5,85.25,1.0,Other-Unknown,0.6155
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,73.37,29.13,160.66,97.6,1.0,Back-Unknown,0.5843
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_d33c21c3-IMG_6246.JPG,641.09,931.39,1152.14,1979.71,1.0,,0.3168
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_d33c21c3-IMG_6246.JPG,1590.62,874.94,2074.46,2036.16,1.0,,0.3302
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_e18d6d29-IMG_0313.JPG,3403.01,2234.74,3644.93,2458.51,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_e4194181-Screenshot_2025-12-05_124458.png,502.69,299.47,529.33,369.57,1.0,Directional Sign,0.7553
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_e4766ab1-Screenshot_2025-12-05_134942.png,173.44,0.0,261.21,69.89,1.0,,0.0874
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_f6200360-IMG_6254.JPG,1375.92,741.89,1769.04,2209.54,1.0,No Through Road (T-Junction),0.9669
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp6_fb7a099a-Screenshot_2025-12-05_134245.png,81.74,37.84,149.01,178.19,1.0,Blind-Spot Mirror (Convex Mirror),0.8134
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_01ba126c-IMG_1741.jpg,931.39,87.7,3419.14,2458.51,1.0,Pedestrian Crossing,0.5881
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_0c807ae1-IMG_1804.jpg,1245.89,145.15,3407.04,2782.08,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_17ffbc31-IMG_6632.jpeg,1330.56,943.49,1460.59,1503.94,1.0,Pedestrian Crossing,0.9297
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_21763d41-IMG_1815.jpg,1112.83,408.24,3576.38,2812.32,1.0,Back-Unknown,0.598
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_27403473-IMG_2301.JPG,927.36,2633.9,1036.22,2736.72,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_3199d5af-IMG_6619.jpeg,387.07,2132.93,508.03,2278.08,1.0,Other-Unknown,0.6258
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_3335816b-IMG_1863.jpg,0.0,0.0,1322.5,1406.16,1.0,,0.1111
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_3acb0651-IMG_1793.jpg,540.29,1430.35,3495.74,1766.02,1.0,,0.0762
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_40a131c0-20251215_144819.jpg,1043.28,1225.73,1134.0,2282.11,1.0,Stop Sign,0.6345
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_41dd064f-IMG_2332.JPG,1539.22,931.39,2020.03,1552.32,1.0,Back-Unknown,0.7199
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_4c22ebaa-IMG_6807.jpeg,1502.93,1971.65,1935.36,2471.62,1.0,Blind-Spot Mirror (Convex Mirror),0.9758
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_4f01ce86-IMG_1927.jpg,1431.36,87.7,3209.47,2591.57,1.0,,0.3809
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_50fb19de-IMG_1779.jpg,778.18,1445.47,3790.08,1756.94,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_51efaffb-IMG_2323.JPG,1605.74,1608.77,1920.24,1955.52,1.0,Back-Unknown,0.819
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_5fe0adac-IMG_2351.JPG,1094.69,975.74,1811.38,1778.11,1.0,Back-Unknown,0.9839
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_65ce4c26-IMG_1752.jpg,443.52,1309.39,2584.51,1823.47,1.0,,0.1937
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_66312f27-IMG_1789.jpg,943.49,1309.39,3870.72,1635.98,1.0,,0.0628
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_70806c3a-20251206_161309.jpg,848.23,1193.47,1621.62,1915.2,1.0,Back-Unknown,0.9819
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_81ace7bd-IMG_1823.jpg,1665.22,692.5,3334.46,2794.18,1.0,,0.0203
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_85e21f65-IMG_1888.jpg,1544.26,783.22,2604.67,2763.94,1.0,,0.255
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_87ab4012-IMG_1929.jpg,1842.62,139.1,3479.62,2343.6,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_897df19a-IMG_2311.JPG,359.86,1927.3,492.91,2052.29,1.0,Directional Sign,0.8455
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_8a80058d-20251215_151420.jpg,936.68,1108.8,1297.3,1987.78,1.0,Other-Unknown,0.8568
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_8e1e7992-IMG_6659.jpeg,1744.85,1733.76,1847.66,1878.91,1.0,Other-Unknown,0.7673
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_90de2b4a-IMG_6620.jpeg,275.18,1814.4,371.95,1955.52,1.0,Back-Unknown,0.508
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_9ceccc7e-IMG_2183.JPG,1411.2,707.62,2774.02,2119.82,1.0,Back-Unknown,0.5719
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_b1489edd-IMG_1891.jpg,927.36,1403.14,3479.62,1684.37,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_b45f5f31-IMG_2274.JPG,1040.26,1052.35,1493.86,1536.19,1.0,Back-Unknown,0.9401
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_b65b2b8e-20251215_143141.jpg,1099.98,1278.14,1272.35,2326.46,1.0,No Through Road (T-Junction),0.8483
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_c1e32eff-IMG_1769.jpg,1995.84,2736.72,2366.78,3020.98,1.0,,0.04
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_c21d51bf-IMG_6622.jpeg,1212.62,943.49,1711.58,1576.51,1.0,Back-Unknown,0.7071
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_c3ab6f98-IMG_2186.JPG,608.83,99.79,3237.7,2872.8,1.0,Back-Unknown,0.5527
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_d5464bd2-IMG_6729.jpeg,2621.81,2100.67,2688.34,2193.41,1.0,,0.3466
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_d7ded33c-IMG_6742.jpeg,1859.76,2076.48,1914.19,2177.28,1.0,,0.3238
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_dfd0a665-IMG_2360.JPG,532.22,2229.7,583.63,2282.11,1.0,,0.3458
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_e16f743b-IMG_1838.jpg,919.3,1460.59,3644.93,1753.92,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_f5c11235-IMG_2319.JPG,2052.29,2742.77,2181.31,2794.18,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_f6c47dc2-IMG_2182.JPG,1536.19,1490.83,2870.78,1732.75,1.0,,0.1431
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_f74b48d8-IMG_1768.jpg,1528.13,6.05,3669.12,2794.18,1.0,,0.4058
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp7_f7f0f5bb-IMG_6628.jpeg,1233.79,1080.58,1714.61,1608.77,1.0,Back-Unknown,0.9419
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_04258956-back.jpg,1507.97,883.01,2326.46,1611.79,1.0,Back-Unknown,0.9757
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_06980edd-front.jpg,1399.1,0.0,2628.86,889.06,1.0,Other-Unknown,0.9722
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_0d18b07a-IMG_0224.JPG,1285.2,1949.22,4004.11,2990.23,1.0,,0.3414
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_1023d97f-front.jpg,1516.03,0.0,2657.09,928.37,1.0,Other-Unknown,0.9611
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_1b5dcc93-back.jpg,573.7,831.49,1677.31,1683.46,1.0,Back-Unknown,0.971
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_2d237c79-side.jpg,1907.14,949.54,2140.99,1859.76,1.0,No Through Road (T-Junction),0.9063
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_3ab29317-front.jpg,654.34,1368.06,1675.01,2453.5,1.0,No Through Road (T-Junction),0.9794
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_3e16c892-IMG_0188.JPG,2507.57,1302.34,4204.03,2874.56,1.0,,0.3776
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_4682619f-back.jpg,2903.04,2779.06,3019.97,3020.98,1.0,,0.4218
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_4fe75feb-IMG_0243.JPG,4895.18,3791.34,5197.92,4082.65,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_562e48f6-front.jpg,1431.36,937.44,2564.35,1693.44,1.0,No Through Road (T-Junction),0.9639
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_58621eda-IMG_0203.JPG,1450.85,1165.25,3775.63,2767.46,1.0,Pedestrian Crossing,0.5985
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_59dbbf2e-side.jpg,516.1,2497.82,697.54,2800.22,1.0,Back-Unknown,0.5652
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_5f257ae9-IMG_0112.jpg,1199.52,1153.82,3855.6,3935.57,1.0,Back-Unknown,0.9834
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_646a4174-side.jpg,903.0,856.0,1821.0,2860.0,1.0,Auxiliary Sign,0.8793
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_6b72502b-back.jpg,509.18,864.26,1847.81,2273.28,1.0,Back-Unknown,0.9799
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_74a729c2-IMG_0138.jpg,1160.96,862.51,3225.85,2690.35,1.0,Back-Unknown,0.9766
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_7cc436b9-Back.jpg,76.03,3342.34,117.5,3424.26,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_838e07cd-IMG_0097.jpg,998.17,1148.11,2994.52,2770.32,1.0,Back-Unknown,0.9902
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_87d39243-IMG_0210.JPG,1964.93,1113.84,3632.83,3191.58,1.0,,0.4307
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_8dc5354c-IMG_0141.JPG,1422.29,1160.96,2987.38,3123.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_8edb630b-IMG_0208.JPG,1902.1,1130.98,3375.79,3028.79,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_8ff667a0-IMG_0209.JPG,1707.89,1790.71,3752.78,2788.88,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_9f69e083-Front.jpg,57.6,3121.15,271.87,3588.1,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_a27e76cc-back.jpg,942.0,1336.0,2088.0,2260.0,1.0,Back-Unknown,0.9763
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_ad4861cb-back.jpg,1536.19,831.6,2612.74,1823.47,1.0,Back-Unknown,0.9714
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_aec35ad8-back.jpg,1024.13,1865.81,2866.75,2494.8,1.0,Back-Unknown,0.951
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_b1123daa-front.jpg,605.95,1400.83,1780.99,2445.31,1.0,Stop Sign,0.9576
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_b6ae6e3d-back.jpg,939.0,1532.0,2097.0,2664.0,1.0,Back-Unknown,0.9774
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_b9028e28-side.jpg,582.91,438.27,1624.32,1970.18,1.0,Pedestrian Crossing,0.9857
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_c89fb86b-IMG_0117.jpg,1867.82,1445.14,2514.71,3410.06,1.0,No Through Road (T-Junction),0.985
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_ea4926f3-side.jpg,1125.0,752.0,1962.0,2476.0,1.0,Roundabout Ahead,0.98
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_edb6fab3-IMG_0189.JPG,2107.73,989.6,4415.38,3607.13,1.0,,0.2944
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_f3e45a2c-front.jpg,1011.46,1495.04,1492.99,2232.32,1.0,Stop Sign,0.946
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp8_fc124a5b-Back.jpg,767.23,1372.16,1760.26,2375.68,1.0,Blind-Spot Mirror (Convex Mirror),0.934
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_00e70ac4-IMG_20251111_140913.jpg,0.0,2724.0,348.0,3492.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_01e24ee9-IMG_20251106_145403.jpg,1115.14,3342.34,1148.93,3407.87,1.0,,0.481
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_04c8a7cf-IMG_20251211_162331.jpg,1404.54,2060.4,2047.14,2688.72,1.0,Back-Unknown,0.9766
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_109ae844-20251122_134645.jpg,1251.0,1436.0,1359.0,1724.0,1.0,Back-Unknown,0.8446
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_10b6edc4-IMG_20251112_160648.jpg,1138.32,1138.32,2649.96,2566.32,1.0,Blind-Spot Mirror (Convex Mirror),0.9784
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_14b6af7e-IMG_20251106_142858.jpg,1084.16,1003.68,4178.94,4067.2,1.0,Blind-Spot Mirror (Convex Mirror),0.9839
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_1792c5c3-WhatsApp_Image_2026-01-03_at_18.45.37.jpeg,489.6,804.8,860.4,1148.8,1.0,Back-Unknown,0.9748
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_21d58e17-S3_back.jpg,678.0,1272.0,1140.0,1728.0,1.0,Back-Unknown,0.9481
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_24a6f4e2-20251122_141915.jpg,1233.0,2076.0,1260.0,2136.0,1.0,,0.0058
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_29bd496f-IMG_20251106_153126.jpg,1257.0,2264.0,1473.0,2524.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_42edbee1-IMG_20251210_142157.jpg,2402.1,2721.36,2472.48,2856.0,1.0,Other-Unknown,0.5028
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_4319ca3a-WhatsApp_Image_2026-01-03_at_18.45.41.jpeg,673.2,539.2,771.6,884.8,1.0,Other-Unknown,0.9616
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_441ca6d9-WhatsApp_Image_2026-01-03_at_18.45.36_2.jpeg,70.8,1508.8,111.6,1598.4,1.0,,0.3015
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,534.0,715.2,832.8,968.0,1.0,No Through Road (T-Junction),0.968
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_48f9d230-IMG_20251112_155513.jpg,810.9,2652.0,924.12,2786.64,1.0,Other-Unknown,0.79
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_4a9c7d83-IMG_20251111_143857.jpg,1395.0,2064.0,1821.0,2452.0,1.0,Other-Unknown,0.9514
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_5b67e831-IMG_20251106_155530.jpg,996.0,1016.0,1893.0,1824.0,1.0,Back-Unknown,0.957
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_636a2125-IMG_20251111_155635.jpg,1335.0,1528.0,1938.0,2036.0,1.0,Back-Unknown,0.9679
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_673470fc-IMG_20251111_160954.jpg,1467.0,1736.0,1809.0,2052.0,1.0,Other-Unknown,0.9296
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_6867b383-IMG_20251111_160020.jpg,1266.0,1692.0,1731.0,2148.0,1.0,No Through Road (T-Junction),0.9558
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_6ad958e6-IMG_20251112_155635.jpg,1230.12,1268.88,1710.54,2150.16,1.0,Back-Unknown,0.9693
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_6adfb65e-WhatsApp_Image_2026-01-01_at_18.13.00_2.jpeg,1115.14,1439.74,1164.29,1519.62,1.0,Blind-Spot Mirror (Convex Mirror),0.7854
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_6e84abf6-IMG_20251106_145409.jpg,1004.54,1056.77,2334.72,1957.89,1.0,Other-Unknown,0.9811
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_73c5c90a-IMG_20251106_152941.jpg,1410.0,1648.0,1518.0,2240.0,1.0,Roundabout Ahead,0.8243
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_76700fa1-IMG_20251111_162238.jpg,528.0,2132.0,633.0,2324.0,1.0,Auxiliary Sign,0.7212
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_7b22f970-IMG_20251106_152243.jpg,1050.0,2052.0,1941.0,3072.0,1.0,Other-Unknown,0.9822
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_7d690022-WhatsApp_Image_2026-01-03_at_18.45.17_5.jpeg,621.6,276.8,726.0,708.8,1.0,Back-Unknown,0.9256
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_815852c2-IMG_20251112_155220.jpg,477.36,2125.68,755.82,2390.88,1.0,Back-Unknown,0.8962
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_a133d565-WhatsApp_Image_2026-01-01_at_18.13.09.jpeg,597.5,1060.86,786.43,1249.28,1.0,Stop Sign,0.8496
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_a3c63c83-IMG_20251112_162857.jpg,1315.8,2623.44,1814.58,3496.56,1.0,Back-Unknown,0.9527
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_a6b8460c-20251122_140515.jpg,2940.0,1668.0,2997.0,1888.0,1.0,Pedestrian Crossing,0.598
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_ae723934-WhatsApp_Image_2026-01-03_at_18.45.36.jpeg,560.4,710.4,751.2,883.2,1.0,No Through Road (T-Junction),0.9882
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_b775d113-IMG_20251111_162326.jpg,2754.0,2608.0,2850.0,2780.0,1.0,,0.4777
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_b8edf87e-IMG_20251106_153308.jpg,1200.0,1964.0,1587.0,2324.0,1.0,Back-Unknown,0.9493
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_c7a4a215-20251122_140026.jpg,1302.0,1000.0,2379.0,3996.0,1.0,,0.3279
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_c8f9e8c2-M8_back.jpg,1278.0,1904.0,1593.0,2260.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9311
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_d5f4aa18-20251122_140237.jpg,1398.0,2132.0,1482.0,2244.0,1.0,,0.061
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_de518e6b-WhatsApp_Image_2026-01-03_at_18.46.56.jpeg,469.2,760.0,837.6,1099.2,1.0,Back-Unknown,0.9737
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_df847542-IMG_20251210_141936.jpg,973.08,966.96,1900.26,2272.56,1.0,Stop Sign,0.983
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_e1897726-WhatsApp_Image_2026-01-03_at_18.45.38_3.jpeg,448.8,371.2,829.2,628.8,1.0,Back-Unknown,0.9716
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_e2932f32-20251122_134050.jpg,1281.0,1568.0,1614.0,1884.0,1.0,Back-Unknown,0.9376
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_e65623ae-20251122_135723.jpg,1839.0,2036.0,2097.0,2364.0,1.0,Auxiliary Sign,0.9204
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_e8541d39-IMG_20251106_145533.jpg,1023.0,1764.0,1992.0,2740.0,1.0,Other-Unknown,0.9818
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_f109e3eb-IMG_20251111_144036.jpg,1164.0,1336.0,1947.0,2244.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9786
+Cosmos Reason2 8B,sens-mtsd-entry-01,no entry sign,grp9_f36aabf5-WhatsApp_Image_2026-01-03_at_18.45.21_2.jpeg,427.2,536.0,712.8,990.4,1.0,Other-Unknown,0.9817

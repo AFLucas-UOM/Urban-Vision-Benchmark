@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "protocol_hash": "9559386e86fe19dbcaeaec5d29f631f93c1a11a46e6317792050446236f26792",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "model": "SAM 3.1",
+  "prompt_id": "sens-mdwd-orange-03",
+  "prompt": "orange bag containing domestic waste",
+  "target_classes": [
+    "Orange CMD"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 28,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "sensitivity_family": "mdwd-orange-cmd",
+  "variant_type": "descriptive-paraphrase",
+  "target_gt_count": 78,
+  "tp": 64,
+  "fp": 39,
+  "fn": 14,
+  "finished_at": "2026-08-21T15:33:14.985892+00:00",
+  "model_load_ms": 9110.3,
+  "worker_processes": 1,
+  "worker_chunk_size": null,
+  "execution_strategy": "isolated-model-prompt-chunks-v1"
+}

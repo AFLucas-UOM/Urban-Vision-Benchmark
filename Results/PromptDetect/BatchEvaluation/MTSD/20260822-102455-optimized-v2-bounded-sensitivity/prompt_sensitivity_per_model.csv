@@ -1,0 +1,6 @@
+dataset,model,n_families,macro_mean_f1,mean_within_family_f1_std,median_within_family_f1_std,mean_f1_range,max_f1_range,mean_relative_f1_degradation,worst_family,worst_family_relative_degradation,macro_worst_prompt_f1,macro_canonical_f1,macro_instruction_f1,mean_matched_iou_variability,mean_inference_ms
+MTSD,Cosmos Reason2 2B,5,0.1926,0.0296,0.0301,0.0742,0.1076,0.3472,mtsd-roundabout-ahead,0.5406,0.1593,0.1945,0.216,0.0086,2643.295
+MTSD,Cosmos Reason2 8B,5,0.3054,0.0367,0.0369,0.098,0.1684,0.3059,mtsd-roundabout-ahead,0.6653,0.2561,0.2705,0.3049,0.0089,1988.375
+MTSD,LocateAnything 3B,5,0.0865,0.0244,0.0241,0.0628,0.1261,0.4713,mtsd-pedestrian-crossing,0.7136,0.06,0.1228,0.0828,0.0096,8110.4645
+MTSD,SAM 3,5,0.2418,0.1045,0.1129,0.2736,0.4404,0.6161,mtsd-blind-spot-mirror,0.7816,0.1355,0.3985,0.2359,0.0118,189.1035
+MTSD,SAM 3.1,5,0.2367,0.1049,0.1137,0.2732,0.4449,0.6144,mtsd-blind-spot-mirror,0.7972,0.1321,0.3944,0.2274,0.0123,194.6355

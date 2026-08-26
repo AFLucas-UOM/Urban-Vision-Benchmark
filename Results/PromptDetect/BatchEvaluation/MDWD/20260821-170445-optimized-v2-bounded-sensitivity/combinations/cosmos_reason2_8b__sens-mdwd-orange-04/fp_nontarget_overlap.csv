@@ -1,0 +1,211 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,277.12,285.44,491.52,554.88,1.0,Recyclable Material,0.9305
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,200.96,264.32,426.88,445.44,1.0,,0.3789
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20241213_082745_jpg.rf.96486ae40adc356b948caf5f75b61f88.jpg,293.12,205.44,394.24,309.12,1.0,Organic Waste,0.897
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20241214_075842_jpg.rf.1891b8867310eeface2f0bc74a0dc490.jpg,241.28,224.64,362.24,393.6,1.0,Mixed Waste,0.9397
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,193.92,217.6,292.48,359.68,1.0,Mixed Waste,0.8203
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,272.64,229.12,443.52,385.28,1.0,Mixed Waste,0.8143
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,224.64,124.8,547.84,535.04,1.0,,0.4263
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,64.64,174.08,330.88,406.4,1.0,Recyclable Material,0.9764
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,243.2,343.04,341.76,455.04,1.0,Organic Waste,0.862
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250103_071358-0-_jpg.rf.551125884a7ee52b32bb69b2998e461e.jpg,165.12,317.44,202.88,366.72,1.0,,0.162
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250103_071358-0-_jpg.rf.551125884a7ee52b32bb69b2998e461e.jpg,192.64,323.2,231.68,375.04,1.0,,0.3793
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,241.28,224.64,309.12,327.04,1.0,Organic Waste,0.9221
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250103_072437_jpg.rf.32a5c27d896f98da28bbf508ef38adf2.jpg,131.84,309.12,218.88,418.56,1.0,Organic Waste,0.8546
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250114_102320_jpg.rf.979c53863883cd0861956f0a494251dd.jpg,279.04,339.84,556.8,469.12,1.0,Mixed Waste,0.941
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250114_102613_jpg.rf.83447af29c6413aa1b9372ac635283f4.jpg,244.48,298.24,417.28,406.4,1.0,Organic Waste,0.9391
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250124_115555_jpg.rf.d9cd5b950662bca69f8c4f49336d7ca1.jpg,327.04,234.88,427.52,359.68,1.0,Other Waste,0.8697
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250124_120044_jpg.rf.ed15b7e8b6f34f4267218a56a3723d60.jpg,328.96,320.0,436.48,403.2,1.0,Organic Waste,0.9039
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,20250124_120930_jpg.rf.dacac006271855d5f5dec24e24c95585.jpg,222.08,248.32,413.44,362.88,1.0,Mixed Waste,0.9796
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,2_jpeg.rf.210ca76552cf22b6ae5128cd5eb1a637.jpg,262.4,337.28,324.48,366.72,1.0,Recyclable Material,0.6107
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,30_jpeg.rf.b5cf601d6f44e0addb177394ba5d4b99.jpg,218.88,230.4,436.48,362.88,1.0,Recyclable Material,0.9363
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,31_jpeg.rf.fda6c54a3034426eb0971b712b284ac9.jpg,200.96,230.4,398.72,359.68,1.0,Recyclable Material,0.8151
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,462550919_472395952520841_3814266194193640989_n_jpg.rf.fc306e80f8b545c1d4d71d3b6076ffaa.jpg,83.2,108.16,503.04,398.72,1.0,Organic Waste,0.9505
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,460.16,150.4,638.72,353.92,1.0,Recyclable Material,0.6351
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,472129425_1345249006899593_1932127883326922457_n_jpg.rf.03069b893f513bced6e53fce77c8d53c.jpg,189.44,189.44,343.04,371.2,1.0,Mixed Waste,0.8056
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,472786813_628965022887679_5248188576436768956_n_jpg.rf.defa0e5e9d1fb44d9baf104b73f3b587.jpg,157.44,302.08,411.52,462.08,1.0,Mixed Waste,0.973
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,291.2,386.56,426.88,499.2,1.0,Organic Waste,0.7991
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,473055810_1017914696762987_4178034688130709660_n_jpg.rf.f03f6b9a9f959d7dce7512e0d31dc6a1.jpg,268.16,327.04,398.72,430.08,1.0,Recyclable Material,0.8732
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,166.4,184.32,291.2,264.32,1.0,Other Waste,0.7648
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,224.64,157.44,279.68,205.44,1.0,,0.0431
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch5_13_jpeg.rf.bcc3cbdfd5c1dfc063c7825a0a55a90a.jpg,200.96,154.24,371.2,283.52,1.0,Recyclable Material,0.9366
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch5_15_jpeg.rf.5dc21330fd6004b5fe9c6cdcf1a1732c.jpg,269.44,411.52,356.48,480.0,1.0,Recyclable Material,0.9445
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,140.8,202.24,398.72,389.12,1.0,,0.1604
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,605.44,309.12,638.72,353.92,1.0,,0.0256
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,392.32,397.44,469.12,442.88,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,244.48,323.84,448.64,455.04,1.0,Recyclable Material,0.8477
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,423.04,277.12,509.44,350.08,1.0,Other Waste,0.7524
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_70_jpeg.rf.7b3a89cb52b3c2b63da06989e950254c.jpg,248.32,85.76,431.36,309.12,1.0,Recyclable Material,0.9353
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_65_jpeg.rf.bb51b67df3fe8cf58a9e48ce1eafca7a.jpg,346.88,353.92,483.2,474.88,1.0,Organic Waste,0.9716
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_76_jpeg.rf.8e162d330d5d7183c454f4ba82e1ca47.jpg,119.68,247.04,172.8,275.2,1.0,Organic Waste,0.7081
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_80_jpeg.rf.93908175256bdc7e36dbfbe03cf757c7.jpg,339.84,345.6,512.64,451.2,1.0,Organic Waste,0.9581
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,0.0,222.08,45.44,269.44,1.0,,0.3153
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_E_12_jpeg.rf.47781c0f8ca545ad957fe116ca2d3b50.jpg,433.28,422.4,586.88,526.72,1.0,Organic Waste,0.9269
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_E_7_jpeg.rf.751f2e9d7aa713ca24fc59fe52c4a209.jpg,192.64,177.28,371.2,365.44,1.0,Organic Waste,0.912
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_Online_2_jpeg.rf.8f3afdbb2284e73aa7a48b49e8b960c8.jpg,347.52,332.8,556.16,595.84,1.0,Mixed Waste,0.5936
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_SDM_64_jpg.rf.ee088bd38a2c3c95b2da82373aaac73e.jpg,125.44,117.76,417.28,434.56,1.0,Organic Waste,0.9352
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,330.88,28.16,366.72,105.6,1.0,Recyclable Material,0.8904
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_14_jpg.rf.c589cfdd4d6a2dbf0b252f2f34ca86ad.jpg,60.8,176.0,300.8,305.28,1.0,Mixed Waste,0.8602
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,67.2,220.8,289.28,1.0,Mixed Waste,0.7789
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,59.52,210.56,381.44,357.12,1.0,Mixed Waste,0.9214
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,295.68,330.24,566.4,463.36,1.0,Mixed Waste,0.8947
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,494.08,484.48,638.72,634.88,1.0,Mixed Waste,0.9189
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_23_jpg.rf.2df86f91f15c329adc7eac0e92c012c8.jpg,112.64,95.36,259.84,244.48,1.0,Mixed Waste,0.9583
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_32_jpg.rf.a999ab79afb90d75f2d3c408747fa95e.jpg,93.44,185.6,294.4,427.52,1.0,Mixed Waste,0.9632
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,259.84,261.12,466.56,448.0,1.0,Recyclable Material,0.8898
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_66_jpg.rf.ac65fd37c33025edee0f8356e8e30dd3.jpg,474.24,609.92,499.2,634.88,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_82_jpg.rf.5b857cd999783b45fe9d87f41bd735fe.jpg,260.48,210.56,362.24,316.16,1.0,Organic Waste,0.6114
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,336.64,200.96,346.88,216.32,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,346.88,200.96,357.12,216.32,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,357.12,200.96,365.44,215.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_154_jpeg.rf.19166d7805818a35c045253065a12b6d.jpg,233.6,345.6,381.44,420.48,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,0.0,272.64,80.64,398.72,1.0,Recyclable Material,0.903
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,181.12,306.56,224.64,348.16,1.0,Other Waste,0.5184
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_69_jpeg.rf.abd58f54c6dd55ee439e3d9b9cd97aa8.jpg,112.64,232.96,131.2,263.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,GabrielHili_NewBatch_3_jpeg.rf.c1f5bd64af246f96ef9ac3366738ac07.jpg,144.64,261.12,353.92,634.88,1.0,Mixed Waste,0.8011
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,104.32,270.08,135.04,337.28,1.0,,0.0269
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IllegalDumping_48_jpeg.rf.0e4b7f0cef362ff913350959077e3877.jpg,60.8,373.76,292.48,524.16,1.0,Mixed Waste,0.9658
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,205.44,416.0,263.04,494.72,1.0,Mixed Waste,0.5894
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,image00010_jpeg.rf.e06a2de642e557aa8f532801abefd1c6.jpg,312.32,177.92,418.56,258.56,1.0,Recyclable Material,0.937
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,185.6,289.28,638.72,1.0,Mixed Waste,0.6104
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,0.0,362.24,123.52,553.6,1.0,Recyclable Material,0.8225
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,122.24,343.04,219.52,519.68,1.0,Recyclable Material,0.883
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,imageedit_9_8654318877_jpg.rf.118a4ab4d7d78c57339b763ca18f794a.jpg,386.56,339.84,443.52,477.44,1.0,,0.4875
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106064752_jpg.rf.3488032e56fb1ad43f8b57800b292b5c.jpg,398.72,272.64,485.12,392.32,1.0,Organic Waste,0.9019
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106064808_jpg.rf.a9dad3f353f907f063471251fac869bd.jpg,350.08,266.88,426.88,339.84,1.0,Organic Waste,0.9327
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106064845_jpg.rf.bbc6b2694dafb0369af830be3f0f71ac.jpg,295.68,270.08,362.24,338.56,1.0,Organic Waste,0.9529
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106065829_jpg.rf.13e356e3a46499a3c8b2162c6f8df515.jpg,289.28,232.96,353.92,283.52,1.0,Organic Waste,0.6586
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106065829_jpg.rf.13e356e3a46499a3c8b2162c6f8df515.jpg,327.04,218.88,394.24,277.12,1.0,Organic Waste,0.811
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106070103_jpg.rf.2f726bbb0cef57617daeed5820a3816f.jpg,264.96,222.08,360.96,297.6,1.0,Organic Waste,0.796
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106070329_jpg.rf.f61f2006072335cf78abccceebdc787e.jpg,314.88,285.44,381.44,309.12,1.0,,0.4585
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106072208_jpg.rf.0c3a31f4044dcd74443227b23d650aa7.jpg,280.96,229.12,334.08,277.12,1.0,Organic Waste,0.9124
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106072404_jpg.rf.b32beacc1e0976b57f42c3e4b46b111b.jpg,218.88,250.24,283.52,288.0,1.0,Organic Waste,0.7543
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106072418_jpg.rf.3d814d5b8012adcbd70fece9b5978672.jpg,233.6,265.6,325.76,355.84,1.0,,0.42
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250107083637_jpg.rf.a71b6deb7086bda58d8d6224672eb8f4.jpg,208.64,157.44,269.44,230.4,1.0,Mixed Waste,0.7799
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG20250107085725_jpg.rf.53a2bbc5094b71e31feedd0cf1513ef9.jpg,165.12,264.32,362.24,398.72,1.0,Mixed Waste,0.9854
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,231.68,103.68,314.24,225.92,1.0,Mixed Waste,0.7136
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,259.84,152.96,400.64,241.92,1.0,Recyclable Material,0.9459
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,125.44,198.4,314.88,436.48,1.0,Mixed Waste,0.9599
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,309.12,263.04,494.08,451.2,1.0,Mixed Waste,0.9459
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,214.4,164.48,419.2,327.04,1.0,Recyclable Material,0.9369
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0714_jpeg.rf.97458a882a4c384759469f5ec68c823a.jpg,181.12,285.44,408.32,375.04,1.0,,0.3758
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0725_jpeg.rf.a02633d3203846437290de53a4131b23.jpg,183.04,400.64,227.84,420.48,1.0,Organic Waste,0.7174
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0726_jpeg.rf.96e876a1122037418a3328fdb29b70c8.jpg,279.68,323.2,403.2,397.44,1.0,Organic Waste,0.8886
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0789_jpeg.rf.a115e802da3b048429fb0d31134d452d.jpg,71.04,371.2,296.32,477.44,1.0,Mixed Waste,0.9605
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,264.96,202.24,506.88,431.36,1.0,,0.0947
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,257.92,152.96,314.88,292.48,1.0,Recyclable Material,0.5457
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,279.68,210.56,318.72,263.04,1.0,,0.2011
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1085_converted_jpg.rf.5ed2df0113b41a9eeb5ba2375caee8ea.jpg,277.12,198.4,353.92,285.44,1.0,Other Waste,0.5552
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1498_jpg.rf.56d1556a658cd892330052560c15b640.jpg,226.56,198.4,416.0,406.4,1.0,Recyclable Material,0.9783
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1681-3_jpg.rf.d5d943924c35de90c6d6e157474cbfd7.jpg,307.84,123.52,413.44,167.04,1.0,Mixed Waste,0.8547
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1697_JPG.rf.a35e74e41a26071f49ef0860f0a29af4.jpg,283.52,275.2,411.52,334.72,1.0,Organic Waste,0.8937
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1699_JPG.rf.587af3b59f422de7986e1701c169e5ee.jpg,353.92,184.32,411.52,230.4,1.0,Organic Waste,0.7778
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1725_JPG.rf.cdddfcacd64e3f64fb9802505c7319f2.jpg,451.2,285.44,529.28,334.72,1.0,Organic Waste,0.7119
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1734_JPG.rf.a9bd6393c5a15d2756a795ba6885b750.jpg,321.92,272.64,381.44,324.48,1.0,Organic Waste,0.8398
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1741_JPG.rf.aedf870bc68368bbcd47b4036fe6ba1b.jpg,256.0,190.08,302.08,232.96,1.0,Organic Waste,0.8363
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1780-2_JPG.rf.2feb7461e23e43c8e8c28c2344e91744.jpg,197.76,164.48,323.84,285.44,1.0,Organic Waste,0.5269
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1786-2_JPG.rf.687b21b2f62d777a83c140af63ec3174.jpg,294.4,236.8,386.56,309.12,1.0,Organic Waste,0.931
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,250.24,183.04,323.84,272.64,1.0,Organic Waste,0.9525
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1847-2_JPG.rf.fb41f8560975d5133b47c22d6e55712c.jpg,258.56,210.56,320.0,272.64,1.0,Organic Waste,0.6245
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1864-2_jpg.rf.4a652b55d26cd0148eafe1befb1bf728.jpg,314.24,375.04,452.48,519.68,1.0,Organic Waste,0.9625
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1874-2_JPG.rf.1a61faddb0aa0afe4ec124ad77db3d1c.jpg,202.88,171.52,275.2,224.64,1.0,Organic Waste,0.9457
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1876-2_JPG.rf.a7e9f498d70b0160c108badec0d82968.jpg,206.08,156.16,305.28,231.68,1.0,Organic Waste,0.8557
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1935_JPG.rf.70f3e9d41afe0def24f5016f893cc5f1.jpg,291.2,123.52,428.8,317.44,1.0,Recyclable Material,0.876
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_1983_JPG.rf.fbb2ae887f84c2bc3018cbc7a6a2af14.jpg,39.68,608.64,78.72,638.72,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102-1-_jpg.rf.92fdca8649a8596bd5759763ae134951.jpg,292.48,209.28,362.24,265.6,1.0,Recyclable Material,0.8628
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,292.48,89.6,362.88,234.88,1.0,Recyclable Material,0.9091
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,226.56,85.76,283.52,232.96,1.0,Recyclable Material,0.9671
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241115_073756_jpg.rf.7e52d7c0872aad65a15a3a384aed26aa.jpg,229.12,285.44,294.4,338.56,1.0,Organic Waste,0.8389
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,227.84,238.72,353.92,300.8,1.0,,0.4103
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241115_075448_jpg.rf.266314a32d54fa252b433dae3f98594d.jpg,172.8,279.68,235.52,373.76,1.0,Organic Waste,0.6883
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241115_075448_jpg.rf.266314a32d54fa252b433dae3f98594d.jpg,332.8,283.52,384.0,366.72,1.0,Organic Waste,0.9205
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241119_080952_jpg.rf.17cb052c2afe147a229d2bc86d708496.jpg,238.72,213.76,353.92,295.04,1.0,Mixed Waste,0.9044
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,325.76,266.88,384.0,378.24,1.0,Recyclable Material,0.8508
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,381.44,271.36,440.96,368.0,1.0,Recyclable Material,0.7616
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,307.2,251.52,374.4,375.04,1.0,Recyclable Material,0.9131
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,343.04,216.32,408.96,289.28,1.0,Recyclable Material,0.6948
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,369.92,272.64,431.36,368.0,1.0,Recyclable Material,0.8816
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,353.92,157.44,371.2,183.04,1.0,,0.0071
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,209.28,78.72,350.08,273.92,1.0,Organic Waste,0.9092
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241219_084719_jpg.rf.93bdd801e0ce4811189ba99080842075.jpg,128.0,154.88,227.84,299.52,1.0,Recyclable Material,0.8956
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241228_082931_jpg.rf.36e90ccb5eabdc81be8c4c4fc111bec2.jpg,244.48,289.28,422.4,371.2,1.0,Mixed Waste,0.9483
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,35.2,98.56,270.08,247.04,1.0,Mixed Waste,0.9413
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,244.48,112.64,359.68,243.2,1.0,Mixed Waste,0.9046
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,353.92,133.12,471.04,251.52,1.0,Mixed Waste,0.8913
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_070512_jpg.rf.255e6e445fb501cb02fbd10537e3c482.jpg,0.0,263.04,30.08,337.28,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,309.12,219.52,472.32,357.12,1.0,Mixed Waste,0.9445
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,154.88,245.12,259.84,327.04,1.0,Organic Waste,0.9378
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,244.48,202.24,330.88,264.32,1.0,Organic Waste,0.8046
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072730_jpg.rf.04c94d8351ffdfbd2d7391c96b474256.jpg,145.28,247.04,279.68,352.0,1.0,Organic Waste,0.9344
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250109_074213_jpg.rf.70a8bd28946b36ece01a48b9cdfaa26d.jpg,214.4,0.0,327.04,202.24,1.0,Other Waste,0.9784
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,375.04,240.0,443.52,292.48,1.0,Recyclable Material,0.7444
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_3068_jpeg.rf.6b63b7cb63ae7950ebc35b5a96550b08.jpg,314.24,285.44,350.08,320.64,1.0,Recyclable Material,0.8956
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_3108_jpeg.rf.f0273d0fa4ade4f4e81d527d9cc1f2db.jpg,140.16,209.28,400.64,375.04,1.0,,0.0447
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,27.52,190.08,318.72,418.56,1.0,Recyclable Material,0.9762
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,224.64,168.32,411.52,378.24,1.0,Mixed Waste,0.5833
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,390.4,168.96,570.24,337.28,1.0,Mixed Waste,0.9189
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4329_JPG.rf.743d3b23867d61b5e40194a0805de44f.jpg,240.64,197.76,513.92,505.6,1.0,Mixed Waste,0.525
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4369_jpeg.rf.408cd6a46d2f5cac2cbe3b37e3ebcda9.jpg,297.6,254.72,427.52,327.04,1.0,Recyclable Material,0.8312
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4381_JPG.rf.2c50827131296bfe3883c59625a8bc6b.jpg,192.64,163.2,350.08,322.56,1.0,Organic Waste,0.9888
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4384_JPG.rf.b89fff6257bced61fff24d71d5c96809.jpg,171.52,238.72,320.0,320.0,1.0,Organic Waste,0.8359
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4388_JPG.rf.3c393557e6f2d9a5a8f6ddeeba51ac15.jpg,283.52,200.96,388.48,292.48,1.0,Organic Waste,0.9295
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4396_jpg.rf.1db0db20656a7c83e35b6d18c0215170.jpg,292.48,261.12,371.2,390.4,1.0,Recyclable Material,0.955
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,346.24,181.12,483.2,313.6,1.0,Organic Waste,0.8705
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_JPG.rf.a40bfe5dc594ca8f8b19a657df19a24b.jpg,229.12,150.4,392.32,302.08,1.0,Organic Waste,0.9012
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4407_JPG.rf.614497a80164d2a76b09b87d423d4135.jpg,386.56,130.56,481.92,215.04,1.0,,0.4705
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4410_JPG.rf.f4e18a42420273153db9bd7ba0d584e7.jpg,277.12,222.08,389.12,325.76,1.0,Organic Waste,0.959
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_4561_jpg.rf.5f140ad2d986f1d247075091fb9a39f2.jpg,244.48,222.08,279.68,300.8,1.0,Organic Waste,0.7851
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_5761_JPG.rf.ffcd5a5b9f4725507b420e333cc0c094.jpg,224.64,101.12,362.24,181.12,1.0,Recyclable Material,0.8926
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_5778_blurred_jpg.rf.38cb37b2fb6d4dc976cb44e46e0e88df.jpg,289.28,97.28,336.64,154.24,1.0,Recyclable Material,0.8769
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_5780_blurred_jpg.rf.79dedd739e6bb733eeed62225a18a389.jpg,384.0,150.4,400.64,164.48,1.0,,0.3336
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_5780_blurred_jpg.rf.79dedd739e6bb733eeed62225a18a389.jpg,400.64,157.44,426.88,177.28,1.0,Recyclable Material,0.5845
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_5811_JPG.rf.7d14868bfb97d93f7e4b11e0317bae95.jpg,247.04,224.64,316.16,288.0,1.0,Organic Waste,0.9234
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8255_size_jpeg.rf.6761db8582d4837db7e2397532361d67.jpg,226.56,348.8,373.76,467.84,1.0,Mixed Waste,0.9421
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8257_size_jpeg.rf.19792c9e34156566549cd8191acf13cd.jpg,147.2,366.72,371.2,536.96,1.0,Mixed Waste,0.9339
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8271_jpeg.rf.fb02cba573f7261f80a99999480f068a.jpg,243.2,275.2,336.64,387.84,1.0,Organic Waste,0.8972
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8271_jpeg.rf.fb02cba573f7261f80a99999480f068a.jpg,290.56,352.64,419.2,430.08,1.0,Organic Waste,0.8727
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8281_jpeg.rf.d3c9977245690d5782db72d710b94bf7.jpg,240.64,283.52,366.08,346.88,1.0,Organic Waste,0.5096
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8283_jpeg.rf.36c1d23b9b979b2382bda6d9d15725f3.jpg,283.52,298.24,413.44,382.08,1.0,Organic Waste,0.9711
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,220.8,398.72,312.32,480.0,1.0,Mixed Waste,0.6467
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,241.28,358.4,378.88,449.28,1.0,Recyclable Material,0.8471
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,353.92,264.32,388.48,309.12,1.0,,0.4691
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8860_jpeg.rf.5af16907c63b034c96c83914fb2f3f52.jpg,350.08,365.44,469.12,441.6,1.0,Mixed Waste,0.9408
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,205.44,300.8,386.56,535.04,1.0,,0.2824
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,157.44,362.24,292.48,469.12,1.0,Mixed Waste,0.811
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8972_jpeg.rf.cd49521b82c9ff62a6e578b50e8b47dc.jpg,269.44,389.12,379.52,497.28,1.0,Mixed Waste,0.9706
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8974_jpeg.rf.228d538a131d7415743d51cf6832042a.jpg,330.88,358.4,416.0,474.88,1.0,Recyclable Material,0.8345
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,IMG_8974_jpeg.rf.ae5486445974faf437f5555fba82f0ef.jpg,174.72,330.24,277.12,418.56,1.0,Organic Waste,0.7769
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,9.6,238.72,118.4,375.04,1.0,,0.0567
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_124_jpg.rf.234eac622fccca0d569fe7920ed68ce7.jpg,285.44,268.16,443.52,341.76,1.0,Recyclable Material,0.8514
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,371.2,140.16,433.28,266.88,1.0,Recyclable Material,0.9066
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,200.96,72.96,238.72,160.0,1.0,Recyclable Material,0.9021
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_16_jpg.rf.4e76b4d44941fe5c711fae8306ec9680.jpg,213.76,168.32,378.88,480.64,1.0,Recyclable Material,0.8888
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,235.52,68.48,388.48,414.72,1.0,Recyclable Material,0.9367
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_44_jpg.rf.b6764df71c247a34b6a04c518db242cd.jpg,336.64,208.0,474.24,327.04,1.0,Organic Waste,0.8703
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_51_jpg.rf.a1a6c477482754d254bc147983926134.jpg,280.96,240.64,336.64,269.44,1.0,Organic Waste,0.8856
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,220.8,234.88,356.48,320.0,1.0,Organic Waste,0.9106
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,263.04,292.48,466.56,411.52,1.0,Organic Waste,0.9265
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_76_jpg.rf.0f8f53a21baa9edf9a2b26f86785f223.jpg,275.2,247.04,413.44,351.36,1.0,Organic Waste,0.6132
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_77_jpg.rf.8c269d516f4d52c27f8be11e3024b07e.jpg,268.16,220.8,362.24,285.44,1.0,Organic Waste,0.939
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,92.16,277.12,211.2,535.04,1.0,Mixed Waste,0.913
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,206.08,198.4,302.72,451.2,1.0,Mixed Waste,0.9095
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,295.68,252.8,425.6,401.92,1.0,Mixed Waste,0.7498
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,353.92,109.44,452.48,327.68,1.0,Mixed Waste,0.8494
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,408.32,170.24,506.88,362.24,1.0,Mixed Waste,0.8812
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,305.28,229.12,364.8,352.64,1.0,Mixed Waste,0.8331
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,216.96,230.4,310.4,352.64,1.0,Mixed Waste,0.9173
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,412.8,314.88,428.8,355.2,1.0,Mixed Waste,0.5304
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,428.8,314.88,443.52,355.2,1.0,Mixed Waste,0.5927
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,Number_blur-2-_size_jpeg.rf.1c3be494c4b9cc9941f73ca4650b2955.jpg,293.12,302.08,416.0,448.0,1.0,Mixed Waste,0.5255
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,Organic_1_jpeg.rf.77f76f56f0135df005c7864616e3d828.jpg,264.96,254.72,406.4,323.2,1.0,Organic Waste,0.9012
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,222.08,263.04,363.52,343.04,1.0,Organic Waste,0.8561
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2025-01-04-12-12-39-1-_jpg.rf.edf874a66a2338c3b33d51e6f3a02c71.jpg,264.96,193.92,414.72,384.64,1.0,Mixed Waste,0.5873
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2025-01-04-12-12-47_jpg.rf.1c9ba1ca77945e6fe6229f8762125342.jpg,188.16,177.92,272.64,320.0,1.0,Mixed Waste,0.8495
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2025-01-04-12-12-47_jpg.rf.1c9ba1ca77945e6fe6229f8762125342.jpg,224.64,224.64,328.96,320.64,1.0,Mixed Waste,0.8192
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064324039-MP_jpg.rf.14da8fd358dd67f611f45f79feec4bbf.jpg,227.84,224.64,353.92,362.24,1.0,Organic Waste,0.9284
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064444279_jpg.rf.fcd56876b1eea9222f981e515780c1e4.jpg,181.12,230.4,337.28,330.24,1.0,Organic Waste,0.7786
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241226_075947607_jpg.rf.ef0e57af799e19659d6a344b93611b1f.jpg,99.2,206.72,414.72,422.4,1.0,Recyclable Material,0.99
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,486.4,222.08,638.72,428.8,1.0,Other Waste,0.957
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,RandomErasing_IMG_5774_jpg.rf.d71ff80bf43426aefeb9aa05f8c23e4d.jpg,197.76,206.72,289.28,404.48,1.0,Mixed Waste,0.9565
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,RandomErasing_IMG_5774_jpg.rf.d71ff80bf43426aefeb9aa05f8c23e4d.jpg,272.64,213.76,439.04,526.72,1.0,Mixed Waste,0.9597
+Cosmos Reason2 8B,sens-mdwd-orange-04,find all orange waste bags,Unknown-6_jpg.rf.ad6fdf8bf89e73dc870edfa7e5f8588c.jpg,77.44,150.4,503.04,420.48,1.0,Mixed Waste,0.8026

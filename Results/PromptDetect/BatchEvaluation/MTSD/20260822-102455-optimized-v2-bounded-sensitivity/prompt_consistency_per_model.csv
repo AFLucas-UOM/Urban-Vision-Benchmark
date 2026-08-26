@@ -1,0 +1,6 @@
+dataset,model,n_families,macro_pairwise_box_f1,macro_pairwise_box_jaccard,macro_matched_pair_iou,least_consistent_family,min_family_pairwise_box_f1
+MTSD,Cosmos Reason2 2B,5,0.6439,0.6425,0.9732,mtsd-blind-spot-mirror,0.4996
+MTSD,Cosmos Reason2 8B,5,0.6935,0.6916,0.9811,mtsd-blind-spot-mirror,0.6259
+MTSD,LocateAnything 3B,5,0.5515,0.5018,0.9311,mtsd-roundabout-ahead,0.5317
+MTSD,SAM 3,5,0.6164,0.5772,0.9759,mtsd-blind-spot-mirror,0.433
+MTSD,SAM 3.1,5,0.6117,0.5709,0.9762,mtsd-blind-spot-mirror,0.4168

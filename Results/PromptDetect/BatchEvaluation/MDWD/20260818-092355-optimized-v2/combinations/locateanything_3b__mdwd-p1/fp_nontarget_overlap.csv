@@ -1,0 +1,247 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+LocateAnything 3B,mdwd-p1,black garbage bag,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,355.84,192.0,444.8,286.72,1.0,Organic Waste,0.8842
+LocateAnything 3B,mdwd-p1,black garbage bag,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,467.84,69.76,538.24,149.76,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,528.0,0.0,638.72,60.8,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,213.76,272.0,300.8,302.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,231.68,124.8,551.04,536.96,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,382.08,195.2,519.68,330.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,48.0,85.12,412.8,428.16,1.0,,0.1864
+LocateAnything 3B,mdwd-p1,black garbage bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,341.76,177.92,414.08,286.08,1.0,Recyclable Material,0.9283
+LocateAnything 3B,mdwd-p1,black garbage bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,371.2,167.68,453.76,243.84,1.0,Other Waste,0.6528
+LocateAnything 3B,mdwd-p1,black garbage bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,412.16,192.0,545.28,408.32,1.0,Other Waste,0.8827
+LocateAnything 3B,mdwd-p1,black garbage bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,490.24,88.32,638.72,638.72,1.0,,0.108
+LocateAnything 3B,mdwd-p1,black garbage bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,492.16,0.0,638.72,122.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,20250114_102320_jpg.rf.979c53863883cd0861956f0a494251dd.jpg,209.28,293.12,384.0,400.0,1.0,Other Waste,0.9802
+LocateAnything 3B,mdwd-p1,black garbage bag,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,337.28,0.0,638.72,140.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,396.16,193.28,440.32,368.0,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,20250124_120520_jpg.rf.c987ae9fb81418ff52771c2a335bd188.jpg,270.08,206.08,323.84,240.0,1.0,Other Waste,0.6519
+LocateAnything 3B,mdwd-p1,black garbage bag,472129425_1345249006899593_1932127883326922457_n_jpg.rf.03069b893f513bced6e53fce77c8d53c.jpg,316.16,316.16,346.24,369.28,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,472786813_628965022887679_5248188576436768956_n_jpg.rf.defa0e5e9d1fb44d9baf104b73f3b587.jpg,181.76,300.16,378.24,366.08,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,481.92,14.08,599.04,49.92,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,174.08,33.92,522.24,385.28,1.0,,0.4987
+LocateAnything 3B,mdwd-p1,black garbage bag,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,192.0,135.68,430.08,291.2,1.0,Recyclable Material,0.5779
+LocateAnything 3B,mdwd-p1,black garbage bag,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,224.0,33.92,428.16,138.24,1.0,,0.3472
+LocateAnything 3B,mdwd-p1,black garbage bag,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,419.2,154.88,520.96,257.28,1.0,Recyclable Material,0.7791
+LocateAnything 3B,mdwd-p1,black garbage bag,474711682_567011309667599_6264000997239717913_n_jpg.rf.c5242ab97b3bb14b447b2963dc40bc88.jpg,504.96,314.24,572.16,410.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,295.04,305.28,627.2,554.24,1.0,Orange CMD,0.9867
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,314.24,184.32,337.28,238.08,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,257.92,250.24,403.84,391.04,1.0,,0.0297
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,604.16,168.96,638.72,256.0,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,0.0,26.24,181.76,76.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,53.12,115.84,558.08,375.04,1.0,,0.0944
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,378.88,88.32,432.0,117.76,1.0,Organic Waste,0.9357
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,423.68,88.96,455.68,115.84,1.0,Organic Waste,0.919
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,528.0,90.24,568.32,99.2,1.0,Other Waste,0.7394
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,560.0,56.32,574.08,65.92,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_28_jpeg.rf.919763ab83ddeeedc1582a66fb260e6c.jpg,190.72,161.28,394.24,344.32,1.0,Recyclable Material,0.9506
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,266.24,202.24,460.16,336.0,1.0,Recyclable Material,0.9857
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,266.24,321.28,451.84,453.76,1.0,Recyclable Material,0.7929
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,254.08,106.24,348.16,174.08,1.0,Recyclable Material,0.8444
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,307.2,140.8,430.72,224.0,1.0,Recyclable Material,0.9208
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,318.08,0.0,410.24,87.04,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,387.84,49.92,549.76,85.12,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,462.72,0.0,572.8,83.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,583.68,0.0,638.72,88.32,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,419.84,277.76,519.04,346.24,1.0,Other Waste,0.893
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,451.2,280.32,494.72,364.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,501.12,291.84,558.08,357.12,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,501.12,261.76,638.72,339.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL_NewBatch3_53_jpeg.rf.9e5bf2183fc4b923c9ee1501592a41f9.jpg,346.24,0.0,476.8,165.12,1.0,,0.0592
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL_NewBatch3_53_jpeg.rf.9e5bf2183fc4b923c9ee1501592a41f9.jpg,350.08,0.0,476.8,19.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,215.04,113.92,307.2,204.16,1.0,Recyclable Material,0.8913
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,231.68,268.16,423.04,373.76,1.0,Recyclable Material,0.9682
+LocateAnything 3B,mdwd-p1,black garbage bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,257.28,314.88,519.68,551.68,1.0,Recyclable Material,0.9783
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_AFL_13_jpeg.rf.3b2d222a7fb553564619bba08946664e.jpg,389.76,307.84,467.84,414.08,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_AFL_20_jpeg.rf.ac014490ff2a11d9f279be120a1079f1.jpg,106.24,286.08,355.84,437.12,1.0,Recyclable Material,0.5847
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_SDM_26_jpg.rf.f351dc9b8e6a13d8c26fc09498ec2ca4.jpg,309.76,176.0,478.72,487.68,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_SDM_26_jpg.rf.f351dc9b8e6a13d8c26fc09498ec2ca4.jpg,401.92,216.32,506.88,570.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_14_jpg.rf.c589cfdd4d6a2dbf0b252f2f34ca86ad.jpg,188.8,225.28,604.16,512.0,1.0,Recyclable Material,0.9534
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_14_jpg.rf.c589cfdd4d6a2dbf0b252f2f34ca86ad.jpg,188.8,176.0,305.28,307.2,1.0,,0.075
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,462.08,231.04,579.2,309.76,1.0,Recyclable Material,0.971
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,615.04,220.16,638.72,275.2,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_32_jpg.rf.a999ab79afb90d75f2d3c408747fa95e.jpg,419.84,229.76,512.0,296.96,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_32_jpg.rf.a999ab79afb90d75f2d3c408747fa95e.jpg,419.84,263.68,538.88,305.92,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,0.0,252.8,90.24,430.72,1.0,Recyclable Material,0.9695
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,76.16,257.92,337.28,430.72,1.0,Recyclable Material,0.9162
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,241.92,209.92,615.68,467.2,1.0,Recyclable Material,0.8893
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,263.68,229.76,323.84,270.72,1.0,,0.0238
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,161.92,93.76,446.08,364.48,1.0,,0.2466
+LocateAnything 3B,mdwd-p1,black garbage bag,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,304.0,229.12,597.76,270.72,1.0,,0.1178
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_22_jpeg.rf.a23d3afee83225ef2d4f068e96144385.jpg,490.24,115.2,512.0,120.32,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,140.16,199.68,236.16,248.96,1.0,Other Waste,0.9276
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,197.76,204.8,316.16,273.92,1.0,Recyclable Material,0.8711
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,291.2,156.8,412.16,225.28,1.0,Recyclable Material,0.8135
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,304.0,202.24,430.08,275.84,1.0,Recyclable Material,0.8821
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,378.24,248.32,428.16,291.2,1.0,,0.1689
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,428.8,224.0,472.32,266.24,1.0,,0.0033
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,458.88,0.0,638.72,295.04,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,590.08,193.28,638.72,236.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,593.28,131.2,638.72,234.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,471.04,106.24,638.72,193.28,1.0,,0.0185
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,248.32,327.68,311.04,410.24,1.0,Recyclable Material,0.9127
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,145.92,346.24,270.08,421.12,1.0,Recyclable Material,0.7224
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,599.04,421.76,638.72,464.0,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,608.0,394.88,638.72,419.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IllegalDumping_48_jpeg.rf.0e4b7f0cef362ff913350959077e3877.jpg,229.12,293.12,275.84,320.0,1.0,,0.0116
+LocateAnything 3B,mdwd-p1,black garbage bag,IllegalDumping_48_jpeg.rf.0e4b7f0cef362ff913350959077e3877.jpg,293.76,410.24,312.96,426.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,211.84,391.04,366.08,499.2,1.0,,0.3085
+LocateAnything 3B,mdwd-p1,black garbage bag,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,362.88,426.24,405.76,497.28,1.0,Other Waste,0.9605
+LocateAnything 3B,mdwd-p1,black garbage bag,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,387.84,344.96,437.76,497.28,1.0,,0.1319
+LocateAnything 3B,mdwd-p1,black garbage bag,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,624.0,430.08,638.72,540.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,image00012_jpeg.rf.513ba55685004619587efff11d5186a9.jpg,76.8,220.16,360.96,357.12,1.0,Recyclable Material,0.9406
+LocateAnything 3B,mdwd-p1,black garbage bag,image00012_jpeg.rf.513ba55685004619587efff11d5186a9.jpg,101.76,288.0,270.08,355.84,1.0,,0.2875
+LocateAnything 3B,mdwd-p1,black garbage bag,image00012_jpeg.rf.513ba55685004619587efff11d5186a9.jpg,204.8,252.8,359.68,357.12,1.0,,0.4069
+LocateAnything 3B,mdwd-p1,black garbage bag,image00012_jpeg.rf.513ba55685004619587efff11d5186a9.jpg,206.08,220.16,291.84,357.12,1.0,,0.2879
+LocateAnything 3B,mdwd-p1,black garbage bag,image00042_jpeg.rf.b2466e61bc76e942d37dc702f18b81e4.jpg,309.76,268.8,448.0,382.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,image00042_jpeg.rf.b2466e61bc76e942d37dc702f18b81e4.jpg,380.16,248.32,446.72,364.8,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,image00082_jpeg.rf.2a65a428911318f5f3442ffe3870263d.jpg,506.24,152.96,638.72,501.12,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,188.8,49.92,638.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,0.0,316.8,638.72,608.0,1.0,,0.1329
+LocateAnything 3B,mdwd-p1,black garbage bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,440.32,316.8,638.72,595.84,1.0,,0.4463
+LocateAnything 3B,mdwd-p1,black garbage bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,0.0,0.0,638.72,638.72,1.0,,0.0606
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG20250107083637_jpg.rf.a71b6deb7086bda58d8d6224672eb8f4.jpg,364.16,152.96,494.72,243.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG20250107083637_jpg.rf.a71b6deb7086bda58d8d6224672eb8f4.jpg,561.28,0.0,638.72,197.12,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG20250107085115_jpg.rf.3e131773392640860c7ba3bbb030b45b.jpg,302.08,0.0,638.72,170.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG20250107085454_jpg.rf.03f678b7d914e0a5a963f3e051cb0aa4.jpg,414.72,138.24,430.08,172.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG20250107085454_jpg.rf.03f678b7d914e0a5a963f3e051cb0aa4.jpg,414.72,117.12,421.76,190.08,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG20250107085655_jpg.rf.2164bdf6a18089bda1efb0782a777491.jpg,369.92,0.0,426.24,163.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,261.76,154.24,403.2,243.84,1.0,Recyclable Material,0.9814
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,519.04,0.0,542.72,51.2,1.0,Other Waste,0.5562
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,542.08,0.0,565.76,51.2,1.0,,0.172
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,558.08,202.24,638.72,263.68,1.0,Other Waste,0.9074
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,576.0,0.0,638.72,120.32,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,229.76,442.88,481.28,597.12,1.0,Organic Waste,0.9455
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,76.16,268.16,268.8,497.28,1.0,,0.4424
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,263.68,199.68,510.08,432.0,1.0,,0.0974
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1303_jpg.rf.439ed8ead58b6bc5aaf721c21ea1f300.jpg,149.76,211.84,225.28,266.24,1.0,Organic Waste,0.7174
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1303_jpg.rf.439ed8ead58b6bc5aaf721c21ea1f300.jpg,216.32,154.88,316.8,314.88,1.0,Organic Waste,0.8671
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1303_jpg.rf.439ed8ead58b6bc5aaf721c21ea1f300.jpg,291.2,133.12,465.28,392.96,1.0,Organic Waste,0.9738
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1303_jpg.rf.439ed8ead58b6bc5aaf721c21ea1f300.jpg,300.16,220.16,462.72,307.84,1.0,,0.3133
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1329-1-_jpg.rf.3701d7186cf924baf96af1903cc51c13.jpg,213.76,176.0,323.84,414.08,1.0,Other Waste,0.9864
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,311.04,220.8,401.28,403.2,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,519.68,90.24,583.68,222.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,544.0,90.88,625.92,220.8,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,600.32,83.84,638.72,165.12,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,624.0,83.84,638.72,163.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1340_jpg.rf.5c5713ca2d53a8ed11d4a692dceeaae3.jpg,389.76,229.76,444.16,286.08,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1498_jpg.rf.56d1556a658cd892330052560c15b640.jpg,225.92,211.84,417.92,408.32,1.0,Recyclable Material,0.9135
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1498_jpg.rf.56d1556a658cd892330052560c15b640.jpg,256.0,17.28,320.0,97.92,1.0,,0.1577
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1498_jpg.rf.56d1556a658cd892330052560c15b640.jpg,320.0,64.0,403.84,97.28,1.0,,0.0855
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1642-3_JPG.rf.dc053066bc3dc85394edbc00ef55a8e4.jpg,0.0,540.16,216.32,638.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1681-3_jpg.rf.d5d943924c35de90c6d6e157474cbfd7.jpg,394.24,120.32,426.88,135.68,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1685-3_JPG.rf.2e9e64f9877232f482557245a74b2fe1.jpg,327.68,55.04,433.28,211.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1685-3_JPG.rf.2e9e64f9877232f482557245a74b2fe1.jpg,391.68,0.0,558.08,181.76,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1864-2_jpg.rf.4a652b55d26cd0148eafe1befb1bf728.jpg,314.88,373.12,453.12,519.04,1.0,Organic Waste,0.9577
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1935_JPG.rf.70f3e9d41afe0def24f5016f893cc5f1.jpg,122.24,113.92,291.84,346.88,1.0,Recyclable Material,0.9827
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_1935_JPG.rf.70f3e9d41afe0def24f5016f893cc5f1.jpg,288.0,124.16,432.0,318.08,1.0,Recyclable Material,0.9161
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,229.76,261.12,312.32,300.16,1.0,Organic Waste,0.943
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,252.8,236.8,362.24,302.72,1.0,,0.4774
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,309.12,238.08,364.16,302.72,1.0,Organic Waste,0.5316
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,403.2,238.08,444.8,286.08,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,424.96,211.84,444.8,284.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,442.88,211.84,476.16,284.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,442.88,211.84,444.8,284.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241121_091747_jpg.rf.3fd3e241b47f6b97e6d584dded292019.jpg,195.84,220.8,273.28,339.84,1.0,Recyclable Material,0.8913
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241217_073410_jpg.rf.8ba94ff4ae15e4be5ccd4dc4f266b1b3.jpg,250.88,55.04,414.08,129.28,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,462.08,152.32,490.88,195.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241228_084606_jpg.rf.a4b1a7867d1bdf6ec683a909c6388742.jpg,300.16,344.32,380.16,405.76,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241228_084606_jpg.rf.a4b1a7867d1bdf6ec683a909c6388742.jpg,343.04,186.88,396.8,229.76,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241228_084606_jpg.rf.a4b1a7867d1bdf6ec683a909c6388742.jpg,512.0,325.76,561.28,346.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241228_084606_jpg.rf.a4b1a7867d1bdf6ec683a909c6388742.jpg,583.68,323.84,600.32,332.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241228_084606_jpg.rf.a4b1a7867d1bdf6ec683a909c6388742.jpg,583.68,371.84,597.76,380.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20241228_084606_jpg.rf.a4b1a7867d1bdf6ec683a909c6388742.jpg,634.24,343.04,638.72,380.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_20250104_071502_jpg.rf.a7fd2d3a223c221308d25329020f5482.jpg,304.0,152.32,385.28,236.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,371.84,243.84,442.24,295.04,1.0,Recyclable Material,0.8565
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,410.24,245.76,460.16,293.76,1.0,,0.438
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_4228_JPG.rf.3354240a78ddc77e93ae7abe53e5e890.jpg,305.28,135.68,497.28,380.16,1.0,Recyclable Material,0.9785
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_4228_JPG.rf.3354240a78ddc77e93ae7abe53e5e890.jpg,321.28,252.16,497.28,380.16,1.0,,0.4869
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,238.08,224.0,416.0,339.84,1.0,Other Waste,0.8932
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,339.84,120.32,515.84,263.68,1.0,Recyclable Material,0.9436
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,389.76,167.68,405.76,336.0,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_4297_JPG.rf.8da214b4dc38a51f543d9131574cd484.jpg,275.2,133.76,348.8,158.08,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_4297_JPG.rf.8da214b4dc38a51f543d9131574cd484.jpg,275.2,113.28,300.16,135.68,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_4329_JPG.rf.743d3b23867d61b5e40194a0805de44f.jpg,302.08,56.96,350.08,97.92,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5726_JPG.rf.286ad9a77d75805b06ffef5d803abbf6.jpg,378.24,177.28,467.84,291.2,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5726_JPG.rf.286ad9a77d75805b06ffef5d803abbf6.jpg,455.04,0.0,638.72,522.24,1.0,,0.0336
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5755_JPG.rf.39996c0e5fa5a0cce44d9d495a7d3c47.jpg,355.84,104.96,433.28,120.96,1.0,,0.1955
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5761_JPG.rf.ffcd5a5b9f4725507b420e333cc0c094.jpg,236.16,101.12,353.28,181.76,1.0,Recyclable Material,0.8441
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5761_JPG.rf.ffcd5a5b9f4725507b420e333cc0c094.jpg,266.24,124.16,353.28,174.08,1.0,,0.3883
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,152.32,44.16,284.8,195.84,1.0,Recyclable Material,0.9723
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,163.84,158.08,284.8,195.84,1.0,,0.2227
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,167.68,90.88,284.8,158.08,1.0,,0.3942
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,170.24,74.24,259.84,110.08,1.0,,0.1619
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,172.16,112.0,259.84,156.16,1.0,,0.1952
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,44.16,68.8,304.0,198.72,1.0,,0.4436
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,126.08,259.84,138.24,1.0,,0.0526
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,136.96,259.84,147.84,1.0,,0.047
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,145.92,259.84,158.08,1.0,,0.0526
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,147.84,259.84,167.68,1.0,,0.0858
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,158.72,259.84,176.0,1.0,,0.0747
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,167.68,259.84,179.84,1.0,,0.0526
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,176.0,259.84,186.88,1.0,,0.047
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,179.84,259.84,192.0,1.0,,0.0526
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,186.88,259.84,197.12,1.0,,0.0348
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,195.84,259.84,202.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,202.24,259.84,209.28,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,209.28,259.84,216.32,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,216.32,259.84,222.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,222.72,259.84,229.12,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,229.12,259.84,234.88,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,234.88,259.84,241.92,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,241.92,259.84,247.04,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,247.04,259.84,254.08,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,254.08,259.84,259.84,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,259.84,259.84,266.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,266.24,259.84,272.0,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,174.08,272.0,259.84,277.76,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,167.68,133.76,492.16,368.0,1.0,,0.2989
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,318.08,133.76,394.88,190.08,1.0,Other Waste,0.5161
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,396.16,158.72,506.24,216.32,1.0,Other Waste,0.7175
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8260_jpeg.rf.9b9fa58175d683e6a9baed93a5373150.jpg,304.0,144.0,513.92,316.16,1.0,Organic Waste,0.9741
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,186.24,382.08,391.04,458.24,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,240.0,357.12,376.32,448.0,1.0,Recyclable Material,0.8716
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,330.24,256.0,440.32,369.92,1.0,,0.0155
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,440.32,449.28,638.72,638.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,350.08,305.92,430.72,350.72,1.0,,0.4992
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,387.84,261.76,428.16,305.28,1.0,Recyclable Material,0.5152
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,398.08,218.24,428.16,261.76,1.0,,0.3108
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8857_jpeg.rf.706343f1401bebbd7dd3c69f38b48729.jpg,236.16,369.92,323.84,401.28,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8860_jpeg.rf.5af16907c63b034c96c83914fb2f3f52.jpg,362.24,382.72,440.32,442.24,1.0,,0.2961
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,204.8,300.8,385.92,536.32,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,224.0,323.2,353.92,464.0,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,156.8,330.24,366.08,485.76,1.0,,0.1063
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,289.92,364.16,339.84,401.92,1.0,Other Waste,0.6308
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,369.92,385.92,416.0,412.8,1.0,,0.2527
+LocateAnything 3B,mdwd-p1,black garbage bag,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,369.92,405.76,428.16,412.16,1.0,,0.0709
+LocateAnything 3B,mdwd-p1,black garbage bag,Mixed_11_jpeg.rf.701ca65448ea1c8c5c05ede9e62d7faa.jpg,309.76,26.24,405.76,69.76,1.0,Other Waste,0.8665
+LocateAnything 3B,mdwd-p1,black garbage bag,Mixed_11_jpeg.rf.701ca65448ea1c8c5c05ede9e62d7faa.jpg,433.92,85.76,451.84,104.96,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,Mixed_11_jpeg.rf.701ca65448ea1c8c5c05ede9e62d7faa.jpg,435.84,0.0,638.72,245.76,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,Mixed_3_jpeg.rf.2ecdba47ebadb9c2a485e6edc9984489.jpg,375.04,259.84,515.84,529.92,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_44_jpg.rf.b6764df71c247a34b6a04c518db242cd.jpg,81.28,282.24,248.32,373.76,1.0,Organic Waste,0.9693
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_44_jpg.rf.b6764df71c247a34b6a04c518db242cd.jpg,200.96,213.12,330.88,295.04,1.0,Organic Waste,0.9003
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_44_jpg.rf.b6764df71c247a34b6a04c518db242cd.jpg,241.92,268.16,396.16,373.12,1.0,Organic Waste,0.9759
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_44_jpg.rf.b6764df71c247a34b6a04c518db242cd.jpg,332.16,206.08,476.8,341.12,1.0,Organic Waste,0.9593
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_44_jpg.rf.b6764df71c247a34b6a04c518db242cd.jpg,366.08,254.08,448.0,288.0,1.0,,0.1481
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_44_jpg.rf.b6764df71c247a34b6a04c518db242cd.jpg,380.16,266.24,446.08,289.92,1.0,,0.0832
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,528.0,435.2,638.72,638.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,600.32,0.0,638.72,64.0,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,254.72,323.84,279.04,385.92,1.0,,0.3426
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,263.04,323.84,304.0,389.76,1.0,,0.3467
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,508.8,305.92,558.08,344.96,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,533.76,309.76,549.76,344.96,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,613.76,273.28,625.92,316.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,115.84,67.2,430.08,405.76,1.0,,0.0695
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,305.92,165.76,385.92,282.24,1.0,,0.0629
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,408.32,222.08,423.04,252.16,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,412.16,0.0,474.24,35.2,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,Number_blur-2-_size_jpeg.rf.1c3be494c4b9cc9941f73ca4650b2955.jpg,327.68,346.24,430.08,414.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,Number_blur-2-_size_jpeg.rf.1c3be494c4b9cc9941f73ca4650b2955.jpg,330.24,364.16,408.32,446.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,PHOTO-2025-01-04-12-12-39-1-_jpg.rf.edf874a66a2338c3b33d51e6f3a02c71.jpg,289.92,250.24,382.72,334.72,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,PHOTO-2025-01-04-12-12-39-1-_jpg.rf.edf874a66a2338c3b33d51e6f3a02c71.jpg,293.12,222.08,369.92,385.92,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,PHOTO-2025-01-04-12-12-39-1-_jpg.rf.edf874a66a2338c3b33d51e6f3a02c71.jpg,293.12,193.92,369.92,275.2,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,PXL_20241103_204907919-NIGHT_jpg.rf.0069fe6c121acb8c84a133154abbc05a.jpg,560.0,254.08,638.72,364.8,1.0,,0.0
+LocateAnything 3B,mdwd-p1,black garbage bag,PXL_20241226_080053691_jpg.rf.08e12d2cae94660dfcd43c04079c13f9.jpg,163.2,106.24,410.24,382.72,1.0,Recyclable Material,0.9792
+LocateAnything 3B,mdwd-p1,black garbage bag,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,218.24,186.24,437.76,428.16,1.0,Recyclable Material,0.9548
+LocateAnything 3B,mdwd-p1,black garbage bag,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,284.16,181.76,391.68,234.24,1.0,,0.1028
+LocateAnything 3B,mdwd-p1,black garbage bag,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,488.96,220.8,638.72,428.16,1.0,Other Waste,0.9811
+LocateAnything 3B,mdwd-p1,black garbage bag,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,620.16,387.2,638.72,428.16,1.0,,0.0242

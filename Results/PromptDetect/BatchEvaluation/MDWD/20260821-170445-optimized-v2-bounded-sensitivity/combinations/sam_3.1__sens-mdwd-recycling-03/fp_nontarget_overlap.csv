@@ -1,0 +1,293 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,200.85,309.1,314.71,444.53,0.3496,Organic Waste,0.9915
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,308.81,340.56,423.83,445.23,0.3438,Organic Waste,0.9455
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,268.13,264.7,378.11,375.97,0.3008,Organic Waste,0.9715
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_075842_jpg.rf.1891b8867310eeface2f0bc74a0dc490.jpg,241.53,224.48,363.06,394.53,0.5938,Mixed Waste,0.9502
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,147.4,276.33,329.38,452.24,0.8242,Mixed Waste,0.9296
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,326.46,258.02,509.5,408.7,0.7266,Mixed Waste,0.9302
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,356.5,193.26,440.28,284.4,0.3223,Organic Waste,0.905
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,128.28,248.62,270.03,464.4,0.8711,Mixed Waste,0.9699
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,420.63,135.09,498.86,258.42,0.8555,Mixed Waste,0.9485
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,322.82,113.94,435.86,341.06,0.8125,Mixed Waste,0.9179
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,242.04,142.77,344.13,374.49,0.7305,Mixed Waste,0.8464
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080317_jpg.rf.17f03c2e6a52857573a93ef9530fa3ab.jpg,161.72,197.59,351.61,431.1,0.9023,Mixed Waste,0.9521
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_080317_jpg.rf.17f03c2e6a52857573a93ef9530fa3ab.jpg,353.37,142.19,519.56,324.77,0.8672,Mixed Waste,0.9503
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,276.18,230.59,444.4,384.69,0.8711,Mixed Waste,0.8399
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,196.17,220.85,295.11,359.18,0.8594,Mixed Waste,0.8326
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,202.18,273.08,485.71,454.99,0.9688,Mixed Waste,0.9659
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,187.8,126.97,389.97,301.56,0.9688,Mixed Waste,0.9773
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,255.67,325.53,521.11,534.41,0.7109,Mixed Waste,0.9636
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,230.71,166.18,361.13,266.91,0.6719,Mixed Waste,0.8874
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,380.32,195.1,518.65,329.31,0.668,Mixed Waste,0.7398
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,351.8,127.22,540.18,215.92,0.6484,Mixed Waste,0.8313
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,234.0,209.11,407.91,359.51,0.5977,Mixed Waste,0.6384
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,468.22,254.62,551.03,336.64,0.543,,0.2653
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,333.04,206.68,408.98,247.99,0.3965,,0.0643
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,434.19,138.67,541.3,210.2,0.3086,,0.4551
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,321.86,341.46,568.82,495.81,0.8672,Mixed Waste,0.9647
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,168.16,138.36,344.78,334.24,0.8398,Mixed Waste,0.9762
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,71.0,326.3,299.49,474.9,0.7969,Mixed Waste,0.9795
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,32.19,202.93,198.54,402.94,0.793,Mixed Waste,0.9909
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,199.63,283.07,399.66,431.72,0.7734,Mixed Waste,0.8725
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,20250124_120930_jpg.rf.dacac006271855d5f5dec24e24c95585.jpg,223.71,248.7,411.49,359.26,0.3477,Mixed Waste,0.9653
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,605.14,172.44,640.0,289.32,0.3008,,0.0
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,472786813_628965022887679_5248188576436768956_n_jpg.rf.defa0e5e9d1fb44d9baf104b73f3b587.jpg,157.95,301.16,410.38,461.7,0.5898,Mixed Waste,0.9738
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,472786813_628965022887679_5248188576436768956_n_jpg.rf.defa0e5e9d1fb44d9baf104b73f3b587.jpg,24.28,163.34,257.12,386.86,0.5703,Mixed Waste,0.7763
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,472788297_879958087384265_8846214687047667235_n_jpg.rf.90b70971ab4cbf4a8c8d3d540b858ddf.jpg,239.15,108.58,415.09,318.88,0.4219,Mixed Waste,0.8714
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,472788921_926424869626524_3476579744422356093_n_jpg.rf.86dd0cc6ba30706b135525031dbeb1a6.jpg,268.95,364.22,565.53,539.57,0.3652,Mixed Waste,0.8191
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,472788921_926424869626524_3476579744422356093_n_jpg.rf.86dd0cc6ba30706b135525031dbeb1a6.jpg,37.51,282.96,303.85,495.53,0.3379,Mixed Waste,0.8263
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,472788921_926424869626524_3476579744422356093_n_jpg.rf.86dd0cc6ba30706b135525031dbeb1a6.jpg,285.37,121.3,584.66,395.48,0.3379,Mixed Waste,0.8488
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,472788921_926424869626524_3476579744422356093_n_jpg.rf.86dd0cc6ba30706b135525031dbeb1a6.jpg,591.22,331.95,640.0,498.33,0.3359,Mixed Waste,0.8208
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,472788921_926424869626524_3476579744422356093_n_jpg.rf.86dd0cc6ba30706b135525031dbeb1a6.jpg,514.32,161.94,640.0,318.95,0.3164,Mixed Waste,0.7309
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,113.01,283.63,304.93,470.31,0.5156,Mixed Waste,0.7729
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,281.4,154.44,442.54,276.46,0.5078,Mixed Waste,0.8346
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,293.21,272.95,508.1,366.39,0.4824,Mixed Waste,0.8686
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,161.18,59.54,345.34,202.91,0.4648,Mixed Waste,0.8936
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,413.34,90.59,525.69,177.01,0.3965,,0.3543
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,433.56,173.43,553.21,268.09,0.3965,Mixed Waste,0.8998
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,334.03,58.86,455.51,158.31,0.3418,Mixed Waste,0.5434
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,552.07,120.56,640.0,223.48,0.3164,Mixed Waste,0.8796
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,474711682_567011309667599_6264000997239717913_n_jpg.rf.c5242ab97b3bb14b447b2963dc40bc88.jpg,471.71,313.92,602.74,409.3,0.8398,Mixed Waste,0.8021
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch5_2_jpeg.rf.4f2a1b9b6b2271796a0eb20e8001ce93.jpg,21.8,362.06,153.02,533.26,0.707,Mixed Waste,0.8425
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch5_2_jpeg.rf.4f2a1b9b6b2271796a0eb20e8001ce93.jpg,0.49,432.51,31.51,556.23,0.4922,Mixed Waste,0.5981
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch5_2_jpeg.rf.4f2a1b9b6b2271796a0eb20e8001ce93.jpg,0.19,468.78,17.2,552.81,0.3359,,0.2218
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch6_40_jpeg.rf.41584ad8be2654c6380775654da6238a.jpg,99.3,217.42,334.01,370.7,0.5039,Orange CMD,0.9609
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,297.82,307.74,626.62,554.37,0.707,Orange CMD,0.9693
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,140.97,262.94,218.67,353.81,0.6953,Mixed Waste,0.8895
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,286.24,212.93,374.69,255.13,0.6016,Mixed Waste,0.9482
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,456.41,285.26,558.6,361.17,0.8242,Mixed Waste,0.9609
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,133.73,281.62,235.44,374.12,0.8086,Mixed Waste,0.9566
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,69.82,210.95,161.49,293.07,0.7812,Mixed Waste,0.9141
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,313.84,191.36,382.35,257.67,0.7539,Mixed Waste,0.9143
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,122.64,161.88,212.68,226.88,0.75,Mixed Waste,0.8919
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,225.13,99.96,324.84,155.17,0.75,Mixed Waste,0.8615
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,63.71,167.16,139.29,224.3,0.7383,Mixed Waste,0.8927
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,197.27,151.54,254.28,189.28,0.7188,Mixed Waste,0.921
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,61.96,137.78,138.03,183.09,0.6211,Mixed Waste,0.9102
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,58.78,117.22,128.65,147.77,0.6133,Mixed Waste,0.8514
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,152.32,219.46,174.49,250.99,0.5664,Mixed Waste,0.8482
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,248.63,144.63,355.77,210.02,0.4199,Mixed Waste,0.8012
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,318.67,149.29,359.83,200.59,0.4004,,0.244
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,262.7,418.4,433.09,640.0,0.9219,Mixed Waste,0.9772
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,385.12,410.21,499.6,503.94,0.9062,Mixed Waste,0.9145
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,243.41,251.74,307.15,311.33,0.5273,Other Waste,0.8243
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,451.46,283.63,496.0,363.58,0.4219,,0.0
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_60_jpeg.rf.9b69f3b6a86120e675c35e1420d47ec1.jpg,0.0,127.29,179.34,463.85,0.793,Other Waste,0.9879
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_65_jpeg.rf.bb51b67df3fe8cf58a9e48ce1eafca7a.jpg,347.05,353.67,485.59,473.24,0.3125,Organic Waste,0.9917
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,328.62,297.34,568.49,475.94,0.875,Mixed Waste,0.9736
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,139.03,297.6,277.46,409.71,0.8516,Mixed Waste,0.7979
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,96.84,282.55,200.78,397.87,0.8516,Mixed Waste,0.921
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,231.15,307.06,340.24,449.32,0.8516,Mixed Waste,0.7358
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,22.17,256.42,121.86,356.38,0.8125,Mixed Waste,0.8806
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,80.34,298.67,118.19,357.33,0.7617,Mixed Waste,0.5882
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,0.0,221.0,84.08,280.63,0.5156,Mixed Waste,0.7346
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_87_jpeg.rf.bbd40e9cada1cc2730cdee3d7a09767f.jpg,58.72,407.43,216.29,596.31,0.4473,Other Waste,0.9482
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_AFL_87_jpeg.rf.bbd40e9cada1cc2730cdee3d7a09767f.jpg,338.69,113.18,479.49,206.84,0.3203,Mixed Waste,0.751
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_Online_2_jpeg.rf.8f3afdbb2284e73aa7a48b49e8b960c8.jpg,347.46,332.84,558.12,594.03,0.3027,Mixed Waste,0.5934
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,178.82,189.19,304.5,389.0,0.8945,Other Waste,0.9846
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,284.22,189.29,394.26,374.97,0.8008,Other Waste,0.9909
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_SDM_28_jpg.rf.a38a2a51538662297dacca85658e78da.jpg,84.05,160.7,439.16,517.92,0.4668,Mixed Waste,0.9406
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_SDM_28_jpg.rf.a38a2a51538662297dacca85658e78da.jpg,93.19,224.23,199.24,340.08,0.3809,Mixed Waste,0.8215
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_SDM_29_jpg.rf.8b226744799c5e1605f8385be5fc3725.jpg,91.21,66.66,468.56,392.5,0.6328,Mixed Waste,0.9779
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_SDM_29_jpg.rf.8b226744799c5e1605f8385be5fc3725.jpg,286.6,251.59,578.17,481.16,0.5938,Mixed Waste,0.7883
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_SDM_29_jpg.rf.8b226744799c5e1605f8385be5fc3725.jpg,0.0,0.0,173.81,214.41,0.5781,Mixed Waste,0.9692
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,3.95,255.54,282.73,538.75,0.498,Other Waste,0.922
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_11_jpg.rf.47d1657a833d01f0352d5a055b21c944.jpg,192.88,234.8,388.34,376.71,0.7227,Mixed Waste,0.9278
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,298.12,328.47,567.73,461.19,0.7891,Mixed Waste,0.9339
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,51.38,209.05,383.46,357.17,0.7812,Mixed Waste,0.9606
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,1.45,67.95,222.48,243.5,0.7656,Mixed Waste,0.9731
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,496.98,482.27,640.0,639.33,0.6875,Mixed Waste,0.9456
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,139.03,83.71,286.26,0.6875,Mixed Waste,0.669
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,141.34,26.51,225.82,0.334,,0.1216
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_23_jpg.rf.2df86f91f15c329adc7eac0e92c012c8.jpg,150.21,196.65,400.88,391.32,0.9141,Mixed Waste,0.9449
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_23_jpg.rf.2df86f91f15c329adc7eac0e92c012c8.jpg,273.26,330.9,502.82,523.27,0.9102,Mixed Waste,0.9282
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_23_jpg.rf.2df86f91f15c329adc7eac0e92c012c8.jpg,113.28,95.17,258.99,241.3,0.8828,Mixed Waste,0.9531
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,341.12,210.73,493.56,309.08,0.8516,Mixed Waste,0.9271
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,111.15,210.4,329.57,325.06,0.7344,Mixed Waste,0.9431
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_32_jpg.rf.a999ab79afb90d75f2d3c408747fa95e.jpg,95.17,188.4,291.34,428.97,0.4141,Mixed Waste,0.9438
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_32_jpg.rf.a999ab79afb90d75f2d3c408747fa95e.jpg,238.42,180.81,451.79,396.98,0.3984,Mixed Waste,0.9173
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_32_jpg.rf.a999ab79afb90d75f2d3c408747fa95e.jpg,297.1,181.71,536.55,304.94,0.3906,Mixed Waste,0.89
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_33_jpg.rf.f93a8c7bd7218cb562950f286b436fce.jpg,241.52,202.06,487.86,380.53,0.9023,Mixed Waste,0.9856
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_54_jpg.rf.50e7e1d8fe52aa410a928c6641b2f939.jpg,53.86,120.1,327.45,336.53,0.3105,Other Waste,0.8082
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_66_jpg.rf.ac65fd37c33025edee0f8356e8e30dd3.jpg,286.6,243.07,373.14,313.96,0.5508,Organic Waste,0.9348
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,ARI3129_TK_6_jpg.rf.13c0678e7784ad56f6e9aab1feb7ef17.jpg,161.33,185.38,504.51,368.2,0.8164,Mixed Waste,0.9758
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_1_jpeg.rf.f7454e1ea82debb5842b648a435a47c5.jpg,287.71,218.84,463.84,369.7,0.3066,Mixed Waste,0.9595
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_22_jpeg.rf.a23d3afee83225ef2d4f068e96144385.jpg,0.0,351.83,218.86,493.99,0.5703,Mixed Waste,0.9821
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_22_jpeg.rf.a23d3afee83225ef2d4f068e96144385.jpg,194.86,237.28,272.14,306.71,0.5469,Mixed Waste,0.8305
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,516.28,106.17,579.3,169.25,0.6719,Mixed Waste,0.941
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,564.81,133.6,628.23,182.16,0.625,Mixed Waste,0.8226
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,403.3,82.43,462.46,132.87,0.625,Mixed Waste,0.9533
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,472.26,108.36,526.39,150.52,0.6094,Mixed Waste,0.9345
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,356.82,87.94,407.83,125.36,0.6055,Mixed Waste,0.8224
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,615.8,151.79,640.0,192.0,0.5664,Mixed Waste,0.8861
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,385.35,81.08,429.38,115.05,0.4844,Mixed Waste,0.5948
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,451.23,115.95,479.58,140.03,0.334,Organic Waste,0.7587
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,564.18,134.09,599.06,163.7,0.3066,,0.2759
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,280.97,349.96,387.72,422.15,0.543,Mixed Waste,0.8595
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,497.37,212.81,590.03,373.45,0.6094,Mixed Waste,0.9168
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,514.33,364.32,598.88,450.38,0.5547,Mixed Waste,0.8108
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,395.44,340.16,471.35,400.54,0.5156,Mixed Waste,0.959
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,325.66,340.59,421.34,422.6,0.4883,Mixed Waste,0.9418
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,130.0,440.76,207.67,561.94,0.4824,Mixed Waste,0.8971
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,0.0,457.93,73.39,631.07,0.4746,Mixed Waste,0.95
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,60.54,428.3,137.33,593.58,0.4707,Mixed Waste,0.9083
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,207.6,378.59,312.38,520.11,0.4707,Mixed Waste,0.8603
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,410.92,293.76,481.76,358.44,0.4668,Mixed Waste,0.8484
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,101.06,377.31,171.41,456.01,0.4082,Mixed Waste,0.9033
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,GabrielHili_NewBatch_3_jpeg.rf.c1f5bd64af246f96ef9ac3366738ac07.jpg,145.39,259.0,333.65,596.91,0.7305,Mixed Waste,0.9751
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,GabrielHili_NewBatch_3_jpeg.rf.c1f5bd64af246f96ef9ac3366738ac07.jpg,146.43,463.98,354.13,640.0,0.6875,Mixed Waste,0.9566
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,330.06,431.91,366.39,498.52,0.3848,Mixed Waste,0.508
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,218.03,415.82,273.31,497.47,0.3555,Mixed Waste,0.5674
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,398.65,315.9,422.11,348.07,0.3027,Mixed Waste,0.7747
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,image00058_jpeg.rf.a543875ecf5d044bb8fd364a0626a314.jpg,138.72,267.56,452.76,464.77,0.543,Mixed Waste,0.9405
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,20.53,186.9,282.6,413.42,0.459,Mixed Waste,0.8661
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,308.9,73.53,456.5,0.3281,,0.1182
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,37.95,364.42,269.96,623.64,0.3262,Mixed Waste,0.7464
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,426.04,46.67,639.53,0.3203,,0.1237
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,326.66,426.61,489.84,604.17,0.6172,Mixed Waste,0.8504
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,199.54,377.08,318.07,590.64,0.5547,Mixed Waste,0.8304
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,298.48,318.06,399.4,465.62,0.4941,Mixed Waste,0.7194
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,175.39,495.6,203.25,559.09,0.3496,,0.0979
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG-20241230-WA0013_jpg.rf.76493a67373b4c640b121b6b5c7f1724.jpg,173.94,293.97,274.69,469.73,0.8008,Mixed Waste,0.9746
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG-20241230-WA0013_jpg.rf.76493a67373b4c640b121b6b5c7f1724.jpg,272.79,355.74,337.59,423.24,0.6641,Mixed Waste,0.8744
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG-20241230-WA0013_jpg.rf.76493a67373b4c640b121b6b5c7f1724.jpg,337.72,375.09,414.44,432.91,0.6602,Mixed Waste,0.9792
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG20250107085454_jpg.rf.03f678b7d914e0a5a963f3e051cb0aa4.jpg,323.17,117.54,422.06,189.95,0.4766,Mixed Waste,0.7556
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG20250107085655_jpg.rf.2164bdf6a18089bda1efb0782a777491.jpg,352.86,184.7,426.28,289.35,0.9141,Mixed Waste,0.8908
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG20250107085725_jpg.rf.53a2bbc5094b71e31feedd0cf1513ef9.jpg,165.42,265.76,358.6,396.6,0.5508,Mixed Waste,0.9538
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,374.2,55.08,540.77,236.36,0.6367,,0.1461
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,460.83,48.3,531.92,110.07,0.3516,Mixed Waste,0.8764
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0262_JPG.rf.5e327b0490f360f82423eb156bb2c702.jpg,269.55,99.17,502.15,342.76,0.8906,Mixed Waste,0.9524
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0726_jpeg.rf.96e876a1122037418a3328fdb29b70c8.jpg,204.6,279.57,309.37,390.42,0.5703,Organic Waste,0.9739
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0726_jpeg.rf.96e876a1122037418a3328fdb29b70c8.jpg,281.5,321.65,403.01,393.82,0.3438,Organic Waste,0.8497
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0788_jpeg.rf.558975791bb0ce003abf480f4547a64a.jpg,141.87,279.24,301.44,427.14,0.6797,Mixed Waste,0.9854
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0789_jpeg.rf.a115e802da3b048429fb0d31134d452d.jpg,42.77,301.14,186.28,400.64,0.7031,Mixed Waste,0.9896
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0789_jpeg.rf.a115e802da3b048429fb0d31134d452d.jpg,73.88,370.36,299.25,475.8,0.6641,Mixed Waste,0.9895
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,270.15,202.08,506.18,431.11,0.9062,,0.0
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,76.58,269.65,264.99,495.05,0.8398,,0.0
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,148.7,149.53,212.52,287.96,0.375,,0.0
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,112.29,101.86,187.85,175.37,0.3008,,0.0
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,312.79,219.62,400.71,402.72,0.4863,,0.1272
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,532.06,144.12,580.68,222.16,0.377,,0.0231
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,545.18,91.7,622.77,219.28,0.3555,,0.0236
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1339-1-_jpg.rf.c6bb8e698c78c29dca97336859a3df3a.jpg,334.48,137.35,533.25,500.1,0.6875,Mixed Waste,0.9815
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1339-1-_jpg.rf.c6bb8e698c78c29dca97336859a3df3a.jpg,214.41,262.33,341.6,464.88,0.6836,Mixed Waste,0.9498
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1340_jpg.rf.5c5713ca2d53a8ed11d4a692dceeaae3.jpg,129.82,203.69,314.7,404.36,0.6484,Mixed Waste,0.9286
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1340_jpg.rf.5c5713ca2d53a8ed11d4a692dceeaae3.jpg,327.48,259.53,449.82,427.74,0.6016,Mixed Waste,0.8022
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1340_jpg.rf.5c5713ca2d53a8ed11d4a692dceeaae3.jpg,284.88,136.02,394.55,314.41,0.4434,Mixed Waste,0.9287
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1493_jpg.rf.572cf72e5148bfa2394d07eda0ef95aa.jpg,293.17,270.84,360.84,361.43,0.7578,,0.0
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1576_JPG.rf.4d15d8dc3f6bda8774918b24b0bca783.jpg,283.24,238.22,358.3,358.84,0.5234,Mixed Waste,0.9054
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1576_JPG.rf.4d15d8dc3f6bda8774918b24b0bca783.jpg,216.99,246.22,310.65,385.44,0.4902,Mixed Waste,0.9223
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1592_jpg.rf.f4a4dc858b6ce3d6993baf21056a4137.jpg,300.84,179.48,392.85,286.01,0.7422,Mixed Waste,0.953
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1592_jpg.rf.f4a4dc858b6ce3d6993baf21056a4137.jpg,499.66,0.0,518.2,12.27,0.4004,Mixed Waste,0.7222
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1681-3_jpg.rf.d5d943924c35de90c6d6e157474cbfd7.jpg,307.58,125.51,415.84,170.18,0.8672,Mixed Waste,0.9114
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_1816-2_JPG.rf.03f13cf5b3b905aaebb38a48a8bdca08.jpg,291.33,207.14,412.17,298.76,0.8438,Organic Waste,0.9876
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,231.32,262.1,310.63,299.63,0.3711,Organic Waste,0.9326
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,309.76,263.77,360.54,301.11,0.3379,Organic Waste,0.9551
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,253.63,237.53,339.63,274.51,0.3145,Organic Waste,0.8674
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241217_073410_jpg.rf.8ba94ff4ae15e4be5ccd4dc4f266b1b3.jpg,253.35,55.63,412.86,128.63,0.832,,0.4587
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241217_073412_jpg.rf.4e957e5b6d64f80cfe271bab14006d44.jpg,176.76,126.19,450.5,255.54,0.8203,Mixed Waste,0.956
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241228_082931_jpg.rf.36e90ccb5eabdc81be8c4c4fc111bec2.jpg,245.48,293.01,422.15,369.94,0.6562,Mixed Waste,0.9163
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,29.54,99.53,265.28,245.75,0.9258,Mixed Waste,0.9329
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,243.29,110.56,360.67,239.67,0.918,Mixed Waste,0.9417
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,355.73,132.77,474.19,248.72,0.9102,Mixed Waste,0.9048
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20250104_070512_jpg.rf.255e6e445fb501cb02fbd10537e3c482.jpg,200.3,245.67,321.42,298.14,0.832,Mixed Waste,0.9823
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_20250104_071502_jpg.rf.a7fd2d3a223c221308d25329020f5482.jpg,231.13,153.62,385.0,243.7,0.4922,Mixed Waste,0.9671
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,39.18,120.72,68.82,156.62,0.5508,Other Waste,0.9021
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,389.12,168.25,570.36,336.99,0.7734,Mixed Waste,0.9066
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,101.93,256.0,232.65,392.97,0.6523,Mixed Waste,0.9171
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,259.25,182.23,402.28,254.28,0.5078,,0.4951
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,226.76,233.32,409.23,376.59,0.4258,Mixed Waste,0.8753
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,390.64,171.61,456.52,199.5,0.4062,Mixed Waste,0.81
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,258.31,183.36,346.91,240.28,0.3047,,0.4898
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4297_JPG.rf.8da214b4dc38a51f543d9131574cd484.jpg,203.5,113.43,378.26,301.54,0.7188,Mixed Waste,0.9797
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4299_jpeg.rf.81fc622bb56a1539e5c33115e344fdb5.jpg,299.62,293.83,425.17,407.75,0.6328,Mixed Waste,0.9588
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,310.76,110.37,419.32,220.48,0.6797,Mixed Waste,0.8075
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,369.94,195.49,519.57,321.33,0.6719,Mixed Waste,0.9131
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,194.56,90.42,353.14,238.06,0.6562,Mixed Waste,0.9515
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,187.32,177.7,351.61,322.75,0.6133,Mixed Waste,0.9408
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4329_JPG.rf.743d3b23867d61b5e40194a0805de44f.jpg,240.41,323.65,461.07,506.61,0.7188,Mixed Waste,0.9738
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_4329_JPG.rf.743d3b23867d61b5e40194a0805de44f.jpg,264.63,197.0,515.85,373.81,0.7148,Mixed Waste,0.9102
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8255_size_jpeg.rf.6761db8582d4837db7e2397532361d67.jpg,226.99,349.76,371.85,464.52,0.8281,Mixed Waste,0.9161
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8257_size_jpeg.rf.19792c9e34156566549cd8191acf13cd.jpg,148.76,368.56,371.76,537.95,0.6719,Mixed Waste,0.9251
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8309_jpeg.rf.041293f9c5c4cbce45ab3b8fef84c32d.jpg,269.65,352.52,356.48,420.65,0.3418,Organic Waste,0.8869
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,225.79,419.46,315.32,476.17,0.6055,Mixed Waste,0.9334
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,323.27,409.98,390.09,456.83,0.5586,Mixed Waste,0.9669
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,269.74,396.54,330.94,446.63,0.4883,,0.3589
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,186.49,405.75,244.54,481.29,0.4453,Mixed Waste,0.7836
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,239.51,386.41,274.01,427.23,0.4219,Mixed Waste,0.8144
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,293.95,390.94,344.39,426.76,0.416,Mixed Waste,0.5885
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,205.44,405.87,245.02,445.46,0.4102,,0.28
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,173.26,317.77,216.81,361.49,0.4082,,0.0129
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8675_jpeg.rf.0152d6e8f4b7f93c731549c2bb7bc660.jpg,300.64,454.15,348.54,498.21,0.4258,Organic Waste,0.9679
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8747_jpeg.rf.4dab4ee43bac4a6699e1b96b2dba1467.jpg,202.59,428.35,351.32,543.52,0.7852,Mixed Waste,0.9599
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,298.81,347.47,427.14,451.64,0.3105,,0.0
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8857_jpeg.rf.706343f1401bebbd7dd3c69f38b48729.jpg,220.57,354.45,364.62,447.82,0.7305,Mixed Waste,0.9774
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,218.24,301.59,334.83,352.65,0.6602,Mixed Waste,0.941
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,258.63,444.01,385.91,535.36,0.6289,Mixed Waste,0.9659
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,221.37,324.22,355.84,410.72,0.6133,Mixed Waste,0.897
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,225.05,388.17,362.52,464.55,0.5977,Mixed Waste,0.8523
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,IMG_8972_jpeg.rf.cd49521b82c9ff62a6e578b50e8b47dc.jpg,270.8,390.47,378.98,496.13,0.5547,Mixed Waste,0.9855
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,Mixed_11_jpeg.rf.701ca65448ea1c8c5c05ede9e62d7faa.jpg,273.09,243.26,601.64,485.78,0.6719,Mixed Waste,0.9586
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,Mixed_3_jpeg.rf.2ecdba47ebadb9c2a485e6edc9984489.jpg,340.99,192.53,619.01,526.31,0.9531,Mixed Waste,0.9251
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_57_jpg.rf.b9065248849c1f81202c1df8e0bd4aa4.jpg,287.65,254.95,379.41,329.4,0.4531,Organic Waste,0.86
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,409.08,169.73,508.82,359.62,0.8945,Mixed Waste,0.905
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,95.34,277.19,215.84,535.02,0.8945,Mixed Waste,0.96
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,211.92,195.61,305.4,447.78,0.8828,Mixed Waste,0.9183
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,300.96,255.38,422.91,398.59,0.875,Mixed Waste,0.7974
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,358.06,112.32,438.51,327.45,0.8711,Mixed Waste,0.9172
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,291.51,106.02,376.75,279.05,0.8477,Mixed Waste,0.872
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_7_jpg.rf.f2872b3a2205d094a9825494bf8ae862.jpg,343.91,177.7,518.58,408.32,0.3867,Mixed Waste,0.9404
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_7_jpg.rf.f2872b3a2205d094a9825494bf8ae862.jpg,278.61,83.5,366.57,353.12,0.3633,Mixed Waste,0.9465
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_7_jpg.rf.f2872b3a2205d094a9825494bf8ae862.jpg,74.86,29.39,178.7,209.94,0.3594,Mixed Waste,0.9082
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_7_jpg.rf.f2872b3a2205d094a9825494bf8ae862.jpg,150.85,115.32,279.56,366.6,0.3125,Mixed Waste,0.9335
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,360.75,308.52,404.76,356.54,0.9102,Mixed Waste,0.8381
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,158.12,256.0,216.08,343.26,0.9062,Mixed Waste,0.9684
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,305.51,234.64,365.98,353.07,0.9062,Mixed Waste,0.8804
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,221.13,218.0,312.79,353.02,0.8906,Mixed Waste,0.9172
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,275.74,165.99,333.11,264.24,0.8672,Mixed Waste,0.8663
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,203.08,268.06,233.78,331.2,0.8477,Mixed Waste,0.7999
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,308.33,162.55,332.1,207.5,0.5938,,0.2031
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,183.35,343.02,218.87,390.61,0.707,Mixed Waste,0.9549
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,227.03,332.52,259.39,382.53,0.6836,Mixed Waste,0.8641
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,255.86,356.07,280.33,385.19,0.6523,Mixed Waste,0.892
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,210.44,357.11,232.54,386.15,0.6406,Mixed Waste,0.8423
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,275.8,347.94,296.38,387.57,0.625,Mixed Waste,0.8069
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,542.48,311.05,557.77,340.1,0.5781,Mixed Waste,0.8785
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,437.19,330.15,452.9,354.12,0.5703,Mixed Waste,0.8125
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,411.28,327.98,429.2,355.76,0.5391,Mixed Waste,0.7532
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,260.94,325.12,291.86,359.12,0.5195,Other Waste,0.917
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,531.18,319.68,551.16,345.42,0.5,Mixed Waste,0.5049
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,510.77,326.43,523.2,344.25,0.4961,Mixed Waste,0.8201
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,424.97,318.08,439.73,354.35,0.4375,Mixed Waste,0.5364
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,197.55,340.29,212.07,361.42,0.4277,Mixed Waste,0.6125
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,518.2,311.18,531.53,341.02,0.416,Mixed Waste,0.6724
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,424.27,336.33,438.13,354.89,0.373,Mixed Waste,0.5131
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_93_jpg.rf.4fc65ebdd279274a3895c6f6c099f3ba.jpg,288.14,235.3,358.34,265.18,0.793,Mixed Waste,0.7263
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,273.41,198.6,359.77,309.32,0.7344,Mixed Waste,0.9573
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,208.57,281.56,282.68,381.57,0.7266,Mixed Waste,0.8586
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,355.09,211.57,388.32,282.66,0.6797,Mixed Waste,0.6669
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,377.2,197.6,410.69,265.33,0.668,Mixed Waste,0.9014
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,358.36,67.75,396.8,132.67,0.668,Mixed Waste,0.7926
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,139.92,281.08,211.1,406.18,0.6641,Mixed Waste,0.9143
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,305.31,129.24,381.3,215.77,0.6562,Mixed Waste,0.8896
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,277.39,104.67,325.5,187.6,0.6562,Mixed Waste,0.8725
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,176.25,201.47,254.06,325.24,0.6445,Mixed Waste,0.8442
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,117.07,264.64,149.14,317.63,0.6133,,0.1955
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,386.37,120.01,429.58,171.48,0.6055,Mixed Waste,0.7568
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,122.0,176.49,173.9,303.93,0.5977,Mixed Waste,0.7609
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,391.53,165.79,430.05,224.03,0.5859,Mixed Waste,0.6148
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,406.65,222.33,423.96,252.39,0.5508,,0.155
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,163.74,207.51,203.55,279.87,0.5352,,0.3485
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,214.52,208.73,268.53,277.29,0.4883,,0.4558
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,286.19,184.4,302.15,223.71,0.375,,0.0398
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,320.74,124.16,351.42,154.3,0.375,,0.133
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,316.19,101.96,360.76,130.73,0.334,Other Waste,0.7569
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,PHOTO-2025-01-04-12-12-39-1-_jpg.rf.edf874a66a2338c3b33d51e6f3a02c71.jpg,267.72,195.54,370.01,312.49,0.8203,Mixed Waste,0.9295
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,PHOTO-2025-01-04-12-12-39-1-_jpg.rf.edf874a66a2338c3b33d51e6f3a02c71.jpg,283.37,252.44,416.29,387.47,0.8047,Mixed Waste,0.9282
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,PHOTO-2025-01-04-12-12-39_jpg.rf.47f1932ae35574ff24543d26a44a2564.jpg,356.41,221.39,444.94,385.0,0.8555,Mixed Waste,0.8079
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,PHOTO-2025-01-04-12-12-46-1-_jpg.rf.cac4448d0e8e2b54b3389bce64c5559f.jpg,274.05,226.55,386.52,358.9,0.9219,Mixed Waste,0.9313
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,PHOTO-2025-01-04-12-12-47_jpg.rf.1c9ba1ca77945e6fe6229f8762125342.jpg,189.97,183.7,273.14,320.37,0.75,Mixed Waste,0.909
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,PHOTO-2025-01-04-12-12-47_jpg.rf.1c9ba1ca77945e6fe6229f8762125342.jpg,221.18,222.88,327.38,323.14,0.7188,Mixed Waste,0.8143
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,RandomErasing_IMG_5774_jpg.rf.d71ff80bf43426aefeb9aa05f8c23e4d.jpg,276.73,213.18,438.79,521.11,0.8594,Mixed Waste,0.9886
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,RandomErasing_IMG_5774_jpg.rf.d71ff80bf43426aefeb9aa05f8c23e4d.jpg,199.1,205.48,286.39,401.54,0.8438,Mixed Waste,0.9765
+SAM 3.1,sens-mdwd-recycling-03,grey bag containing recyclable household material,Unknown-6_jpg.rf.ad6fdf8bf89e73dc870edfa7e5f8588c.jpg,80.35,152.57,502.39,420.23,0.6172,Mixed Waste,0.7888

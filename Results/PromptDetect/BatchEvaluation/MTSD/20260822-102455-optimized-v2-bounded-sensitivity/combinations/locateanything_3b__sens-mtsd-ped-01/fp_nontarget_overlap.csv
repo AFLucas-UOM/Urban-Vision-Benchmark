@@ -1,0 +1,632 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1557.jpg,0.0,0.0,3761.35,5712.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1593.jpg,445.54,1753.58,2570.4,4232.59,1.0,Back-Unknown,0.6672
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1593.jpg,1623.64,2044.9,1876.39,5712.0,1.0,,0.0952
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1593.jpg,3924.14,4478.21,4284.0,5712.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1593.jpg,3924.14,5209.34,4284.0,5712.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1599.jpg,1816.42,4015.54,2351.92,4558.18,1.0,Back-Unknown,0.9332
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1599.jpg,3157.31,4415.38,3277.26,4763.81,1.0,Back-Unknown,0.7848
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1599.jpg,3217.28,4518.19,3281.54,4758.1,1.0,,0.2681
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1599.jpg,3247.27,4535.33,3281.54,4758.1,1.0,,0.0812
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1599.jpg,3268.69,4535.33,3281.54,4758.1,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1599.jpg,3277.26,4535.33,3281.54,4758.1,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1606.jpg,1418.0,2416.18,2377.62,3941.28,1.0,Back-Unknown,0.9857
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1606.jpg,1863.54,2701.78,2171.99,5712.0,1.0,,0.1919
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1645.jpg,1028.16,2341.92,2741.76,4226.88,1.0,Blind-Spot Mirror (Convex Mirror),0.9926
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1645.jpg,1923.52,2833.15,2433.31,5712.0,1.0,,0.1786
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_1645.jpg,3281.54,0.0,4284.0,5712.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251123_150542.jpg,952.64,291.31,1300.0,1442.69,1.0,Roundabout Ahead,0.9758
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251123_150542.jpg,1141.92,1488.93,1291.68,1988.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251123_150542.jpg,1158.56,2168.66,1464.32,4624.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251123_165832.jpg,621.92,1826.48,1216.8,2857.63,1.0,Blind-Spot Mirror (Convex Mirror),0.9834
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251123_165832.jpg,0.0,0.0,2080.0,4624.0,1.0,,0.063
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122125.jpg,992.16,3139.7,1164.8,4624.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122125.jpg,1012.96,2214.9,1189.76,2834.51,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122125.jpg,1035.84,2705.04,1133.6,2903.87,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122125.jpg,1164.8,2686.54,1220.96,2922.37,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122125.jpg,1212.64,2718.91,1295.84,2940.86,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,295.12,2339.74,2131.81,4550.02,1.0,Back-Unknown,0.9849
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,826.34,1031.15,1572.82,2464.59,1.0,Back-Unknown,0.9895
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,2652.61,749.09,3472.0,1599.9,1.0,Street Sign,0.9873
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,2888.7,1040.4,3065.78,1206.86,1.0,,0.0419
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,2888.7,975.66,3326.18,1475.06,1.0,,0.3102
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,2899.12,2825.26,2951.2,2876.13,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,2985.92,1877.34,3093.55,2043.81,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,1548.51,1648.46,3472.0,3965.08,1.0,,0.1246
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3294.93,2108.54,3472.0,2307.38,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3308.82,2695.79,3472.0,3061.09,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3319.23,776.83,3347.01,813.82,1.0,,0.0015
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3374.78,920.18,3472.0,947.92,1.0,,0.0038
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3388.67,1045.02,3472.0,1072.77,1.0,,0.0032
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3399.09,0.0,3472.0,32.37,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3412.98,0.0,3472.0,69.36,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3444.22,0.0,3472.0,147.97,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3451.17,0.0,3472.0,263.57,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_122826.jpg,3451.17,0.0,3472.0,614.99,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_153252.jpg,1847.1,212.7,2138.75,628.86,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_153252.jpg,1847.1,0.0,2031.12,208.08,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_153252.jpg,1847.1,411.54,1965.15,684.35,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251125_153252.jpg,1847.1,411.54,2138.75,684.35,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20251126_123510.jpg,1666.08,3944.27,1720.16,4004.38,1.0,Directional Sign,0.8066
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260110_172745_673.jpg,1459.2,379.44,2380.8,1326.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260110_172745_673.jpg,1726.46,1109.76,2159.62,1844.16,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260110_172745_673.jpg,1726.46,3325.2,2058.24,4080.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260110_172745_673.jpg,1732.61,1893.12,2058.24,4080.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_084947_261.jpg,1440.24,857.09,2374.56,1956.86,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_084947_261.jpg,3268.08,1453.06,3480.24,1618.94,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_084947_261.jpg,3582.24,1406.98,4080.0,1631.23,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_084947_261.jpg,3729.12,2666.5,4080.0,3072.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_084947_261.jpg,3863.76,0.0,4080.0,479.23,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_084947_261.jpg,3880.08,1400.83,4080.0,1557.5,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_085011_841.jpg,901.68,344.06,4075.92,2503.68,1.0,,0.3559
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_085011_841.jpg,3912.72,2485.25,4080.0,2697.22,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_085011_841.jpg,4002.48,1575.94,4080.0,1843.2,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_085011_841.jpg,4006.56,1603.58,4055.52,1640.45,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_IMG_20260113_085011_841.jpg,4063.68,1671.17,4080.0,1708.03,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_WhatsApp Image 2025-11-16 at 17.52.28 (3).jpeg,416.16,701.76,884.34,1087.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_WhatsApp Image 2025-11-16 at 17.52.29.jpeg,466.65,744.6,1006.74,1193.4,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_WhatsApp Image 2025-11-16 at 17.52.29.jpeg,466.65,1976.76,605.88,2040.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_WhatsApp Image 2025-11-16 at 17.52.29.jpeg,1187.28,1976.76,1421.37,2040.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_WhatsApp Image 2025-11-16 at 17.52.29.jpeg,1269.9,1827.84,1438.2,1856.4,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp10_WhatsApp Image 2025-11-16 at 17.52.29.jpeg,1349.46,1425.96,1530.0,1530.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_08da688f-IMG_6393.jpeg,0.0,696.35,3508.05,2782.03,1.0,Other-Unknown,0.5669
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_217d0bb2-IMG_1445.jpg,0.0,0.0,3024.0,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_2a7d15c7-Pre_2026_6626.jpg,1619.19,2028.0,1731.79,2212.0,1.0,Blind-Spot Mirror (Convex Mirror),0.8804
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_2a7d15c7-Pre_2026_6626.jpg,1619.19,2460.0,2252.0,3140.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_387a3e09-IMG_6403.jpeg,1089.87,836.77,2572.95,2654.57,1.0,,0.4331
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_387a3e09-IMG_6403.jpeg,1397.6,2468.62,2688.35,3206.0,1.0,,0.0037
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_387a3e09-IMG_6403.jpeg,1760.89,2596.86,4274.0,2917.46,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_387a3e09-IMG_6403.jpeg,4188.52,1968.48,4274.0,2022.99,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,334.66,1245.89,2060.35,1995.84,1.0,,0.1335
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,334.66,1902.1,1770.05,2252.88,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,1596.67,1841.62,2640.96,2473.63,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,2213.57,1046.3,4032.0,3024.0,1.0,,0.0156
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,2886.91,235.87,4032.0,1058.4,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,2894.98,1049.33,3161.09,1403.14,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,2963.52,647.14,3092.54,816.48,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,2987.71,837.65,3108.67,1003.97,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3092.54,632.02,3217.54,804.38,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3112.7,828.58,3237.7,997.92,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3221.57,619.92,3354.62,795.31,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3241.73,819.5,3374.78,985.82,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3354.62,607.82,3491.71,786.24,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3374.78,810.43,3511.87,979.78,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3495.74,592.7,3636.86,777.17,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3515.9,798.34,3657.02,973.73,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3640.9,580.61,3786.05,765.07,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_578f49cf-IMG_6367.jpeg,3661.06,789.26,3806.21,967.68,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_6bd01c27-IMG_1442.jpg,1499.9,0.0,2243.81,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_6bd01c27-IMG_1442.jpg,2612.74,2673.22,2963.52,3100.61,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_6bd01c27-IMG_1442.jpg,2969.57,2834.5,3024.0,2955.46,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_6bd01c27-IMG_1442.jpg,2969.57,2556.29,3024.0,2612.74,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_6bd01c27-IMG_1442.jpg,2969.57,3157.06,3024.0,3286.08,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_6bd01c27-IMG_1442.jpg,2969.57,3471.55,3024.0,3693.31,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_87a2a97d-IMG_6417.jpeg,1566.72,1871.02,4112.64,5482.51,1.0,Other-Unknown,0.9922
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_87a2a97d-IMG_6417.jpeg,3302.08,5801.6,5440.0,7252.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_93c9acc6-Pre_2026_6752.jpg,2352.0,524.72,3292.0,1175.54,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_93c9acc6-Pre_2026_6752.jpg,0.0,0.0,4000.0,2252.0,1.0,,0.0688
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_9adb1ffc-IMG_1447.jpg,1409.18,100.8,2026.08,596.74,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_9adb1ffc-IMG_1447.jpg,1596.67,1733.76,1883.95,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_9adb1ffc-IMG_1447.jpg,1883.95,3032.06,3024.0,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_9adb1ffc-IMG_1447.jpg,2745.79,3177.22,2936.3,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_b25d900c-Pre_2026_6648.jpg,718.39,920.0,1321.92,1612.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9715
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_b25d900c-Pre_2026_6648.jpg,979.62,1132.0,1177.8,3996.0,1.0,,0.1062
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_b25d900c-Pre_2026_6648.jpg,1416.51,1776.0,1522.35,2192.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_b25d900c-Pre_2026_6648.jpg,1517.85,1848.0,1535.86,2152.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_b25d900c-Pre_2026_6648.jpg,1535.86,1900.0,1571.9,2152.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_b4a34518-Pre_2026_6659.jpg,686.86,1052.0,1216.08,1580.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_bab711b8-IMG_20251125_192613.jpg,1215.0,992.0,1770.0,1556.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_bab711b8-IMG_20251125_192613.jpg,1365.0,1648.0,1515.0,4000.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_bab711b8-IMG_20251125_192613.jpg,0.0,0.0,3000.0,4000.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_daaadabb-IMG_1451.jpg,1188.43,1334.59,1581.55,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_daaadabb-IMG_1451.jpg,1312.42,0.0,1611.79,84.67,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_daaadabb-IMG_1451.jpg,1814.4,0.0,2180.3,653.18,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_daaadabb-IMG_1451.jpg,2558.3,1540.22,3024.0,2540.16,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_daaadabb-IMG_1451.jpg,2915.14,1632.96,3024.0,2463.55,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_ebb70ae4-Pre_2026_6672.jpg,907.56,584.0,1634.95,1356.0,1.0,Back-Unknown,0.9909
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_ee2f066e-IMG_20251125_194701.jpg,1116.0,2596.0,1269.0,2768.0,1.0,Directional Sign,0.9383
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_ee2f066e-IMG_20251125_194701.jpg,1845.0,2344.0,1884.0,2464.0,1.0,,0.4812
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_ee2f066e-IMG_20251125_194701.jpg,1854.0,2408.0,1884.0,2464.0,1.0,Other-Unknown,0.7183
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_ee2f066e-IMG_20251125_194701.jpg,2355.0,2456.0,2382.0,2476.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_ee2f066e-IMG_20251125_194701.jpg,2835.0,2408.0,2874.0,2436.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_ee2f066e-IMG_20251125_194701.jpg,2838.0,2424.0,2874.0,2432.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_ee2f066e-IMG_20251125_194701.jpg,2838.0,2432.0,2874.0,2436.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_f0c7f95a-IMG_6420.jpeg,702.09,1130.88,3439.76,2092.13,1.0,,0.307
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_f0c7f95a-IMG_6420.jpeg,2742.38,0.0,4712.0,3534.0,1.0,,0.1103
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_f0c7f95a-IMG_6420.jpeg,4433.99,3336.1,4712.0,3534.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_f0c7f95a-IMG_6420.jpeg,4646.03,3279.55,4712.0,3534.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_f0c7f95a-IMG_6420.jpeg,4655.46,2032.05,4712.0,2201.68,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_f0c7f95a-IMG_6420.jpeg,4655.46,1562.03,4712.0,1706.92,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_f0c7f95a-IMG_6420.jpeg,4655.46,0.0,4712.0,243.85,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp11_f0c7f95a-IMG_6420.jpeg,4655.46,1102.61,4712.0,1335.85,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_094f8a9f-RV__2.jpeg,1324.51,588.67,1823.47,1999.87,1.0,,0.4395
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_094f8a9f-RV__2.jpeg,1336.61,2197.44,1684.37,2894.98,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_094f8a9f-RV__2.jpeg,1348.7,1310.4,1684.37,1870.85,1.0,,0.3133
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_094f8a9f-RV__2.jpeg,1357.78,1310.4,1684.37,2894.98,1.0,,0.2525
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1bc3cf13-IMG_5516.jpeg,838.43,1449.0,915.66,1533.0,1.0,Other-Unknown,0.9296
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1bc3cf13-IMG_5516.jpeg,854.19,1530.9,895.17,1602.3,1.0,No Through Road (T-Junction),0.898
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1bc3cf13-IMG_5516.jpeg,858.92,1673.7,885.71,1711.5,1.0,,0.3811
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1bc3cf13-IMG_5516.jpeg,885.71,1675.8,909.35,1711.5,1.0,,0.3176
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1ea7fc82-IMG_4719.jpeg,589.68,1165.25,2395.01,3088.51,1.0,Back-Unknown,0.9891
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1ea7fc82-IMG_4719.jpeg,1006.99,1334.59,1466.64,4032.0,1.0,,0.2074
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1ea7fc82-IMG_4719.jpeg,1369.87,2548.22,1599.7,2786.11,1.0,,0.0159
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1ea7fc82-IMG_4719.jpeg,1454.54,1378.94,1654.13,1528.13,1.0,,0.0087
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1ea7fc82-IMG_4719.jpeg,1626.91,3265.92,1802.3,3366.72,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1ea7fc82-IMG_4719.jpeg,2573.42,3072.38,2627.86,3261.89,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1ea7fc82-IMG_4719.jpeg,2667.17,3205.44,3024.0,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_1ea7fc82-IMG_4719.jpeg,2933.28,3015.94,3024.0,3294.14,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,460.8,851.97,2746.37,2793.47,1.0,No Through Road (T-Junction),0.9903
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,724.99,81.92,2076.67,1036.29,1.0,Street Sign,0.9812
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,1056.77,1064.96,1972.22,2502.66,1.0,,0.2973
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,1410.05,565.25,1665.02,806.91,1.0,,0.0487
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,1671.17,876.54,1812.48,995.33,1.0,,0.0133
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,2678.78,3047.42,2899.97,3239.94,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,2678.78,3137.54,2709.5,3186.69,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,2875.39,3125.25,2899.97,3166.21,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,2875.39,3190.78,2899.97,3203.07,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_25ff97a8-IMG20260105132835.jpg,2875.39,3198.98,2899.97,3203.07,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_4b0be6d1-IMG20260105131256.jpg,1345.54,241.66,2101.25,1032.19,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_4b0be6d1-IMG20260105131256.jpg,1465.34,618.5,1926.14,1101.82,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_4b0be6d1-IMG20260105131256.jpg,1277.95,1028.1,1582.08,1323.01,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_4b0be6d1-IMG20260105131256.jpg,1133.57,1445.89,1692.67,2625.54,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_4b0be6d1-IMG20260105131256.jpg,946.18,1982.46,1953.79,2899.97,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_4b0be6d1-IMG20260105131256.jpg,0.0,3047.42,2844.67,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_4b0be6d1-IMG20260105131256.jpg,0.0,0.0,3072.0,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_5068c583-IMG_4683.jpeg,892.08,1810.37,1805.33,2757.89,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_5068c583-IMG_4683.jpeg,1457.57,2967.55,1518.05,3100.61,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_5068c583-IMG_4683.jpeg,1457.57,2983.68,1521.07,3036.1,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_69e094db-IMG20260103164903.jpg,408.58,643.07,2390.02,2736.13,1.0,No Through Road (T-Junction),0.9951
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_69e094db-IMG20260103164903.jpg,0.0,0.0,3072.0,3420.16,1.0,,0.3931
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_69e094db-IMG20260103164903.jpg,0.0,2994.18,3072.0,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_831c366a-IMG_5656.jpeg,390.85,714.0,1248.19,1501.5,1.0,Blind-Spot Mirror (Convex Mirror),0.9934
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_831c366a-IMG_5656.jpeg,505.9,1533.0,1120.54,1961.4,1.0,Back-Unknown,0.9858
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_831c366a-IMG_5656.jpeg,683.98,863.1,836.86,2100.0,1.0,,0.1691
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_8b994555-IMG_5798.jpeg,789.26,443.52,2147.04,4032.0,1.0,,0.3038
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_8b994555-IMG_5798.jpeg,913.25,1552.32,2023.06,2624.83,1.0,Back-Unknown,0.9838
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_8b994555-IMG_5798.jpeg,2307.31,2632.9,2449.44,2786.11,1.0,Back-Unknown,0.8294
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_8d820602-IMG_4687.jpeg,0.0,1528.13,3024.0,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_aa406f9d-IMG_4615.jpeg,816.48,1584.58,2050.27,2947.39,1.0,No Entry (One Way),0.9815
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_aa406f9d-IMG_4615.jpeg,1261.01,0.0,1708.56,4027.97,1.0,,0.2135
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_aa406f9d-IMG_4615.jpeg,1297.3,0.0,1672.27,1596.67,1.0,,0.0035
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_db486299-IMG_5815.jpeg,985.82,1455.55,2183.33,2515.97,1.0,No Through Road (T-Junction),0.9863
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_db486299-IMG_5815.jpeg,1282.18,1556.35,1838.59,2374.85,1.0,,0.3584
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,632.83,999.42,2285.57,2117.63,1.0,Back-Unknown,0.9905
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,1155.07,991.23,1539.07,4096.0,1.0,,0.1641
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,1686.53,3350.53,1867.78,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,1959.94,3952.64,2297.86,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,2224.13,4026.37,2365.44,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,2414.59,3940.35,2826.24,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,2494.46,1585.15,3072.0,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,1542.14,0.0,3072.0,1179.65,1.0,,0.0378
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,0.0,3112.96,903.17,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,1400.83,3895.3,1708.03,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,1833.98,3936.26,1978.37,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,1947.65,3936.26,2064.38,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f3f0450d-IMG20260105132606.jpg,2064.38,3952.64,2181.12,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,1082.59,1153.15,1499.9,1725.7,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,1209.6,2499.84,1384.99,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,1388.02,3713.47,1669.25,3802.18,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,1593.65,3850.56,1747.87,3935.23,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,1769.04,1052.35,1805.33,1330.56,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2216.59,895.1,2280.1,927.36,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2558.3,2540.16,2624.83,2588.54,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2594.59,1221.7,2769.98,1262.02,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2673.22,2092.61,3024.0,2342.59,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2742.77,1991.81,3024.0,2092.61,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,1339.63,1098.72,3024.0,3239.71,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2900.02,1995.84,3024.0,2088.58,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2951.42,2173.25,3024.0,2249.86,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2963.52,2092.61,3024.0,2140.99,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_f4371c23-IMG_5562.jpeg,2978.64,1995.84,3024.0,2253.89,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_fdedfd29-IMG_4737.jpeg,1161.22,568.51,1995.84,3314.3,1.0,No Through Road (T-Junction),0.982
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp1_fdedfd29-IMG_4737.jpeg,1654.13,1128.96,1890.0,2894.98,1.0,,0.1851
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_1f7e1b10-20251224_132557.jpg,1071.0,2174.64,1989.0,2570.4,1.0,Auxiliary Sign,0.9819
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_1f7e1b10-20251224_132557.jpg,1927.8,1525.92,2059.38,1807.44,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_1f7e1b10-20251224_132557.jpg,1930.86,3096.72,1967.58,3137.52,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_1f7e1b10-20251224_132557.jpg,1930.86,3096.72,1976.76,3174.24,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_3855fec5-20251223_150427.jpg,1107.72,2133.84,2135.88,4071.84,1.0,,0.0103
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_3855fec5-20251223_150427.jpg,1493.28,697.68,1811.52,2215.44,1.0,No Through Road (T-Junction),0.9693
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_3855fec5-20251223_150427.jpg,650.25,1205.64,2360.79,3412.92,1.0,,0.0801
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_5dd50184-MP_0013.jpg,1259.52,757.76,1416.19,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_797d9987-MP_0038.jpg,731.14,163.84,1867.78,1339.39,1.0,Stop Sign,0.9146
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_797d9987-MP_0038.jpg,1268.74,1253.38,1410.05,4096.0,1.0,,0.021
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_797d9987-MP_0038.jpg,1830.91,0.0,3072.0,4096.0,1.0,,0.0068
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_7bccf907-IMG_20251223_114643.jpg,1314.0,1464.0,1458.0,1692.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_7bccf907-IMG_20251223_114643.jpg,1326.0,2188.0,1458.0,2224.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_7bccf907-IMG_20251223_114643.jpg,1467.0,2188.0,1518.0,2224.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_7bccf907-IMG_20251223_114643.jpg,1596.0,2188.0,1641.0,2224.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_7bccf907-IMG_20251223_114643.jpg,1941.0,2188.0,1989.0,2224.0,1.0,,0.3429
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_7bccf907-IMG_20251223_114643.jpg,2028.0,2188.0,2064.0,2224.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_7bccf907-IMG_20251223_114643.jpg,2898.0,2188.0,2991.0,2224.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_8042282f-20251223_150231.jpg,1150.56,0.0,1756.44,1991.04,1.0,No Entry (One Way),0.9827
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_8042282f-20251223_150231.jpg,0.0,0.0,3060.0,4080.0,1.0,,0.0974
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_bf551d52-MP_0136.jpg,600.77,1324.51,2455.49,1612.55,1.0,,0.0285
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_bf551d52-MP_0136.jpg,878.98,1326.78,1979.71,1503.68,1.0,,0.0406
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_bf551d52-MP_0136.jpg,2003.9,1326.78,2411.14,1476.47,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_c39d026a-IMG_20251223_125605.jpg,1377.0,1684.0,1569.0,1940.0,1.0,Back-Unknown,0.8991
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_c39d026a-IMG_20251223_125605.jpg,1437.0,1232.0,1488.0,1284.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_ced8bffa-14.front.jpg,689.47,185.47,1263.28,4027.97,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_ced8bffa-14.front.jpg,1390.28,2044.22,1460.59,2205.5,1.0,Blind-Spot Mirror (Convex Mirror),0.6796
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_ced8bffa-14.front.jpg,1941.41,2310.34,1968.62,2354.69,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_ced8bffa-14.front.jpg,1945.94,2366.78,1968.62,2395.01,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_ced8bffa-14.front.jpg,1979.96,2314.37,1995.84,2346.62,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_d1fa2493-20251230_123128.jpg,758.88,534.48,2111.4,1905.36,1.0,No Entry (One Way),0.9855
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_d1fa2493-20251230_123128.jpg,1419.84,1905.36,1646.28,4080.0,1.0,,0.0011
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_d1fa2493-20251230_123128.jpg,0.0,1481.04,3060.0,4080.0,1.0,,0.0639
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp2_d1fa2493-20251230_123128.jpg,0.0,0.0,3060.0,1558.56,1.0,,0.2644
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_9eaf77cf-IMG_4402.jpeg,1334.59,1103.76,2052.29,1832.54,1.0,,0.2371
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_b05e6955-IMG_4433.jpeg,1419.26,810.43,2814.34,2110.75,1.0,Blind-Spot Mirror (Convex Mirror),0.6645
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_b05e6955-IMG_4433.jpeg,1774.08,1006.99,4032.0,1279.15,1.0,,0.1152
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_b05e6955-IMG_4433.jpeg,3048.19,647.14,4032.0,910.22,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_b05e6955-IMG_4433.jpeg,3314.3,925.34,4032.0,1034.21,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_b05e6955-IMG_4433.jpeg,3528.0,2044.22,4032.0,2162.16,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_b05e6955-IMG_4433.jpeg,3576.38,1584.58,3729.6,1635.98,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_b05e6955-IMG_4433.jpeg,3745.73,1230.77,4032.0,2098.66,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_e0a623d6-IMG_9293.jpg,2009.2,1439.42,2514.71,2827.44,1.0,No Through Road (T-Junction),0.9608
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_e0a623d6-IMG_9293.jpg,2146.28,1713.6,2351.92,2113.44,1.0,,0.1144
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_e0a623d6-IMG_9293.jpg,2219.11,1942.08,2351.92,2570.4,1.0,,0.1161
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_e0a623d6-IMG_9293.jpg,2240.53,2541.84,2587.54,5712.0,1.0,,0.0462
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_e0a623d6-IMG_9293.jpg,2733.19,4392.53,2938.82,5712.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp3_e0a623d6-IMG_9293.jpg,4104.07,3484.32,4284.0,5712.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251130_120143.jpg,1617.0,1680.0,1722.0,3076.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,708.0,2028.0,1854.0,3112.0,1.0,Back-Unknown,0.9904
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,918.0,1600.0,1122.0,1948.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,1074.0,1240.0,1539.0,1680.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,1131.0,2904.0,1428.0,2976.0,1.0,,0.0172
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,1164.0,2124.0,1431.0,2180.0,1.0,,0.012
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,1170.0,2088.0,1368.0,2688.0,1.0,,0.0957
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,1179.0,2896.0,1359.0,3316.0,1.0,,0.0306
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,1179.0,1612.0,1359.0,4000.0,1.0,,0.1316
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_142249.jpg,1224.0,2088.0,1425.0,2152.0,1.0,,0.0104
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_145129.jpg,210.0,1440.0,2190.0,3736.0,1.0,Back-Unknown,0.6586
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_145129.jpg,279.0,2744.0,2184.0,3736.0,1.0,Back-Unknown,0.9609
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_145129.jpg,1080.0,1440.0,2184.0,2776.0,1.0,,0.4901
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_152158.jpg,444.0,1300.0,2514.0,3296.0,1.0,Back-Unknown,0.9956
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251229_152158.jpg,0.0,0.0,3000.0,4000.0,1.0,,0.3451
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251231_160526.jpg,990.0,1488.0,2022.0,2444.0,1.0,No Through Road (T-Junction),0.989
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251231_160526.jpg,1014.0,2356.0,2766.0,4000.0,1.0,,0.0238
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251231_160545.jpg,1230.0,1408.0,1578.0,2444.0,1.0,No Through Road (T-Junction),0.9487
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251231_160545.jpg,1353.0,1608.0,1512.0,1952.0,1.0,,0.1476
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251231_160545.jpg,1365.0,1784.0,1464.0,2208.0,1.0,,0.1133
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_20251231_160545.jpg,1413.0,1620.0,1581.0,2440.0,1.0,,0.3536
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_3a0abdfb-20251116_161259.jpg,810.49,1566.72,1451.07,2239.92,1.0,Auxiliary Sign,0.9782
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_5c62b2f6-20251117_104837.jpg,631.4,571.2,1455.66,1403.52,1.0,Stop Sign,0.9332
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_5c62b2f6-20251117_104837.jpg,2029.66,2725.44,2080.18,2786.64,1.0,,0.3642
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,834.0,844.0,1905.0,2664.0,1.0,No Through Road (T-Junction),0.9962
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,963.0,1676.0,1125.0,1904.0,1.0,,0.0189
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,963.0,2036.0,1134.0,2204.0,1.0,,0.0147
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,975.0,2248.0,1188.0,2464.0,1.0,,0.0235
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1080.0,1508.0,1266.0,1796.0,1.0,,0.0274
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1131.0,1860.0,1263.0,2160.0,1.0,,0.0202
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1182.0,2268.0,1341.0,2536.0,1.0,,0.0218
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1377.0,2240.0,1515.0,2472.0,1.0,,0.0164
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1521.0,2216.0,1665.0,2456.0,1.0,,0.0177
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1533.0,1852.0,1647.0,2060.0,1.0,,0.0121
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1629.0,2116.0,1785.0,2312.0,1.0,,0.0156
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1656.0,2496.0,1854.0,2572.0,1.0,,0.0077
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1722.0,2316.0,1833.0,2488.0,1.0,,0.0098
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_66eacd8c-20260109_124456.jpg,1734.0,2120.0,1833.0,2304.0,1.0,,0.0093
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_8bd079ee-20260107_105937.jpg,596.82,1240.94,989.21,1574.95,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_91f6056a-20251116_163806.jpg,454.61,1170.96,2020.48,2729.52,1.0,Blind-Spot Mirror (Convex Mirror),0.9801
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_91f6056a-20251116_163806.jpg,945.95,1501.44,2296.0,4080.0,1.0,,0.2847
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_91f6056a-20251116_163806.jpg,0.0,0.0,523.49,4080.0,1.0,,0.0219
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_91f6056a-20251116_163806.jpg,0.0,0.0,2296.0,4080.0,1.0,,0.2553
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_94287dbf-20260113_132935.jpg,936.0,1328.0,1791.0,2824.0,1.0,No Through Road (T-Junction),0.9837
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_94287dbf-20260113_132935.jpg,1089.0,1544.0,1476.0,2508.0,1.0,,0.2927
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_94287dbf-20260113_132935.jpg,1257.0,648.0,1398.0,968.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_94287dbf-20260113_132935.jpg,1815.0,732.0,1845.0,1224.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_94287dbf-20260113_132935.jpg,2550.0,968.0,3000.0,1068.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_94287dbf-20260113_132935.jpg,2556.0,980.0,2766.0,1068.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_94287dbf-20260113_132935.jpg,2766.0,972.0,3000.0,1060.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_9a8f607e-20251222_141532.jpg,372.0,676.0,2124.0,2744.0,1.0,Back-Unknown,0.7817
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_9a8f607e-20251222_141532.jpg,675.0,2124.0,2010.0,2744.0,1.0,Back-Unknown,0.9872
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_9a8f607e-20251222_141532.jpg,681.0,988.0,1590.0,4000.0,1.0,,0.2745
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_9a8f607e-20251222_141532.jpg,675.0,2124.0,2010.0,4000.0,1.0,,0.3263
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_c909a40a-20251222_142239.jpg,1854.0,2816.94,1884.0,3016.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_c909a40a-20251222_142239.jpg,2784.0,2907.42,2862.0,3016.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d1c1ed24-20260113_130204.jpg,1056.0,1572.0,1845.0,2348.0,1.0,No Through Road (T-Junction),0.9792
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d1c1ed24-20260113_130204.jpg,1257.0,1676.0,1644.0,2248.0,1.0,,0.362
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d3d2c193-20260109_124357.jpg,371.18,583.0,1948.72,2527.43,1.0,Back-Unknown,0.9913
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d3d2c193-20260109_124357.jpg,1245.42,938.02,1452.99,3253.74,1.0,,0.1024
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d3d2c193-20260109_124357.jpg,1428.57,2488.35,1570.21,3253.74,1.0,,0.0014
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d3d2c193-20260109_124357.jpg,1553.11,0.0,2442.0,3257.0,1.0,,0.1491
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d3d2c193-20260109_124357.jpg,1558.0,2494.86,1973.14,3257.0,1.0,,0.003
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d3d2c193-20260109_124357.jpg,1675.21,537.4,1816.85,1058.53,1.0,,0.0219
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d3d2c193-20260109_124357.jpg,1743.59,0.0,1831.5,335.47,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d3d2c193-20260109_124357.jpg,1792.43,915.22,1870.57,996.64,1.0,,0.0021
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d4ed28aa-20251222_141346.jpg,579.0,520.0,2190.0,2312.0,1.0,Back-Unknown,0.9846
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d4ed28aa-20251222_141346.jpg,0.0,3688.0,3000.0,4000.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_d4ed28aa-20251222_141346.jpg,0.0,0.0,3000.0,4000.0,1.0,,0.2388
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,573.0,554.0,792.0,1136.0,1.0,No Through Road (T-Junction),0.963
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,624.0,646.0,763.5,1062.0,1.0,,0.4391
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,0.0,552.0,1500.0,2000.0,1.0,,0.0608
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,725.76,1806.34,3696.84,4652.93,1.0,No Entry (One Way),0.9909
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1034.21,3822.34,1242.86,4023.94,1.0,,0.005
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1079.57,2620.8,1555.85,3104.64,1.0,,0.0273
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1224.72,3806.21,1583.06,4040.06,1.0,,0.0099
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1569.46,2903.04,1750.9,3411.07,1.0,,0.0109
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1578.53,3886.85,1732.75,4015.87,1.0,,0.0024
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1655.64,3040.13,2698.92,3846.53,1.0,,0.0995
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1732.75,3951.36,2308.82,4281.98,1.0,,0.0225
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1859.76,2040.19,2381.4,2515.97,1.0,,0.0294
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,1968.62,2685.31,2857.68,3153.02,1.0,,0.0492
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,2032.13,4314.24,2326.97,4556.16,1.0,,0.0084
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,2349.65,4088.45,2662.63,4394.88,1.0,,0.0113
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,2599.13,4177.15,2875.82,4427.14,1.0,,0.0082
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,2671.7,3491.71,3030.05,3620.74,1.0,,0.0055
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,2730.67,2798.21,3034.58,3007.87,1.0,,0.0075
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,2730.67,3701.38,2975.62,3919.1,1.0,,0.0063
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,2739.74,3064.32,3138.91,3427.2,1.0,,0.0171
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_27622289-BenTaliana_10_Front.jpeg,2776.03,3911.04,3125.3,4241.66,1.0,,0.0137
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_29252be9-MichaelFarrugia_29_Front.jpg,64.51,1754.4,2479.1,3704.64,1.0,,0.0045
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1557.5,2382.72,1588.22,2541.84,1.0,,0.1518
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1870.85,2476.56,1913.86,2545.92,1.0,Back-Unknown,0.5815
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,2893.82,2382.72,2970.62,2496.96,1.0,Back-Unknown,0.634
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,2918.4,2492.88,2961.41,2533.68,1.0,Auxiliary Sign,0.8656
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_6bb6fe17-BenTaliana_15_Back.jpeg,834.62,2306.3,2540.16,4394.88,1.0,Blind-Spot Mirror (Convex Mirror),0.973
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_6bb6fe17-BenTaliana_15_Back.jpeg,1828.01,2983.68,3161.59,8064.0,1.0,,0.1048
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_704b34ba-BenTaliana_38_Side.jpeg,759.78,1798.27,1136.27,2419.2,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2052.29,1490.83,3096.58,1714.61,1.0,,0.0031
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2197.44,1539.22,2487.74,1687.39,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2407.1,1584.58,2943.36,1639.01,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2415.17,1499.9,2943.36,1590.62,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2479.68,1699.49,2802.24,1871.86,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2503.87,1702.51,2786.11,1775.09,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2503.87,1775.09,2786.11,1850.69,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2507.9,1775.09,2786.11,1790.21,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2515.97,1775.09,2786.11,1781.14,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_9c857801-BenTaliana_43_Side.jpeg,4281.98,6386.69,4467.96,6717.31,1.0,Directional Sign,0.9633
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,1207.3,1044.48,1861.63,2207.28,1.0,No Entry (One Way),0.9619
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,1357.82,1277.04,1711.1,1982.88,1.0,,0.3231
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,671.23,979.2,2308.61,2847.84,1.0,,0.2522
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,1502.21,1917.6,1637.38,1986.96,1.0,,0.0121
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,1256.47,1636.99,2676.24,4717.44,1.0,No Through Road (T-Junction),0.9924
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,0.0,0.0,4536.0,8064.0,1.0,,0.1187
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,739.37,1100.74,1553.58,2278.08,1.0,No Entry (One Way),0.981
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,1639.76,209.66,2013.98,641.09,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,1998.11,512.06,2265.73,826.56,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,2082.02,0.0,2268.0,153.22,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,2213.57,624.96,2268.0,818.5,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,2220.37,0.0,2268.0,141.12,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_cdd70210-BenTaliana_10_Side.jpeg,1478.74,1532.16,3374.78,4838.4,1.0,No Entry (One Way),0.9785
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_cdd70210-BenTaliana_10_Side.jpeg,0.0,0.0,4536.0,8064.0,1.0,,0.1678
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1277.95,1766.64,1661.95,2443.92,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1376.26,1876.8,1563.65,2292.96,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1459.2,2150.16,1511.42,2305.2,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1539.07,2231.76,1582.08,2358.24,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1591.3,2235.84,1652.74,2403.12,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2095.1,1836.0,2174.98,2888.64,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2316.29,3215.04,2371.58,3255.84,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2660.35,2749.92,2681.86,2770.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2727.94,2749.92,2743.3,2770.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2752.51,2749.92,2770.94,2770.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2770.94,2749.92,2807.81,2770.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2807.81,2749.92,2856.96,2770.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2856.96,2749.92,2887.68,2770.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,2887.68,2749.92,2924.54,2770.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,3022.85,2749.92,3072.0,2770.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,3035.14,3259.92,3072.0,3480.24,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,3035.14,3716.88,3072.0,3961.68,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_e43a48bc-BenTaliana_53_Side.jpeg,993.38,1491.84,1310.9,2036.16,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_e43a48bc-BenTaliana_53_Side.jpeg,1099.98,1564.42,1224.72,1931.33,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_e43a48bc-BenTaliana_53_Side.jpeg,1120.39,1733.76,1306.37,2032.13,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1075.2,1664.64,1880.06,2411.28,1.0,No Through Road (T-Junction),0.9803
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1296.38,1758.48,1668.1,2292.96,1.0,,0.3316
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1391.62,0.0,3072.0,4080.0,1.0,,0.051
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1397.76,2394.96,1514.5,4080.0,1.0,,0.0016
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1600.51,2399.04,1864.7,4080.0,1.0,,0.0018
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,2221.06,0.0,2985.98,4080.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,2777.09,3459.84,2869.25,3586.32,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,2789.38,2982.48,3072.0,3508.8,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,2887.68,2574.48,3072.0,3060.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,2973.7,2729.52,3072.0,2835.6,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,3028.99,2998.8,3072.0,3055.92,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,3035.14,2729.52,3072.0,2835.6,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_0dbbcef1-IMG_6167.JPG,0.0,0.0,3024.0,4032.0,1.0,,0.0048
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_255dc793-IMG_0327.JPG,899.14,1563.41,3552.19,2074.46,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_255dc793-IMG_0327.JPG,2455.49,1962.58,4027.97,2443.39,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_264240ca-IMG_0303.JPG,1193.47,725.76,3652.99,2074.46,1.0,,0.4701
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_264240ca-IMG_0303.JPG,0.0,0.0,4032.0,3024.0,1.0,,0.2725
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_3721037e-IMG_0363.JPG,1713.6,1233.79,4027.97,1799.28,1.0,,0.0243
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_3721037e-IMG_0363.JPG,3499.78,1336.61,4027.97,1590.62,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_386a5fef-IMG_6231.JPG,889.06,967.68,2038.18,2447.42,1.0,Back-Unknown,0.9904
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_386a5fef-IMG_6231.JPG,1267.06,3544.13,1345.68,3882.82,1.0,Street Sign,0.742
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_386a5fef-IMG_6231.JPG,1412.21,1153.15,1539.22,1350.72,1.0,,0.0149
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_386a5fef-IMG_6231.JPG,1412.21,2088.58,1729.73,2245.82,1.0,,0.0296
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_386a5fef-IMG_6231.JPG,1412.21,2088.58,1720.66,2165.18,1.0,,0.014
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_6f66549b-IMG_0289.JPG,1725.7,976.75,2761.92,2413.15,1.0,,0.3519
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_6f66549b-IMG_0289.JPG,2632.9,710.64,4032.0,2872.8,1.0,,0.0729
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_7608155e-Screenshot_2025-12-05_135221.png,267.18,79.19,304.3,117.02,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_7608155e-Screenshot_2025-12-05_135221.png,44.41,43.73,135.41,152.48,1.0,Stop Sign,0.9661
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_7608155e-Screenshot_2025-12-05_135221.png,0.0,0.0,362.91,589.82,1.0,,0.0447
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_ad8b6cea-IMG_0342.JPG,1459.58,0.0,4027.97,2322.43,1.0,,0.4036
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_b1f0ac5c-IMG_0227.JPG,1028.16,680.4,2354.69,2195.42,1.0,,0.2586
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_b1f0ac5c-IMG_0227.JPG,2108.74,825.55,2774.02,2038.18,1.0,,0.2189
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_b1f0ac5c-IMG_0227.JPG,2294.21,311.47,2899.01,680.4,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_b1f0ac5c-IMG_0227.JPG,2899.01,0.0,3015.94,75.6,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_b1f0ac5c-IMG_0227.JPG,3632.83,0.0,3782.02,746.93,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1493.86,745.92,1723.68,1858.75,1.0,No Through Road (T-Junction),0.9782
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,987.84,1678.32,1334.59,1.0,,0.1174
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,1310.4,1672.27,1604.74,1.0,,0.0925
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,1604.74,1672.27,1806.34,1.0,,0.0634
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,1806.34,1672.27,1939.39,1.0,,0.0158
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,1939.39,1672.27,2116.8,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,2116.8,1672.27,2330.5,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,2330.5,1672.27,2520.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,2520.0,1672.27,2765.95,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,2765.95,1672.27,3003.84,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,3003.84,1672.27,3269.95,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,3269.95,1672.27,3483.65,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,3483.65,1672.27,3673.15,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_c8db20f0-IMG_6257.JPG,1593.65,3673.15,1672.27,4032.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,67.8,35.77,165.46,123.66,1.0,Back-Unknown,0.97
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,85.51,128.77,148.76,196.22,1.0,Back-Unknown,0.9227
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,110.81,44.97,121.19,421.06,1.0,,0.0967
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,0.0,0.0,251.99,509.98,1.0,,0.0688
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp6_ec035947-IMG_6142.JPG,1548.29,2294.21,1599.7,2374.85,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_01ba126c-IMG_1741.jpg,0.0,0.0,4027.97,3020.98,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_0c807ae1-IMG_1804.jpg,1233.79,139.1,3411.07,2776.03,1.0,,0.4478
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_0c807ae1-IMG_1804.jpg,3390.91,1342.66,4032.0,1608.77,1.0,,0.0211
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_0c807ae1-IMG_1804.jpg,3661.06,329.62,4032.0,405.22,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_0cc91b71-IMG_2114.JPG,366.91,120.96,3019.97,2776.03,1.0,Stop Sign,0.589
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_0cc91b71-IMG_2114.JPG,2959.49,0.0,4027.97,3020.98,1.0,,0.2108
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_17ffbc31-IMG_6632.jpeg,1336.61,1443.46,1466.64,1669.25,1.0,Auxiliary Sign,0.904
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_17ffbc31-IMG_6632.jpeg,1357.78,3870.72,1605.74,3999.74,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_17ffbc31-IMG_6632.jpeg,1369.87,2443.39,1415.23,2536.13,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_17ffbc31-IMG_6632.jpeg,1375.92,1669.25,1418.26,3124.8,1.0,,0.0001
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_17ffbc31-IMG_6632.jpeg,1375.92,1499.9,1463.62,1612.8,1.0,,0.3152
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_17ffbc31-IMG_6632.jpeg,660.74,812.45,2091.1,2187.36,1.0,,0.016
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_21763d41-IMG_1815.jpg,1096.7,393.12,4027.97,2818.37,1.0,Back-Unknown,0.5214
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_21763d41-IMG_1815.jpg,1878.91,2818.37,2681.28,3024.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_21763d41-IMG_1815.jpg,2838.53,0.0,4032.0,777.17,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_21763d41-IMG_1815.jpg,2862.72,0.0,4032.0,3024.0,1.0,,0.1457
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_3199d5af-IMG_6619.jpeg,2848.61,2157.12,2915.14,2225.66,1.0,Back-Unknown,0.6958
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_3199d5af-IMG_6619.jpeg,1342.66,1143.07,3024.0,3356.64,1.0,,0.0016
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_3199d5af-IMG_6619.jpeg,2854.66,2245.82,3024.0,2399.04,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_3335816b-IMG_1863.jpg,0.0,0.0,1395.07,1397.09,1.0,,0.1157
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_3335816b-IMG_1863.jpg,1020.1,211.68,3818.3,2896.99,1.0,,0.4916
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_50fb19de-IMG_1779.jpg,766.08,1433.38,3798.14,1741.82,1.0,,0.0721
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_50fb19de-IMG_1779.jpg,895.1,1651.1,971.71,1775.09,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_50fb19de-IMG_1779.jpg,1213.63,0.0,1604.74,320.54,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_50fb19de-IMG_1779.jpg,1802.3,2642.98,1931.33,2727.65,1.0,,0.0118
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_50fb19de-IMG_1779.jpg,3261.89,1720.66,3705.41,2062.37,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_50fb19de-IMG_1779.jpg,3273.98,0.0,3435.26,1454.54,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_57ce1f54-20251215_150337.jpg,1054.62,1088.64,1270.08,2068.42,1.0,No Entry (One Way),0.9707
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_57ce1f54-20251215_150337.jpg,1061.42,1362.82,1226.99,1766.02,1.0,,0.3215
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_65ce4c26-IMG_1752.jpg,435.46,1291.25,4027.97,1823.47,1.0,,0.0178
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_65ce4c26-IMG_1752.jpg,2572.42,1294.27,4027.97,1823.47,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_81ace7bd-IMG_1823.jpg,1661.18,680.4,3346.56,2800.22,1.0,,0.3476
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_81ace7bd-IMG_1823.jpg,3189.31,302.4,4032.0,662.26,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_81ace7bd-IMG_1823.jpg,3265.92,0.0,4032.0,308.45,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_87ab4012-IMG_1929.jpg,1834.56,133.06,3487.68,2346.62,1.0,,0.2823
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_87ab4012-IMG_1929.jpg,2338.56,269.14,2765.95,2204.5,1.0,,0.0863
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_87ab4012-IMG_1929.jpg,0.0,0.0,4027.97,3020.98,1.0,,0.2984
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_8a80058d-20251215_151420.jpg,920.81,1100.74,1297.3,1983.74,1.0,Other-Unknown,0.8259
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_8a80058d-20251215_151420.jpg,943.49,1185.41,1143.07,4027.97,1.0,,0.1833
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_8a80058d-20251215_151420.jpg,1016.06,1697.47,1245.13,1979.71,1.0,,0.2339
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_917e5bd8-IMG_2117.JPG,1020.1,178.42,3604.61,2760.91,1.0,No Entry (One Way),0.5993
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_c1d05649-IMG_2109.JPG,451.58,399.17,2733.7,2788.13,1.0,Stop Sign,0.5176
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_c3ab6f98-IMG_2186.JPG,596.74,93.74,3249.79,2890.94,1.0,Back-Unknown,0.5529
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_c3ab6f98-IMG_2186.JPG,2632.9,0.0,4032.0,3024.0,1.0,,0.2778
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_cddeeb7f-IMG_6636.jpeg,1257.98,1177.34,1403.14,2705.47,1.0,,0.0129
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_cddeeb7f-IMG_6636.jpeg,1257.98,1854.72,1306.37,1915.2,1.0,Other-Unknown,0.741
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_cddeeb7f-IMG_6636.jpeg,1257.98,1862.78,1306.37,2120.83,1.0,,0.1964
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_f74b48d8-IMG_1768.jpg,1520.06,0.0,3673.15,2794.18,1.0,,0.4068
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp7_f74b48d8-IMG_1768.jpg,0.0,0.0,4032.0,3024.0,1.0,,0.4895
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_1023d97f-front.jpg,3765.89,2936.3,3830.4,2996.78,1.0,Roundabout Ahead,0.5323
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_1023d97f-front.jpg,3794.11,2939.33,3830.4,2990.74,1.0,Roundabout Ahead,0.5962
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_14aaa44c-IMG_0211.JPG,1742.16,1028.16,3512.88,3088.76,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_14aaa44c-IMG_0211.JPG,3181.58,1636.49,5712.0,2197.69,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_14aaa44c-IMG_0211.JPG,3444.34,3367.22,3598.56,3577.14,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_14aaa44c-IMG_0211.JPG,3861.31,1696.46,5289.31,2163.42,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_14aaa44c-IMG_0211.JPG,5232.19,792.54,5712.0,882.5,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_14aaa44c-IMG_0211.JPG,2616.1,441.25,5712.0,1152.4,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_14aaa44c-IMG_0211.JPG,5477.81,805.39,5712.0,869.65,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3799bcb2-side.jpg,1124.35,2560.0,1405.44,2789.38,1.0,Roundabout Ahead,0.9511
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3799bcb2-side.jpg,1336.32,1863.68,1741.82,2293.76,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3799bcb2-side.jpg,1654.27,3551.23,1926.14,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3799bcb2-side.jpg,1882.37,3080.19,1949.18,3153.92,1.0,Directional Sign,0.5759
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3799bcb2-side.jpg,1889.28,2887.68,2041.34,3002.37,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3799bcb2-side.jpg,2045.95,3047.42,2304.0,3194.88,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3ab29317-front.jpg,649.73,1347.58,1677.31,2453.5,1.0,No Through Road (T-Junction),0.9834
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3ab29317-front.jpg,958.46,1482.75,1456.13,1728.51,1.0,,0.1094
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3ab29317-front.jpg,1101.31,1675.26,1301.76,2314.24,1.0,,0.1146
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3b4e798b-front.jpg,1125.0,1896.0,1722.0,2432.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3b4e798b-front.jpg,1833.0,3520.0,1908.0,3604.0,1.0,Stop Sign,0.8444
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3b4e798b-front.jpg,1857.0,3624.0,1884.0,3712.0,1.0,Directional Sign,0.7411
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3b4e798b-front.jpg,1863.0,3708.0,1896.0,3760.0,1.0,,0.0164
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3b4e798b-front.jpg,1866.0,3624.0,1899.0,3712.0,1.0,,0.3442
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_3b4e798b-front.jpg,1866.0,3520.0,1899.0,3760.0,1.0,,0.2374
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4802289d-side.jpg,1407.0,1776.0,1641.0,2416.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4802289d-side.jpg,1473.0,1864.0,1557.0,2180.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4802289d-side.jpg,1527.0,1996.0,1626.0,2272.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4802289d-side.jpg,1569.0,2196.0,1629.0,2356.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4802289d-side.jpg,1590.0,2268.0,1647.0,2412.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4802289d-side.jpg,1602.0,2212.0,1635.0,2292.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4802289d-side.jpg,1602.0,1872.0,1641.0,2360.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4c496fb4-side.jpg,981.5,913.41,1813.25,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4c496fb4-side.jpg,1672.7,2793.47,1737.22,2949.12,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4c496fb4-side.jpg,2089.73,2109.44,2151.94,2330.62,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4c496fb4-side.jpg,2142.72,2666.5,2209.54,2723.84,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4c496fb4-side.jpg,2188.8,2166.78,2304.0,2359.3,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4c496fb4-side.jpg,2248.7,2719.74,2304.0,2736.13,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4c496fb4-side.jpg,2255.62,2588.67,2304.0,2732.03,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_4c496fb4-side.jpg,2260.22,2166.78,2304.0,2740.22,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_58621eda-IMG_0203.JPG,1262.35,0.0,5712.0,4284.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_5abf970a-side.jpg,1899.07,1167.26,2189.38,1902.1,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_5abf970a-side.jpg,1999.87,1257.98,2136.96,1735.78,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_5abf970a-side.jpg,2020.03,1445.47,2181.31,1699.49,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_5abf970a-side.jpg,2048.26,1445.47,2169.22,1611.79,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_5abf970a-side.jpg,2112.77,1445.47,2169.22,1611.79,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_5abf970a-side.jpg,2140.99,1445.47,2169.22,1611.79,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_5f257ae9-IMG_0112.jpg,1190.95,1136.69,3859.88,3918.43,1.0,Back-Unknown,0.9922
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_5f257ae9-IMG_0112.jpg,0.0,0.0,4284.0,5712.0,1.0,,0.301
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_6b72502b-back.jpg,502.27,851.97,1857.02,2265.09,1.0,Back-Unknown,0.9824
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_6b72502b-back.jpg,1032.19,933.89,1179.65,4091.9,1.0,,0.091
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_6b72502b-back.jpg,1794.82,2322.43,1824.77,2650.11,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_70a9ea7f-side.jpg,978.0,508.0,1671.0,1556.0,1.0,No Entry (One Way),0.9879
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_70a9ea7f-side.jpg,2199.0,436.0,2880.0,980.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_70a9ea7f-side.jpg,2472.0,500.0,2772.0,760.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_70a9ea7f-side.jpg,2484.0,500.0,2868.0,656.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,993.89,1142.4,2990.23,2776.03,1.0,Back-Unknown,0.9962
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,933.91,2736.05,3311.53,5117.95,1.0,Back-Unknown,0.988
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,1135.26,1199.52,2326.21,5712.0,1.0,,0.3441
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,1135.26,3558.58,1358.03,4141.2,1.0,,0.0231
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,2831.72,3410.06,3101.62,4021.25,1.0,,0.0294
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,3311.53,0.0,4284.0,839.66,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,3315.82,279.89,3667.1,634.03,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,3718.51,108.53,3842.75,279.89,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_838e07cd-IMG_0097.jpg,3727.08,0.0,4284.0,131.38,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_8dc5354c-IMG_0141.JPG,1410.86,1148.11,3004.51,3101.62,1.0,,0.3386
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_8dc5354c-IMG_0141.JPG,0.0,0.0,5712.0,4284.0,1.0,,0.1256
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_b9028e28-side.jpg,799.49,1544.19,1774.08,2637.82,1.0,Directional Sign,0.9935
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_b9028e28-side.jpg,912.38,3063.81,1695.74,3158.02,1.0,,0.1432
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_b9028e28-side.jpg,1580.54,3063.81,1695.74,3162.11,1.0,Directional Sign,0.8725
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_ea4926f3-side.jpg,1128.0,752.0,1965.0,2460.0,1.0,Roundabout Ahead,0.9864
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_ea4926f3-side.jpg,0.0,0.0,3000.0,4000.0,1.0,,0.1208
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc124a5b-Back.jpg,527.62,2318.34,1698.05,3014.66,1.0,Auxiliary Sign,0.9624
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc124a5b-Back.jpg,764.93,1351.68,1764.86,2351.1,1.0,Blind-Spot Mirror (Convex Mirror),0.9804
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,357.12,2908.16,483.84,3080.19,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,380.16,2924.54,453.89,3043.33,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,458.5,1613.82,681.98,1806.34,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,675.07,1622.02,817.92,1810.43,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,891.65,1630.21,1002.24,1814.53,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,1099.01,1638.4,1209.6,1818.62,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,1228.03,1638.4,1426.18,1830.91,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,1612.8,3842.05,1631.23,3915.78,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,1631.23,3817.47,1649.66,3899.39,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,1649.66,3801.09,1668.1,3891.2,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,1668.1,3776.51,1695.74,3874.82,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,1916.93,3915.78,1953.79,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,1953.79,3899.39,1995.26,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,2161.15,3543.04,2225.66,3952.64,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,2234.88,3719.17,2304.0,3932.16,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp8_fc6650ab-front.jpg,2248.7,3760.13,2304.0,4096.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_01ed8620-IMG_20251111_162316.jpg,2094.0,2060.0,2184.0,2144.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_01ed8620-IMG_20251111_162316.jpg,2100.0,2064.0,2184.0,3056.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,529.2,710.4,832.8,966.4,1.0,No Through Road (T-Junction),0.9821
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,601.2,739.2,738.0,966.4,1.0,,0.4038
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,601.2,713.6,738.0,784.0,1.0,,0.1256
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_561ba1c4-IMG_20251111_162044.jpg,1881.0,2376.0,1986.0,2472.0,1.0,Other-Unknown,0.9335
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_561ba1c4-IMG_20251111_162044.jpg,1902.0,2472.0,1980.0,2556.0,1.0,Roundabout Ahead,0.8643
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_561ba1c4-IMG_20251111_162044.jpg,2013.0,2600.0,3000.0,3808.0,1.0,,0.0005
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_561ba1c4-IMG_20251111_162044.jpg,2271.0,2448.0,2430.0,2608.0,1.0,Back-Unknown,0.9556
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_561ba1c4-IMG_20251111_162044.jpg,2580.0,2288.0,2655.0,2608.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_76700fa1-IMG_20251111_162238.jpg,2136.0,2296.0,2250.0,2420.0,1.0,Back-Unknown,0.8928
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_76700fa1-IMG_20251111_162238.jpg,2652.0,2312.0,2700.0,2464.0,1.0,Back-Unknown,0.6188
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_76700fa1-IMG_20251111_162238.jpg,2982.0,2280.0,3000.0,2408.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b775d113-IMG_20251111_162326.jpg,2766.0,2608.0,2850.0,2768.0,1.0,,0.4939
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b775d113-IMG_20251111_162326.jpg,2772.0,2692.0,2850.0,2768.0,1.0,Roundabout Ahead,0.8687
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b8de4d86-IMG_20251112_162741.jpg,1441.26,2093.04,1637.1,2439.84,1.0,Blind-Spot Mirror (Convex Mirror),0.9077
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b8de4d86-IMG_20251112_162741.jpg,2120.58,2790.72,2190.96,2909.04,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b8de4d86-IMG_20251112_162741.jpg,2420.46,2713.2,2472.48,2782.56,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b8de4d86-IMG_20251112_162741.jpg,2613.24,2607.12,2674.44,2798.88,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b8de4d86-IMG_20251112_162741.jpg,2766.24,2603.04,2851.92,2696.88,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b8de4d86-IMG_20251112_162741.jpg,2876.4,1860.48,3060.0,2545.92,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_b8de4d86-IMG_20251112_162741.jpg,2876.4,2700.96,3060.0,3149.76,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_e8b17764-ZC8_front.jpg,1626.0,2504.0,1671.0,2580.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_e8b17764-ZC8_front.jpg,1725.0,2536.0,1761.0,2580.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_e8b17764-ZC8_front.jpg,2208.0,2608.0,2232.0,2640.0,1.0,No Entry (One Way),0.5569
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_e8b17764-ZC8_front.jpg,2520.0,2620.0,2568.0,2660.0,1.0,Back-Unknown,0.7284
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_e8b17764-ZC8_front.jpg,2706.0,2612.0,2748.0,2668.0,1.0,,0.0
+LocateAnything 3B,sens-mtsd-ped-01,pedestrian crossing sign,grp9_e8b17764-ZC8_front.jpg,2760.0,2612.0,2796.0,2668.0,1.0,,0.0

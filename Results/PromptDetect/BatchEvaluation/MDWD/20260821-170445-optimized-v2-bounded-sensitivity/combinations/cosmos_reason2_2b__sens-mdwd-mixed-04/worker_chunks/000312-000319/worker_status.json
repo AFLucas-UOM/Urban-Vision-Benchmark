@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "sens-mdwd-mixed-04",
+  "prompt": "find all black mixed-waste bags",
+  "image_start": 312,
+  "image_end": 320,
+  "n_images": 8,
+  "n_prediction_rows": 9,
+  "max_detections": 28,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 2560,
+  "model_status": {
+    "model": "Cosmos Reason2 2B",
+    "model_load_ms": 9926.3,
+    "ok": true,
+    "label": "Cosmos Reason2 2B",
+    "source": "nvidia/Cosmos-Reason2-2B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-21T20:33:55.519741+00:00",
+  "finished_at": "2026-08-21T20:34:21.846210+00:00"
+}

@@ -1,0 +1,72 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,243.2,110.72,433.92,357.12,1.0,Mixed Waste,0.574
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,20250124_115555_jpg.rf.d9cd5b950662bca69f8c4f49336d7ca1.jpg,320.0,232.96,427.52,357.12,1.0,Other Waste,0.9537
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,20250124_115754_jpg.rf.f09908763acae851d2c8ed30353256db.jpg,168.96,163.2,336.64,323.2,1.0,Mixed Waste,0.9647
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,346.88,205.44,538.24,451.2,1.0,Recyclable Material,0.9318
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,373.76,188.16,467.84,295.04,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,473055810_1017914696762987_4178034688130709660_n_jpg.rf.f03f6b9a9f959d7dce7512e0d31dc6a1.jpg,273.28,320.0,406.4,431.36,1.0,Recyclable Material,0.9034
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,158.72,62.08,345.6,210.56,1.0,Mixed Waste,0.8397
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_30_jpeg.rf.399e64bccb44d80fa05c2372ef8a2a0d.jpg,285.44,432.64,532.48,503.04,1.0,Orange CMD,0.9661
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_36_jpeg.rf.bbdedbb8ba216b5178969e02bdc8fb0b.jpg,263.68,418.56,371.2,480.64,1.0,Orange CMD,0.924
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,160.0,288.0,430.08,549.12,1.0,Orange CMD,0.9598
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,496.0,338.56,562.56,384.64,1.0,,0.0527
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,383.36,365.44,470.4,438.4,1.0,Orange CMD,0.8844
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,101.12,231.68,216.32,307.84,1.0,Orange CMD,0.9159
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,0.0,222.08,119.68,355.2,1.0,Mixed Waste,0.5424
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_AFL_88_jpeg.rf.d003f357baa77787fd77568c430ecd89.jpg,171.52,210.56,469.12,420.48,1.0,Mixed Waste,0.9522
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,286.08,192.64,396.16,375.04,1.0,Other Waste,0.95
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_29_jpg.rf.8b226744799c5e1605f8385be5fc3725.jpg,282.24,195.2,579.2,483.2,1.0,Mixed Waste,0.9762
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,69.12,222.08,289.28,1.0,Mixed Waste,0.7683
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_131_jpeg.rf.e4689cf06851282cb99fc61669a8fc16.jpg,430.08,323.2,592.64,423.04,1.0,Orange CMD,0.9636
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,72.96,410.24,126.72,431.36,1.0,Orange CMD,0.8382
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_154_jpeg.rf.19166d7805818a35c045253065a12b6d.jpg,232.96,348.16,383.36,424.32,1.0,,0.2719
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,0.0,273.28,75.52,411.52,1.0,Recyclable Material,0.8766
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_69_jpeg.rf.abd58f54c6dd55ee439e3d9b9cd97aa8.jpg,177.28,5.76,386.56,627.84,1.0,Other Waste,0.9705
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_88_jpeg.rf.bf5aa164958d0cd2482ce7224ebf29c6.jpg,316.16,532.48,496.0,634.88,1.0,Orange CMD,0.9212
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_17_jpg.rf.03f87370361f62b6bf4dcb116f1f7e6c.jpg,176.0,110.72,488.96,383.36,1.0,Other Waste,0.5502
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,151.68,200.96,250.24,382.08,1.0,Recyclable Material,0.6572
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_48_jpeg.rf.0e4b7f0cef362ff913350959077e3877.jpg,59.52,373.76,292.48,525.44,1.0,Mixed Waste,0.9775
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,image00042_jpeg.rf.b2466e61bc76e942d37dc702f18b81e4.jpg,89.6,213.76,224.64,341.12,1.0,Mixed Waste,0.8291
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,image00082_jpeg.rf.2a65a428911318f5f3442ffe3870263d.jpg,250.24,271.36,639.36,634.88,1.0,Mixed Waste,0.5926
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,360.96,271.36,624.0,1.0,Mixed Waste,0.8859
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,115.2,330.24,218.88,514.56,1.0,Recyclable Material,0.8885
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,442.88,345.6,530.56,465.28,1.0,Recyclable Material,0.8108
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,460.8,410.24,591.36,593.28,1.0,Recyclable Material,0.8565
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,0.0,418.56,119.68,556.16,1.0,Recyclable Material,0.5848
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,189.44,418.56,318.72,590.08,1.0,Mixed Waste,0.6614
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,335.36,426.88,489.6,605.44,1.0,Mixed Waste,0.8279
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,560.0,431.36,634.88,574.72,1.0,Recyclable Material,0.6393
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,110.08,510.08,186.88,578.56,1.0,Other Waste,0.9655
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_9_8654318877_jpg.rf.118a4ab4d7d78c57339b763ca18f794a.jpg,380.16,338.56,444.16,476.16,1.0,Recyclable Material,0.5406
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG-20241230-WA0013_jpg.rf.76493a67373b4c640b121b6b5c7f1724.jpg,171.52,292.48,273.28,472.32,1.0,Mixed Waste,0.9532
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG20250106070329_jpg.rf.f61f2006072335cf78abccceebdc787e.jpg,318.72,285.44,412.8,310.4,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG20250107085454_jpg.rf.03f678b7d914e0a5a963f3e051cb0aa4.jpg,323.2,116.48,420.48,189.44,1.0,Mixed Waste,0.7489
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,265.6,89.6,391.68,258.56,1.0,Recyclable Material,0.878
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,365.44,67.2,456.96,240.64,1.0,Recyclable Material,0.8436
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,436.48,49.28,540.8,188.16,1.0,Recyclable Material,0.8247
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,263.68,259.84,383.36,431.36,1.0,Recyclable Material,0.5842
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,373.76,320.64,504.32,460.8,1.0,Recyclable Material,0.935
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0262_JPG.rf.5e327b0490f360f82423eb156bb2c702.jpg,270.08,98.56,501.76,344.32,1.0,Mixed Waste,0.9613
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,49.28,131.84,320.0,282.24,1.0,Recyclable Material,0.858
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0714_jpeg.rf.97458a882a4c384759469f5ec68c823a.jpg,176.0,285.44,399.36,373.76,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1323-1-_jpg.rf.b9ca18acb6bf9dd41459183bbdbb6677.jpg,259.2,257.28,438.4,440.96,1.0,Mixed Waste,0.9738
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1642-3_JPG.rf.dc053066bc3dc85394edbc00ef55a8e4.jpg,0.0,175.36,142.08,320.64,1.0,Mixed Waste,0.9363
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1701_JPG.rf.cbbb8a08ac02580e5312c5daea6a404e.jpg,181.12,259.84,350.08,337.28,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,173.44,290.56,222.08,391.68,1.0,Other Waste,0.87
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241228_084606_jpg.rf.a4b1a7867d1bdf6ec683a909c6388742.jpg,258.56,177.28,394.88,276.48,1.0,Mixed Waste,0.8978
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5780_blurred_jpg.rf.79dedd739e6bb733eeed62225a18a389.jpg,406.4,154.24,425.6,176.0,1.0,Recyclable Material,0.6462
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8255_size_jpeg.rf.6761db8582d4837db7e2397532361d67.jpg,227.2,351.36,372.48,466.56,1.0,Mixed Waste,0.9213
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8257_size_jpeg.rf.19792c9e34156566549cd8191acf13cd.jpg,145.92,368.0,371.2,536.96,1.0,Mixed Waste,0.9322
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,227.2,383.36,279.68,476.16,1.0,,0.4329
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8692_jpeg.rf.7f04ea376ec44117007bb686d6250bd9.jpg,202.88,383.36,269.44,424.32,1.0,Orange CMD,0.9504
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8747_jpeg.rf.4dab4ee43bac4a6699e1b96b2dba1467.jpg,199.68,430.08,346.88,540.8,1.0,Mixed Waste,0.8833
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8860_jpeg.rf.5af16907c63b034c96c83914fb2f3f52.jpg,355.2,368.0,467.84,439.68,1.0,Mixed Waste,0.8919
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,214.4,299.52,383.36,535.04,1.0,,0.3011
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,154.88,330.88,291.2,466.56,1.0,Mixed Waste,0.7071
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,408.96,168.96,510.72,359.68,1.0,Mixed Waste,0.9196
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,217.6,219.52,312.32,355.2,1.0,Mixed Waste,0.8935
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,254.72,324.48,297.6,387.84,1.0,,0.3929
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,218.88,330.24,256.0,386.56,1.0,Mixed Waste,0.6884
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,183.04,337.28,218.88,391.68,1.0,Mixed Waste,0.8771
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,Number_blur-2-_size_jpeg.rf.1c3be494c4b9cc9941f73ca4650b2955.jpg,292.48,348.8,426.88,451.2,1.0,Mixed Waste,0.7386
+Cosmos Reason2 2B,sens-mdwd-organic-03,white bag containing organic household waste,Unknown-6_jpg.rf.ad6fdf8bf89e73dc870edfa7e5f8588c.jpg,77.44,150.4,504.32,420.48,1.0,Mixed Waste,0.805

@@ -6,6 +6,8 @@ import json
 import pytest
 from PIL import Image
 
+import config
+from backend import CosmosReason2Engine, Sam3NativeEngine
 from protocol import load_protocol, select_prompts, validate_vocabulary
 from protocol_reporting import generate
 from dataset_loader import _load_yolo_split
@@ -15,10 +17,11 @@ from run_dissertation_protocol import (
     enforce_final_mtsd,
     main as protocol_main,
     worker_chunk_ranges,
+    worker_chunk_size,
 )
 from targeted_metrics import deduplicate_union, evaluate_targeted
 from utils import filter_detections
-from wandb_utils import start_run, tracking_target
+from wandb_utils import _wandb_id, start_run, tracking_target
 from visualizations import save_visualizations
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -158,6 +161,28 @@ def test_worker_chunks_are_aggressive_for_vlms_but_not_sam():
     assert worker_chunk_ranges("LocateAnything 3B", 130, defaults) == [
         (0, 64), (64, 128), (128, 130),
     ]
+    assert worker_chunk_size("Cosmos Reason2 2B", 130, defaults) == 8
+    assert worker_chunk_ranges("Cosmos Reason2 2B", 18, defaults) == [
+        (0, 8), (8, 16), (16, 18),
+    ]
+
+
+def test_cosmos_resolution_policy_is_model_specific_and_applied_only_to_cosmos():
+    import inspect
+
+    assert config.cosmos_max_side("Cosmos Reason2 2B") == 2560
+    assert config.cosmos_max_side("Cosmos Reason2 8B") == 1536
+    assert "PROMPTDETECT_COSMOS_MAX_SIDE" in inspect.getsource(CosmosReason2Engine.predict_raw)
+    assert "PROMPTDETECT_COSMOS_MAX_SIDE" not in inspect.getsource(Sam3NativeEngine.predict_raw)
+
+
+def test_replacement_wandb_run_uses_a_fresh_versioned_id(tmp_path):
+    run_id = _wandb_id(tmp_path / "20260818-134723-optimized-v2", {
+        "dataset": "MTSD",
+        "evaluation_protocol": "targeted-v2",
+        "wandb_run_revision": "bounded-v2",
+    })
+    assert run_id.endswith("_bounded_v2")
 
 
 def test_duplicate_prediction_and_empty_predictions():

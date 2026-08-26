@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "sens-mtsd-mirror-04",
+  "prompt": "find all roadside blind-spot mirrors",
+  "image_start": 104,
+  "image_end": 112,
+  "n_images": 8,
+  "n_prediction_rows": 9,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 2560,
+  "model_status": {
+    "model": "Cosmos Reason2 2B",
+    "model_load_ms": 9697.7,
+    "ok": true,
+    "label": "Cosmos Reason2 2B",
+    "source": "nvidia/Cosmos-Reason2-2B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-24T14:42:14.233916+00:00",
+  "finished_at": "2026-08-24T14:42:49.558405+00:00"
+}

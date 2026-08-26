@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 8B",
+  "prompt_id": "sens-mdwd-orange-02",
+  "prompt": "orange refuse bag",
+  "image_start": 368,
+  "image_end": 369,
+  "n_images": 1,
+  "n_prediction_rows": 1,
+  "max_detections": 28,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "Cosmos Reason2 8B",
+    "model_load_ms": 14987.1,
+    "ok": true,
+    "label": "Cosmos Reason2 8B",
+    "source": "nvidia/Cosmos-Reason2-8B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-22T07:31:17.222028+00:00",
+  "finished_at": "2026-08-22T07:31:36.591987+00:00"
+}

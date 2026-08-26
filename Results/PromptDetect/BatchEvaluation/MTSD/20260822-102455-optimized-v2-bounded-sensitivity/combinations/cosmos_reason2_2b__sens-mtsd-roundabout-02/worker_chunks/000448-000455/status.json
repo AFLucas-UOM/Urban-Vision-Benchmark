@@ -1,0 +1,36 @@
+{
+  "protocol_hash": "9559386e86fe19dbcaeaec5d29f631f93c1a11a46e6317792050446236f26792",
+  "dataset_manifest_hash": "94e139cfa52a4c4c5043d146b7ea996b0b0d8cf7439d09f029d8f61d5dcebace",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "sens-mtsd-roundabout-02",
+  "prompt": "warning sign for a roundabout ahead",
+  "target_classes": [
+    "Roundabout Ahead"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 18,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "sensitivity_family": "mtsd-roundabout-ahead",
+  "variant_type": "lexical-paraphrase",
+  "cosmos_max_side": 2560,
+  "cosmos_worker_chunk_size": 8,
+  "cosmos_execution_revision": "bounded-model-specific-2b2560-8b1536-chunk8-v2",
+  "status": "completed",
+  "execution_strategy": "isolated-model-prompt-chunks-v1",
+  "image_start": 448,
+  "image_end": 456,
+  "model_status": {
+    "model": "Cosmos Reason2 2B",
+    "model_load_ms": 9488.6,
+    "ok": true,
+    "label": "Cosmos Reason2 2B",
+    "source": "nvidia/Cosmos-Reason2-2B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "finished_at": "2026-08-24T09:48:34.928040+00:00"
+}

@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "sens-mtsd-roundabout-04",
+  "prompt": "find all roundabout ahead signs",
+  "image_start": 384,
+  "image_end": 448,
+  "n_images": 64,
+  "n_prediction_rows": 381,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 13345.3,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-23T13:59:22.351403+00:00",
+  "finished_at": "2026-08-23T14:24:01.420191+00:00"
+}

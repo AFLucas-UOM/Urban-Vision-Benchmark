@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mtsd-p13",
+  "prompt": "roadside traffic-control object",
+  "image_start": 0,
+  "image_end": 64,
+  "n_images": 64,
+  "n_prediction_rows": 354,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 12726.9,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-19T07:15:28.372776+00:00",
+  "finished_at": "2026-08-19T07:19:54.888894+00:00"
+}

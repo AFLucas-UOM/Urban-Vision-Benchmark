@@ -1,0 +1,6 @@
+dataset,model,n_families,macro_pairwise_box_f1,macro_pairwise_box_jaccard,macro_matched_pair_iou,least_consistent_family,min_family_pairwise_box_f1
+MDWD,Cosmos Reason2 2B,4,0.5515,0.5467,0.9723,mdwd-orange-cmd,0.543
+MDWD,Cosmos Reason2 8B,4,0.8155,0.8013,0.9746,mdwd-orange-cmd,0.7296
+MDWD,LocateAnything 3B,4,0.6906,0.64,0.9439,mdwd-organic-waste,0.6266
+MDWD,SAM 3,4,0.7993,0.7949,0.987,mdwd-recyclable-material,0.6733
+MDWD,SAM 3.1,4,0.7912,0.7863,0.988,mdwd-recyclable-material,0.6543

@@ -81,9 +81,10 @@ MTSD prepared split, QA-only enforcement, manifest and split-hash validation,
 the QA-resolved GRP-1…GRP-11 approved group scope, and `--final` mode behave exactly as in targeted-v2.
 
 Model execution is isolated by subprocess. SAM uses one process per prompt;
-LocateAnything and Cosmos use fresh 64-image workers. This bounds RAM/VRAM
-growth during the much larger sensitivity matrix and makes partial chunks
-resumable after interruption.
+LocateAnything uses fresh 64-image workers, while Cosmos uses 8-image workers
+with checkpoint-specific maximum input sides (2560px for 2B; 1536px for
+8B/32B). This bounds RAM/VRAM growth during the much larger sensitivity matrix
+and makes partial chunks resumable after interruption.
 
 Because prompts in one family share `target_classes`, all four variants see
 identical GT. The dry-run prints, per family, the target classes, number of

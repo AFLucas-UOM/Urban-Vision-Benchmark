@@ -1,0 +1,317 @@
+protocol_version: prompt-sensitivity-v2
+defaults:
+  conf_threshold: 0.3
+  iou_threshold: 0.5
+  max_detections_policy: test-set-max-gt-per-image
+  nms_iou_threshold: 0.5
+  vlm_worker_chunk_size: 64
+  visualizations_per_combination: 10
+models:
+  primary:
+  - sam3
+  - sam3.1
+  - locateanything
+  - cosmos2b
+  - cosmos8b
+  optional_heavy:
+  - cosmos32b
+datasets:
+  MDWD:
+    source:
+      type: yolo
+      path: Datasets/MDWD/MDWD-YOLO26
+      split: test
+    class_vocabulary:
+    - Mixed Waste
+    - Orange CMD
+    - Organic Waste
+    - Other Waste
+    - Recyclable Material
+    prompts:
+    - id: sens-mdwd-mixed-01
+      prompt: black garbage bag
+      group: paraphrase-sensitivity
+      target_classes:
+      - Mixed Waste
+      sensitivity_family: mdwd-mixed-waste
+      variant_type: canonical
+    - id: sens-mdwd-mixed-02
+      prompt: black refuse bag
+      group: paraphrase-sensitivity
+      target_classes:
+      - Mixed Waste
+      sensitivity_family: mdwd-mixed-waste
+      variant_type: lexical-paraphrase
+    - id: sens-mdwd-mixed-03
+      prompt: black bag containing mixed household waste
+      group: paraphrase-sensitivity
+      target_classes:
+      - Mixed Waste
+      sensitivity_family: mdwd-mixed-waste
+      variant_type: descriptive-paraphrase
+    - id: sens-mdwd-mixed-04
+      prompt: find all black mixed-waste bags
+      group: paraphrase-sensitivity
+      target_classes:
+      - Mixed Waste
+      sensitivity_family: mdwd-mixed-waste
+      variant_type: instruction
+    - id: sens-mdwd-recycling-01
+      prompt: grey recycling bag
+      group: paraphrase-sensitivity
+      target_classes:
+      - Recyclable Material
+      sensitivity_family: mdwd-recyclable-material
+      variant_type: canonical
+    - id: sens-mdwd-recycling-02
+      prompt: grey household recycling bag
+      group: paraphrase-sensitivity
+      target_classes:
+      - Recyclable Material
+      sensitivity_family: mdwd-recyclable-material
+      variant_type: lexical-paraphrase
+    - id: sens-mdwd-recycling-03
+      prompt: grey bag containing recyclable household material
+      group: paraphrase-sensitivity
+      target_classes:
+      - Recyclable Material
+      sensitivity_family: mdwd-recyclable-material
+      variant_type: descriptive-paraphrase
+    - id: sens-mdwd-recycling-04
+      prompt: find all grey recycling bags
+      group: paraphrase-sensitivity
+      target_classes:
+      - Recyclable Material
+      sensitivity_family: mdwd-recyclable-material
+      variant_type: instruction
+    - id: sens-mdwd-organic-01
+      prompt: white organic-waste bag
+      group: paraphrase-sensitivity
+      target_classes:
+      - Organic Waste
+      sensitivity_family: mdwd-organic-waste
+      variant_type: canonical
+    - id: sens-mdwd-organic-02
+      prompt: white domestic organic-waste bag
+      group: paraphrase-sensitivity
+      target_classes:
+      - Organic Waste
+      sensitivity_family: mdwd-organic-waste
+      variant_type: lexical-paraphrase
+    - id: sens-mdwd-organic-03
+      prompt: white bag containing organic household waste
+      group: paraphrase-sensitivity
+      target_classes:
+      - Organic Waste
+      sensitivity_family: mdwd-organic-waste
+      variant_type: descriptive-paraphrase
+    - id: sens-mdwd-organic-04
+      prompt: find all white organic-waste bags
+      group: paraphrase-sensitivity
+      target_classes:
+      - Organic Waste
+      sensitivity_family: mdwd-organic-waste
+      variant_type: instruction
+    - id: sens-mdwd-orange-01
+      prompt: orange garbage bag
+      group: paraphrase-sensitivity
+      target_classes:
+      - Orange CMD
+      sensitivity_family: mdwd-orange-cmd
+      variant_type: canonical
+    - id: sens-mdwd-orange-02
+      prompt: orange refuse bag
+      group: paraphrase-sensitivity
+      target_classes:
+      - Orange CMD
+      sensitivity_family: mdwd-orange-cmd
+      variant_type: lexical-paraphrase
+    - id: sens-mdwd-orange-03
+      prompt: orange bag containing domestic waste
+      group: paraphrase-sensitivity
+      target_classes:
+      - Orange CMD
+      sensitivity_family: mdwd-orange-cmd
+      variant_type: descriptive-paraphrase
+    - id: sens-mdwd-orange-04
+      prompt: find all orange waste bags
+      group: paraphrase-sensitivity
+      target_classes:
+      - Orange CMD
+      sensitivity_family: mdwd-orange-cmd
+      variant_type: instruction
+  MTSD:
+    source:
+      type: prepared
+      path: Datasets/MTSD/Prepared/MTSD-Unaugmented/MTSD-YOLO
+      split: test
+      require_manifest: true
+      required_group_scope: explicit
+      approved_groups:
+      - GRP-1
+      - GRP-2
+      - GRP-3
+      - GRP-4
+      - GRP-5
+      - GRP-6
+      - GRP-7
+      - GRP-8
+      - GRP-9
+      - GRP-10
+      - GRP-11
+      required_annotation_source_mode: qa_only
+    class_vocabulary:
+    - Pedestrian Crossing
+    - Stop Sign
+    - No Entry (One Way)
+    - Roundabout Ahead
+    - No Through Road (T-Junction)
+    - Blind-Spot Mirror (Convex Mirror)
+    - Street Sign
+    - Directional Sign
+    - Tourist Sign
+    - Auxiliary Sign
+    - Back-Unknown
+    - Other-Unknown
+    prompts:
+    - id: sens-mtsd-ped-01
+      prompt: pedestrian crossing sign
+      group: paraphrase-sensitivity
+      target_classes:
+      - Pedestrian Crossing
+      sensitivity_family: mtsd-pedestrian-crossing
+      variant_type: canonical
+    - id: sens-mtsd-ped-02
+      prompt: road sign for a pedestrian crossing
+      group: paraphrase-sensitivity
+      target_classes:
+      - Pedestrian Crossing
+      sensitivity_family: mtsd-pedestrian-crossing
+      variant_type: lexical-paraphrase
+    - id: sens-mtsd-ped-03
+      prompt: sign indicating a pedestrian crossing
+      group: paraphrase-sensitivity
+      target_classes:
+      - Pedestrian Crossing
+      sensitivity_family: mtsd-pedestrian-crossing
+      variant_type: descriptive-paraphrase
+    - id: sens-mtsd-ped-04
+      prompt: find all pedestrian crossing signs
+      group: paraphrase-sensitivity
+      target_classes:
+      - Pedestrian Crossing
+      sensitivity_family: mtsd-pedestrian-crossing
+      variant_type: instruction
+    - id: sens-mtsd-stop-01
+      prompt: stop sign
+      group: paraphrase-sensitivity
+      target_classes:
+      - Stop Sign
+      sensitivity_family: mtsd-stop-sign
+      variant_type: canonical
+    - id: sens-mtsd-stop-02
+      prompt: road sign instructing drivers to stop
+      group: paraphrase-sensitivity
+      target_classes:
+      - Stop Sign
+      sensitivity_family: mtsd-stop-sign
+      variant_type: lexical-paraphrase
+    - id: sens-mtsd-stop-03
+      prompt: traffic sign indicating that vehicles must stop
+      group: paraphrase-sensitivity
+      target_classes:
+      - Stop Sign
+      sensitivity_family: mtsd-stop-sign
+      variant_type: descriptive-paraphrase
+    - id: sens-mtsd-stop-04
+      prompt: find all stop signs
+      group: paraphrase-sensitivity
+      target_classes:
+      - Stop Sign
+      sensitivity_family: mtsd-stop-sign
+      variant_type: instruction
+    - id: sens-mtsd-entry-01
+      prompt: no entry sign
+      group: paraphrase-sensitivity
+      target_classes:
+      - No Entry (One Way)
+      sensitivity_family: mtsd-no-entry
+      variant_type: canonical
+    - id: sens-mtsd-entry-02
+      prompt: road sign indicating no entry
+      group: paraphrase-sensitivity
+      target_classes:
+      - No Entry (One Way)
+      sensitivity_family: mtsd-no-entry
+      variant_type: lexical-paraphrase
+    - id: sens-mtsd-entry-03
+      prompt: traffic sign prohibiting vehicles from entering
+      group: paraphrase-sensitivity
+      target_classes:
+      - No Entry (One Way)
+      sensitivity_family: mtsd-no-entry
+      variant_type: descriptive-paraphrase
+    - id: sens-mtsd-entry-04
+      prompt: find all no entry signs
+      group: paraphrase-sensitivity
+      target_classes:
+      - No Entry (One Way)
+      sensitivity_family: mtsd-no-entry
+      variant_type: instruction
+    - id: sens-mtsd-roundabout-01
+      prompt: roundabout ahead sign
+      group: paraphrase-sensitivity
+      target_classes:
+      - Roundabout Ahead
+      sensitivity_family: mtsd-roundabout-ahead
+      variant_type: canonical
+    - id: sens-mtsd-roundabout-02
+      prompt: warning sign for a roundabout ahead
+      group: paraphrase-sensitivity
+      target_classes:
+      - Roundabout Ahead
+      sensitivity_family: mtsd-roundabout-ahead
+      variant_type: lexical-paraphrase
+    - id: sens-mtsd-roundabout-03
+      prompt: traffic sign indicating an upcoming roundabout
+      group: paraphrase-sensitivity
+      target_classes:
+      - Roundabout Ahead
+      sensitivity_family: mtsd-roundabout-ahead
+      variant_type: descriptive-paraphrase
+    - id: sens-mtsd-roundabout-04
+      prompt: find all roundabout ahead signs
+      group: paraphrase-sensitivity
+      target_classes:
+      - Roundabout Ahead
+      sensitivity_family: mtsd-roundabout-ahead
+      variant_type: instruction
+    - id: sens-mtsd-mirror-01
+      prompt: blind-spot convex mirror
+      group: paraphrase-sensitivity
+      target_classes:
+      - Blind-Spot Mirror (Convex Mirror)
+      sensitivity_family: mtsd-blind-spot-mirror
+      variant_type: canonical
+    - id: sens-mtsd-mirror-02
+      prompt: roadside convex mirror for blind spots
+      group: paraphrase-sensitivity
+      target_classes:
+      - Blind-Spot Mirror (Convex Mirror)
+      sensitivity_family: mtsd-blind-spot-mirror
+      variant_type: lexical-paraphrase
+    - id: sens-mtsd-mirror-03
+      prompt: convex traffic mirror used to improve road visibility
+      group: paraphrase-sensitivity
+      target_classes:
+      - Blind-Spot Mirror (Convex Mirror)
+      sensitivity_family: mtsd-blind-spot-mirror
+      variant_type: descriptive-paraphrase
+    - id: sens-mtsd-mirror-04
+      prompt: find all roadside blind-spot mirrors
+      group: paraphrase-sensitivity
+      target_classes:
+      - Blind-Spot Mirror (Convex Mirror)
+      sensitivity_family: mtsd-blind-spot-mirror
+      variant_type: instruction
+protocol_hash: 9559386e86fe19dbcaeaec5d29f631f93c1a11a46e6317792050446236f26792

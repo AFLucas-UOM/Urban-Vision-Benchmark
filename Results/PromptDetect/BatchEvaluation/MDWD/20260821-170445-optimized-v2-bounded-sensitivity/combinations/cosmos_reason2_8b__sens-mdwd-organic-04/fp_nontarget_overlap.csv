@@ -1,0 +1,337 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,229.12,179.84,491.52,554.88,1.0,Recyclable Material,0.595
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,200.96,264.32,426.88,445.44,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_075842_jpg.rf.1891b8867310eeface2f0bc74a0dc490.jpg,241.28,224.64,362.24,393.6,1.0,Mixed Waste,0.9397
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,332.8,193.92,506.88,411.52,1.0,Mixed Waste,0.6619
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_080317_jpg.rf.17f03c2e6a52857573a93ef9530fa3ab.jpg,163.2,198.4,353.92,430.08,1.0,Mixed Waste,0.952
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_080317_jpg.rf.17f03c2e6a52857573a93ef9530fa3ab.jpg,356.48,143.36,517.76,323.2,1.0,Mixed Waste,0.9344
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,193.92,217.6,292.48,359.68,1.0,Mixed Waste,0.8203
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,272.64,229.12,443.52,385.28,1.0,Mixed Waste,0.8143
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,198.4,123.52,388.48,302.08,1.0,Mixed Waste,0.9004
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,198.4,272.64,483.2,456.32,1.0,Mixed Waste,0.9536
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,226.56,167.04,357.12,265.6,1.0,Mixed Waste,0.8904
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241219_083844_jpg.rf.70488e50bbe5f99b85b0719729f32064.jpg,198.4,102.4,491.52,348.8,1.0,Recyclable Material,0.8608
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,122.24,195.2,320.0,364.16,1.0,Recyclable Material,0.9408
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,309.12,195.2,512.0,394.88,1.0,Recyclable Material,0.9488
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,323.84,164.48,556.8,339.84,1.0,Recyclable Material,0.9487
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,538.24,205.44,638.72,348.16,1.0,Recyclable Material,0.7225
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,48.0,218.88,163.2,371.2,1.0,Recyclable Material,0.8927
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,128.0,298.24,231.68,424.32,1.0,Recyclable Material,0.8407
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,198.4,362.24,376.32,540.8,1.0,Recyclable Material,0.959
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20250103_071358-0-_jpg.rf.551125884a7ee52b32bb69b2998e461e.jpg,198.4,320.0,235.52,375.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,109.44,213.76,350.08,445.44,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20250114_102320_jpg.rf.979c53863883cd0861956f0a494251dd.jpg,209.28,291.2,382.72,400.64,1.0,Other Waste,0.9532
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,323.84,341.12,559.36,496.0,1.0,Mixed Waste,0.9483
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20250124_115555_jpg.rf.d9cd5b950662bca69f8c4f49336d7ca1.jpg,202.88,298.24,359.68,459.52,1.0,Other Waste,0.9327
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20250124_115555_jpg.rf.d9cd5b950662bca69f8c4f49336d7ca1.jpg,327.04,232.96,427.52,359.68,1.0,Other Waste,0.8835
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,20250124_121125_jpg.rf.cfc4084ec5d934eac7c719fb1006ba95.jpg,243.2,223.36,420.48,355.2,1.0,Other Waste,0.9158
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,26_jpeg.rf.9461f25b898f83e1991fbcc6fc5cc83c.jpg,209.28,282.24,398.72,483.2,1.0,Recyclable Material,0.9571
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,227.84,39.68,339.84,133.12,1.0,Recyclable Material,0.8788
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,188.16,172.8,471.04,401.92,1.0,Recyclable Material,0.964
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,2_jpeg.rf.210ca76552cf22b6ae5128cd5eb1a637.jpg,260.48,337.28,325.76,366.72,1.0,Recyclable Material,0.6422
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,30_jpeg.rf.b5cf601d6f44e0addb177394ba5d4b99.jpg,218.88,229.12,436.48,365.44,1.0,Recyclable Material,0.9635
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,31_jpeg.rf.fda6c54a3034426eb0971b712b284ac9.jpg,200.96,230.4,394.24,359.68,1.0,Recyclable Material,0.7969
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,0.0,371.2,218.88,638.72,1.0,Recyclable Material,0.8869
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,343.04,205.44,535.68,451.2,1.0,Recyclable Material,0.938
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,461.44,150.4,638.72,353.92,1.0,Recyclable Material,0.6304
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,472786813_628965022887679_5248188576436768956_n_jpg.rf.defa0e5e9d1fb44d9baf104b73f3b587.jpg,157.44,298.24,411.52,462.08,1.0,Mixed Waste,0.9722
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,472788297_879958087384265_8846214687047667235_n_jpg.rf.90b70971ab4cbf4a8c8d3d540b858ddf.jpg,238.08,108.16,414.72,320.0,1.0,Mixed Waste,0.8813
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,227.84,96.64,638.72,519.68,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,473055810_1017914696762987_4178034688130709660_n_jpg.rf.f03f6b9a9f959d7dce7512e0d31dc6a1.jpg,268.16,327.04,398.72,430.08,1.0,Recyclable Material,0.8732
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,473288918_1030220488909269_3010825870718583729_n_jpg.rf.1e0886d3aa27cfa4e22d06ead559dc80.jpg,198.4,140.8,583.04,353.92,1.0,,0.2664
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,142.08,192.64,494.08,491.52,1.0,Recyclable Material,0.9615
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,359.04,62.72,593.28,330.24,1.0,Recyclable Material,0.9655
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,291.2,154.88,439.04,277.12,1.0,Mixed Waste,0.7671
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,174.72,34.56,517.76,385.28,1.0,Recyclable Material,0.5051
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,474711682_567011309667599_6264000997239717913_n_jpg.rf.c5242ab97b3bb14b447b2963dc40bc88.jpg,466.56,313.6,603.52,411.52,1.0,Mixed Waste,0.8517
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch5_13_jpeg.rf.bcc3cbdfd5c1dfc063c7825a0a55a90a.jpg,200.96,154.24,371.2,283.52,1.0,Recyclable Material,0.9366
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch5_15_jpeg.rf.5dc21330fd6004b5fe9c6cdcf1a1732c.jpg,272.64,411.52,355.84,480.0,1.0,Recyclable Material,0.9464
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch5_2_jpeg.rf.4f2a1b9b6b2271796a0eb20e8001ce93.jpg,19.84,357.12,154.24,526.72,1.0,Mixed Waste,0.8238
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_1_13_jpeg.rf.8c727f8067b82177be353ac5ebeca4f1.jpg,212.48,150.4,384.0,251.52,1.0,Orange CMD,0.8429
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_30_jpeg.rf.399e64bccb44d80fa05c2372ef8a2a0d.jpg,285.44,435.84,529.28,506.24,1.0,Orange CMD,0.9045
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_36_jpeg.rf.bbdedbb8ba216b5178969e02bdc8fb0b.jpg,263.04,424.32,373.76,484.48,1.0,Orange CMD,0.8449
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_40_jpeg.rf.41584ad8be2654c6380775654da6238a.jpg,98.56,218.88,332.8,373.76,1.0,Orange CMD,0.9475
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,296.32,305.28,622.08,553.6,1.0,Orange CMD,0.9717
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,212.48,203.52,305.28,263.04,1.0,Other Waste,0.5291
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,140.8,251.52,215.68,348.8,1.0,Mixed Waste,0.7756
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,154.88,296.32,427.52,549.76,1.0,Orange CMD,0.9414
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_82_jpeg.rf.4b59b3179a198ea33d5840967544bdb3.jpg,122.24,317.44,353.92,416.0,1.0,Orange CMD,0.9548
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,505.6,327.04,565.12,386.56,1.0,,0.0609
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,128.0,396.16,173.44,428.8,1.0,Orange CMD,0.7532
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,177.92,396.16,250.24,433.92,1.0,Orange CMD,0.5706
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,256.0,396.16,326.4,435.84,1.0,Orange CMD,0.5508
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,323.84,397.44,394.88,448.0,1.0,,0.4723
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,392.32,397.44,469.12,448.0,1.0,,0.4314
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,250.24,277.12,491.52,536.96,1.0,Orange CMD,0.9276
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,376.32,205.44,492.8,311.68,1.0,Recyclable Material,0.7861
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,231.68,250.24,362.24,327.68,1.0,Recyclable Material,0.7994
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,133.76,272.64,233.6,371.2,1.0,Mixed Waste,0.8438
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,456.96,282.24,554.24,358.4,1.0,Mixed Waste,0.8669
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch7_19_jpeg.rf.bbd664688760cfb02be22b12188d3ea0.jpg,275.2,277.12,381.44,327.04,1.0,Orange CMD,0.54
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,151.04,341.12,430.08,403.2,1.0,Orange CMD,0.5492
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,0.0,67.2,92.16,199.68,1.0,Recyclable Material,0.9055
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,63.36,130.56,272.64,322.56,1.0,Recyclable Material,0.8459
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,32.64,263.04,381.44,432.0,1.0,Recyclable Material,0.9687
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_20_jpeg.rf.7b0acd51a9c8d6ff91b6387874917af3.jpg,189.44,213.76,346.88,348.8,1.0,Recyclable Material,0.9064
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,102.4,231.68,218.88,310.4,1.0,Orange CMD,0.9683
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_28_jpeg.rf.919763ab83ddeeedc1582a66fb260e6c.jpg,192.64,160.0,392.32,341.12,1.0,Recyclable Material,0.9464
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,268.16,203.52,456.96,334.72,1.0,Recyclable Material,0.9664
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,225.28,322.56,449.28,455.04,1.0,Recyclable Material,0.9381
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,214.4,150.4,312.32,234.88,1.0,Recyclable Material,0.8725
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,305.28,150.4,427.52,224.64,1.0,Recyclable Material,0.8346
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,149.76,217.6,305.28,366.72,1.0,,0.2298
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,247.04,219.52,449.92,428.8,1.0,,0.2586
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch9_11_jpeg.rf.4126636e69402c1d283355333ce014ab.jpg,161.28,108.16,363.52,254.08,1.0,Orange CMD,0.9688
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch9_12_jpeg.rf.439663c2acd785b36963c00338581b94.jpg,152.96,254.72,247.04,309.12,1.0,Orange CMD,0.8501
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL-NewBatch9_12_jpeg.rf.439663c2acd785b36963c00338581b94.jpg,458.24,230.4,513.92,254.72,1.0,Orange CMD,0.7344
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,355.84,317.44,494.08,403.2,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,233.6,263.04,381.44,350.08,1.0,Orange CMD,0.9514
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL_NewBatch3_38_jpeg.rf.4b95816ea6ebd56c2d1dc192d358948b.jpg,264.96,154.88,443.52,309.12,1.0,Orange CMD,0.9525
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL_NewBatch3_53_jpeg.rf.9e5bf2183fc4b923c9ee1501592a41f9.jpg,226.56,118.4,394.24,230.4,1.0,Orange CMD,0.9484
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,163.2,44.8,209.28,116.48,1.0,Recyclable Material,0.6809
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,258.56,348.8,513.92,547.84,1.0,Recyclable Material,0.823
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL_NewBatch3_61_jpeg.rf.27e292c4a0e32bcd3cadbae4bc598544.jpg,200.96,67.2,428.8,313.6,1.0,,0.4918
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,AFL_NewBatch3_70_jpeg.rf.7b3a89cb52b3c2b63da06989e950254c.jpg,248.32,85.76,430.08,309.12,1.0,Recyclable Material,0.9287
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_AFL_13_jpeg.rf.3b2d222a7fb553564619bba08946664e.jpg,205.44,177.92,463.36,446.72,1.0,Mixed Waste,0.7744
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_AFL_20_jpeg.rf.ac014490ff2a11d9f279be120a1079f1.jpg,106.24,185.6,350.08,437.12,1.0,Recyclable Material,0.9573
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,0.0,220.8,45.44,269.44,1.0,,0.3221
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,19.84,230.4,75.52,269.44,1.0,,0.3185
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_AFL_87_jpeg.rf.bbd40e9cada1cc2730cdee3d7a09767f.jpg,60.8,411.52,215.68,597.12,1.0,Other Waste,0.9261
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_AFL_87_jpeg.rf.bbd40e9cada1cc2730cdee3d7a09767f.jpg,225.28,240.0,430.08,426.88,1.0,Recyclable Material,0.9652
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_AFL_94_jpeg.rf.12064663f7b4f63552c8945b7487f26d.jpg,242.56,206.72,490.24,350.08,1.0,Recyclable Material,0.9566
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_Online_2_jpeg.rf.8f3afdbb2284e73aa7a48b49e8b960c8.jpg,347.52,332.8,556.16,595.84,1.0,Mixed Waste,0.5936
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_15_jpg.rf.538379eb2b735d401e4aba1afeeba4f4.jpg,128.0,22.4,472.32,305.28,1.0,Mixed Waste,0.9307
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,177.92,189.44,305.28,390.4,1.0,Other Waste,0.991
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,289.28,200.96,396.8,376.32,1.0,Other Waste,0.872
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_28_jpg.rf.a38a2a51538662297dacca85658e78da.jpg,75.52,157.44,439.04,519.68,1.0,Mixed Waste,0.9764
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,92.8,32.0,309.76,314.88,1.0,Recyclable Material,0.9708
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,353.92,184.32,638.72,461.44,1.0,Recyclable Material,0.9011
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,44.16,247.04,323.84,394.88,1.0,Recyclable Material,0.9283
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,286.08,320.0,452.48,549.12,1.0,Recyclable Material,0.945
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,446.72,404.48,638.72,634.88,1.0,Recyclable Material,0.9202
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,272.64,259.84,427.52,432.64,1.0,Recyclable Material,0.9618
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,176.64,98.56,273.28,216.32,1.0,Recyclable Material,0.8357
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,233.6,105.6,403.2,277.12,1.0,Recyclable Material,0.5383
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_E_11_jpg.rf.e3a50a869c33c50807b308d8f3c3763b.jpg,234.88,245.12,477.44,509.44,1.0,Recyclable Material,0.9671
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_E_3_jpg.rf.cd75c0f5faef6a61dc201602806fcf02.jpg,239.36,72.96,334.08,188.16,1.0,Recyclable Material,0.9502
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_E_3_jpg.rf.cd75c0f5faef6a61dc201602806fcf02.jpg,272.64,292.48,593.28,599.68,1.0,Recyclable Material,0.9716
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_E_6_jpg.rf.8f4ad2bbc4bd45252ef4e6320bac2e69.jpg,314.88,70.4,589.44,309.12,1.0,Recyclable Material,0.9343
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_SDM_E_6_jpg.rf.8f4ad2bbc4bd45252ef4e6320bac2e69.jpg,14.72,245.12,260.48,474.88,1.0,Recyclable Material,0.9366
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_11_jpg.rf.47d1657a833d01f0352d5a055b21c944.jpg,192.64,232.96,387.84,379.52,1.0,Mixed Waste,0.9567
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_14_jpg.rf.c589cfdd4d6a2dbf0b252f2f34ca86ad.jpg,190.72,227.84,599.68,509.44,1.0,Recyclable Material,0.9219
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,67.2,220.8,289.28,1.0,Mixed Waste,0.7789
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,56.96,210.56,381.44,357.12,1.0,Mixed Waste,0.9287
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,295.68,330.24,566.4,463.36,1.0,Mixed Waste,0.8947
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_23_jpg.rf.2df86f91f15c329adc7eac0e92c012c8.jpg,112.64,95.36,259.84,243.2,1.0,Mixed Waste,0.9657
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,458.88,232.96,576.64,309.12,1.0,Recyclable Material,0.9306
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_30_jpg.rf.cb32576d60ab619fd0da54147b7a4bd9.jpg,168.96,203.52,491.52,381.44,1.0,Recyclable Material,0.9348
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,75.52,213.76,611.84,470.4,1.0,Recyclable Material,0.7346
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,428.8,298.24,638.72,485.12,1.0,Recyclable Material,0.9536
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_43_jpg.rf.d5403d078d6d28485c7df4e9d59472ae.jpg,157.44,243.2,494.08,470.4,1.0,Recyclable Material,0.9601
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_49_jpg.rf.b1b37e897ec39c59805640946039322e.jpg,247.04,224.64,422.4,366.72,1.0,Recyclable Material,0.9269
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_54_jpg.rf.50e7e1d8fe52aa410a928c6641b2f939.jpg,260.48,230.4,422.4,375.04,1.0,Recyclable Material,0.8766
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,ARI3129_TK_54_jpg.rf.50e7e1d8fe52aa410a928c6641b2f939.jpg,421.76,223.36,579.2,401.92,1.0,Recyclable Material,0.9678
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_100_jpeg.rf.ae7f2469d138327b080d499ee020fe95.jpg,156.16,224.64,376.96,397.44,1.0,Orange CMD,0.9559
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_100_jpeg.rf.ae7f2469d138327b080d499ee020fe95.jpg,365.44,234.88,574.72,376.32,1.0,Orange CMD,0.9472
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_111_jpeg.rf.3c51eaf018327ebbff3d383cfcd741b4.jpg,128.0,264.32,194.56,299.52,1.0,Orange CMD,0.7968
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,149.76,272.64,227.84,296.32,1.0,Orange CMD,0.6708
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,243.2,230.4,277.12,258.56,1.0,Orange CMD,0.8898
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,336.64,200.96,346.88,216.32,1.0,,0.2092
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,346.88,200.96,357.12,216.32,1.0,,0.4193
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,357.12,200.96,365.44,215.04,1.0,,0.4275
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_131_jpeg.rf.e4689cf06851282cb99fc61669a8fc16.jpg,428.16,323.2,591.36,423.04,1.0,Orange CMD,0.9462
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,320.0,378.24,349.44,394.88,1.0,Orange CMD,0.6792
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_154_jpeg.rf.19166d7805818a35c045253065a12b6d.jpg,233.6,345.6,330.88,420.48,1.0,,0.4186
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_1_jpeg.rf.f7454e1ea82debb5842b648a435a47c5.jpg,85.76,243.2,277.12,390.4,1.0,Orange CMD,0.9116
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_22_jpeg.rf.a23d3afee83225ef2d4f068e96144385.jpg,0.0,348.8,213.76,496.0,1.0,Mixed Waste,0.9402
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_22_jpeg.rf.a23d3afee83225ef2d4f068e96144385.jpg,181.12,234.88,269.44,309.12,1.0,Mixed Waste,0.9053
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_39_jpeg.rf.e9a6b47832761d98991f461486c28b23.jpg,256.0,296.32,341.12,345.6,1.0,Recyclable Material,0.6184
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,202.88,206.72,318.72,272.64,1.0,Recyclable Material,0.8278
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,302.08,209.28,426.88,282.24,1.0,Recyclable Material,0.845
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,269.44,213.76,327.04,262.4,1.0,,0.2683
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,256.0,216.32,305.28,262.4,1.0,,0.2462
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,305.28,217.6,346.88,262.4,1.0,,0.1814
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,474.24,109.44,523.52,160.0,1.0,Mixed Waste,0.7395
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,520.96,108.16,578.56,174.08,1.0,Mixed Waste,0.8163
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,578.56,131.84,625.28,192.64,1.0,Mixed Waste,0.5786
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,145.92,313.6,263.04,421.76,1.0,Recyclable Material,0.7728
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_69_jpeg.rf.abd58f54c6dd55ee439e3d9b9cd97aa8.jpg,109.44,163.2,135.04,205.44,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_79_jpeg.rf.e55883045699d8dfa9c9aa6bc12bbef2.jpg,245.12,128.0,353.92,164.48,1.0,Orange CMD,0.6067
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_79_jpeg.rf.e55883045699d8dfa9c9aa6bc12bbef2.jpg,323.84,118.4,356.48,135.04,1.0,Orange CMD,0.762
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,291.2,339.84,392.32,442.88,1.0,Recyclable Material,0.9415
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_83_jpeg.rf.8c468ace19ef290a465a9eb0be96db61.jpg,154.88,236.16,299.52,285.44,1.0,Orange CMD,0.9413
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,0.0,453.76,75.52,628.48,1.0,Mixed Waste,0.9454
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,56.96,435.84,128.0,597.12,1.0,Mixed Waste,0.7567
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_85_jpeg.rf.64080e57ddbababb8994bf4ef236f296.jpg,101.12,375.04,205.44,563.2,1.0,,0.4527
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,CMD-Batch1_88_jpeg.rf.bf5aa164958d0cd2482ce7224ebf29c6.jpg,313.6,529.92,498.56,634.88,1.0,Orange CMD,0.9167
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,GabrielHili_NewBatch_3_jpeg.rf.c1f5bd64af246f96ef9ac3366738ac07.jpg,142.08,263.04,353.92,634.88,1.0,Mixed Waste,0.7923
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IllegalDumping_29_jpg.rf.9597a2660ba043489f648325c813a26e.jpg,79.36,256.0,131.84,371.2,1.0,Other Waste,0.7555
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,213.76,183.04,275.2,309.12,1.0,,0.1245
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,157.44,251.52,244.48,386.56,1.0,Recyclable Material,0.8616
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IllegalDumping_48_jpeg.rf.0e4b7f0cef362ff913350959077e3877.jpg,60.8,373.76,292.48,524.16,1.0,Mixed Waste,0.9658
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,108.16,140.8,327.04,254.72,1.0,Recyclable Material,0.8396
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IllegalDumping_64_jpeg.rf.e48c90ccc791eb8bacf934f9b3d5944e.jpg,198.4,327.04,327.04,474.88,1.0,Other Waste,0.9059
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,364.8,426.88,411.52,498.56,1.0,Other Waste,0.8196
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,image00010_jpeg.rf.e06a2de642e557aa8f532801abefd1c6.jpg,312.32,177.28,420.48,258.56,1.0,Recyclable Material,0.9564
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,image00012_jpeg.rf.513ba55685004619587efff11d5186a9.jpg,77.44,220.8,358.4,353.92,1.0,Recyclable Material,0.9121
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,image00058_jpeg.rf.a543875ecf5d044bb8fd364a0626a314.jpg,135.04,265.6,452.48,466.56,1.0,Mixed Waste,0.9579
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,image00082_jpeg.rf.2a65a428911318f5f3442ffe3870263d.jpg,273.28,272.64,528.64,428.8,1.0,Mixed Waste,0.9022
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,185.6,289.28,638.72,1.0,Mixed Waste,0.6104
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,440.32,345.6,591.36,594.56,1.0,Recyclable Material,0.5687
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,122.24,348.16,220.8,519.68,1.0,Recyclable Material,0.867
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,0.0,359.68,125.44,553.6,1.0,Recyclable Material,0.8469
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,imageedit_9_8654318877_jpg.rf.118a4ab4d7d78c57339b763ca18f794a.jpg,386.56,339.84,443.52,477.44,1.0,,0.4875
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG20250106065829_jpg.rf.13e356e3a46499a3c8b2162c6f8df515.jpg,250.24,200.96,394.24,283.52,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG20250106070329_jpg.rf.f61f2006072335cf78abccceebdc787e.jpg,314.88,285.44,381.44,309.12,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG20250106072418_jpg.rf.3d814d5b8012adcbd70fece9b5978672.jpg,233.6,265.6,325.76,357.12,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG20250107083637_jpg.rf.a71b6deb7086bda58d8d6224672eb8f4.jpg,208.64,157.44,269.44,230.4,1.0,Mixed Waste,0.7799
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG20250107085725_jpg.rf.53a2bbc5094b71e31feedd0cf1513ef9.jpg,165.12,264.32,362.24,398.72,1.0,Mixed Waste,0.9854
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,259.84,152.96,400.64,241.92,1.0,Recyclable Material,0.9459
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,263.04,89.6,381.44,257.28,1.0,Recyclable Material,0.8088
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,365.44,70.4,458.24,232.96,1.0,Recyclable Material,0.9096
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,436.48,51.84,539.52,199.68,1.0,Recyclable Material,0.7716
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,263.04,262.4,386.56,435.84,1.0,Recyclable Material,0.5598
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,379.52,323.2,498.56,460.8,1.0,Recyclable Material,0.878
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,95.36,236.8,212.48,327.04,1.0,Recyclable Material,0.8499
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,212.48,164.48,419.2,327.04,1.0,Recyclable Material,0.9456
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,260.48,285.44,419.2,458.24,1.0,Recyclable Material,0.9051
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,379.52,270.08,605.44,432.0,1.0,Recyclable Material,0.8236
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,64.64,131.84,320.0,291.2,1.0,Recyclable Material,0.8576
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,144.0,243.2,386.56,398.72,1.0,Recyclable Material,0.9205
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0714_jpeg.rf.97458a882a4c384759469f5ec68c823a.jpg,181.12,285.44,403.2,375.04,1.0,,0.0063
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0789_jpeg.rf.a115e802da3b048429fb0d31134d452d.jpg,69.12,371.2,296.32,477.44,1.0,Mixed Waste,0.9526
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0789_jpeg.rf.a115e802da3b048429fb0d31134d452d.jpg,41.6,300.8,184.32,401.92,1.0,Mixed Waste,0.9537
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,75.52,268.16,266.24,496.0,1.0,,0.4325
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,264.96,202.24,506.88,431.36,1.0,,0.0947
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,257.92,152.96,314.88,292.48,1.0,Recyclable Material,0.5457
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,323.84,209.28,384.64,321.92,1.0,Recyclable Material,0.9304
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,357.12,234.88,433.28,375.04,1.0,Recyclable Material,0.7596
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,109.44,102.4,181.12,192.64,1.0,,0.3346
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,109.44,140.8,213.76,288.0,1.0,Recyclable Material,0.7743
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,75.52,185.6,181.12,375.04,1.0,Recyclable Material,0.9638
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,195.2,175.36,289.28,353.92,1.0,Recyclable Material,0.8248
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,336.64,157.44,422.4,289.28,1.0,Recyclable Material,0.9432
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1085_converted_jpg.rf.5ed2df0113b41a9eeb5ba2375caee8ea.jpg,348.8,183.04,452.48,314.88,1.0,Recyclable Material,0.8931
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1085_converted_jpg.rf.5ed2df0113b41a9eeb5ba2375caee8ea.jpg,206.08,197.76,298.24,375.04,1.0,Recyclable Material,0.8608
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1089_converted_blurred_jpg.rf.3e8c4d8b6ed62381f89b49bef81c8c96.jpg,327.04,145.92,419.2,311.68,1.0,Recyclable Material,0.6493
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1323-1-_jpg.rf.b9ca18acb6bf9dd41459183bbdbb6677.jpg,408.32,309.12,443.52,359.68,1.0,,0.0451
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1339-1-_jpg.rf.c6bb8e698c78c29dca97336859a3df3a.jpg,211.84,261.12,336.64,467.84,1.0,Mixed Waste,0.9505
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1340_jpg.rf.5c5713ca2d53a8ed11d4a692dceeaae3.jpg,327.04,232.96,449.92,428.8,1.0,Mixed Waste,0.9381
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1493_jpg.rf.572cf72e5148bfa2394d07eda0ef95aa.jpg,291.2,270.08,362.24,362.24,1.0,,0.0703
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1498_jpg.rf.56d1556a658cd892330052560c15b640.jpg,226.56,198.4,416.0,406.4,1.0,Recyclable Material,0.9783
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1576_JPG.rf.4d15d8dc3f6bda8774918b24b0bca783.jpg,285.44,238.72,356.48,355.84,1.0,Mixed Waste,0.8727
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1584_JPG.rf.0c8e5ea6dc9e1a7a08b6238bfb41f08a.jpg,291.2,142.08,433.28,362.88,1.0,Mixed Waste,0.8395
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1681-3_jpg.rf.d5d943924c35de90c6d6e157474cbfd7.jpg,307.84,123.52,413.44,167.04,1.0,Mixed Waste,0.8547
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1685-3_JPG.rf.2e9e64f9877232f482557245a74b2fe1.jpg,327.04,50.56,427.52,218.88,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1701_JPG.rf.cbbb8a08ac02580e5312c5daea6a404e.jpg,181.12,256.0,350.08,337.28,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1935_JPG.rf.70f3e9d41afe0def24f5016f893cc5f1.jpg,122.24,115.2,291.2,345.6,1.0,Recyclable Material,0.9735
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1935_JPG.rf.70f3e9d41afe0def24f5016f893cc5f1.jpg,291.2,125.44,428.8,317.44,1.0,Recyclable Material,0.8838
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1949_JPG.rf.b39818364afce503871402f719639f15.jpg,93.44,157.44,309.12,398.72,1.0,Recyclable Material,0.9441
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1956_JPG.rf.2478164656df97788f34d6c9933080a6.jpg,181.12,175.36,343.04,320.0,1.0,Recyclable Material,0.8993
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1965_JPG.rf.da74e00f22402a722279b6253a01ef40.jpg,119.68,247.04,328.96,389.12,1.0,Recyclable Material,0.92
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1965_JPG.rf.da74e00f22402a722279b6253a01ef40.jpg,269.44,136.32,373.76,220.8,1.0,Recyclable Material,0.8847
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1980_JPG.rf.37af8c83756b699162c8354ac0b5d79a.jpg,192.64,150.4,427.52,350.08,1.0,Recyclable Material,0.9689
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1983_JPG.rf.fbb2ae887f84c2bc3018cbc7a6a2af14.jpg,192.64,88.32,381.44,220.8,1.0,Recyclable Material,0.9133
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_1999_JPG.rf.4e303080b26c788dc54e561c486dd103.jpg,189.44,122.24,350.08,240.64,1.0,Recyclable Material,0.9372
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241114_082102-1-_jpg.rf.92fdca8649a8596bd5759763ae134951.jpg,229.12,210.56,283.52,265.6,1.0,Recyclable Material,0.9136
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241114_082102-1-_jpg.rf.92fdca8649a8596bd5759763ae134951.jpg,291.2,212.48,362.24,265.6,1.0,Recyclable Material,0.9106
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,227.84,84.48,283.52,232.96,1.0,Recyclable Material,0.9536
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,291.2,89.6,362.88,236.16,1.0,Recyclable Material,0.9338
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,227.84,234.88,353.92,300.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241121_091747_jpg.rf.3fd3e241b47f6b97e6d584dded292019.jpg,196.48,220.8,256.0,337.28,1.0,Recyclable Material,0.7239
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,172.8,280.96,212.48,392.32,1.0,Other Waste,0.6417
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,140.8,272.64,192.64,384.64,1.0,Other Waste,0.8306
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241128_092514_jpg.rf.7596cb50c83af21c87c5f54080e602d4.jpg,136.96,185.6,286.08,343.04,1.0,Recyclable Material,0.9776
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,330.88,230.4,465.28,332.8,1.0,,0.1079
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,305.28,234.88,362.24,285.44,1.0,,0.0243
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241212_071851_jpg.rf.550bce41f56e3f83cfcf50a20246ac39.jpg,247.04,108.16,634.88,343.04,1.0,Recyclable Material,0.9186
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241219_084719_jpg.rf.93bdd801e0ce4811189ba99080842075.jpg,128.0,154.24,227.84,299.52,1.0,Recyclable Material,0.8995
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241219_084719_jpg.rf.93bdd801e0ce4811189ba99080842075.jpg,386.56,163.2,458.24,285.44,1.0,Recyclable Material,0.8347
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,35.2,98.56,270.08,247.04,1.0,Mixed Waste,0.9413
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,244.48,112.64,359.68,243.2,1.0,Mixed Waste,0.9046
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,353.92,133.12,471.04,251.52,1.0,Mixed Waste,0.8913
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20250104_070512_jpg.rf.255e6e445fb501cb02fbd10537e3c482.jpg,197.76,243.2,323.84,299.52,1.0,Mixed Waste,0.8909
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,309.12,219.52,472.32,358.4,1.0,Mixed Waste,0.9358
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20250109_074148_jpg.rf.8c9aeea0d58fff99ff5ece961942d4da.jpg,165.12,87.04,421.12,231.68,1.0,Recyclable Material,0.9497
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_20250109_074213_jpg.rf.70a8bd28946b36ece01a48b9cdfaa26d.jpg,214.4,0.0,327.04,202.24,1.0,Other Waste,0.9784
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,375.04,240.0,442.24,292.48,1.0,Recyclable Material,0.7314
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_3068_jpeg.rf.6b63b7cb63ae7950ebc35b5a96550b08.jpg,314.24,285.44,350.08,321.92,1.0,Recyclable Material,0.9183
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_3084_jpeg.rf.584a131d14876e68f98bf572d6e2c1e3.jpg,167.04,251.52,275.2,405.76,1.0,Orange CMD,0.9305
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_3084_jpeg.rf.584a131d14876e68f98bf572d6e2c1e3.jpg,253.44,206.72,427.52,438.4,1.0,Orange CMD,0.7261
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_3108_jpeg.rf.f0273d0fa4ade4f4e81d527d9cc1f2db.jpg,140.16,209.28,400.64,375.04,1.0,,0.338
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4228_JPG.rf.3354240a78ddc77e93ae7abe53e5e890.jpg,305.28,136.32,492.8,381.44,1.0,Recyclable Material,0.957
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,28.8,190.08,320.0,416.0,1.0,Recyclable Material,0.9734
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,339.84,135.04,509.44,272.64,1.0,Recyclable Material,0.7929
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4285_JPG.rf.be653a7caf45b9cebe13e72af4cb1bea.jpg,174.72,238.72,428.8,392.32,1.0,Mixed Waste,0.9321
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,390.4,170.24,566.4,337.28,1.0,Mixed Waste,0.9081
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,314.88,109.44,428.8,220.8,1.0,Mixed Waste,0.8561
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4329_JPG.rf.743d3b23867d61b5e40194a0805de44f.jpg,239.36,197.76,513.92,505.6,1.0,Mixed Waste,0.5226
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4369_jpeg.rf.408cd6a46d2f5cac2cbe3b37e3ebcda9.jpg,297.6,254.72,427.52,327.04,1.0,Recyclable Material,0.8312
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4396_jpg.rf.1db0db20656a7c83e35b6d18c0215170.jpg,292.48,261.12,371.2,390.4,1.0,Recyclable Material,0.955
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4399_jpg.rf.dfd53b0debc27c7095a817bcea1e7804.jpg,299.52,177.92,376.32,250.24,1.0,Other Waste,0.9611
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_4407_JPG.rf.614497a80164d2a76b09b87d423d4135.jpg,386.56,130.56,481.92,212.48,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5755_JPG.rf.39996c0e5fa5a0cce44d9d495a7d3c47.jpg,0.0,91.52,83.2,205.44,1.0,Mixed Waste,0.9171
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5761_JPG.rf.ffcd5a5b9f4725507b420e333cc0c094.jpg,224.64,99.84,362.24,181.12,1.0,Recyclable Material,0.8976
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,154.24,40.96,283.52,193.92,1.0,Recyclable Material,0.9707
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,168.32,136.32,256.0,243.2,1.0,Recyclable Material,0.7577
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,264.96,136.32,376.32,186.88,1.0,Other Waste,0.7382
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,279.68,181.12,394.24,330.24,1.0,Recyclable Material,0.8855
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5778_blurred_jpg.rf.38cb37b2fb6d4dc976cb44e46e0e88df.jpg,289.28,97.28,336.64,154.24,1.0,Recyclable Material,0.8769
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5780_blurred_jpg.rf.79dedd739e6bb733eeed62225a18a389.jpg,384.0,150.4,400.64,167.04,1.0,,0.305
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_5780_blurred_jpg.rf.79dedd739e6bb733eeed62225a18a389.jpg,400.64,154.24,414.72,167.04,1.0,,0.1501
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8255_size_jpeg.rf.6761db8582d4837db7e2397532361d67.jpg,226.56,348.8,373.76,467.84,1.0,Mixed Waste,0.9421
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8257_size_jpeg.rf.19792c9e34156566549cd8191acf13cd.jpg,147.2,366.72,371.2,536.96,1.0,Mixed Waste,0.9339
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8283_jpeg.rf.36c1d23b9b979b2382bda6d9d15725f3.jpg,243.2,251.52,413.44,382.08,1.0,,0.0
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,220.8,390.4,312.32,480.0,1.0,Mixed Waste,0.5872
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8692_jpeg.rf.7f04ea376ec44117007bb686d6250bd9.jpg,202.24,384.64,267.52,422.4,1.0,Orange CMD,0.8651
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8747_jpeg.rf.4dab4ee43bac4a6699e1b96b2dba1467.jpg,198.4,428.8,333.44,544.0,1.0,Mixed Waste,0.8231
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8748_jpeg.rf.cd71a2f00e207d12af58a0eb4c4cb1d7.jpg,172.8,364.8,343.04,484.48,1.0,Mixed Waste,0.8612
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,241.28,358.4,378.88,449.28,1.0,Recyclable Material,0.8471
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,357.12,223.36,428.8,348.8,1.0,,0.2056
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8857_jpeg.rf.706343f1401bebbd7dd3c69f38b48729.jpg,220.8,353.92,362.24,449.28,1.0,Mixed Waste,0.9667
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8860_jpeg.rf.5af16907c63b034c96c83914fb2f3f52.jpg,350.08,365.44,469.12,441.6,1.0,Mixed Waste,0.9408
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,205.44,300.8,386.56,535.04,1.0,,0.2824
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8955_jpeg.rf.a0768f00bef6561c06d8edfb962f6037.jpg,93.44,327.04,173.44,381.44,1.0,Orange CMD,0.9322
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,157.44,362.24,263.04,469.12,1.0,Mixed Waste,0.8283
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8972_jpeg.rf.cd49521b82c9ff62a6e578b50e8b47dc.jpg,268.16,389.12,379.52,497.28,1.0,Mixed Waste,0.9594
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,IMG_8974_jpeg.rf.228d538a131d7415743d51cf6832042a.jpg,305.28,358.4,413.44,474.88,1.0,Recyclable Material,0.639
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,Mixed_11_jpeg.rf.701ca65448ea1c8c5c05ede9e62d7faa.jpg,314.88,28.16,394.24,64.64,1.0,Other Waste,0.7193
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,44.8,150.4,149.76,202.24,1.0,,0.3784
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_124_jpg.rf.234eac622fccca0d569fe7920ed68ce7.jpg,285.44,268.16,443.52,341.76,1.0,Recyclable Material,0.8514
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,177.92,71.68,238.72,232.96,1.0,,0.4703
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,369.92,140.16,433.28,266.88,1.0,Recyclable Material,0.923
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_16_jpg.rf.4e76b4d44941fe5c711fae8306ec9680.jpg,213.76,168.32,378.88,480.64,1.0,Recyclable Material,0.8888
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,71.04,231.68,283.52,612.48,1.0,Recyclable Material,0.8741
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,235.52,68.48,387.84,414.72,1.0,Recyclable Material,0.9327
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,347.52,7.04,449.92,217.6,1.0,Recyclable Material,0.8991
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_40_jpg.rf.91e313a1d54dd4a813a42844427f983e.jpg,250.24,181.12,456.96,351.36,1.0,Recyclable Material,0.9548
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,92.16,275.2,211.2,535.04,1.0,Mixed Waste,0.9075
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,206.08,198.4,302.72,451.2,1.0,Mixed Waste,0.9095
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,295.68,251.52,425.6,401.92,1.0,Mixed Waste,0.7435
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,353.92,109.44,451.2,327.68,1.0,Mixed Waste,0.8604
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,408.32,170.24,506.88,362.24,1.0,Mixed Waste,0.8812
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_7_jpg.rf.f2872b3a2205d094a9825494bf8ae862.jpg,144.64,115.2,279.68,366.72,1.0,Mixed Waste,0.9095
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,215.04,211.84,312.32,352.64,1.0,Mixed Waste,0.8309
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,181.12,332.8,212.48,392.32,1.0,Mixed Waste,0.6569
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,224.64,332.8,256.0,392.32,1.0,Mixed Waste,0.7431
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,256.0,332.8,291.2,392.32,1.0,,0.3591
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_93_jpg.rf.4fc65ebdd279274a3895c6f6c099f3ba.jpg,289.28,232.96,357.12,264.32,1.0,Mixed Waste,0.7367
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,269.44,189.44,358.4,317.44,1.0,Mixed Waste,0.8387
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,353.92,189.44,421.12,285.44,1.0,,0.4072
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,Number_blur-2-_size_jpeg.rf.1c3be494c4b9cc9941f73ca4650b2955.jpg,293.12,345.6,427.52,448.0,1.0,Mixed Waste,0.7386
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PHOTO-2025-01-04-12-12-39-1-_jpg.rf.edf874a66a2338c3b33d51e6f3a02c71.jpg,264.96,193.92,414.72,384.64,1.0,Mixed Waste,0.5873
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PHOTO-2025-01-04-12-12-39_jpg.rf.47f1932ae35574ff24543d26a44a2564.jpg,360.96,217.6,441.6,390.4,1.0,Mixed Waste,0.7245
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PHOTO-2025-01-04-12-12-46-1-_jpg.rf.cac4448d0e8e2b54b3389bce64c5559f.jpg,272.64,226.56,386.56,359.68,1.0,Mixed Waste,0.9369
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PHOTO-2025-01-04-12-12-47_jpg.rf.1c9ba1ca77945e6fe6229f8762125342.jpg,188.16,181.12,272.64,320.0,1.0,Mixed Waste,0.8678
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PHOTO-2025-01-04-12-12-47_jpg.rf.1c9ba1ca77945e6fe6229f8762125342.jpg,224.64,224.64,327.04,320.64,1.0,Mixed Waste,0.8029
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PXL_20241103_204907919-NIGHT_jpg.rf.0069fe6c121acb8c84a133154abbc05a.jpg,579.2,254.72,638.72,480.0,1.0,,0.4928
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PXL_20241226_075933630-MP_jpg.rf.460c72f50522e906261ac2f783733f06.jpg,24.96,184.32,486.4,592.64,1.0,Recyclable Material,0.6929
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PXL_20241226_075947607_jpg.rf.ef0e57af799e19659d6a344b93611b1f.jpg,98.56,206.72,414.72,422.4,1.0,Recyclable Material,0.988
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PXL_20241226_080053691_jpg.rf.08e12d2cae94660dfcd43c04079c13f9.jpg,167.04,109.44,411.52,381.44,1.0,Recyclable Material,0.9716
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PXL_20241226_080257060_jpg.rf.642388a5f678e685d32e3e3a244c0ad8.jpg,0.0,439.04,224.64,634.88,1.0,Recyclable Material,0.8907
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PXL_20241226_080407713-MP_jpg.rf.7c47f0e15afa8dd909cbbb2938318d78.jpg,205.44,154.24,471.04,448.0,1.0,Recyclable Material,0.9848
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,305.28,183.04,391.68,231.68,1.0,,0.0766
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,RandomErasing_IMG_5774_jpg.rf.d71ff80bf43426aefeb9aa05f8c23e4d.jpg,197.76,206.72,289.28,404.48,1.0,Mixed Waste,0.9565
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,RandomErasing_IMG_5774_jpg.rf.d71ff80bf43426aefeb9aa05f8c23e4d.jpg,272.64,213.76,439.04,526.72,1.0,Mixed Waste,0.9597
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,Recycling_1_jpeg.rf.be115f7edd02e2132b07a3dfab9ee550.jpg,244.48,268.16,359.68,338.56,1.0,Recyclable Material,0.8692
+Cosmos Reason2 8B,sens-mdwd-organic-04,find all white organic-waste bags,Unknown-6_jpg.rf.ad6fdf8bf89e73dc870edfa7e5f8588c.jpg,77.44,150.4,503.04,420.48,1.0,Mixed Waste,0.8026

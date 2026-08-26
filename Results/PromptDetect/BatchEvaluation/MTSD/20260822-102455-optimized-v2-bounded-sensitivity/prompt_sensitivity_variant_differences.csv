@@ -1,0 +1,76 @@
+dataset,model,sensitivity_family,canonical_prompt_id,canonical_f1,prompt_id,prompt,variant_type,variant_f1,canonical_f1_difference
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.2491,sens-mtsd-mirror-02,roadside convex mirror for blind spots,lexical-paraphrase,0.2237,-0.0254
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.2491,sens-mtsd-mirror-03,convex traffic mirror used to improve road visibility,descriptive-paraphrase,0.2471,-0.002
+MTSD,Cosmos Reason2 2B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.2491,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,instruction,0.1618,-0.0873
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-01,0.2489,sens-mtsd-entry-02,road sign indicating no entry,lexical-paraphrase,0.2469,-0.002
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-01,0.2489,sens-mtsd-entry-03,traffic sign prohibiting vehicles from entering,descriptive-paraphrase,0.2471,-0.0018
+MTSD,Cosmos Reason2 2B,mtsd-no-entry,sens-mtsd-entry-01,0.2489,sens-mtsd-entry-04,find all no entry signs,instruction,0.3545,0.1056
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.1816,sens-mtsd-ped-02,road sign for a pedestrian crossing,lexical-paraphrase,0.1728,-0.0088
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.1816,sens-mtsd-ped-03,sign indicating a pedestrian crossing,descriptive-paraphrase,0.1857,0.0041
+MTSD,Cosmos Reason2 2B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.1816,sens-mtsd-ped-04,find all pedestrian crossing signs,instruction,0.2234,0.0418
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.0753,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,lexical-paraphrase,0.0368,-0.0385
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.0753,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,descriptive-paraphrase,0.0604,-0.0149
+MTSD,Cosmos Reason2 2B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.0753,sens-mtsd-roundabout-04,find all roundabout ahead signs,instruction,0.0801,0.0048
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-01,0.2178,sens-mtsd-stop-02,road sign instructing drivers to stop,lexical-paraphrase,0.1782,-0.0396
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-01,0.2178,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,descriptive-paraphrase,0.2005,-0.0173
+MTSD,Cosmos Reason2 2B,mtsd-stop-sign,sens-mtsd-stop-01,0.2178,sens-mtsd-stop-04,find all stop signs,instruction,0.2602,0.0424
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.3083,sens-mtsd-mirror-02,roadside convex mirror for blind spots,lexical-paraphrase,0.3501,0.0418
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.3083,sens-mtsd-mirror-03,convex traffic mirror used to improve road visibility,descriptive-paraphrase,0.387,0.0787
+MTSD,Cosmos Reason2 8B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.3083,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,instruction,0.3623,0.054
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-01,0.3696,sens-mtsd-entry-02,road sign indicating no entry,lexical-paraphrase,0.3662,-0.0034
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-01,0.3696,sens-mtsd-entry-03,traffic sign prohibiting vehicles from entering,descriptive-paraphrase,0.4131,0.0435
+MTSD,Cosmos Reason2 8B,mtsd-no-entry,sens-mtsd-entry-01,0.3696,sens-mtsd-entry-04,find all no entry signs,instruction,0.3801,0.0105
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.2432,sens-mtsd-ped-02,road sign for a pedestrian crossing,lexical-paraphrase,0.2966,0.0534
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.2432,sens-mtsd-ped-03,sign indicating a pedestrian crossing,descriptive-paraphrase,0.3529,0.1097
+MTSD,Cosmos Reason2 8B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.2432,sens-mtsd-ped-04,find all pedestrian crossing signs,instruction,0.3156,0.0724
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1531,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,lexical-paraphrase,0.0847,-0.0684
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1531,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,descriptive-paraphrase,0.2531,0.1
+MTSD,Cosmos Reason2 8B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1531,sens-mtsd-roundabout-04,find all roundabout ahead signs,instruction,0.1578,0.0047
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-01,0.2781,sens-mtsd-stop-02,road sign instructing drivers to stop,lexical-paraphrase,0.3643,0.0862
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-01,0.2781,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,descriptive-paraphrase,0.3636,0.0855
+MTSD,Cosmos Reason2 8B,mtsd-stop-sign,sens-mtsd-stop-01,0.2781,sens-mtsd-stop-04,find all stop signs,instruction,0.3086,0.0305
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.1364,sens-mtsd-mirror-02,roadside convex mirror for blind spots,lexical-paraphrase,0.1228,-0.0136
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.1364,sens-mtsd-mirror-03,convex traffic mirror used to improve road visibility,descriptive-paraphrase,0.1063,-0.0301
+MTSD,LocateAnything 3B,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.1364,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,instruction,0.0805,-0.0559
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-01,0.1419,sens-mtsd-entry-02,road sign indicating no entry,lexical-paraphrase,0.0932,-0.0487
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-01,0.1419,sens-mtsd-entry-03,traffic sign prohibiting vehicles from entering,descriptive-paraphrase,0.0785,-0.0634
+MTSD,LocateAnything 3B,mtsd-no-entry,sens-mtsd-entry-01,0.1419,sens-mtsd-entry-04,find all no entry signs,instruction,0.1173,-0.0246
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.1767,sens-mtsd-ped-02,road sign for a pedestrian crossing,lexical-paraphrase,0.0506,-0.1261
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.1767,sens-mtsd-ped-03,sign indicating a pedestrian crossing,descriptive-paraphrase,0.0652,-0.1115
+MTSD,LocateAnything 3B,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.1767,sens-mtsd-ped-04,find all pedestrian crossing signs,instruction,0.0893,-0.0874
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.0348,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,lexical-paraphrase,0.0281,-0.0067
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.0348,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,descriptive-paraphrase,0.0235,-0.0113
+MTSD,LocateAnything 3B,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.0348,sens-mtsd-roundabout-04,find all roundabout ahead signs,instruction,0.0261,-0.0087
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-01,0.1241,sens-mtsd-stop-02,road sign instructing drivers to stop,lexical-paraphrase,0.0668,-0.0573
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-01,0.1241,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,descriptive-paraphrase,0.0675,-0.0566
+MTSD,LocateAnything 3B,mtsd-stop-sign,sens-mtsd-stop-01,0.1241,sens-mtsd-stop-04,find all stop signs,instruction,0.1009,-0.0232
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.5476,sens-mtsd-mirror-02,roadside convex mirror for blind spots,lexical-paraphrase,0.2324,-0.3152
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.5476,sens-mtsd-mirror-03,convex traffic mirror used to improve road visibility,descriptive-paraphrase,0.1196,-0.428
+MTSD,SAM 3,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.5476,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,instruction,0.2794,-0.2682
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-01,0.292,sens-mtsd-entry-02,road sign indicating no entry,lexical-paraphrase,0.2146,-0.0774
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-01,0.292,sens-mtsd-entry-03,traffic sign prohibiting vehicles from entering,descriptive-paraphrase,0.1749,-0.1171
+MTSD,SAM 3,mtsd-no-entry,sens-mtsd-entry-01,0.292,sens-mtsd-entry-04,find all no entry signs,instruction,0.3449,0.0529
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.6222,sens-mtsd-ped-02,road sign for a pedestrian crossing,lexical-paraphrase,0.1818,-0.4404
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.6222,sens-mtsd-ped-03,sign indicating a pedestrian crossing,descriptive-paraphrase,0.3046,-0.3176
+MTSD,SAM 3,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.6222,sens-mtsd-ped-04,find all pedestrian crossing signs,instruction,0.2592,-0.363
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1248,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,lexical-paraphrase,0.1031,-0.0217
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1248,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,descriptive-paraphrase,0.0733,-0.0515
+MTSD,SAM 3,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1248,sens-mtsd-roundabout-04,find all roundabout ahead signs,instruction,0.0917,-0.0331
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-01,0.406,sens-mtsd-stop-02,road sign instructing drivers to stop,lexical-paraphrase,0.1277,-0.2783
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-01,0.406,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,descriptive-paraphrase,0.1327,-0.2733
+MTSD,SAM 3,mtsd-stop-sign,sens-mtsd-stop-01,0.406,sens-mtsd-stop-04,find all stop signs,instruction,0.2043,-0.2017
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.5581,sens-mtsd-mirror-02,roadside convex mirror for blind spots,lexical-paraphrase,0.2077,-0.3504
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.5581,sens-mtsd-mirror-03,convex traffic mirror used to improve road visibility,descriptive-paraphrase,0.1132,-0.4449
+MTSD,SAM 3.1,mtsd-blind-spot-mirror,sens-mtsd-mirror-01,0.5581,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,instruction,0.2549,-0.3032
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-01,0.285,sens-mtsd-entry-02,road sign indicating no entry,lexical-paraphrase,0.209,-0.076
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-01,0.285,sens-mtsd-entry-03,traffic sign prohibiting vehicles from entering,descriptive-paraphrase,0.1663,-0.1187
+MTSD,SAM 3.1,mtsd-no-entry,sens-mtsd-entry-01,0.285,sens-mtsd-entry-04,find all no entry signs,instruction,0.3396,0.0546
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.6074,sens-mtsd-ped-02,road sign for a pedestrian crossing,lexical-paraphrase,0.181,-0.4264
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.6074,sens-mtsd-ped-03,sign indicating a pedestrian crossing,descriptive-paraphrase,0.3245,-0.2829
+MTSD,SAM 3.1,mtsd-pedestrian-crossing,sens-mtsd-ped-01,0.6074,sens-mtsd-ped-04,find all pedestrian crossing signs,instruction,0.2525,-0.3549
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1147,sens-mtsd-roundabout-02,warning sign for a roundabout ahead,lexical-paraphrase,0.0948,-0.0199
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1147,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,descriptive-paraphrase,0.0712,-0.0435
+MTSD,SAM 3.1,mtsd-roundabout-ahead,sens-mtsd-roundabout-01,0.1147,sens-mtsd-roundabout-04,find all roundabout ahead signs,instruction,0.0894,-0.0253
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-01,0.4067,sens-mtsd-stop-02,road sign instructing drivers to stop,lexical-paraphrase,0.1291,-0.2776
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-01,0.4067,sens-mtsd-stop-03,traffic sign indicating that vehicles must stop,descriptive-paraphrase,0.1289,-0.2778
+MTSD,SAM 3.1,mtsd-stop-sign,sens-mtsd-stop-01,0.4067,sens-mtsd-stop-04,find all stop signs,instruction,0.2007,-0.206

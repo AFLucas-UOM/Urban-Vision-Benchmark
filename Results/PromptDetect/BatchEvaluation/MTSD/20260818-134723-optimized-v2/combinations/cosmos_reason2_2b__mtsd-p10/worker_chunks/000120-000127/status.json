@@ -1,0 +1,34 @@
+{
+  "protocol_hash": "60787d37184e3d7185c9ca8b0e8e3744505b5aba4729db032c07b755a54dfda1",
+  "dataset_manifest_hash": "94e139cfa52a4c4c5043d146b7ea996b0b0d8cf7439d09f029d8f61d5dcebace",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "mtsd-p10",
+  "prompt": "directional sign",
+  "target_classes": [
+    "Directional Sign"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 18,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "cosmos_max_side": 2560,
+  "cosmos_worker_chunk_size": 8,
+  "cosmos_execution_revision": "bounded-model-specific-2b2560-8b1536-chunk8-v2",
+  "status": "completed",
+  "execution_strategy": "isolated-model-prompt-chunks-v1",
+  "image_start": 120,
+  "image_end": 128,
+  "model_status": {
+    "model": "Cosmos Reason2 2B",
+    "model_load_ms": 9838.5,
+    "ok": true,
+    "label": "Cosmos Reason2 2B",
+    "source": "nvidia/Cosmos-Reason2-2B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "finished_at": "2026-08-20T22:46:32.044251+00:00"
+}

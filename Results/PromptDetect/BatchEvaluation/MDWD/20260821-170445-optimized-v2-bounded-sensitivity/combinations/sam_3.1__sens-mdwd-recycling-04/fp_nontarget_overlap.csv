@@ -1,0 +1,5 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3.1,sens-mdwd-recycling-04,find all grey recycling bags,ARI3129_AFL_60_jpeg.rf.9b69f3b6a86120e675c35e1420d47ec1.jpg,0.0,127.44,179.29,464.0,0.9492,Other Waste,0.9882
+SAM 3.1,sens-mdwd-recycling-04,find all grey recycling bags,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,178.83,189.26,304.67,389.3,0.8398,Other Waste,0.9877
+SAM 3.1,sens-mdwd-recycling-04,find all grey recycling bags,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,284.41,188.95,394.56,375.01,0.6914,Other Waste,0.9945
+SAM 3.1,sens-mdwd-recycling-04,find all grey recycling bags,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,0.63,244.74,281.74,538.67,0.6641,Other Waste,0.9649

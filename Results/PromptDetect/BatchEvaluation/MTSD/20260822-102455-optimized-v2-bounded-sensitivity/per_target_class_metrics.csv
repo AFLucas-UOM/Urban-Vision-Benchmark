@@ -1,0 +1,26 @@
+model,target_class,best_prompt_id,best_prompt,recall,f1
+Cosmos Reason2 2B,Blind-Spot Mirror (Convex Mirror),sens-mtsd-mirror-01,blind-spot convex mirror,0.6562,0.2491
+Cosmos Reason2 2B,No Entry (One Way),sens-mtsd-entry-04,find all no entry signs,0.6209,0.3545
+Cosmos Reason2 2B,Pedestrian Crossing,sens-mtsd-ped-04,find all pedestrian crossing signs,0.5804,0.2234
+Cosmos Reason2 2B,Roundabout Ahead,sens-mtsd-roundabout-04,find all roundabout ahead signs,0.4776,0.0801
+Cosmos Reason2 2B,Stop Sign,sens-mtsd-stop-04,find all stop signs,0.7385,0.2602
+Cosmos Reason2 8B,Blind-Spot Mirror (Convex Mirror),sens-mtsd-mirror-03,convex traffic mirror used to improve road visibility,0.6687,0.387
+Cosmos Reason2 8B,No Entry (One Way),sens-mtsd-entry-03,traffic sign prohibiting vehicles from entering,0.6588,0.4131
+Cosmos Reason2 8B,Pedestrian Crossing,sens-mtsd-ped-03,sign indicating a pedestrian crossing,0.5874,0.3529
+Cosmos Reason2 8B,Roundabout Ahead,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,0.6119,0.2531
+Cosmos Reason2 8B,Stop Sign,sens-mtsd-stop-02,road sign instructing drivers to stop,0.7385,0.3643
+LocateAnything 3B,Blind-Spot Mirror (Convex Mirror),sens-mtsd-mirror-01,blind-spot convex mirror,0.6312,0.1364
+LocateAnything 3B,No Entry (One Way),sens-mtsd-entry-01,no entry sign,0.6919,0.1419
+LocateAnything 3B,Pedestrian Crossing,sens-mtsd-ped-01,pedestrian crossing sign,0.5245,0.1767
+LocateAnything 3B,Roundabout Ahead,sens-mtsd-roundabout-01,roundabout ahead sign,0.6418,0.0348
+LocateAnything 3B,Stop Sign,sens-mtsd-stop-01,stop sign,0.7923,0.1241
+SAM 3,Blind-Spot Mirror (Convex Mirror),sens-mtsd-mirror-01,blind-spot convex mirror,0.4313,0.5476
+SAM 3,No Entry (One Way),sens-mtsd-entry-04,find all no entry signs,0.7536,0.3449
+SAM 3,Pedestrian Crossing,sens-mtsd-ped-01,pedestrian crossing sign,0.5874,0.6222
+SAM 3,Roundabout Ahead,sens-mtsd-roundabout-01,roundabout ahead sign,0.6866,0.1248
+SAM 3,Stop Sign,sens-mtsd-stop-01,stop sign,0.8385,0.406
+SAM 3.1,Blind-Spot Mirror (Convex Mirror),sens-mtsd-mirror-01,blind-spot convex mirror,0.45,0.5581
+SAM 3.1,No Entry (One Way),sens-mtsd-entry-04,find all no entry signs,0.7678,0.3396
+SAM 3.1,Pedestrian Crossing,sens-mtsd-ped-01,pedestrian crossing sign,0.5734,0.6074
+SAM 3.1,Roundabout Ahead,sens-mtsd-roundabout-01,roundabout ahead sign,0.6866,0.1147
+SAM 3.1,Stop Sign,sens-mtsd-stop-01,stop sign,0.8462,0.4067

@@ -22,6 +22,8 @@ from dataset_loader import load_ground_truth
 from persistence import write_csv, write_json
 from prompt_runner import run_models
 
+COSMOS_MAX_SIDE_ENV = "PROMPTDETECT_COSMOS_MAX_SIDE"
+
 
 def parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="PromptDetect isolated combination worker")
@@ -93,6 +95,7 @@ def main(argv: list[str] | None = None) -> int:
             "n_prediction_rows": len(rows),
             "max_detections": args.max_detections,
             "nms_iou_threshold": args.nms_iou_threshold,
+            "cosmos_max_side": int(__import__("os").getenv(COSMOS_MAX_SIDE_ENV, "1536")),
             "model_status": load_status,
             "started_at": started,
             "finished_at": datetime.now(timezone.utc).isoformat(),

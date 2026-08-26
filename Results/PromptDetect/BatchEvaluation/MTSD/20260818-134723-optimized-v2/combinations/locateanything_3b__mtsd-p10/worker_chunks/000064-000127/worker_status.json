@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mtsd-p10",
+  "prompt": "directional sign",
+  "image_start": 64,
+  "image_end": 128,
+  "n_images": 64,
+  "n_prediction_rows": 185,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 12932.8,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-19T02:49:23.975802+00:00",
+  "finished_at": "2026-08-19T02:53:02.639525+00:00"
+}

@@ -1,25 +1,17 @@
 # ============================================================
-# Urban-Vision-Benchmark .gitignore
-# Policy: track code, configs, docs, annotations and the numeric
-# experimental record; keep raw images, model weights and heavy
-# run media out of git (they stay on disk, nothing is deleted).
+# Urban-Vision-Benchmark
 # ============================================================
 
-# --- Local configuration / secrets ---------------------------
+# Local configuration and secrets
 .env
 .env.*
 !.env.example
-
-# Private agent/project status ledger; never publish this file.
 Summary.md
-# Label Studio local databases hold session/auth state and must never be
-# versioned. NOTE: Datasets/MTSD/LabelStudioShared/.../label_studio.sqlite3 was
-# committed before this rule existed and is still tracked; untrack it with
-# `git rm --cached` (see Full-Repository-Audit recommended actions).
 label_studio.sqlite3
 *.sqlite3
+LabelStudioshared/
 
-# --- Python environments and caches --------------------------
+# Python environments and caches
 .venv/
 venv/
 env/
@@ -27,35 +19,29 @@ ENV/
 __pycache__/
 *.pyc
 *.pytest_cache
+*.cache
 
-# --- Jupyter -------------------------------------------------
+# Jupyter
 .ipynb_checkpoints/
 
-# --- Datasets ------------------------------------------------
-# Raw images and heavy exports are not versioned. Small, irreplaceable
-# metadata IS tracked: MDWD data.yaml / Roboflow READMEs and the
-# MTSD Final-QA annotation JSONs.
+# Datasets
+# Raw images and regenerable dataset exports
 Datasets/MDWD/*/train/
 Datasets/MDWD/*/valid/
 Datasets/MDWD/*/test/
 Datasets/MTSD/GRP-*/
 Datasets/MTSD/Annotations/GRP-*/Fiverr-Annotations/
-# Prepared MTSD detection datasets (built by Prepare-MTSD-Detection-Dataset.ipynb);
-# images/labels are regenerable from the tracked QA JSONs + prep_manifest.json,
-# which stay tracked along with data.yaml.
+
+# Prepared MTSD detection datasets
 Datasets/MTSD/Prepared/**/train/
 Datasets/MTSD/Prepared/**/valid/
 Datasets/MTSD/Prepared/**/test/
 Datasets/MTSD/Prepared/_archive/
-*.cache
-# Timestamped safety copies made by update_annotation_paths.ps1 (the
-# pre-migration content is already preserved in git history).
-*.pre-migration-*.bak
-LabelStudioshared/
 
-# --- Model weights and checkpoints ---------------------------
-# Pretrained weights in Models/ are re-downloadable; trained weights
-# live in Results/MDWD-Runs/**/weights and W&B artifacts.
+# Migration backups
+*.pre-migration-*.bak
+
+# Model weights and checkpoints
 checkpoints/
 *.pt
 *.pth
@@ -64,29 +50,28 @@ checkpoints/
 *.safetensors
 *.weights
 
-# --- Experiment outputs --------------------------------------
-# W&B local run folders and Ultralytics scratch runs/ dirs are not
-# versioned (mirrored to the W&B cloud project where relevant).
+# Experiment outputs
+# Local experiment/tracking directories
 wandb/
 runs/
 mlruns/
-# Heavy per-run media inside curated run archives; the numeric record
-# (results.csv, args.yaml, *.json) stays tracked.
+
+# Heavy run media; numeric results remain tracked
 Results/MDWD-Runs/**/*.jpg
 Results/MDWD-Runs/**/*.jpeg
 Results/MDWD-Runs/**/*.png
 Results/MTSD-Runs/**/*.jpg
 Results/MTSD-Runs/**/*.jpeg
 Results/MTSD-Runs/**/*.png
-# Attribute-classification bulk artefacts (regenerable from the QA
-# JSONs via mtsd_attr.data_manifest); metrics/reports/manifests are tracked.
+
+# Regenerable attribute-classification crops
 Scripts/MTSD-Scripts/AttributeClassification/outputs/crops/
 
-# --- GDPR redaction previews ---------------------------------
+# GDPR outputs
 GDPR-Compliance-Preview/
 GDPR-Compliance-Preview-SAM31/
-# --- Logs and temporary files --------------------------------
-# Executed notebook copies from the automation runner (regenerable; can be large when training notebooks run headlessly).
+
+# Logs, temporary files, and generated outputs
 Scripts/Automation/executed/
 *.log
 logs/
@@ -98,7 +83,8 @@ exports/
 env_backups/
 scratchpad/
 
-# Regenerable MTSD report views; keep legacy root-level copies out of git.
+# Generated MTSD reports
+# Regenerable root-level report views
 /mtsd_complete_experiment_matrix.csv
 /mtsd_augmentation_ablation.csv
 /mtsd_augmentation_ablation.md
@@ -111,18 +97,22 @@ scratchpad/
 /mtsd_resolution_ablation.csv
 /mtsd_resolution_ablation.md
 
-# Generated report cache; public documentation should use README.md and
-# validated result artefacts rather than an unreviewed local report dump.
+# Generated final-report cache
 Documents/Final-Reports/MTSD-SupervisedDetection/*.csv
 Documents/Final-Reports/MTSD-SupervisedDetection/*.md
 
-# --- OS and editor metadata ----------------------------------
+# OS and editor metadata
 .DS_Store
 Thumbs.db
 desktop.ini
 .vscode/
 .idea/
 .claude/
-# Local UVB launcher state (managed web-app PIDs) and per-app startup logs
+
+# UVB local application state
 .uvb_launcher_state.json
 .uvb_launcher_logs/
+
+
+# Ox-Alpha
+Ox Alpha/

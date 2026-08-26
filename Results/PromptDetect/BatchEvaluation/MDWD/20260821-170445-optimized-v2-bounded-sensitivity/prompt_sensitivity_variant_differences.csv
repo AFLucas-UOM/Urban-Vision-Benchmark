@@ -1,0 +1,61 @@
+dataset,model,sensitivity_family,canonical_prompt_id,canonical_f1,prompt_id,prompt,variant_type,variant_f1,canonical_f1_difference
+MDWD,Cosmos Reason2 2B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.2982,sens-mdwd-mixed-02,black refuse bag,lexical-paraphrase,0.2866,-0.0116
+MDWD,Cosmos Reason2 2B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.2982,sens-mdwd-mixed-03,black bag containing mixed household waste,descriptive-paraphrase,0.1882,-0.11
+MDWD,Cosmos Reason2 2B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.2982,sens-mdwd-mixed-04,find all black mixed-waste bags,instruction,0.4251,0.1269
+MDWD,Cosmos Reason2 2B,mdwd-orange-cmd,sens-mdwd-orange-01,0.1195,sens-mdwd-orange-02,orange refuse bag,lexical-paraphrase,0.1233,0.0038
+MDWD,Cosmos Reason2 2B,mdwd-orange-cmd,sens-mdwd-orange-01,0.1195,sens-mdwd-orange-03,orange bag containing domestic waste,descriptive-paraphrase,0.1106,-0.0089
+MDWD,Cosmos Reason2 2B,mdwd-orange-cmd,sens-mdwd-orange-01,0.1195,sens-mdwd-orange-04,find all orange waste bags,instruction,0.169,0.0495
+MDWD,Cosmos Reason2 2B,mdwd-organic-waste,sens-mdwd-organic-01,0.1793,sens-mdwd-organic-02,white domestic organic-waste bag,lexical-paraphrase,0.1873,0.008
+MDWD,Cosmos Reason2 2B,mdwd-organic-waste,sens-mdwd-organic-01,0.1793,sens-mdwd-organic-03,white bag containing organic household waste,descriptive-paraphrase,0.1136,-0.0657
+MDWD,Cosmos Reason2 2B,mdwd-organic-waste,sens-mdwd-organic-01,0.1793,sens-mdwd-organic-04,find all white organic-waste bags,instruction,0.3249,0.1456
+MDWD,Cosmos Reason2 2B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.2005,sens-mdwd-recycling-02,grey household recycling bag,lexical-paraphrase,0.1911,-0.0094
+MDWD,Cosmos Reason2 2B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.2005,sens-mdwd-recycling-03,grey bag containing recyclable household material,descriptive-paraphrase,0.076,-0.1245
+MDWD,Cosmos Reason2 2B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.2005,sens-mdwd-recycling-04,find all grey recycling bags,instruction,0.3843,0.1838
+MDWD,Cosmos Reason2 8B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.5222,sens-mdwd-mixed-02,black refuse bag,lexical-paraphrase,0.5048,-0.0174
+MDWD,Cosmos Reason2 8B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.5222,sens-mdwd-mixed-03,black bag containing mixed household waste,descriptive-paraphrase,0.5133,-0.0089
+MDWD,Cosmos Reason2 8B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.5222,sens-mdwd-mixed-04,find all black mixed-waste bags,instruction,0.4257,-0.0965
+MDWD,Cosmos Reason2 8B,mdwd-orange-cmd,sens-mdwd-orange-01,0.1986,sens-mdwd-orange-02,orange refuse bag,lexical-paraphrase,0.1995,0.0009
+MDWD,Cosmos Reason2 8B,mdwd-orange-cmd,sens-mdwd-orange-01,0.1986,sens-mdwd-orange-03,orange bag containing domestic waste,descriptive-paraphrase,0.1826,-0.016
+MDWD,Cosmos Reason2 8B,mdwd-orange-cmd,sens-mdwd-orange-01,0.1986,sens-mdwd-orange-04,find all orange waste bags,instruction,0.2598,0.0612
+MDWD,Cosmos Reason2 8B,mdwd-organic-waste,sens-mdwd-organic-01,0.4142,sens-mdwd-organic-02,white domestic organic-waste bag,lexical-paraphrase,0.3951,-0.0191
+MDWD,Cosmos Reason2 8B,mdwd-organic-waste,sens-mdwd-organic-01,0.4142,sens-mdwd-organic-03,white bag containing organic household waste,descriptive-paraphrase,0.3872,-0.027
+MDWD,Cosmos Reason2 8B,mdwd-organic-waste,sens-mdwd-organic-01,0.4142,sens-mdwd-organic-04,find all white organic-waste bags,instruction,0.3499,-0.0643
+MDWD,Cosmos Reason2 8B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.3476,sens-mdwd-recycling-02,grey household recycling bag,lexical-paraphrase,0.3536,0.006
+MDWD,Cosmos Reason2 8B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.3476,sens-mdwd-recycling-03,grey bag containing recyclable household material,descriptive-paraphrase,0.3634,0.0158
+MDWD,Cosmos Reason2 8B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.3476,sens-mdwd-recycling-04,find all grey recycling bags,instruction,0.395,0.0474
+MDWD,LocateAnything 3B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.5922,sens-mdwd-mixed-02,black refuse bag,lexical-paraphrase,0.5493,-0.0429
+MDWD,LocateAnything 3B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.5922,sens-mdwd-mixed-03,black bag containing mixed household waste,descriptive-paraphrase,0.3937,-0.1985
+MDWD,LocateAnything 3B,mdwd-mixed-waste,sens-mdwd-mixed-01,0.5922,sens-mdwd-mixed-04,find all black mixed-waste bags,instruction,0.3935,-0.1987
+MDWD,LocateAnything 3B,mdwd-orange-cmd,sens-mdwd-orange-01,0.2171,sens-mdwd-orange-02,orange refuse bag,lexical-paraphrase,0.2886,0.0715
+MDWD,LocateAnything 3B,mdwd-orange-cmd,sens-mdwd-orange-01,0.2171,sens-mdwd-orange-03,orange bag containing domestic waste,descriptive-paraphrase,0.159,-0.0581
+MDWD,LocateAnything 3B,mdwd-orange-cmd,sens-mdwd-orange-01,0.2171,sens-mdwd-orange-04,find all orange waste bags,instruction,0.1846,-0.0325
+MDWD,LocateAnything 3B,mdwd-organic-waste,sens-mdwd-organic-01,0.2731,sens-mdwd-organic-02,white domestic organic-waste bag,lexical-paraphrase,0.2762,0.0031
+MDWD,LocateAnything 3B,mdwd-organic-waste,sens-mdwd-organic-01,0.2731,sens-mdwd-organic-03,white bag containing organic household waste,descriptive-paraphrase,0.2548,-0.0183
+MDWD,LocateAnything 3B,mdwd-organic-waste,sens-mdwd-organic-01,0.2731,sens-mdwd-organic-04,find all white organic-waste bags,instruction,0.1884,-0.0847
+MDWD,LocateAnything 3B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.2752,sens-mdwd-recycling-02,grey household recycling bag,lexical-paraphrase,0.3028,0.0276
+MDWD,LocateAnything 3B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.2752,sens-mdwd-recycling-03,grey bag containing recyclable household material,descriptive-paraphrase,0.2794,0.0042
+MDWD,LocateAnything 3B,mdwd-recyclable-material,sens-mdwd-recycling-01,0.2752,sens-mdwd-recycling-04,find all grey recycling bags,instruction,0.2209,-0.0543
+MDWD,SAM 3,mdwd-mixed-waste,sens-mdwd-mixed-01,0.8516,sens-mdwd-mixed-02,black refuse bag,lexical-paraphrase,0.856,0.0044
+MDWD,SAM 3,mdwd-mixed-waste,sens-mdwd-mixed-01,0.8516,sens-mdwd-mixed-03,black bag containing mixed household waste,descriptive-paraphrase,0.689,-0.1626
+MDWD,SAM 3,mdwd-mixed-waste,sens-mdwd-mixed-01,0.8516,sens-mdwd-mixed-04,find all black mixed-waste bags,instruction,0.699,-0.1526
+MDWD,SAM 3,mdwd-orange-cmd,sens-mdwd-orange-01,0.8312,sens-mdwd-orange-02,orange refuse bag,lexical-paraphrase,0.5873,-0.2439
+MDWD,SAM 3,mdwd-orange-cmd,sens-mdwd-orange-01,0.8312,sens-mdwd-orange-03,orange bag containing domestic waste,descriptive-paraphrase,0.7126,-0.1186
+MDWD,SAM 3,mdwd-orange-cmd,sens-mdwd-orange-01,0.8312,sens-mdwd-orange-04,find all orange waste bags,instruction,0.3226,-0.5086
+MDWD,SAM 3,mdwd-organic-waste,sens-mdwd-organic-01,0.5269,sens-mdwd-organic-02,white domestic organic-waste bag,lexical-paraphrase,0.5323,0.0054
+MDWD,SAM 3,mdwd-organic-waste,sens-mdwd-organic-01,0.5269,sens-mdwd-organic-03,white bag containing organic household waste,descriptive-paraphrase,0.4472,-0.0797
+MDWD,SAM 3,mdwd-organic-waste,sens-mdwd-organic-01,0.5269,sens-mdwd-organic-04,find all white organic-waste bags,instruction,0.4393,-0.0876
+MDWD,SAM 3,mdwd-recyclable-material,sens-mdwd-recycling-01,0.0606,sens-mdwd-recycling-02,grey household recycling bag,lexical-paraphrase,0.4021,0.3415
+MDWD,SAM 3,mdwd-recyclable-material,sens-mdwd-recycling-01,0.0606,sens-mdwd-recycling-03,grey bag containing recyclable household material,descriptive-paraphrase,0.3798,0.3192
+MDWD,SAM 3,mdwd-recyclable-material,sens-mdwd-recycling-01,0.0606,sens-mdwd-recycling-04,find all grey recycling bags,instruction,0.0,-0.0606
+MDWD,SAM 3.1,mdwd-mixed-waste,sens-mdwd-mixed-01,0.8412,sens-mdwd-mixed-02,black refuse bag,lexical-paraphrase,0.8427,0.0015
+MDWD,SAM 3.1,mdwd-mixed-waste,sens-mdwd-mixed-01,0.8412,sens-mdwd-mixed-03,black bag containing mixed household waste,descriptive-paraphrase,0.6645,-0.1767
+MDWD,SAM 3.1,mdwd-mixed-waste,sens-mdwd-mixed-01,0.8412,sens-mdwd-mixed-04,find all black mixed-waste bags,instruction,0.7411,-0.1001
+MDWD,SAM 3.1,mdwd-orange-cmd,sens-mdwd-orange-01,0.8312,sens-mdwd-orange-02,orange refuse bag,lexical-paraphrase,0.626,-0.2052
+MDWD,SAM 3.1,mdwd-orange-cmd,sens-mdwd-orange-01,0.8312,sens-mdwd-orange-03,orange bag containing domestic waste,descriptive-paraphrase,0.7072,-0.124
+MDWD,SAM 3.1,mdwd-orange-cmd,sens-mdwd-orange-01,0.8312,sens-mdwd-orange-04,find all orange waste bags,instruction,0.3226,-0.5086
+MDWD,SAM 3.1,mdwd-organic-waste,sens-mdwd-organic-01,0.4982,sens-mdwd-organic-02,white domestic organic-waste bag,lexical-paraphrase,0.5372,0.039
+MDWD,SAM 3.1,mdwd-organic-waste,sens-mdwd-organic-01,0.4982,sens-mdwd-organic-03,white bag containing organic household waste,descriptive-paraphrase,0.4418,-0.0564
+MDWD,SAM 3.1,mdwd-organic-waste,sens-mdwd-organic-01,0.4982,sens-mdwd-organic-04,find all white organic-waste bags,instruction,0.4444,-0.0538
+MDWD,SAM 3.1,mdwd-recyclable-material,sens-mdwd-recycling-01,0.0886,sens-mdwd-recycling-02,grey household recycling bag,lexical-paraphrase,0.4053,0.3167
+MDWD,SAM 3.1,mdwd-recyclable-material,sens-mdwd-recycling-01,0.0886,sens-mdwd-recycling-03,grey bag containing recyclable household material,descriptive-paraphrase,0.4108,0.3222
+MDWD,SAM 3.1,mdwd-recyclable-material,sens-mdwd-recycling-01,0.0886,sens-mdwd-recycling-04,find all grey recycling bags,instruction,0.0164,-0.0722

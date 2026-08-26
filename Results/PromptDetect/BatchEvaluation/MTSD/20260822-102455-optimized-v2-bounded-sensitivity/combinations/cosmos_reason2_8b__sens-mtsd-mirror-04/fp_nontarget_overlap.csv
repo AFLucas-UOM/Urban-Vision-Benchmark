@@ -1,0 +1,180 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_1527.jpg,1512.25,2581.82,2347.63,4792.37,1.0,Back-Unknown,0.9937
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_1606.jpg,1422.29,2421.89,2373.34,3964.13,1.0,Back-Unknown,0.9744
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_141219.jpg,871.52,1165.25,1114.88,1946.7,1.0,No Entry (One Way),0.8917
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_143317.jpg,844.48,2848.38,867.36,2894.62,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_150542.jpg,1976.0,2982.48,2057.12,3236.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_112108.jpg,2010.29,2963.98,2138.75,3680.7,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_121142.jpg,817.44,1863.47,1584.96,4614.75,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_122826.jpg,833.28,1045.02,1565.87,2478.46,1.0,Back-Unknown,0.9708
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_123112.jpg,1206.4,1549.04,1347.84,1604.53,1.0,,0.005
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260106_160010_253.jpg,1551.36,2594.88,1600.51,2684.64,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260106_162304_258.jpg,1085.28,556.03,2399.04,2402.3,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260110_172451_501.jpg,2235.84,1198.08,2941.68,2214.91,1.0,,0.2125
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260110_173056_747.jpg,1187.28,1164.29,2394.96,1904.64,1.0,,0.4182
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260110_173308_202.jpg,958.8,1001.47,2305.2,2307.07,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260113_083600_409.jpg,3651.6,2251.78,4075.92,3068.93,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260113_083759_046.jpg,701.76,1683.46,1256.64,2340.86,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260113_083821_567.jpg,1032.24,943.1,2990.64,2377.73,1.0,Back-Unknown,0.5347
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-16 at 17.52.23 (3).jpeg,1129.14,1536.12,1171.98,1605.48,1.0,,0.0025
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-16 at 17.52.25 (1).jpeg,110.16,416.16,595.17,1162.8,1.0,Back-Unknown,0.975
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-16 at 17.52.28 (3).jpeg,1129.14,1479.0,1150.56,1519.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-17 at 15.01.44.jpeg,276.93,1946.16,319.77,2037.96,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-17 at 15.01.45 (3).jpeg,229.5,526.32,1233.18,2037.96,1.0,Back-Unknown,0.6605
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-17 at 15.01.50 (1).jpeg,682.38,465.12,973.08,2035.92,1.0,,0.3761
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-17 at 15.01.54.jpeg,263.16,197.88,1314.27,2037.96,1.0,Back-Unknown,0.5366
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-17 at 15.01.56 (1).jpeg,1496.34,1797.24,1528.47,1838.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-17 at 15.02.00.jpeg,471.24,1927.8,537.03,2019.6,1.0,Back-Unknown,0.7428
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_089d4626-IMG_20251125_192354.jpg,1326.0,3232.0,1503.0,3484.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_1346633a-IMG_20251125_195535.jpg,2955.0,1940.0,2997.0,2000.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_3a5a4d41-Pre_2026_6633.jpg,632.81,796.0,1506.59,3992.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_4a8ce21e-IMG_20251125_194252.jpg,1350.0,1168.0,1935.0,3992.0,1.0,,0.2207
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_6d03b071-IMG_6395.jpeg,1673.28,2395.01,2947.39,2851.63,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_7041f709-IMG_1379.jpg,1787.18,479.81,1941.41,991.87,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_8297098a-IMG_6326.jpeg,1266.05,1016.06,2935.3,2933.28,1.0,,0.3545
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_92113811-IMG_1371.jpg,722.74,0.0,2388.96,1584.58,1.0,Back-Unknown,0.9803
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_92113811-IMG_1371.jpg,1218.67,1677.31,2225.66,3515.9,1.0,Back-Unknown,0.9879
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_9adb1ffc-IMG_1447.jpg,604.8,2350.66,1037.23,2685.31,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_9e3f1527-IMG_6303.jpeg,1306.37,583.63,2580.48,2443.39,1.0,,0.3485
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_b25d900c-Pre_2026_6648.jpg,722.89,924.0,1319.67,3992.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_badbe466-IMG_20251125_194752.jpg,0.0,2572.0,51.0,2956.0,1.0,,0.4026
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_bdad925f-IMG_20251125_194953.jpg,1086.0,1284.0,1860.0,3040.0,1.0,,0.4403
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_cf483702-IMG_20251125_195623.jpg,1428.0,584.0,2139.0,2692.0,1.0,,0.4851
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_e27435a0-IMG_20251125_194217.jpg,813.0,996.0,1638.0,3992.0,1.0,,0.2903
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_f71868de-IMG_20251125_191832.jpg,303.0,352.0,1002.0,3832.0,1.0,,0.2782
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_39fe0c0b-IMG_4673.jpeg,867.89,753.98,2077.49,2511.94,1.0,Back-Unknown,0.9896
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_598f8dcc-IMG_5777.jpeg,0.0,1858.5,143.42,2095.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_64a36757-IMG20251230164429.jpg,2568.19,3231.74,2632.7,3325.95,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_8b994555-IMG_5798.jpeg,922.32,1564.42,2023.06,2628.86,1.0,Back-Unknown,0.9756
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_9dfbd54a-IMG_5537.jpeg,526.38,747.6,1059.07,2097.9,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_9f52d58a-IMG_5554.jpeg,0.0,431.42,704.59,3709.44,1.0,Back-Unknown,0.6515
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_d341fc22-IMG20260105131647.jpg,629.76,1019.9,2540.54,3141.63,1.0,Back-Unknown,0.9926
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_ec712362-IMG_5803.jpeg,307.32,1644.3,368.78,1707.3,1.0,,0.3289
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_ec712362-IMG_5803.jpeg,1060.65,1652.7,1104.78,1707.3,1.0,Back-Unknown,0.5622
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_f4371c23-IMG_5562.jpeg,2782.08,3273.98,3020.98,4027.97,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_f468f4a5-IMG_5772.jpeg,2766.96,3850.56,2812.32,3947.33,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_339c8d04-26.side.jpg,1442.45,1697.47,1483.27,1814.4,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_33c8250b-MP_0150.jpeg,472.32,563.76,1416.96,1038.96,1.0,,0.0576
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_3d2ae4e7-IMG_20251223_114602.jpg,1293.0,1304.0,1629.0,3108.0,1.0,,0.0237
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5e8f002c-IMG_20251223_132013.jpg,1824.0,2448.0,1908.0,2576.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_76c73962-MP_0139.jpg,1104.77,1204.31,2798.21,1741.82,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_7ad50d73-MP_0075.jpg,582.88,149.18,1564.92,1092.67,1.0,Back-Unknown,0.9763
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_86560763-IMG_20251223_113000.jpg,1440.0,2396.0,1473.0,2464.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_86560763-IMG_20251223_113000.jpg,1392.0,2400.0,1425.0,2464.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_888b1f4f-MP_0074.jpg,2016.0,703.08,2092.61,816.48,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_9288cb02-IMG_20251223_114539.jpg,1680.0,2172.0,1821.0,2492.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_983dc626-30.side.jpg,1297.3,1072.51,1390.28,1608.77,1.0,No Entry (One Way),0.7694
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_9c71fd6a-20251223_153024.jpg,1052.64,1089.36,1750.32,3892.32,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_b7da3d82-20251230_123417.jpg,1756.44,1607.52,2279.7,2174.64,1.0,Back-Unknown,0.887
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_bf4582b0-IMG_20251223_113056.jpg,678.0,1492.0,1458.0,3992.0,1.0,,0.3236
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_bf551d52-MP_0136.jpg,608.83,1329.05,2455.49,1841.62,1.0,,0.0188
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_c96ca64e-MP_0098.jpg,2108.74,1571.72,2189.38,1902.85,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_e44be02a-MP_0116.jpg,391.1,836.89,2068.42,1263.28,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_e46067a0-MP_0166.jpg,1351.68,1236.99,1529.86,1609.73,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ee20554d-MP_0115.jpg,3056.26,29.48,3205.44,88.45,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_f082e9d0-02.side.jpg,1056.89,326.59,1397.09,3044.16,1.0,,0.0888
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_22c38c39-IMG_4293.jpeg,1846.66,1115.86,2403.07,1732.75,1.0,,0.3875
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_458db4bf-IMG_9314.jpg,1015.31,2039.18,1657.91,3055.92,1.0,Street Sign,0.9594
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_4d14c289-20251129_122448.jpg,1119.96,1081.2,1523.88,1917.6,1.0,Back-Unknown,0.7914
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_4daf8454-IMG_4356.jpeg,269.14,3302.21,332.64,3483.65,1.0,Directional Sign,0.7452
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_64c9c943-IMG_20251203_121935.jpg,1303.56,505.92,1897.2,1256.64,1.0,Back-Unknown,0.9588
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_64c9c943-IMG_20251203_121935.jpg,1328.04,1232.16,1891.08,2011.44,1.0,Back-Unknown,0.9597
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_729363da-IMG_4319.jpeg,1300.32,2778.05,1321.49,2826.43,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_a9724b83-20251129_122439.jpg,1395.36,1219.92,1572.84,1880.88,1.0,Back-Unknown,0.9095
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_c7a58be8-IMG_20251203_121028.jpg,1266.84,403.92,2053.26,4075.92,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_e0a623d6-IMG_9293.jpg,505.51,4912.32,1525.1,5169.36,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_ec385cc7-IMG_20251203_121353.jpg,844.56,493.68,2353.14,4075.92,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_ecbe9be3-IMG_20251204_100152.jpg,1392.3,816.0,2640.78,4071.84,1.0,,0.4749
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,630.0,882.0,832.5,1998.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251229_142249.jpg,708.0,2028.0,1857.0,3120.0,1.0,Back-Unknown,0.9876
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_27645844-20260107_151619.jpg,887.22,1190.4,914.0,1271.74,1.0,,0.4886
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_303a684b-WhatsApp_Image_2026-01-14_at_11.12.36_1.jpeg,597.0,648.0,816.0,1998.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_3a0abdfb-20251116_161259.jpg,805.9,897.6,1455.66,2252.16,1.0,Pedestrian Crossing,0.5914
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_5996dfea-20251116_163330.jpg,1030.9,1570.8,1168.66,2162.4,1.0,No Entry (One Way),0.7994
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_5996dfea-20251116_163330.jpg,1492.4,942.48,1666.9,1974.72,1.0,Back-Unknown,0.957
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_8bd079ee-20260107_105937.jpg,845.15,2103.99,934.33,2167.38,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_a59df063-20251116_165440.jpg,1006.51,3014.74,1056.21,3092.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_b3d0eaa4-20251116_163427.jpg,888.55,1244.4,1423.52,2346.0,1.0,No Entry (One Way),0.9754
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_bdef9845-20260109_130552.jpg,672.0,1276.0,1980.0,3996.0,1.0,,0.391
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_c3a633b2-20251116_162903.jpg,297.94,1179.31,488.28,1797.2,1.0,Back-Unknown,0.9046
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_cbb400e9-WhatsApp_Image_2026-01-14_at_11.10.25.jpeg,493.5,432.0,892.5,1998.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_d5aaacb6-20251116_165125.jpg,291.59,1611.6,1820.73,3182.4,1.0,Back-Unknown,0.9724
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_dfec1b25-20260107_105532.jpg,348.49,1106.85,1197.76,1899.2,1.0,Back-Unknown,0.973
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_fe8b41fc-WhatsApp_Image_2026-01-14_at_11.10.21_3.jpeg,642.0,1082.0,1093.5,1568.0,1.0,Back-Unknown,0.985
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_1a462468-MichaelFarrugia_24_Back.jpg,1293.31,1215.84,2055.17,2692.8,1.0,Back-Unknown,0.5397
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_2141c95b-MelatAssefa_28_Side.jpg,0.0,2463.55,81.65,2786.11,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_2da1aa64-AlisonAttard_27_Front.jpeg,830.59,1886.98,931.39,2017.01,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_6cdcc943-AlisonAttard_14_Back.jpeg,3802.18,1115.86,3931.2,1300.32,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_704b34ba-BenTaliana_38_Side.jpeg,181.44,3269.95,263.09,3624.77,1.0,,0.2895
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_7ae28afa-MelatAssefa_15_Front.jpg,1400.11,3923.14,1457.57,4027.97,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_9fd3af21-MichaelFarrugia_11_Back.jpg,1231.87,1415.76,1846.27,4071.84,1.0,,0.2881
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7e73d18-AlisonAttard_29_Back.jpeg,1770.05,1146.1,2636.93,1660.18,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_bc59500b-AlisonAttard_47_Side.jpeg,1395.07,1645.06,2524.03,1868.83,1.0,,0.131
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,512.57,1161.22,759.78,1536.19,1.0,,0.0062
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_d29347ca-MelatAssefa_51_Side.jpg,1614.82,2834.5,1705.54,3411.07,1.0,No Entry (One Way),0.5453
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e0bfe536-MelatAssefa_22_Front.jpg,2174.26,3560.26,2277.07,3644.93,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e0bfe536-MelatAssefa_22_Front.jpg,1823.47,3568.32,1883.95,3628.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e3df78e1-MichaelFarrugia_48_Back.jpg,1277.95,1615.68,1821.7,4075.92,1.0,,0.2531
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e64b6a10-AlisonAttard_20_Side.jpeg,1350.72,1158.19,2628.86,1787.18,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,740.35,2827.44,820.22,3202.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_280e9cbc-IMG_0220.JPG,1556.35,1257.98,2201.47,1971.65,1.0,,0.4056
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_5dd0fd95-IMG_6225.JPG,1046.3,588.67,2280.1,1689.41,1.0,Back-Unknown,0.9809
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_6f66549b-IMG_0289.JPG,1733.76,985.82,2761.92,2416.18,1.0,,0.3509
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_6f66549b-IMG_0289.JPG,2640.96,713.66,4027.97,2857.68,1.0,,0.0709
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_7a1ad0b4-IMG_0319.JPG,346.75,1055.38,3064.32,2555.28,1.0,,0.3296
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_9c79fb63-Screenshot_2025-12-05_143920.png,137.25,40.91,182.7,121.91,1.0,Back-Unknown,0.5578
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_9c79fb63-Screenshot_2025-12-05_143920.png,10.35,232.06,44.1,285.52,1.0,,0.4907
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_bf61cf6e-Screenshot_2025-12-05_142746.png,100.79,60.57,188.4,512.95,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,230.23,229.95,240.35,255.5,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_ec035947-IMG_6142.JPG,1545.26,2294.21,1593.65,2390.98,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_fb7a099a-Screenshot_2025-12-05_134245.png,80.4,424.39,94.87,456.49,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_0d0b2421-20251215_151900.jpg,682.67,1217.66,1492.34,4023.94,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_27403473-IMG_2301.JPG,600.77,1400.11,1757.95,1723.68,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_3335816b-IMG_1863.jpg,1040.26,214.7,3076.42,2896.99,1.0,,0.4034
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_3335816b-IMG_1863.jpg,2495.81,492.91,3806.21,2479.68,1.0,,0.3249
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_3dfa77dc-20251215_142747.jpg,1959.55,2149.06,2088.83,2290.18,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_4c22ebaa-IMG_6807.jpeg,1070.5,2108.74,1209.6,2810.3,1.0,,0.349
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_51efaffb-IMG_2323.JPG,1563.41,1237.82,1926.29,1955.52,1.0,,0.3601
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_66312f27-IMG_1789.jpg,943.49,1309.39,4027.97,1635.98,1.0,,0.0607
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_70806c3a-20251206_161309.jpg,1746.36,2245.82,1780.38,2390.98,1.0,Back-Unknown,0.5114
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_8a80058d-20251215_151420.jpg,929.88,1108.8,1295.03,4023.94,1.0,,0.256
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_9ceccc7e-IMG_2183.JPG,2782.08,1254.96,3697.34,1657.15,1.0,,0.0579
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_b1489edd-IMG_1891.jpg,923.33,1403.14,3479.62,1684.37,1.0,,0.0651
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_bd29943d-IMG_1733.jpg,1467.65,1106.78,4027.97,1291.25,1.0,,0.0434
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_c1a8ff54-IMG_1721.jpg,0.0,293.33,4027.97,3020.98,1.0,Back-Unknown,0.6071
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_c3ab6f98-IMG_2186.JPG,3165.12,2924.21,3532.03,3020.98,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_cddeeb7f-IMG_6636.jpeg,529.2,1814.4,562.46,1947.46,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_cddeeb7f-IMG_6636.jpeg,2857.68,1899.07,2933.28,2270.02,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_d36e330f-20251215_150902.jpg,353.81,3511.87,376.49,3592.51,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_f5c11235-IMG_2319.JPG,2261.95,1327.54,2386.94,1445.47,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_f6c47dc2-IMG_2182.JPG,129.02,1490.83,2870.78,1735.78,1.0,,0.0909
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_06980edd-front.jpg,3157.06,2718.58,3249.79,2909.09,1.0,Directional Sign,0.6833
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_244bea95-back.jpg,1665.22,731.81,2697.41,1799.28,1.0,Back-Unknown,0.9793
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_3e16c892-IMG_0188.JPG,2507.57,1302.34,4204.03,2874.56,1.0,,0.3776
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_555bcf3a-front.jpg,1299.0,840.0,2151.0,3996.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_58176912-front.jpg,1612.8,737.86,2620.8,3017.95,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_7cc436b9-Back.jpg,990.72,3235.84,1085.18,3850.24,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_87d39243-IMG_0210.JPG,1964.93,1113.84,3632.83,3191.58,1.0,,0.4307
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_ebf4ab1a-IMG_0198.JPG,1587.94,1328.04,3615.7,2960.24,1.0,Back-Unknown,0.6184
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_edb6fab3-IMG_0189.JPG,5506.37,3362.94,5597.76,3435.77,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_f5d48b4c-front.jpg,1693.44,2830.46,1737.79,2930.26,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_fc6650ab-front.jpg,1456.13,4034.56,1481.47,4091.9,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_00e70ac4-IMG_20251111_140913.jpg,1488.0,1380.0,1689.0,2500.0,1.0,Back-Unknown,0.8052
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_01e24ee9-IMG_20251106_145403.jpg,1367.04,856.06,1809.41,2109.44,1.0,Back-Unknown,0.9661
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_01e24ee9-IMG_20251106_145403.jpg,1345.54,1748.99,1720.32,2981.89,1.0,Back-Unknown,0.9555
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_109ae844-20251122_134645.jpg,1251.0,1436.0,1356.0,2680.0,1.0,,0.2085
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_21d58e17-S3_back.jpg,1485.0,2052.0,1533.0,2092.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_29bd496f-IMG_20251106_153126.jpg,1302.0,1488.0,1440.0,2228.0,1.0,No Entry (One Way),0.9579
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_673470fc-IMG_20251111_160954.jpg,1998.0,2492.0,2055.0,2660.0,1.0,Directional Sign,0.5255
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_6ad958e6-IMG_20251112_155635.jpg,1230.12,1268.88,1710.54,4075.92,1.0,,0.3079
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_73c5c90a-IMG_20251106_152941.jpg,2199.0,2776.0,2313.0,3380.0,1.0,Back-Unknown,0.6005
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_76700fa1-IMG_20251111_162238.jpg,2115.0,2640.0,2184.0,2844.0,1.0,Directional Sign,0.7992
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_a3c63c83-IMG_20251112_162857.jpg,1291.32,1179.12,1814.58,4071.84,1.0,,0.2869
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_a745c9e2-IMG_20251106_152554.jpg,1379.33,2052.1,2174.98,4091.9,1.0,,0.4091
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_ae723934-WhatsApp_Image_2026-01-03_at_18.45.36.jpeg,502.8,1531.2,520.8,1598.4,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_b8edf87e-IMG_20251106_153308.jpg,1938.0,2540.0,1992.0,2928.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_cedb2f14-NE3_front.jpg,1476.0,1692.0,1920.0,2156.0,1.0,Back-Unknown,0.8237
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_d4f4f35a-WhatsApp_Image_2026-01-01_at_18.12.59_1.jpeg,549.89,804.86,668.16,1366.02,1.0,No Entry (One Way),0.8664
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_de518e6b-WhatsApp_Image_2026-01-03_at_18.46.56.jpeg,470.4,761.6,837.6,1099.2,1.0,Back-Unknown,0.9722
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_e0e8c13e-IMG_20251113_163444.jpg,1263.78,1268.88,1533.06,4075.92,1.0,,0.1596
+Cosmos Reason2 8B,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_f109e3eb-IMG_20251111_144036.jpg,1164.0,1336.0,1947.0,3996.0,1.0,,0.0

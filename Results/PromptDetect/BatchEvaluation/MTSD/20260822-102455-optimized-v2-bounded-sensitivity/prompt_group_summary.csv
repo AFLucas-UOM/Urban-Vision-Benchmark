@@ -1,0 +1,6 @@
+model,prompt_group,n_prompts,precision,recall,f1,accuracy,mean_matched_iou,mean_inference_ms
+Cosmos Reason2 2B,paraphrase-sensitivity,20,0.1201,0.5286,0.1926,0.1085,0.9073,2643.295
+Cosmos Reason2 8B,paraphrase-sensitivity,20,0.2053,0.6503,0.3054,0.1831,0.9103,1988.375
+LocateAnything 3B,paraphrase-sensitivity,20,0.0472,0.6768,0.0865,0.0457,0.9366,8110.4645
+SAM 3,paraphrase-sensitivity,20,0.1815,0.7247,0.2418,0.1462,0.9319,189.1035
+SAM 3.1,paraphrase-sensitivity,20,0.1763,0.73,0.2367,0.143,0.9316,194.6355

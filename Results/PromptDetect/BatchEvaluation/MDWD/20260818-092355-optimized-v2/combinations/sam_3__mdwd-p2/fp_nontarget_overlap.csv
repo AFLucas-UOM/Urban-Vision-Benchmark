@@ -1,0 +1,19 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,mdwd-p2,grey recycling bag,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,202.95,273.06,485.54,455.12,0.9062,Mixed Waste,0.9635
+SAM 3,mdwd-p2,grey recycling bag,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,188.02,127.32,389.76,301.46,0.9062,Mixed Waste,0.9778
+SAM 3,mdwd-p2,grey recycling bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,262.84,418.31,432.89,639.84,0.5586,Mixed Waste,0.9763
+SAM 3,mdwd-p2,grey recycling bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,385.1,410.48,499.59,504.2,0.5508,Mixed Waste,0.9196
+SAM 3,mdwd-p2,grey recycling bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,243.36,251.67,306.73,311.31,0.3203,Other Waste,0.8202
+SAM 3,mdwd-p2,grey recycling bag,ARI3129_AFL_60_jpeg.rf.9b69f3b6a86120e675c35e1420d47ec1.jpg,0.0,127.17,179.44,463.71,0.5625,Other Waste,0.9874
+SAM 3,mdwd-p2,grey recycling bag,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,179.04,189.69,304.63,389.09,0.5977,Other Waste,0.9868
+SAM 3,mdwd-p2,grey recycling bag,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,284.58,212.21,394.45,375.07,0.459,Other Waste,0.8683
+SAM 3,mdwd-p2,grey recycling bag,IMG20250107085655_jpg.rf.2164bdf6a18089bda1efb0782a777491.jpg,352.93,184.5,426.63,289.42,0.3027,Mixed Waste,0.8965
+SAM 3,mdwd-p2,grey recycling bag,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,371.66,56.05,541.27,235.5,0.3125,,0.1422
+SAM 3,mdwd-p2,grey recycling bag,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,270.0,201.99,506.26,430.9,0.457,,0.0
+SAM 3,mdwd-p2,grey recycling bag,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,76.82,270.04,264.72,494.71,0.4004,,0.0
+SAM 3,mdwd-p2,grey recycling bag,IMG_1681-3_jpg.rf.d5d943924c35de90c6d6e157474cbfd7.jpg,307.51,125.69,415.83,170.25,0.418,Mixed Waste,0.9068
+SAM 3,mdwd-p2,grey recycling bag,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,29.84,99.34,265.25,245.88,0.418,Mixed Waste,0.9337
+SAM 3,mdwd-p2,grey recycling bag,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,243.33,110.43,360.82,239.74,0.373,Mixed Waste,0.9441
+SAM 3,mdwd-p2,grey recycling bag,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,355.86,133.02,474.23,248.64,0.3711,Mixed Waste,0.9016
+SAM 3,mdwd-p2,grey recycling bag,Mixed_3_jpeg.rf.2ecdba47ebadb9c2a485e6edc9984489.jpg,341.01,192.72,618.99,526.02,0.7734,Mixed Waste,0.9236
+SAM 3,mdwd-p2,grey recycling bag,PHOTO-2025-01-04-12-12-46-1-_jpg.rf.cac4448d0e8e2b54b3389bce64c5559f.jpg,274.08,226.61,386.54,358.74,0.5977,Mixed Waste,0.9316

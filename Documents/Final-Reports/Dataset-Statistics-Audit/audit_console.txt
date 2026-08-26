@@ -1,0 +1,415 @@
+{
+  "mdwd": {
+    "dataset": "MDWD",
+    "included_source": "unaugmented COCO split directories only",
+    "splits": {
+      "train": {
+        "images": 2956,
+        "objects": 9262,
+        "class_counts": {
+          "wastedetection": 0,
+          "Mixed Waste": 2566,
+          "Orange CMD": 667,
+          "Organic Waste": 1677,
+          "Other Waste": 2150,
+          "Recyclable Material": 2202
+        },
+        "class_percentages": {
+          "wastedetection": 0.0,
+          "Mixed Waste": 27.7046,
+          "Orange CMD": 7.2015,
+          "Organic Waste": 18.1062,
+          "Other Waste": 23.2131,
+          "Recyclable Material": 23.7746
+        },
+        "class_count_reconciles": true
+      },
+      "valid": {
+        "images": 369,
+        "objects": 1074,
+        "class_counts": {
+          "wastedetection": 0,
+          "Mixed Waste": 275,
+          "Orange CMD": 78,
+          "Organic Waste": 196,
+          "Other Waste": 261,
+          "Recyclable Material": 264
+        },
+        "class_percentages": {
+          "wastedetection": 0.0,
+          "Mixed Waste": 25.6052,
+          "Orange CMD": 7.2626,
+          "Organic Waste": 18.2495,
+          "Other Waste": 24.3017,
+          "Recyclable Material": 24.581
+        },
+        "class_count_reconciles": true
+      },
+      "test": {
+        "images": 369,
+        "objects": 1106,
+        "class_counts": {
+          "wastedetection": 0,
+          "Mixed Waste": 334,
+          "Orange CMD": 78,
+          "Organic Waste": 178,
+          "Other Waste": 278,
+          "Recyclable Material": 238
+        },
+        "class_percentages": {
+          "wastedetection": 0.0,
+          "Mixed Waste": 30.1989,
+          "Orange CMD": 7.0524,
+          "Organic Waste": 16.094,
+          "Other Waste": 25.1356,
+          "Recyclable Material": 21.519
+        },
+        "class_count_reconciles": true
+      }
+    },
+    "total_unique_images": 3694,
+    "total_annotated_objects": 11442,
+    "reconciliation": {
+      "split_images_sum": 3694,
+      "split_objects_sum": 11442,
+      "image_total_reconciles": true,
+      "object_total_reconciles": true
+    },
+    "duplicate_exact_image_groups": 0,
+    "duplicate_source_filename_groups": 99,
+    "issues": [
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_4396_jpg.jpg: minimum dHash distance 35; [{'split': 'train', 'file': 'IMG_4396_JPG.rf.8987f02e6112198a4371960c1fa9b78f.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_4396_JPG.rf.8987f02e6112198a4371960c1fa9b78f.jpg', 'dhash': 1761504102957676375}, {'split': 'test', 'file': 'IMG_4396_jpg.rf.866c24308c4afb5fbc2b08b663a23cad.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_4396_jpg.rf.866c24308c4afb5fbc2b08b663a23cad.jpg', 'dhash': 12840706452867844408}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_4403_jpg.jpg: minimum dHash distance 28; [{'split': 'train', 'file': 'IMG_4403_jpg.rf.fdc0157f3a6c4bc13481194cb92c3c43.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_4403_jpg.rf.fdc0157f3a6c4bc13481194cb92c3c43.jpg', 'dhash': 16805526955149318576}, {'split': 'valid', 'file': 'IMG_4403_JPG.rf.13ccadda35246007f2842ff9daa4422c.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_4403_JPG.rf.13ccadda35246007f2842ff9daa4422c.jpg', 'dhash': 10150440399750617737}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_4405_jpg.jpg: minimum dHash distance 36; [{'split': 'train', 'file': 'IMG_4405_jpg.rf.bd09caeb6603a43bf73348ac9cab69e7.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_4405_jpg.rf.bd09caeb6603a43bf73348ac9cab69e7.jpg', 'dhash': 18229710343540108797}, {'split': 'valid', 'file': 'IMG_4405_JPG.rf.0756fca0ea94adcf8311ad9d0d2a4aae.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_4405_JPG.rf.0756fca0ea94adcf8311ad9d0d2a4aae.jpg', 'dhash': 13208468261810081343}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "ari3129_afl_65_jpeg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'ARI3129_AFL_65_jpeg.rf.cd390bbce588d1ef6c8922414432bd7d.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\ARI3129_AFL_65_jpeg.rf.cd390bbce588d1ef6c8922414432bd7d.jpg', 'dhash': 8302736378837224521}, {'split': 'test', 'file': 'ARI3129_AFL_65_jpeg.rf.625e465fe85d519fd6223aa1b698b067.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\ARI3129_AFL_65_jpeg.rf.625e465fe85d519fd6223aa1b698b067.jpg', 'dhash': 8302736378837224521}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_0725_jpeg.jpg: minimum dHash distance 34; [{'split': 'train', 'file': 'IMG_0725_jpeg.rf.4fc04cb7852fd76c3135d518badad4b3.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_0725_jpeg.rf.4fc04cb7852fd76c3135d518badad4b3.jpg', 'dhash': 18383141912564063452}, {'split': 'test', 'file': 'IMG_0725_jpeg.rf.759b0eefbdfef427c580d52e3969e4f3.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_0725_jpeg.rf.759b0eefbdfef427c580d52e3969e4f3.jpg', 'dhash': 1768899350994478091}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "ari3129_sdm_40_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'ARI3129_SDM_40_jpg.rf.d7a86c47fde4723e4ed1f67707422111.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\ARI3129_SDM_40_jpg.rf.d7a86c47fde4723e4ed1f67707422111.jpg', 'dhash': 14915060691394208160}, {'split': 'valid', 'file': 'ARI3129_SDM_40_jpg.rf.471530966ef32cbbd3372e77f89bf9d4.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\ARI3129_SDM_40_jpg.rf.471530966ef32cbbd3372e77f89bf9d4.jpg', 'dhash': 14915060691394208160}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_4410_jpg.jpg: minimum dHash distance 33; [{'split': 'train', 'file': 'IMG_4410_jpg.rf.b593bcb9a941a9acaaa71121c786d3a3.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_4410_jpg.rf.b593bcb9a941a9acaaa71121c786d3a3.jpg', 'dhash': 10362714169129520141}, {'split': 'test', 'file': 'IMG_4410_JPG.rf.d44d7b5c93a3a296cb9bc76d13d7396b.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_4410_JPG.rf.d44d7b5c93a3a296cb9bc76d13d7396b.jpg', 'dhash': 2042755596898809060}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_4398_jpg.jpg: minimum dHash distance 37; [{'split': 'train', 'file': 'IMG_4398_jpg.rf.d9b347bd5f0015d60010d2aa04d9a9ed.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_4398_jpg.rf.d9b347bd5f0015d60010d2aa04d9a9ed.jpg', 'dhash': 16710544586334784462}, {'split': 'test', 'file': 'IMG_4398_JPG.rf.fefada544a75b29e81e66720f5f9bd0e.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_4398_JPG.rf.fefada544a75b29e81e66720f5f9bd0e.jpg', 'dhash': 2100388478031295216}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_0714_jpeg.jpg: minimum dHash distance 35; [{'split': 'train', 'file': 'IMG_0714_jpeg.rf.b5b78f528d615214b4539688a09ed27d.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_0714_jpeg.rf.b5b78f528d615214b4539688a09ed27d.jpg', 'dhash': 9911651888793955454}, {'split': 'test', 'file': 'IMG_0714_jpeg.rf.e11aa59eaf43b998d8aad81a37db757a.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_0714_jpeg.rf.e11aa59eaf43b998d8aad81a37db757a.jpg', 'dhash': 1239083053075893126}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_8897_jpeg.jpg: minimum dHash distance 26; [{'split': 'train', 'file': 'IMG_8897_jpeg.rf.dc987f87783a25c32b54aabb74d7a121.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8897_jpeg.rf.dc987f87783a25c32b54aabb74d7a121.jpg', 'dhash': 17927902807116013792}, {'split': 'train', 'file': 'IMG_8897_jpeg.rf.ff4af9cba400be4feaa1a807b25c3014.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8897_jpeg.rf.ff4af9cba400be4feaa1a807b25c3014.jpg', 'dhash': 17571172479484746377}, {'split': 'test', 'file': 'IMG_8897_jpeg.rf.f7340d997049c2fc4f9aa5c306306804.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_8897_jpeg.rf.f7340d997049c2fc4f9aa5c306306804.jpg', 'dhash': 14251587041191775171}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_8855_jpeg.jpg: minimum dHash distance 31; [{'split': 'train', 'file': 'IMG_8855_jpeg.rf.140ac442dd255d58b38399f9e1dfb7ce.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8855_jpeg.rf.140ac442dd255d58b38399f9e1dfb7ce.jpg', 'dhash': 3821065374477259111}, {'split': 'test', 'file': 'IMG_8855_jpeg.rf.4cb9cb7103f24c3db6e1e65df103aa16.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_8855_jpeg.rf.4cb9cb7103f24c3db6e1e65df103aa16.jpg', 'dhash': 10634004337649342488}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "msida_77_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'MSIDA_77_jpg.rf.d572bb1560d8b5969e6c49590e8c25e6.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\MSIDA_77_jpg.rf.d572bb1560d8b5969e6c49590e8c25e6.jpg', 'dhash': 4612255682341387748}, {'split': 'test', 'file': 'MSIDA_77_jpg.rf.4650d57012cf17bbcbe98b1e0b3c593d.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\MSIDA_77_jpg.rf.4650d57012cf17bbcbe98b1e0b3c593d.jpg', 'dhash': 4612255682341387748}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_4407_jpg.jpg: minimum dHash distance 32; [{'split': 'train', 'file': 'IMG_4407_jpg.rf.c998befec596046c475d55d6650dc2d3.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_4407_jpg.rf.c998befec596046c475d55d6650dc2d3.jpg', 'dhash': 3258665556805365037}, {'split': 'test', 'file': 'IMG_4407_JPG.rf.926cc5db1a13cc84aa5dbdcd690a5b48.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_4407_JPG.rf.926cc5db1a13cc84aa5dbdcd690a5b48.jpg', 'dhash': 12069650738715845606}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "ari3129_afl_88_jpeg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'ARI3129_AFL_88_jpeg.rf.805f2c22b6c4d025983ae998c26b9c82.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\ARI3129_AFL_88_jpeg.rf.805f2c22b6c4d025983ae998c26b9c82.jpg', 'dhash': 8064766085314486700}, {'split': 'test', 'file': 'ARI3129_AFL_88_jpeg.rf.3e4571769fa19b7330c93fe2e077a734.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\ARI3129_AFL_88_jpeg.rf.3e4571769fa19b7330c93fe2e077a734.jpg', 'dhash': 8064766085314486700}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_8747_jpeg.jpg: minimum dHash distance 30; [{'split': 'train', 'file': 'IMG_8747_jpeg.rf.54b8b055d7637e49047b100bdebceb60.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8747_jpeg.rf.54b8b055d7637e49047b100bdebceb60.jpg', 'dhash': 16128085426448489684}, {'split': 'test', 'file': 'IMG_8747_jpeg.rf.d5087e20141684076a7ece397a4a6f6a.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_8747_jpeg.rf.d5087e20141684076a7ece397a4a6f6a.jpg', 'dhash': 12791962534052451155}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "ari3129_afl_55_jpeg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'ARI3129_AFL_55_jpeg.rf.4469a0aee72e80ddaaf57385ad839d6e.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\ARI3129_AFL_55_jpeg.rf.4469a0aee72e80ddaaf57385ad839d6e.jpg', 'dhash': 11497651603047573495}, {'split': 'valid', 'file': 'ARI3129_AFL_55_jpeg.rf.06c99f217234afc79016e69cc0888fbe.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\ARI3129_AFL_55_jpeg.rf.06c99f217234afc79016e69cc0888fbe.jpg', 'dhash': 11497651603047573495}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_8665_jpeg.jpg: minimum dHash distance 34; [{'split': 'train', 'file': 'IMG_8665_jpeg.rf.96320408a05fb4c35f118345ae770efe.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8665_jpeg.rf.96320408a05fb4c35f118345ae770efe.jpg', 'dhash': 11357408931412426679}, {'split': 'valid', 'file': 'IMG_8665_jpeg.rf.646357875b740375bde925e955743801.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_8665_jpeg.rf.646357875b740375bde925e955743801.jpg', 'dhash': 17365907789406569096}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_0741_jpeg.jpg: minimum dHash distance 32; [{'split': 'train', 'file': 'IMG_0741_jpeg.rf.fca636f09ced1bb8be6be82c08d92342.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_0741_jpeg.rf.fca636f09ced1bb8be6be82c08d92342.jpg', 'dhash': 15696143854896908392}, {'split': 'valid', 'file': 'IMG_0741_jpeg.rf.ca0996f614959ea64165dc4b7d6b176e.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_0741_jpeg.rf.ca0996f614959ea64165dc4b7d6b176e.jpg', 'dhash': 13970572398532553920}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "ari3129_tk_71_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'ARI3129_TK_71_jpg.rf.840926a4c7804681e50b38ff8086dceb.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\ARI3129_TK_71_jpg.rf.840926a4c7804681e50b38ff8086dceb.jpg', 'dhash': 2770338503087777888}, {'split': 'valid', 'file': 'ARI3129_TK_71_jpg.rf.1a8d3b771d1d86ea33c1795eef48c500.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\ARI3129_TK_71_jpg.rf.1a8d3b771d1d86ea33c1795eef48c500.jpg', 'dhash': 2770338503087777888}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "20241214_080238_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': '20241214_080238_jpg.rf.c34410da1b66601636c8270f01c376fe.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\20241214_080238_jpg.rf.c34410da1b66601636c8270f01c376fe.jpg', 'dhash': 1963040669342234727}, {'split': 'test', 'file': '20241214_080238_jpg.rf.8df2ae2e154de3356f4cc05c5c3ff4de.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\20241214_080238_jpg.rf.8df2ae2e154de3356f4cc05c5c3ff4de.jpg', 'dhash': 1963040669342234727}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "msida_72_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'MSIDA_72_jpg.rf.434b14bc3c10993a14a6ecede7b09bb4.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\MSIDA_72_jpg.rf.434b14bc3c10993a14a6ecede7b09bb4.jpg', 'dhash': 18083780160651753467}, {'split': 'test', 'file': 'MSIDA_72_jpg.rf.86742d974afa5f248e2db4d4536435fb.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\MSIDA_72_jpg.rf.86742d974afa5f248e2db4d4536435fb.jpg', 'dhash': 18083780160651753467}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_8675_jpeg.jpg: minimum dHash distance 35; [{'split': 'train', 'file': 'IMG_8675_jpeg.rf.f11a4c91ac1bfefbf47a5a21ed028e0b.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8675_jpeg.rf.f11a4c91ac1bfefbf47a5a21ed028e0b.jpg', 'dhash': 13161258681772312973}, {'split': 'test', 'file': 'IMG_8675_jpeg.rf.d1615c3c22461aa32770e235c4c85472.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_8675_jpeg.rf.d1615c3c22461aa32770e235c4c85472.jpg', 'dhash': 17644701949089690425}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "img_1739_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'IMG_1739_JPG.rf.fa7ad4dfbc40eedd40a75f5f075b6d39.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_1739_JPG.rf.fa7ad4dfbc40eedd40a75f5f075b6d39.jpg', 'dhash': 17915187290170686718}, {'split': 'train', 'file': 'IMG_1739_JPG.rf.a5c5a6fa67fdee83cbba39558ca38b8c.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_1739_JPG.rf.a5c5a6fa67fdee83cbba39558ca38b8c.jpg', 'dhash': 16377066417553490372}, {'split': 'valid', 'file': 'IMG_1739_JPG.rf.67822377ba2ad0f4f75540fc06a7579d.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_1739_JPG.rf.67822377ba2ad0f4f75540fc06a7579d.jpg', 'dhash': 17915187290170686718}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_0740_jpeg.jpg: minimum dHash distance 21; [{'split': 'train', 'file': 'IMG_0740_jpeg.rf.2ae2c5749cba3cb428321ec72e878122.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_0740_jpeg.rf.2ae2c5749cba3cb428321ec72e878122.jpg', 'dhash': 10649545068826701223}, {'split': 'valid', 'file': 'IMG_0740_jpeg.rf.d0afdc878f01788dafc1b58bf8fd3065.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_0740_jpeg.rf.d0afdc878f01788dafc1b58bf8fd3065.jpg', 'dhash': 15697521232896066566}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_8972_jpeg.jpg: minimum dHash distance 31; [{'split': 'train', 'file': 'IMG_8972_jpeg.rf.fdd133d8f6a91c7661a20649ac77b1a1.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8972_jpeg.rf.fdd133d8f6a91c7661a20649ac77b1a1.jpg', 'dhash': 8747430002047570839}, {'split': 'test', 'file': 'IMG_8972_jpeg.rf.c541d56131548a715250b2c338db0419.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_8972_jpeg.rf.c541d56131548a715250b2c338db0419.jpg', 'dhash': 17934688210449339462}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "img20250107085115_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'IMG20250107085115_jpg.rf.6fb189b689d291b82db340e7ec460238.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG20250107085115_jpg.rf.6fb189b689d291b82db340e7ec460238.jpg', 'dhash': 14526717122527857423}, {'split': 'test', 'file': 'IMG20250107085115_jpg.rf.59749c6e69a250465d5d7e3a2f37559c.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG20250107085115_jpg.rf.59749c6e69a250465d5d7e3a2f37559c.jpg', 'dhash': 14526717122527857423}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_8859_jpeg.jpg: minimum dHash distance 34; [{'split': 'train', 'file': 'IMG_8859_jpeg.rf.e84e17b79e1e40838b0ce8d04f72a060.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8859_jpeg.rf.e84e17b79e1e40838b0ce8d04f72a060.jpg', 'dhash': 18425089007110045503}, {'split': 'valid', 'file': 'IMG_8859_jpeg.rf.924219ea014cfaf07990bf5dacf41552.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_8859_jpeg.rf.924219ea014cfaf07990bf5dacf41552.jpg', 'dhash': 1663530765953653232}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "img_1583_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'IMG_1583_jpg.rf.fb0c8c6f825568f371fb5bac8100bd1a.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_1583_jpg.rf.fb0c8c6f825568f371fb5bac8100bd1a.jpg', 'dhash': 669644977125289421}, {'split': 'valid', 'file': 'IMG_1583_jpg.rf.a09f083e1a7957a6ea65f25b0049db22.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_1583_jpg.rf.a09f083e1a7957a6ea65f25b0049db22.jpg', 'dhash': 669644977125289421}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "img20250107083759_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'IMG20250107083759_jpg.rf.488de83967b17ed65df7d7bbb06389bb.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG20250107083759_jpg.rf.488de83967b17ed65df7d7bbb06389bb.jpg', 'dhash': 10199966544529961889}, {'split': 'valid', 'file': 'IMG20250107083759_jpg.rf.ae80caffc2f3055ed534e33352cbf4cc.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG20250107083759_jpg.rf.ae80caffc2f3055ed534e33352cbf4cc.jpg', 'dhash': 10199966544529961889}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_0721_jpeg.jpg: minimum dHash distance 38; [{'split': 'train', 'file': 'IMG_0721_jpeg.rf.37a8d6e2e4c770f8f58ff59638295b4d.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_0721_jpeg.rf.37a8d6e2e4c770f8f58ff59638295b4d.jpg', 'dhash': 14107110993326385224}, {'split': 'test', 'file': 'IMG_0721_jpeg.rf.02e2a185533d3e3bace338f3ed45fa4e.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_0721_jpeg.rf.02e2a185533d3e3bace338f3ed45fa4e.jpg', 'dhash': 9131289300432441849}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_8861_jpeg.jpg: minimum dHash distance 31; [{'split': 'train', 'file': 'IMG_8861_jpeg.rf.2b9fa00deec389ac73f5f34feadd7a6e.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_8861_jpeg.rf.2b9fa00deec389ac73f5f34feadd7a6e.jpg', 'dhash': 688308762022537448}, {'split': 'valid', 'file': 'IMG_8861_jpeg.rf.2e0d1168be038edfbefae5185a1b2316.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_8861_jpeg.rf.2e0d1168be038edfbefae5185a1b2316.jpg', 'dhash': 14919896817139849308}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_0726_jpeg.jpg: minimum dHash distance 31; [{'split': 'train', 'file': 'IMG_0726_jpeg.rf.7f497cbb1059c27d3af69f5979f0f00e.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\IMG_0726_jpeg.rf.7f497cbb1059c27d3af69f5979f0f00e.jpg', 'dhash': 4510722454959818434}, {'split': 'test', 'file': 'IMG_0726_jpeg.rf.506cdac9603925693e153b8da7f1ac45.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_0726_jpeg.rf.506cdac9603925693e153b8da7f1ac45.jpg', 'dhash': 17602546524939874611}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "ari3129_sdm_26_jpg.jpg: minimum dHash distance 0; [{'split': 'train', 'file': 'ARI3129_SDM_26_jpg.rf.d14a4dd1be913173cec8707f0915e96f.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\train\\\\ARI3129_SDM_26_jpg.rf.d14a4dd1be913173cec8707f0915e96f.jpg', 'dhash': 2025808453378677145}, {'split': 'test', 'file': 'ARI3129_SDM_26_jpg.rf.3334d41fb77fd9b3926adc7731299377.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\ARI3129_SDM_26_jpg.rf.3334d41fb77fd9b3926adc7731299377.jpg', 'dhash': 2025808453378677145}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "ari3129_sdm_30_jpg.jpg: minimum dHash distance 0; [{'split': 'valid', 'file': 'ARI3129_SDM_30_jpg.rf.89cabf1dea3f802ceb3df7587a111105.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\ARI3129_SDM_30_jpg.rf.89cabf1dea3f802ceb3df7587a111105.jpg', 'dhash': 7786450146501118393}, {'split': 'test', 'file': 'ARI3129_SDM_30_jpg.rf.214d7fae89ac05d20402e8c49a8fd27c.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\ARI3129_SDM_30_jpg.rf.214d7fae89ac05d20402e8c49a8fd27c.jpg', 'dhash': 7786450146501118393}]"
+      },
+      {
+        "severity": "critical",
+        "type": "probable_source_image_leakage_across_splits",
+        "detail": "ari3129_afl_60_jpeg.jpg: minimum dHash distance 0; [{'split': 'valid', 'file': 'ARI3129_AFL_60_jpeg.rf.962925a47563c67de06dd218e05cc5fd.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\ARI3129_AFL_60_jpeg.rf.962925a47563c67de06dd218e05cc5fd.jpg', 'dhash': 8300866334081742591}, {'split': 'test', 'file': 'ARI3129_AFL_60_jpeg.rf.ab29698f37ae30f3e27973dd8f968df0.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\ARI3129_AFL_60_jpeg.rf.ab29698f37ae30f3e27973dd8f968df0.jpg', 'dhash': 8300866334081742591}]"
+      },
+      {
+        "severity": "medium",
+        "type": "cross_split_filename_collision_not_visually_similar",
+        "detail": "img_0790_jpeg.jpg: minimum dHash distance 29; [{'split': 'valid', 'file': 'IMG_0790_jpeg.rf.c08bf6d38e0dfd05c6fb308c1e52196a.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\valid\\\\IMG_0790_jpeg.rf.c08bf6d38e0dfd05c6fb308c1e52196a.jpg', 'dhash': 7799264288472288966}, {'split': 'test', 'file': 'IMG_0790_jpeg.rf.1321167df332ce293c74622b9a91f29a.jpg', 'path': 'E:\\\\2. UM-Student\\\\MSC Dissertation\\\\Urban-Vision-Benchmark\\\\Datasets\\\\MDWD\\\\MDWD-RAW\\\\test\\\\IMG_0790_jpeg.rf.1321167df332ce293c74622b9a91f29a.jpg', 'dhash': 18083786023738601175}]"
+      }
+    ],
+    "cross_split_source_filename_collision_groups": 36,
+    "probable_source_image_leakage_groups_across_splits": 15
+  },
+  "mtsd": {
+    "dataset": "MTSD",
+    "included_source": "unaugmented COCO split directories only",
+    "splits": {
+      "train": {
+        "images": 5986,
+        "objects": 16535,
+        "class_counts": {
+          "Pedestrian Crossing": 1174,
+          "Stop Sign": 1071,
+          "No Entry (One Way)": 1789,
+          "Roundabout Ahead": 648,
+          "No Through Road (T-Junction)": 407,
+          "Blind-Spot Mirror (Convex Mirror)": 1328,
+          "Street Sign": 813,
+          "Directional Sign": 906,
+          "Tourist Sign": 27,
+          "Auxiliary Sign": 1069,
+          "Back-Unknown": 5416,
+          "Other-Unknown": 1887
+        },
+        "class_percentages": {
+          "Pedestrian Crossing": 7.1001,
+          "Stop Sign": 6.4772,
+          "No Entry (One Way)": 10.8195,
+          "Roundabout Ahead": 3.919,
+          "No Through Road (T-Junction)": 2.4614,
+          "Blind-Spot Mirror (Convex Mirror)": 8.0314,
+          "Street Sign": 4.9168,
+          "Directional Sign": 5.4793,
+          "Tourist Sign": 0.1633,
+          "Auxiliary Sign": 6.4651,
+          "Back-Unknown": 32.7548,
+          "Other-Unknown": 11.4122
+        },
+        "class_count_reconciles": true
+      },
+      "valid": {
+        "images": 749,
+        "objects": 1996,
+        "class_counts": {
+          "Pedestrian Crossing": 139,
+          "Stop Sign": 135,
+          "No Entry (One Way)": 212,
+          "Roundabout Ahead": 86,
+          "No Through Road (T-Junction)": 69,
+          "Blind-Spot Mirror (Convex Mirror)": 159,
+          "Street Sign": 97,
+          "Directional Sign": 112,
+          "Tourist Sign": 3,
+          "Auxiliary Sign": 111,
+          "Back-Unknown": 642,
+          "Other-Unknown": 231
+        },
+        "class_percentages": {
+          "Pedestrian Crossing": 6.9639,
+          "Stop Sign": 6.7635,
+          "No Entry (One Way)": 10.6212,
+          "Roundabout Ahead": 4.3086,
+          "No Through Road (T-Junction)": 3.4569,
+          "Blind-Spot Mirror (Convex Mirror)": 7.9659,
+          "Street Sign": 4.8597,
+          "Directional Sign": 5.6112,
+          "Tourist Sign": 0.1503,
+          "Auxiliary Sign": 5.5611,
+          "Back-Unknown": 32.1643,
+          "Other-Unknown": 11.5731
+        },
+        "class_count_reconciles": true
+      },
+      "test": {
+        "images": 747,
+        "objects": 1978,
+        "class_counts": {
+          "Pedestrian Crossing": 143,
+          "Stop Sign": 130,
+          "No Entry (One Way)": 211,
+          "Roundabout Ahead": 67,
+          "No Through Road (T-Junction)": 61,
+          "Blind-Spot Mirror (Convex Mirror)": 160,
+          "Street Sign": 94,
+          "Directional Sign": 108,
+          "Tourist Sign": 3,
+          "Auxiliary Sign": 120,
+          "Back-Unknown": 661,
+          "Other-Unknown": 220
+        },
+        "class_percentages": {
+          "Pedestrian Crossing": 7.2295,
+          "Stop Sign": 6.5723,
+          "No Entry (One Way)": 10.6673,
+          "Roundabout Ahead": 3.3873,
+          "No Through Road (T-Junction)": 3.0839,
+          "Blind-Spot Mirror (Convex Mirror)": 8.089,
+          "Street Sign": 4.7523,
+          "Directional Sign": 5.4601,
+          "Tourist Sign": 0.1517,
+          "Auxiliary Sign": 6.0667,
+          "Back-Unknown": 33.4176,
+          "Other-Unknown": 11.1223
+        },
+        "class_count_reconciles": true
+      }
+    },
+    "total_unique_images": 7482,
+    "total_annotated_objects": 20509,
+    "reconciliation": {
+      "split_images_sum": 7482,
+      "split_objects_sum": 20509,
+      "image_total_reconciles": true,
+      "object_total_reconciles": true
+    },
+    "duplicate_exact_image_groups": 1,
+    "duplicate_source_filename_groups": 0,
+    "issues": [
+      {
+        "severity": "medium",
+        "type": "image_with_zero_objects",
+        "detail": "train: grp7_a3907179-IMG_2260.JPG"
+      },
+      {
+        "severity": "medium",
+        "type": "image_with_zero_objects",
+        "detail": "train: grp7_debd8cdb-IMG_2261.JPG"
+      },
+      {
+        "severity": "medium",
+        "type": "exact_image_duplicate",
+        "detail": "fcc9c96baa8a786aec355421a3dc11f24f5675a1fad0d814b815273c39d2c7b2: [{'split': 'train', 'file': 'grp11_05174eac-IMG_6411.jpeg'}, {'split': 'train', 'file': 'grp11_d5012226-IMG_6411.jpeg'}]"
+      }
+    ],
+    "manifest_cross_check": {
+      "rows": 7482,
+      "missing_manifest_rows_for_coco_images": [],
+      "manifest_rows_missing_from_coco_images": [],
+      "source_image_hash_duplicate_groups": 1,
+      "source_image_leakage_groups_across_splits": 0
+    },
+    "cross_split_source_filename_collision_groups": 0,
+    "probable_source_image_leakage_groups_across_splits": 0,
+    "source_qa_annotation_cross_check": {
+      "qa_files": 11,
+      "source_images": 7482,
+      "source_annotations": 20509,
+      "category_schemas": 1,
+      "matches_prepared_coco_images": true,
+      "matches_prepared_coco_annotations": true,
+      "matches_prepared_coco_per_class": true
+    }
+  }
+}

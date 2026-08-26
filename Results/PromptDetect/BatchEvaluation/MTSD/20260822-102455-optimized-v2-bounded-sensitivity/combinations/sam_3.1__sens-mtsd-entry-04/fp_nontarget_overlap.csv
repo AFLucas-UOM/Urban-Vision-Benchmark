@@ -1,0 +1,582 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_1495.jpg,2140.74,4306.16,2259.33,4743.36,0.5,Auxiliary Sign,0.9403
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_1510.jpg,1752.88,901.83,2719.31,2671.68,0.8008,Stop Sign,0.987
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_1557.jpg,1377.57,2636.51,3065.78,4052.2,0.9375,Pedestrian Crossing,0.9795
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_1564.jpg,1628.9,3155.99,2812.04,4799.19,0.9453,Other-Unknown,0.9777
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_1564.jpg,1820.16,2043.49,2486.77,3337.05,0.6172,Stop Sign,0.967
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_1599.jpg,1399.09,2141.24,2773.12,3351.62,0.9648,Pedestrian Crossing,0.9874
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_1645.jpg,1035.44,2349.71,2729.68,4214.1,0.4492,Blind-Spot Mirror (Convex Mirror),0.9835
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251123_150542.jpg,928.87,1177.83,1463.89,2292.13,0.8008,Pedestrian Crossing,0.9795
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251123_150542.jpg,957.92,291.29,1297.51,1440.05,0.6523,Roundabout Ahead,0.9738
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251123_164446.jpg,383.58,1867.27,1746.31,3206.55,0.4648,Back-Unknown,0.9871
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251123_165832.jpg,625.09,1830.88,1210.12,2850.47,0.8164,Blind-Spot Mirror (Convex Mirror),0.98
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_112108.jpg,1028.23,527.45,2285.13,1671.78,0.8203,Stop Sign,0.9846
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_113833.jpg,1373.07,573.5,2645.6,1818.26,0.416,Stop Sign,0.9833
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_114450.jpg,1773.37,492.6,2688.71,1930.55,0.8633,Stop Sign,0.9905
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_120326.jpg,2915.88,0.0,3472.0,945.26,0.6562,Other-Unknown,0.9512
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_120326.jpg,1537.89,820.9,2983.63,2797.16,0.5117,Blind-Spot Mirror (Convex Mirror),0.9809
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_121131.jpg,0.0,1961.08,516.23,3732.87,0.7031,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_121131.jpg,840.05,2258.15,1377.51,2900.37,0.5156,Blind-Spot Mirror (Convex Mirror),0.9669
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_121142.jpg,41.81,3653.88,304.51,4005.74,0.377,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_121556.jpg,361.5,1636.7,1626.97,2814.02,0.8203,Stop Sign,0.9836
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_121957.jpg,1707.84,2601.0,1826.44,2785.1,0.5625,Auxiliary Sign,0.9433
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_121957.jpg,1740.99,2620.3,1805.73,2697.3,0.4824,,0.2158
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_122125.jpg,671.87,1749.99,1395.83,3163.72,0.8906,Pedestrian Crossing,0.9644
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_122225.jpg,796.33,497.78,2911.78,2320.03,0.5859,Stop Sign,0.9808
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_122225.jpg,3265.08,2420.67,3337.87,2505.49,0.4375,,0.1319
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_122225.jpg,3219.93,2391.31,3394.15,2644.2,0.3613,Auxiliary Sign,0.9411
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_122515.jpg,880.65,1558.72,1629.67,2864.84,0.8789,Stop Sign,0.9699
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_123112.jpg,241.23,1525.16,1544.15,2724.55,0.8711,Stop Sign,0.9904
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_124400.jpg,554.09,1542.29,1516.27,3282.93,0.8594,No Through Road (T-Junction),0.9793
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251125_153252.jpg,1288.06,782.46,2162.41,1631.7,0.9609,Pedestrian Crossing,0.9634
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251126_123510.jpg,717.71,2105.83,1401.56,2711.2,0.9453,Pedestrian Crossing,0.977
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251126_123524.jpg,1861.63,3643.94,2080.0,4285.71,0.8008,Auxiliary Sign,0.9551
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251126_123524.jpg,1932.25,3675.11,2080.0,3973.62,0.4453,,0.3006
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251126_123910.jpg,593.27,2045.07,1576.77,2977.66,0.9453,Other-Unknown,0.9722
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20251126_123910.jpg,632.15,1251.93,1525.41,2041.26,0.4023,Stop Sign,0.9674
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260106_160010_253.jpg,1006.59,743.32,2072.12,1655.59,0.7227,Roundabout Ahead,0.9634
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260106_160010_253.jpg,1335.78,1105.55,1750.62,1508.68,0.4609,,0.1657
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260106_160549_637.jpg,1027.68,949.25,2224.11,2083.99,0.793,Stop Sign,0.9488
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260110_171243_436.jpg,971.02,1037.16,1938.92,1969.32,0.9766,Other-Unknown,0.987
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260110_172745_673.jpg,1299.29,1658.84,2534.94,3438.25,0.9062,Pedestrian Crossing,0.9795
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260110_173056_747.jpg,1002.81,842.79,2378.7,1599.78,0.3984,,0.4244
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260113_083821_567.jpg,3412.25,581.85,3613.85,724.26,0.7734,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260113_084947_261.jpg,1448.71,865.15,2365.97,1949.18,0.9062,,0.4417
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260113_085024_440.jpg,2274.55,813.83,3364.07,1887.78,0.9414,,0.2564
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_20260113_085024_440.jpg,1304.37,883.28,2261.65,2020.34,0.373,,0.406
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_IMG_8791.jpeg,521.0,2058.93,2370.24,3963.68,0.9414,Directional Sign,0.9831
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-16 at 17.52.23 (3).jpeg,159.37,731.79,1282.94,1760.11,0.7578,Stop Sign,0.9771
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-16 at 17.52.28 (3).jpeg,342.94,586.5,965.47,1188.59,0.9414,Pedestrian Crossing,0.9501
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-16 at 17.52.29.jpeg,378.69,633.32,1083.43,1311.81,0.9609,Pedestrian Crossing,0.9658
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-17 at 12.38.32 (2).jpeg,298.42,626.27,1071.52,1265.99,0.9492,Other-Unknown,0.9897
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-17 at 12.38.37 (2).jpeg,1164.47,1808.73,1316.02,2040.0,0.8477,No Through Road (T-Junction),0.9736
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-17 at 15.01.27 - Edited.jpg,563.31,992.29,1164.4,1585.82,0.9453,Roundabout Ahead,0.979
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-17 at 15.01.27 - Edited.jpg,546.69,456.08,1192.77,987.35,0.4688,Other-Unknown,0.9808
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-17 at 15.01.56 (1).jpeg,503.2,655.91,1318.07,1375.6,0.8203,Stop Sign,0.9693
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-17 at 15.02.00.jpeg,425.52,795.36,1207.77,1482.97,0.832,Stop Sign,0.9727
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-17 at 15.02.00.jpeg,115.64,2008.52,157.74,2040.0,0.4062,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp10_WhatsApp Image 2025-11-20 at 16.03.01 (1).jpeg,672.1,1116.77,1022.96,1508.74,0.918,Roundabout Ahead,0.9737
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_00ffbbb0-IMG_20251125_195040.jpg,2143.01,1970.99,2223.0,2047.21,0.7969,Directional Sign,0.9213
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_00ffbbb0-IMG_20251125_195040.jpg,1121.45,1814.23,1189.1,1886.58,0.6289,Other-Unknown,0.8399
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_00ffbbb0-IMG_20251125_195040.jpg,1755.64,1827.96,1803.62,1876.81,0.5117,Street Sign,0.7824
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_00ffbbb0-IMG_20251125_195040.jpg,1183.6,1819.99,1246.72,1883.61,0.4746,Pedestrian Crossing,0.8999
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_00ffbbb0-IMG_20251125_195040.jpg,1096.27,1787.12,1151.21,1841.91,0.3887,Stop Sign,0.9144
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_00ffbbb0-IMG_20251125_195040.jpg,1669.59,1830.66,1712.18,1881.94,0.3867,Pedestrian Crossing,0.7486
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_00ffbbb0-IMG_20251125_195040.jpg,1757.68,1784.37,1799.37,1827.96,0.3164,Other-Unknown,0.829
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_089d4626-IMG_20251125_192354.jpg,1435.1,997.41,2172.8,1776.58,0.9766,Other-Unknown,0.9739
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_08da688f-IMG_6393.jpeg,0.0,709.66,3484.43,2768.99,0.9297,Other-Unknown,0.5617
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_1346633a-IMG_20251125_195535.jpg,901.34,1783.4,1552.39,2422.51,0.9102,Other-Unknown,0.9716
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_1346633a-IMG_20251125_195535.jpg,272.92,1974.01,425.71,2113.3,0.6133,Directional Sign,0.9591
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_1346633a-IMG_20251125_195535.jpg,261.87,1833.47,415.12,1976.42,0.5312,Other-Unknown,0.9743
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_1346633a-IMG_20251125_195535.jpg,895.47,1111.51,1523.89,1768.92,0.4121,Stop Sign,0.9722
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_1c6ec821-IMG_20251125_194942.jpg,1054.65,1163.73,1821.57,1928.32,0.9727,Other-Unknown,0.9888
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_217d0bb2-IMG_1445.jpg,548.22,269.84,1555.12,2000.17,0.9141,Pedestrian Crossing,0.9815
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_243ba713-IMG_6313.jpg,3415.12,5391.16,3535.68,5570.77,0.4473,Stop Sign,0.9103
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_2a7d15c7-Pre_2026_6626.jpg,674.54,686.42,1663.22,1665.22,0.9688,Pedestrian Crossing,0.9817
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_2dae9065-IMG_20251125_195604.jpg,1340.15,1154.26,1809.0,2124.27,0.9141,Directional Sign,0.9376
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_2dae9065-IMG_20251125_195604.jpg,1328.22,258.78,1756.01,1222.28,0.875,Other-Unknown,0.907
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_3a5a4d41-Pre_2026_6633.jpg,817.06,1287.29,905.54,1390.2,0.8164,,0.0121
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_3f9be580-IMG_1323.jpg,1049.97,371.82,2284.54,1554.75,0.5469,Back-Unknown,0.9891
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_4029b5b7-Pre_2026_6760.jpg,2166.75,663.23,2695.65,1230.4,0.9531,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_4a8ce21e-IMG_20251125_194252.jpg,2533.24,2316.27,2769.22,2446.04,0.8008,,0.004
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_4a8ce21e-IMG_20251125_194252.jpg,1723.65,2484.25,1833.95,2578.68,0.3516,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_578f49cf-IMG_6367.jpeg,342.32,1256.98,2043.37,1987.57,0.9297,,0.1302
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_6bd01c27-IMG_1442.jpg,1077.89,426.85,1807.68,1644.12,0.9453,Pedestrian Crossing,0.9852
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_6d03b071-IMG_6395.jpeg,1116.96,1153.43,2500.83,2398.19,0.9492,,0.4012
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_6d1c0888-IMG_20251125_191657.jpg,1501.88,995.85,1617.98,1635.02,0.8984,Directional Sign,0.9302
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_7041f709-IMG_1379.jpg,1108.42,860.71,1758.51,2253.25,0.9609,Directional Sign,0.9876
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_87a2a97d-IMG_6417.jpeg,1574.89,1889.96,4094.77,5449.89,0.9219,Other-Unknown,0.9821
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_8d5205a5-IMG_6322.jpeg,859.16,1150.01,2143.18,2204.34,0.9688,,0.2049
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_8da30211-IMG_1389.jpg,981.69,321.05,2144.32,1560.3,0.332,Back-Unknown,0.9892
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_92113811-IMG_1371.jpg,723.64,0.0,2387.03,1565.04,0.3457,Back-Unknown,0.9942
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_93c9acc6-Pre_2026_6752.jpg,2354.67,530.3,3285.31,1173.6,0.9688,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_94c2771c-IMG_1367.jpg,1091.61,363.15,1969.81,2034.68,0.9414,Directional Sign,0.9811
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_9adb1ffc-IMG_1447.jpg,1063.8,495.18,2225.52,1746.38,0.9492,Pedestrian Crossing,0.967
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_9aea0791-Pre_2026_6686.jpg,652.84,693.89,1240.72,1689.52,0.7266,Stop Sign,0.9871
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_a9ff1854-IMG_6408.jpeg,1841.79,668.03,3125.58,1837.86,0.9766,,0.4183
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_aff5c880-IMG_6324.jpeg,1133.17,1258.11,1974.91,2152.12,0.9766,Other-Unknown,0.9875
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_b25d900c-Pre_2026_6648.jpg,721.22,919.65,1316.95,1604.24,0.4199,Blind-Spot Mirror (Convex Mirror),0.9881
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_b40e574e-IMG_1307.jpg,1225.08,274.16,1988.68,1060.02,0.9062,Other-Unknown,0.9722
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_b40e574e-IMG_1307.jpg,1569.02,543.63,1683.0,903.29,0.3047,,0.0664
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_b4a34518-Pre_2026_6659.jpg,590.44,826.49,1303.68,1700.53,0.9531,Pedestrian Crossing,0.9799
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_bab711b8-IMG_20251125_192613.jpg,1120.41,784.48,1845.45,1685.43,0.9609,Pedestrian Crossing,0.961
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_bdad925f-IMG_20251125_194953.jpg,1097.03,1272.63,1862.49,2071.46,0.4121,Back-Unknown,0.9875
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_cb23d6ca-IMG_20251125_190938.jpg,1353.12,1595.2,1656.32,2623.86,0.8789,Directional Sign,0.9585
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_cb23d6ca-IMG_20251125_190938.jpg,1373.99,2594.67,1675.52,3655.34,0.8125,Other-Unknown,0.9732
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_cf483702-IMG_20251125_195623.jpg,2583.99,2508.15,2799.87,2634.11,0.6914,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_d9b50eb1-Pre_2026_6691.jpg,665.97,1671.54,1289.07,2207.83,0.6992,Other-Unknown,0.9413
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_d9b50eb1-Pre_2026_6691.jpg,800.62,1238.04,1147.26,1680.64,0.5742,Stop Sign,0.9653
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_d9b50eb1-Pre_2026_6691.jpg,928.85,1843.93,1007.67,2094.87,0.3594,,0.0557
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_daaadabb-IMG_1451.jpg,921.16,0.0,1815.74,1384.93,0.9492,Pedestrian Crossing,0.9722
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_e27435a0-IMG_20251125_194217.jpg,811.04,1007.94,1636.7,1905.65,0.3281,Back-Unknown,0.9681
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_ebb70ae4-Pre_2026_6672.jpg,590.05,1168.96,2010.87,2251.62,0.8516,Pedestrian Crossing,0.9879
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_ee2f066e-IMG_20251125_194701.jpg,521.76,998.25,1470.93,1890.77,0.8242,Pedestrian Crossing,0.9639
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_ee2f066e-IMG_20251125_194701.jpg,1113.4,2595.66,1268.98,2763.42,0.8047,Directional Sign,0.9494
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_f09e9bf4-Pre_2026_6657.jpg,502.93,500.59,1648.78,1765.94,0.8828,Pedestrian Crossing,0.9814
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_f0c7f95a-IMG_6420.jpeg,709.58,1140.94,3418.75,2085.11,0.875,,0.3055
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_f3e6cd7a-IMG_6398.jpeg,1451.96,961.88,2386.56,3090.52,0.6719,Stop Sign,0.981
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_f3e6cd7a-IMG_6398.jpeg,2644.56,4704.16,2749.17,4859.05,0.5391,Other-Unknown,0.8916
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp11_f3e6cd7a-IMG_6398.jpeg,1132.37,4779.92,1205.91,4861.86,0.3301,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_091652b2-IMG20260105120954.jpg,1069.84,1210.23,2285.01,2327.04,0.8945,,0.2863
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_091652b2-IMG20260105120954.jpg,937.36,586.18,2405.03,1157.55,0.459,Directional Sign,0.9663
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_091652b2-IMG20260105120954.jpg,509.96,1045.73,2762.65,3068.06,0.3594,Auxiliary Sign,0.9612
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_094f8a9f-RV__2.jpeg,1073.25,1205.97,1819.84,1998.01,0.7383,Other-Unknown,0.9847
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_094f8a9f-RV__2.jpeg,1062.0,591.67,1814.43,1260.79,0.6992,Stop Sign,0.9728
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_094f8a9f-RV__2.jpeg,1241.72,1870.61,1719.24,3082.52,0.4824,Pedestrian Crossing,0.9501
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_094f8a9f-RV__2.jpeg,174.54,2787.15,332.01,2997.01,0.334,Auxiliary Sign,0.9647
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_094f8a9f-RV__2.jpeg,1060.59,585.81,1807.11,3083.41,0.3125,,0.3266
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_0dd8c85f-RV_001_114.jpeg,1925.75,3198.61,2052.78,3377.0,0.5508,Other-Unknown,0.9402
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_0dd8c85f-RV_001_114.jpeg,1908.64,3062.88,2034.55,3216.84,0.4668,Stop Sign,0.9408
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_0ea4c27e-RV_001_43.jpeg,917.41,1871.1,2137.94,2947.67,0.793,Stop Sign,0.9759
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_1bc3cf13-IMG_5516.jpeg,551.36,882.43,1058.28,1362.83,0.9297,Pedestrian Crossing,0.9728
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_22c68da3-IMG_4717.jpeg,744.4,1151.12,2375.42,2463.02,0.8945,Stop Sign,0.9814
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_2493a507-RV_001_172.jpeg,1024.23,2271.05,1975.07,3208.82,0.8906,Roundabout Ahead,0.9853
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_25ff97a8-IMG20260105132835.jpg,475.05,865.21,2721.68,2793.77,0.4277,No Through Road (T-Junction),0.9786
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_2a767150-RV_001_64.jpeg,909.41,2604.15,1932.98,3647.11,0.9648,Directional Sign,0.9699
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_2f062204-IMG_5549.jpeg,1777.85,3496.7,1838.74,3581.75,0.3457,Other-Unknown,0.8982
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_335c2601-IMG_4793.jpeg,569.39,3765.73,1274.36,4030.82,0.668,Other-Unknown,0.9285
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_335c2601-IMG_4793.jpeg,747.49,787.65,2236.57,2253.5,0.6055,Stop Sign,0.9837
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_37e4fc9d-RV_001_33.jpeg,1011.28,1897.72,2114.25,2986.03,0.3906,Back-Unknown,0.9876
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_37e4fc9d-RV_001_33.jpeg,1002.28,3593.13,1122.0,3729.74,0.3496,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_3b1bbe25-IMG_4677.jpeg,478.78,1003.93,2520.29,3267.47,0.9492,Pedestrian Crossing,0.9792
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_46552970-IMG_5766.jpeg,1050.21,1632.35,1946.01,2621.99,0.8828,No Through Road (T-Junction),0.9693
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_46552970-IMG_5766.jpeg,952.07,2622.24,2002.14,3361.4,0.3301,Auxiliary Sign,0.9863
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_4b0be6d1-IMG20260105131256.jpg,782.45,406.13,2471.94,3289.4,0.6562,Pedestrian Crossing,0.9683
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_5068c583-IMG_4683.jpeg,767.43,1410.65,1997.47,3003.73,0.9414,Pedestrian Crossing,0.9544
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_52634fe4-IMG_20260108_180144.jpg,1282.94,863.29,1767.1,3227.19,0.7266,Roundabout Ahead,0.9579
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_52634fe4-IMG_20260108_180144.jpg,2073.07,2211.48,2135.49,2275.92,0.3496,Directional Sign,0.8348
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_52634fe4-IMG_20260108_180144.jpg,2073.49,2147.8,2136.05,2211.5,0.3184,Stop Sign,0.8255
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_52634fe4-IMG_20260108_180144.jpg,1203.26,2110.89,1245.96,2189.84,0.3105,Stop Sign,0.8815
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_598f8dcc-IMG_5777.jpeg,380.33,750.93,1000.27,1357.1,0.8867,No Through Road (T-Junction),0.9762
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_598f8dcc-IMG_5777.jpeg,916.41,1424.73,983.42,1507.82,0.4473,No Through Road (T-Junction),0.9376
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_69e094db-IMG20260103164903.jpg,417.97,649.17,2381.5,2719.76,0.8906,No Through Road (T-Junction),0.9843
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_6ad1ae03-IMG_4778.jpeg,581.73,227.27,2650.86,1956.0,0.9688,Roundabout Ahead,0.9837
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_7fcdb608-IMG_5767.jpeg,981.72,2565.88,1832.38,3592.19,0.5625,Auxiliary Sign,0.9686
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_7fcdb608-IMG_5767.jpeg,1293.17,1347.35,1706.07,2673.08,0.5195,No Through Road (T-Junction),0.9828
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_8135c353-IMG_4634.jpeg,1046.56,3812.33,1528.46,4032.0,0.75,Roundabout Ahead,0.7765
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_831c366a-IMG_5656.jpeg,394.24,718.69,1244.37,1495.08,0.8203,Blind-Spot Mirror (Convex Mirror),0.9841
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_8b994555-IMG_5798.jpeg,58.49,2636.68,159.72,2754.67,0.7305,Pedestrian Crossing,0.901
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_8d820602-IMG_4687.jpeg,1278.19,1116.07,1841.32,3331.29,0.7773,Pedestrian Crossing,0.9347
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_8fe876b9-IMG_4754.jpeg,1632.61,846.72,2264.64,3126.04,0.6836,Pedestrian Crossing,0.9752
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_9082eb51-IMG20251230170110.jpg,1158.78,803.47,1967.63,3289.62,0.9336,Roundabout Ahead,0.972
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_a9638634-IMG20260105131308.jpg,991.13,737.49,2082.69,3246.81,0.9102,Roundabout Ahead,0.9674
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_ca48394e-RV_001_125.jpeg,1307.16,1988.77,1682.88,2993.9,0.8398,Stop Sign,0.9634
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_cb282f25-RV_001_112.jpeg,1041.34,2033.05,2056.5,2958.67,0.9141,No Through Road (T-Junction),0.9684
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_ce09cd20-IMG_4692.jpeg,746.86,2221.36,2175.02,3638.99,0.9062,Stop Sign,0.9736
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_d64c06cd-IMG20260103165218.jpg,686.44,882.13,2560.22,2849.79,0.7773,No Through Road (T-Junction),0.9798
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_d64c06cd-IMG20260103165218.jpg,469.98,2759.13,3072.0,3985.02,0.5703,Directional Sign,0.9601
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_d681b797-IMG20260105132903.jpg,1022.06,485.0,2234.11,3273.92,0.7812,Stop Sign,0.9772
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_db486299-IMG_5815.jpeg,985.63,1465.74,2175.46,2506.79,0.9492,No Through Road (T-Junction),0.9747
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_e1306f94-IMG20251230164545.jpg,535.58,1048.83,2688.21,3019.7,0.8516,Stop Sign,0.9878
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_ec712362-IMG_5803.jpeg,519.98,865.85,1064.3,1418.41,0.9297,Roundabout Ahead,0.9794
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_ec712362-IMG_5803.jpeg,842.34,1634.47,909.18,1709.07,0.3809,Directional Sign,0.9542
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_ec712362-IMG_5803.jpeg,499.84,256.68,1115.68,863.82,0.3301,Other-Unknown,0.9859
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_f4371c23-IMG_5562.jpeg,1042.94,1482.16,1603.56,2708.94,0.9141,Pedestrian Crossing,0.9628
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_f468f4a5-IMG_5772.jpeg,834.9,1333.28,1995.31,2865.55,0.8984,No Through Road (T-Junction),0.9648
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_fa18c1a9-IMG_5810.jpeg,1271.23,1559.83,1709.98,2987.33,0.9258,Roundabout Ahead,0.9476
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_fa18c1a9-IMG_5810.jpeg,2007.78,3353.52,2070.06,3446.53,0.3594,Pedestrian Crossing,0.9027
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_fd97d901-IMG20260105125535.jpg,1268.71,1225.5,1794.26,2660.28,0.9062,No Through Road (T-Junction),0.973
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp1_fdedfd29-IMG_4737.jpeg,1175.92,575.93,1986.24,3304.43,0.7344,No Through Road (T-Junction),0.9825
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_1a942391-IMG_20251224_114123.jpg,1550.22,1125.53,1611.16,1580.83,0.4336,No Through Road (T-Junction),0.8002
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_1d09be1b-MP_0034.jpg,1423.37,341.14,1536.51,1233.41,0.5664,Stop Sign,0.9581
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_1d09be1b-MP_0034.jpg,989.37,1214.23,1805.51,1641.71,0.4375,Street Sign,0.9577
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_1f7e1b10-20251224_132557.jpg,1062.29,1483.37,1978.21,2223.31,0.6953,Pedestrian Crossing,0.9852
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_24c5c7cd-20251223_155820.jpg,1350.49,1019.71,2168.48,1860.57,0.7578,Stop Sign,0.9705
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_24c5c7cd-20251223_155820.jpg,1979.54,1570.8,2294.85,2088.84,0.5664,Other-Unknown,0.9801
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_24fcf1af-MP_0080.jpg,754.03,1612.82,870.94,1755.71,0.7734,Stop Sign,0.9489
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_24fcf1af-MP_0080.jpg,1075.01,1753.94,1116.94,1804.29,0.3613,Other-Unknown,0.7278
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_32305793-MP_0024.jpg,950.03,1159.62,1921.84,2081.63,0.918,Roundabout Ahead,0.9862
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_32305793-MP_0024.jpg,833.4,190.82,2042.2,1152.98,0.3105,Other-Unknown,0.9736
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_339c8d04-26.side.jpg,998.47,509.18,1176.11,1233.55,0.4961,Pedestrian Crossing,0.9595
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_339c8d04-26.side.jpg,2130.66,1911.9,2228.85,1946.28,0.4238,,0.0001
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_3855fec5-20251223_150427.jpg,1114.72,2149.74,2117.28,4067.36,0.416,,0.0085
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_3e9d99d7-IMG_20251223_122636.jpg,1222.64,1518.33,1744.7,2028.93,0.5469,Back-Unknown,0.9843
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_3e9d99d7-IMG_20251223_122636.jpg,1208.32,858.22,1853.09,2028.15,0.3223,Back-Unknown,0.5489
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_5061299f-MP_0130.jpg,771.0,571.39,1587.64,1576.13,0.3301,Back-Unknown,0.9869
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_5dd50184-MP_0013.jpg,1261.09,798.64,1404.17,1617.87,0.3594,Pedestrian Crossing,0.8849
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_5e8f002c-IMG_20251223_132013.jpg,1252.6,1197.11,1782.87,1729.89,0.918,No Through Road (T-Junction),0.9671
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_62c50d8e-20251230_121740.jpg,1468.95,1029.71,1793.83,2074.27,0.7656,Stop Sign,0.9743
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_797d9987-MP_0038.jpg,762.84,183.16,1862.37,1256.09,0.4375,Stop Sign,0.9429
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_7bccf907-IMG_20251223_114643.jpg,1131.38,1648.7,1439.78,2028.56,0.918,Pedestrian Crossing,0.9394
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_7bccf907-IMG_20251223_114643.jpg,720.22,1645.14,915.72,1833.95,0.332,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_86560763-IMG_20251223_113000.jpg,148.16,2067.68,249.23,2190.59,0.6016,Roundabout Ahead,0.7035
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_888b1f4f-MP_0074.jpg,479.89,866.63,1177.59,1494.8,0.957,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_9272e80b-20251230_124926.jpg,1066.5,1191.12,2358.19,2496.13,0.9062,Stop Sign,0.9774
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_ab9b17dd-34.back.jpg,1419.65,2128.9,1501.64,2211.05,0.8555,Other-Unknown,0.9864
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_ab9b17dd-34.back.jpg,2043.11,2232.41,2096.29,2285.25,0.582,Other-Unknown,0.907
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_b7da3d82-20251230_123417.jpg,1215.9,970.7,2064.56,1821.39,0.8789,Stop Sign,0.9871
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_b9e760b0-IMG_20251223_125447.jpg,890.38,876.73,1992.2,1947.23,0.3594,Blind-Spot Mirror (Convex Mirror),0.9831
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_b9e760b0-IMG_20251223_125447.jpg,992.14,2270.04,1026.02,2318.26,0.3105,Auxiliary Sign,0.6377
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_bf551d52-MP_0136.jpg,606.96,1333.35,2454.27,1612.77,0.8984,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_c96ca64e-MP_0098.jpg,99.4,819.35,883.35,1600.67,0.9375,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_ced8bffa-14.front.jpg,635.83,1037.97,1254.86,1652.11,0.957,Pedestrian Crossing,0.9498
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_d201b393-MP_0004.jpg,2856.44,1095.27,3072.0,1900.92,0.5039,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_d3fe8c38-MP_0046.jpg,960.96,340.1,1857.76,1293.27,0.4961,Back-Unknown,0.9958
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_d71e8065-MP_0021.jpg,819.72,238.18,1822.76,1575.99,0.3066,Back-Unknown,0.7399
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_e55dea8e-MP_0157.jpg,1283.54,1303.17,2016.27,2021.98,0.9062,No Through Road (T-Junction),0.9711
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_ed201818-17.back.jpg,866.5,1515.74,1417.63,2073.92,0.8984,Roundabout Ahead,0.9769
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_ed201818-17.back.jpg,707.58,832.97,1465.07,1507.09,0.6289,Other-Unknown,0.9889
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp2_ee20554d-MP_0115.jpg,3079.7,1393.96,3354.48,1513.41,0.7539,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_13fcb840-IMG_20251203_093318.jpg,1144.47,318.86,2013.94,1373.76,0.3906,Back-Unknown,0.9829
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_17e38feb-20251129_115024.jpg,883.63,1700.43,1670.39,2542.72,0.6836,Stop Sign,0.9583
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_22c38c39-IMG_4293.jpeg,1320.26,1657.59,2095.7,2511.79,0.9648,,0.0561
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_3cee3d85-IMG_4285.jpeg,1192.94,1825.09,1938.51,2550.71,0.7734,Stop Sign,0.9725
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_3cee3d85-IMG_4285.jpeg,1385.0,2906.74,1496.23,3028.42,0.4355,Stop Sign,0.8762
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_458db4bf-IMG_9314.jpg,1021.89,2044.3,1670.63,3044.35,0.6836,Street Sign,0.9512
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_4daf8454-IMG_4356.jpeg,2188.09,3026.67,2231.69,3077.84,0.3965,Pedestrian Crossing,0.5981
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_4daf8454-IMG_4356.jpeg,294.86,2957.69,338.86,3040.27,0.3828,Other-Unknown,0.8244
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_4daf8454-IMG_4356.jpeg,1295.57,2984.34,1363.04,3063.91,0.3105,Pedestrian Crossing,0.7911
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5881a320-IMG_9141.jpg,2084.27,3203.13,2857.47,4563.13,0.3594,Blind-Spot Mirror (Convex Mirror),0.9831
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5a350ee3-IMG_9144.jpg,1764.92,3234.81,1884.31,3847.22,0.8008,Directional Sign,0.9788
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5a350ee3-IMG_9144.jpg,1524.07,1910.69,2596.87,2918.49,0.5312,Stop Sign,0.9838
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5a5ec99c-IMG_4369.jpeg,1263.12,2894.08,1389.04,3059.25,0.3379,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5a849df3-20251129_113801.jpg,1190.1,1462.92,1777.48,2020.06,0.8867,Roundabout Ahead,0.9874
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5a849df3-20251129_113801.jpg,1103.79,727.86,1830.3,1452.84,0.3867,Other-Unknown,0.9644
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5e7ebbc1-IMG_4337.jpeg,2100.88,1468.1,2658.55,1680.69,0.8164,,0.3088
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5e7ebbc1-IMG_4337.jpeg,1583.64,1462.21,2656.34,1691.57,0.6367,,0.1898
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_5e7ebbc1-IMG_4337.jpeg,1583.17,1472.27,2137.03,1696.87,0.5312,,0.1957
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_62bcab50-IMG_20251203_121207.jpg,1055.26,492.63,2227.35,1700.96,0.3574,Back-Unknown,0.9838
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_6a5c994c-IMG_9361.jpg,1611.88,3881.5,2735.03,4983.08,0.8203,,0.0248
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_6a5c994c-IMG_9361.jpg,1917.68,2635.1,2425.25,3974.73,0.625,Roundabout Ahead,0.9719
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_6a5c994c-IMG_9361.jpg,1832.17,1150.18,2521.56,2740.25,0.5859,Other-Unknown,0.943
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_729363da-IMG_4319.jpeg,1383.93,1509.43,1982.29,2157.5,0.8555,Stop Sign,0.9692
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_72ce7bb8-IMG_20251203_121930.jpg,1345.49,925.95,1924.94,1593.05,0.8555,Directional Sign,0.9731
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_87ee400a-IMG_9122.jpg,1932.82,1325.95,2251.3,2681.16,0.4824,Stop Sign,0.9807
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_8d66655f-IMG_4305.jpeg,1424.43,1305.46,1953.63,1868.43,0.3145,Blind-Spot Mirror (Convex Mirror),0.9939
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_940c99a8-IMG_9166.jpg,2073.24,2823.29,2522.56,4068.5,0.9062,Other-Unknown,0.9701
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_940c99a8-IMG_9166.jpg,2138.07,1735.3,2460.41,2918.65,0.3965,Stop Sign,0.9568
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_9e3990fa-20251129_124245.jpg,618.41,1392.34,2341.44,2963.95,0.7266,Blind-Spot Mirror (Convex Mirror),0.983
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_9ff54512-IMG_20251203_093925.jpg,1019.83,196.77,2027.7,1187.88,0.8359,Stop Sign,0.9758
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_a9724b83-20251129_122439.jpg,1267.91,1950.21,1463.43,2644.9,0.6719,Roundabout Ahead,0.9629
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_a9724b83-20251129_122439.jpg,979.8,3876.64,1193.73,4080.0,0.4688,Directional Sign,0.9003
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_ae42a8a0-20251129_121839.jpg,1122.87,1799.75,1884.56,2544.1,0.918,Other-Unknown,0.9864
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_ae42a8a0-20251129_121839.jpg,1108.47,1140.97,1821.01,1814.83,0.4707,Stop Sign,0.9788
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_aebbbcad-IMG_9204.jpg,2429.28,3576.95,2632.14,3785.98,0.8516,Directional Sign,0.9585
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_aebbbcad-IMG_9204.jpg,1634.18,1051.09,2739.66,2160.94,0.418,Stop Sign,0.9193
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_b05e6955-IMG_4433.jpeg,1422.66,813.71,2805.23,2105.75,0.3594,Blind-Spot Mirror (Convex Mirror),0.6614
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_c0cc3ce0-IMG_20251203_115646.jpg,1148.79,537.19,2039.08,1589.35,0.6328,Other-Unknown,0.9797
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_cb90b89e-IMG_9211.jpg,2696.16,4136.76,2907.08,4283.3,0.5703,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_e0a623d6-IMG_9293.jpg,2015.4,1451.49,2513.06,2816.21,0.8945,No Through Road (T-Junction),0.936
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_e337de9a-IMG_4362.jpeg,978.72,658.83,2144.52,1630.13,0.8242,Other-Unknown,0.9839
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_e337de9a-IMG_4362.jpeg,1499.13,955.03,1657.91,1443.11,0.4707,,0.0673
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_eb512649-IMG_4353.jpeg,1251.25,1515.03,1886.9,2640.8,0.4902,Back-Unknown,0.5431
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_f2a7e32a-IMG_4334.jpeg,1914.02,3160.57,2130.58,3211.71,0.377,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp3_f2a7e32a-IMG_4334.jpeg,1253.41,1773.43,1835.18,2343.07,0.3066,Back-Unknown,0.9906
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_0da97af9-20251222_133337.jpg,539.42,986.81,1909.75,2321.91,0.8086,Stop Sign,0.9909
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,305.87,1099.41,457.51,1266.27,0.8047,No Through Road (T-Junction),0.9627
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,296.11,1685.18,371.94,1828.38,0.4219,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_1d0747c0-20260107_105907.jpg,464.14,1575.82,1307.72,2395.94,0.9531,Roundabout Ahead,0.9741
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_1d0747c0-20260107_105907.jpg,351.96,597.39,1342.69,1560.8,0.373,Other-Unknown,0.9791
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251130_115523.jpg,1730.38,2929.44,1795.1,2994.91,0.4023,Pedestrian Crossing,0.8735
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251130_115532.jpg,730.23,1426.01,1957.05,2398.12,0.8086,Stop Sign,0.9797
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251130_115532.jpg,1663.9,1486.79,2596.48,3251.64,0.4629,Street Sign,0.9743
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251130_115807.jpg,727.72,2472.88,1329.08,3729.37,0.5195,Pedestrian Crossing,0.9707
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251130_120143.jpg,1522.73,1684.71,1720.44,3067.84,0.3477,Pedestrian Crossing,0.9224
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251229_150338.jpg,721.72,2468.85,1881.74,3674.57,0.918,Roundabout Ahead,0.9781
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251229_150338.jpg,725.58,1456.64,1945.69,2456.12,0.5195,Other-Unknown,0.9642
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251229_151051.jpg,1227.08,2408.85,2355.69,3657.08,0.9453,Roundabout Ahead,0.9748
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251229_151051.jpg,1025.34,1154.71,2387.73,2382.99,0.4551,Other-Unknown,0.9745
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251231_160526.jpg,991.79,1497.2,2013.63,2436.29,0.9258,No Through Road (T-Junction),0.9748
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251231_160545.jpg,1231.48,1421.98,1572.7,2422.52,0.6484,No Through Road (T-Junction),0.9214
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_20251231_160556.jpg,1846.06,1930.94,2038.67,2510.14,0.7031,No Through Road (T-Junction),0.9651
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_219a5ac5-20251116_164504.jpg,810.82,2559.67,1076.3,3306.86,0.5469,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_219a5ac5-20251116_164504.jpg,774.8,2415.97,1155.39,4028.67,0.5,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_21c64815-20251116_163111.jpg,560.21,1171.77,1766.2,2173.25,0.6836,Stop Sign,0.9688
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_25671e9a-WhatsApp_Image_2026-01-14_at_11.11.43_3.jpeg,542.81,771.61,876.93,1110.33,0.9336,Roundabout Ahead,0.9732
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_25671e9a-WhatsApp_Image_2026-01-14_at_11.11.43_3.jpeg,1092.56,960.77,1113.26,986.45,0.3613,Other-Unknown,0.8403
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_25671e9a-WhatsApp_Image_2026-01-14_at_11.11.43_3.jpeg,456.57,319.38,945.42,764.36,0.3457,Other-Unknown,0.9606
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_2659e726-20260107_105845.jpg,477.53,1108.11,1631.81,2665.9,0.9688,Roundabout Ahead,0.9646
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_2659e726-20260107_105845.jpg,510.48,0.0,1586.22,1214.66,0.6133,Other-Unknown,0.9884
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_27645844-20260107_151619.jpg,148.47,631.58,466.32,1067.32,0.9297,Roundabout Ahead,0.9678
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_27645844-20260107_151619.jpg,89.0,38.02,529.35,626.96,0.3086,Other-Unknown,0.9744
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_27f66596-20260109_125516.jpg,1034.08,974.69,1101.23,1087.72,0.8516,,0.0033
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_3a0abdfb-20251116_161259.jpg,839.81,880.37,1348.95,1919.72,0.8477,Pedestrian Crossing,0.9827
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_3a0abdfb-20251116_161259.jpg,816.16,1577.9,1453.59,2232.71,0.3672,Auxiliary Sign,0.9502
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_53b94993-WhatsApp_Image_2026-01-14_at_11.10.30_2.jpeg,559.2,1171.9,837.62,1510.99,0.4102,Directional Sign,0.9673
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_5886bc7f-20251116_161202.jpg,1244.44,1405.2,1400.05,1884.77,0.8984,Stop Sign,0.9547
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_5c62b2f6-20251117_104837.jpg,426.03,1320.29,1646.01,2354.0,0.7109,Pedestrian Crossing,0.9743
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_5c62b2f6-20251117_104837.jpg,639.15,576.8,1449.85,1395.63,0.6367,Stop Sign,0.9465
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_63c4320e-WhatsApp_Image_2026-01-14_at_11.10.32_3.jpeg,585.24,684.17,827.03,915.33,0.8438,No Through Road (T-Junction),0.9628
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_66eacd8c-20260109_124456.jpg,841.58,851.89,1895.38,2654.37,0.8203,No Through Road (T-Junction),0.9707
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_763f17c4-20260107_150842.jpg,520.25,1481.39,1358.53,2285.12,0.9375,Roundabout Ahead,0.9819
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_763f17c4-20260107_150842.jpg,1648.96,2889.18,1755.57,3008.2,0.5273,Directional Sign,0.9441
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_763f17c4-20260107_150842.jpg,483.98,549.36,1391.72,1479.95,0.3516,Other-Unknown,0.9822
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,599.1,887.78,819.48,1110.63,0.8789,Roundabout Ahead,0.9752
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_7af17460-WhatsApp_Image_2026-01-14_at_11.11.40_2.jpeg,1173.19,951.89,1239.99,1017.34,0.3359,Directional Sign,0.9868
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_7b6a28a6-WhatsApp_Image_2026-01-14_at_11.10.25_4.jpeg,570.87,671.07,883.79,978.39,0.9297,No Through Road (T-Junction),0.9736
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_82399059-20251116_165140.jpg,796.02,2245.13,1632.3,3353.92,0.7578,,0.3566
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_82399059-20251116_165140.jpg,332.01,2021.19,1980.02,3542.4,0.375,Other-Unknown,0.9582
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_83705e8e-WhatsApp_Image_2026-01-14_at_11.10.28_3.jpeg,927.15,1133.54,952.14,1158.73,0.4512,,0.1744
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,587.84,950.3,822.85,1183.55,0.9375,Other-Unknown,0.9799
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,118.59,1169.41,192.05,1240.81,0.8047,Other-Unknown,0.9545
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,584.47,723.36,815.22,947.84,0.3066,No Through Road (T-Junction),0.9508
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_8b497905-20260107_150756.jpg,830.69,1517.3,1367.86,2064.69,0.8945,Roundabout Ahead,0.981
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_8b497905-20260107_150756.jpg,174.18,2630.76,271.88,2733.03,0.6523,Directional Sign,0.9355
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_8b497905-20260107_150756.jpg,710.34,803.52,1440.3,1508.92,0.4043,Other-Unknown,0.9718
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_8bd079ee-20260107_105937.jpg,541.64,1112.53,1065.33,1645.34,0.9453,Pedestrian Crossing,0.9789
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_935db33c-20260107_105737.jpg,751.56,1831.74,1537.14,2577.73,0.9141,Roundabout Ahead,0.9646
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_935db33c-20260107_105737.jpg,647.32,1064.36,1570.39,1821.73,0.498,Other-Unknown,0.9622
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_94287dbf-20260113_132935.jpg,942.78,1335.32,1780.95,2824.64,0.8945,No Through Road (T-Junction),0.9795
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_9c4db066-WhatsApp_Image_2026-01-14_at_10.34.44_2.jpeg,157.72,417.83,405.1,674.45,0.3594,Stop Sign,0.9844
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_9c4db066-WhatsApp_Image_2026-01-14_at_10.34.44_2.jpeg,134.62,873.86,149.03,905.56,0.3164,Directional Sign,0.9383
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_abe76f20-20260109_124535.jpg,749.09,285.7,2096.86,2613.77,0.8672,No Through Road (T-Junction),0.973
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_b3d0eaa4-20251116_163427.jpg,288.33,836.02,663.93,1389.08,0.8203,,0.1136
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_b3d0eaa4-20251116_163427.jpg,30.11,471.23,918.08,2501.09,0.5312,Auxiliary Sign,0.9857
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_bdef9845-20260109_130552.jpg,741.96,1266.76,1977.43,2351.15,0.6094,Blind-Spot Mirror (Convex Mirror),0.9894
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_c909a40a-20251222_142239.jpg,527.07,563.46,2033.57,2014.32,0.9531,Pedestrian Crossing,0.9843
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_cdcb1057-WhatsApp_Image_2026-01-14_at_11.11.40_1.jpeg,349.66,841.3,398.47,884.37,0.6836,Directional Sign,0.9427
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_cdcb1057-WhatsApp_Image_2026-01-14_at_11.11.40_1.jpeg,234.53,743.72,261.59,770.1,0.3926,Other-Unknown,0.677
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_d1c1ed24-20260113_130204.jpg,1054.96,1573.3,1836.63,2331.9,0.9414,No Through Road (T-Junction),0.9687
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_d2b85a88-20251116_163522.jpg,418.01,956.4,567.25,1167.32,0.5547,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_d5aaacb6-20251116_165125.jpg,585.66,885.14,1568.36,1889.31,0.3008,Blind-Spot Mirror (Convex Mirror),0.9896
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_d78448ea-20251117_105829.jpg,12.76,3245.59,227.08,3458.61,0.7031,Stop Sign,0.9516
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_d8a007d5-20260109_123932.jpg,529.49,2160.27,1896.3,4000.0,0.9531,Other-Unknown,0.9895
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_d8a007d5-20260109_123932.jpg,710.97,126.88,1706.02,2296.84,0.4023,No Through Road (T-Junction),0.9787
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_db6dffba-WhatsApp_Image_2026-01-14_at_11.12.35_1.jpeg,480.79,939.02,634.15,1230.96,0.8945,Directional Sign,0.9346
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_dddb030d-20251230_104127.jpg,407.36,5.23,2204.43,2676.74,0.498,Back-Unknown,0.6633
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_dddb030d-20251230_104127.jpg,2744.28,2332.67,2817.0,2405.63,0.4531,Pedestrian Crossing,0.8227
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_dfec1b25-20260107_105532.jpg,240.14,304.02,1252.23,1885.78,0.4395,Back-Unknown,0.5002
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_e63ad5ed-WhatsApp_Image_2026-01-14_at_11.10.19_1.jpeg,535.37,759.28,903.22,1120.61,0.9414,No Through Road (T-Junction),0.9774
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_f171227c-20251222_132239.jpg,0.0,0.0,1439.46,1184.48,0.8242,Other-Unknown,0.9845
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_f1d0d896-WhatsApp_Image_2026-01-14_at_11.12.20.jpeg,543.34,835.7,828.76,1225.18,0.832,No Through Road (T-Junction),0.9739
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,571.19,557.96,788.37,1134.21,0.9102,No Through Road (T-Junction),0.947
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp4_ffdc6f75-WhatsApp_Image_2026-01-14_at_11.10.20.jpeg,716.4,1153.55,882.08,1387.39,0.9336,Directional Sign,0.9591
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_05facbdc-BenTaliana_23_Front.jpeg,2025.84,3133.93,2101.97,3222.17,0.4688,,0.0012
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_05facbdc-BenTaliana_23_Front.jpeg,734.31,6798.57,804.83,6869.98,0.3066,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_13ab0dbb-BenTaliana_59_Front.jpeg,1152.79,1600.47,3521.48,3780.08,0.9023,No Through Road (T-Junction),0.961
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_2141c95b-MelatAssefa_28_Side.jpg,676.51,331.38,1880.82,1762.6,0.6328,Stop Sign,0.8066
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1269.58,1246.51,2021.31,1942.46,0.8672,Pedestrian Crossing,0.984
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1066.95,2730.25,1184.2,2855.9,0.3848,Other-Unknown,0.9866
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_2da1aa64-AlisonAttard_27_Front.jpeg,1966.83,1311.75,2473.3,1804.93,0.9453,,0.2779
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_3cd9a2bc-MelatAssefa_45_Side.jpg,910.95,813.12,2067.37,2921.3,0.918,Stop Sign,0.9791
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2873.08,1255.05,3271.29,1477.95,0.6602,,0.019
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2772.84,1126.09,4032.0,1648.09,0.4414,,0.0592
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,1373.24,1072.13,2156.45,1389.94,0.7969,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1229.05,1607.68,1933.22,2295.24,0.9258,No Through Road (T-Junction),0.9469
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1384.33,1415.96,2036.34,2050.46,0.8164,Pedestrian Crossing,0.9682
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_50e6a3c4-MichaelFarrugia_55_Front.jpg,1944.59,2224.98,2116.38,2401.29,0.7695,Other-Unknown,0.9801
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_6bb6fe17-BenTaliana_15_Back.jpeg,839.85,2324.09,2520.22,4382.24,0.4648,Blind-Spot Mirror (Convex Mirror),0.9942
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_6cdcc943-AlisonAttard_14_Back.jpeg,1164.59,975.49,2380.53,2221.87,0.7422,,0.4593
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_704b34ba-BenTaliana_38_Side.jpeg,637.74,1326.63,1283.03,2598.38,0.8477,Pedestrian Crossing,0.9484
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_770e5bfc-BenTaliana_60_Side.jpeg,1090.42,809.57,1564.38,1742.02,0.8984,Other-Unknown,0.9602
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_770e5bfc-BenTaliana_60_Side.jpeg,1098.92,1613.16,1555.05,2921.88,0.4277,Stop Sign,0.8912
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_9c857801-BenTaliana_43_Side.jpeg,4285.75,6383.67,4458.68,6715.78,0.832,Directional Sign,0.9082
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_9c857801-BenTaliana_43_Side.jpeg,126.28,7076.98,259.29,7237.65,0.6953,Other-Unknown,0.923
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_9c857801-BenTaliana_43_Side.jpeg,1719.27,2306.96,2620.84,5366.59,0.5273,Pedestrian Crossing,0.9368
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_9c857801-BenTaliana_43_Side.jpeg,546.78,7183.13,622.28,7270.64,0.4766,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_a1a873a2-MichaelFarrugia_21_Side.jpg,1197.08,976.41,1761.29,1738.68,0.5508,Stop Sign,0.9697
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_a1ced4bc-BenTaliana_22_Front.jpeg,562.25,1042.04,2644.47,2743.39,0.7461,Stop Sign,0.9837
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_a1ced4bc-BenTaliana_22_Front.jpeg,0.0,694.94,156.91,2285.87,0.3594,Other-Unknown,0.8181
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_a8752ff5-MelatAssefa_56_Side.jpg,1362.27,585.82,1987.53,1706.62,0.9258,Stop Sign,0.9868
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_ab2f9697-MichaelFarrugia_48_Side.jpg,1162.84,1947.29,1512.32,2585.24,0.8438,Other-Unknown,0.9755
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_ab2f9697-MichaelFarrugia_48_Side.jpg,1169.58,1357.19,1513.62,1989.99,0.5586,Stop Sign,0.9581
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_ab2f9697-MichaelFarrugia_48_Side.jpg,1158.57,1358.32,1523.03,4080.0,0.3066,,0.2277
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,1263.6,1646.12,2666.26,4707.61,0.8789,No Through Road (T-Junction),0.9893
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_bc59500b-AlisonAttard_47_Side.jpeg,2644.3,1168.18,3178.57,2267.1,0.8086,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_bc59500b-AlisonAttard_47_Side.jpeg,1395.84,1695.4,2523.25,1862.65,0.6133,,0.1121
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_bc59500b-AlisonAttard_47_Side.jpeg,1392.01,1166.72,3176.07,2267.79,0.3066,,0.1405
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_dcad2b9b-MichaelFarrugia_64_Side.jpg,1157.5,1417.23,1718.14,2603.74,0.9258,Pedestrian Crossing,0.9605
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_e43a48bc-BenTaliana_53_Side.jpeg,897.18,1221.04,1345.91,2169.61,0.918,Pedestrian Crossing,0.9595
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1299.31,1555.38,2084.1,2321.13,0.9531,No Through Road (T-Junction),0.969
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_e897b21c-MelatAssefa_52_Front.jpg,3276.86,5104.39,3518.04,5369.37,0.7773,Directional Sign,0.9612
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_e897b21c-MelatAssefa_52_Front.jpg,1513.8,2682.99,2527.1,3663.96,0.6484,Stop Sign,0.9214
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_ec52a808-MichaelFarrugia_58_Side.jpg,1240.31,1467.84,1774.14,2439.34,0.9062,Roundabout Ahead,0.973
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_f3d53558-BenTaliana_52_Front.jpeg,756.07,1995.22,3436.4,4094.68,0.7578,Roundabout Ahead,0.967
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_f3d53558-BenTaliana_52_Front.jpeg,1665.66,2721.78,2660.96,3649.5,0.3496,,0.1587
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1074.73,1669.83,1874.22,2400.5,0.9297,No Through Road (T-Junction),0.975
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp5_fea9ceb6-MichaelFarrugia_19_Back.jpg,1455.13,2007.99,2234.83,2977.21,0.5859,Street Sign,0.973
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_205fffc2-Screenshot_2025-12-05_135424.png,92.33,34.88,222.76,173.38,0.5859,Blind-Spot Mirror (Convex Mirror),0.981
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_205fffc2-Screenshot_2025-12-05_135424.png,92.28,34.76,222.77,318.86,0.5195,,0.4917
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_205fffc2-Screenshot_2025-12-05_135424.png,122.73,178.51,157.73,318.49,0.4395,No Through Road (T-Junction),0.8667
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_205fffc2-Screenshot_2025-12-05_135424.png,91.82,33.97,223.06,736.81,0.3125,,0.1994
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_255dc793-IMG_0327.JPG,900.79,1572.36,3542.75,2066.2,0.8555,,0.1465
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_264240ca-IMG_0303.JPG,1202.46,738.5,3646.37,2067.78,0.8828,,0.4734
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_34078a23-Screenshot_2025-12-05_144602.png,89.49,44.44,211.38,164.22,0.7305,Stop Sign,0.9797
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_37c705bd-IMG_6247.JPG,940.63,990.34,1816.19,1676.04,0.9492,Roundabout Ahead,0.9667
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_3ce4063d-IMG_0217.JPG,1545.79,1397.39,2128.6,1732.01,0.9375,,0.2655
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_674b294f-Screenshot_2025-12-05_140949.png,49.45,111.66,143.05,237.78,0.9375,Other-Unknown,0.9478
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_7608155e-Screenshot_2025-12-05_135221.png,250.75,61.1,316.31,126.6,0.7734,Pedestrian Crossing,0.9592
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_7608155e-Screenshot_2025-12-05_135221.png,47.01,45.01,135.04,151.01,0.7695,Stop Sign,0.966
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_8d7bc213-IMG_0237.JPG,880.2,1282.35,2538.2,2284.53,0.9688,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_92b4ef64-IMG_6151.JPG,985.71,2530.51,2109.79,3778.22,0.8867,Directional Sign,0.9508
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_9e084d7c-IMG_0221.JPG,1535.76,1510.71,1940.52,1936.04,0.7773,Stop Sign,0.9764
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_9e256948-IMG_0275.JPG,1682.15,1302.28,2124.21,1886.36,0.9062,,0.3327
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_9e256948-IMG_0275.JPG,2247.34,486.22,2648.07,1824.24,0.3887,,0.1328
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_ad8b6cea-IMG_0342.JPG,1473.38,316.83,3132.19,2295.89,0.4316,,0.4158
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_b1f0ac5c-IMG_0227.JPG,1034.89,695.22,2344.42,2111.64,0.7539,,0.4756
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_b1f0ac5c-IMG_0227.JPG,2296.76,319.29,2896.4,675.03,0.6641,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_b1f0ac5c-IMG_0227.JPG,2901.03,0.0,3007.33,72.26,0.4961,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_b1f0ac5c-IMG_0227.JPG,1783.56,268.6,2897.91,714.25,0.3633,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_ba6a303c-IMG_0314.JPG,279.47,846.91,2153.83,2101.0,0.7969,Roundabout Ahead,0.9811
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_ba6a303c-IMG_0314.JPG,854.78,1273.37,1531.28,1834.18,0.5195,,0.1583
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_c2b7f6e2-IMG_0300.JPG,1206.86,563.29,2953.25,2581.9,0.625,,0.4795
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_c8db20f0-IMG_6257.JPG,1494.04,752.3,1716.77,1855.95,0.7539,No Through Road (T-Junction),0.9826
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_cebbcc7c-Screenshot_2025-12-05_141232.png,81.93,85.57,106.95,136.82,0.8398,Roundabout Ahead,0.9427
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_cebbcc7c-Screenshot_2025-12-05_141232.png,77.72,20.62,112.61,137.27,0.3066,Other-Unknown,0.5411
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_e18d6d29-IMG_0313.JPG,3411.28,2221.1,3652.22,2436.39,0.8789,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_e4194181-Screenshot_2025-12-05_124458.png,518.38,76.29,634.62,213.67,0.7461,Stop Sign,0.9856
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_e4194181-Screenshot_2025-12-05_124458.png,505.46,297.53,528.85,358.72,0.5156,Directional Sign,0.8478
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_e4194181-Screenshot_2025-12-05_124458.png,510.06,302.98,527.53,324.95,0.4258,,0.2346
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_e4194181-Screenshot_2025-12-05_124458.png,515.77,74.82,636.02,709.0,0.3125,,0.2104
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_ec035947-IMG_6142.JPG,424.43,302.26,2550.06,2025.08,0.9023,Pedestrian Crossing,0.9873
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp6_f6200360-IMG_6254.JPG,1375.99,740.64,1765.66,2204.62,0.8711,No Through Road (T-Junction),0.9563
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_01ba126c-IMG_1741.jpg,924.65,100.2,3410.34,2451.79,0.9297,Pedestrian Crossing,0.5879
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_0c807ae1-IMG_1804.jpg,1241.96,148.14,3401.08,2770.27,0.9766,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_0cc91b71-IMG_2114.JPG,372.48,127.26,2993.0,2768.78,0.7695,Stop Sign,0.5856
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_133305c1-IMG_6701.jpeg,1106.53,1365.12,1279.53,1869.56,0.8477,Stop Sign,0.9544
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_17ffbc31-IMG_6632.jpeg,1330.84,938.15,1464.13,1661.03,0.6133,Pedestrian Crossing,0.7334
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_27403473-IMG_2301.JPG,916.78,1878.38,1131.86,2751.1,0.3203,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_3199d5af-IMG_6619.jpeg,392.47,2123.74,510.53,2274.95,0.6367,Other-Unknown,0.7084
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_3199d5af-IMG_6619.jpeg,1223.17,1337.91,1367.61,1806.42,0.4688,Pedestrian Crossing,0.9324
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_3199d5af-IMG_6619.jpeg,1660.19,2177.37,1707.62,2240.28,0.4121,Pedestrian Crossing,0.8306
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_3335816b-IMG_1863.jpg,0.0,0.81,1305.76,1389.43,0.7891,,0.107
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_46129e9c-IMG_6657.jpeg,1142.55,1309.53,1438.53,1611.04,0.8438,Stop Sign,0.9861
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_4c22ebaa-IMG_6807.jpeg,1498.46,1980.52,1930.8,2465.85,0.6055,Blind-Spot Mirror (Convex Mirror),0.9743
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_50fb19de-IMG_1779.jpg,770.99,1439.36,3791.6,1738.63,0.8828,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_55fe17bd-IMG_6660.jpeg,2896.74,1585.96,2947.45,1671.18,0.4785,Other-Unknown,0.8703
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_6dd51e97-IMG_6617.jpeg,1240.99,1488.11,1295.79,1792.91,0.4531,Pedestrian Crossing,0.9025
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_81ace7bd-IMG_1823.jpg,1666.55,689.89,3332.56,2789.44,0.9648,,0.0199
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_87ab4012-IMG_1929.jpg,1840.16,142.3,3476.45,2338.05,0.9648,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_897df19a-IMG_2311.JPG,359.43,1916.41,494.85,2045.21,0.8789,Directional Sign,0.9898
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_8c70ced7-IMG_6778.jpeg,1182.74,1390.67,1536.35,1746.95,0.8711,Stop Sign,0.9878
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_8e1e7992-IMG_6659.jpeg,1740.86,1722.61,1850.59,1864.55,0.7812,Other-Unknown,0.9109
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_8e1e7992-IMG_6659.jpeg,2058.7,1802.56,2151.08,1893.85,0.5742,Pedestrian Crossing,0.8313
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_8e1e7992-IMG_6659.jpeg,1374.53,1171.75,1526.05,1637.24,0.5078,Stop Sign,0.9672
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_93d54be7-IMG_6607.jpeg,1002.77,1214.39,1101.35,1536.55,0.8125,Stop Sign,0.941
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_998eacf2-IMG_6613.jpeg,1575.32,1327.97,1658.08,1626.08,0.707,Pedestrian Crossing,0.8834
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_b45f5f31-IMG_2274.JPG,1047.26,1048.31,1501.13,1964.51,0.4336,Back-Unknown,0.5041
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_b552bf33-20251215_150109.jpg,1014.69,1041.31,1192.88,1922.34,0.7695,Stop Sign,0.9758
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_b65b2b8e-20251215_143141.jpg,797.66,1015.17,1637.87,1408.16,0.3164,Street Sign,0.9661
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_c1d05649-IMG_2109.JPG,453.5,307.19,2764.04,2779.79,0.6641,Stop Sign,0.5454
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_c21d51bf-IMG_6622.jpeg,1796.81,1773.97,1848.55,1834.91,0.5352,Stop Sign,0.8939
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_c21d51bf-IMG_6622.jpeg,1016.45,1734.21,1067.6,1792.44,0.4785,Pedestrian Crossing,0.5987
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_c21d51bf-IMG_6622.jpeg,1090.14,1751.55,1129.59,1799.22,0.3516,,0.46
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_cddeeb7f-IMG_6636.jpeg,1250.86,1409.98,1428.81,1592.08,0.793,Pedestrian Crossing,0.9648
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_cddeeb7f-IMG_6636.jpeg,1245.18,1855.48,1307.82,1920.64,0.4785,Other-Unknown,0.8737
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_d36e330f-20251215_150902.jpg,736.85,1079.72,1662.32,1939.37,0.7969,Stop Sign,0.9795
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_d5464bd2-IMG_6729.jpeg,1650.83,1424.37,1884.76,2019.46,0.5391,Stop Sign,0.9902
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_d7ded33c-IMG_6742.jpeg,1852.46,2059.46,1908.65,2125.18,0.7383,Other-Unknown,0.7995
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_d7ded33c-IMG_6742.jpeg,1868.58,2122.05,1897.05,2178.25,0.5078,Other-Unknown,0.7581
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_e16f743b-IMG_1838.jpg,907.16,1456.53,3645.44,1746.18,0.7305,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_f5c11235-IMG_2319.JPG,1534.84,769.74,1803.81,887.75,0.8945,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_f5c11235-IMG_2319.JPG,2050.58,2742.91,2181.71,2788.54,0.4297,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_f6c47dc2-IMG_2182.JPG,1526.48,1487.19,2857.35,1734.39,0.8359,,0.1451
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_f7f0f5bb-IMG_6628.jpeg,1234.53,1073.66,1712.62,1598.23,0.4551,Back-Unknown,0.9762
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_fb3a590f-IMG_6793.jpeg,1282.36,1553.45,1655.57,1926.81,0.75,Stop Sign,0.9888
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_fb3a590f-IMG_6793.jpeg,1028.88,1933.78,1125.51,2050.98,0.3262,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp7_ffcca6e4-IMG_6603.jpeg,1421.63,1841.34,1738.78,2175.96,0.8086,Stop Sign,0.982
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_0487e0f7-front.jpg,1407.66,698.58,2532.19,1767.49,0.8867,Stop Sign,0.9804
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_06980edd-front.jpg,1335.63,895.37,2603.72,2097.14,0.9648,Roundabout Ahead,0.9818
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_1023d97f-front.jpg,1173.69,913.21,2751.12,2411.58,0.9688,Roundabout Ahead,0.9797
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_1023d97f-front.jpg,1497.31,0.0,2650.52,915.14,0.3184,Other-Unknown,0.9575
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_1023d97f-front.jpg,3792.12,2937.7,3838.51,3006.25,0.3066,Roundabout Ahead,0.8173
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_14aaa44c-IMG_0211.JPG,1750.21,1048.14,3480.53,3078.36,0.9102,,0.4722
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_1b5dcc93-back.jpg,571.53,819.02,1675.73,2577.69,0.3574,,0.4849
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_1b5dcc93-back.jpg,688.66,2823.79,1435.97,3126.55,0.3105,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_2aed70e2-front.jpg,20.05,2274.78,1874.33,3059.45,0.4219,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_2d237c79-side.jpg,1902.59,957.17,2134.78,1848.34,0.8164,No Through Road (T-Junction),0.9291
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_2e0ed656-front.jpg,1303.11,851.71,2674.25,2066.62,0.875,Stop Sign,0.9689
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_3799bcb2-side.jpg,676.45,1353.06,1170.99,2345.65,0.8047,Pedestrian Crossing,0.9583
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_3799bcb2-side.jpg,1125.81,2565.51,1405.88,2777.97,0.6719,Roundabout Ahead,0.8755
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_3799bcb2-side.jpg,120.17,2857.52,232.3,3009.37,0.4648,Directional Sign,0.9286
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_3ab29317-front.jpg,656.69,1356.97,1673.13,2440.82,0.7891,No Through Road (T-Junction),0.9858
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_3b4e798b-front.jpg,996.02,1709.43,1794.69,2580.54,0.9609,Pedestrian Crossing,0.9651
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_3b4e798b-front.jpg,1835.67,3519.79,1907.17,3605.79,0.3184,Stop Sign,0.8638
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_4802289d-side.jpg,1321.82,1389.75,1651.62,2586.48,0.875,Pedestrian Crossing,0.9815
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_4c496fb4-side.jpg,728.24,1274.45,973.65,2295.68,0.8359,Pedestrian Crossing,0.9525
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_4fe75feb-IMG_0243.JPG,5201.49,3861.77,5435.82,4088.53,0.7266,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_4fe75feb-IMG_0243.JPG,4916.43,3794.12,5434.2,4085.36,0.6875,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_4fe75feb-IMG_0243.JPG,4917.36,3793.86,5185.12,4067.33,0.5898,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_5043579c-side.jpg,1388.95,844.16,1929.57,2387.99,0.416,Stop Sign,0.9737
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_562e48f6-front.jpg,1430.31,935.07,2561.17,1685.35,0.9414,No Through Road (T-Junction),0.9682
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_58621eda-IMG_0203.JPG,1439.29,1162.85,3765.85,2769.5,0.7109,Pedestrian Crossing,0.5942
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_5abf970a-side.jpg,1872.84,724.68,2263.21,2093.11,0.8008,Pedestrian Crossing,0.9656
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_646a4174-side.jpg,907.23,859.43,1808.15,2825.95,0.5938,Auxiliary Sign,0.8603
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_74a729c2-IMG_0138.jpg,1151.8,864.93,3428.22,4900.03,0.3223,Back-Unknown,0.5585
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_77233a9d-IMG_0190_Blurred.JPG,3916.67,4699.56,3993.69,4800.54,0.3008,Other-Unknown,0.8297
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_8dc5354c-IMG_0141.JPG,1417.57,1160.43,2992.76,3092.3,0.9609,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_8e544be4-side.jpg,1546.72,1029.65,1952.31,2125.78,0.8516,Stop Sign,0.9621
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_8edb630b-IMG_0208.JPG,1903.04,1134.39,3366.24,3010.98,0.9648,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_8ff667a0-IMG_0209.JPG,1707.53,1790.19,3742.61,2775.54,0.9219,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_9a101d8f-side.jpg,1304.04,414.42,1708.42,2203.25,0.7031,Stop Sign,0.9336
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_9f69e083-Front.jpg,946.4,1684.58,1425.72,2157.99,0.5547,Stop Sign,0.9573
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_aa3bff09-side.jpg,1026.93,1026.85,1364.58,2039.05,0.4668,Stop Sign,0.9624
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_aa3bff09-side.jpg,1391.87,1502.46,2044.55,1898.48,0.4316,Street Sign,0.8973
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_aafe9a1b-front.jpg,1100.82,789.64,2054.76,1711.76,0.8359,Stop Sign,0.9836
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_b1123daa-front.jpg,611.1,1392.61,1781.3,2427.03,0.7695,Stop Sign,0.9806
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_b6ae6e3d-back.jpg,1132.26,2982.13,1209.82,3058.09,0.4004,Other-Unknown,0.8965
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_b9028e28-side.jpg,806.98,1551.84,1768.66,2629.66,0.5078,Directional Sign,0.9752
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_b9028e28-side.jpg,586.22,434.84,1608.78,1952.15,0.3672,Pedestrian Crossing,0.9672
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_c89fb86b-IMG_0117.jpg,1881.77,1449.57,2503.6,3398.76,0.8906,No Through Road (T-Junction),0.9609
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_ea4926f3-side.jpg,1130.79,751.14,1962.15,2458.2,0.8867,Roundabout Ahead,0.9792
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_edb6fab3-IMG_0189.JPG,2110.7,992.05,4421.94,3598.88,0.9453,,0.2945
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_f07ed5ce-Side.jpg,909.1,1130.52,1455.17,2353.72,0.7695,Stop Sign,0.9764
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_f3e45a2c-front.jpg,1012.67,1490.52,1488.13,2210.91,0.6641,Stop Sign,0.9703
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_f5d48b4c-front.jpg,3479.56,2551.46,3597.31,2667.25,0.8555,Directional Sign,0.949
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_f5d48b4c-front.jpg,1564.84,1014.77,2620.6,1987.62,0.3848,Stop Sign,0.9906
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_fc124a5b-Back.jpg,464.84,39.72,1650.47,1367.54,0.7891,Pedestrian Crossing,0.9764
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp8_fc6650ab-front.jpg,114.55,851.49,1769.14,2038.84,0.9414,Pedestrian Crossing,0.9723
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_00e70ac4-IMG_20251111_140913.jpg,0.7,2725.15,342.63,3486.37,0.9453,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_01ed8620-IMG_20251111_162316.jpg,859.02,1589.34,1207.47,2046.35,0.8438,Pedestrian Crossing,0.9534
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_01ed8620-IMG_20251111_162316.jpg,2084.16,2204.75,2219.29,2390.46,0.7383,Pedestrian Crossing,0.982
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_10b6edc4-IMG_20251112_160648.jpg,1377.97,3272.76,1540.52,3480.9,0.7227,Stop Sign,0.9678
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_29bd496f-IMG_20251106_153126.jpg,1068.79,2210.93,1682.21,3111.72,0.5859,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_29bd496f-IMG_20251106_153126.jpg,1261.82,2260.98,1472.49,2513.39,0.5078,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_29bd496f-IMG_20251106_153126.jpg,1255.36,2234.36,1671.19,2518.04,0.3516,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_3724af9d-IMG_20251106_144506.jpg,1059.96,1156.77,2387.86,2971.0,0.3223,Blind-Spot Mirror (Convex Mirror),0.9917
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_37f0c8a3-IMG_20251111_162207.jpg,1876.36,2665.34,1962.22,2791.01,0.8281,Directional Sign,0.9147
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_37f0c8a3-IMG_20251111_162207.jpg,652.84,2611.89,693.17,2654.17,0.4004,Pedestrian Crossing,0.8034
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_37f0c8a3-IMG_20251111_162207.jpg,751.33,2650.23,817.87,2713.06,0.3809,Directional Sign,0.9104
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_37f0c8a3-IMG_20251111_162207.jpg,1541.78,1829.65,1621.85,2409.31,0.3691,Roundabout Ahead,0.891
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_3cb31cc9-IMG_20251106_141426.jpg,658.63,93.2,2528.51,1573.05,0.8008,Other-Unknown,0.9893
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_3cb31cc9-IMG_20251106_141426.jpg,832.71,1554.96,2323.7,2984.94,0.7383,Pedestrian Crossing,0.9692
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_42edbee1-IMG_20251210_142157.jpg,1284.46,1997.96,1870.18,2497.22,0.8203,Roundabout Ahead,0.9733
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_42edbee1-IMG_20251210_142157.jpg,2399.23,2717.28,2473.0,2794.0,0.7422,Other-Unknown,0.9515
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_4319ca3a-WhatsApp_Image_2026-01-03_at_18.45.41.jpeg,646.46,872.74,755.57,1158.2,0.9297,Roundabout Ahead,0.9638
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,532.72,713.78,830.4,963.02,0.9453,No Through Road (T-Junction),0.9678
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_48f9d230-IMG_20251112_155513.jpg,844.86,2652.76,931.16,2771.19,0.4102,Other-Unknown,0.7384
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_48f9d230-IMG_20251112_155513.jpg,751.82,1852.35,1280.59,2360.5,0.3984,Back-Unknown,0.9921
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_4a9c7d83-IMG_20251111_143857.jpg,1397.62,2068.96,1814.48,2438.16,0.832,Other-Unknown,0.9459
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_4d9da647-IMG_20251112_160636.jpg,864.35,1441.9,1739.23,2285.99,0.7695,Stop Sign,0.9862
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_561ba1c4-IMG_20251111_162044.jpg,1900.63,2470.95,1977.93,2554.32,0.6719,Roundabout Ahead,0.9137
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_561ba1c4-IMG_20251111_162044.jpg,1222.17,1856.37,1585.01,2212.84,0.6719,Pedestrian Crossing,0.9671
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_561ba1c4-IMG_20251111_162044.jpg,1883.52,2370.04,1985.04,2467.26,0.4727,Other-Unknown,0.9041
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_561ba1c4-IMG_20251111_162044.jpg,1158.89,2586.56,1188.48,2635.65,0.3594,,0.4702
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_561ba1c4-IMG_20251111_162044.jpg,1421.58,2635.29,1440.93,2684.98,0.3125,Directional Sign,0.8984
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_58c8b920-IMG_20251106_153249.jpg,1381.79,1595.97,1819.59,1985.73,0.3867,Back-Unknown,0.987
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_5b67e831-IMG_20251106_155530.jpg,999.84,1008.92,1889.88,1803.22,0.3008,Back-Unknown,0.9918
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_673470fc-IMG_20251111_160954.jpg,1525.03,2046.14,1773.71,2304.34,0.832,Roundabout Ahead,0.96
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_673470fc-IMG_20251111_160954.jpg,2157.49,2287.4,2238.4,2372.8,0.4434,Pedestrian Crossing,0.9124
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_673470fc-IMG_20251111_160954.jpg,1012.39,2310.33,1097.06,2395.79,0.4102,Pedestrian Crossing,0.9528
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_6867b383-IMG_20251111_160020.jpg,1271.2,1685.54,1731.69,2133.48,0.9141,No Through Road (T-Junction),0.9687
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_6adfb65e-WhatsApp_Image_2026-01-01_at_18.13.00_2.jpeg,330.58,1053.67,653.01,1357.61,0.7148,Stop Sign,0.9763
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_6e84abf6-IMG_20251106_145409.jpg,1193.9,1931.3,2237.97,2931.11,0.918,Roundabout Ahead,0.9841
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_6e84abf6-IMG_20251106_145409.jpg,1017.88,1060.45,2326.78,1942.73,0.3945,Other-Unknown,0.9774
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_73c5c90a-IMG_20251106_152941.jpg,1416.53,1646.0,1511.23,2231.06,0.6094,Roundabout Ahead,0.8314
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_76700fa1-IMG_20251111_162238.jpg,1513.44,1943.07,1815.02,2257.21,0.9062,Roundabout Ahead,0.9876
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_7b22f970-IMG_20251106_152243.jpg,1055.54,2058.77,1938.56,3060.85,0.9062,Other-Unknown,0.9751
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_7b22f970-IMG_20251106_152243.jpg,1103.46,826.19,1924.15,1793.61,0.5312,Stop Sign,0.9703
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_a133d565-WhatsApp_Image_2026-01-01_at_18.13.09.jpeg,601.97,1058.6,785.66,1246.27,0.5391,Stop Sign,0.8722
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_a7e54ad2-IMG_20251210_141604.jpg,1070.7,3566.1,1827.98,4080.0,0.4082,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_ae723934-WhatsApp_Image_2026-01-03_at_18.45.36.jpeg,560.44,710.13,750.76,883.11,0.9141,No Through Road (T-Junction),0.9871
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_ae723934-WhatsApp_Image_2026-01-03_at_18.45.36.jpeg,1138.06,595.21,1200.0,765.5,0.3574,,0.0
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_b775d113-IMG_20251111_162326.jpg,2772.25,2689.97,2849.28,2766.36,0.7734,Roundabout Ahead,0.9164
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_b775d113-IMG_20251111_162326.jpg,733.66,2366.7,823.13,2574.38,0.6719,Pedestrian Crossing,0.9774
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_b8de4d86-IMG_20251112_162741.jpg,1306.01,1637.74,1622.76,1984.64,0.918,Pedestrian Crossing,0.9622
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_b8edf87e-IMG_20251106_153308.jpg,1208.26,1960.63,1583.84,2610.09,0.3926,Back-Unknown,0.5365
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_df847542-IMG_20251210_141936.jpg,981.56,971.54,1887.88,2256.44,0.7344,Stop Sign,0.9668
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_df847542-IMG_20251210_141936.jpg,842.96,2282.37,2131.26,3026.4,0.6484,Tourist Sign,0.9797
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_df847542-IMG_20251210_141936.jpg,2214.37,2989.16,2583.51,3333.81,0.6211,Directional Sign,0.9524
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e2932f32-20251122_134050.jpg,779.5,2090.42,822.41,2130.07,0.416,Other-Unknown,0.84
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e2932f32-20251122_134050.jpg,464.43,2075.42,520.93,2128.63,0.3008,Other-Unknown,0.9253
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e65623ae-20251122_135723.jpg,1400.4,1855.99,1619.25,2160.26,0.8008,Stop Sign,0.9705
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e690fe37-IMG_20251111_162300.jpg,2399.92,2762.89,2501.6,2874.06,0.8164,Directional Sign,0.9435
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e690fe37-IMG_20251111_162300.jpg,1460.51,1941.3,1561.3,2401.04,0.7656,Roundabout Ahead,0.9557
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e690fe37-IMG_20251111_162300.jpg,700.15,2607.65,745.12,2654.74,0.3359,Pedestrian Crossing,0.7871
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e8541d39-IMG_20251106_145533.jpg,1027.33,1761.23,1993.11,2728.72,0.9609,Other-Unknown,0.9876
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e8541d39-IMG_20251106_145533.jpg,2703.84,3188.05,3000.0,3520.59,0.6914,Directional Sign,0.9642
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e8541d39-IMG_20251106_145533.jpg,1020.97,860.74,1967.83,1761.57,0.3086,Stop Sign,0.9845
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_e8b17764-ZC8_front.jpg,1152.24,2215.19,1483.08,2550.5,0.9297,Pedestrian Crossing,0.9659
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_f109e3eb-IMG_20251111_144036.jpg,1168.81,1330.9,1945.67,2230.09,0.3633,Blind-Spot Mirror (Convex Mirror),0.9868
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_f36aabf5-WhatsApp_Image_2026-01-03_at_18.45.21_2.jpeg,429.33,534.18,710.25,990.05,0.6797,Other-Unknown,0.991
+SAM 3.1,sens-mtsd-entry-04,find all no entry signs,grp9_f36aabf5-WhatsApp_Image_2026-01-03_at_18.45.21_2.jpeg,31.59,1022.78,138.58,1152.89,0.5469,,0.0

@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "mtsd-p1",
+  "prompt": "pedestrian crossing sign",
+  "image_start": 704,
+  "image_end": 747,
+  "n_images": 43,
+  "n_prediction_rows": 43,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "model_status": {
+    "model": "Cosmos Reason2 2B",
+    "model_load_ms": 9500.7,
+    "ok": true,
+    "label": "Cosmos Reason2 2B",
+    "source": "nvidia/Cosmos-Reason2-2B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-20T09:28:34.360410+00:00",
+  "finished_at": "2026-08-20T10:31:43.458765+00:00"
+}

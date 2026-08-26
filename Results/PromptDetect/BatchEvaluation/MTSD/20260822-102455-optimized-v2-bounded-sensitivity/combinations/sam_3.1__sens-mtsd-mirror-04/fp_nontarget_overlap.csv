@@ -1,0 +1,464 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_1495.jpg,1378.4,2014.18,3015.42,3191.19,0.707,Back-Unknown,0.9006
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_1557.jpg,1377.63,2634.13,3063.67,4053.75,0.5547,Pedestrian Crossing,0.981
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_1557.jpg,0.0,1921.4,577.61,2618.07,0.4688,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_1575.jpg,470.28,684.72,1078.92,1249.36,0.3984,No Entry (One Way),0.9847
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_1606.jpg,0.0,413.42,371.76,955.66,0.5039,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_1606.jpg,1432.13,2427.64,2368.94,3934.39,0.4883,Back-Unknown,0.9775
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_141219.jpg,139.48,2444.95,228.94,2775.13,0.4277,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_141219.jpg,32.64,1086.96,201.23,1616.99,0.3691,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_141219.jpg,386.57,467.32,622.73,1180.7,0.3379,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_141219.jpg,587.73,2115.88,846.27,2609.62,0.3164,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_164433.jpg,587.13,1753.61,1307.39,2927.29,0.459,No Entry (One Way),0.9716
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251123_164446.jpg,383.13,1865.23,1746.7,3205.75,0.4121,Back-Unknown,0.988
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_113833.jpg,1341.98,2265.43,1416.63,2424.61,0.7109,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_114450.jpg,678.5,892.1,1048.66,1193.11,0.7695,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_120326.jpg,2912.49,0.0,3472.0,947.6,0.4512,Other-Unknown,0.9594
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_120326.jpg,1223.29,1891.06,1429.68,2510.03,0.3887,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_120326.jpg,947.7,3759.44,1253.59,4527.01,0.3184,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_121131.jpg,663.56,3089.44,786.04,3347.44,0.6445,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_121142.jpg,814.77,1853.07,1586.06,4624.0,0.3711,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_122819+1.jpg,2868.16,2390.0,2961.37,2492.21,0.418,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_122819+1.jpg,1286.21,1004.55,1782.25,2434.05,0.418,No Entry (One Way),0.979
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_122826.jpg,829.09,1035.24,1563.58,2448.57,0.7852,Back-Unknown,0.9652
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_124400.jpg,211.48,3665.55,270.19,3743.69,0.4238,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_124400.jpg,666.94,3645.93,733.32,3732.8,0.416,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_153252.jpg,1956.86,218.37,2137.6,628.08,0.6484,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251125_153559.jpg,1625.03,712.35,1939.27,1886.11,0.6367,No Entry (One Way),0.8316
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20251126_123524.jpg,878.03,1836.7,992.9,2041.04,0.3438,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260106_160608_331.jpg,986.01,937.37,2345.36,2279.88,0.3027,No Entry (One Way),0.8104
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260110_173308_202.jpg,951.93,991.41,2307.1,2294.56,0.8828,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260113_083600_409.jpg,728.88,829.96,2255.26,2623.71,0.373,,0.319
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260113_083759_046.jpg,696.14,1746.11,1253.98,2329.56,0.7617,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_20260113_084856_622.jpg,1518.99,1226.01,1806.86,1380.78,0.4355,,0.0031
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_8791.jpeg,598.23,409.2,2292.03,2039.82,0.377,No Entry (One Way),0.9932
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_8791.jpeg,519.66,2056.47,2370.98,3965.41,0.3164,Directional Sign,0.9864
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_IMG_8810.jpeg,1340.48,702.77,2733.52,2090.99,0.8047,Back-Unknown,0.621
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_wall_stop.jpeg,841.89,561.29,2065.24,1728.0,0.3145,No Entry (One Way),0.9663
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-16 at 17.52.25 (1).jpeg,105.65,412.8,595.29,1152.6,0.7773,Back-Unknown,0.9849
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-17 at 12.38.32 (2).jpeg,298.05,624.71,1072.02,1266.5,0.6172,Other-Unknown,0.9912
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp10_WhatsApp Image 2025-11-17 at 15.01.44.jpeg,785.3,544.04,875.32,1471.98,0.5664,No Entry (One Way),0.8971
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_00ffbbb0-IMG_20251125_195040.jpg,991.65,824.75,1914.85,1768.88,0.6289,Back-Unknown,0.9722
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_00ffbbb0-IMG_20251125_195040.jpg,2451.31,1304.29,2611.08,1458.66,0.3379,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_08da688f-IMG_6393.jpeg,0.0,707.8,3484.48,2769.7,0.5547,Other-Unknown,0.5621
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_0ac2eda8-IMG_6412.jpeg,2470.89,2086.95,4380.07,3087.81,0.3906,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_2d64dcc1-IMG_20251125_194650.jpg,524.51,1136.11,700.93,1321.21,0.6914,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_2d64dcc1-IMG_20251125_194650.jpg,50.97,1448.68,896.95,2413.76,0.4297,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_2dae9065-IMG_20251125_195604.jpg,1326.85,254.72,1757.51,1223.84,0.418,Other-Unknown,0.9184
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_2dae9065-IMG_20251125_195604.jpg,1337.7,1148.71,1810.37,2126.08,0.3594,Directional Sign,0.9524
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_387a3e09-IMG_6403.jpeg,317.76,208.17,487.79,386.59,0.4355,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_387a3e09-IMG_6403.jpeg,0.0,360.56,34.41,538.22,0.373,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_3f9be580-IMG_1323.jpg,1049.47,371.69,2284.24,1554.33,0.5352,Back-Unknown,0.9897
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_41188dd2-IMG_1440.jpg,1495.17,0.0,2464.71,506.31,0.8008,,0.1457
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_41188dd2-IMG_1440.jpg,619.84,0.0,2465.4,1302.47,0.3047,Back-Unknown,0.802
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_578f49cf-IMG_6367.jpeg,333.53,1254.5,2064.73,2242.66,0.3379,,0.1094
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_5c71ae7e-IMG_6256.jpeg,834.13,1023.39,2128.27,2076.24,0.3027,Back-Unknown,0.9702
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_6d1c0888-IMG_20251125_191657.jpg,1501.76,994.36,1617.69,1636.11,0.5977,Directional Sign,0.9285
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_8297098a-IMG_6326.jpeg,1255.62,616.87,2938.37,2929.61,0.3867,,0.3396
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_8d5205a5-IMG_6322.jpeg,857.78,1147.54,2144.12,2204.66,0.4785,,0.2044
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_8da30211-IMG_1389.jpg,979.0,320.18,2144.24,1558.51,0.3066,Back-Unknown,0.9848
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_93c9acc6-Pre_2026_6752.jpg,2352.71,528.78,3285.76,1174.46,0.875,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_9e3f1527-IMG_6303.jpeg,0.0,0.0,1201.63,298.0,0.4121,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_9e3f1527-IMG_6303.jpeg,1312.28,584.1,2577.36,2437.29,0.3438,,0.3476
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_aff5c880-IMG_6324.jpeg,172.22,600.32,727.58,1878.39,0.9219,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_b40e574e-IMG_1307.jpg,1500.32,1726.81,1544.33,1810.62,0.3984,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_b40e574e-IMG_1307.jpg,460.7,1786.89,500.6,1872.05,0.373,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_b40e574e-IMG_1307.jpg,711.21,0.0,1508.77,306.06,0.3574,,0.0136
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_b40e574e-IMG_1307.jpg,1061.94,1765.23,1099.02,1834.16,0.3418,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_badbe466-IMG_20251125_194752.jpg,781.71,1367.06,1409.65,2076.64,0.3535,Back-Unknown,0.9757
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_bdad925f-IMG_20251125_194953.jpg,1095.65,1275.53,1862.3,2070.53,0.418,Back-Unknown,0.9834
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_daaadabb-IMG_1451.jpg,1823.03,20.63,2175.89,650.1,0.5391,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp11_e27435a0-IMG_20251125_194217.jpg,808.08,1009.18,1636.65,1902.13,0.4746,Back-Unknown,0.9639
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_0dd8c85f-RV_001_114.jpeg,1049.51,1706.11,2047.87,2769.37,0.459,Back-Unknown,0.9848
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_265aa6a6-IMG_5573.jpeg,1529.65,376.99,2236.06,956.09,0.7148,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_265aa6a6-IMG_5573.jpeg,96.89,1007.53,632.82,1470.15,0.5977,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_265aa6a6-IMG_5573.jpeg,381.28,299.78,786.57,637.09,0.5977,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_265aa6a6-IMG_5573.jpeg,1521.03,0.0,1768.57,103.81,0.4766,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_265aa6a6-IMG_5573.jpeg,1323.46,1968.26,1692.9,2761.09,0.3555,No Entry (One Way),0.9693
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_37e4fc9d-RV_001_33.jpeg,1007.83,1896.15,2112.95,2985.7,0.3281,Back-Unknown,0.9878
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_37e4fc9d-RV_001_33.jpeg,1001.34,3594.55,1121.68,3730.52,0.3125,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_53e7c3c2-IMG_5568.jpeg,1073.74,1701.95,1695.62,2784.28,0.6211,No Entry (One Way),0.9802
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_53e7c3c2-IMG_5568.jpeg,716.37,2067.75,866.63,2414.35,0.5938,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_578dabe6-IMG_4802.jpeg,794.86,965.68,2296.19,2203.52,0.4824,No Entry (One Way),0.9907
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_64a36757-IMG20251230164429.jpg,569.72,976.24,2259.71,2452.96,0.4004,No Entry (One Way),0.9886
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_69e094db-IMG20260103164903.jpg,415.33,644.93,2381.6,2723.6,0.3242,No Through Road (T-Junction),0.989
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_6ad1ae03-IMG_4778.jpeg,579.57,227.18,2650.45,1959.18,0.3066,Roundabout Ahead,0.9864
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_71268279-IMG_4702.jpeg,538.55,0.0,798.43,108.26,0.5117,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_8fe876b9-IMG_4754.jpeg,1263.19,1497.01,1432.0,1617.88,0.4629,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_9082eb51-IMG20251230170110.jpg,1155.94,802.37,1970.35,3292.79,0.4375,Roundabout Ahead,0.9804
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_9f52d58a-IMG_5554.jpeg,411.28,606.18,674.64,840.6,0.6797,,0.0408
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_a7df285e-RV_001_147.jpeg,1265.39,1888.54,1469.15,2115.34,0.7031,,0.058
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_a7df285e-RV_001_147.jpeg,1314.5,1935.64,1421.1,2074.18,0.3594,,0.0232
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_a9638634-IMG20260105131308.jpg,991.14,733.7,2083.25,3247.41,0.3398,Roundabout Ahead,0.9696
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_db486299-IMG_5815.jpeg,985.29,1465.75,2176.11,2508.55,0.4023,No Through Road (T-Junction),0.9772
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_dbac3098-IMG_4803.jpeg,1294.56,947.53,2223.31,2680.2,0.4219,No Entry (One Way),0.9795
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_f28bdb6c-RV_001_29.jpeg,1450.43,1264.11,2101.78,2439.71,0.5117,No Entry (One Way),0.9775
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_f28bdb6c-RV_001_29.jpeg,1259.59,3507.07,1646.05,3693.45,0.4277,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp1_fd97d901-IMG20260105125535.jpg,1266.51,1224.15,1795.95,2659.87,0.5625,No Through Road (T-Junction),0.9809
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_1d09be1b-MP_0034.jpg,490.4,1804.29,713.58,2023.05,0.4941,Back-Unknown,0.9672
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_1d09be1b-MP_0034.jpg,1225.2,380.69,1362.62,1225.24,0.3711,Back-Unknown,0.9574
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_1d09be1b-MP_0034.jpg,1421.91,337.43,1536.27,1234.15,0.3262,Stop Sign,0.9548
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_1f7e1b10-20251224_132557.jpg,1923.61,1526.93,2058.17,1808.61,0.6953,,0.0223
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_331688ad-20251223_152821.jpg,1598.59,1050.36,1850.73,1992.49,0.8203,No Entry (One Way),0.9813
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_331688ad-20251223_152821.jpg,627.53,32.3,920.3,273.66,0.4883,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_331688ad-20251223_152821.jpg,721.65,2977.63,820.79,3178.14,0.3965,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_339c8d04-26.side.jpg,306.3,1963.71,349.31,2029.49,0.373,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_3d2ae4e7-IMG_20251223_114602.jpg,1368.67,1290.72,1626.61,1535.77,0.5312,,0.0309
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5061299f-MP_0130.jpg,450.3,2433.04,519.6,2548.69,0.5547,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5061299f-MP_0130.jpg,770.45,573.3,1587.39,1569.09,0.4375,Back-Unknown,0.9956
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5dd50184-MP_0013.jpg,0.0,2362.51,105.68,2962.02,0.5977,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5dd50184-MP_0013.jpg,1131.67,662.53,1335.54,992.66,0.4414,,0.0949
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5dd50184-MP_0013.jpg,1116.68,1650.31,1221.18,1869.99,0.3926,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5dd50184-MP_0013.jpg,1113.92,1629.14,1329.81,1882.84,0.3223,,0.0088
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5dd50184-MP_0013.jpg,3004.38,2255.67,3072.0,2489.1,0.3203,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_5dd50184-MP_0013.jpg,3037.66,2265.11,3072.0,2483.95,0.3184,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_62c50d8e-20251230_121740.jpg,181.81,513.54,763.99,1024.99,0.4785,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_76c73962-MP_0139.jpg,585.02,464.04,1464.55,1275.25,0.7539,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_76c73962-MP_0139.jpg,1091.02,1368.68,2795.17,1739.72,0.5625,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_7ad50d73-MP_0075.jpg,584.06,142.32,1565.9,1085.22,0.3809,Back-Unknown,0.9817
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_7bccf907-IMG_20251223_114643.jpg,718.9,1646.16,916.19,1834.77,0.3184,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_8042282f-20251223_150231.jpg,1157.97,0.0,1753.58,1980.77,0.668,No Entry (One Way),0.9706
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_85bab424-IMG_20251223_120632.jpg,2421.86,2067.23,2607.89,2158.6,0.5742,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_85bab424-IMG_20251223_120632.jpg,2818.93,1988.33,2942.21,2033.55,0.543,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_85bab424-IMG_20251223_120632.jpg,846.18,2006.43,870.59,2040.82,0.3887,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_86560763-IMG_20251223_113000.jpg,1451.87,2505.32,1521.76,2623.46,0.5586,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_86560763-IMG_20251223_113000.jpg,1506.16,2747.68,1639.14,2983.86,0.5078,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_86560763-IMG_20251223_113000.jpg,1440.37,2429.58,1478.02,2510.98,0.418,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_86560763-IMG_20251223_113000.jpg,1402.95,2387.19,1451.12,2450.27,0.3867,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_86560763-IMG_20251223_113000.jpg,1005.71,1390.43,1628.18,2009.47,0.3789,Back-Unknown,0.9888
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_888b1f4f-MP_0074.jpg,477.48,864.55,1178.96,1495.07,0.7266,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_9288cb02-IMG_20251223_114539.jpg,1113.54,1024.91,1475.34,1581.58,0.7031,,0.0301
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_983dc626-30.side.jpg,1291.11,1066.6,1378.53,1597.62,0.6328,No Entry (One Way),0.9659
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_9c71fd6a-20251223_153024.jpg,1043.96,1086.45,1751.76,3887.58,0.5156,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ab84ff33-MP_0056.jpg,963.75,202.14,1858.42,1096.87,0.4199,No Entry (One Way),0.9894
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ab9b17dd-34.back.jpg,772.58,1266.58,976.44,1591.55,0.625,,0.1504
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_bf4582b0-IMG_20251223_113056.jpg,677.6,1483.98,1455.69,2335.18,0.3184,Back-Unknown,0.9571
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ccff3003-MP_0047.jpg,1267.77,1933.82,1446.78,2350.5,0.5781,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ccff3003-MP_0047.jpg,1002.98,770.83,1163.65,1535.08,0.5703,No Entry (One Way),0.932
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ccff3003-MP_0047.jpg,2680.17,2151.09,2777.46,2373.57,0.5156,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ccff3003-MP_0047.jpg,2218.35,2196.98,2272.19,2338.67,0.4688,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ccff3003-MP_0047.jpg,2118.71,2209.04,2170.22,2328.17,0.4648,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ccff3003-MP_0047.jpg,1973.93,2217.82,2007.46,2312.49,0.3691,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ccff3003-MP_0047.jpg,1837.59,2241.92,1864.42,2306.1,0.3672,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ccff3003-MP_0047.jpg,2705.66,1631.88,2956.99,1873.56,0.3652,No Entry (One Way),0.8921
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ced8bffa-14.front.jpg,1566.82,2161.89,1598.19,2244.52,0.3047,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_d1fa2493-20251230_123128.jpg,761.97,539.31,2104.66,1902.34,0.3203,No Entry (One Way),0.9762
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_d201b393-MP_0004.jpg,887.27,1081.17,1896.11,2066.9,0.3125,No Entry (One Way),0.9865
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_d3fe8c38-MP_0046.jpg,958.52,340.4,1858.14,1289.28,0.4414,Back-Unknown,0.9909
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_e44be02a-MP_0116.jpg,391.72,845.73,2070.45,1253.7,0.4746,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_e44be02a-MP_0116.jpg,387.68,846.71,4032.0,1447.72,0.3164,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_e46067a0-MP_0166.jpg,1226.39,932.55,1546.94,3268.88,0.3281,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_e55dea8e-MP_0157.jpg,1283.85,1302.53,2015.95,2021.97,0.3457,No Through Road (T-Junction),0.972
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_ee20554d-MP_0115.jpg,2709.63,719.07,2934.75,876.53,0.7422,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_f69ebb76-IMG_20251227_110428.jpg,1050.97,1387.73,1685.7,1993.95,0.6406,Back-Unknown,0.98
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_f69ebb76-IMG_20251227_110428.jpg,1016.23,2064.23,1087.06,2148.37,0.3008,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp2_f6e60d8b-33.front.back.jpg,900.79,1524.06,1358.78,1969.68,0.7734,No Entry (One Way),0.9633
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_09e3faa9-IMG_20251203_121602.jpg,1203.85,881.42,2232.4,1741.32,0.3457,No Entry (One Way),0.9831
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_13fcb840-IMG_20251203_093318.jpg,2090.79,2199.17,2210.47,2335.53,0.5156,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_13fcb840-IMG_20251203_093318.jpg,2360.7,2212.71,2556.21,2372.58,0.5039,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_13fcb840-IMG_20251203_093318.jpg,1142.77,317.79,2013.01,1372.39,0.4609,Back-Unknown,0.9838
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_13fcb840-IMG_20251203_093318.jpg,1143.51,301.37,2012.4,4077.95,0.3027,,0.2797
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_19cc8708-IMG_20251203_095416.jpg,1155.61,1070.82,1822.71,1649.38,0.5664,No Entry (One Way),0.9923
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_22c38c39-IMG_4293.jpeg,1848.36,1071.54,2402.06,1729.35,0.5156,,0.3646
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_22c38c39-IMG_4293.jpeg,1319.93,1656.1,2098.19,2512.34,0.3262,,0.0569
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_2b9ed5a1-IMG_4416.jpeg,1373.61,1031.01,1998.45,2029.03,0.3125,No Entry (One Way),0.9824
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_458db4bf-IMG_9314.jpg,1021.19,2044.22,1670.32,3043.4,0.8516,Street Sign,0.9518
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_458db4bf-IMG_9314.jpg,2040.73,523.0,2277.18,675.57,0.3301,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_5a350ee3-IMG_9144.jpg,3963.58,3550.93,4077.62,3666.82,0.4336,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_5a350ee3-IMG_9144.jpg,2255.37,3690.82,2378.25,3825.2,0.4023,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_5a350ee3-IMG_9144.jpg,44.95,3676.71,147.29,3760.36,0.375,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_5a350ee3-IMG_9144.jpg,2909.1,3576.01,2961.0,3796.57,0.375,Back-Unknown,0.6817
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_5a5ec99c-IMG_4369.jpeg,1262.47,2894.68,1389.47,3060.64,0.4668,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_5a5ec99c-IMG_4369.jpeg,1127.35,1335.7,2110.38,2248.97,0.3184,No Entry (One Way),0.9823
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_5e7ebbc1-IMG_4337.jpeg,2098.03,1467.64,2660.82,1680.29,0.3223,,0.3109
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_5e84f6fa-20251129_114532.jpg,346.83,876.61,527.09,1422.77,0.3223,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_62bcab50-IMG_20251203_121207.jpg,1051.63,493.98,2226.0,1701.21,0.5312,Back-Unknown,0.9866
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_64c9c943-IMG_20251203_121935.jpg,1928.87,2483.35,1993.78,2582.45,0.4805,No Entry (One Way),0.7952
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_66257b80-IMG_9242.jpg,2021.69,584.6,2495.01,1908.67,0.8398,No Entry (One Way),0.9863
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_6a5c994c-IMG_9361.jpg,2526.55,3214.05,2680.92,3608.41,0.5352,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_6a5c994c-IMG_9361.jpg,1916.32,2636.22,2425.69,3969.84,0.4941,Roundabout Ahead,0.975
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_6a5c994c-IMG_9361.jpg,3853.94,4210.07,4028.44,4360.42,0.4238,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_6a5c994c-IMG_9361.jpg,440.49,1111.02,785.49,1550.95,0.3047,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_7b58307a-IMG_20251203_094229.jpg,1090.33,339.99,2255.35,1513.08,0.5273,Back-Unknown,0.9918
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_81a84d18-IMG_9109.jpg,831.45,1013.37,1179.85,1652.67,0.3984,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_81a84d18-IMG_9109.jpg,751.46,2085.87,1130.91,2673.55,0.3418,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_81a84d18-IMG_9109.jpg,3755.25,1008.48,3922.99,1913.61,0.3027,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_8c6aa47e-IMG_20251203_121607.jpg,1160.51,430.54,1708.54,1582.59,0.6484,No Entry (One Way),0.9817
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_9eaf77cf-IMG_4402.jpeg,1339.07,1107.26,2048.21,1829.34,0.3086,,0.2352
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_a2b6698c-IMG_4431.jpeg,1490.16,934.35,4032.0,1861.14,0.4648,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_a5739f60-IMG_20251203_120925.jpg,1704.18,2009.35,1863.76,2521.57,0.373,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_a9724b83-20251129_122439.jpg,1401.93,1213.86,1573.64,1860.13,0.4062,Back-Unknown,0.9727
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_a9724b83-20251129_122439.jpg,979.38,3876.12,1192.64,4080.0,0.3359,Directional Sign,0.9086
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_aebbbcad-IMG_9204.jpg,790.91,3550.69,929.45,3616.67,0.3555,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_aebbbcad-IMG_9204.jpg,1607.06,3534.44,1749.37,3603.11,0.3477,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_aebbbcad-IMG_9204.jpg,1631.99,1050.69,2738.55,2158.23,0.3066,Stop Sign,0.9227
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_def908c3-IMG_4315.jpeg,1244.93,1391.85,1919.01,2019.97,0.3301,Back-Unknown,0.988
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_e17ffb83-20251129_115005.jpg,1210.68,1463.98,1547.9,2369.86,0.4121,No Entry (One Way),0.9525
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_e337de9a-IMG_4362.jpeg,636.25,2562.05,720.62,2774.37,0.4316,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_e337de9a-IMG_4362.jpeg,827.51,2620.46,889.45,2799.28,0.3398,,0.0947
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_eb512649-IMG_4353.jpeg,1940.56,1919.35,2054.74,2207.69,0.3477,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_ecbe9be3-IMG_20251204_100152.jpg,1390.65,806.79,2639.38,2380.29,0.6875,Other-Unknown,0.9719
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_f2a7e32a-IMG_4334.jpeg,1250.37,1772.19,1836.86,2342.21,0.3379,Back-Unknown,0.9919
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_f6ba6aba-IMG_4397.jpeg,1079.58,2424.01,1127.21,2516.63,0.3086,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_f6ba6aba-IMG_4397.jpeg,1072.96,2688.49,1122.13,2783.12,0.3008,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_facbf33e-IMG_9197.jpg,1831.64,2079.58,2084.84,3061.33,0.5234,No Entry (One Way),0.9756
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_facbf33e-IMG_9197.jpg,2319.0,4730.57,2423.33,4908.41,0.4395,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp3_faf213d1-IMG_20251203_120236.jpg,939.9,943.06,2049.86,1729.79,0.5312,Back-Unknown,0.7935
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,628.85,874.03,831.28,2000.0,0.3164,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251130_115129.jpg,860.32,2224.62,2085.56,3493.91,0.3086,No Entry (One Way),0.9884
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251130_115523.jpg,993.07,1421.78,2032.63,2500.98,0.5742,Back-Unknown,0.9969
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251130_115807.jpg,723.42,2471.64,1329.11,3733.45,0.5742,Pedestrian Crossing,0.9818
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251130_115807.jpg,1.11,2917.38,313.81,3177.75,0.3027,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251219_134240.jpg,1169.81,1050.74,1846.93,1801.02,0.5078,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251229_142249.jpg,916.94,1605.74,1126.3,1949.37,0.6719,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251229_144322.jpg,910.79,1672.1,2217.36,2880.11,0.4844,Back-Unknown,0.9968
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251229_144322.jpg,720.56,525.61,2180.41,1629.63,0.4434,Back-Unknown,0.9611
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251229_150338.jpg,705.0,3803.19,822.91,3975.03,0.4453,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251229_150338.jpg,434.32,3553.26,534.73,3659.32,0.3926,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251231_160526.jpg,992.63,1495.44,2013.64,2435.77,0.5273,No Through Road (T-Junction),0.9753
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251231_160545.jpg,1230.6,1424.69,1573.67,2423.52,0.7891,No Through Road (T-Junction),0.9248
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251231_160545.jpg,0.0,340.35,856.2,1285.34,0.4121,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_20251231_160556.jpg,1846.23,1931.0,2038.06,2510.81,0.7656,No Through Road (T-Junction),0.9622
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_21c64815-20251116_163111.jpg,1441.41,2377.4,1722.61,2875.29,0.7266,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_21c64815-20251116_163111.jpg,1069.18,2407.1,1317.81,2943.89,0.4727,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_21c64815-20251116_163111.jpg,1846.82,2336.86,2147.36,2889.2,0.375,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_2659e726-20260107_105845.jpg,476.4,1102.94,1632.56,2669.98,0.5352,Roundabout Ahead,0.9719
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_2659e726-20260107_105845.jpg,2127.08,3110.27,2296.0,3754.12,0.5312,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_2659e726-20260107_105845.jpg,506.35,0.0,1590.87,1217.65,0.334,Other-Unknown,0.9904
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_303a684b-WhatsApp_Image_2026-01-14_at_11.12.36_1.jpeg,1061.03,576.79,1249.99,713.39,0.3223,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_3a5008ad-20251222_141011.jpg,676.02,422.87,2163.03,2156.07,0.3672,No Entry (One Way),0.7473
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_53b94993-WhatsApp_Image_2026-01-14_at_11.10.30_2.jpeg,591.53,768.05,854.95,1201.84,0.3223,No Entry (One Way),0.9826
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_5996dfea-20251116_163330.jpg,1489.21,935.26,1666.81,1950.5,0.5234,Back-Unknown,0.9531
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_5996dfea-20251116_163330.jpg,1034.49,1560.58,1166.14,2149.67,0.3125,No Entry (One Way),0.8516
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_5e204826-WhatsApp_Image_2026-01-14_at_11.11.36.jpeg,873.96,0.0,1146.54,460.03,0.4609,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_63c4320e-WhatsApp_Image_2026-01-14_at_11.10.32_3.jpeg,584.85,683.44,827.54,915.57,0.6523,No Through Road (T-Junction),0.9704
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_63c4320e-WhatsApp_Image_2026-01-14_at_11.10.32_3.jpeg,423.41,1320.31,445.29,1347.05,0.5039,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_86e58e1e-WhatsApp_Image_2026-01-14_at_11.10.21.jpeg,642.56,753.23,814.85,1199.88,0.3008,No Entry (One Way),0.9297
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_a3952dcd-20251116_170721.jpg,1251.98,2211.92,1491.95,2711.92,0.5586,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_a3952dcd-20251116_170721.jpg,634.62,2175.9,775.28,2598.5,0.4258,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_b3745e21-20251222_142059.jpg,805.31,575.21,1730.55,2235.92,0.3574,No Entry (One Way),0.9728
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_b3d0eaa4-20251116_163427.jpg,1194.36,2835.82,1490.0,3188.41,0.4727,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_b3d0eaa4-20251116_163427.jpg,888.47,1233.89,1424.69,2332.83,0.3457,No Entry (One Way),0.984
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_d1c1ed24-20260113_130204.jpg,1054.64,1573.18,1837.95,2332.95,0.4766,No Through Road (T-Junction),0.9682
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_d5aaacb6-20251116_165125.jpg,208.9,533.29,739.64,915.42,0.4277,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_d8a007d5-20260109_123932.jpg,313.83,759.75,606.42,1097.45,0.3438,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_d8a007d5-20260109_123932.jpg,224.97,1545.89,602.65,1889.05,0.3281,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_ddd42f22-20251116_162542.jpg,605.43,2530.96,850.45,2746.51,0.6562,Back-Unknown,0.9655
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp4_e47a8d80-20251116_163051.jpg,987.61,1228.06,1366.3,2918.47,0.668,No Entry (One Way),0.9604
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_0f660dba-MichaelFarrugia_49_Back.jpg,1110.7,1088.48,1956.96,1914.75,0.3027,Back-Unknown,0.9898
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_1f171b80-MelatAssefa_5_Front.jpg,1576.42,530.12,2380.29,1268.27,0.5703,No Entry (One Way),0.988
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_27622289-BenTaliana_10_Front.jpeg,741.95,1824.17,3675.91,4642.63,0.6992,No Entry (One Way),0.978
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_28809400-MelatAssefa_23_Front.jpg,1051.08,537.82,1836.05,1347.79,0.3164,No Entry (One Way),0.9849
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1269.97,1245.13,2021.11,1941.61,0.3652,Pedestrian Crossing,0.9845
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_29252be9-MichaelFarrugia_29_Front.jpg,711.2,2689.47,832.55,2862.95,0.3301,Back-Unknown,0.9475
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_2da1aa64-AlisonAttard_27_Front.jpeg,1968.6,1309.16,2472.75,1804.03,0.3574,,0.2753
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_2da1aa64-AlisonAttard_27_Front.jpeg,1778.77,71.24,2147.2,792.44,0.3105,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_30980873-BenTaliana_12_Front.jpeg,1172.2,2147.51,3424.42,4153.3,0.7852,No Entry (One Way),0.9893
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_30980873-BenTaliana_12_Front.jpeg,1703.85,333.43,2357.18,1188.06,0.3711,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_32b2eadc-AlisonAttard_7_Side.jpeg,1677.45,0.0,3548.29,1224.07,0.5586,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_3cd9a2bc-MelatAssefa_45_Side.jpg,909.61,809.4,2067.86,2921.5,0.3633,Stop Sign,0.9816
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_3d564b26-AlisonAttard_15_Back.jpeg,1505.44,923.21,2680.24,1965.14,0.5352,No Entry (One Way),0.6715
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_3d564b26-AlisonAttard_15_Back.jpeg,774.48,1365.1,1627.42,1895.3,0.3789,,0.0749
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_3d564b26-AlisonAttard_15_Back.jpeg,764.93,1355.87,1689.7,2489.12,0.3301,,0.088
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,885.93,708.38,1354.76,1261.92,0.918,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1226.33,1605.59,1934.44,2295.85,0.457,No Through Road (T-Junction),0.9559
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_57e0ac5f-AlisonAttard_27_Back.jpeg,1611.95,1566.84,2837.27,1975.7,0.5391,,0.2989
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_57e0ac5f-AlisonAttard_27_Back.jpeg,1.92,640.49,314.32,1128.48,0.3105,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1921.28,0.0,2175.15,810.89,0.6211,,0.0004
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1319.49,751.44,1924.3,1374.25,0.5703,No Entry (One Way),0.8977
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1757.98,1324.69,1831.69,1694.55,0.4375,,0.0181
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1756.41,1262.04,1879.47,1705.58,0.3848,,0.0619
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1799.79,1256.49,1881.14,1483.68,0.3418,,0.0499
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_6325b5ff-MelatAssefa_21_Front.jpg,1780.35,1299.41,1867.63,1554.59,0.3027,,0.0332
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_7ae28afa-MelatAssefa_15_Front.jpg,1194.07,620.57,2010.55,1261.8,0.3535,No Entry (One Way),0.9756
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2053.83,1491.85,3090.45,1710.02,0.5977,,0.0025
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_82a1216f-AlisonAttard_27_Side.jpeg,1935.06,2197.89,2425.45,2306.26,0.4531,,0.048
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2474.96,1698.73,2808.48,1870.01,0.4082,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_85f27713-MelatAssefa_35_Side.jpg,1407.63,1794.73,2044.27,3213.94,0.4414,No Entry (One Way),0.9795
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a6a28dc5-MichaelFarrugia_34_Side.jpg,1208.42,1045.67,1857.6,2197.34,0.3047,No Entry (One Way),0.9568
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1616.52,377.93,1805.34,587.36,0.377,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,504.67,402.5,556.63,562.12,0.3691,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,329.97,463.56,382.12,622.34,0.3516,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1644.76,615.28,1841.85,830.09,0.3496,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,594.66,371.89,647.86,528.18,0.3438,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,412.47,433.73,470.23,593.91,0.3418,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,907.62,293.98,993.79,426.83,0.3359,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,0.0,917.45,77.92,1056.99,0.334,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1973.93,1493.91,2118.67,1696.72,0.3301,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1584.67,1085.56,1694.58,1183.82,0.3301,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,46.13,594.73,124.1,711.78,0.3281,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,904.41,644.39,1001.19,796.68,0.3223,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1639.56,1550.39,1766.88,1737.29,0.3184,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1047.25,242.74,1143.88,381.38,0.3164,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1895.71,1014.18,2013.97,1112.48,0.3164,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1061.49,986.54,1181.72,1152.52,0.3125,,0.0301
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,1057.39,596.47,1161.62,753.77,0.3047,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_a8752ff5-MelatAssefa_56_Side.jpg,1362.01,585.04,1988.97,1708.47,0.3145,Stop Sign,0.9883
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_afdc6e4d-MelatAssefa_1_Side.jpg,1006.14,303.42,1611.2,1101.26,0.75,No Entry (One Way),0.6923
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_afdc6e4d-MelatAssefa_1_Side.jpg,40.86,1240.43,520.14,2454.45,0.4238,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,1262.43,1641.08,2669.65,4712.24,0.6797,No Through Road (T-Junction),0.9921
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,741.43,1110.58,1546.39,2271.08,0.5352,No Entry (One Way),0.9808
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_cc77abda-MelatAssefa_34_Side.jpg,956.47,2643.07,1805.71,4420.5,0.6289,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_cc77abda-MelatAssefa_34_Side.jpg,1499.63,899.11,2677.63,2557.3,0.5195,No Entry (One Way),0.9841
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_cc77abda-MelatAssefa_34_Side.jpg,964.43,907.95,2671.81,4421.61,0.3398,,0.3228
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_cdd70210-BenTaliana_10_Side.jpeg,1492.83,1543.22,3360.93,4820.84,0.875,No Entry (One Way),0.987
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_d29347ca-MelatAssefa_51_Side.jpg,1270.85,235.39,1804.9,2053.74,0.4746,No Entry (One Way),0.9769
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_d29347ca-MelatAssefa_51_Side.jpg,2755.05,3349.88,3024.0,3625.9,0.4668,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_dad74922-BenTaliana_41_Front.jpeg,702.43,1891.52,3277.54,3967.19,0.3008,No Entry (One Way),0.9835
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e0bfe536-MelatAssefa_22_Front.jpg,1826.3,3490.0,2166.3,3782.12,0.3203,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e0bfe536-MelatAssefa_22_Front.jpg,1073.37,990.73,1858.75,1733.35,0.3066,No Entry (One Way),0.965
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e390d90e-MelatAssefa_55_Side.jpg,0.0,2223.85,934.88,3812.13,0.4258,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e43a48bc-BenTaliana_53_Side.jpeg,491.29,1660.22,824.66,1974.19,0.6289,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e43a48bc-BenTaliana_53_Side.jpeg,485.85,1658.36,898.67,2175.86,0.4258,,0.003
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e64b6a10-AlisonAttard_20_Side.jpeg,1342.18,1151.74,2631.3,1780.89,0.8945,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1041.21,0.0,1282.71,145.64,0.582,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1293.23,1545.59,2085.16,4080.0,0.3359,,0.3069
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1300.19,1554.44,2085.51,2317.55,0.3242,No Through Road (T-Junction),0.9663
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_f7db29c0-MichaelFarrugia_35_Front.jpg,1073.93,1669.72,1875.14,2400.99,0.5586,No Through Road (T-Junction),0.9779
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_fc84e1fb-BenTaliana_3_Back.jpeg,413.41,984.18,1782.14,2134.44,0.3262,Back-Unknown,0.991
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp5_ff6aaac1-MichaelFarrugia_43_Front.jpg,1243.19,1655.19,1956.8,2336.79,0.8359,No Entry (One Way),0.9812
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_0dbbcef1-IMG_6167.JPG,1176.67,581.77,1464.17,2531.65,0.4668,Pedestrian Crossing,0.9318
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_255dc793-IMG_0327.JPG,901.28,1571.23,3542.5,2067.59,0.3906,,0.147
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_264240ca-IMG_0303.JPG,1201.3,736.76,3646.26,2070.09,0.3281,,0.4735
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_280e9cbc-IMG_0220.JPG,971.02,2702.56,1476.1,3024.0,0.7227,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_280e9cbc-IMG_0220.JPG,1553.16,1259.83,2199.36,1967.25,0.4355,,0.4081
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_3721037e-IMG_0363.JPG,2284.4,1240.07,4024.94,1792.5,0.3906,,0.0039
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_3ce4063d-IMG_0217.JPG,898.79,2310.54,1341.19,2705.8,0.7852,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_3ce4063d-IMG_0217.JPG,1546.58,1397.38,2127.06,1733.0,0.7031,,0.2644
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_4c7d6d30-IMG_6226.JPG,1086.11,913.83,2112.95,1763.02,0.332,No Entry (One Way),0.994
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_5dd0fd95-IMG_6225.JPG,1052.37,577.96,2279.01,1686.28,0.3086,Back-Unknown,0.9946
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_6b4047ef-IMG_6230.JPG,1082.45,595.39,1584.14,2520.44,0.5664,Stop Sign,0.9701
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_8be98e2c-IMG_6200.JPG,1137.96,838.21,1444.63,2270.29,0.377,No Entry (One Way),0.9699
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_8d7bc213-IMG_0237.JPG,879.15,1281.05,2539.86,2285.55,0.5586,,0.3345
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_92b4ef64-IMG_6151.JPG,829.75,1225.68,2264.88,2509.91,0.4258,No Entry (One Way),0.9811
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_ad8b6cea-IMG_0342.JPG,1472.39,315.91,3137.99,2295.02,0.4277,,0.4166
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_ad8b6cea-IMG_0342.JPG,2384.32,0.0,4032.0,2315.62,0.3965,,0.2753
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_bf61cf6e-Screenshot_2025-12-05_142746.png,99.59,57.24,191.07,505.28,0.4531,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_c2b7f6e2-IMG_0300.JPG,2202.65,0.0,4032.0,2698.54,0.5195,,0.2407
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_c2b7f6e2-IMG_0300.JPG,1207.42,567.9,2954.77,2584.06,0.4922,,0.4801
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_c8db20f0-IMG_6257.JPG,1493.71,751.01,1717.05,1855.78,0.4277,No Through Road (T-Junction),0.9841
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_e18d6d29-IMG_0313.JPG,1173.47,1086.97,3558.6,2315.81,0.4043,,0.2705
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_e4194181-Screenshot_2025-12-05_124458.png,50.25,27.94,226.26,671.22,0.416,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp6_f6200360-IMG_6254.JPG,1375.42,737.79,1766.51,2203.59,0.3203,No Through Road (T-Junction),0.9555
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_01ba126c-IMG_1741.jpg,921.78,98.71,3409.02,2454.01,0.4414,Pedestrian Crossing,0.5887
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_0c807ae1-IMG_1804.jpg,1241.08,146.26,3400.83,2775.23,0.418,,0.4462
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_21763d41-IMG_1815.jpg,1106.53,407.47,3574.98,2814.76,0.5273,Back-Unknown,0.599
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_3acb0651-IMG_1793.jpg,538.81,1430.53,3488.78,1766.84,0.4199,,0.0764
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_4c22ebaa-IMG_6807.jpeg,1071.11,2159.84,1213.46,2405.93,0.3867,Back-Unknown,0.9547
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_4f01ce86-IMG_1927.jpg,3543.02,1986.59,3986.95,2114.22,0.3145,,0.0113
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_50fb19de-IMG_1779.jpg,1214.1,0.0,1608.74,316.77,0.4023,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_57ce1f54-20251215_150337.jpg,1060.3,1093.04,1270.78,2066.63,0.416,No Entry (One Way),0.9868
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_5fe0adac-IMG_2351.JPG,1096.68,975.53,1807.87,1783.64,0.3828,Back-Unknown,0.9931
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_5fe0adac-IMG_2351.JPG,2521.53,732.17,2711.58,1010.16,0.3203,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_81ace7bd-IMG_1823.jpg,1664.63,690.71,3334.99,2790.65,0.3594,,0.3508
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_85e21f65-IMG_1888.jpg,974.59,785.64,3667.21,2748.2,0.3555,,0.2871
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_87ab4012-IMG_1929.jpg,1838.53,139.51,3476.06,2342.41,0.3047,,0.2799
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_897df19a-IMG_2311.JPG,2210.46,1346.33,2462.52,1759.58,0.3203,Back-Unknown,0.9787
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_8a80058d-20251215_151420.jpg,975.77,1106.57,1294.59,1976.95,0.7148,Other-Unknown,0.9803
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_917e5bd8-IMG_2117.JPG,1029.28,194.08,3591.43,2753.3,0.5742,No Entry (One Way),0.5995
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_93d54be7-IMG_6607.jpeg,1002.83,1213.7,1102.6,1537.42,0.4219,Stop Sign,0.9573
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_998eacf2-IMG_6613.jpeg,390.99,740.02,888.3,1070.37,0.3105,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_b1489edd-IMG_1891.jpg,910.75,1398.32,3478.37,1690.66,0.375,,0.066
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_b3afe886-IMG_1875.jpg,1236.69,1469.87,3378.37,1654.37,0.4102,,0.0551
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_b45f5f31-IMG_2274.JPG,1080.34,2141.64,2271.61,2286.26,0.418,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_b552bf33-20251215_150109.jpg,245.8,537.23,617.09,1090.37,0.5781,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_b552bf33-20251215_150109.jpg,802.6,1721.97,919.36,1942.16,0.4277,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_c1e32eff-IMG_1769.jpg,1275.38,1240.12,3881.88,1869.75,0.3047,,0.1883
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_c3ab6f98-IMG_2186.JPG,605.13,103.72,3235.67,2874.66,0.3398,Back-Unknown,0.5533
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_d7ded33c-IMG_6742.jpeg,1218.92,1441.56,1633.36,2104.14,0.334,Back-Unknown,0.5779
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_dfd0a665-IMG_2360.JPG,1544.46,1127.45,1824.84,1755.3,0.7383,Back-Unknown,0.9837
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_dfd0a665-IMG_2360.JPG,1204.73,1388.91,1270.78,1543.06,0.3711,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_e16f743b-IMG_1838.jpg,0.0,97.89,3643.58,1801.17,0.3633,,0.0684
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_ef1c0521-IMG_1930.jpg,1585.96,211.53,2935.39,2764.31,0.5312,,0.2615
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_ef873d66-20251215_143818.jpg,944.62,1170.2,1151.26,1968.87,0.3789,No Entry (One Way),0.9549
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp7_ef873d66-20251215_143818.jpg,1596.93,2269.79,1975.18,2641.75,0.3086,Back-Unknown,0.9802
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_04258956-back.jpg,66.72,1742.82,227.37,1972.01,0.457,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_06980edd-front.jpg,1333.22,893.39,2604.95,2098.24,0.3262,Roundabout Ahead,0.9853
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_0d18b07a-IMG_0224.JPG,1270.55,1927.44,4005.45,2959.98,0.7461,,0.3382
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_14aaa44c-IMG_0211.JPG,1744.85,1044.27,3486.8,3084.21,0.375,,0.473
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_1e3225cd-IMG_0085.jpg,1273.01,915.55,2247.24,2796.79,0.3789,No Entry (One Way),0.9853
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_2aed70e2-front.jpg,391.48,822.24,1856.16,1887.33,0.4961,No Entry (One Way),0.9826
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_2aed70e2-front.jpg,15.26,2272.39,1872.28,3059.62,0.4336,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_2d237c79-side.jpg,1900.84,953.63,2135.36,1849.31,0.3105,No Through Road (T-Junction),0.9431
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_2d73c181-back.jpg,1454.51,828.72,2385.19,1838.52,0.4746,Back-Unknown,0.9932
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_3799bcb2-side.jpg,1318.37,1859.1,1739.81,2290.18,0.6602,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_3e16c892-IMG_0188.JPG,2513.75,1296.62,4207.15,2859.25,0.3457,,0.3695
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_41de0558-Side.jpg,1468.5,3291.85,1705.56,3609.43,0.3496,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_4682619f-back.jpg,1783.84,559.55,1934.47,799.04,0.6875,,0.0052
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_4c496fb4-side.jpg,1342.6,1456.42,1804.98,1991.07,0.8008,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_4fe75feb-IMG_0243.JPG,873.78,776.32,3465.81,3348.75,0.3711,,0.4338
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_58621eda-IMG_0203.JPG,1439.29,1164.84,3770.37,2771.37,0.5117,Pedestrian Crossing,0.5957
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_58621eda-IMG_0203.JPG,1518.17,2042.86,1990.26,2527.32,0.3809,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_58621eda-IMG_0203.JPG,1514.41,2245.81,1768.3,2520.33,0.3398,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_70a9ea7f-side.jpg,981.1,516.6,1670.28,1550.89,0.75,No Entry (One Way),0.9805
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_7cc436b9-Back.jpg,1590.01,3282.63,1681.7,3374.53,0.3496,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_7cc436b9-Back.jpg,528.33,3172.41,590.3,3251.65,0.3457,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_8dc5354c-IMG_0141.JPG,1415.28,1160.63,2995.48,3092.59,0.668,,0.3349
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_8edb630b-IMG_0208.JPG,1902.18,1134.94,3367.55,3011.99,0.8125,,0.4173
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_8ff667a0-IMG_0209.JPG,4339.57,385.51,5444.75,1201.03,0.4805,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_8ff667a0-IMG_0209.JPG,3788.25,2738.75,4327.47,2980.54,0.3633,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_8ff667a0-IMG_0209.JPG,1705.99,1788.47,3749.35,2775.99,0.3203,,0.4789
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_9f69e083-Front.jpg,81.98,0.0,346.4,469.38,0.6914,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_9f69e083-Front.jpg,353.56,460.86,693.62,1029.06,0.625,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_9f69e083-Front.jpg,560.35,1150.24,796.07,1549.07,0.5977,,0.0175
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_9f69e083-Front.jpg,533.24,1171.44,888.6,1841.45,0.3379,,0.2292
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_a27e76cc-back.jpg,946.77,1330.52,2084.03,2253.84,0.3164,Back-Unknown,0.9873
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_aa3bff09-side.jpg,1863.5,760.41,2104.38,1019.09,0.5508,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_aeadaf7d-Side.jpg,761.06,718.92,1429.36,2175.08,0.3125,No Entry (One Way),0.9668
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_b9028e28-side.jpg,161.87,2704.44,288.18,2935.07,0.6445,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_b9028e28-side.jpg,343.8,2227.39,426.46,2339.76,0.4785,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_b9028e28-side.jpg,193.62,2371.15,311.16,2515.02,0.3457,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_c01f5341-IMG_0123.jpg,1816.66,954.06,2815.27,2952.19,0.418,No Entry (One Way),0.9844
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_c89fb86b-IMG_0117.jpg,1882.48,1452.1,2502.88,3397.41,0.5273,No Through Road (T-Junction),0.9568
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_c89fb86b-IMG_0117.jpg,3464.86,2210.84,4111.28,3191.02,0.4395,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_c96fcc1a-IMG_0217.JPG,2020.98,1452.35,3260.47,2612.61,0.6211,No Entry (One Way),0.5081
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_c96fcc1a-IMG_0217.JPG,800.37,1411.34,920.45,1539.93,0.5664,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_c96fcc1a-IMG_0217.JPG,3662.68,0.0,5039.57,762.03,0.3105,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_dd88f02c-IMG_0092.jpg,338.37,1008.98,1380.48,1811.89,0.3926,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_dd88f02c-IMG_0092.jpg,1682.66,1578.29,2738.09,3666.4,0.3125,No Entry (One Way),0.9851
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_ea4926f3-side.jpg,2524.46,1313.78,2862.7,1744.8,0.5508,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_ea4926f3-side.jpg,2130.68,1226.88,2480.85,1654.09,0.543,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_ea4926f3-side.jpg,1739.19,1176.54,2028.77,1574.47,0.4688,,0.0619
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_ebf4ab1a-IMG_0198.JPG,1584.05,1323.17,3611.17,2939.65,0.6445,Back-Unknown,0.6245
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp8_edb6fab3-IMG_0189.JPG,2105.22,988.7,4475.48,3600.5,0.3184,,0.4818
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_00e70ac4-IMG_20251111_140913.jpg,0.0,41.26,328.61,493.19,0.8398,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_01e24ee9-IMG_20251106_145403.jpg,1360.01,1730.99,1717.49,2955.85,0.5234,Back-Unknown,0.9564
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_01e24ee9-IMG_20251106_145403.jpg,1374.4,852.59,1803.64,2095.73,0.5156,Back-Unknown,0.9864
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_109ae844-20251122_134645.jpg,1255.64,1421.64,1362.74,1716.5,0.3125,Back-Unknown,0.9804
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_1f50c9e9-WhatsApp_Image_2026-01-01_at_18.13.18.jpeg,547.45,1837.03,573.47,1905.46,0.3203,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_29bd496f-IMG_20251106_153126.jpg,1310.27,1479.87,1435.5,2224.09,0.3223,No Entry (One Way),0.9279
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_31a93fb3-20251122_141601.jpg,1615.91,1732.98,1772.6,1858.85,0.5469,,0.0017
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_37f0c8a3-IMG_20251111_162207.jpg,1540.69,1828.95,1621.57,2408.24,0.4961,Roundabout Ahead,0.9088
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_441ca6d9-WhatsApp_Image_2026-01-03_at_18.45.36_2.jpeg,134.17,1299.89,190.0,1353.35,0.3828,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_48f9d230-IMG_20251112_155513.jpg,751.92,1853.01,1280.32,2357.54,0.459,Back-Unknown,0.9858
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_48f9d230-IMG_20251112_155513.jpg,750.62,1846.28,1276.8,4080.0,0.3984,,0.2264
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_561ba1c4-IMG_20251111_162044.jpg,281.91,489.62,628.31,1066.21,0.7656,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_561ba1c4-IMG_20251111_162044.jpg,62.05,527.39,317.22,1024.29,0.75,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_561ba1c4-IMG_20251111_162044.jpg,482.43,973.86,752.99,1424.06,0.7461,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_561ba1c4-IMG_20251111_162044.jpg,0.0,931.85,119.53,1268.04,0.6836,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_58c8b920-IMG_20251106_153249.jpg,1382.65,1595.65,1820.74,1984.27,0.6562,Back-Unknown,0.9819
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_58c8b920-IMG_20251106_153249.jpg,2055.57,677.96,2713.54,1321.6,0.3574,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_58c8b920-IMG_20251106_153249.jpg,22.08,5.41,143.14,142.84,0.3301,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_636a2125-IMG_20251111_155635.jpg,1293.74,1525.69,1936.03,2031.73,0.7578,Back-Unknown,0.9178
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_6867b383-IMG_20251111_160020.jpg,1270.6,1684.78,1731.49,2133.93,0.373,No Through Road (T-Junction),0.973
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_6ad958e6-IMG_20251112_155635.jpg,1233.51,1257.52,1706.91,2134.58,0.373,Back-Unknown,0.9771
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_6ad958e6-IMG_20251112_155635.jpg,963.31,808.09,1313.6,1392.23,0.3613,,0.0187
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_a6b8460c-20251122_140515.jpg,1266.07,1524.38,1795.85,3596.98,0.4062,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_a745c9e2-IMG_20251106_152554.jpg,1381.19,2050.53,2170.54,2880.14,0.4082,Back-Unknown,0.9764
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_a7e54ad2-IMG_20251210_141604.jpg,1398.41,1121.94,1598.44,2220.45,0.793,No Entry (One Way),0.9572
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_b8de4d86-IMG_20251112_162741.jpg,0.0,2309.48,641.24,3590.33,0.7539,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_c8f9e8c2-M8_back.jpg,662.34,1091.85,834.94,3497.98,0.5156,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_c8f9e8c2-M8_back.jpg,1221.1,617.91,1366.18,994.15,0.4121,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_d09450b2-IMG_20251112_155615.jpg,1412.56,1522.07,2001.22,2146.16,0.3457,Back-Unknown,0.9808
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_d4f4f35a-WhatsApp_Image_2026-01-01_at_18.12.59_1.jpeg,553.96,798.86,684.29,1353.67,0.7227,No Entry (One Way),0.9519
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_dbd6345f-IMG_20251106_155229.jpg,1089.38,1000.18,2104.95,2091.97,0.4277,Back-Unknown,0.9866
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_dbd6345f-IMG_20251106_155229.jpg,280.77,2484.39,640.73,2670.51,0.3711,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_dbd6345f-IMG_20251106_155229.jpg,2291.33,2562.73,2476.47,2718.39,0.3574,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_dfbf929f-IMG_20251106_154024.jpg,721.62,1138.31,1840.83,2253.6,0.4609,No Entry (One Way),0.9163
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_e0e8c13e-IMG_20251113_163444.jpg,1270.91,1263.45,1386.1,2305.47,0.416,Back-Unknown,0.9873
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_e2932f32-20251122_134050.jpg,1284.03,1562.46,1612.12,1879.75,0.3223,Back-Unknown,0.9695
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_e690fe37-IMG_20251111_162300.jpg,1461.85,1305.81,1551.0,1950.7,0.5898,Other-Unknown,0.943
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_e8541d39-IMG_20251106_145533.jpg,1183.04,2660.07,1713.08,3084.87,0.6523,,0.0355
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_e8541d39-IMG_20251106_145533.jpg,52.78,2014.23,197.48,2182.67,0.543,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_e8541d39-IMG_20251106_145533.jpg,2442.02,2740.55,2517.69,2818.49,0.4766,,0.0
+SAM 3.1,sens-mtsd-mirror-04,find all roadside blind-spot mirrors,grp9_e8541d39-IMG_20251106_145533.jpg,2762.72,2908.86,2961.11,3111.86,0.3066,,0.0

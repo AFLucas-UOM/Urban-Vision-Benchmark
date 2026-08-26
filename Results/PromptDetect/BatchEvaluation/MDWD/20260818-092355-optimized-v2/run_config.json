@@ -1,0 +1,1624 @@
+{
+  "evaluation_protocol": "targeted-v2",
+  "protocol_version": "dissertation-v2",
+  "protocol_hash": "60787d37184e3d7185c9ca8b0e8e3744505b5aba4729db032c07b755a54dfda1",
+  "dataset": "MDWD",
+  "split": "test",
+  "source": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MDWD\\MDWD-YOLO26",
+  "source_type": "yolo",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "dataset_manifest": null,
+  "models": [
+    "SAM 3",
+    "SAM 3.1",
+    "LocateAnything 3B",
+    "Cosmos Reason2 2B",
+    "Cosmos Reason2 8B"
+  ],
+  "prompt_ids": [
+    "mdwd-p1",
+    "mdwd-p2",
+    "mdwd-p3",
+    "mdwd-p4",
+    "mdwd-p5",
+    "mdwd-p6"
+  ],
+  "prompt_definitions": [
+    {
+      "id": "mdwd-p1",
+      "prompt": "black garbage bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Mixed Waste"
+      ]
+    },
+    {
+      "id": "mdwd-p2",
+      "prompt": "grey recycling bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Recyclable Material"
+      ]
+    },
+    {
+      "id": "mdwd-p3",
+      "prompt": "white organic-waste bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Organic Waste"
+      ]
+    },
+    {
+      "id": "mdwd-p4",
+      "prompt": "orange garbage bag",
+      "group": "class-targeted",
+      "target_classes": [
+        "Orange CMD"
+      ]
+    },
+    {
+      "id": "mdwd-p5",
+      "prompt": "domestic waste",
+      "group": "broad",
+      "target_classes": [
+        "Mixed Waste",
+        "Recyclable Material",
+        "Organic Waste",
+        "Orange CMD",
+        "Other Waste"
+      ]
+    },
+    {
+      "id": "mdwd-p6",
+      "prompt": "garbage",
+      "group": "broad",
+      "target_classes": [
+        "Mixed Waste",
+        "Recyclable Material",
+        "Organic Waste",
+        "Orange CMD",
+        "Other Waste"
+      ]
+    }
+  ],
+  "approved_group_scope": null,
+  "group_scope": null,
+  "final_enforcement": {
+    "final_mode": true
+  },
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 28,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "max_detections_provenance": {
+    "value": 28,
+    "policy": "test-set-max-gt-per-image",
+    "source_split": "test",
+    "source_image_id": "AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg",
+    "source_image_gt_boxes": 28
+  },
+  "nms_iou_threshold": 0.5,
+  "execution_strategy": "isolated-model-prompt-chunks-v1",
+  "vlm_worker_chunk_size": 64,
+  "visualizations_per_combination": 10,
+  "consistency_iou_threshold": 0.5,
+  "n_images": 369,
+  "started_at": "2026-08-18T07:23:55.127642+00:00",
+  "wandb": {
+    "target": "mark-bugeja-university-of-malta/MSc-MDWD-MDWD-PromptDetect",
+    "mode": "online",
+    "run_id": "mdwd_targeted_v2_20260818_092355_optimized_v2",
+    "url": "https://wandb.ai/mark-bugeja-university-of-malta/MSc-MDWD-MDWD-PromptDetect/runs/mdwd_targeted_v2_20260818_092355_optimized_v2"
+  },
+  "combination_execution": [
+    {
+      "model": "SAM 3",
+      "prompt_id": "mdwd-p1",
+      "model_load_ms": 8938.3,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3",
+          "model_load_ms": 8938.3,
+          "ok": true,
+          "label": "SAM 3",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3\\snapshots\\3c879f39826c281e95690f02c7821c4de09afae7\\sam3.pt",
+          "detail": "Meta sam3 builder (sam3), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3",
+      "prompt_id": "mdwd-p2",
+      "model_load_ms": 8167.3,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3",
+          "model_load_ms": 8167.3,
+          "ok": true,
+          "label": "SAM 3",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3\\snapshots\\3c879f39826c281e95690f02c7821c4de09afae7\\sam3.pt",
+          "detail": "Meta sam3 builder (sam3), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3",
+      "prompt_id": "mdwd-p3",
+      "model_load_ms": 8305.9,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3",
+          "model_load_ms": 8305.9,
+          "ok": true,
+          "label": "SAM 3",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3\\snapshots\\3c879f39826c281e95690f02c7821c4de09afae7\\sam3.pt",
+          "detail": "Meta sam3 builder (sam3), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3",
+      "prompt_id": "mdwd-p4",
+      "model_load_ms": 8232.5,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3",
+          "model_load_ms": 8232.5,
+          "ok": true,
+          "label": "SAM 3",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3\\snapshots\\3c879f39826c281e95690f02c7821c4de09afae7\\sam3.pt",
+          "detail": "Meta sam3 builder (sam3), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3",
+      "prompt_id": "mdwd-p5",
+      "model_load_ms": 8405.9,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3",
+          "model_load_ms": 8405.9,
+          "ok": true,
+          "label": "SAM 3",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3\\snapshots\\3c879f39826c281e95690f02c7821c4de09afae7\\sam3.pt",
+          "detail": "Meta sam3 builder (sam3), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3",
+      "prompt_id": "mdwd-p6",
+      "model_load_ms": 8366.0,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3",
+          "model_load_ms": 8366.0,
+          "ok": true,
+          "label": "SAM 3",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3\\snapshots\\3c879f39826c281e95690f02c7821c4de09afae7\\sam3.pt",
+          "detail": "Meta sam3 builder (sam3), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3.1",
+      "prompt_id": "mdwd-p1",
+      "model_load_ms": 8707.3,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3.1",
+          "model_load_ms": 8707.3,
+          "ok": true,
+          "label": "SAM 3.1",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+          "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3.1",
+      "prompt_id": "mdwd-p2",
+      "model_load_ms": 8216.3,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3.1",
+          "model_load_ms": 8216.3,
+          "ok": true,
+          "label": "SAM 3.1",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+          "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3.1",
+      "prompt_id": "mdwd-p3",
+      "model_load_ms": 8396.5,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3.1",
+          "model_load_ms": 8396.5,
+          "ok": true,
+          "label": "SAM 3.1",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+          "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3.1",
+      "prompt_id": "mdwd-p4",
+      "model_load_ms": 8385.0,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3.1",
+          "model_load_ms": 8385.0,
+          "ok": true,
+          "label": "SAM 3.1",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+          "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3.1",
+      "prompt_id": "mdwd-p5",
+      "model_load_ms": 8343.2,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3.1",
+          "model_load_ms": 8343.2,
+          "ok": true,
+          "label": "SAM 3.1",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+          "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "SAM 3.1",
+      "prompt_id": "mdwd-p6",
+      "model_load_ms": 8397.7,
+      "worker_processes": 1,
+      "worker_chunk_size": null,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "SAM 3.1",
+          "model_load_ms": 8397.7,
+          "ok": true,
+          "label": "SAM 3.1",
+          "source": "C:\\Users\\fridge\\.cache\\huggingface\\hub\\models--facebook--sam3.1\\snapshots\\daa63191845a41281374e725f4c9e51c7a824460\\sam3.1_multiplex.pt",
+          "detail": "Meta sam3 builder (sam3.1), bf16 autocast",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "LocateAnything 3B",
+      "prompt_id": "mdwd-p1",
+      "model_load_ms": 77413.1,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 16136.6,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12178.6,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12497.8,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12383.3,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12136.8,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12080.0,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "LocateAnything 3B",
+      "prompt_id": "mdwd-p2",
+      "model_load_ms": 72194.2,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 11977.5,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12128.2,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12026.9,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12012.4,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 11974.7,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12074.5,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "LocateAnything 3B",
+      "prompt_id": "mdwd-p3",
+      "model_load_ms": 74523.1,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12085.5,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12376.5,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12225.2,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12778.4,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12890.5,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12167.0,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "LocateAnything 3B",
+      "prompt_id": "mdwd-p4",
+      "model_load_ms": 73768.4,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12032.2,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12701.4,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12323.5,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12102.5,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12325.2,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12283.6,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "LocateAnything 3B",
+      "prompt_id": "mdwd-p5",
+      "model_load_ms": 73042.2,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12122.1,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12134.5,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12077.1,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12159.6,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12288.1,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12260.8,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "LocateAnything 3B",
+      "prompt_id": "mdwd-p6",
+      "model_load_ms": 72742.9,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12256.0,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12013.1,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12292.1,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 12290.8,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 11944.8,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "LocateAnything 3B",
+          "model_load_ms": 11946.1,
+          "ok": true,
+          "label": "LocateAnything 3B",
+          "source": "nvidia/LocateAnything-3B",
+          "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 2B",
+      "prompt_id": "mdwd-p1",
+      "model_load_ms": 56818.0,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 10776.5,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9031.6,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9221.2,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9040.5,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9147.7,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9600.5,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 2B",
+      "prompt_id": "mdwd-p2",
+      "model_load_ms": 54860.3,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9325.1,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9039.1,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9191.8,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9015.8,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9094.4,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9194.1,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 2B",
+      "prompt_id": "mdwd-p3",
+      "model_load_ms": 55381.8,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9508.8,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9226.9,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9061.9,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9157.8,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9147.3,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9279.1,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 2B",
+      "prompt_id": "mdwd-p4",
+      "model_load_ms": 54696.7,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9032.2,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9147.9,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9104.6,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9108.7,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9118.7,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9184.6,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 2B",
+      "prompt_id": "mdwd-p5",
+      "model_load_ms": 55463.2,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9092.5,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9191.0,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9011.0,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 8984.1,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9417.2,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9767.4,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 2B",
+      "prompt_id": "mdwd-p6",
+      "model_load_ms": 54575.7,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9317.1,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9129.0,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 8973.1,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9049.5,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9016.0,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 2B",
+          "model_load_ms": 9091.0,
+          "ok": true,
+          "label": "Cosmos Reason2 2B",
+          "source": "nvidia/Cosmos-Reason2-2B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 8B",
+      "prompt_id": "mdwd-p1",
+      "model_load_ms": 99023.4,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 29983.0,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13649.8,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13775.3,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13845.7,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13831.2,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13938.4,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 8B",
+      "prompt_id": "mdwd-p2",
+      "model_load_ms": 82687.8,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13857.8,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13659.1,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13754.9,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13698.7,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13753.0,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13964.3,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 8B",
+      "prompt_id": "mdwd-p3",
+      "model_load_ms": 82533.3,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13651.2,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13622.3,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13677.3,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13854.8,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13728.8,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13998.9,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 8B",
+      "prompt_id": "mdwd-p4",
+      "model_load_ms": 82696.9,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13744.7,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 14055.4,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13648.9,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13802.5,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13716.1,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13729.3,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 8B",
+      "prompt_id": "mdwd-p5",
+      "model_load_ms": 82876.7,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13740.4,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13919.2,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13740.7,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13786.5,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13968.4,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13721.5,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    },
+    {
+      "model": "Cosmos Reason2 8B",
+      "prompt_id": "mdwd-p6",
+      "model_load_ms": 83323.0,
+      "worker_processes": 6,
+      "worker_chunk_size": 64,
+      "execution_strategy": "isolated-model-prompt-chunks-v1",
+      "chunk_load_statuses": [
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13826.5,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13888.2,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13839.4,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 14150.7,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13878.8,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        },
+        {
+          "model": "Cosmos Reason2 8B",
+          "model_load_ms": 13739.4,
+          "ok": true,
+          "label": "Cosmos Reason2 8B",
+          "source": "nvidia/Cosmos-Reason2-8B",
+          "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+          "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+          "error": ""
+        }
+      ]
+    }
+  ],
+  "visualizations": {
+    "enabled": true,
+    "per_combination_limit": 10,
+    "count": 300,
+    "folder": "visualizations",
+    "index": "visualizations/index.html"
+  },
+  "status": "completed",
+  "finished_at": "2026-08-18T11:47:00.706849+00:00"
+}

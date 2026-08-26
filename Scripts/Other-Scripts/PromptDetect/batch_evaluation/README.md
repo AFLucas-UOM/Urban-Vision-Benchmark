@@ -57,9 +57,11 @@ detection-dataset preparation.
      reproduce the prep notebook's seeded per-group 80/10/10 split; `all`
      evaluates every QA image.
 2. Runs every model×prompt in an isolated subprocess. SAM uses one worker per
-   prompt; LocateAnything/Cosmos use fresh 64-image workers so Windows reclaims
-   all model RAM/VRAM regularly. Zero prompts are accepted for dry-run
-   dataset/model sanity checks only.
+   prompt; LocateAnything uses fresh 64-image workers. Cosmos uses 8-image
+   workers and a checkpoint-specific inference-image cap (2560px maximum side
+   for 2B; 1536px for 8B/32B), so native-resolution MTSD images cannot exhaust
+   RAM/VRAM. Boxes are mapped back to the original image dimensions. Zero
+   prompts are accepted for dry-run dataset/model sanity checks only.
 3. Matches predictions to GT boxes (greedy IoU matching, threshold
    configurable) and reports: precision, recall, F1, accuracy
    (TP/(TP+FP+FN)), AP@50, mAP@50:95, mean matched IoU, FP/FN counts,

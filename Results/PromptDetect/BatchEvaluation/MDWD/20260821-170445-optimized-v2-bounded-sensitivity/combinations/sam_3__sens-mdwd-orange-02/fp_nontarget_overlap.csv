@@ -1,0 +1,12 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mdwd-orange-02,orange refuse bag,20250114_102613_jpg.rf.83447af29c6413aa1b9372ac635283f4.jpg,243.58,298.5,416.6,402.42,0.4043,Organic Waste,0.9769
+SAM 3,sens-mdwd-orange-02,orange refuse bag,472129425_1345249006899593_1932127883326922457_n_jpg.rf.03069b893f513bced6e53fce77c8d53c.jpg,191.07,151.35,346.79,368.2,0.5469,Mixed Waste,0.9704
+SAM 3,sens-mdwd-orange-02,orange refuse bag,AFL_NewBatch3_53_jpeg.rf.9e5bf2183fc4b923c9ee1501592a41f9.jpg,355.69,0.0,476.19,18.71,0.7734,,0.0
+SAM 3,sens-mdwd-orange-02,orange refuse bag,ARI3129_SDM_64_jpg.rf.ee088bd38a2c3c95b2da82373aaac73e.jpg,124.86,116.54,417.12,432.23,0.3984,Organic Waste,0.9447
+SAM 3,sens-mdwd-orange-02,orange refuse bag,ARI3129_TK_82_jpg.rf.5b857cd999783b45fe9d87f41bd735fe.jpg,449.62,34.76,551.32,187.77,0.7891,,0.0
+SAM 3,sens-mdwd-orange-02,orange refuse bag,CMD-Batch1_43_jpeg.rf.7ad2150ca57fd7d4f9339f170104fbd5.jpg,362.53,172.04,439.02,220.29,0.6992,,0.2007
+SAM 3,sens-mdwd-orange-02,orange refuse bag,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,266.7,281.65,307.62,303.17,0.4258,,0.0
+SAM 3,sens-mdwd-orange-02,orange refuse bag,CMD-Batch1_83_jpeg.rf.8c468ace19ef290a465a9eb0be96db61.jpg,620.55,132.72,636.24,151.45,0.4043,,0.0
+SAM 3,sens-mdwd-orange-02,orange refuse bag,IMG_20250109_074213_jpg.rf.70a8bd28946b36ece01a48b9cdfaa26d.jpg,216.0,31.48,325.62,199.3,0.4531,Other Waste,0.8227
+SAM 3,sens-mdwd-orange-02,orange refuse bag,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,29.69,190.26,322.81,415.92,0.7578,Recyclable Material,0.9787
+SAM 3,sens-mdwd-orange-02,orange refuse bag,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,330.7,256.54,438.81,369.2,0.375,,0.0145

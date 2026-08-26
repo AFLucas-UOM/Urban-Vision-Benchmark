@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mtsd-p9",
+  "prompt": "street sign",
+  "image_start": 448,
+  "image_end": 512,
+  "n_images": 64,
+  "n_prediction_rows": 315,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 12838.5,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-19T02:26:38.164596+00:00",
+  "finished_at": "2026-08-19T02:30:50.653158+00:00"
+}

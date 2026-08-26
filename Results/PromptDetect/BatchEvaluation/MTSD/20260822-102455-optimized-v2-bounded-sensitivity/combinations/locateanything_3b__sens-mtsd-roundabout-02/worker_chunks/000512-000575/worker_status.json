@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "sens-mtsd-roundabout-02",
+  "prompt": "warning sign for a roundabout ahead",
+  "image_start": 512,
+  "image_end": 576,
+  "n_images": 64,
+  "n_prediction_rows": 244,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 13363.2,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-23T10:50:52.005300+00:00",
+  "finished_at": "2026-08-23T10:54:54.904244+00:00"
+}

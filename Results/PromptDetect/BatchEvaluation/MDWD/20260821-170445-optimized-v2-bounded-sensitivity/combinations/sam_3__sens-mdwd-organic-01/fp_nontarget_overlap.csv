@@ -1,0 +1,206 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,277.96,286.0,495.35,555.48,0.8789,Recyclable Material,0.9436
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,231.05,183.21,449.98,378.51,0.707,Recyclable Material,0.5305
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,230.66,267.48,344.95,378.56,0.5703,Recyclable Material,0.8898
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,326.96,191.85,508.93,409.05,0.3379,Mixed Waste,0.6475
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241219_083844_jpg.rf.70488e50bbe5f99b85b0719729f32064.jpg,199.83,103.5,494.86,346.24,0.9336,Recyclable Material,0.8516
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,309.35,190.33,511.64,393.1,0.832,Recyclable Material,0.9619
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,122.52,195.21,318.57,362.33,0.832,Recyclable Material,0.9563
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,606.37,257.68,640.0,388.31,0.5703,Recyclable Material,0.9607
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,324.42,165.26,560.33,334.93,0.9648,Recyclable Material,0.9383
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,63.71,175.76,330.45,404.49,0.8125,Recyclable Material,0.9631
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,522.19,201.88,640.0,345.38,0.7422,Recyclable Material,0.8811
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,249.65,214.76,411.3,360.25,0.6445,Recyclable Material,0.9257
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,254.4,86.55,361.59,219.01,0.6328,Recyclable Material,0.9441
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,48.24,217.84,164.51,371.22,0.6289,Recyclable Material,0.8924
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,190.19,204.26,284.95,348.13,0.5859,Recyclable Material,0.8303
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,125.38,296.46,237.35,425.28,0.5625,Recyclable Material,0.926
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,344.09,179.03,412.82,284.58,0.5625,Recyclable Material,0.9645
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,211.62,170.42,261.0,234.21,0.4375,Recyclable Material,0.796
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,124.61,198.63,225.26,421.59,0.7422,Recyclable Material,0.9756
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,201.2,363.3,375.96,540.35,0.7422,Recyclable Material,0.9341
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,258.96,264.79,361.13,340.19,0.5078,Recyclable Material,0.7897
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20250114_102320_jpg.rf.979c53863883cd0861956f0a494251dd.jpg,209.88,294.0,383.31,398.34,0.9375,Other Waste,0.9844
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,20250124_121125_jpg.rf.cfc4084ec5d934eac7c719fb1006ba95.jpg,244.71,221.91,421.62,351.93,0.3203,Other Waste,0.9345
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,26_jpeg.rf.9461f25b898f83e1991fbcc6fc5cc83c.jpg,214.06,282.4,400.8,482.25,0.9805,Recyclable Material,0.9527
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,191.41,184.61,469.8,399.1,0.6953,Recyclable Material,0.8972
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,227.26,40.64,342.59,137.19,0.6289,Recyclable Material,0.935
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,213.6,172.39,409.45,241.46,0.3516,Other Waste,0.7079
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,30_jpeg.rf.b5cf601d6f44e0addb177394ba5d4b99.jpg,219.36,227.83,437.39,364.24,0.957,Recyclable Material,0.966
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,31_jpeg.rf.fda6c54a3034426eb0971b712b284ac9.jpg,197.94,230.61,397.22,357.02,0.3359,Recyclable Material,0.8343
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,369.85,191.12,480.41,290.84,0.7969,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,603.7,243.6,640.0,396.26,0.6797,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,550.09,153.86,640.0,253.85,0.5781,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,432.06,627.22,529.77,640.0,0.5586,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,603.76,242.34,640.0,282.05,0.3691,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,619.54,352.17,640.0,397.45,0.3047,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473055810_1017914696762987_4178034688130709660_n_jpg.rf.f03f6b9a9f959d7dce7512e0d31dc6a1.jpg,271.65,320.09,405.81,429.4,0.6211,Recyclable Material,0.8996
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473288918_1030220488909269_3010825870718583729_n_jpg.rf.1e0886d3aa27cfa4e22d06ead559dc80.jpg,438.76,142.32,583.95,267.77,0.9609,Recyclable Material,0.9529
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473288918_1030220488909269_3010825870718583729_n_jpg.rf.1e0886d3aa27cfa4e22d06ead559dc80.jpg,198.47,237.97,381.81,354.57,0.9609,Recyclable Material,0.955
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473288918_1030220488909269_3010825870718583729_n_jpg.rf.1e0886d3aa27cfa4e22d06ead559dc80.jpg,348.99,186.31,498.06,305.74,0.9609,Recyclable Material,0.8153
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,361.87,65.62,595.12,327.58,0.8438,Recyclable Material,0.9592
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,143.19,194.06,495.01,486.01,0.8281,Recyclable Material,0.9435
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,175.16,207.64,395.76,384.6,0.8828,Recyclable Material,0.9758
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,418.77,155.17,520.81,256.18,0.6406,Recyclable Material,0.7706
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,193.13,36.54,431.18,289.97,0.4746,Recyclable Material,0.9609
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch5_13_jpeg.rf.bcc3cbdfd5c1dfc063c7825a0a55a90a.jpg,202.73,154.05,373.08,286.71,0.5,Recyclable Material,0.9732
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch5_15_jpeg.rf.5dc21330fd6004b5fe9c6cdcf1a1732c.jpg,271.5,409.19,358.37,480.8,0.8711,Recyclable Material,0.9677
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_40_jpeg.rf.41584ad8be2654c6380775654da6238a.jpg,98.91,217.22,334.17,370.68,0.9141,Orange CMD,0.9643
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,297.9,307.67,626.59,554.47,0.6758,Orange CMD,0.9689
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,70.01,347.32,127.39,361.59,0.3281,Other Waste,0.8511
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,390.02,365.78,472.25,436.34,0.5547,Orange CMD,0.9636
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,180.35,378.41,256.46,429.42,0.4141,Orange CMD,0.9546
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,129.36,396.68,183.68,426.87,0.3809,Orange CMD,0.9634
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,326.35,375.18,399.12,433.28,0.3789,Orange CMD,0.9293
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,255.35,381.69,328.86,430.59,0.3438,Orange CMD,0.8008
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,0.0,333.75,31.84,390.91,0.5859,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,255.75,271.89,494.53,538.31,0.4336,Orange CMD,0.9607
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,53.08,264.98,121.04,319.83,0.7852,Recyclable Material,0.9558
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,242.08,256.64,366.52,330.82,0.6953,Recyclable Material,0.9498
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,377.03,218.27,495.55,312.26,0.6641,Recyclable Material,0.9019
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,142.36,246.36,271.78,305.38,0.5938,Recyclable Material,0.5048
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,38.66,183.89,66.82,222.59,0.5859,Recyclable Material,0.7217
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,385.92,201.24,458.48,249.22,0.5156,Recyclable Material,0.9409
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,228.59,208.2,340.65,261.9,0.4941,Recyclable Material,0.9307
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,249.02,144.19,356.6,209.25,0.4258,Mixed Waste,0.8058
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,456.68,285.17,558.32,361.29,0.3711,Mixed Waste,0.9584
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,214.64,174.13,284.3,232.36,0.3359,Recyclable Material,0.93
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,122.45,161.77,212.52,227.0,0.3301,Mixed Waste,0.8953
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,0.0,175.24,10.6,189.2,0.3242,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,224.87,100.16,325.07,155.59,0.3125,Mixed Waste,0.8692
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,34.98,260.77,382.0,430.44,0.9609,Recyclable Material,0.9697
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,61.13,129.46,272.43,324.81,0.957,Recyclable Material,0.869
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,0.0,66.93,93.15,194.23,0.8398,Recyclable Material,0.9429
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,0.0,185.6,94.32,296.19,0.8242,Recyclable Material,0.9631
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_20_jpeg.rf.7b0acd51a9c8d6ff91b6387874917af3.jpg,190.36,214.79,344.31,346.42,0.9609,Recyclable Material,0.9053
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,267.95,202.93,458.53,332.8,0.5938,Recyclable Material,0.9604
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,225.06,322.42,450.97,451.72,0.5664,Recyclable Material,0.9518
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,308.18,146.7,389.48,204.17,0.375,,0.1661
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,217.35,156.28,314.91,236.11,0.8008,Recyclable Material,0.9439
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,308.67,143.02,430.37,222.55,0.75,Recyclable Material,0.9249
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,255.39,106.02,343.75,172.2,0.5938,Recyclable Material,0.8142
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,322.24,218.35,451.58,287.57,0.3984,Recyclable Material,0.9317
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,299.53,271.04,398.43,351.56,0.3477,Recyclable Material,0.9222
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,149.22,315.66,240.87,368.7,0.3438,Recyclable Material,0.866
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,166.77,282.53,246.12,329.63,0.3203,Recyclable Material,0.9327
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,208.13,229.8,274.77,285.13,0.3125,Recyclable Material,0.7628
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,451.11,283.34,495.69,363.52,0.668,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,260.49,315.49,521.23,547.49,0.8633,Recyclable Material,0.969
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,233.61,270.05,423.78,373.08,0.4941,Recyclable Material,0.9479
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,162.74,43.71,217.62,118.87,0.4551,Recyclable Material,0.8503
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,215.31,111.49,306.16,203.48,0.4336,Recyclable Material,0.8994
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_61_jpeg.rf.27e292c4a0e32bcd3cadbae4bc598544.jpg,228.45,174.5,429.76,313.87,0.8867,Recyclable Material,0.9212
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_61_jpeg.rf.27e292c4a0e32bcd3cadbae4bc598544.jpg,205.82,69.25,362.89,173.78,0.8359,Recyclable Material,0.9359
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_61_jpeg.rf.27e292c4a0e32bcd3cadbae4bc598544.jpg,219.06,115.8,394.23,246.91,0.7734,Recyclable Material,0.9701
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,AFL_NewBatch3_70_jpeg.rf.7b3a89cb52b3c2b63da06989e950254c.jpg,248.78,85.67,431.37,311.46,0.7305,Recyclable Material,0.9424
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_AFL_20_jpeg.rf.ac014490ff2a11d9f279be120a1079f1.jpg,107.32,185.5,353.53,434.6,0.9141,Recyclable Material,0.9601
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_AFL_87_jpeg.rf.bbd40e9cada1cc2730cdee3d7a09767f.jpg,58.79,407.42,216.15,596.3,0.9102,Other Waste,0.9469
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_AFL_87_jpeg.rf.bbd40e9cada1cc2730cdee3d7a09767f.jpg,226.39,240.07,432.23,425.55,0.8789,Recyclable Material,0.9732
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_AFL_94_jpeg.rf.12064663f7b4f63552c8945b7487f26d.jpg,242.2,206.78,492.71,352.32,0.7344,Recyclable Material,0.9417
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,178.91,189.39,304.7,389.18,0.9648,Other Waste,0.9873
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,284.53,189.19,394.43,374.75,0.9102,Other Waste,0.9896
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,91.92,36.24,311.3,312.11,0.9531,Recyclable Material,0.9646
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,286.29,318.85,453.06,550.9,0.9492,Recyclable Material,0.9523
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,354.46,183.92,640.0,455.61,0.9453,Recyclable Material,0.8843
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,43.65,246.29,326.25,393.19,0.9336,Recyclable Material,0.9336
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,448.26,411.71,640.0,640.0,0.9297,Recyclable Material,0.9678
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,274.06,261.4,429.57,430.68,0.8984,Recyclable Material,0.9491
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,177.35,100.7,274.77,215.99,0.7539,Recyclable Material,0.8248
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,5.11,259.48,280.96,538.67,0.8789,Other Waste,0.8993
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,286.3,104.74,406.31,235.75,0.4277,Recyclable Material,0.9334
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,237.27,145.43,360.05,278.92,0.3516,Recyclable Material,0.918
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,330.47,28.8,363.36,107.23,0.3066,Recyclable Material,0.8971
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_E_11_jpg.rf.e3a50a869c33c50807b308d8f3c3763b.jpg,234.05,245.51,478.43,511.46,0.9375,Recyclable Material,0.9803
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_E_3_jpg.rf.cd75c0f5faef6a61dc201602806fcf02.jpg,285.48,293.51,595.16,598.03,0.9219,Recyclable Material,0.9302
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_E_3_jpg.rf.cd75c0f5faef6a61dc201602806fcf02.jpg,239.56,74.37,338.22,187.74,0.6719,Recyclable Material,0.9697
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_E_6_jpg.rf.8f4ad2bbc4bd45252ef4e6320bac2e69.jpg,319.61,69.58,590.1,311.6,0.9492,Recyclable Material,0.916
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_SDM_E_6_jpg.rf.8f4ad2bbc4bd45252ef4e6320bac2e69.jpg,14.51,244.59,261.35,472.41,0.9375,Recyclable Material,0.9286
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_14_jpg.rf.c589cfdd4d6a2dbf0b252f2f34ca86ad.jpg,192.29,228.04,601.35,509.21,0.9023,Recyclable Material,0.9207
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,462.51,232.8,577.35,308.92,0.3438,Recyclable Material,0.9318
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_30_jpg.rf.cb32576d60ab619fd0da54147b7a4bd9.jpg,173.45,208.81,491.14,378.66,0.8828,Recyclable Material,0.9448
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,243.78,213.03,612.21,465.18,0.9375,Recyclable Material,0.8794
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,76.82,261.75,335.34,429.66,0.459,Recyclable Material,0.8918
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,432.89,295.8,640.0,482.89,0.793,Recyclable Material,0.9397
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,261.27,260.67,472.75,443.77,0.4375,Recyclable Material,0.8987
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_43_jpg.rf.d5403d078d6d28485c7df4e9d59472ae.jpg,157.1,244.51,495.68,468.05,0.8711,Recyclable Material,0.961
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_49_jpg.rf.b1b37e897ec39c59805640946039322e.jpg,246.06,227.63,424.83,365.72,0.9336,Recyclable Material,0.9292
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_54_jpg.rf.50e7e1d8fe52aa410a928c6641b2f939.jpg,259.39,232.67,431.11,373.67,0.8242,Recyclable Material,0.9317
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,ARI3129_TK_54_jpg.rf.50e7e1d8fe52aa410a928c6641b2f939.jpg,420.92,223.59,581.36,398.24,0.7461,Recyclable Material,0.9548
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,CMD-Batch1_39_jpeg.rf.e9a6b47832761d98991f461486c28b23.jpg,239.51,296.65,352.36,348.4,0.5352,Recyclable Material,0.861
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,149.56,326.91,267.47,420.08,0.8359,Recyclable Material,0.863
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,245.76,328.72,310.87,408.64,0.3203,Recyclable Material,0.9332
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IllegalDumping_63_jpeg.rf.2949592c2f89825f9cf5f001bc46868e.jpg,162.54,130.65,405.21,367.99,0.8242,Other Waste,0.8525
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IllegalDumping_64_jpeg.rf.e48c90ccc791eb8bacf934f9b3d5944e.jpg,198.76,325.88,331.45,473.74,0.7734,Other Waste,0.9345
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,image00010_jpeg.rf.e06a2de642e557aa8f532801abefd1c6.jpg,312.66,178.63,422.38,258.56,0.7109,Recyclable Material,0.957
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,121.29,341.42,222.98,510.86,0.9609,Recyclable Material,0.9381
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,463.74,407.31,593.86,594.85,0.957,Recyclable Material,0.87
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,11.12,362.0,123.52,553.93,0.9453,Recyclable Material,0.8982
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,441.86,345.04,534.2,467.93,0.9336,Recyclable Material,0.8225
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,250.11,342.54,335.21,401.37,0.7812,Recyclable Material,0.6294
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,262.88,154.84,401.49,242.64,0.6641,Recyclable Material,0.9732
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,521.09,15.89,544.29,51.41,0.6328,Other Waste,0.6901
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,261.25,281.94,422.9,458.06,0.5039,Recyclable Material,0.9235
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,97.19,238.07,216.16,325.05,0.3945,Recyclable Material,0.8629
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,210.41,164.83,413.7,325.96,0.377,Recyclable Material,0.9339
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,378.94,270.24,607.92,431.25,0.3242,Recyclable Material,0.8263
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,194.46,176.21,299.02,355.22,0.9023,Recyclable Material,0.919
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,325.12,157.24,422.32,288.58,0.8984,Recyclable Material,0.8587
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1085_converted_jpg.rf.5ed2df0113b41a9eeb5ba2375caee8ea.jpg,347.37,181.02,453.31,313.7,0.8594,Recyclable Material,0.889
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1085_converted_jpg.rf.5ed2df0113b41a9eeb5ba2375caee8ea.jpg,207.53,196.57,308.28,373.78,0.8594,Recyclable Material,0.9407
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1089_converted_blurred_jpg.rf.3e8c4d8b6ed62381f89b49bef81c8c96.jpg,314.73,147.07,390.12,276.86,0.4844,,0.2887
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1089_converted_blurred_jpg.rf.3e8c4d8b6ed62381f89b49bef81c8c96.jpg,351.46,156.36,428.17,311.57,0.3633,Recyclable Material,0.913
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1493_jpg.rf.572cf72e5148bfa2394d07eda0ef95aa.jpg,293.09,270.55,360.75,361.51,0.7188,,0.0661
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1498_jpg.rf.56d1556a658cd892330052560c15b640.jpg,229.05,202.12,415.54,406.46,0.918,Recyclable Material,0.9575
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1701_JPG.rf.cbbb8a08ac02580e5312c5daea6a404e.jpg,185.5,257.71,352.56,336.16,0.625,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1949_JPG.rf.b39818364afce503871402f719639f15.jpg,96.4,159.98,308.13,394.87,0.9023,Recyclable Material,0.9371
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1956_JPG.rf.2478164656df97788f34d6c9933080a6.jpg,191.25,176.29,339.85,321.83,0.7734,Recyclable Material,0.9331
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1965_JPG.rf.da74e00f22402a722279b6253a01ef40.jpg,121.11,255.6,328.9,388.65,0.9219,Recyclable Material,0.9169
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1980_JPG.rf.37af8c83756b699162c8354ac0b5d79a.jpg,201.42,152.01,427.64,348.37,0.9531,Recyclable Material,0.9632
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1983_JPG.rf.fbb2ae887f84c2bc3018cbc7a6a2af14.jpg,191.85,88.14,378.31,219.18,0.7734,Recyclable Material,0.8993
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1999_JPG.rf.4e303080b26c788dc54e561c486dd103.jpg,189.74,123.6,351.44,243.47,0.8672,Recyclable Material,0.9551
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_1999_JPG.rf.4e303080b26c788dc54e561c486dd103.jpg,119.17,0.0,163.32,32.61,0.6211,Recyclable Material,0.9382
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241121_091747_jpg.rf.3fd3e241b47f6b97e6d584dded292019.jpg,197.85,221.66,269.9,339.06,0.3828,Recyclable Material,0.8832
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,174.78,297.41,223.56,391.27,0.875,Other Waste,0.9391
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,252.91,257.25,331.5,388.49,0.3086,Recyclable Material,0.8942
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,141.92,292.47,196.26,385.14,0.8789,Other Waste,0.8488
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,227.67,243.65,314.43,384.68,0.3848,Recyclable Material,0.9633
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241128_092514_jpg.rf.7596cb50c83af21c87c5f54080e602d4.jpg,137.26,187.39,285.15,341.41,0.8984,Recyclable Material,0.9485
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,332.4,229.87,466.09,331.66,0.9688,,0.1067
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,348.67,168.29,372.67,181.93,0.416,,0.0053
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241212_071851_jpg.rf.550bce41f56e3f83cfcf50a20246ac39.jpg,247.48,106.96,634.56,340.48,0.9453,Recyclable Material,0.9115
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241219_084719_jpg.rf.93bdd801e0ce4811189ba99080842075.jpg,126.9,156.43,230.36,300.31,0.9453,Recyclable Material,0.9232
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20241219_084719_jpg.rf.93bdd801e0ce4811189ba99080842075.jpg,384.03,162.9,460.19,284.06,0.8828,Recyclable Material,0.879
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_20250109_074148_jpg.rf.8c9aeea0d58fff99ff5ece961942d4da.jpg,166.33,88.59,417.98,229.83,0.3379,Recyclable Material,0.9369
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,372.47,246.35,443.86,294.6,0.457,Recyclable Material,0.8309
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,38.97,120.7,68.81,156.64,0.4512,Other Waste,0.9098
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_3068_jpeg.rf.6b63b7cb63ae7950ebc35b5a96550b08.jpg,316.34,288.07,351.85,321.8,0.5742,Recyclable Material,0.8925
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_4228_JPG.rf.3354240a78ddc77e93ae7abe53e5e890.jpg,307.66,135.98,495.53,379.23,0.9805,Recyclable Material,0.9854
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,29.87,190.24,322.85,416.34,0.7422,Recyclable Material,0.9801
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,340.83,122.2,507.86,259.72,0.6445,Recyclable Material,0.9092
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_4369_jpeg.rf.408cd6a46d2f5cac2cbe3b37e3ebcda9.jpg,304.08,256.38,425.09,325.36,0.793,Recyclable Material,0.7837
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_4396_jpg.rf.1db0db20656a7c83e35b6d18c0215170.jpg,294.31,261.04,375.66,389.54,0.582,Recyclable Material,0.9311
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,153.41,45.06,284.06,195.77,0.8516,Recyclable Material,0.9775
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_5778_blurred_jpg.rf.38cb37b2fb6d4dc976cb44e46e0e88df.jpg,286.72,99.03,335.48,151.9,0.8633,Recyclable Material,0.838
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,IMG_8972_jpeg.rf.cd49521b82c9ff62a6e578b50e8b47dc.jpg,0.0,232.16,60.73,267.22,0.4082,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,41.84,149.81,150.53,200.61,0.332,,0.3705
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_124_jpg.rf.234eac622fccca0d569fe7920ed68ce7.jpg,285.22,268.65,448.9,343.59,0.7422,Recyclable Material,0.9088
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,177.13,137.85,229.12,231.31,0.5117,Recyclable Material,0.8626
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,371.21,143.12,435.3,268.29,0.4648,Recyclable Material,0.9162
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,176.98,74.97,240.22,230.83,0.3828,,0.4651
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,200.8,74.83,240.98,158.35,0.3652,Recyclable Material,0.8306
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_16_jpg.rf.4e76b4d44941fe5c711fae8306ec9680.jpg,216.04,167.72,383.41,478.33,0.7148,Recyclable Material,0.9332
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,348.68,2.54,451.2,216.44,0.8398,Recyclable Material,0.9145
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,73.25,232.25,284.8,619.79,0.8359,Recyclable Material,0.8857
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,237.28,68.45,389.2,414.18,0.7812,Recyclable Material,0.9289
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,333.43,81.38,359.36,127.49,0.3008,,0.0
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PHOTO-2025-01-04-12-12-46-1-_jpg.rf.cac4448d0e8e2b54b3389bce64c5559f.jpg,274.05,226.6,386.64,358.65,0.3203,Mixed Waste,0.9317
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_075933630-MP_jpg.rf.460c72f50522e906261ac2f783733f06.jpg,94.49,257.28,486.22,590.19,0.832,Recyclable Material,0.9343
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_075933630-MP_jpg.rf.460c72f50522e906261ac2f783733f06.jpg,22.79,229.22,195.81,472.68,0.6641,Recyclable Material,0.921
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_075933630-MP_jpg.rf.460c72f50522e906261ac2f783733f06.jpg,52.93,184.5,182.03,286.43,0.5391,Recyclable Material,0.9274
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_075947607_jpg.rf.ef0e57af799e19659d6a344b93611b1f.jpg,101.07,208.08,412.99,420.4,0.9609,Recyclable Material,0.9787
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_080053691_jpg.rf.08e12d2cae94660dfcd43c04079c13f9.jpg,165.08,108.54,408.55,380.84,0.9531,Recyclable Material,0.9729
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_080257060_jpg.rf.642388a5f678e685d32e3e3a244c0ad8.jpg,252.53,115.43,536.17,403.33,0.8945,Recyclable Material,0.9819
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_080257060_jpg.rf.642388a5f678e685d32e3e3a244c0ad8.jpg,0.0,435.53,228.29,639.95,0.6523,Recyclable Material,0.9446
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_080407713-MP_jpg.rf.7c47f0e15afa8dd909cbbb2938318d78.jpg,204.86,156.0,471.33,447.14,0.9648,Recyclable Material,0.9839
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,222.42,184.56,433.46,425.8,0.4668,Recyclable Material,0.9278
+SAM 3,sens-mdwd-organic-01,white organic-waste bag,Recycling_1_jpeg.rf.be115f7edd02e2132b07a3dfab9ee550.jpg,238.08,269.22,360.73,336.31,0.8516,Recyclable Material,0.9329

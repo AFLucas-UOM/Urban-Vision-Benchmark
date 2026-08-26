@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "Cosmos Reason2 2B",
+  "prompt_id": "sens-mdwd-mixed-01",
+  "prompt": "black garbage bag",
+  "image_start": 8,
+  "image_end": 16,
+  "n_images": 8,
+  "n_prediction_rows": 8,
+  "max_detections": 28,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 2560,
+  "model_status": {
+    "model": "Cosmos Reason2 2B",
+    "model_load_ms": 10503.4,
+    "ok": true,
+    "label": "Cosmos Reason2 2B",
+    "source": "nvidia/Cosmos-Reason2-2B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-21T19:16:44.182574+00:00",
+  "finished_at": "2026-08-21T19:17:10.271825+00:00"
+}

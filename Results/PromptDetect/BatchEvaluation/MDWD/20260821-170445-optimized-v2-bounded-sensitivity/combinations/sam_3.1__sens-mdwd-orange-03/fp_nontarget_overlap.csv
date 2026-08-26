@@ -1,0 +1,40 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,246.31,341.73,343.09,452.94,0.625,Organic Waste,0.8453
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,307.12,301.3,375.71,394.78,0.6055,Organic Waste,0.6878
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,20250114_102613_jpg.rf.83447af29c6413aa1b9372ac635283f4.jpg,243.76,298.85,416.39,402.4,0.7539,Organic Waste,0.9803
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,20250124_120044_jpg.rf.ed15b7e8b6f34f4267218a56a3723d60.jpg,326.66,319.05,432.53,400.9,0.5234,Organic Waste,0.9804
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,31_jpeg.rf.fda6c54a3034426eb0971b712b284ac9.jpg,367.26,256.43,487.24,336.27,0.3516,Other Waste,0.9196
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,472129425_1345249006899593_1932127883326922457_n_jpg.rf.03069b893f513bced6e53fce77c8d53c.jpg,191.07,151.5,346.94,368.54,0.8281,Mixed Waste,0.9703
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,145.44,382.63,171.39,451.93,0.375,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,0.0,326.56,36.0,366.93,0.3555,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,586.36,48.8,624.24,84.85,0.3184,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,322.45,390.51,333.03,404.75,0.3164,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,419.29,278.71,514.4,345.51,0.4824,Other Waste,0.8352
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,AFL-NewBatch9_12_jpeg.rf.439663c2acd785b36963c00338581b94.jpg,377.74,181.54,393.21,193.56,0.3027,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,AFL_NewBatch3_53_jpeg.rf.9e5bf2183fc4b923c9ee1501592a41f9.jpg,356.13,0.0,476.14,18.9,0.8867,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,ARI3129_AFL_65_jpeg.rf.bb51b67df3fe8cf58a9e48ce1eafca7a.jpg,347.19,353.72,485.72,472.95,0.3828,Organic Waste,0.9898
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,ARI3129_AFL_80_jpeg.rf.93908175256bdc7e36dbfbe03cf757c7.jpg,341.37,344.48,514.78,450.2,0.4199,Organic Waste,0.9781
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,ARI3129_AFL_E_12_jpeg.rf.47781c0f8ca545ad957fe116ca2d3b50.jpg,434.69,423.55,587.33,527.55,0.3906,Organic Waste,0.9342
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,ARI3129_SDM_64_jpg.rf.ee088bd38a2c3c95b2da82373aaac73e.jpg,125.12,116.44,417.25,432.34,0.8203,Organic Waste,0.9441
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,CMD-Batch1_154_jpeg.rf.19166d7805818a35c045253065a12b6d.jpg,355.32,390.94,392.34,425.29,0.3516,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,CMD-Batch1_43_jpeg.rf.7ad2150ca57fd7d4f9339f170104fbd5.jpg,362.87,171.89,439.08,220.35,0.8203,,0.2006
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,266.21,281.2,303.82,303.6,0.4512,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,CMD-Batch1_83_jpeg.rf.8c468ace19ef290a465a9eb0be96db61.jpg,620.36,132.78,636.22,151.21,0.5117,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,CMD-Batch1_88_jpeg.rf.bf5aa164958d0cd2482ce7224ebf29c6.jpg,411.46,563.44,495.88,639.39,0.4434,,0.0
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG20250106065829_jpg.rf.13e356e3a46499a3c8b2162c6f8df515.jpg,282.45,240.29,354.47,283.12,0.3184,Organic Waste,0.7066
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG20250106070103_jpg.rf.2f726bbb0cef57617daeed5820a3816f.jpg,279.4,225.37,361.77,296.41,0.5391,Organic Waste,0.8343
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG20250107085725_jpg.rf.53a2bbc5094b71e31feedd0cf1513ef9.jpg,165.48,265.86,358.65,396.71,0.3281,Mixed Waste,0.9538
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_0789_jpeg.rf.a115e802da3b048429fb0d31134d452d.jpg,74.04,370.55,298.69,476.1,0.4492,Mixed Waste,0.9873
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_1847-2_JPG.rf.fb41f8560975d5133b47c22d6e55712c.jpg,268.71,238.15,329.35,276.16,0.3496,Organic Waste,0.9652
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_1847-2_JPG.rf.fb41f8560975d5133b47c22d6e55712c.jpg,257.46,209.22,315.55,252.55,0.3457,Organic Waste,0.9063
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_1874-2_JPG.rf.1a61faddb0aa0afe4ec124ad77db3d1c.jpg,204.91,172.13,276.67,225.26,0.3477,Organic Waste,0.9826
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,222.05,286.18,254.26,381.98,0.4453,Other Waste,0.7952
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,193.18,273.35,228.44,376.51,0.5273,Other Waste,0.8579
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,244.8,204.79,331.95,260.23,0.4668,Organic Waste,0.8735
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,154.77,248.34,261.99,326.68,0.4219,Organic Waste,0.947
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_20250109_074213_jpg.rf.70a8bd28946b36ece01a48b9cdfaa26d.jpg,215.73,30.4,325.67,199.3,0.4551,Other Waste,0.8304
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_3108_jpeg.rf.f0273d0fa4ade4f4e81d527d9cc1f2db.jpg,171.3,348.4,235.97,379.43,0.3848,Other Waste,0.8809
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,29.8,190.39,322.71,416.08,0.7695,Recyclable Material,0.9781
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,IMG_5811_JPG.rf.7d14868bfb97d93f7e4b11e0317bae95.jpg,247.53,227.9,315.3,288.34,0.5742,Organic Waste,0.9285
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,114.68,273.41,152.67,335.52,0.7695,Other Waste,0.7023
+SAM 3.1,sens-mdwd-orange-03,orange bag containing domestic waste,PXL_20241125_064324039-MP_jpg.rf.14da8fd358dd67f611f45f79feec4bbf.jpg,224.62,227.26,355.75,362.06,0.3477,Organic Waste,0.9459

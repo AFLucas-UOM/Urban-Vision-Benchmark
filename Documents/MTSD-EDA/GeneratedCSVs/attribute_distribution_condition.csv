@@ -1,6 +1,6 @@
 attribute,value,value_kind,annotations,pct_of_annotations,images,pct_of_annotated_images,classes
-condition,Good,regular,15264,74.33,5886,78.58,12
-condition,Weathered,regular,4048,19.71,3146,42.0,12
-condition,Heavily Damaged,regular,1224,5.96,1113,14.86,11
+condition,Good,regular,15245,74.33,5877,78.57,12
+condition,Weathered,regular,4041,19.7,3140,41.98,12
+condition,Heavily Damaged,regular,1223,5.96,1112,14.87,11
 condition,(null value),null,0,0.0,0,0.0,0
 condition,(attribute absent),missing,0,0.0,0,0.0,0

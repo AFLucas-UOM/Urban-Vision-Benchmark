@@ -1,0 +1,217 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_1593.jpg,454.1,1765.01,2583.25,4244.02,1.0,Back-Unknown,0.6587
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_1597.jpg,1135.26,2290.51,3054.49,4226.88,1.0,Back-Unknown,0.6483
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_1612.jpg,1302.34,1365.17,2964.53,4689.55,1.0,Back-Unknown,0.5155
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_1645.jpg,1032.44,2359.06,2741.76,4244.02,1.0,Blind-Spot Mirror (Convex Mirror),0.9771
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251123_141219.jpg,863.2,1165.25,1114.88,1946.7,1.0,No Entry (One Way),0.9217
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251123_164433.jpg,594.88,1752.5,1314.56,2954.74,1.0,No Entry (One Way),0.9813
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251123_165832.jpg,634.4,1840.35,1212.64,2880.75,1.0,Blind-Spot Mirror (Convex Mirror),0.9331
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251125_113833.jpg,923.55,1678.51,1114.51,2057.68,1.0,No Entry (One Way),0.926
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251125_121131.jpg,846.56,2261.14,1383.2,2913.12,1.0,Blind-Spot Mirror (Convex Mirror),0.9624
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251125_122826.jpg,833.28,1045.02,1565.87,2478.46,1.0,Back-Unknown,0.9708
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251125_124400.jpg,557.44,1558.29,1516.32,3306.16,1.0,No Through Road (T-Junction),0.9667
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251126_123510.jpg,1666.08,3935.02,1718.08,4009.01,1.0,Directional Sign,0.6921
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251126_123524.jpg,659.36,2076.18,1499.68,2742.03,1.0,Back-Unknown,0.9835
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20251126_123910.jpg,1154.4,2940.86,1331.2,3185.94,1.0,Back-Unknown,0.8773
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20260106_162304_258.jpg,1085.28,556.03,2399.04,2405.38,1.0,,0.3674
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20260113_083728_516.jpg,697.68,614.4,2476.56,2657.28,1.0,,0.3171
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20260113_083821_567.jpg,3402.72,592.9,3602.64,737.28,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20260113_085011_841.jpg,918.0,359.42,2868.24,2503.68,1.0,,0.4056
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_IMG_20260113_085024_440.jpg,2276.64,814.08,3357.84,1898.5,1.0,,0.255
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_WhatsApp Image 2025-11-16 at 17.52.27.jpeg,148.41,1727.88,186.66,1782.96,1.0,Back-Unknown,0.6506
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_WhatsApp Image 2025-11-17 at 12.38.32 (2).jpeg,296.82,626.28,1072.53,1272.96,1.0,Other-Unknown,0.9789
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_WhatsApp Image 2025-11-17 at 12.38.34.jpeg,252.45,636.48,1277.55,1566.72,1.0,No Entry (One Way),0.98
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_WhatsApp Image 2025-11-17 at 12.38.37 (2).jpeg,1164.33,1811.52,1311.21,2037.96,1.0,No Through Road (T-Junction),0.9239
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_WhatsApp Image 2025-11-17 at 15.01.27 - Edited.jpg,558.45,459.0,1196.46,993.48,1.0,Other-Unknown,0.9524
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp10_WhatsApp Image 2025-11-20 at 16.03.01 (1).jpeg,630.36,671.16,1083.24,1115.88,1.0,Other-Unknown,0.967
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_00ffbbb0-IMG_20251125_195040.jpg,1245.0,1788.0,1332.0,1948.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_08da688f-IMG_6393.jpeg,0.0,703.08,3494.59,2788.76,1.0,Other-Unknown,0.5612
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_387a3e09-IMG_6403.jpeg,1406.15,2478.24,2688.35,3202.79,1.0,,0.0038
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_3a5a4d41-Pre_2026_6633.jpg,815.22,1300.0,900.8,1408.0,1.0,,0.0123
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_4029b5b7-Pre_2026_6760.jpg,2168.0,662.09,2692.0,1231.84,1.0,,0.0102
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_4a7fe027-Pre_2026_6682.jpg,1508.84,2252.0,1837.63,2544.0,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_4a8ce21e-IMG_20251125_194252.jpg,126.0,1872.0,354.0,2112.0,1.0,Other-Unknown,0.8413
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_5cef4344-Pre_2026_6674.jpg,63.06,940.0,1709.27,2492.0,1.0,Back-Unknown,0.9774
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_6d03b071-IMG_6395.jpeg,1124.93,1164.24,2499.84,2407.1,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_6d1c0888-IMG_20251125_191657.jpg,1503.0,1004.0,1620.0,1640.0,1.0,Directional Sign,0.9483
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_7041f709-IMG_1379.jpg,1106.78,858.82,1766.02,2270.02,1.0,Directional Sign,0.9804
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_93c9acc6-Pre_2026_6752.jpg,2348.0,526.97,3280.0,1177.8,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_b25d900c-Pre_2026_6648.jpg,722.89,924.0,1319.67,1612.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9767
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_b40e574e-IMG_1307.jpg,1218.67,270.14,1989.79,1068.48,1.0,Other-Unknown,0.9887
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_d9b50eb1-Pre_2026_6691.jpg,662.09,1668.0,1292.65,2228.0,1.0,Other-Unknown,0.9506
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_e27435a0-IMG_20251125_194217.jpg,813.0,1132.0,1638.0,1908.0,1.0,Back-Unknown,0.8709
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_ee2f066e-IMG_20251125_194701.jpg,1104.0,2604.0,1260.0,2800.0,1.0,Directional Sign,0.6918
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp11_f0c7f95a-IMG_6420.jpeg,711.51,1145.02,3435.05,2095.66,1.0,,0.3058
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_02ac92f5-IMG20251123165127.jpg,1431.55,1376.26,2012.16,2871.3,1.0,Blind-Spot Mirror (Convex Mirror),0.9824
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_0dd8c85f-RV_001_114.jpeg,1917.22,3076.42,2047.25,3382.85,1.0,Other-Unknown,0.5392
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_1bc3cf13-IMG_5516.jpeg,841.58,1530.9,896.74,1606.5,1.0,No Through Road (T-Junction),0.7535
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_22a1d833-RV_001_174.jpeg,1043.28,995.9,2249.86,1995.84,1.0,Back-Unknown,0.9847
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_2f062204-IMG_5549.jpeg,1787.18,3499.78,1844.64,3592.51,1.0,Other-Unknown,0.6113
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_46552970-IMG_5766.jpeg,1040.26,1628.93,1953.5,2628.86,1.0,No Through Road (T-Junction),0.9813
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_598f8dcc-IMG_5777.jpeg,923.54,1434.3,978.7,1518.3,1.0,No Through Road (T-Junction),0.6316
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_69e094db-IMG20260103164903.jpg,408.58,655.36,2383.87,2740.22,1.0,No Through Road (T-Junction),0.9866
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_7052b6a6-IMG_5704.jpeg,2739.74,3487.68,2812.32,3721.54,1.0,,0.3304
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_7fcdb608-IMG_5767.jpeg,1291.25,1346.69,1714.61,2677.25,1.0,No Through Road (T-Junction),0.971
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_8fe876b9-IMG_4754.jpeg,1635.98,850.75,2268.0,3140.93,1.0,Pedestrian Crossing,0.971
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_9f52d58a-IMG_5554.jpeg,719.71,2564.35,2316.38,4027.97,1.0,Back-Unknown,0.9718
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_d64c06cd-IMG20260103165218.jpg,675.84,880.64,2568.19,2871.3,1.0,No Through Road (T-Junction),0.9897
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_dbac3098-IMG_4803.jpeg,1288.22,951.55,2228.69,2693.38,1.0,No Entry (One Way),0.9887
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp1_fd97d901-IMG20260105125535.jpg,1259.52,1224.7,1803.26,2670.59,1.0,No Through Road (T-Junction),0.9777
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_0cd46f17-MP_0097.jpg,977.51,568.51,1226.99,1451.52,1.0,Blind-Spot Mirror (Convex Mirror),0.9669
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_1a942391-IMG_20251224_114123.jpg,1545.0,1132.0,1608.0,1580.0,1.0,No Through Road (T-Junction),0.7712
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_1d09be1b-MP_0034.jpg,488.45,1814.53,712.7,2031.62,1.0,Back-Unknown,0.8814
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_1f7e1b10-20251224_132557.jpg,504.9,2023.68,1153.62,3100.8,1.0,Directional Sign,0.9127
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_339c8d04-26.side.jpg,995.65,512.06,1177.09,1249.92,1.0,Pedestrian Crossing,0.9505
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_33c8250b-MP_0150.jpeg,384.0,771.12,1405.44,1038.96,1.0,,0.0981
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_3855fec5-20251223_150427.jpg,1496.34,705.84,1802.34,2219.52,1.0,No Through Road (T-Junction),0.9439
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_5dd50184-MP_0013.jpg,1265.66,864.26,1403.9,1634.3,1.0,Pedestrian Crossing,0.8203
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_76c73962-MP_0139.jpg,1104.77,1374.41,2794.18,1741.82,1.0,,0.0805
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_8042282f-20251223_150231.jpg,1150.56,0.0,1750.32,1991.04,1.0,No Entry (One Way),0.9728
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_983dc626-30.side.jpg,1297.3,1076.54,1388.02,1608.77,1.0,No Entry (One Way),0.7815
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_ab9b17dd-34.back.jpg,1426.57,2132.93,1503.68,2229.7,1.0,Other-Unknown,0.7076
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_b7da3d82-20251230_123417.jpg,1756.44,1607.52,2279.7,2170.56,1.0,Back-Unknown,0.8929
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_bf551d52-MP_0136.jpg,604.8,1329.05,2455.49,1626.16,1.0,,0.0258
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_c39d026a-IMG_20251223_125605.jpg,1302.0,1092.0,1608.0,1812.0,1.0,Pedestrian Crossing,0.9064
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_ccff3003-MP_0047.jpg,2706.43,1884.16,2942.98,2117.63,1.0,Back-Unknown,0.8677
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_d201b393-MP_0004.jpg,709.63,1789.95,949.25,1990.66,1.0,Back-Unknown,0.8725
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp2_d71e8065-MP_0021.jpg,811.01,237.57,1824.77,4091.9,1.0,,0.2575
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_17e38feb-20251129_115024.jpg,2744.82,3129.36,2809.08,3198.72,1.0,,0.4259
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_3cee3d85-IMG_4285.jpeg,1378.94,2907.07,1493.86,3044.16,1.0,Stop Sign,0.85
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_4d14c289-20251129_122448.jpg,1263.78,1929.84,1802.34,2615.28,1.0,Back-Unknown,0.9597
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_4daf8454-IMG_4356.jpeg,752.98,2737.73,949.54,3096.58,1.0,Back-Unknown,0.5166
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_5a350ee3-IMG_9144.jpg,1765.01,3238.7,1884.96,3867.02,1.0,Directional Sign,0.9556
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_5a5ec99c-IMG_4369.jpeg,1254.96,2907.07,1381.97,3064.32,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_5e7ebbc1-IMG_4337.jpeg,2104.7,1472.69,2665.15,1684.37,1.0,,0.2875
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_76fb906e-20251129_122552.jpg,547.74,558.96,1976.76,1876.8,1.0,Back-Unknown,0.9847
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_874592da-20251129_122245.jpg,1015.92,1970.64,1878.84,2823.36,1.0,Back-Unknown,0.9765
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_9e3990fa-20251129_124245.jpg,615.06,1391.28,2347.02,2974.32,1.0,Blind-Spot Mirror (Convex Mirror),0.9848
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_a9724b83-20251129_122439.jpg,1175.04,1003.68,1465.74,1982.88,1.0,Other-Unknown,0.9424
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_aebbbcad-IMG_9204.jpg,2433.31,3581.42,2638.94,3798.48,1.0,Directional Sign,0.8415
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_b05e6955-IMG_4433.jpeg,1427.33,816.48,2806.27,2119.82,1.0,Blind-Spot Mirror (Convex Mirror),0.6569
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_cb90b89e-IMG_9211.jpg,1306.62,1576.51,2574.68,2673.22,1.0,Blind-Spot Mirror (Convex Mirror),0.9776
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_e0a623d6-IMG_9293.jpg,2026.33,1450.85,2523.28,2827.44,1.0,No Through Road (T-Junction),0.9056
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp3_e337de9a-IMG_4362.jpeg,970.7,669.31,2147.04,1641.02,1.0,Other-Unknown,0.965
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_11d8a182-WhatsApp_Image_2026-01-14_at_11.12.01.jpeg,306.0,1104.0,456.0,1274.0,1.0,No Through Road (T-Junction),0.9223
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_20251130_115129.jpg,216.0,3420.0,261.0,3516.0,1.0,Pedestrian Crossing,0.8484
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_20251130_115613.jpg,1170.0,1488.0,1446.0,3068.0,1.0,Pedestrian Crossing,0.9587
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_20251130_115807.jpg,714.0,2476.0,1329.0,3744.0,1.0,Pedestrian Crossing,0.9857
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_20251130_120143.jpg,1518.0,1680.0,1710.0,3100.0,1.0,Pedestrian Crossing,0.9002
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_20251229_144322.jpg,912.0,1676.0,2217.0,2896.0,1.0,Back-Unknown,0.9825
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_20251229_150338.jpg,714.0,1460.0,1950.0,2464.0,1.0,Other-Unknown,0.9652
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_20251231_160526.jpg,990.0,1508.0,2016.0,2444.0,1.0,No Through Road (T-Junction),0.9755
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_20251231_160545.jpg,1227.0,1420.0,1572.0,2464.0,1.0,No Through Road (T-Junction),0.9282
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_3a0abdfb-20251116_161259.jpg,835.74,893.52,1350.05,1901.28,1.0,Pedestrian Crossing,0.9508
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_66eacd8c-20260109_124456.jpg,840.0,852.0,1905.0,2676.0,1.0,No Through Road (T-Junction),0.9813
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_7b6a28a6-WhatsApp_Image_2026-01-14_at_11.10.25_4.jpeg,570.0,680.0,883.5,986.0,1.0,No Through Road (T-Junction),0.942
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_83705e8e-WhatsApp_Image_2026-01-14_at_11.10.28_3.jpeg,544.5,636.0,943.5,1034.0,1.0,Back-Unknown,0.9703
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_87ae19f5-WhatsApp_Image_2026-01-14_at_11.11.37.jpeg,580.5,730.0,816.0,954.0,1.0,No Through Road (T-Junction),0.9151
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_91f6056a-20251116_163806.jpg,463.79,1187.28,2009.0,2745.84,1.0,Blind-Spot Mirror (Convex Mirror),0.9742
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_9a8f607e-20251222_141532.jpg,375.0,680.0,2130.0,2320.0,1.0,Back-Unknown,0.983
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_9c4db066-WhatsApp_Image_2026-01-14_at_10.34.44_2.jpeg,528.49,830.4,547.96,854.4,1.0,,0.1849
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_abe76f20-20260109_124535.jpg,747.0,288.0,2103.0,2640.0,1.0,No Through Road (T-Junction),0.9819
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_b3d0eaa4-20251116_163427.jpg,888.55,1252.56,1423.52,2346.0,1.0,No Entry (One Way),0.9681
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_cdcb1057-WhatsApp_Image_2026-01-14_at_11.11.40_1.jpeg,236.0,750.0,262.0,775.5,1.0,Other-Unknown,0.504
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_df0bccf2-WhatsApp_Image_2026-01-14_at_11.12.00.jpeg,368.0,703.5,458.0,789.0,1.0,No Entry (One Way),0.8695
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_dfec1b25-20260107_105532.jpg,348.49,1106.85,1197.76,1899.2,1.0,Back-Unknown,0.973
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_e63ad5ed-WhatsApp_Image_2026-01-14_at_11.10.19_1.jpeg,534.0,760.0,906.0,1128.0,1.0,No Through Road (T-Junction),0.9775
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_f1d0d896-WhatsApp_Image_2026-01-14_at_11.12.20.jpeg,543.0,840.0,828.0,1236.0,1.0,No Through Road (T-Junction),0.9475
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp4_fa665131-WhatsApp_Image_2026-01-14_at_11.12.04.jpeg,571.5,560.0,789.0,1142.0,1.0,No Through Road (T-Junction),0.9559
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_29252be9-MichaelFarrugia_29_Front.jpg,1059.84,2733.6,1173.5,2876.4,1.0,Other-Unknown,0.7209
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_3d564b26-AlisonAttard_15_Back.jpeg,2669.18,123.98,2987.71,701.57,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_3db24e6b-AlisonAttard_31_Side.jpeg,1374.91,1073.52,2161.15,1391.04,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_44ccc0f3-MichaelFarrugia_54_Front.jpg,1228.8,1611.6,1941.5,2305.2,1.0,No Through Road (T-Junction),0.9668
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_6bb6fe17-BenTaliana_15_Back.jpeg,839.16,2322.43,2526.55,4411.01,1.0,Blind-Spot Mirror (Convex Mirror),0.9815
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_770e5bfc-BenTaliana_60_Side.jpeg,1095.44,818.5,1567.19,1749.89,1.0,Other-Unknown,0.9445
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_82a1216f-AlisonAttard_27_Side.jpeg,2052.29,1493.86,3088.51,1717.63,1.0,,0.0032
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_a7f0ea8c-BenTaliana_9_Side.jpeg,821.02,1024.13,1390.28,2020.03,1.0,No Entry (One Way),0.9695
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_b5c4d0ea-BenTaliana_31_Side.jpeg,1261.01,1669.25,2680.78,4749.7,1.0,No Through Road (T-Junction),0.9768
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_bc59500b-AlisonAttard_47_Side.jpeg,1391.04,1696.46,2520.0,1874.88,1.0,,0.1162
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_c5c3aa2b-BenTaliana_19_Side.jpeg,746.17,1108.8,1546.78,2278.08,1.0,No Entry (One Way),0.9792
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_cdd70210-BenTaliana_10_Side.jpeg,1492.34,1556.35,3365.71,4846.46,1.0,No Entry (One Way),0.9807
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_d29347ca-MelatAssefa_51_Side.jpg,1282.18,229.82,1811.38,2048.26,1.0,No Entry (One Way),0.9763
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_e3df78e1-MichaelFarrugia_48_Back.jpg,1281.02,2162.4,1827.84,2798.88,1.0,Back-Unknown,0.9738
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_e7eb8734-MichaelFarrugia_52_Front.jpg,1293.31,1558.56,2088.96,2321.52,1.0,No Through Road (T-Junction),0.974
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp5_e897b21c-MelatAssefa_52_Front.jpg,3277.26,5100.82,3525.73,5397.84,1.0,Directional Sign,0.8323
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_0dbbcef1-IMG_6167.JPG,1164.24,584.64,1463.62,2544.19,1.0,Pedestrian Crossing,0.9318
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_205fffc2-Screenshot_2025-12-05_135424.png,118.73,185.7,154.2,327.57,1.0,No Through Road (T-Junction),0.7666
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_255dc793-IMG_0327.JPG,915.26,1572.48,3544.13,2089.58,1.0,,0.151
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_280e9cbc-IMG_0220.JPG,1556.35,1257.98,2201.47,1971.65,1.0,,0.4056
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_344c75b8-Screenshot_2025-12-05_150942.png,92.56,43.88,186.42,153.28,1.0,Back-Unknown,0.8093
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_3721037e-IMG_0363.JPG,1717.63,1391.04,3116.74,1693.44,1.0,,0.162
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_674b294f-Screenshot_2025-12-05_140949.png,366.15,43.38,529.45,202.88,1.0,Blind-Spot Mirror (Convex Mirror),0.9449
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_6b4047ef-IMG_6230.JPG,1073.52,596.74,1584.58,2536.13,1.0,Stop Sign,0.9588
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_6f66549b-IMG_0289.JPG,2628.86,713.66,4027.97,2857.68,1.0,,0.0726
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_7608155e-Screenshot_2025-12-05_135221.png,249.7,62.05,306.85,130.02,1.0,Pedestrian Crossing,0.7897
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_8387f659-Screenshot_2025-12-05_134458.png,101.27,131.31,138.81,183.74,1.0,Auxiliary Sign,0.6605
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_8be98e2c-IMG_6200.JPG,1130.98,842.69,1445.47,2278.08,1.0,No Entry (One Way),0.9463
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_9c79fb63-Screenshot_2025-12-05_143920.png,137.25,40.91,182.7,101.25,1.0,Back-Unknown,0.6337
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_9e256948-IMG_0275.JPG,1685.38,1306.37,2128.9,1896.05,1.0,,0.3253
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_ad8b6cea-IMG_0342.JPG,1467.65,299.38,3153.02,2310.34,1.0,,0.1398
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_c2b7f6e2-IMG_0300.JPG,1209.6,550.37,2967.55,2591.57,1.0,,0.2405
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_c8db20f0-IMG_6257.JPG,1493.86,753.98,1720.66,1858.75,1.0,No Through Road (T-Junction),0.9846
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_cebbcc7c-Screenshot_2025-12-05_141232.png,70.25,98.89,95.88,158.91,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_d2cebd4f-Screenshot_2025-12-05_145955.png,72.36,30.15,160.66,91.98,1.0,Back-Unknown,0.5428
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_e18d6d29-IMG_0313.JPG,2318.4,1158.19,3556.22,2328.48,1.0,,0.0597
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_e4194181-Screenshot_2025-12-05_124458.png,506.79,299.47,529.33,368.05,1.0,Directional Sign,0.702
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp6_fb7a099a-Screenshot_2025-12-05_134245.png,80.4,37.84,149.01,178.19,1.0,Blind-Spot Mirror (Convex Mirror),0.8302
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_18034905-IMG_6798.jpeg,1297.3,1810.37,1384.99,2080.51,1.0,No Entry (One Way),0.8919
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_27403473-IMG_2301.JPG,923.33,1893.02,1145.09,2751.84,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_3199d5af-IMG_6619.jpeg,387.07,2132.93,508.03,2278.08,1.0,Other-Unknown,0.6258
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_3dfa77dc-20251215_142747.jpg,687.2,1112.83,1494.61,1891.01,1.0,No Entry (One Way),0.9778
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_40a131c0-20251215_144819.jpg,1054.62,1225.73,1134.0,2282.11,1.0,Stop Sign,0.7246
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_41dd064f-IMG_2332.JPG,1539.22,931.39,2020.03,1556.35,1.0,Back-Unknown,0.7153
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_4c22ebaa-IMG_6807.jpeg,1502.93,1971.65,1935.36,2471.62,1.0,Blind-Spot Mirror (Convex Mirror),0.9758
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_50fb19de-IMG_1779.jpg,778.18,1445.47,3790.08,1756.94,1.0,,0.0727
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_55fe17bd-IMG_6660.jpeg,2887.92,1608.77,2942.35,1697.47,1.0,,0.4602
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_57ce1f54-20251215_150337.jpg,1061.42,1100.74,1272.35,2072.45,1.0,No Entry (One Way),0.9657
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_65ce4c26-IMG_1752.jpg,443.52,1303.34,2580.48,1823.47,1.0,,0.1952
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_8a80058d-20251215_151420.jpg,943.49,1108.8,1297.3,1987.78,1.0,Other-Unknown,0.8732
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_8e1e7992-IMG_6659.jpeg,2065.39,1810.37,2144.02,1915.2,1.0,Pedestrian Crossing,0.5839
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_90de2b4a-IMG_6620.jpeg,275.18,1814.4,371.95,1955.52,1.0,Back-Unknown,0.508
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_93d54be7-IMG_6607.jpeg,1197.5,1415.23,1309.39,1608.77,1.0,Pedestrian Crossing,0.7065
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_b65b2b8e-20251215_143141.jpg,1099.98,1278.14,1272.35,2326.46,1.0,No Through Road (T-Junction),0.8483
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_c21d51bf-IMG_6622.jpeg,1209.6,943.49,1711.58,1576.51,1.0,Back-Unknown,0.7071
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_d5464bd2-IMG_6729.jpeg,2621.81,2100.67,2688.34,2201.47,1.0,,0.319
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_db87303d-20251215_144613.jpg,1079.57,737.86,1204.31,2048.26,1.0,No Entry (One Way),0.7008
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_ef873d66-20251215_143818.jpg,943.49,1181.38,1134.0,1979.71,1.0,No Entry (One Way),0.8481
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_f5c11235-IMG_2319.JPG,1536.19,771.12,1810.37,895.1,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp7_f6c47dc2-IMG_2182.JPG,1536.19,1490.83,2870.78,1732.75,1.0,,0.1431
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_0d18b07a-IMG_0224.JPG,1285.2,1949.22,4009.82,2994.52,1.0,,0.3419
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_2aed70e2-front.jpg,393.98,831.49,1852.42,1908.74,1.0,No Entry (One Way),0.9709
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_2d237c79-side.jpg,1907.14,949.54,2140.99,1859.76,1.0,No Through Road (T-Junction),0.9063
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_3ab29317-front.jpg,654.34,1368.06,1675.01,2453.5,1.0,No Through Road (T-Junction),0.9794
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_4fe75feb-IMG_0243.JPG,5186.5,3864.17,5432.11,4091.22,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_562e48f6-front.jpg,1427.33,937.44,2564.35,1693.44,1.0,No Through Road (T-Junction),0.9673
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_59dbbf2e-side.jpg,1826.5,1146.1,2096.64,1896.05,1.0,Blind-Spot Mirror (Convex Mirror),0.9582
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_74a729c2-IMG_0138.jpg,1156.68,862.51,3200.15,2690.35,1.0,Back-Unknown,0.9626
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_8bd74996-side.jpg,1891.01,961.63,2161.15,1814.4,1.0,No Entry (One Way),0.9548
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_8ff667a0-IMG_0209.JPG,1707.89,1790.71,3752.78,2793.17,1.0,,0.484
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_a27e76cc-back.jpg,942.0,1336.0,2088.0,2260.0,1.0,Back-Unknown,0.9763
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_ad4861cb-back.jpg,1568.45,828.58,2612.74,1823.47,1.0,Back-Unknown,0.9456
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_aec35ad8-back.jpg,1024.13,1865.81,2866.75,2494.8,1.0,Back-Unknown,0.951
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_b6ae6e3d-back.jpg,1128.0,2988.0,1203.0,3120.0,1.0,,0.4378
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_c89fb86b-IMG_0117.jpg,1867.82,1445.14,2514.71,3415.78,1.0,No Through Road (T-Junction),0.9822
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_d8e91d56-side.jpg,1794.24,876.96,2060.35,1787.18,1.0,No Entry (One Way),0.9698
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_d8e91d56-side.jpg,3455.42,2192.4,3737.66,2624.83,1.0,No Entry (One Way),0.57
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp8_fc124a5b-Back.jpg,769.54,1372.16,1760.26,2375.68,1.0,Blind-Spot Mirror (Convex Mirror),0.9319
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_37f0c8a3-IMG_20251111_162207.jpg,1878.0,2676.0,1965.0,2812.0,1.0,Directional Sign,0.725
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_44654df9-WhatsApp_Image_2026-01-03_at_18.45.36_3.jpeg,534.0,715.2,832.8,968.0,1.0,No Through Road (T-Junction),0.968
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_48f9d230-IMG_20251112_155513.jpg,755.82,1856.4,1276.02,2378.64,1.0,Back-Unknown,0.9491
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_4a9c7d83-IMG_20251111_143857.jpg,1395.0,2064.0,1821.0,2452.0,1.0,Other-Unknown,0.9514
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_561ba1c4-IMG_20251111_162044.jpg,1893.0,2380.0,1992.0,2572.0,1.0,,0.403
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_58c8b920-IMG_20251106_153249.jpg,1382.4,1601.54,1821.7,1986.56,1.0,Back-Unknown,0.9696
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_6adfb65e-WhatsApp_Image_2026-01-01_at_18.13.00_2.jpeg,1115.14,1439.74,1164.29,1517.57,1.0,Blind-Spot Mirror (Convex Mirror),0.8053
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_6e84abf6-IMG_20251106_145409.jpg,1004.54,1056.77,2334.72,1957.89,1.0,Other-Unknown,0.9811
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_76700fa1-IMG_20251111_162238.jpg,1515.0,1572.0,1893.0,1940.0,1.0,Other-Unknown,0.8478
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_a3c63c83-IMG_20251112_162857.jpg,1315.8,1179.12,1731.96,2003.28,1.0,Back-Unknown,0.9058
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_ae723934-WhatsApp_Image_2026-01-03_at_18.45.36.jpeg,560.4,710.4,751.2,883.2,1.0,No Through Road (T-Junction),0.9882
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_b8edf87e-IMG_20251106_153308.jpg,1200.0,1964.0,1587.0,2624.0,1.0,Back-Unknown,0.5201
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_c7a4a215-20251122_140026.jpg,1302.0,996.0,2379.0,2264.0,1.0,Back-Unknown,0.7764
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_d09450b2-IMG_20251112_155615.jpg,1410.66,1530.0,2004.3,2154.24,1.0,Back-Unknown,0.9752
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_d4f4f35a-WhatsApp_Image_2026-01-01_at_18.12.59_1.jpeg,549.89,804.86,669.7,1366.02,1.0,No Entry (One Way),0.8775
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_d5f4aa18-20251122_140237.jpg,1398.0,2104.0,1482.0,2164.0,1.0,,0.0327
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_de518e6b-WhatsApp_Image_2026-01-03_at_18.46.56.jpeg,470.4,760.0,837.6,1099.2,1.0,Back-Unknown,0.9768
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_dfbf929f-IMG_20251106_154024.jpg,1244.16,2273.28,1406.98,3747.84,1.0,,0.0
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_e1897726-WhatsApp_Image_2026-01-03_at_18.45.38_3.jpeg,434.4,371.2,830.4,1089.6,1.0,,0.4279
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_e65623ae-20251122_135723.jpg,1839.0,2036.0,2097.0,2364.0,1.0,Auxiliary Sign,0.9204
+Cosmos Reason2 8B,sens-mtsd-roundabout-03,traffic sign indicating an upcoming roundabout,grp9_f109e3eb-IMG_20251111_144036.jpg,1164.0,1336.0,1947.0,2244.0,1.0,Blind-Spot Mirror (Convex Mirror),0.9786

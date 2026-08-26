@@ -33,8 +33,10 @@ run configuration and combination fingerprints; results produced under the
 old 100-box policy cannot be mixed into or resumed as this protocol.
 
 Inference is process-isolated. SAM gets one fresh worker process per
-model×prompt combination. LocateAnything and Cosmos additionally split each
-combination into 64-image workers. Every worker loads one model, persists its
+model×prompt combination. LocateAnything uses 64-image workers; Cosmos uses
+8-image workers and a checkpoint-specific maximum input side (2560px for 2B;
+1536px for 8B/32B) to bound Qwen visual-token memory on native-resolution MTSD
+frames. Every worker loads one model, persists its
 chunk and exits, making process termination—not Python garbage collection—the
 RAM/VRAM cleanup boundary. Completed chunks and combinations remain resumable.
 

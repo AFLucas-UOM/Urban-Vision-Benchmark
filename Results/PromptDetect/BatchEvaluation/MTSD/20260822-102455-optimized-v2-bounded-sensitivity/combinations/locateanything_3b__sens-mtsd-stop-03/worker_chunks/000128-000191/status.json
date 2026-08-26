@@ -1,0 +1,33 @@
+{
+  "protocol_hash": "9559386e86fe19dbcaeaec5d29f631f93c1a11a46e6317792050446236f26792",
+  "dataset_manifest_hash": "94e139cfa52a4c4c5043d146b7ea996b0b0d8cf7439d09f029d8f61d5dcebace",
+  "model": "LocateAnything 3B",
+  "prompt_id": "sens-mtsd-stop-03",
+  "prompt": "traffic sign indicating that vehicles must stop",
+  "target_classes": [
+    "Stop Sign"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 18,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "sensitivity_family": "mtsd-stop-sign",
+  "variant_type": "descriptive-paraphrase",
+  "status": "completed",
+  "execution_strategy": "isolated-model-prompt-chunks-v1",
+  "image_start": 128,
+  "image_end": 192,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 12991.4,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "finished_at": "2026-08-22T21:36:04.270780+00:00"
+}

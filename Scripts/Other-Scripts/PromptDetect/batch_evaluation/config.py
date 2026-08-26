@@ -84,6 +84,29 @@ MAP_IOU_RANGE = [round(0.5 + 0.05 * i, 2) for i in range(10)]  # 0.50 .. 0.95
 # model/checkpoint memory regularly during multi-day evaluations.
 VLM_WORKER_CHUNK_SIZE = 64
 
+# Cosmos must not receive native 3K/4K MTSD frames. Qwen3-VL's visual token
+# count grows with image area; unbounded frames took 25 hours per prompt and a
+# single 64-image worker reached ~98 GB private RAM / 23.7 GB VRAM. Coordinates
+# are emitted on a normalised 0..1000 grid, so inference uses a bounded copy
+# while boxes are mapped back to the original dimensions. The two checkpoints
+# need different caps: the 2B model remains fast at 2560 and was more accurate
+# than full resolution on two target-dense validation slices; 8B needs 1536 to
+# retain safe headroom on a 24 GB RTX 4090.
+COSMOS_MAX_SIDE_DEFAULT = 1536
+COSMOS_MAX_SIDE_BY_MODEL = {
+    "Cosmos Reason2 2B": 2560,
+    "Cosmos Reason2 8B": 1536,
+    "Cosmos Reason2 32B": 1536,
+}
+COSMOS_WORKER_CHUNK_SIZE = 8
+COSMOS_EXECUTION_REVISION = "bounded-model-specific-2b2560-8b1536-chunk8-v2"
+WANDB_RUN_REVISION = "bounded-v2"
+
+
+def cosmos_max_side(model: str) -> int:
+    """Return the audited inference-image cap for one Cosmos checkpoint."""
+    return int(COSMOS_MAX_SIDE_BY_MODEL.get(model, COSMOS_MAX_SIDE_DEFAULT))
+
 
 def new_run_dir(dataset: str, run_label: str | None = None) -> Path:
     stamp = datetime.now().strftime("%Y%m%d-%H%M%S")

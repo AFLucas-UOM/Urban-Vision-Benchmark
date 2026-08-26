@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "protocol_hash": "60787d37184e3d7185c9ca8b0e8e3744505b5aba4729db032c07b755a54dfda1",
+  "dataset_manifest_hash": "94e139cfa52a4c4c5043d146b7ea996b0b0d8cf7439d09f029d8f61d5dcebace",
+  "model": "SAM 3.1",
+  "prompt_id": "mtsd-p2",
+  "prompt": "stop sign",
+  "target_classes": [
+    "Stop Sign"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 18,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "target_gt_count": 130,
+  "tp": 110,
+  "fp": 301,
+  "fn": 20,
+  "finished_at": "2026-08-18T12:38:40.105164+00:00",
+  "model_load_ms": 9090.2,
+  "worker_processes": 1,
+  "worker_chunk_size": null,
+  "execution_strategy": "isolated-model-prompt-chunks-v1"
+}

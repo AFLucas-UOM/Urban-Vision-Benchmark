@@ -1,0 +1,36 @@
+{
+  "protocol_hash": "9559386e86fe19dbcaeaec5d29f631f93c1a11a46e6317792050446236f26792",
+  "dataset_manifest_hash": "a3a6edba3304cacbe523b86837a39f1509f53447825bec9483da9a808dd12f79",
+  "model": "Cosmos Reason2 8B",
+  "prompt_id": "sens-mdwd-mixed-04",
+  "prompt": "find all black mixed-waste bags",
+  "target_classes": [
+    "Mixed Waste"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 28,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "sensitivity_family": "mdwd-mixed-waste",
+  "variant_type": "instruction",
+  "cosmos_max_side": 1536,
+  "cosmos_worker_chunk_size": 8,
+  "cosmos_execution_revision": "bounded-model-specific-2b2560-8b1536-chunk8-v2",
+  "status": "completed",
+  "execution_strategy": "isolated-model-prompt-chunks-v1",
+  "image_start": 128,
+  "image_end": 136,
+  "model_status": {
+    "model": "Cosmos Reason2 8B",
+    "model_load_ms": 14712.5,
+    "ok": true,
+    "label": "Cosmos Reason2 8B",
+    "source": "nvidia/Cosmos-Reason2-8B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "finished_at": "2026-08-22T02:11:53.852239+00:00"
+}

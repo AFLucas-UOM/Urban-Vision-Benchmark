@@ -1,5 +1,5 @@
 attribute,value,value_kind,annotations,pct_of_annotations,images,pct_of_annotated_images,classes
-mounting,Pole-Mounted,regular,17815,86.75,6711,89.6,12
-mounting,Wall-Mounted,regular,2721,13.25,1798,24.01,12
+mounting,Pole-Mounted,regular,17791,86.75,6701,89.59,12
+mounting,Wall-Mounted,regular,2718,13.25,1796,24.01,12
 mounting,(null value),null,0,0.0,0,0.0,0
 mounting,(attribute absent),missing,0,0.0,0,0.0,0

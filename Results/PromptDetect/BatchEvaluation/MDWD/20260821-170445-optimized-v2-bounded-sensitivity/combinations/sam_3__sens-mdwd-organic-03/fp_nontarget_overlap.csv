@@ -1,0 +1,389 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,278.02,286.1,495.08,555.59,0.9648,Recyclable Material,0.9422
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,276.64,182.96,449.49,312.79,0.8945,Recyclable Material,0.957
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,230.84,267.75,344.53,378.28,0.8672,Recyclable Material,0.8807
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241214_080005_jpg.rf.8f62c5b3603421b99194e2142efb05e1.jpg,326.86,193.71,509.11,408.52,0.3242,Mixed Waste,0.6547
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,187.95,127.2,389.73,301.48,0.334,Mixed Waste,0.9772
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241214_081356_jpg.rf.02e17c975083c58891221feb0367bd36.jpg,202.58,272.94,485.66,455.27,0.3223,Mixed Waste,0.9666
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241219_083844_jpg.rf.70488e50bbe5f99b85b0719729f32064.jpg,199.83,103.36,494.71,346.16,0.8477,Recyclable Material,0.8522
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,309.36,190.41,511.37,393.24,0.9141,Recyclable Material,0.9609
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,122.63,195.44,318.23,362.41,0.9102,Recyclable Material,0.9557
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,606.63,257.66,640.0,388.19,0.6719,Recyclable Material,0.9525
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,324.22,164.79,560.34,335.05,0.9648,Recyclable Material,0.9424
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,63.61,175.56,330.44,404.63,0.957,Recyclable Material,0.9648
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,522.23,201.79,640.0,345.42,0.9141,Recyclable Material,0.8811
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,249.4,214.88,411.11,360.14,0.9609,Recyclable Material,0.9231
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,48.2,217.8,164.24,371.34,0.957,Recyclable Material,0.8955
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,254.47,86.58,361.39,218.96,0.9531,Recyclable Material,0.9446
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,344.25,179.23,412.57,284.57,0.9414,Recyclable Material,0.9614
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,125.28,296.82,237.33,425.52,0.9297,Recyclable Material,0.9261
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,190.21,204.39,285.0,348.06,0.9258,Recyclable Material,0.8308
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,211.81,170.66,260.82,234.12,0.8125,Recyclable Material,0.8042
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,164.75,252.16,197.37,300.04,0.3086,Other Waste,0.5124
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,201.04,363.08,375.67,540.61,0.9609,Recyclable Material,0.9359
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,124.66,198.72,225.26,421.66,0.9453,Recyclable Material,0.9751
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,259.17,265.02,360.94,340.47,0.8984,Recyclable Material,0.7895
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,360.01,238.6,428.0,278.08,0.4902,,0.2469
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20250103_071358-0-_jpg.rf.551125884a7ee52b32bb69b2998e461e.jpg,292.12,324.34,324.99,374.81,0.3027,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20250114_102320_jpg.rf.979c53863883cd0861956f0a494251dd.jpg,209.79,293.41,382.99,398.32,0.9141,Other Waste,0.9811
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,20250114_102320_jpg.rf.979c53863883cd0861956f0a494251dd.jpg,288.02,338.91,561.91,469.08,0.3809,Mixed Waste,0.9685
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,26_jpeg.rf.9461f25b898f83e1991fbcc6fc5cc83c.jpg,214.1,282.31,400.55,482.38,0.9805,Recyclable Material,0.9522
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,191.64,184.72,469.43,399.05,0.8984,Recyclable Material,0.8946
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,227.23,40.58,342.29,136.88,0.8828,Recyclable Material,0.9304
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,213.94,172.26,408.59,241.3,0.6484,Other Waste,0.7089
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,2_jpeg.rf.210ca76552cf22b6ae5128cd5eb1a637.jpg,257.19,336.54,325.7,368.4,0.8086,Recyclable Material,0.7294
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,30_jpeg.rf.b5cf601d6f44e0addb177394ba5d4b99.jpg,219.23,227.75,437.37,364.32,0.9492,Recyclable Material,0.9676
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,31_jpeg.rf.fda6c54a3034426eb0971b712b284ac9.jpg,198.02,230.52,397.09,356.93,0.8516,Recyclable Material,0.8336
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,345.63,206.75,538.42,449.03,0.9297,Recyclable Material,0.9415
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,0.0,376.03,220.87,613.76,0.9219,Recyclable Material,0.9399
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,461.54,184.09,610.15,330.16,0.7031,Recyclable Material,0.7018
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,516.61,150.84,640.0,297.95,0.668,Recyclable Material,0.7891
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,277.11,279.61,340.22,382.3,0.4102,,0.0967
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,0.0,374.21,28.04,411.94,0.3652,,0.0191
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,603.27,171.12,640.0,290.97,0.3633,,0.2936
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,516.05,150.04,617.1,199.16,0.3125,,0.2335
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,369.24,191.15,480.84,291.04,0.9102,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,603.75,243.67,640.0,396.05,0.7578,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,550.78,154.35,640.0,252.05,0.6875,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,432.39,627.5,529.25,640.0,0.6367,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,603.72,242.38,640.0,282.56,0.4355,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,619.56,356.21,640.0,397.44,0.3672,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473055810_1017914696762987_4178034688130709660_n_jpg.rf.f03f6b9a9f959d7dce7512e0d31dc6a1.jpg,271.75,319.88,405.92,429.63,0.9609,Recyclable Material,0.9
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473288918_1030220488909269_3010825870718583729_n_jpg.rf.1e0886d3aa27cfa4e22d06ead559dc80.jpg,198.37,238.24,381.91,354.63,0.9766,Recyclable Material,0.9544
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473288918_1030220488909269_3010825870718583729_n_jpg.rf.1e0886d3aa27cfa4e22d06ead559dc80.jpg,438.6,142.18,583.84,267.79,0.9688,Recyclable Material,0.9545
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473288918_1030220488909269_3010825870718583729_n_jpg.rf.1e0886d3aa27cfa4e22d06ead559dc80.jpg,348.9,186.28,497.95,305.71,0.9688,Recyclable Material,0.8151
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,361.9,65.42,595.09,327.6,0.9297,Recyclable Material,0.9597
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,142.97,193.74,494.74,486.11,0.9258,Recyclable Material,0.9447
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,175.01,207.5,395.39,384.69,0.9531,Recyclable Material,0.9751
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,418.46,155.2,520.81,256.15,0.8945,Recyclable Material,0.7725
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,193.0,36.56,430.94,289.88,0.625,Recyclable Material,0.9607
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch5_13_jpeg.rf.bcc3cbdfd5c1dfc063c7825a0a55a90a.jpg,202.63,154.05,373.09,286.77,0.9609,Recyclable Material,0.9743
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch5_15_jpeg.rf.5dc21330fd6004b5fe9c6cdcf1a1732c.jpg,271.66,409.34,358.22,480.78,0.9531,Recyclable Material,0.9699
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch5_2_jpeg.rf.4f2a1b9b6b2271796a0eb20e8001ce93.jpg,21.64,362.38,152.77,533.08,0.7812,Mixed Waste,0.8395
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch5_2_jpeg.rf.4f2a1b9b6b2271796a0eb20e8001ce93.jpg,0.55,432.7,31.72,556.27,0.4102,Mixed Waste,0.6003
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_40_jpeg.rf.41584ad8be2654c6380775654da6238a.jpg,98.94,217.25,334.0,370.67,0.9492,Orange CMD,0.9632
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,297.73,307.57,626.46,554.53,0.5273,Orange CMD,0.9691
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,140.65,262.62,218.56,353.85,0.6992,Mixed Waste,0.8954
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,207.31,222.93,263.32,262.21,0.6953,Other Waste,0.9364
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,250.17,208.5,315.43,260.26,0.6758,Other Waste,0.8554
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,286.45,212.95,374.81,254.66,0.4434,Mixed Waste,0.9419
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,70.09,347.48,127.22,361.74,0.3789,Other Waste,0.8294
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,457.19,324.25,529.26,364.59,0.498,,0.0499
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,508.36,354.43,640.0,385.66,0.4062,,0.0705
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,592.95,318.9,632.78,348.41,0.3301,,0.0202
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,459.51,323.84,640.0,386.15,0.3203,,0.1929
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,389.79,365.82,472.01,436.38,0.7422,Orange CMD,0.9624
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,180.28,378.36,256.21,429.45,0.7109,Orange CMD,0.9582
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,326.2,375.54,399.04,433.44,0.6719,Orange CMD,0.9383
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,129.27,396.7,183.51,426.85,0.6289,Orange CMD,0.9679
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,255.36,382.49,328.61,431.06,0.625,Orange CMD,0.7977
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,242.01,256.54,366.12,330.89,0.9453,Recyclable Material,0.9453
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,52.71,264.98,120.91,320.05,0.9297,Recyclable Material,0.9565
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,376.89,218.16,495.57,312.22,0.9141,Recyclable Material,0.9021
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,142.2,246.35,271.78,305.4,0.8672,Recyclable Material,0.5058
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,385.9,201.45,458.58,248.71,0.8633,Recyclable Material,0.9283
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,228.82,208.43,340.33,261.97,0.8516,Recyclable Material,0.9234
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,38.78,184.2,66.75,222.67,0.8398,Recyclable Material,0.7135
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,122.33,161.78,212.34,226.98,0.832,Mixed Waste,0.8943
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,456.54,285.38,558.21,361.15,0.8281,Mixed Waste,0.9542
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,224.99,99.83,324.86,155.23,0.8125,Mixed Waste,0.8659
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,214.9,174.4,284.09,232.22,0.8086,Recyclable Material,0.9172
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,196.93,151.29,254.4,189.54,0.7852,Mixed Waste,0.929
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,313.64,191.19,382.47,257.43,0.7539,Mixed Waste,0.9094
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,63.86,167.31,138.77,224.17,0.7148,Mixed Waste,0.8804
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,249.37,143.81,332.26,209.4,0.7031,Mixed Waste,0.6283
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,69.76,210.74,161.96,293.21,0.6211,Mixed Waste,0.9202
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,134.13,281.24,235.36,374.71,0.5859,Mixed Waste,0.9694
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,58.83,117.24,138.12,182.54,0.5117,Mixed Waste,0.6989
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,319.22,148.85,359.92,199.84,0.5078,,0.2398
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,152.25,219.59,173.92,250.83,0.4434,Mixed Waste,0.8293
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,0.0,175.35,10.71,189.27,0.4316,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,248.1,143.86,290.53,176.15,0.3926,,0.1534
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,58.61,116.88,129.53,147.55,0.3867,Mixed Waste,0.8342
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,152.96,341.56,331.93,393.93,0.4766,Orange CMD,0.9552
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,288.63,368.6,431.63,402.37,0.4238,Orange CMD,0.9587
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,34.93,260.78,381.69,430.44,0.9766,Recyclable Material,0.969
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,61.02,129.22,272.55,325.01,0.9688,Recyclable Material,0.8719
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,0.0,66.8,93.22,194.12,0.9414,Recyclable Material,0.9438
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,0.0,186.15,94.47,296.16,0.918,Recyclable Material,0.9596
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_20_jpeg.rf.7b0acd51a9c8d6ff91b6387874917af3.jpg,190.74,214.67,344.11,346.59,0.9727,Recyclable Material,0.9045
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_28_jpeg.rf.919763ab83ddeeedc1582a66fb260e6c.jpg,191.94,161.34,390.93,341.4,0.918,Recyclable Material,0.9437
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,267.57,202.84,458.59,332.95,0.9102,Recyclable Material,0.9638
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,224.98,322.46,450.87,451.8,0.9062,Recyclable Material,0.952
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,308.29,146.9,389.58,204.53,0.5781,,0.1666
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,217.35,156.42,314.56,236.29,0.957,Recyclable Material,0.941
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,255.58,106.17,343.54,172.12,0.9219,Recyclable Material,0.8077
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,308.41,143.07,430.14,222.87,0.9141,Recyclable Material,0.9282
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,307.7,160.22,375.37,220.97,0.4141,,0.3928
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,322.17,218.43,451.32,287.71,0.9062,Recyclable Material,0.9276
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,149.23,315.58,240.72,368.77,0.8867,Recyclable Material,0.8663
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,299.6,271.16,398.38,351.46,0.8828,Recyclable Material,0.9185
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,267.18,345.92,371.02,428.25,0.8398,Recyclable Material,0.8286
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,166.84,282.55,246.11,329.65,0.8398,Recyclable Material,0.9312
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,243.15,251.75,307.58,311.35,0.8203,Other Waste,0.8333
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,247.81,302.98,336.2,379.35,0.8164,Recyclable Material,0.8764
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,208.26,229.85,274.6,284.99,0.8125,Recyclable Material,0.763
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,384.71,409.8,499.67,504.39,0.6367,Mixed Waste,0.919
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,262.76,418.16,432.9,640.0,0.4805,Mixed Waste,0.9768
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,382.18,316.23,414.48,355.31,0.3301,,0.0943
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,260.24,315.46,520.9,547.47,0.9688,Recyclable Material,0.9685
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,233.59,269.93,423.82,372.63,0.9336,Recyclable Material,0.9452
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,215.57,111.41,305.94,203.42,0.8711,Recyclable Material,0.8948
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,162.69,43.66,217.44,118.92,0.8125,Recyclable Material,0.8494
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,154.09,0.0,207.06,44.42,0.5273,Recyclable Material,0.894
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_61_jpeg.rf.27e292c4a0e32bcd3cadbae4bc598544.jpg,228.1,174.47,429.56,313.93,0.9609,Recyclable Material,0.9225
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_61_jpeg.rf.27e292c4a0e32bcd3cadbae4bc598544.jpg,207.1,69.09,362.89,173.6,0.9453,Recyclable Material,0.9281
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_61_jpeg.rf.27e292c4a0e32bcd3cadbae4bc598544.jpg,219.5,115.9,394.3,246.75,0.9375,Recyclable Material,0.9661
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,AFL_NewBatch3_70_jpeg.rf.7b3a89cb52b3c2b63da06989e950254c.jpg,248.54,85.61,431.62,310.84,0.7852,Recyclable Material,0.9421
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_AFL_20_jpeg.rf.ac014490ff2a11d9f279be120a1079f1.jpg,107.26,185.51,353.63,434.61,0.9609,Recyclable Material,0.9607
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_AFL_60_jpeg.rf.9b69f3b6a86120e675c35e1420d47ec1.jpg,0.0,127.26,178.81,463.87,0.3105,Other Waste,0.9907
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_AFL_87_jpeg.rf.bbd40e9cada1cc2730cdee3d7a09767f.jpg,58.61,407.31,216.27,596.32,0.9688,Other Waste,0.9483
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_AFL_87_jpeg.rf.bbd40e9cada1cc2730cdee3d7a09767f.jpg,226.37,240.06,431.92,425.72,0.9609,Recyclable Material,0.9726
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_AFL_94_jpeg.rf.12064663f7b4f63552c8945b7487f26d.jpg,242.18,206.77,492.63,352.54,0.9062,Recyclable Material,0.9408
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_AFL_E_7_jpeg.rf.751f2e9d7aa713ca24fc59fe52c4a209.jpg,583.07,109.38,638.7,144.81,0.3105,Other Waste,0.7582
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_15_jpg.rf.538379eb2b735d401e4aba1afeeba4f4.jpg,129.39,23.29,473.36,305.27,0.3691,Mixed Waste,0.9268
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,179.03,189.39,304.66,389.19,0.9727,Other Waste,0.9861
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,284.74,189.05,394.33,374.75,0.9609,Other Waste,0.9875
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,286.18,318.78,452.98,550.78,0.9531,Recyclable Material,0.9532
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,91.87,35.8,311.18,312.21,0.9453,Recyclable Material,0.9657
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,43.62,246.58,325.62,393.16,0.9375,Recyclable Material,0.9296
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,354.7,183.74,640.0,455.49,0.9375,Recyclable Material,0.8837
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,448.09,411.52,640.0,640.0,0.9297,Recyclable Material,0.9679
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,621.49,391.49,640.0,417.55,0.3145,,0.0054
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,273.92,261.28,429.46,430.85,0.9727,Recyclable Material,0.9509
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,177.31,102.45,274.91,215.92,0.8867,Recyclable Material,0.8133
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,236.91,145.38,359.83,278.99,0.8984,Recyclable Material,0.9192
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,286.46,104.45,406.35,235.51,0.8594,Recyclable Material,0.9353
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,330.6,28.74,363.18,106.96,0.8164,Recyclable Material,0.8862
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,4.05,254.7,281.92,538.98,0.8086,Other Waste,0.9224
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_E_11_jpg.rf.e3a50a869c33c50807b308d8f3c3763b.jpg,234.18,245.45,478.44,511.52,0.9648,Recyclable Material,0.9803
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_E_3_jpg.rf.cd75c0f5faef6a61dc201602806fcf02.jpg,285.67,293.29,595.2,598.07,0.9531,Recyclable Material,0.9306
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_E_3_jpg.rf.cd75c0f5faef6a61dc201602806fcf02.jpg,239.74,74.39,338.11,187.54,0.9219,Recyclable Material,0.9671
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_E_6_jpg.rf.8f4ad2bbc4bd45252ef4e6320bac2e69.jpg,319.5,69.37,590.15,311.71,0.9297,Recyclable Material,0.9169
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_SDM_E_6_jpg.rf.8f4ad2bbc4bd45252ef4e6320bac2e69.jpg,14.36,244.56,261.15,472.62,0.9219,Recyclable Material,0.9291
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_14_jpg.rf.c589cfdd4d6a2dbf0b252f2f34ca86ad.jpg,192.14,227.8,601.2,509.08,0.9141,Recyclable Material,0.9211
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_14_jpg.rf.c589cfdd4d6a2dbf0b252f2f34ca86ad.jpg,261.05,273.72,312.83,316.32,0.3848,,0.0471
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,462.33,232.75,577.21,308.95,0.9023,Recyclable Material,0.9331
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,341.1,210.54,493.51,309.23,0.3398,Mixed Waste,0.9301
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_30_jpg.rf.cb32576d60ab619fd0da54147b7a4bd9.jpg,173.11,208.93,490.98,378.61,0.9023,Recyclable Material,0.9444
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,244.06,212.94,611.58,464.63,0.9062,Recyclable Material,0.875
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,76.99,261.52,335.15,429.21,0.8633,Recyclable Material,0.894
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,0.56,255.5,87.7,427.9,0.4629,Recyclable Material,0.9072
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_37_jpg.rf.19c3a10f238a804e96379b379652a1f8.jpg,535.8,291.93,612.22,374.05,0.3828,,0.0605
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,432.83,295.97,640.0,482.76,0.7852,Recyclable Material,0.9385
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,261.08,260.42,472.59,443.63,0.6914,Recyclable Material,0.8994
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_43_jpg.rf.d5403d078d6d28485c7df4e9d59472ae.jpg,157.02,244.64,495.6,468.3,0.9492,Recyclable Material,0.9626
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_49_jpg.rf.b1b37e897ec39c59805640946039322e.jpg,245.93,227.53,424.62,365.78,0.9766,Recyclable Material,0.9298
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_54_jpg.rf.50e7e1d8fe52aa410a928c6641b2f939.jpg,259.6,232.65,431.09,373.58,0.9609,Recyclable Material,0.93
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,ARI3129_TK_54_jpg.rf.50e7e1d8fe52aa410a928c6641b2f939.jpg,421.03,223.71,580.96,398.61,0.9492,Recyclable Material,0.9544
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_39_jpeg.rf.e9a6b47832761d98991f461486c28b23.jpg,239.5,296.61,352.06,348.48,0.8945,Recyclable Material,0.8608
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,271.34,156.15,411.23,224.49,0.7539,Recyclable Material,0.972
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,305.69,204.29,429.66,280.77,0.7383,Recyclable Material,0.9231
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,200.85,206.73,316.54,272.67,0.7383,Recyclable Material,0.827
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,0.32,272.2,77.94,405.61,0.7227,Recyclable Material,0.9197
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_43_jpeg.rf.7ad2150ca57fd7d4f9339f170104fbd5.jpg,281.72,180.07,308.8,192.27,0.3457,,0.1185
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,149.56,326.71,267.33,420.03,0.9336,Recyclable Material,0.8633
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,245.81,328.9,310.49,409.08,0.7344,Recyclable Material,0.9301
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,196.74,300.61,216.55,314.37,0.3086,,0.0856
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_79_jpeg.rf.e55883045699d8dfa9c9aa6bc12bbef2.jpg,322.22,120.03,360.32,136.52,0.3359,Orange CMD,0.9388
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_79_jpeg.rf.e55883045699d8dfa9c9aa6bc12bbef2.jpg,244.26,130.07,308.45,165.88,0.334,Orange CMD,0.8395
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_79_jpeg.rf.e55883045699d8dfa9c9aa6bc12bbef2.jpg,304.84,139.26,356.76,166.38,0.3047,Orange CMD,0.9322
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,293.58,340.58,393.73,440.95,0.9102,Recyclable Material,0.9521
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,239.39,344.38,290.59,367.57,0.498,Recyclable Material,0.6098
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,164.3,252.98,249.89,383.11,0.7773,Recyclable Material,0.8583
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,214.15,182.26,274.05,303.87,0.6836,,0.1137
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,184.87,208.82,216.24,256.65,0.3477,,0.0215
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,213.11,182.86,243.06,253.18,0.3379,,0.0301
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,105.72,143.39,310.7,255.76,0.8867,Recyclable Material,0.8599
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,0.02,54.39,25.14,153.25,0.8438,Recyclable Material,0.8869
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,310.15,127.53,406.53,185.08,0.7695,,0.4464
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,278.16,151.0,372.69,214.59,0.7109,,0.4744
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,168.16,68.58,275.48,135.3,0.6758,Other Waste,0.5605
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,407.0,493.28,640.0,640.0,0.6641,Recyclable Material,0.6185
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,315.65,472.23,434.73,640.0,0.5703,,0.3621
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,181.64,125.1,246.95,150.52,0.543,,0.0801
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,108.61,68.5,177.12,105.25,0.5352,,0.1971
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,166.99,68.71,243.53,103.26,0.4551,,0.207
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,121.57,112.84,168.8,133.7,0.4277,,0.0771
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,74.66,54.61,110.31,79.26,0.3711,,0.1292
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,10.09,184.61,107.2,231.77,0.332,,0.3921
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,240.02,538.76,279.14,566.17,0.3066,,0.0193
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_64_jpeg.rf.e48c90ccc791eb8bacf934f9b3d5944e.jpg,198.78,325.99,331.06,473.94,0.8633,Other Waste,0.9322
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,364.53,426.6,404.5,497.13,0.4395,Other Waste,0.9534
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,320.05,412.39,369.25,498.4,0.4004,Mixed Waste,0.8908
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,398.49,315.99,421.84,347.99,0.3164,Mixed Waste,0.7745
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,image00010_jpeg.rf.e06a2de642e557aa8f532801abefd1c6.jpg,312.49,178.35,422.16,258.61,0.957,Recyclable Material,0.9627
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,121.29,341.96,222.71,510.83,0.9609,Recyclable Material,0.9373
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,463.79,407.59,593.71,594.74,0.9609,Recyclable Material,0.8694
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,10.95,362.16,123.26,553.96,0.9531,Recyclable Material,0.8943
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,441.85,344.95,534.06,468.16,0.9453,Recyclable Material,0.8205
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,250.27,342.61,335.29,401.54,0.832,Recyclable Material,0.6268
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,554.86,389.27,640.0,577.27,0.3438,Recyclable Material,0.931
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG20250107085655_jpg.rf.2164bdf6a18089bda1efb0782a777491.jpg,352.81,185.11,426.74,289.37,0.7891,Mixed Waste,0.8936
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,262.66,154.22,401.5,242.6,0.9648,Recyclable Material,0.9813
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,520.83,16.07,544.08,51.58,0.8594,Other Waste,0.6774
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,376.74,322.76,502.79,458.21,0.9297,Recyclable Material,0.9485
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,266.99,93.01,395.26,254.65,0.8906,Recyclable Material,0.8821
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,36.08,287.56,150.18,434.02,0.8828,Recyclable Material,0.8656
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,264.63,260.86,371.96,398.16,0.8477,Recyclable Material,0.8138
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,285.24,363.32,386.98,436.62,0.832,Recyclable Material,0.9352
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,369.02,72.1,457.59,234.04,0.6992,Recyclable Material,0.9037
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,373.19,54.35,540.8,235.93,0.6719,,0.4745
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,436.52,55.0,540.76,185.04,0.5742,Recyclable Material,0.8551
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,261.34,282.16,422.67,457.97,0.832,Recyclable Material,0.9223
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,96.95,238.06,215.98,324.95,0.7148,Recyclable Material,0.8625
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,210.67,164.77,413.59,325.86,0.6914,Recyclable Material,0.9331
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,378.85,270.17,607.78,431.4,0.5625,Recyclable Material,0.8267
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,0.0,234.37,100.14,349.81,0.3984,Recyclable Material,0.9311
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,141.7,245.07,387.14,396.61,0.8281,Recyclable Material,0.9368
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,51.51,131.95,320.41,290.28,0.8281,Recyclable Material,0.8972
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,322.45,219.34,433.58,332.69,0.7656,Recyclable Material,0.8193
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,379.13,280.1,567.88,395.61,0.5859,Recyclable Material,0.9072
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,406.44,177.76,530.54,301.69,0.5547,Recyclable Material,0.854
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0714_jpeg.rf.97458a882a4c384759469f5ec68c823a.jpg,232.72,289.68,275.65,321.03,0.5273,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_0714_jpeg.rf.97458a882a4c384759469f5ec68c823a.jpg,179.21,290.13,275.05,325.04,0.4707,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,359.85,232.57,434.75,376.15,0.8984,Recyclable Material,0.7653
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,253.74,152.6,314.93,242.27,0.8789,Recyclable Material,0.7858
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,320.62,210.57,386.33,327.16,0.8242,Recyclable Material,0.8742
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,270.64,181.81,337.73,293.29,0.8047,Recyclable Material,0.7047
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,315.8,186.82,339.96,235.85,0.3398,,0.1116
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,75.98,185.07,181.37,372.92,0.8242,Recyclable Material,0.9542
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,149.07,149.49,212.66,288.08,0.6992,,0.4543
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,110.39,104.67,212.23,288.31,0.6016,Recyclable Material,0.9731
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1070_converted_jpg.rf.da281443ecd6617cf878c3cbb8a5a0c1.jpg,111.91,101.67,187.93,175.83,0.5352,,0.2929
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,194.63,176.05,299.2,355.36,0.9727,Recyclable Material,0.9206
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,325.41,157.32,422.18,288.55,0.957,Recyclable Material,0.8591
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1085_converted_jpg.rf.5ed2df0113b41a9eeb5ba2375caee8ea.jpg,207.6,196.58,308.21,373.91,0.9727,Recyclable Material,0.94
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1085_converted_jpg.rf.5ed2df0113b41a9eeb5ba2375caee8ea.jpg,347.35,181.34,453.35,313.84,0.9727,Recyclable Material,0.8874
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1089_converted_blurred_jpg.rf.3e8c4d8b6ed62381f89b49bef81c8c96.jpg,351.43,156.56,427.79,311.56,0.6992,Recyclable Material,0.9076
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1089_converted_blurred_jpg.rf.3e8c4d8b6ed62381f89b49bef81c8c96.jpg,314.79,147.18,390.03,276.81,0.5547,,0.2882
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1340_jpg.rf.5c5713ca2d53a8ed11d4a692dceeaae3.jpg,327.24,263.35,450.06,427.93,0.7891,Mixed Waste,0.7879
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1493_jpg.rf.572cf72e5148bfa2394d07eda0ef95aa.jpg,293.28,270.63,360.7,361.68,0.957,,0.0659
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1498_jpg.rf.56d1556a658cd892330052560c15b640.jpg,229.25,201.86,415.62,406.48,0.9453,Recyclable Material,0.958
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1681-3_jpg.rf.d5d943924c35de90c6d6e157474cbfd7.jpg,307.61,125.54,415.7,170.16,0.7852,Mixed Waste,0.9098
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1949_JPG.rf.b39818364afce503871402f719639f15.jpg,96.31,160.13,307.54,394.68,0.9453,Recyclable Material,0.9336
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1956_JPG.rf.2478164656df97788f34d6c9933080a6.jpg,191.13,176.29,339.31,322.03,0.8984,Recyclable Material,0.9318
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1965_JPG.rf.da74e00f22402a722279b6253a01ef40.jpg,120.69,255.8,328.72,388.85,0.9531,Recyclable Material,0.9179
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1965_JPG.rf.da74e00f22402a722279b6253a01ef40.jpg,264.79,134.71,374.15,243.62,0.5195,Recyclable Material,0.7513
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1980_JPG.rf.37af8c83756b699162c8354ac0b5d79a.jpg,202.26,151.85,427.55,348.55,0.9531,Recyclable Material,0.9609
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1983_JPG.rf.fbb2ae887f84c2bc3018cbc7a6a2af14.jpg,191.88,88.06,377.58,219.17,0.75,Recyclable Material,0.8961
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1983_JPG.rf.fbb2ae887f84c2bc3018cbc7a6a2af14.jpg,191.07,170.51,254.25,219.66,0.3789,,0.1143
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1999_JPG.rf.4e303080b26c788dc54e561c486dd103.jpg,189.68,123.48,351.4,243.49,0.9727,Recyclable Material,0.9564
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_1999_JPG.rf.4e303080b26c788dc54e561c486dd103.jpg,119.27,0.0,163.22,32.51,0.8945,Recyclable Material,0.9369
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241114_082102-1-_jpg.rf.92fdca8649a8596bd5759763ae134951.jpg,227.45,211.25,282.5,266.55,0.8867,Recyclable Material,0.9288
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241114_082102-1-_jpg.rf.92fdca8649a8596bd5759763ae134951.jpg,291.21,212.58,363.44,266.53,0.8672,Recyclable Material,0.9403
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,227.3,87.6,282.64,234.48,0.9141,Recyclable Material,0.9382
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,290.69,91.42,364.4,236.51,0.9062,Recyclable Material,0.9506
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,251.6,244.34,276.51,263.41,0.3008,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_091747_jpg.rf.3fd3e241b47f6b97e6d584dded292019.jpg,197.75,221.74,269.89,339.04,0.8672,Recyclable Material,0.8836
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,253.27,257.36,331.44,388.35,0.9414,Recyclable Material,0.8877
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,174.85,296.22,223.79,391.04,0.9375,Other Waste,0.9564
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,325.46,270.5,384.51,376.84,0.8867,Recyclable Material,0.8688
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,353.95,229.08,431.48,293.85,0.8164,Recyclable Material,0.9323
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,383.52,282.94,442.91,370.64,0.8086,Recyclable Material,0.9336
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,227.91,243.62,314.07,384.6,0.9453,Recyclable Material,0.9563
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,305.62,258.45,370.83,374.68,0.9102,Recyclable Material,0.9424
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,369.52,274.06,434.2,370.61,0.8984,Recyclable Material,0.9667
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,141.91,287.88,196.79,385.04,0.8906,Other Waste,0.8988
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,338.36,214.5,421.06,284.79,0.8867,Recyclable Material,0.9206
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241128_092514_jpg.rf.7596cb50c83af21c87c5f54080e602d4.jpg,137.3,187.17,285.06,341.51,0.957,Recyclable Material,0.9496
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,332.45,229.93,465.88,331.61,0.9688,,0.1063
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,348.72,168.23,372.83,182.01,0.7383,,0.0053
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,300.53,235.35,367.48,289.1,0.4238,,0.0282
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,318.8,235.42,367.6,266.84,0.4141,,0.0208
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241212_071851_jpg.rf.550bce41f56e3f83cfcf50a20246ac39.jpg,247.37,106.94,634.55,340.41,0.9805,Recyclable Material,0.9115
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241219_084719_jpg.rf.93bdd801e0ce4811189ba99080842075.jpg,126.77,156.31,230.19,300.34,0.9766,Recyclable Material,0.9238
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20241219_084719_jpg.rf.93bdd801e0ce4811189ba99080842075.jpg,383.98,162.95,459.87,284.18,0.9648,Recyclable Material,0.8764
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20250104_070512_jpg.rf.255e6e445fb501cb02fbd10537e3c482.jpg,200.2,245.91,321.27,298.36,0.6602,Mixed Waste,0.9829
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,425.99,231.55,475.95,263.94,0.3633,Other Waste,0.9012
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,321.7,196.59,354.34,219.58,0.3379,Other Waste,0.6635
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,353.41,626.01,381.61,639.83,0.3105,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_20250109_074148_jpg.rf.8c9aeea0d58fff99ff5ece961942d4da.jpg,166.01,88.76,418.59,230.2,0.918,Recyclable Material,0.9373
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,372.3,246.46,443.29,294.55,0.8711,Recyclable Material,0.8235
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,39.06,120.59,68.72,156.54,0.7773,Other Waste,0.908
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_3068_jpeg.rf.6b63b7cb63ae7950ebc35b5a96550b08.jpg,316.37,288.06,351.68,321.74,0.8867,Recyclable Material,0.8969
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_4228_JPG.rf.3354240a78ddc77e93ae7abe53e5e890.jpg,307.59,136.1,495.5,379.25,0.9766,Recyclable Material,0.9844
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,29.88,190.29,322.83,416.29,0.6641,Recyclable Material,0.9796
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,340.7,122.68,507.06,260.06,0.6562,Recyclable Material,0.9084
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,388.74,168.25,570.19,337.19,0.793,Mixed Waste,0.9066
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_4369_jpeg.rf.408cd6a46d2f5cac2cbe3b37e3ebcda9.jpg,303.9,256.21,424.92,325.35,0.9414,Recyclable Material,0.7856
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_4396_jpg.rf.1db0db20656a7c83e35b6d18c0215170.jpg,294.39,261.15,375.37,389.6,0.9141,Recyclable Material,0.933
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_4399_jpg.rf.dfd53b0debc27c7095a817bcea1e7804.jpg,290.47,230.45,378.25,398.64,0.75,Recyclable Material,0.8996
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_4399_jpg.rf.dfd53b0debc27c7095a817bcea1e7804.jpg,298.18,178.18,377.17,250.4,0.75,Other Waste,0.9569
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5761_JPG.rf.ffcd5a5b9f4725507b420e333cc0c094.jpg,219.25,102.39,352.84,181.19,0.875,Recyclable Material,0.9106
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5765_JPG.rf.567fd47906be7f7e229b43f37368feee.jpg,153.37,44.98,283.86,195.67,0.9375,Recyclable Material,0.9769
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,281.62,180.98,434.56,332.16,0.8281,Recyclable Material,0.7344
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,341.45,216.83,490.59,365.9,0.7969,Recyclable Material,0.9585
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,264.67,134.47,375.59,183.93,0.7969,Other Waste,0.8043
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,169.22,149.52,266.71,244.52,0.7891,Recyclable Material,0.9222
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,234.87,175.03,348.25,258.62,0.7383,Recyclable Material,0.5871
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,208.79,149.3,268.19,197.12,0.5586,,0.2828
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,397.21,161.65,505.13,223.94,0.4023,Other Waste,0.7232
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,314.79,181.77,430.18,250.72,0.3105,,0.2884
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_5778_blurred_jpg.rf.38cb37b2fb6d4dc976cb44e46e0e88df.jpg,286.79,99.13,335.28,151.99,0.9336,Recyclable Material,0.8332
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,225.72,419.33,314.76,476.25,0.7891,Mixed Waste,0.9393
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,173.23,317.31,216.89,361.35,0.3945,,0.013
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,294.36,390.21,344.23,426.02,0.3438,Mixed Waste,0.5625
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,240.11,357.86,361.03,446.91,0.9102,Recyclable Material,0.9364
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,389.01,305.69,431.25,351.01,0.6875,Recyclable Material,0.8889
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,388.57,219.95,417.57,277.7,0.4473,Recyclable Material,0.8343
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,394.25,277.43,424.46,308.16,0.4473,Recyclable Material,0.8581
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,396.21,228.37,428.63,282.99,0.375,Mixed Waste,0.9172
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,218.06,301.28,334.71,352.5,0.416,Mixed Waste,0.9376
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,258.86,443.27,386.3,535.54,0.3887,Mixed Waste,0.9573
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,222.16,324.14,355.57,409.78,0.3867,Mixed Waste,0.9001
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,224.02,388.02,362.62,464.66,0.3672,Mixed Waste,0.8586
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,379.94,387.03,418.28,412.03,0.4512,,0.1956
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,292.94,364.37,336.43,400.36,0.4355,Other Waste,0.5289
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,162.02,362.42,275.27,467.33,0.375,Mixed Waste,0.8681
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,IMG_8974_jpeg.rf.228d538a131d7415743d51cf6832042a.jpg,335.89,359.18,418.61,476.88,0.7695,Recyclable Material,0.9046
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,41.75,149.81,149.75,199.39,0.5625,,0.3611
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,80.1,169.49,145.46,200.75,0.3555,Recyclable Material,0.9455
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_124_jpg.rf.234eac622fccca0d569fe7920ed68ce7.jpg,285.27,268.65,447.6,343.62,0.9492,Recyclable Material,0.9017
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,371.27,142.99,435.19,268.41,0.9492,Recyclable Material,0.9186
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,177.21,137.22,229.14,231.02,0.9219,Recyclable Material,0.8647
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,200.85,74.98,240.79,158.44,0.8516,Recyclable Material,0.8325
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,174.21,257.6,197.93,284.43,0.4062,Other Waste,0.7332
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_16_jpg.rf.4e76b4d44941fe5c711fae8306ec9680.jpg,216.12,167.69,383.31,478.33,0.875,Recyclable Material,0.9332
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,348.5,2.35,451.14,216.52,0.9102,Recyclable Material,0.9167
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,237.29,68.37,388.94,414.2,0.9102,Recyclable Material,0.9275
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,73.3,232.18,284.76,620.01,0.8945,Recyclable Material,0.886
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_76_jpg.rf.0f8f53a21baa9edf9a2b26f86785f223.jpg,322.57,333.84,398.99,353.63,0.4961,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_76_jpg.rf.0f8f53a21baa9edf9a2b26f86785f223.jpg,289.76,247.3,373.99,271.53,0.3594,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,305.45,234.35,366.15,353.08,0.6445,Mixed Waste,0.8751
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,221.15,217.66,312.35,352.96,0.6016,Mixed Waste,0.9187
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,360.56,308.53,404.66,356.48,0.5898,Mixed Waste,0.8321
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,157.89,255.86,216.01,343.51,0.5156,Mixed Waste,0.9663
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,275.56,165.5,333.01,264.48,0.5156,Mixed Waste,0.8677
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,202.98,267.69,233.7,331.28,0.498,Mixed Waste,0.7997
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,114.46,273.13,152.47,335.88,0.3867,Other Waste,0.7099
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,214.1,234.85,255.85,300.15,0.3516,Recyclable Material,0.8967
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,308.24,162.53,332.17,207.54,0.3281,,0.2046
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,183.45,342.76,218.91,390.44,0.6719,Mixed Waste,0.9551
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,226.98,332.38,259.45,382.43,0.5664,Mixed Waste,0.865
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,255.69,356.19,280.21,385.35,0.5156,Mixed Waste,0.874
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,275.81,347.99,296.49,387.7,0.5039,Mixed Waste,0.7993
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,436.97,330.28,452.62,354.26,0.4551,Mixed Waste,0.815
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,210.44,357.19,232.63,386.25,0.4434,Mixed Waste,0.8344
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,411.37,327.7,429.44,355.65,0.3984,Mixed Waste,0.7449
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,542.42,310.92,557.78,340.08,0.3965,Mixed Waste,0.8848
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,411.09,318.54,439.55,355.37,0.3555,,0.4107
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,259.23,325.0,296.06,386.49,0.334,,0.4615
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,510.8,326.32,523.21,344.17,0.332,Mixed Waste,0.8185
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,260.94,324.85,291.67,359.51,0.3145,Other Waste,0.9393
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,531.6,319.46,551.43,345.38,0.3066,Mixed Waste,0.5204
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,333.21,81.51,359.04,127.62,0.3047,,0.0
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PHOTO-2025-01-04-12-12-39_jpg.rf.47f1932ae35574ff24543d26a44a2564.jpg,356.26,221.56,444.91,385.27,0.457,Mixed Waste,0.8095
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PHOTO-2025-01-04-12-12-46-1-_jpg.rf.cac4448d0e8e2b54b3389bce64c5559f.jpg,274.1,226.5,386.49,358.72,0.5547,Mixed Waste,0.9327
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_075753429_jpg.rf.d5d78153481b27eac134f9a46afb6a37.jpg,131.19,234.88,379.75,470.53,0.6836,Recyclable Material,0.9549
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_075933630-MP_jpg.rf.460c72f50522e906261ac2f783733f06.jpg,94.78,257.06,486.33,590.05,0.7891,Recyclable Material,0.9341
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_075933630-MP_jpg.rf.460c72f50522e906261ac2f783733f06.jpg,22.92,229.71,194.99,471.4,0.707,Recyclable Material,0.9093
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_075933630-MP_jpg.rf.460c72f50522e906261ac2f783733f06.jpg,53.33,184.49,181.9,284.52,0.668,Recyclable Material,0.9063
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_075947607_jpg.rf.ef0e57af799e19659d6a344b93611b1f.jpg,100.94,207.81,412.93,420.23,0.9492,Recyclable Material,0.9794
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_080053691_jpg.rf.08e12d2cae94660dfcd43c04079c13f9.jpg,165.12,108.4,408.45,380.91,0.9102,Recyclable Material,0.9726
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_080257060_jpg.rf.642388a5f678e685d32e3e3a244c0ad8.jpg,252.66,115.13,536.25,403.49,0.8789,Recyclable Material,0.9811
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_080257060_jpg.rf.642388a5f678e685d32e3e3a244c0ad8.jpg,0.0,435.18,228.18,639.88,0.8242,Recyclable Material,0.9454
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_080257060_jpg.rf.642388a5f678e685d32e3e3a244c0ad8.jpg,170.9,279.65,261.75,370.58,0.4395,,0.0382
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_080407713-MP_jpg.rf.7c47f0e15afa8dd909cbbb2938318d78.jpg,204.78,155.79,471.31,447.17,0.9766,Recyclable Material,0.9851
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,222.4,184.85,433.38,425.91,0.7852,Recyclable Material,0.9268
+SAM 3,sens-mdwd-organic-03,white bag containing organic household waste,Recycling_1_jpeg.rf.be115f7edd02e2132b07a3dfab9ee550.jpg,237.94,269.15,360.53,336.44,0.9531,Recyclable Material,0.9353

@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "Cosmos Reason2 8B",
+  "prompt_id": "mtsd-p12",
+  "prompt": "traffic sign",
+  "image_start": 80,
+  "image_end": 88,
+  "n_images": 8,
+  "n_prediction_rows": 15,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "Cosmos Reason2 8B",
+    "model_load_ms": 14635.5,
+    "ok": true,
+    "label": "Cosmos Reason2 8B",
+    "source": "nvidia/Cosmos-Reason2-8B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-21T12:58:44.932443+00:00",
+  "finished_at": "2026-08-21T12:59:32.114172+00:00"
+}

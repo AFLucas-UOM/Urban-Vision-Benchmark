@@ -1,0 +1,31 @@
+{
+  "protocol_hash": "60787d37184e3d7185c9ca8b0e8e3744505b5aba4729db032c07b755a54dfda1",
+  "dataset_manifest_hash": "94e139cfa52a4c4c5043d146b7ea996b0b0d8cf7439d09f029d8f61d5dcebace",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mtsd-p9",
+  "prompt": "street sign",
+  "target_classes": [
+    "Street Sign"
+  ],
+  "conf_threshold": 0.3,
+  "iou_threshold": 0.5,
+  "max_detections": 18,
+  "max_detections_policy": "test-set-max-gt-per-image",
+  "nms_iou_threshold": 0.5,
+  "split": "test",
+  "status": "completed",
+  "execution_strategy": "isolated-model-prompt-chunks-v1",
+  "image_start": 128,
+  "image_end": 192,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 13005.0,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "finished_at": "2026-08-19T01:41:39.551691+00:00"
+}

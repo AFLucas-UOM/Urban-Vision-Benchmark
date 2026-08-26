@@ -1,0 +1,371 @@
+model,prompt_id,gt_class,matched_count
+Cosmos Reason2 2B,sens-mdwd-mixed-01,Recyclable Material,57
+Cosmos Reason2 2B,sens-mdwd-mixed-01,Organic Waste,62
+Cosmos Reason2 2B,sens-mdwd-mixed-01,Mixed Waste,92
+Cosmos Reason2 2B,sens-mdwd-mixed-01,Other Waste,12
+Cosmos Reason2 2B,sens-mdwd-mixed-01,Orange CMD,20
+Cosmos Reason2 2B,sens-mdwd-mixed-02,Recyclable Material,57
+Cosmos Reason2 2B,sens-mdwd-mixed-02,Organic Waste,64
+Cosmos Reason2 2B,sens-mdwd-mixed-02,Mixed Waste,88
+Cosmos Reason2 2B,sens-mdwd-mixed-02,Other Waste,11
+Cosmos Reason2 2B,sens-mdwd-mixed-02,Orange CMD,18
+Cosmos Reason2 2B,sens-mdwd-mixed-03,Organic Waste,35
+Cosmos Reason2 2B,sens-mdwd-mixed-03,Recyclable Material,10
+Cosmos Reason2 2B,sens-mdwd-mixed-03,Other Waste,8
+Cosmos Reason2 2B,sens-mdwd-mixed-03,Orange CMD,9
+Cosmos Reason2 2B,sens-mdwd-mixed-03,Mixed Waste,43
+Cosmos Reason2 2B,sens-mdwd-mixed-04,Recyclable Material,121
+Cosmos Reason2 2B,sens-mdwd-mixed-04,Organic Waste,102
+Cosmos Reason2 2B,sens-mdwd-mixed-04,Mixed Waste,173
+Cosmos Reason2 2B,sens-mdwd-mixed-04,Other Waste,8
+Cosmos Reason2 2B,sens-mdwd-mixed-04,Orange CMD,35
+Cosmos Reason2 2B,sens-mdwd-orange-01,Recyclable Material,49
+Cosmos Reason2 2B,sens-mdwd-orange-01,Organic Waste,49
+Cosmos Reason2 2B,sens-mdwd-orange-01,Mixed Waste,74
+Cosmos Reason2 2B,sens-mdwd-orange-01,Other Waste,13
+Cosmos Reason2 2B,sens-mdwd-orange-01,Orange CMD,19
+Cosmos Reason2 2B,sens-mdwd-orange-02,Recyclable Material,42
+Cosmos Reason2 2B,sens-mdwd-orange-02,Organic Waste,48
+Cosmos Reason2 2B,sens-mdwd-orange-02,Mixed Waste,59
+Cosmos Reason2 2B,sens-mdwd-orange-02,Other Waste,17
+Cosmos Reason2 2B,sens-mdwd-orange-02,Orange CMD,18
+Cosmos Reason2 2B,sens-mdwd-orange-03,Organic Waste,30
+Cosmos Reason2 2B,sens-mdwd-orange-03,Mixed Waste,34
+Cosmos Reason2 2B,sens-mdwd-orange-03,Recyclable Material,17
+Cosmos Reason2 2B,sens-mdwd-orange-03,Other Waste,12
+Cosmos Reason2 2B,sens-mdwd-orange-03,Orange CMD,11
+Cosmos Reason2 2B,sens-mdwd-orange-04,Recyclable Material,81
+Cosmos Reason2 2B,sens-mdwd-orange-04,Organic Waste,68
+Cosmos Reason2 2B,sens-mdwd-orange-04,Mixed Waste,103
+Cosmos Reason2 2B,sens-mdwd-orange-04,Other Waste,17
+Cosmos Reason2 2B,sens-mdwd-orange-04,Orange CMD,36
+Cosmos Reason2 2B,sens-mdwd-organic-01,Mixed Waste,47
+Cosmos Reason2 2B,sens-mdwd-organic-01,Organic Waste,32
+Cosmos Reason2 2B,sens-mdwd-organic-01,Other Waste,11
+Cosmos Reason2 2B,sens-mdwd-organic-01,Recyclable Material,33
+Cosmos Reason2 2B,sens-mdwd-organic-01,Orange CMD,18
+Cosmos Reason2 2B,sens-mdwd-organic-02,Mixed Waste,47
+Cosmos Reason2 2B,sens-mdwd-organic-02,Organic Waste,31
+Cosmos Reason2 2B,sens-mdwd-organic-02,Other Waste,9
+Cosmos Reason2 2B,sens-mdwd-organic-02,Recyclable Material,22
+Cosmos Reason2 2B,sens-mdwd-organic-02,Orange CMD,18
+Cosmos Reason2 2B,sens-mdwd-organic-03,Mixed Waste,30
+Cosmos Reason2 2B,sens-mdwd-organic-03,Organic Waste,15
+Cosmos Reason2 2B,sens-mdwd-organic-03,Other Waste,6
+Cosmos Reason2 2B,sens-mdwd-organic-03,Recyclable Material,17
+Cosmos Reason2 2B,sens-mdwd-organic-03,Orange CMD,9
+Cosmos Reason2 2B,sens-mdwd-organic-04,Recyclable Material,138
+Cosmos Reason2 2B,sens-mdwd-organic-04,Organic Waste,109
+Cosmos Reason2 2B,sens-mdwd-organic-04,Mixed Waste,143
+Cosmos Reason2 2B,sens-mdwd-organic-04,Other Waste,10
+Cosmos Reason2 2B,sens-mdwd-organic-04,Orange CMD,35
+Cosmos Reason2 2B,sens-mdwd-recycling-01,Organic Waste,39
+Cosmos Reason2 2B,sens-mdwd-recycling-01,Recyclable Material,43
+Cosmos Reason2 2B,sens-mdwd-recycling-01,Other Waste,8
+Cosmos Reason2 2B,sens-mdwd-recycling-01,Mixed Waste,56
+Cosmos Reason2 2B,sens-mdwd-recycling-01,Orange CMD,24
+Cosmos Reason2 2B,sens-mdwd-recycling-02,Organic Waste,41
+Cosmos Reason2 2B,sens-mdwd-recycling-02,Recyclable Material,41
+Cosmos Reason2 2B,sens-mdwd-recycling-02,Other Waste,10
+Cosmos Reason2 2B,sens-mdwd-recycling-02,Mixed Waste,44
+Cosmos Reason2 2B,sens-mdwd-recycling-02,Orange CMD,24
+Cosmos Reason2 2B,sens-mdwd-recycling-03,Organic Waste,26
+Cosmos Reason2 2B,sens-mdwd-recycling-03,Other Waste,5
+Cosmos Reason2 2B,sens-mdwd-recycling-03,Mixed Waste,30
+Cosmos Reason2 2B,sens-mdwd-recycling-03,Recyclable Material,13
+Cosmos Reason2 2B,sens-mdwd-recycling-03,Orange CMD,13
+Cosmos Reason2 2B,sens-mdwd-recycling-04,Recyclable Material,147
+Cosmos Reason2 2B,sens-mdwd-recycling-04,Organic Waste,112
+Cosmos Reason2 2B,sens-mdwd-recycling-04,Mixed Waste,172
+Cosmos Reason2 2B,sens-mdwd-recycling-04,Other Waste,14
+Cosmos Reason2 2B,sens-mdwd-recycling-04,Orange CMD,38
+Cosmos Reason2 8B,sens-mdwd-mixed-01,Recyclable Material,74
+Cosmos Reason2 8B,sens-mdwd-mixed-01,Organic Waste,89
+Cosmos Reason2 8B,sens-mdwd-mixed-01,Mixed Waste,212
+Cosmos Reason2 8B,sens-mdwd-mixed-01,Other Waste,7
+Cosmos Reason2 8B,sens-mdwd-mixed-01,Orange CMD,26
+Cosmos Reason2 8B,sens-mdwd-mixed-02,Recyclable Material,78
+Cosmos Reason2 8B,sens-mdwd-mixed-02,Organic Waste,86
+Cosmos Reason2 8B,sens-mdwd-mixed-02,Mixed Waste,209
+Cosmos Reason2 8B,sens-mdwd-mixed-02,Other Waste,10
+Cosmos Reason2 8B,sens-mdwd-mixed-02,Orange CMD,31
+Cosmos Reason2 8B,sens-mdwd-mixed-03,Recyclable Material,87
+Cosmos Reason2 8B,sens-mdwd-mixed-03,Organic Waste,95
+Cosmos Reason2 8B,sens-mdwd-mixed-03,Mixed Waste,213
+Cosmos Reason2 8B,sens-mdwd-mixed-03,Other Waste,10
+Cosmos Reason2 8B,sens-mdwd-mixed-03,Orange CMD,39
+Cosmos Reason2 8B,sens-mdwd-mixed-04,Recyclable Material,95
+Cosmos Reason2 8B,sens-mdwd-mixed-04,Organic Waste,95
+Cosmos Reason2 8B,sens-mdwd-mixed-04,Mixed Waste,172
+Cosmos Reason2 8B,sens-mdwd-mixed-04,Other Waste,8
+Cosmos Reason2 8B,sens-mdwd-mixed-04,Orange CMD,31
+Cosmos Reason2 8B,sens-mdwd-orange-01,Recyclable Material,79
+Cosmos Reason2 8B,sens-mdwd-orange-01,Organic Waste,91
+Cosmos Reason2 8B,sens-mdwd-orange-01,Mixed Waste,80
+Cosmos Reason2 8B,sens-mdwd-orange-01,Other Waste,18
+Cosmos Reason2 8B,sens-mdwd-orange-01,Orange CMD,42
+Cosmos Reason2 8B,sens-mdwd-orange-02,Recyclable Material,76
+Cosmos Reason2 8B,sens-mdwd-orange-02,Organic Waste,90
+Cosmos Reason2 8B,sens-mdwd-orange-02,Mixed Waste,79
+Cosmos Reason2 8B,sens-mdwd-orange-02,Other Waste,19
+Cosmos Reason2 8B,sens-mdwd-orange-02,Orange CMD,42
+Cosmos Reason2 8B,sens-mdwd-orange-03,Recyclable Material,88
+Cosmos Reason2 8B,sens-mdwd-orange-03,Organic Waste,94
+Cosmos Reason2 8B,sens-mdwd-orange-03,Mixed Waste,97
+Cosmos Reason2 8B,sens-mdwd-orange-03,Other Waste,18
+Cosmos Reason2 8B,sens-mdwd-orange-03,Orange CMD,42
+Cosmos Reason2 8B,sens-mdwd-orange-04,Recyclable Material,47
+Cosmos Reason2 8B,sens-mdwd-orange-04,Organic Waste,67
+Cosmos Reason2 8B,sens-mdwd-orange-04,Mixed Waste,57
+Cosmos Reason2 8B,sens-mdwd-orange-04,Other Waste,7
+Cosmos Reason2 8B,sens-mdwd-orange-04,Orange CMD,43
+Cosmos Reason2 8B,sens-mdwd-organic-01,Recyclable Material,107
+Cosmos Reason2 8B,sens-mdwd-organic-01,Organic Waste,128
+Cosmos Reason2 8B,sens-mdwd-organic-01,Mixed Waste,104
+Cosmos Reason2 8B,sens-mdwd-organic-01,Other Waste,22
+Cosmos Reason2 8B,sens-mdwd-organic-01,Orange CMD,35
+Cosmos Reason2 8B,sens-mdwd-organic-02,Recyclable Material,121
+Cosmos Reason2 8B,sens-mdwd-organic-02,Organic Waste,128
+Cosmos Reason2 8B,sens-mdwd-organic-02,Mixed Waste,106
+Cosmos Reason2 8B,sens-mdwd-organic-02,Other Waste,20
+Cosmos Reason2 8B,sens-mdwd-organic-02,Orange CMD,32
+Cosmos Reason2 8B,sens-mdwd-organic-03,Recyclable Material,124
+Cosmos Reason2 8B,sens-mdwd-organic-03,Organic Waste,127
+Cosmos Reason2 8B,sens-mdwd-organic-03,Mixed Waste,115
+Cosmos Reason2 8B,sens-mdwd-organic-03,Other Waste,15
+Cosmos Reason2 8B,sens-mdwd-organic-03,Orange CMD,39
+Cosmos Reason2 8B,sens-mdwd-organic-04,Recyclable Material,144
+Cosmos Reason2 8B,sens-mdwd-organic-04,Organic Waste,109
+Cosmos Reason2 8B,sens-mdwd-organic-04,Mixed Waste,87
+Cosmos Reason2 8B,sens-mdwd-organic-04,Other Waste,17
+Cosmos Reason2 8B,sens-mdwd-organic-04,Orange CMD,36
+Cosmos Reason2 8B,sens-mdwd-recycling-01,Recyclable Material,125
+Cosmos Reason2 8B,sens-mdwd-recycling-01,Organic Waste,111
+Cosmos Reason2 8B,sens-mdwd-recycling-01,Mixed Waste,151
+Cosmos Reason2 8B,sens-mdwd-recycling-01,Other Waste,12
+Cosmos Reason2 8B,sens-mdwd-recycling-01,Orange CMD,35
+Cosmos Reason2 8B,sens-mdwd-recycling-02,Recyclable Material,133
+Cosmos Reason2 8B,sens-mdwd-recycling-02,Organic Waste,118
+Cosmos Reason2 8B,sens-mdwd-recycling-02,Mixed Waste,174
+Cosmos Reason2 8B,sens-mdwd-recycling-02,Other Waste,9
+Cosmos Reason2 8B,sens-mdwd-recycling-02,Orange CMD,36
+Cosmos Reason2 8B,sens-mdwd-recycling-03,Recyclable Material,136
+Cosmos Reason2 8B,sens-mdwd-recycling-03,Organic Waste,111
+Cosmos Reason2 8B,sens-mdwd-recycling-03,Mixed Waste,168
+Cosmos Reason2 8B,sens-mdwd-recycling-03,Other Waste,9
+Cosmos Reason2 8B,sens-mdwd-recycling-03,Orange CMD,36
+Cosmos Reason2 8B,sens-mdwd-recycling-04,Recyclable Material,156
+Cosmos Reason2 8B,sens-mdwd-recycling-04,Organic Waste,119
+Cosmos Reason2 8B,sens-mdwd-recycling-04,Mixed Waste,174
+Cosmos Reason2 8B,sens-mdwd-recycling-04,Other Waste,13
+Cosmos Reason2 8B,sens-mdwd-recycling-04,Orange CMD,36
+LocateAnything 3B,sens-mdwd-mixed-01,Mixed Waste,244
+LocateAnything 3B,sens-mdwd-mixed-01,Organic Waste,15
+LocateAnything 3B,sens-mdwd-mixed-01,Recyclable Material,37
+LocateAnything 3B,sens-mdwd-mixed-01,Other Waste,17
+LocateAnything 3B,sens-mdwd-mixed-01,Orange CMD,1
+LocateAnything 3B,sens-mdwd-mixed-02,Mixed Waste,231
+LocateAnything 3B,sens-mdwd-mixed-02,Organic Waste,18
+LocateAnything 3B,sens-mdwd-mixed-02,Recyclable Material,50
+LocateAnything 3B,sens-mdwd-mixed-02,Other Waste,19
+LocateAnything 3B,sens-mdwd-mixed-02,Orange CMD,8
+LocateAnything 3B,sens-mdwd-mixed-03,Recyclable Material,137
+LocateAnything 3B,sens-mdwd-mixed-03,Organic Waste,79
+LocateAnything 3B,sens-mdwd-mixed-03,Mixed Waste,238
+LocateAnything 3B,sens-mdwd-mixed-03,Other Waste,37
+LocateAnything 3B,sens-mdwd-mixed-03,Orange CMD,23
+LocateAnything 3B,sens-mdwd-mixed-04,Recyclable Material,117
+LocateAnything 3B,sens-mdwd-mixed-04,Organic Waste,62
+LocateAnything 3B,sens-mdwd-mixed-04,Mixed Waste,277
+LocateAnything 3B,sens-mdwd-mixed-04,Other Waste,23
+LocateAnything 3B,sens-mdwd-mixed-04,Orange CMD,15
+LocateAnything 3B,sens-mdwd-orange-01,Organic Waste,53
+LocateAnything 3B,sens-mdwd-orange-01,Mixed Waste,41
+LocateAnything 3B,sens-mdwd-orange-01,Other Waste,21
+LocateAnything 3B,sens-mdwd-orange-01,Recyclable Material,33
+LocateAnything 3B,sens-mdwd-orange-01,Orange CMD,57
+LocateAnything 3B,sens-mdwd-orange-02,Organic Waste,47
+LocateAnything 3B,sens-mdwd-orange-02,Mixed Waste,35
+LocateAnything 3B,sens-mdwd-orange-02,Other Waste,21
+LocateAnything 3B,sens-mdwd-orange-02,Recyclable Material,22
+LocateAnything 3B,sens-mdwd-orange-02,Orange CMD,58
+LocateAnything 3B,sens-mdwd-orange-03,Organic Waste,76
+LocateAnything 3B,sens-mdwd-orange-03,Mixed Waste,53
+LocateAnything 3B,sens-mdwd-orange-03,Recyclable Material,59
+LocateAnything 3B,sens-mdwd-orange-03,Other Waste,27
+LocateAnything 3B,sens-mdwd-orange-03,Orange CMD,52
+LocateAnything 3B,sens-mdwd-orange-04,Organic Waste,37
+LocateAnything 3B,sens-mdwd-orange-04,Mixed Waste,25
+LocateAnything 3B,sens-mdwd-orange-04,Other Waste,12
+LocateAnything 3B,sens-mdwd-orange-04,Orange CMD,48
+LocateAnything 3B,sens-mdwd-orange-04,Recyclable Material,11
+LocateAnything 3B,sens-mdwd-organic-01,Recyclable Material,182
+LocateAnything 3B,sens-mdwd-organic-01,Organic Waste,152
+LocateAnything 3B,sens-mdwd-organic-01,Mixed Waste,111
+LocateAnything 3B,sens-mdwd-organic-01,Other Waste,54
+LocateAnything 3B,sens-mdwd-organic-01,Orange CMD,22
+LocateAnything 3B,sens-mdwd-organic-02,Recyclable Material,187
+LocateAnything 3B,sens-mdwd-organic-02,Organic Waste,141
+LocateAnything 3B,sens-mdwd-organic-02,Mixed Waste,100
+LocateAnything 3B,sens-mdwd-organic-02,Other Waste,50
+LocateAnything 3B,sens-mdwd-organic-02,Orange CMD,29
+LocateAnything 3B,sens-mdwd-organic-03,Recyclable Material,180
+LocateAnything 3B,sens-mdwd-organic-03,Organic Waste,153
+LocateAnything 3B,sens-mdwd-organic-03,Mixed Waste,115
+LocateAnything 3B,sens-mdwd-organic-03,Other Waste,58
+LocateAnything 3B,sens-mdwd-organic-03,Orange CMD,33
+LocateAnything 3B,sens-mdwd-organic-04,Recyclable Material,192
+LocateAnything 3B,sens-mdwd-organic-04,Organic Waste,156
+LocateAnything 3B,sens-mdwd-organic-04,Mixed Waste,100
+LocateAnything 3B,sens-mdwd-organic-04,Other Waste,56
+LocateAnything 3B,sens-mdwd-organic-04,Orange CMD,29
+LocateAnything 3B,sens-mdwd-recycling-01,Recyclable Material,190
+LocateAnything 3B,sens-mdwd-recycling-01,Organic Waste,156
+LocateAnything 3B,sens-mdwd-recycling-01,Mixed Waste,239
+LocateAnything 3B,sens-mdwd-recycling-01,Other Waste,54
+LocateAnything 3B,sens-mdwd-recycling-01,Orange CMD,31
+LocateAnything 3B,sens-mdwd-recycling-02,Recyclable Material,190
+LocateAnything 3B,sens-mdwd-recycling-02,Organic Waste,153
+LocateAnything 3B,sens-mdwd-recycling-02,Mixed Waste,248
+LocateAnything 3B,sens-mdwd-recycling-02,Other Waste,58
+LocateAnything 3B,sens-mdwd-recycling-02,Orange CMD,39
+LocateAnything 3B,sens-mdwd-recycling-03,Recyclable Material,191
+LocateAnything 3B,sens-mdwd-recycling-03,Organic Waste,153
+LocateAnything 3B,sens-mdwd-recycling-03,Mixed Waste,239
+LocateAnything 3B,sens-mdwd-recycling-03,Other Waste,46
+LocateAnything 3B,sens-mdwd-recycling-03,Orange CMD,43
+LocateAnything 3B,sens-mdwd-recycling-04,Recyclable Material,204
+LocateAnything 3B,sens-mdwd-recycling-04,Organic Waste,149
+LocateAnything 3B,sens-mdwd-recycling-04,Mixed Waste,271
+LocateAnything 3B,sens-mdwd-recycling-04,Other Waste,44
+LocateAnything 3B,sens-mdwd-recycling-04,Orange CMD,30
+SAM 3.1,sens-mdwd-mixed-01,Mixed Waste,310
+SAM 3.1,sens-mdwd-mixed-01,Other Waste,5
+SAM 3.1,sens-mdwd-mixed-01,Recyclable Material,7
+SAM 3.1,sens-mdwd-mixed-02,Mixed Waste,308
+SAM 3.1,sens-mdwd-mixed-02,Orange CMD,1
+SAM 3.1,sens-mdwd-mixed-02,Other Waste,4
+SAM 3.1,sens-mdwd-mixed-02,Recyclable Material,7
+SAM 3.1,sens-mdwd-mixed-03,Recyclable Material,154
+SAM 3.1,sens-mdwd-mixed-03,Mixed Waste,309
+SAM 3.1,sens-mdwd-mixed-03,Organic Waste,36
+SAM 3.1,sens-mdwd-mixed-03,Other Waste,15
+SAM 3.1,sens-mdwd-mixed-03,Orange CMD,8
+SAM 3.1,sens-mdwd-mixed-04,Mixed Waste,229
+SAM 3.1,sens-mdwd-mixed-04,Recyclable Material,21
+SAM 3.1,sens-mdwd-mixed-04,Other Waste,7
+SAM 3.1,sens-mdwd-mixed-04,Orange CMD,1
+SAM 3.1,sens-mdwd-mixed-04,Organic Waste,1
+SAM 3.1,sens-mdwd-orange-01,Mixed Waste,1
+SAM 3.1,sens-mdwd-orange-01,Orange CMD,64
+SAM 3.1,sens-mdwd-orange-01,Other Waste,1
+SAM 3.1,sens-mdwd-orange-01,Recyclable Material,1
+SAM 3.1,sens-mdwd-orange-02,Organic Waste,2
+SAM 3.1,sens-mdwd-orange-02,Mixed Waste,1
+SAM 3.1,sens-mdwd-orange-02,Orange CMD,41
+SAM 3.1,sens-mdwd-orange-02,Other Waste,2
+SAM 3.1,sens-mdwd-orange-02,Recyclable Material,1
+SAM 3.1,sens-mdwd-orange-03,Organic Waste,17
+SAM 3.1,sens-mdwd-orange-03,Other Waste,7
+SAM 3.1,sens-mdwd-orange-03,Mixed Waste,3
+SAM 3.1,sens-mdwd-orange-03,Orange CMD,64
+SAM 3.1,sens-mdwd-orange-03,Recyclable Material,1
+SAM 3.1,sens-mdwd-orange-04,Orange CMD,15
+SAM 3.1,sens-mdwd-organic-01,Recyclable Material,177
+SAM 3.1,sens-mdwd-organic-01,Organic Waste,140
+SAM 3.1,sens-mdwd-organic-01,Mixed Waste,14
+SAM 3.1,sens-mdwd-organic-01,Other Waste,19
+SAM 3.1,sens-mdwd-organic-01,Orange CMD,9
+SAM 3.1,sens-mdwd-organic-02,Recyclable Material,124
+SAM 3.1,sens-mdwd-organic-02,Organic Waste,119
+SAM 3.1,sens-mdwd-organic-02,Other Waste,11
+SAM 3.1,sens-mdwd-organic-02,Orange CMD,1
+SAM 3.1,sens-mdwd-organic-02,Mixed Waste,1
+SAM 3.1,sens-mdwd-organic-03,Recyclable Material,223
+SAM 3.1,sens-mdwd-organic-03,Organic Waste,165
+SAM 3.1,sens-mdwd-organic-03,Mixed Waste,62
+SAM 3.1,sens-mdwd-organic-03,Other Waste,30
+SAM 3.1,sens-mdwd-organic-03,Orange CMD,14
+SAM 3.1,sens-mdwd-organic-04,Recyclable Material,56
+SAM 3.1,sens-mdwd-organic-04,Organic Waste,72
+SAM 3.1,sens-mdwd-organic-04,Other Waste,11
+SAM 3.1,sens-mdwd-organic-04,Orange CMD,2
+SAM 3.1,sens-mdwd-recycling-01,Mixed Waste,14
+SAM 3.1,sens-mdwd-recycling-01,Recyclable Material,12
+SAM 3.1,sens-mdwd-recycling-01,Other Waste,4
+SAM 3.1,sens-mdwd-recycling-02,Recyclable Material,154
+SAM 3.1,sens-mdwd-recycling-02,Organic Waste,19
+SAM 3.1,sens-mdwd-recycling-02,Mixed Waste,288
+SAM 3.1,sens-mdwd-recycling-02,Other Waste,13
+SAM 3.1,sens-mdwd-recycling-02,Orange CMD,1
+SAM 3.1,sens-mdwd-recycling-03,Recyclable Material,137
+SAM 3.1,sens-mdwd-recycling-03,Organic Waste,16
+SAM 3.1,sens-mdwd-recycling-03,Mixed Waste,228
+SAM 3.1,sens-mdwd-recycling-03,Orange CMD,2
+SAM 3.1,sens-mdwd-recycling-03,Other Waste,10
+SAM 3.1,sens-mdwd-recycling-04,Recyclable Material,2
+SAM 3.1,sens-mdwd-recycling-04,Other Waste,4
+SAM 3,sens-mdwd-mixed-01,Mixed Waste,310
+SAM 3,sens-mdwd-mixed-01,Other Waste,5
+SAM 3,sens-mdwd-mixed-01,Orange CMD,1
+SAM 3,sens-mdwd-mixed-01,Recyclable Material,6
+SAM 3,sens-mdwd-mixed-02,Mixed Waste,309
+SAM 3,sens-mdwd-mixed-02,Orange CMD,1
+SAM 3,sens-mdwd-mixed-02,Other Waste,4
+SAM 3,sens-mdwd-mixed-02,Recyclable Material,7
+SAM 3,sens-mdwd-mixed-03,Recyclable Material,140
+SAM 3,sens-mdwd-mixed-03,Mixed Waste,309
+SAM 3,sens-mdwd-mixed-03,Other Waste,13
+SAM 3,sens-mdwd-mixed-03,Orange CMD,4
+SAM 3,sens-mdwd-mixed-03,Organic Waste,22
+SAM 3,sens-mdwd-mixed-04,Mixed Waste,202
+SAM 3,sens-mdwd-mixed-04,Recyclable Material,15
+SAM 3,sens-mdwd-mixed-04,Other Waste,5
+SAM 3,sens-mdwd-mixed-04,Orange CMD,1
+SAM 3,sens-mdwd-orange-01,Mixed Waste,1
+SAM 3,sens-mdwd-orange-01,Orange CMD,64
+SAM 3,sens-mdwd-orange-01,Other Waste,1
+SAM 3,sens-mdwd-orange-01,Recyclable Material,1
+SAM 3,sens-mdwd-orange-02,Organic Waste,2
+SAM 3,sens-mdwd-orange-02,Mixed Waste,1
+SAM 3,sens-mdwd-orange-02,Orange CMD,37
+SAM 3,sens-mdwd-orange-02,Other Waste,1
+SAM 3,sens-mdwd-orange-02,Recyclable Material,1
+SAM 3,sens-mdwd-orange-03,Organic Waste,15
+SAM 3,sens-mdwd-orange-03,Mixed Waste,2
+SAM 3,sens-mdwd-orange-03,Orange CMD,62
+SAM 3,sens-mdwd-orange-03,Other Waste,5
+SAM 3,sens-mdwd-orange-03,Recyclable Material,1
+SAM 3,sens-mdwd-orange-04,Orange CMD,15
+SAM 3,sens-mdwd-organic-01,Recyclable Material,158
+SAM 3,sens-mdwd-organic-01,Organic Waste,137
+SAM 3,sens-mdwd-organic-01,Mixed Waste,6
+SAM 3,sens-mdwd-organic-01,Other Waste,14
+SAM 3,sens-mdwd-organic-01,Orange CMD,8
+SAM 3,sens-mdwd-organic-02,Recyclable Material,99
+SAM 3,sens-mdwd-organic-02,Organic Waste,107
+SAM 3,sens-mdwd-organic-02,Other Waste,10
+SAM 3,sens-mdwd-organic-02,Orange CMD,1
+SAM 3,sens-mdwd-organic-03,Recyclable Material,223
+SAM 3,sens-mdwd-organic-03,Organic Waste,163
+SAM 3,sens-mdwd-organic-03,Mixed Waste,57
+SAM 3,sens-mdwd-organic-03,Other Waste,29
+SAM 3,sens-mdwd-organic-03,Orange CMD,12
+SAM 3,sens-mdwd-organic-04,Recyclable Material,46
+SAM 3,sens-mdwd-organic-04,Organic Waste,67
+SAM 3,sens-mdwd-organic-04,Other Waste,9
+SAM 3,sens-mdwd-organic-04,Orange CMD,1
+SAM 3,sens-mdwd-recycling-01,Mixed Waste,11
+SAM 3,sens-mdwd-recycling-01,Recyclable Material,8
+SAM 3,sens-mdwd-recycling-01,Other Waste,4
+SAM 3,sens-mdwd-recycling-02,Recyclable Material,150
+SAM 3,sens-mdwd-recycling-02,Organic Waste,16
+SAM 3,sens-mdwd-recycling-02,Mixed Waste,281
+SAM 3,sens-mdwd-recycling-02,Other Waste,13
+SAM 3,sens-mdwd-recycling-02,Orange CMD,1
+SAM 3,sens-mdwd-recycling-03,Recyclable Material,113
+SAM 3,sens-mdwd-recycling-03,Organic Waste,9
+SAM 3,sens-mdwd-recycling-03,Mixed Waste,201
+SAM 3,sens-mdwd-recycling-03,Orange CMD,2
+SAM 3,sens-mdwd-recycling-03,Other Waste,8
+SAM 3,sens-mdwd-recycling-04,Other Waste,4

@@ -1,0 +1,189 @@
+protocol_version: dissertation-v2
+defaults:
+  conf_threshold: 0.3
+  iou_threshold: 0.5
+  max_detections_policy: test-set-max-gt-per-image
+  nms_iou_threshold: 0.5
+  vlm_worker_chunk_size: 64
+  visualizations_per_combination: 10
+models:
+  primary:
+  - sam3
+  - sam3.1
+  - locateanything
+  - cosmos2b
+  - cosmos8b
+  optional_heavy:
+  - cosmos32b
+datasets:
+  MDWD:
+    source:
+      type: yolo
+      path: Datasets/MDWD/MDWD-YOLO26
+      split: test
+    class_vocabulary:
+    - Mixed Waste
+    - Orange CMD
+    - Organic Waste
+    - Other Waste
+    - Recyclable Material
+    prompts:
+    - id: mdwd-p1
+      prompt: black garbage bag
+      group: class-targeted
+      target_classes:
+      - Mixed Waste
+    - id: mdwd-p2
+      prompt: grey recycling bag
+      group: class-targeted
+      target_classes:
+      - Recyclable Material
+    - id: mdwd-p3
+      prompt: white organic-waste bag
+      group: class-targeted
+      target_classes:
+      - Organic Waste
+    - id: mdwd-p4
+      prompt: orange garbage bag
+      group: class-targeted
+      target_classes:
+      - Orange CMD
+    - id: mdwd-p5
+      prompt: domestic waste
+      group: broad
+      target_classes:
+      - Mixed Waste
+      - Recyclable Material
+      - Organic Waste
+      - Orange CMD
+      - Other Waste
+    - id: mdwd-p6
+      prompt: garbage
+      group: broad
+      target_classes:
+      - Mixed Waste
+      - Recyclable Material
+      - Organic Waste
+      - Orange CMD
+      - Other Waste
+  MTSD:
+    source:
+      type: prepared
+      path: Datasets/MTSD/Prepared/MTSD-Unaugmented/MTSD-YOLO
+      split: test
+      require_manifest: true
+      required_group_scope: explicit
+      approved_groups:
+      - GRP-1
+      - GRP-2
+      - GRP-3
+      - GRP-4
+      - GRP-5
+      - GRP-6
+      - GRP-7
+      - GRP-8
+      - GRP-9
+      - GRP-10
+      - GRP-11
+      required_annotation_source_mode: qa_only
+    class_vocabulary:
+    - Pedestrian Crossing
+    - Stop Sign
+    - No Entry (One Way)
+    - Roundabout Ahead
+    - No Through Road (T-Junction)
+    - Blind-Spot Mirror (Convex Mirror)
+    - Street Sign
+    - Directional Sign
+    - Tourist Sign
+    - Auxiliary Sign
+    - Back-Unknown
+    - Other-Unknown
+    prompts:
+    - id: mtsd-p1
+      prompt: pedestrian crossing sign
+      group: class-targeted
+      target_classes:
+      - Pedestrian Crossing
+    - id: mtsd-p2
+      prompt: stop sign
+      group: class-targeted
+      target_classes:
+      - Stop Sign
+    - id: mtsd-p3
+      prompt: no entry sign
+      group: synonym-comparison
+      target_classes:
+      - No Entry (One Way)
+    - id: mtsd-p4
+      prompt: one way sign
+      group: synonym-comparison
+      target_classes:
+      - No Entry (One Way)
+    - id: mtsd-p5
+      prompt: roundabout ahead sign
+      group: class-targeted
+      target_classes:
+      - Roundabout Ahead
+    - id: mtsd-p6
+      prompt: no through road sign
+      group: synonym-comparison
+      target_classes:
+      - No Through Road (T-Junction)
+    - id: mtsd-p7
+      prompt: T-junction sign
+      group: synonym-comparison
+      target_classes:
+      - No Through Road (T-Junction)
+    - id: mtsd-p8
+      prompt: blind-spot convex mirror
+      group: class-targeted
+      target_classes:
+      - Blind-Spot Mirror (Convex Mirror)
+    - id: mtsd-p9
+      prompt: street sign
+      group: class-targeted
+      target_classes:
+      - Street Sign
+    - id: mtsd-p10
+      prompt: directional sign
+      group: class-targeted
+      target_classes:
+      - Directional Sign
+    - id: mtsd-p11
+      prompt: back of a traffic sign
+      group: class-targeted
+      target_classes:
+      - Back-Unknown
+    - id: mtsd-p12
+      prompt: traffic sign
+      group: broad
+      target_classes:
+      - Back-Unknown
+      - No Entry (One Way)
+      - Other-Unknown
+      - Stop Sign
+      - Auxiliary Sign
+      - Pedestrian Crossing
+      - Directional Sign
+      - Street Sign
+      - Roundabout Ahead
+      - No Through Road (T-Junction)
+      - Tourist Sign
+    - id: mtsd-p13
+      prompt: roadside traffic-control object
+      group: broad
+      target_classes:
+      - Pedestrian Crossing
+      - Stop Sign
+      - No Entry (One Way)
+      - Roundabout Ahead
+      - No Through Road (T-Junction)
+      - Blind-Spot Mirror (Convex Mirror)
+      - Street Sign
+      - Directional Sign
+      - Tourist Sign
+      - Auxiliary Sign
+      - Back-Unknown
+      - Other-Unknown
+protocol_hash: 60787d37184e3d7185c9ca8b0e8e3744505b5aba4729db032c07b755a54dfda1

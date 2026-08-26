@@ -1,0 +1,13 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,mdwd-p4,orange garbage bag,472129425_1345249006899593_1932127883326922457_n_jpg.rf.03069b893f513bced6e53fce77c8d53c.jpg,191.19,151.42,346.75,368.05,0.3906,Mixed Waste,0.9689
+SAM 3,mdwd-p4,orange garbage bag,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,0.0,326.65,35.86,366.88,0.4551,,0.0
+SAM 3,mdwd-p4,orange garbage bag,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,145.47,382.51,171.75,451.86,0.4219,,0.0
+SAM 3,mdwd-p4,orange garbage bag,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,6.75,510.6,54.57,557.53,0.3535,,0.0
+SAM 3,mdwd-p4,orange garbage bag,AFL_NewBatch3_53_jpeg.rf.9e5bf2183fc4b923c9ee1501592a41f9.jpg,356.0,0.0,476.19,18.78,0.8398,,0.0
+SAM 3,mdwd-p4,orange garbage bag,CMD-Batch1_154_jpeg.rf.19166d7805818a35c045253065a12b6d.jpg,355.32,390.28,392.25,424.98,0.3086,,0.0
+SAM 3,mdwd-p4,orange garbage bag,CMD-Batch1_43_jpeg.rf.7ad2150ca57fd7d4f9339f170104fbd5.jpg,362.6,171.88,439.05,220.31,0.7734,,0.2015
+SAM 3,mdwd-p4,orange garbage bag,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,266.49,281.56,305.38,303.32,0.5898,,0.0
+SAM 3,mdwd-p4,orange garbage bag,CMD-Batch1_83_jpeg.rf.8c468ace19ef290a465a9eb0be96db61.jpg,620.59,132.86,636.2,151.31,0.5117,,0.0
+SAM 3,mdwd-p4,orange garbage bag,CMD-Batch1_88_jpeg.rf.bf5aa164958d0cd2482ce7224ebf29c6.jpg,411.65,563.36,495.99,639.35,0.4941,,0.0
+SAM 3,mdwd-p4,orange garbage bag,IMG_3108_jpeg.rf.f0273d0fa4ade4f4e81d527d9cc1f2db.jpg,171.14,348.27,235.82,379.55,0.3594,Other Waste,0.8881
+SAM 3,mdwd-p4,orange garbage bag,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,29.9,190.13,322.72,415.96,0.3574,Recyclable Material,0.9784

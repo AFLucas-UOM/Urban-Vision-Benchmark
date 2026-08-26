@@ -1,0 +1,68 @@
+flowchart TB
+
+    SLI["Street-Level Imagery"]
+
+    SLI --> MDWD["MDWD"]
+    SLI --> MTSD["MTSD"]
+
+    %% =========================================================
+    %% MDWD
+    %% =========================================================
+    MDWD --> MDWD_GT["Detection<br/>Ground Truth"]
+
+    MDWD_GT --> MDWD_SUP["Supervised<br/>Detection"]
+    MDWD_GT --> MDWD_ZERO["Zero-Shot<br/>Localisation"]
+
+    %% =========================================================
+    %% MTSD
+    %% =========================================================
+    MTSD --> MTSD_GT["Detection + Attribute<br/>Ground Truth"]
+
+    MTSD_GT --> MTSD_SUP["Supervised<br/>Detection"]
+    MTSD_GT --> MTSD_ZERO["Zero-Shot<br/>Localisation"]
+    MTSD_GT --> CROPS["Ground-Truth<br/>Object Crops"]
+
+    CROPS --> ATTR["Attribute<br/>Classification"]
+
+    %% =========================================================
+    %% EVALUATION
+    %% =========================================================
+    MDWD_SUP --> LOC["Common Localisation<br/>Evaluation"]
+    MDWD_ZERO --> LOC
+    MTSD_SUP --> LOC
+    MTSD_ZERO --> LOC
+
+    ATTR --> ATTR_EVAL["Attribute Classification<br/>Evaluation"]
+
+    %% =========================================================
+    %% NODE STYLING
+    %% =========================================================
+    classDef source fill:#37474F,stroke:#263238,stroke-width:2px,color:#FFFFFF;
+    
+    classDef dataset fill:#1565C0,stroke:#0D47A1,stroke-width:2px,color:#FFFFFF;
+    
+    classDef gt fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#0D47A1;
+    
+    classDef supervised fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    
+    classDef zeroshot fill:#FFF3E0,stroke:#EF6C00,stroke-width:2px,color:#E65100;
+    
+    classDef attribute fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C;
+    
+    classDef evaluation fill:#FFFDE7,stroke:#F9A825,stroke-width:2px,color:#5D4037;
+
+    %% =========================================================
+    %% APPLY NODE STYLES
+    %% =========================================================
+    class SLI source;
+    class MDWD,MTSD dataset;
+    class MDWD_GT,MTSD_GT gt;
+    class MDWD_SUP,MTSD_SUP supervised;
+    class MDWD_ZERO,MTSD_ZERO zeroshot;
+    class CROPS,ATTR,ATTR_EVAL attribute;
+    class LOC evaluation;
+
+    %% =========================================================
+    %% EDGE / ARROW STYLING
+    %% =========================================================
+    linkStyle default stroke:#000000,stroke-width:2px;

@@ -1,0 +1,61 @@
+model,target_class,best_prompt_id,best_prompt,recall,f1
+Cosmos Reason2 2B,Auxiliary Sign,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,Back-Unknown,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,Blind-Spot Mirror (Convex Mirror),mtsd-p8,blind-spot convex mirror,0.6562,0.2491
+Cosmos Reason2 2B,Directional Sign,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,No Entry (One Way),mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,No Through Road (T-Junction),mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,Other-Unknown,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,Pedestrian Crossing,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,Roundabout Ahead,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,Stop Sign,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,Street Sign,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 2B,Tourist Sign,mtsd-p12,traffic sign,0.2943,0.4023
+Cosmos Reason2 8B,Auxiliary Sign,mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,Back-Unknown,mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,Blind-Spot Mirror (Convex Mirror),mtsd-p8,blind-spot convex mirror,0.7188,0.3083
+Cosmos Reason2 8B,Directional Sign,mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,No Entry (One Way),mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,No Through Road (T-Junction),mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,Other-Unknown,mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,Pedestrian Crossing,mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,Roundabout Ahead,mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,Stop Sign,mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,Street Sign,mtsd-p12,traffic sign,0.4615,0.5688
+Cosmos Reason2 8B,Tourist Sign,mtsd-p12,traffic sign,0.4615,0.5688
+LocateAnything 3B,Auxiliary Sign,mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,Back-Unknown,mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,Blind-Spot Mirror (Convex Mirror),mtsd-p13,roadside traffic-control object,0.4373,0.2796
+LocateAnything 3B,Directional Sign,mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,No Entry (One Way),mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,No Through Road (T-Junction),mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,Other-Unknown,mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,Pedestrian Crossing,mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,Roundabout Ahead,mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,Stop Sign,mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,Street Sign,mtsd-p12,traffic sign,0.4483,0.3007
+LocateAnything 3B,Tourist Sign,mtsd-p12,traffic sign,0.4483,0.3007
+SAM 3,Auxiliary Sign,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,Back-Unknown,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,Blind-Spot Mirror (Convex Mirror),mtsd-p8,blind-spot convex mirror,0.4313,0.5476
+SAM 3,Directional Sign,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,No Entry (One Way),mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,No Through Road (T-Junction),mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,Other-Unknown,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,Pedestrian Crossing,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,Roundabout Ahead,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,Stop Sign,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,Street Sign,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3,Tourist Sign,mtsd-p12,traffic sign,0.6711,0.6382
+SAM 3.1,Auxiliary Sign,mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,Back-Unknown,mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,Blind-Spot Mirror (Convex Mirror),mtsd-p8,blind-spot convex mirror,0.45,0.5581
+SAM 3.1,Directional Sign,mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,No Entry (One Way),mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,No Through Road (T-Junction),mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,Other-Unknown,mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,Pedestrian Crossing,mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,Roundabout Ahead,mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,Stop Sign,mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,Street Sign,mtsd-p12,traffic sign,0.681,0.6342
+SAM 3.1,Tourist Sign,mtsd-p12,traffic sign,0.681,0.6342

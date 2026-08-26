@@ -60,6 +60,12 @@ def _wandb_id(run_dir: Path, run_config: dict[str, Any]) -> str:
     # The run directory is immutable and unique, so using it as the W&B ID
     # makes reports-only regeneration and resume continue the same W&B run.
     raw = _run_name(run_dir, run_config).lower()
+    # W&B permanently tombstones deleted IDs. A short execution revision lets
+    # an intentionally replaced run retain its stable local directory and
+    # display name while publishing to a fresh, resumable tracker ID.
+    revision = str(run_config.get("wandb_run_revision") or "").strip()
+    if revision:
+        raw = f"{raw}-{revision}"
     return config.model_slug(raw)[:64]
 
 

@@ -1,0 +1,56 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,20241219_083844_jpg.rf.70488e50bbe5f99b85b0719729f32064.jpg,199.95,103.15,494.87,346.71,0.3438,Recyclable Material,0.8541
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,309.04,190.03,511.73,393.31,0.4766,Recyclable Material,0.9663
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,122.64,194.93,318.62,362.43,0.4492,Recyclable Material,0.9557
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,607.1,257.77,640.0,387.93,0.3086,Recyclable Material,0.9364
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,20250124_115555_jpg.rf.d9cd5b950662bca69f8c4f49336d7ca1.jpg,204.77,297.69,365.98,458.09,0.3594,Other Waste,0.9883
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,20250124_115555_jpg.rf.d9cd5b950662bca69f8c4f49336d7ca1.jpg,321.04,231.79,429.52,356.5,0.3242,Other Waste,0.9846
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,20250124_120520_jpg.rf.c987ae9fb81418ff52771c2a335bd188.jpg,99.28,288.27,244.28,359.99,0.457,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,31_jpeg.rf.fda6c54a3034426eb0971b712b284ac9.jpg,197.99,230.53,397.43,356.93,0.3789,Recyclable Material,0.8351
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,472788921_926424869626524_3476579744422356093_n_jpg.rf.86dd0cc6ba30706b135525031dbeb1a6.jpg,0.22,259.26,52.24,408.56,0.457,Other Waste,0.7317
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,362.06,65.12,595.32,327.75,0.5117,Recyclable Material,0.9617
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,143.07,194.03,495.0,485.42,0.4863,Recyclable Material,0.942
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,414.04,90.75,526.0,176.91,0.5977,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,504.96,100.38,566.01,232.03,0.5742,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,506.12,173.3,566.73,233.01,0.3223,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,297.75,307.53,626.74,554.74,0.3652,Orange CMD,0.9693
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,AFL-NewBatch8_33_jpeg.rf.e5fc6832896b344a4795a237737b07ad.jpg,233.39,152.7,378.79,275.09,0.3555,,0.2333
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_AFL_60_jpeg.rf.9b69f3b6a86120e675c35e1420d47ec1.jpg,0.0,127.3,179.42,463.87,0.75,Other Waste,0.9875
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,274.24,261.56,429.81,431.11,0.4551,Recyclable Material,0.9509
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,177.52,116.47,274.98,215.78,0.4395,Recyclable Material,0.7108
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_SDM_E_6_jpg.rf.8f4ad2bbc4bd45252ef4e6320bac2e69.jpg,319.45,69.32,590.36,312.17,0.3477,Recyclable Material,0.9163
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,141.17,25.72,224.59,0.3262,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,462.2,232.31,577.48,308.76,0.6016,Recyclable Material,0.9395
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_TK_30_jpg.rf.cb32576d60ab619fd0da54147b7a4bd9.jpg,173.44,208.79,491.01,378.74,0.4434,Recyclable Material,0.945
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,433.21,295.53,640.0,483.27,0.3047,Recyclable Material,0.9415
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,ARI3129_TK_43_jpg.rf.d5403d078d6d28485c7df4e9d59472ae.jpg,156.81,244.46,495.96,468.07,0.625,Recyclable Material,0.9625
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IllegalDumping_48_jpeg.rf.0e4b7f0cef362ff913350959077e3877.jpg,628.35,75.52,640.0,124.65,0.4102,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,image00042_jpeg.rf.b2466e61bc76e942d37dc702f18b81e4.jpg,315.52,269.98,447.06,382.38,0.8672,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,175.08,495.56,202.81,559.5,0.4336,,0.1014
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_0198-1-_JPG.rf.c11e0438245168e237cc10129a3d9254.jpg,559.82,203.19,640.0,263.45,0.377,Other Waste,0.8849
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,269.99,202.07,506.46,431.14,0.8906,,0.0853
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,76.66,270.25,264.68,495.16,0.8828,,0.4246
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1329-1-_jpg.rf.3701d7186cf924baf96af1903cc51c13.jpg,215.46,178.9,323.3,412.63,0.7266,Other Waste,0.9737
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,312.71,219.48,400.8,402.98,0.8672,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,545.02,91.74,623.95,219.32,0.7734,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,531.71,144.11,580.75,222.73,0.6992,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,599.75,85.93,639.38,163.44,0.5898,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,599.75,86.1,631.41,125.97,0.457,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,623.95,120.47,640.0,164.69,0.418,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1935_JPG.rf.70f3e9d41afe0def24f5016f893cc5f1.jpg,123.26,117.17,291.07,345.77,0.6836,Recyclable Material,0.9593
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1935_JPG.rf.70f3e9d41afe0def24f5016f893cc5f1.jpg,291.52,125.9,431.12,317.16,0.5195,Recyclable Material,0.8937
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_1956_JPG.rf.2478164656df97788f34d6c9933080a6.jpg,191.15,176.41,339.76,321.73,0.5469,Recyclable Material,0.9318
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_20241128_092514_jpg.rf.7596cb50c83af21c87c5f54080e602d4.jpg,0.31,0.0,637.96,134.69,0.334,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_20241217_073410_jpg.rf.8ba94ff4ae15e4be5ccd4dc4f266b1b3.jpg,253.3,55.67,413.07,128.82,0.9297,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_4228_JPG.rf.3354240a78ddc77e93ae7abe53e5e890.jpg,307.81,135.88,495.35,379.56,0.3242,Recyclable Material,0.9869
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,258.64,181.59,401.9,258.6,0.5117,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,258.07,182.66,347.62,240.68,0.3418,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,372.96,152.64,438.5,217.42,0.3789,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,409.84,152.98,437.82,203.89,0.3184,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_8675_jpeg.rf.0152d6e8f4b7f93c731549c2bb7bc660.jpg,347.79,458.63,422.84,492.55,0.4199,Other Waste,0.9738
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,298.77,347.66,427.31,451.82,0.7539,,0.0081
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,IMG_8947_jpeg.rf.63997589c5afe7e794bf7f2a0cd5eba4.jpg,228.88,246.42,412.53,344.94,0.3828,Organic Waste,0.9785
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,MSIDA_40_jpg.rf.91e313a1d54dd4a813a42844427f983e.jpg,252.47,181.86,460.14,349.51,0.4102,Recyclable Material,0.9582
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,PXL_20241103_204907919-NIGHT_jpg.rf.0069fe6c121acb8c84a133154abbc05a.jpg,579.01,356.31,640.0,481.94,0.373,,0.0
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,PXL_20241226_075947607_jpg.rf.ef0e57af799e19659d6a344b93611b1f.jpg,101.21,207.71,413.29,420.28,0.3613,Recyclable Material,0.9804
+SAM 3.1,sens-mdwd-mixed-04,find all black mixed-waste bags,PXL_20241226_080533640-MP_jpg.rf.147d1cc0ef70653f5a757f5f35d3fd22.jpg,222.72,186.25,433.01,426.32,0.3203,Recyclable Material,0.92

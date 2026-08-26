@@ -1,0 +1,6 @@
+model,headline_prompt_groups,n_headline_prompts,ap_used_for_ranking,precision,recall,f1,accuracy,mean_matched_iou,mean_inference_ms
+Cosmos Reason2 2B,"class-targeted,synonym-comparison",11,False,0.1023,0.4593,0.1542,0.0853,0.9038,2602.2764
+Cosmos Reason2 8B,"class-targeted,synonym-comparison",11,False,0.1463,0.5907,0.2178,0.1261,0.9201,2331.7718
+LocateAnything 3B,"class-targeted,synonym-comparison",11,False,0.0537,0.5684,0.0944,0.0504,0.948,6871.3218
+SAM 3,"class-targeted,synonym-comparison",11,False,0.2271,0.5804,0.2574,0.1639,0.8551,184.2818
+SAM 3.1,"class-targeted,synonym-comparison",11,False,0.2224,0.5818,0.255,0.1622,0.8545,189.4273

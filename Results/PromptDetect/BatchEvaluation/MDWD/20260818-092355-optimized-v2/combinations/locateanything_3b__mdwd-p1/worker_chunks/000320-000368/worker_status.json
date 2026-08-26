@@ -1,0 +1,26 @@
+{
+  "status": "completed",
+  "dataset": "MDWD",
+  "split": "test",
+  "model": "LocateAnything 3B",
+  "prompt_id": "mdwd-p1",
+  "prompt": "black garbage bag",
+  "image_start": 320,
+  "image_end": 369,
+  "n_images": 49,
+  "n_prediction_rows": 111,
+  "max_detections": 28,
+  "nms_iou_threshold": 0.5,
+  "model_status": {
+    "model": "LocateAnything 3B",
+    "model_load_ms": 12080.0,
+    "ok": true,
+    "label": "LocateAnything 3B",
+    "source": "nvidia/LocateAnything-3B",
+    "detail": "LocateAnything-3B in-process (MoonViT + Qwen2.5), hybrid PBD",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-18T07:43:12.027784+00:00",
+  "finished_at": "2026-08-18T07:44:41.128674+00:00"
+}

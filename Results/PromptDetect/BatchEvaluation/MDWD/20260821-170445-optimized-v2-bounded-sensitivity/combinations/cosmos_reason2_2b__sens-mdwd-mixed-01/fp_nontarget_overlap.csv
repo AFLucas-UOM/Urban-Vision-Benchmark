@@ -1,0 +1,192 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,14_jpeg.rf.8214c51f9c25dea0e54007991c4e3666.jpg,227.2,183.04,451.2,380.8,1.0,Recyclable Material,0.5188
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20241213_082745_jpg.rf.96486ae40adc356b948caf5f75b61f88.jpg,292.48,205.44,394.88,309.12,1.0,Organic Waste,0.9077
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20241219_083857_jpg.rf.e2a67912dc7cbc8de22df1a74b7104f5.jpg,118.4,192.64,316.16,362.88,1.0,Recyclable Material,0.9623
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20241219_084037_jpg.rf.1c07ac48ce84b63b6b95419e78d4802f.jpg,525.44,200.96,639.36,348.16,1.0,Recyclable Material,0.8436
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20241226_071944_blurred_jpg.rf.875ac11a52e9589aa0d86ffc63b1b280.jpg,247.68,87.04,362.88,360.96,1.0,,0.4533
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20241226_072523_jpg.rf.d523877028b40b2d009a12baa218dc34.jpg,131.2,197.76,220.8,424.32,1.0,Recyclable Material,0.8675
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250103_070701_jpg.rf.f79de11afa2be131b82013f0e8eb6b7b.jpg,293.76,284.16,357.12,404.48,1.0,Organic Waste,0.8823
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250103_071358-0-_jpg.rf.551125884a7ee52b32bb69b2998e461e.jpg,360.96,316.16,418.56,431.36,1.0,,0.3567
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250103_071930_jpg.rf.29e9cac27c91c8a969957adaaa8be611.jpg,254.72,288.0,352.0,397.44,1.0,Organic Waste,0.9327
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,111.36,271.36,254.72,444.16,1.0,,0.4222
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250103_072437_jpg.rf.32a5c27d896f98da28bbf508ef38adf2.jpg,128.0,305.28,216.32,418.56,1.0,Organic Waste,0.8976
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250114_102613_jpg.rf.83447af29c6413aa1b9372ac635283f4.jpg,243.2,295.04,418.56,403.2,1.0,Organic Waste,0.9304
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250124_115555_jpg.rf.d9cd5b950662bca69f8c4f49336d7ca1.jpg,323.2,232.96,427.52,357.12,1.0,Other Waste,0.9341
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250124_120044_jpg.rf.ed15b7e8b6f34f4267218a56a3723d60.jpg,327.68,317.44,433.92,400.64,1.0,Organic Waste,0.9708
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,20250124_121125_jpg.rf.cfc4084ec5d934eac7c719fb1006ba95.jpg,241.92,220.8,501.76,433.92,1.0,Other Waste,0.6244
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,26_jpeg.rf.9461f25b898f83e1991fbcc6fc5cc83c.jpg,210.56,282.24,397.44,484.48,1.0,Recyclable Material,0.9629
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,28_jpeg.rf.b635e58847049badf03fdabb0f0b5f58.jpg,199.68,171.52,470.4,400.64,1.0,Recyclable Material,0.932
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,2_jpeg.rf.210ca76552cf22b6ae5128cd5eb1a637.jpg,261.12,334.72,318.72,369.28,1.0,Recyclable Material,0.6563
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,30_jpeg.rf.b5cf601d6f44e0addb177394ba5d4b99.jpg,218.88,226.56,436.48,362.88,1.0,Recyclable Material,0.9635
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,31_jpeg.rf.fda6c54a3034426eb0971b712b284ac9.jpg,195.2,227.84,397.44,357.12,1.0,Recyclable Material,0.8627
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,462550919_472395952520841_3814266194193640989_n_jpg.rf.fc306e80f8b545c1d4d71d3b6076ffaa.jpg,81.28,105.6,505.6,396.16,1.0,Organic Waste,0.9533
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,0.0,362.88,218.88,608.64,1.0,Recyclable Material,0.9616
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,472788698_622065090352046_1816579885785418215_n_jpg.rf.1d8addc784634320240b247b8793081e.jpg,373.76,188.16,467.84,295.04,1.0,,0.4062
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,473055810_1017914696762987_4178034688130709660_n_jpg.rf.f03f6b9a9f959d7dce7512e0d31dc6a1.jpg,273.28,320.0,406.4,431.36,1.0,Recyclable Material,0.9034
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,473288918_1030220488909269_3010825870718583729_n_jpg.rf.1e0886d3aa27cfa4e22d06ead559dc80.jpg,351.36,188.16,496.0,305.28,1.0,Recyclable Material,0.7757
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,360.96,65.92,594.56,330.24,1.0,Recyclable Material,0.9669
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,173.44,35.2,453.76,384.64,1.0,Recyclable Material,0.6174
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch5_15_jpeg.rf.5dc21330fd6004b5fe9c6cdcf1a1732c.jpg,273.28,410.24,357.12,480.64,1.0,Recyclable Material,0.963
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_1_13_jpeg.rf.8c727f8067b82177be353ac5ebeca4f1.jpg,212.48,150.4,386.56,252.8,1.0,Orange CMD,0.8663
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_30_jpeg.rf.399e64bccb44d80fa05c2372ef8a2a0d.jpg,528.0,48.0,639.36,320.64,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_36_jpeg.rf.bbdedbb8ba216b5178969e02bdc8fb0b.jpg,263.04,418.56,371.2,480.64,1.0,Orange CMD,0.9295
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_40_jpeg.rf.41584ad8be2654c6380775654da6238a.jpg,371.2,0.0,639.36,451.2,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,294.4,305.28,624.0,553.6,1.0,Orange CMD,0.9767
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,161.28,282.24,430.08,549.12,1.0,Orange CMD,0.9437
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,300.16,324.48,483.2,368.0,1.0,,0.1368
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,115.2,223.36,160.0,309.12,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,254.72,275.2,494.72,546.56,1.0,Orange CMD,0.9258
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch7_19_jpeg.rf.bbd664688760cfb02be22b12188d3ea0.jpg,276.48,279.68,382.72,328.96,1.0,Orange CMD,0.5198
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,149.76,339.84,330.88,394.88,1.0,Orange CMD,0.9209
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch8_19_jpeg.rf.9a6ee3e02179760cd4c7c17b594f16b7.jpg,0.0,70.4,88.32,300.8,1.0,Recyclable Material,0.502
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch8_20_jpeg.rf.7b0acd51a9c8d6ff91b6387874917af3.jpg,189.44,212.48,353.28,346.88,1.0,Recyclable Material,0.8823
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,100.48,231.68,216.32,307.84,1.0,Orange CMD,0.9112
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch8_36_jpeg.rf.8650d72620e31541c6e7692b68a34703.jpg,254.72,105.6,342.4,189.44,1.0,Recyclable Material,0.67
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch9_11_jpeg.rf.4126636e69402c1d283355333ce014ab.jpg,160.0,109.44,365.44,252.8,1.0,Orange CMD,0.9551
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch9_12_jpeg.rf.439663c2acd785b36963c00338581b94.jpg,150.4,261.12,245.76,307.84,1.0,Orange CMD,0.9225
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,353.92,406.4,551.04,514.56,1.0,Orange CMD,0.9586
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,232.96,266.88,380.16,353.92,1.0,Orange CMD,0.9335
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL_NewBatch3_38_jpeg.rf.4b95816ea6ebd56c2d1dc192d358948b.jpg,265.6,156.16,444.16,309.12,1.0,Orange CMD,0.9659
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,216.32,112.64,302.08,200.96,1.0,Recyclable Material,0.8151
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_60_jpeg.rf.9b69f3b6a86120e675c35e1420d47ec1.jpg,0.0,130.56,177.28,465.28,1.0,Other Waste,0.9817
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_65_jpeg.rf.bb51b67df3fe8cf58a9e48ce1eafca7a.jpg,348.8,351.36,486.4,471.04,1.0,Organic Waste,0.9405
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_76_jpeg.rf.8e162d330d5d7183c454f4ba82e1ca47.jpg,116.48,247.04,168.96,278.4,1.0,Organic Waste,0.7791
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_80_jpeg.rf.93908175256bdc7e36dbfbe03cf757c7.jpg,55.68,285.44,334.08,539.52,1.0,Other Waste,0.9626
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,0.0,310.4,35.2,346.88,1.0,,0.2929
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_83_jpeg.rf.9417856dcdd1b2f657ab5bc7ee9f506a.jpg,0.0,224.64,64.64,275.2,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_94_jpeg.rf.12064663f7b4f63552c8945b7487f26d.jpg,240.0,205.44,492.16,351.36,1.0,Recyclable Material,0.9614
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_E_12_jpeg.rf.47781c0f8ca545ad957fe116ca2d3b50.jpg,433.92,420.48,589.44,528.0,1.0,Organic Waste,0.9656
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_AFL_E_7_jpeg.rf.751f2e9d7aa713ca24fc59fe52c4a209.jpg,195.2,177.28,372.48,369.28,1.0,Organic Waste,0.9218
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,291.2,189.44,394.88,375.04,1.0,Other Waste,0.9315
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,44.16,245.76,323.2,393.6,1.0,Recyclable Material,0.9278
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_SDM_97_jpeg.rf.433442a760244d762f2d6ceb2c6d82c3.jpg,176.0,98.56,271.36,215.04,1.0,Recyclable Material,0.8157
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,240.0,105.6,404.48,278.4,1.0,Recyclable Material,0.5234
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_SDM_E_11_jpg.rf.e3a50a869c33c50807b308d8f3c3763b.jpg,233.6,245.76,478.08,512.64,1.0,Recyclable Material,0.9842
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_SDM_E_3_jpg.rf.cd75c0f5faef6a61dc201602806fcf02.jpg,240.64,76.16,335.36,188.16,1.0,Recyclable Material,0.9238
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_SDM_E_6_jpg.rf.8f4ad2bbc4bd45252ef4e6320bac2e69.jpg,320.0,70.4,591.36,314.88,1.0,Recyclable Material,0.9012
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_30_jpg.rf.cb32576d60ab619fd0da54147b7a4bd9.jpg,168.96,208.0,491.52,380.8,1.0,Recyclable Material,0.9616
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,259.2,258.56,465.28,444.16,1.0,Recyclable Material,0.8877
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_54_jpg.rf.50e7e1d8fe52aa410a928c6641b2f939.jpg,259.2,230.4,427.52,373.76,1.0,Recyclable Material,0.9026
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_66_jpg.rf.ac65fd37c33025edee0f8356e8e30dd3.jpg,287.36,241.92,371.2,314.88,1.0,Organic Waste,0.9097
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_131_jpeg.rf.e4689cf06851282cb99fc61669a8fc16.jpg,338.56,216.32,355.2,269.44,1.0,Orange CMD,0.5805
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,515.2,320.0,527.36,343.04,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_154_jpeg.rf.19166d7805818a35c045253065a12b6d.jpg,231.68,345.6,383.36,425.6,1.0,,0.2567
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_39_jpeg.rf.e9a6b47832761d98991f461486c28b23.jpg,151.68,297.6,426.88,533.76,1.0,Other Waste,0.8046
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,188.16,35.2,213.76,85.76,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_69_jpeg.rf.abd58f54c6dd55ee439e3d9b9cd97aa8.jpg,135.04,158.72,222.08,373.76,1.0,,0.0637
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_79_jpeg.rf.e55883045699d8dfa9c9aa6bc12bbef2.jpg,244.48,131.84,353.28,167.04,1.0,Orange CMD,0.5989
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,300.8,176.0,350.08,284.16,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_83_jpeg.rf.8c468ace19ef290a465a9eb0be96db61.jpg,151.68,237.44,299.52,285.44,1.0,Orange CMD,0.938
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_88_jpeg.rf.bf5aa164958d0cd2482ce7224ebf29c6.jpg,314.88,532.48,496.0,634.88,1.0,Orange CMD,0.9278
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IllegalDumping_29_jpg.rf.9597a2660ba043489f648325c813a26e.jpg,80.0,256.0,131.2,368.0,1.0,Other Waste,0.7336
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,295.04,150.4,357.12,355.2,1.0,Other Waste,0.8774
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,12.16,312.32,205.44,525.44,1.0,,0.4687
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IllegalDumping_63_jpeg.rf.2949592c2f89825f9cf5f001bc46868e.jpg,0.0,130.56,21.76,150.4,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IllegalDumping_64_jpeg.rf.e48c90ccc791eb8bacf934f9b3d5944e.jpg,199.04,325.76,323.2,474.88,1.0,Other Waste,0.8819
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IllegalDumping_66_jpeg.rf.70b41d2f52a33f5fc53d0fd36d7abf4f.jpg,330.88,357.12,368.0,499.2,1.0,,0.0379
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,442.88,348.16,530.56,465.28,1.0,Recyclable Material,0.7925
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,566.4,431.36,634.88,574.72,1.0,Recyclable Material,0.5847
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,imageedit_9_8654318877_jpg.rf.118a4ab4d7d78c57339b763ca18f794a.jpg,380.16,338.56,444.16,476.16,1.0,Recyclable Material,0.5406
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG20250106064752_jpg.rf.3488032e56fb1ad43f8b57800b292b5c.jpg,406.4,271.36,486.4,394.88,1.0,Organic Waste,0.9107
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG20250106064808_jpg.rf.a9dad3f353f907f063471251fac869bd.jpg,352.0,266.88,425.6,341.12,1.0,Organic Waste,0.9187
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG20250106064845_jpg.rf.bbc6b2694dafb0369af830be3f0f71ac.jpg,295.04,273.92,360.96,337.28,1.0,Organic Waste,0.8967
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG20250106065829_jpg.rf.13e356e3a46499a3c8b2162c6f8df515.jpg,247.68,200.96,312.32,269.44,1.0,Organic Waste,0.8137
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG20250106070329_jpg.rf.f61f2006072335cf78abccceebdc787e.jpg,316.8,285.44,412.8,310.4,1.0,,0.3172
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG20250106072208_jpg.rf.0c3a31f4044dcd74443227b23d650aa7.jpg,279.68,229.12,332.8,277.12,1.0,Organic Waste,0.9234
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG20250106072404_jpg.rf.b32beacc1e0976b57f42c3e4b46b111b.jpg,220.8,250.24,282.24,288.0,1.0,Organic Waste,0.7174
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,48.64,56.32,373.76,266.88,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,232.96,445.44,474.88,593.28,1.0,Organic Waste,0.9646
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,431.36,48.0,540.8,188.16,1.0,Recyclable Material,0.8552
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0585_jpeg.rf.a641323e3ad9541471ed699b639ccf4f.jpg,0.0,231.68,97.28,351.36,1.0,Recyclable Material,0.979
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,49.28,131.84,320.0,282.24,1.0,Recyclable Material,0.858
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0714_jpeg.rf.97458a882a4c384759469f5ec68c823a.jpg,176.0,285.44,399.36,373.76,1.0,,0.4095
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0721_jpeg.rf.a6f50b0520a650785b523be9101f8828.jpg,297.6,285.44,358.4,360.96,1.0,Organic Waste,0.8884
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0725_jpeg.rf.a02633d3203846437290de53a4131b23.jpg,181.12,394.88,226.56,421.76,1.0,Organic Waste,0.8693
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0726_jpeg.rf.96e876a1122037418a3328fdb29b70c8.jpg,202.88,280.96,312.32,391.68,1.0,Organic Waste,0.9465
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,266.88,200.96,508.8,433.92,1.0,,0.0917
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,76.16,270.08,266.88,496.0,1.0,,0.4316
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,318.72,200.96,432.64,378.24,1.0,Recyclable Material,0.6162
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,335.36,156.16,421.76,291.2,1.0,Recyclable Material,0.9494
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1089_converted_blurred_jpg.rf.3e8c4d8b6ed62381f89b49bef81c8c96.jpg,323.2,147.2,426.88,312.32,1.0,Recyclable Material,0.699
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1127_converted_jpg.rf.d6272ade3c034aa2ea0fd809dfd7c8fd.jpg,201.6,289.28,276.48,371.2,1.0,Organic Waste,0.8152
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1303_jpg.rf.439ed8ead58b6bc5aaf721c21ea1f300.jpg,146.56,195.2,222.72,269.44,1.0,Organic Waste,0.8617
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1694_JPG.rf.302d30060abc3ba03ab3ffb9a491704e.jpg,282.24,284.16,350.08,336.0,1.0,Organic Waste,0.924
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1699_JPG.rf.587af3b59f422de7986e1701c169e5ee.jpg,352.0,183.04,410.24,231.68,1.0,Organic Waste,0.8082
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1701_JPG.rf.cbbb8a08ac02580e5312c5daea6a404e.jpg,181.12,261.12,350.08,337.28,1.0,,0.4223
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1725_JPG.rf.cdddfcacd64e3f64fb9802505c7319f2.jpg,457.6,285.44,530.56,334.08,1.0,Organic Waste,0.6566
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1734_JPG.rf.a9bd6393c5a15d2756a795ba6885b750.jpg,320.0,273.92,380.16,327.68,1.0,Organic Waste,0.9371
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1786-2_JPG.rf.687b21b2f62d777a83c140af63ec3174.jpg,293.12,240.64,382.72,309.12,1.0,Organic Waste,0.9484
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,250.24,181.12,323.2,271.36,1.0,Organic Waste,0.928
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1850-2_JPG.rf.74b6743fe98b3435f80055e3f0ddf4dc.jpg,275.2,196.48,340.48,245.76,1.0,Organic Waste,0.9321
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1854-2_JPG.rf.eed1692cfac89b53e56e91181bba87d2.jpg,211.84,218.88,333.44,284.16,1.0,Organic Waste,0.8604
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1864-2_jpg.rf.4a652b55d26cd0148eafe1befb1bf728.jpg,318.72,375.04,451.2,515.84,1.0,Organic Waste,0.9362
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1933_JPG.rf.647ab4574309edbc417a4016ae7ff114.jpg,265.6,217.6,358.4,328.96,1.0,Organic Waste,0.9192
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1949_JPG.rf.b39818364afce503871402f719639f15.jpg,95.36,158.72,305.28,397.44,1.0,Recyclable Material,0.9349
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_1980_JPG.rf.37af8c83756b699162c8354ac0b5d79a.jpg,195.2,151.68,427.52,350.08,1.0,Recyclable Material,0.9858
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,229.12,85.76,282.24,232.96,1.0,Recyclable Material,0.9025
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241115_074812_jpg.rf.7aaa34f403d35b5cf47dc9acac4184b7.jpg,229.12,237.44,357.12,302.08,1.0,,0.4087
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241121_091747_jpg.rf.3fd3e241b47f6b97e6d584dded292019.jpg,195.2,223.36,270.08,339.84,1.0,Recyclable Material,0.9107
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,352.0,229.12,440.96,373.76,1.0,,0.4065
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,431.36,64.64,639.36,373.76,1.0,,0.057
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241206_082456_jpg.rf.a3e6c04fbf7c0e464a27cad6eefe7877.jpg,268.16,226.56,383.36,291.2,1.0,Organic Waste,0.9383
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241212_071836_jpg.rf.0b80d7fa9c551664fbbe5b7f3a1b48c2.jpg,355.2,156.16,369.92,183.04,1.0,,0.0063
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241212_071851_jpg.rf.550bce41f56e3f83cfcf50a20246ac39.jpg,247.04,105.6,634.88,341.12,1.0,Recyclable Material,0.9211
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241212_072546_jpg.rf.428e2895cdcf99b3cf96be37525287fc.jpg,201.6,220.8,391.68,305.28,1.0,Organic Waste,0.9136
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20241219_084719_jpg.rf.93bdd801e0ce4811189ba99080842075.jpg,384.64,161.28,457.6,285.44,1.0,Recyclable Material,0.8505
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,151.68,200.96,261.12,327.68,1.0,Organic Waste,0.6101
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20250106_072627_jpg.rf.5b471c31ca6639b08b5f9a25d7d4d055.jpg,247.68,284.16,344.32,373.76,1.0,Organic Waste,0.9324
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20250106_072716_jpg.rf.4b2d801f403243754d438093bc257ce4.jpg,287.36,263.04,405.76,332.8,1.0,Organic Waste,0.967
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20250106_072730_jpg.rf.04c94d8351ffdfbd2d7391c96b474256.jpg,254.72,223.36,380.8,312.32,1.0,Organic Waste,0.9663
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_20250109_074213_jpg.rf.70a8bd28946b36ece01a48b9cdfaa26d.jpg,213.76,0.0,325.12,196.48,1.0,Other Waste,0.9603
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_3068_jpeg.rf.6b63b7cb63ae7950ebc35b5a96550b08.jpg,316.8,284.16,348.8,323.2,1.0,Recyclable Material,0.8596
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_3084_jpeg.rf.584a131d14876e68f98bf572d6e2c1e3.jpg,250.24,208.0,430.08,438.4,1.0,Orange CMD,0.7199
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_3108_jpeg.rf.f0273d0fa4ade4f4e81d527d9cc1f2db.jpg,220.8,208.0,362.88,304.64,1.0,Orange CMD,0.8885
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4369_jpeg.rf.408cd6a46d2f5cac2cbe3b37e3ebcda9.jpg,302.08,256.0,425.6,327.68,1.0,Recyclable Material,0.8065
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4381_JPG.rf.2c50827131296bfe3883c59625a8bc6b.jpg,189.44,163.2,348.8,323.2,1.0,Organic Waste,0.9669
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4384_JPG.rf.b89fff6257bced61fff24d71d5c96809.jpg,152.32,238.08,318.72,323.2,1.0,Organic Waste,0.8085
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4396_jpg.rf.1db0db20656a7c83e35b6d18c0215170.jpg,295.04,262.4,372.48,391.68,1.0,Recyclable Material,0.9339
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,342.4,177.28,483.2,314.88,1.0,Organic Waste,0.9295
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4399_jpg.rf.dfd53b0debc27c7095a817bcea1e7804.jpg,295.04,178.56,375.68,400.64,1.0,Recyclable Material,0.7127
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4407_JPG.rf.614497a80164d2a76b09b87d423d4135.jpg,389.12,129.28,483.2,213.76,1.0,Organic Waste,0.5054
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4410_JPG.rf.f4e18a42420273153db9bd7ba0d584e7.jpg,276.48,222.08,390.4,325.76,1.0,Organic Waste,0.9645
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_4561_jpg.rf.5f140ad2d986f1d247075091fb9a39f2.jpg,245.76,217.6,279.68,303.36,1.0,Organic Waste,0.8242
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,318.72,135.04,394.88,189.44,1.0,Other Waste,0.5021
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_5780_blurred_jpg.rf.79dedd739e6bb733eeed62225a18a389.jpg,406.4,154.24,425.6,176.0,1.0,Recyclable Material,0.6462
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_5820_JPG.rf.5ded16a067c5f3cc3af0575ba14e0e14.jpg,232.96,160.0,310.4,210.56,1.0,Organic Waste,0.8449
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8281_jpeg.rf.d3c9977245690d5782db72d710b94bf7.jpg,241.92,285.44,368.0,348.8,1.0,Organic Waste,0.5218
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8283_jpeg.rf.36c1d23b9b979b2382bda6d9d15725f3.jpg,240.0,256.0,412.8,383.36,1.0,,0.4938
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8285_jpeg.rf.7f31b44f7ff2a0d79eb5eb7621fadd00.jpg,192.64,305.28,247.68,376.32,1.0,Organic Waste,0.8983
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8309_jpeg.rf.041293f9c5c4cbce45ab3b8fef84c32d.jpg,270.08,346.88,358.4,423.04,1.0,Organic Waste,0.8986
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8316_jpeg.rf.70b46d9c239bf9db414f4a362577ea61.jpg,305.28,257.28,423.04,327.68,1.0,Organic Waste,0.917
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,227.2,383.36,266.88,478.08,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,266.88,384.64,302.08,476.16,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,312.32,384.64,338.56,474.88,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8675_jpeg.rf.0152d6e8f4b7f93c731549c2bb7bc660.jpg,350.08,459.52,421.76,493.44,1.0,Other Waste,0.9149
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8692_jpeg.rf.7f04ea376ec44117007bb686d6250bd9.jpg,202.88,383.36,269.44,424.32,1.0,Orange CMD,0.9504
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,241.92,357.12,372.48,446.72,1.0,Recyclable Material,0.8708
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,300.16,345.6,423.04,455.04,1.0,,0.0121
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,220.8,299.52,383.36,535.04,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8947_jpeg.rf.63997589c5afe7e794bf7f2a0cd5eba4.jpg,229.12,245.76,412.8,346.88,1.0,Organic Waste,0.9572
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8974_jpeg.rf.228d538a131d7415743d51cf6832042a.jpg,335.36,355.84,417.28,470.4,1.0,Recyclable Material,0.8486
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,IMG_8974_jpeg.rf.ae5486445974faf437f5555fba82f0ef.jpg,163.2,330.88,278.4,418.56,1.0,Organic Waste,0.8742
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,312.32,223.36,510.72,338.56,1.0,Organic Waste,0.6606
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_124_jpg.rf.234eac622fccca0d569fe7920ed68ce7.jpg,286.08,266.88,446.72,343.04,1.0,Recyclable Material,0.8671
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_128_jpg.rf.da7729238bd6c6b3b4ef8dca2348550d.jpg,369.92,140.16,432.64,266.88,1.0,Recyclable Material,0.9137
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,348.16,0.0,451.2,212.48,1.0,Recyclable Material,0.9008
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_51_jpg.rf.a1a6c477482754d254bc147983926134.jpg,280.96,243.2,334.72,271.36,1.0,Organic Waste,0.8708
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_57_jpg.rf.b9065248849c1f81202c1df8e0bd4aa4.jpg,288.0,256.0,378.24,337.28,1.0,Organic Waste,0.8
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,216.32,234.88,357.12,320.64,1.0,Organic Waste,0.933
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_76_jpg.rf.0f8f53a21baa9edf9a2b26f86785f223.jpg,276.48,245.76,411.52,352.64,1.0,Organic Waste,0.6127
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,254.72,325.76,297.6,387.84,1.0,,0.3811
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,412.8,337.28,438.4,358.4,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,508.8,337.28,524.16,365.44,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,528.0,337.28,543.36,365.44,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,156.16,200.96,263.04,383.36,1.0,,0.1308
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,138.88,205.44,172.8,316.16,1.0,,0.0
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,Organic_11_jpeg.rf.403be9363c2e985cdc6e2c6688c10093.jpg,181.76,261.12,314.88,406.4,1.0,Organic Waste,0.946
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,Organic_1_jpeg.rf.77f76f56f0135df005c7864616e3d828.jpg,265.6,257.28,404.48,327.68,1.0,Organic Waste,0.9257
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,PXL_20241125_064324039-MP_jpg.rf.14da8fd358dd67f611f45f79feec4bbf.jpg,229.12,225.92,355.2,362.88,1.0,Organic Waste,0.9241
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,PXL_20241125_064444279_jpg.rf.fcd56876b1eea9222f981e515780c1e4.jpg,177.28,231.68,336.64,334.08,1.0,Organic Waste,0.797
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,PXL_20241226_075933630-MP_jpg.rf.460c72f50522e906261ac2f783733f06.jpg,22.4,185.6,192.64,451.2,1.0,Recyclable Material,0.7414
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,PXL_20241226_080053691_jpg.rf.08e12d2cae94660dfcd43c04079c13f9.jpg,163.2,107.52,407.68,380.8,1.0,Recyclable Material,0.9783
+Cosmos Reason2 2B,sens-mdwd-mixed-01,black garbage bag,PXL_20241226_080257060_jpg.rf.642388a5f678e685d32e3e3a244c0ad8.jpg,0.0,438.4,224.64,634.88,1.0,Recyclable Material,0.8936

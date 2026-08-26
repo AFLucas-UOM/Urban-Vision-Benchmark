@@ -1,0 +1,85 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mdwd-mixed-01,black garbage bag,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,179.66,617.58,229.74,639.58,0.3242,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,467.5,254.81,550.95,336.97,0.8203,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,333.09,206.36,409.44,247.67,0.5547,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,434.23,138.26,541.79,210.96,0.4082,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,20250114_102537_jpg.rf.9438a50a3fbf2a1b9d70923a8fcde7b3.jpg,116.89,200.69,170.8,216.7,0.3047,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,20250124_120520_jpg.rf.c987ae9fb81418ff52771c2a335bd188.jpg,99.08,204.52,244.67,359.35,0.6992,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,20250124_120520_jpg.rf.c987ae9fb81418ff52771c2a335bd188.jpg,102.31,266.63,163.62,307.47,0.4355,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,472788921_926424869626524_3476579744422356093_n_jpg.rf.86dd0cc6ba30706b135525031dbeb1a6.jpg,0.02,259.45,52.36,408.34,0.3262,Other Waste,0.7342
+SAM 3,sens-mdwd-mixed-01,black garbage bag,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,407.17,90.49,526.32,176.92,0.8047,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,505.21,100.57,565.96,231.66,0.7109,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,505.74,174.24,566.13,232.82,0.5664,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,433.57,173.45,531.92,226.13,0.4492,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch5_2_jpeg.rf.4f2a1b9b6b2271796a0eb20e8001ce93.jpg,0.18,467.8,18.09,554.69,0.3262,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,298.0,307.57,626.55,554.63,0.3145,Orange CMD,0.9682
+SAM 3,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,528.19,90.19,561.68,98.78,0.4551,Other Waste,0.8706
+SAM 3,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,318.88,149.1,360.29,199.94,0.377,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,242.02,257.31,365.77,331.12,0.3242,Recyclable Material,0.9414
+SAM 3,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,385.81,201.91,458.38,249.31,0.3223,Recyclable Material,0.9297
+SAM 3,sens-mdwd-mixed-01,black garbage bag,AFL-NewBatch7_11_jpeg.rf.d848c42464f5f2c5bb033028b8fc592d.jpg,377.18,220.6,495.9,312.46,0.3203,Recyclable Material,0.8829
+SAM 3,sens-mdwd-mixed-01,black garbage bag,ARI3129_Online_2_jpeg.rf.8f3afdbb2284e73aa7a48b49e8b960c8.jpg,359.54,393.16,413.47,542.22,0.625,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,ARI3129_Online_2_jpeg.rf.8f3afdbb2284e73aa7a48b49e8b960c8.jpg,390.83,350.52,494.72,464.05,0.5781,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,ARI3129_Online_2_jpeg.rf.8f3afdbb2284e73aa7a48b49e8b960c8.jpg,354.02,452.45,374.71,490.8,0.3242,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,140.77,26.83,225.52,0.457,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,231.15,85.78,286.8,0.3145,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_23_jpg.rf.2df86f91f15c329adc7eac0e92c012c8.jpg,179.53,192.11,260.17,221.0,0.3145,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_29_jpg.rf.19b47eb2b8676fab22bda25014a7a6c9.jpg,462.17,232.6,577.27,308.75,0.7188,Recyclable Material,0.9343
+SAM 3,sens-mdwd-mixed-01,black garbage bag,ARI3129_TK_32_jpg.rf.a999ab79afb90d75f2d3c408747fa95e.jpg,297.36,183.71,447.04,250.25,0.3867,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_4_jpeg.rf.c65b7e808fedc115afdcd1a1a8fc22b6.jpg,564.32,133.92,599.04,163.67,0.4941,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,254.66,353.09,306.41,409.51,0.3906,Recyclable Material,0.5235
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IllegalDumping_48_jpeg.rf.0e4b7f0cef362ff913350959077e3877.jpg,627.85,74.8,640.0,124.82,0.4277,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,image00042_jpeg.rf.b2466e61bc76e942d37dc702f18b81e4.jpg,315.94,269.92,447.09,382.69,0.9453,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,image00082_jpeg.rf.2a65a428911318f5f3442ffe3870263d.jpg,553.23,516.62,640.0,639.21,0.4863,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,image00082_jpeg.rf.2a65a428911318f5f3442ffe3870263d.jpg,552.37,588.33,621.76,639.57,0.3711,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,426.88,46.72,640.0,0.8945,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,309.29,73.99,456.76,0.7812,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,192.26,46.19,306.64,0.7266,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,175.33,495.93,202.91,559.14,0.7773,,0.0989
+SAM 3,sens-mdwd-mixed-01,black garbage bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,306.5,447.72,360.95,560.28,0.4141,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,298.01,375.19,373.11,464.56,0.3086,,0.1115
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,270.0,202.02,506.26,431.1,0.9766,,0.0853
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_0790_jpeg.rf.c20dd48e105b9c2573f967580f0b6f3f.jpg,76.59,270.02,264.71,494.64,0.9688,,0.4241
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,312.56,218.93,400.82,402.82,0.9648,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,531.41,144.27,580.69,222.29,0.8789,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,545.04,91.86,624.02,218.99,0.8633,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,599.98,86.35,631.45,125.81,0.6992,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,623.94,119.89,640.0,164.33,0.6836,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,602.6,109.48,629.22,160.21,0.4785,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,522.4,113.92,545.95,193.01,0.3145,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_20241217_073410_jpg.rf.8ba94ff4ae15e4be5ccd4dc4f266b1b3.jpg,253.43,55.54,412.95,128.74,0.9727,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_20241228_084256_jpg.rf.cad5e31812186af156bdc69b2a095c80.jpg,0.0,303.2,28.93,461.74,0.4531,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,227.65,225.76,412.32,338.39,0.3613,Other Waste,0.8513
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,258.9,181.96,402.47,253.8,0.7344,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,408.99,153.09,437.67,203.67,0.5664,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,372.16,153.34,437.98,217.73,0.5234,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_5755_JPG.rf.39996c0e5fa5a0cce44d9d495a7d3c47.jpg,254.26,151.49,284.26,175.55,0.5586,,0.1569
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_5755_JPG.rf.39996c0e5fa5a0cce44d9d495a7d3c47.jpg,232.97,90.85,262.29,127.66,0.4102,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_5761_JPG.rf.ffcd5a5b9f4725507b420e333cc0c094.jpg,219.16,102.41,352.78,181.13,0.377,Recyclable Material,0.9087
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,269.94,396.16,330.98,446.28,0.8008,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,207.23,405.87,245.2,445.18,0.6484,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,186.62,443.13,229.8,482.68,0.6172,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,263.13,385.45,295.22,404.24,0.4043,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8860_jpeg.rf.5af16907c63b034c96c83914fb2f3f52.jpg,429.54,373.65,469.26,424.52,0.5742,,0.0401
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8860_jpeg.rf.5af16907c63b034c96c83914fb2f3f52.jpg,350.34,367.37,385.02,414.84,0.3125,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,330.33,433.09,382.35,474.08,0.4297,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,228.92,415.09,328.52,464.57,0.3066,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,182.77,358.88,225.51,393.81,0.5352,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,308.4,162.33,331.98,207.4,0.6328,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,261.03,325.09,291.57,359.11,0.7695,Other Waste,0.923
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,411.31,318.92,439.87,355.58,0.543,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,259.73,325.05,295.99,385.37,0.3574,,0.4767
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,116.94,264.83,148.89,317.65,0.8555,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,406.58,222.52,423.91,252.64,0.7812,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,164.12,207.3,204.56,279.69,0.6797,,0.0462
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,215.03,208.51,268.92,277.53,0.6016,,0.249
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,320.85,124.24,351.45,154.68,0.5938,,0.008
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,286.62,184.07,302.59,223.45,0.5078,,0.0153
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,158.15,366.79,199.68,407.63,0.4844,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,316.46,101.13,360.65,130.78,0.332,Other Waste,0.779
+SAM 3,sens-mdwd-mixed-01,black garbage bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,141.7,282.16,182.69,378.56,0.3203,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,Number_blur-2-_size_jpeg.rf.1c3be494c4b9cc9941f73ca4650b2955.jpg,379.21,346.69,429.03,415.09,0.416,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,Organic_1_jpeg.rf.77f76f56f0135df005c7864616e3d828.jpg,155.26,0.0,241.68,42.5,0.5234,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,PHOTO-2025-01-04-12-12-47_jpg.rf.1c9ba1ca77945e6fe6229f8762125342.jpg,59.33,41.51,74.2,77.61,0.543,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,PXL_20241103_204907919-NIGHT_jpg.rf.0069fe6c121acb8c84a133154abbc05a.jpg,563.04,255.99,640.0,479.54,0.625,,0.0
+SAM 3,sens-mdwd-mixed-01,black garbage bag,PXL_20241103_204907919-NIGHT_jpg.rf.0069fe6c121acb8c84a133154abbc05a.jpg,563.13,340.33,601.03,424.38,0.4844,,0.0

@@ -45,6 +45,7 @@ from __future__ import annotations
 
 import json
 import logging
+import os
 import re
 import time
 import gc
@@ -215,8 +216,8 @@ class Sam3NativeEngine(_Engine):
 
     @torch.inference_mode()
     def predict_raw(self, image, text_prompt, conf_threshold, max_detections=100):
-        pil = Image.fromarray(image).convert("RGB")
         h, w = image.shape[:2]
+        pil = Image.fromarray(image).convert("RGB")
 
         autocast = (
             torch.autocast(device_type="cuda", dtype=torch.bfloat16)
@@ -286,8 +287,9 @@ class CosmosReason2Engine(_Engine):
 
     @torch.inference_mode()
     def predict_raw(self, image, text_prompt, conf_threshold, max_detections=100):
-        pil = Image.fromarray(image).convert("RGB")
         h, w = image.shape[:2]
+        max_side = _positive_int_env("PROMPTDETECT_COSMOS_MAX_SIDE", 1536)
+        pil = _downscale_max_side(Image.fromarray(image).convert("RGB"), max_side)
 
         messages = [{
             "role": "user",
@@ -313,6 +315,9 @@ class CosmosReason2Engine(_Engine):
         boxes, labels = _parse_json_boxes(reply, w, h, default_label=text_prompt.strip())
         scores = [1.0] * len(boxes)           # VLM gives no per-box confidence
         masks: List[Optional[np.ndarray]] = []  # boxes only
+        # Drop the large visual-token tensors before the next image. The worker
+        # process still provides the hard allocator cleanup boundary.
+        del generated, inputs, messages, pil
         return boxes, scores, labels, masks
 
     def close(self) -> None:
@@ -813,6 +818,15 @@ class DetectionBackend:
 def _generation_token_budget(max_detections: int, tokens_per_box: int) -> int:
     """Bound VLM decoding to the number of boxes the caller can retain."""
     return max(96, min(768, int(max_detections) * tokens_per_box + 64))
+
+
+def _positive_int_env(name: str, default: int) -> int:
+    """Read a positive integer execution bound without accepting unsafe zeroes."""
+    try:
+        value = int(os.getenv(name, str(default)))
+    except (TypeError, ValueError):
+        value = default
+    return value if value > 0 else default
 
 
 def _release_torch_memory() -> None:

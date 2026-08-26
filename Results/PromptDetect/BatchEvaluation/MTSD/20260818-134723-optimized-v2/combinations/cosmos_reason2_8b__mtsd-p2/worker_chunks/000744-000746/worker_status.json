@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "Cosmos Reason2 8B",
+  "prompt_id": "mtsd-p2",
+  "prompt": "stop sign",
+  "image_start": 744,
+  "image_end": 747,
+  "n_images": 3,
+  "n_prediction_rows": 3,
+  "max_detections": 18,
+  "nms_iou_threshold": 0.5,
+  "cosmos_max_side": 1536,
+  "model_status": {
+    "model": "Cosmos Reason2 8B",
+    "model_load_ms": 15355.9,
+    "ok": true,
+    "label": "Cosmos Reason2 8B",
+    "source": "nvidia/Cosmos-Reason2-8B",
+    "detail": "Qwen3-VL grounding (JSON bbox), boxes only",
+    "device": "CUDA \u2014 NVIDIA GeForce RTX 4090",
+    "error": ""
+  },
+  "started_at": "2026-08-21T04:07:28.049212+00:00",
+  "finished_at": "2026-08-21T04:07:54.425747+00:00"
+}

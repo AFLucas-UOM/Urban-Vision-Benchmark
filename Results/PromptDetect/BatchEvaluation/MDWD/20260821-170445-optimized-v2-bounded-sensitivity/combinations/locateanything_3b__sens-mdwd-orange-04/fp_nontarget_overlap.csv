@@ -1,0 +1,395 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,199.04,304.0,314.88,446.08,1.0,Organic Waste,0.9401
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,268.16,263.68,378.88,376.96,1.0,Organic Waste,0.968
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20241213_080403_jpg.rf.3dcbef4810d284601796c30ae5e851ed.jpg,307.84,339.84,424.96,446.72,1.0,Organic Waste,0.9626
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,193.92,218.24,296.96,360.96,1.0,Mixed Waste,0.7964
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20241214_081052_jpg.rf.3d0f98abbde837ea01a63e4c1b0226ac.jpg,273.92,229.12,446.72,387.84,1.0,Mixed Waste,0.8375
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,243.84,339.84,337.92,453.12,1.0,Organic Waste,0.837
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,305.92,302.08,376.96,396.16,1.0,Organic Waste,0.717
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,307.84,414.72,337.28,453.12,1.0,,0.0888
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,309.76,398.72,337.28,423.04,1.0,,0.0526
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,318.72,398.72,337.28,453.12,1.0,,0.0793
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,328.32,398.72,337.28,453.12,1.0,,0.0383
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,333.44,398.72,337.28,453.12,1.0,,0.0164
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_071247_jpg.rf.060ff2375b4767885bf75a27408ed282.jpg,169.28,172.16,506.56,625.28,1.0,,0.0833
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,112.0,293.76,192.0,430.08,1.0,Organic Waste,0.9129
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,181.12,211.2,250.24,295.04,1.0,Organic Waste,0.8144
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,238.72,311.04,337.28,440.96,1.0,Organic Waste,0.958
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,243.84,225.92,330.24,328.96,1.0,Organic Waste,0.7215
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,284.16,160.0,350.08,240.0,1.0,Organic Waste,0.7464
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250103_072230_jpg.rf.07b75bf6dc49626b0cfb84621cbad626.jpg,295.68,250.88,352.0,334.08,1.0,Organic Waste,0.7209
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250114_102613_jpg.rf.83447af29c6413aa1b9372ac635283f4.jpg,241.92,295.68,417.28,403.84,1.0,Organic Waste,0.9304
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,20250114_102613_jpg.rf.83447af29c6413aa1b9372ac635283f4.jpg,600.32,353.28,638.72,398.72,1.0,Other Waste,0.8724
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,30_jpeg.rf.b5cf601d6f44e0addb177394ba5d4b99.jpg,245.76,268.16,337.92,337.28,1.0,,0.2069
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,30_jpeg.rf.b5cf601d6f44e0addb177394ba5d4b99.jpg,257.28,268.16,337.28,307.2,1.0,,0.1014
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,462550919_472395952520841_3814266194193640989_n_jpg.rf.fc306e80f8b545c1d4d71d3b6076ffaa.jpg,110.08,172.16,465.92,346.88,1.0,,0.4845
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,462550919_472395952520841_3814266194193640989_n_jpg.rf.fc306e80f8b545c1d4d71d3b6076ffaa.jpg,369.92,151.04,419.2,188.16,1.0,,0.0143
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,462550919_472395952520841_3814266194193640989_n_jpg.rf.fc306e80f8b545c1d4d71d3b6076ffaa.jpg,389.76,183.04,417.92,295.68,1.0,,0.0247
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,462550919_472395952520841_3814266194193640989_n_jpg.rf.fc306e80f8b545c1d4d71d3b6076ffaa.jpg,389.76,259.84,433.92,327.68,1.0,,0.0233
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,462550919_472395952520841_3814266194193640989_n_jpg.rf.fc306e80f8b545c1d4d71d3b6076ffaa.jpg,389.76,284.8,433.92,298.24,1.0,,0.0046
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,472129425_1345249006899593_1932127883326922457_n_jpg.rf.03069b893f513bced6e53fce77c8d53c.jpg,188.8,149.76,348.16,369.28,1.0,Mixed Waste,0.969
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,472129425_1345249006899593_1932127883326922457_n_jpg.rf.03069b893f513bced6e53fce77c8d53c.jpg,275.84,149.12,407.04,298.88,1.0,Mixed Waste,0.7925
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,222.72,161.28,284.16,206.72,1.0,,0.0455
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,257.28,184.32,334.08,231.68,1.0,,0.0593
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,305.92,135.68,378.88,206.08,1.0,,0.0837
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,334.08,225.28,394.24,256.0,1.0,,0.0464
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,378.88,195.84,410.24,224.0,1.0,,0.0269
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,417.28,211.84,458.24,256.0,1.0,,0.1352
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,419.84,154.24,460.16,216.32,1.0,,0.1871
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,440.32,216.32,462.72,256.0,1.0,,0.0665
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,473764930_2003884826785638_3797710432300444076_n_jpg.rf.b78b76a2233d502467294d18b977d11a.jpg,440.96,0.0,453.12,35.2,1.0,,0.1371
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_1_13_jpeg.rf.8c727f8067b82177be353ac5ebeca4f1.jpg,300.16,161.92,344.32,199.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_1_13_jpeg.rf.8c727f8067b82177be353ac5ebeca4f1.jpg,304.0,188.16,359.04,220.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_30_jpeg.rf.399e64bccb44d80fa05c2372ef8a2a0d.jpg,350.08,433.92,469.12,504.32,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_30_jpeg.rf.399e64bccb44d80fa05c2372ef8a2a0d.jpg,465.92,433.92,533.76,504.32,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_36_jpeg.rf.bbdedbb8ba216b5178969e02bdc8fb0b.jpg,293.12,417.92,316.16,439.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,204.16,259.84,282.88,378.24,1.0,,0.0988
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,257.92,250.24,403.84,391.04,1.0,,0.0297
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,604.16,168.96,638.72,256.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,0.0,352.0,78.72,560.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,161.92,0.0,385.28,373.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_82_jpeg.rf.4b59b3179a198ea33d5840967544bdb3.jpg,282.88,314.88,300.8,336.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,316.16,382.08,494.08,492.16,1.0,,0.0556
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,380.16,474.24,428.16,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,408.32,485.12,446.72,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,442.88,487.68,465.28,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,460.16,485.12,481.92,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,476.16,485.12,494.08,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,485.12,485.12,501.12,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,497.28,485.12,512.0,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,508.16,485.12,526.08,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,519.68,485.12,540.16,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,533.12,485.12,554.24,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,545.92,485.12,568.96,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,558.08,485.12,586.24,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,568.32,485.12,600.32,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,579.84,485.12,616.96,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,593.28,485.12,638.72,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,616.96,485.12,638.72,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,629.76,485.12,638.72,519.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_19_jpeg.rf.bbd664688760cfb02be22b12188d3ea0.jpg,321.28,277.76,359.68,327.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_19_jpeg.rf.bbd664688760cfb02be22b12188d3ea0.jpg,341.76,277.76,382.08,325.12,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,289.92,350.08,334.08,394.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,318.08,368.0,332.16,394.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,332.16,368.0,346.24,394.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,346.24,369.92,359.68,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,359.68,369.92,373.76,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,373.76,371.84,389.76,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,389.76,373.76,401.28,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,401.28,373.76,410.24,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,410.24,373.76,421.12,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,421.12,373.76,432.0,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,501.12,373.76,506.24,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,504.96,373.76,510.72,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,510.08,373.76,515.84,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,515.2,373.76,520.96,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,519.68,373.76,526.08,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,524.8,373.76,529.92,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,533.76,373.76,538.88,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,542.72,373.76,547.84,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,551.68,373.76,556.8,394.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,145.28,248.32,167.04,277.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,152.32,234.24,172.16,295.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,163.2,234.24,172.16,295.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,167.68,234.24,172.16,295.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,170.24,234.24,172.16,295.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,86.72,86.4,258.88,382.08,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch9_11_jpeg.rf.4126636e69402c1d283355333ce014ab.jpg,208.0,0.0,266.24,117.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch9_11_jpeg.rf.4126636e69402c1d283355333ce014ab.jpg,332.16,0.0,638.72,179.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL-NewBatch9_11_jpeg.rf.4126636e69402c1d283355333ce014ab.jpg,448.0,138.88,638.72,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,451.2,280.96,494.72,364.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,501.12,289.92,558.08,355.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_23_jpeg.rf.de04df4b7314fabfd8e3828db536247b.jpg,501.12,261.76,638.72,339.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,0.0,108.16,44.8,177.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,0.0,174.72,88.32,252.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,0.0,243.84,110.08,369.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,44.8,152.96,99.84,231.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,71.04,120.96,103.68,161.28,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,149.76,122.24,192.0,199.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,151.04,177.92,192.0,266.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,177.92,133.12,216.32,200.96,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,195.2,138.88,291.2,266.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,289.92,122.88,350.08,236.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,311.04,227.2,455.04,337.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,348.16,147.84,499.2,229.12,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,428.16,163.2,609.28,339.2,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,440.96,245.76,590.08,321.28,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,540.16,307.84,608.0,337.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,600.32,307.84,638.72,336.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_38_jpeg.rf.4b95816ea6ebd56c2d1dc192d358948b.jpg,334.08,154.88,396.8,202.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_38_jpeg.rf.4b95816ea6ebd56c2d1dc192d358948b.jpg,391.04,197.12,446.72,307.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,AFL_NewBatch3_53_jpeg.rf.9e5bf2183fc4b923c9ee1501592a41f9.jpg,355.2,0.0,476.8,19.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_80_jpeg.rf.93908175256bdc7e36dbfbe03cf757c7.jpg,339.2,343.04,517.12,451.84,1.0,Organic Waste,0.9683
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_80_jpeg.rf.93908175256bdc7e36dbfbe03cf757c7.jpg,357.12,359.68,490.88,430.08,1.0,Organic Waste,0.5024
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_E_7_jpeg.rf.751f2e9d7aa713ca24fc59fe52c4a209.jpg,193.28,177.28,371.84,368.0,1.0,Organic Waste,0.9245
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_AFL_E_7_jpeg.rf.751f2e9d7aa713ca24fc59fe52c4a209.jpg,579.84,106.24,638.72,145.92,1.0,Other Waste,0.8658
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_SDM_64_jpg.rf.ee088bd38a2c3c95b2da82373aaac73e.jpg,122.88,124.16,419.2,433.92,1.0,Organic Waste,0.9206
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_SDM_64_jpg.rf.ee088bd38a2c3c95b2da82373aaac73e.jpg,369.92,312.32,401.92,339.84,1.0,,0.0092
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_82_jpg.rf.5b857cd999783b45fe9d87f41bd735fe.jpg,448.0,33.28,551.68,188.8,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_82_jpg.rf.5b857cd999783b45fe9d87f41bd735fe.jpg,469.12,53.12,490.24,67.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,ARI3129_TK_82_jpg.rf.5b857cd999783b45fe9d87f41bd735fe.jpg,469.76,42.24,526.08,65.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_111_jpeg.rf.3c51eaf018327ebbff3d383cfcd741b4.jpg,213.12,156.8,220.16,172.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_111_jpeg.rf.3c51eaf018327ebbff3d383cfcd741b4.jpg,225.28,152.32,234.24,163.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_116_jpeg.rf.3b3c65910f1fb0fbcc4569d641871643.jpg,362.24,199.68,373.76,209.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_131_jpeg.rf.e4689cf06851282cb99fc61669a8fc16.jpg,455.04,193.28,474.88,202.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_131_jpeg.rf.e4689cf06851282cb99fc61669a8fc16.jpg,467.2,193.28,556.16,533.12,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,574.08,312.32,579.84,339.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,593.92,312.32,597.76,339.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,595.84,312.32,600.32,339.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,600.32,312.32,604.16,339.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,600.32,312.32,609.28,339.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_1_jpeg.rf.f7454e1ea82debb5842b648a435a47c5.jpg,286.72,216.32,464.0,371.84,1.0,Mixed Waste,0.9624
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_39_jpeg.rf.e9a6b47832761d98991f461486c28b23.jpg,152.32,330.88,428.16,535.04,1.0,Other Waste,0.94
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_39_jpeg.rf.e9a6b47832761d98991f461486c28b23.jpg,238.08,295.04,353.28,350.08,1.0,Recyclable Material,0.9037
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_39_jpeg.rf.e9a6b47832761d98991f461486c28b23.jpg,286.72,309.12,352.0,348.16,1.0,,0.3757
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_43_jpeg.rf.7ad2150ca57fd7d4f9339f170104fbd5.jpg,321.28,206.08,464.0,272.0,1.0,Mixed Waste,0.9449
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_43_jpeg.rf.7ad2150ca57fd7d4f9339f170104fbd5.jpg,359.68,145.92,414.08,179.84,1.0,,0.2673
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_69_jpeg.rf.abd58f54c6dd55ee439e3d9b9cd97aa8.jpg,110.08,186.88,211.84,344.32,1.0,,0.0347
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_69_jpeg.rf.abd58f54c6dd55ee439e3d9b9cd97aa8.jpg,0.0,227.2,122.88,288.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_79_jpeg.rf.e55883045699d8dfa9c9aa6bc12bbef2.jpg,323.84,120.32,359.68,124.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,266.24,282.24,300.8,304.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,289.92,339.84,394.24,442.24,1.0,Recyclable Material,0.9537
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,307.2,227.84,362.24,240.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,307.84,176.0,350.08,291.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_93_jpeg.rf.c82f8551eefe1d579e000f6adfcfbd3d.jpg,545.28,67.84,561.28,81.28,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,CMD-Batch1_93_jpeg.rf.c82f8551eefe1d579e000f6adfcfbd3d.jpg,281.28,29.12,640.0,110.4,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,359.68,272.0,638.72,1.0,Mixed Waste,0.942
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,16.0,186.24,293.76,417.28,1.0,Mixed Waste,0.8994
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106064808_jpg.rf.a9dad3f353f907f063471251fac869bd.jpg,376.32,293.12,405.12,309.76,1.0,,0.0819
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106064808_jpg.rf.a9dad3f353f907f063471251fac869bd.jpg,394.24,321.28,414.08,341.12,1.0,,0.0673
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106064808_jpg.rf.a9dad3f353f907f063471251fac869bd.jpg,398.72,323.84,421.12,339.84,1.0,,0.0612
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106065829_jpg.rf.13e356e3a46499a3c8b2162c6f8df515.jpg,284.16,236.16,355.84,284.16,1.0,Organic Waste,0.7361
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106065829_jpg.rf.13e356e3a46499a3c8b2162c6f8df515.jpg,321.92,215.04,396.16,273.28,1.0,Organic Waste,0.9558
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106065829_jpg.rf.13e356e3a46499a3c8b2162c6f8df515.jpg,323.84,216.32,355.84,284.16,1.0,,0.399
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106072418_jpg.rf.3d814d5b8012adcbd70fece9b5978672.jpg,236.8,304.0,309.12,355.84,1.0,Organic Waste,0.8806
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106072418_jpg.rf.3d814d5b8012adcbd70fece9b5978672.jpg,263.04,266.24,327.68,327.68,1.0,Organic Waste,0.8676
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106072418_jpg.rf.3d814d5b8012adcbd70fece9b5978672.jpg,275.2,243.84,300.16,277.76,1.0,,0.0733
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG20250106072418_jpg.rf.3d814d5b8012adcbd70fece9b5978672.jpg,510.08,391.04,540.8,410.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,122.88,202.88,318.08,435.84,1.0,Mixed Waste,0.9669
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,229.76,444.16,481.28,595.84,1.0,Organic Waste,0.9614
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,307.84,259.84,501.12,455.04,1.0,Mixed Waste,0.9462
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,369.28,48.0,586.24,234.88,1.0,Mixed Waste,0.976
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,259.84,142.08,499.84,321.92,1.0,Mixed Waste,0.9487
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,151.04,58.24,376.96,193.28,1.0,Mixed Waste,0.928
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,53.76,142.72,268.16,268.16,1.0,Mixed Waste,0.8299
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0200_JPG.rf.aad0d8ec01fbfb9b325f48fce8deef84.jpg,309.12,202.24,410.24,321.28,1.0,,0.2865
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0789_jpeg.rf.a115e802da3b048429fb0d31134d452d.jpg,71.04,368.0,300.16,478.08,1.0,Mixed Waste,0.9522
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_0789_jpeg.rf.a115e802da3b048429fb0d31134d452d.jpg,101.76,369.28,243.84,456.96,1.0,Mixed Waste,0.5101
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,270.72,152.32,337.92,293.12,1.0,Recyclable Material,0.6314
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,320.0,211.84,385.92,309.76,1.0,Recyclable Material,0.8331
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,352.0,231.68,435.84,376.32,1.0,Recyclable Material,0.8629
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,359.68,266.24,410.24,341.76,1.0,,0.2717
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,371.84,295.04,414.72,341.12,1.0,,0.1406
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,254.72,179.2,337.28,263.04,1.0,Other Waste,0.5393
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,288.0,250.88,337.28,316.8,1.0,,0.3017
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1083_converted_jpg.rf.dd23ce25e6242e29fb5f7812d74e70a7.jpg,291.84,250.88,337.28,263.04,1.0,,0.0517
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1780-2_JPG.rf.2feb7461e23e43c8e8c28c2344e91744.jpg,286.08,197.12,325.12,263.04,1.0,,0.3092
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1780-2_JPG.rf.2feb7461e23e43c8e8c28c2344e91744.jpg,289.92,199.68,307.84,256.0,1.0,,0.1213
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1780-2_JPG.rf.2feb7461e23e43c8e8c28c2344e91744.jpg,295.68,199.68,314.24,250.88,1.0,,0.1142
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1780-2_JPG.rf.2feb7461e23e43c8e8c28c2344e91744.jpg,302.08,199.68,321.28,250.88,1.0,,0.1181
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1780-2_JPG.rf.2feb7461e23e43c8e8c28c2344e91744.jpg,311.04,199.68,323.2,250.88,1.0,,0.0748
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1780-2_JPG.rf.2feb7461e23e43c8e8c28c2344e91744.jpg,318.08,199.68,323.2,250.88,1.0,,0.0315
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1780-2_JPG.rf.2feb7461e23e43c8e8c28c2344e91744.jpg,162.24,74.24,485.44,325.12,1.0,,0.1026
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,78.08,428.8,136.96,512.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,92.8,176.0,128.0,204.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,110.72,291.2,158.08,339.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,122.24,161.28,156.16,190.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,126.72,184.96,163.2,213.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,133.76,453.76,197.12,538.88,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,147.84,270.08,195.2,312.32,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,156.8,172.16,193.92,199.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,156.8,307.2,202.24,359.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,193.28,284.16,238.72,330.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,327.68,423.68,382.08,472.96,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,337.92,334.72,394.88,391.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,355.84,389.12,419.84,455.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,444.16,472.32,522.24,547.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,485.12,474.24,540.16,512.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,515.84,506.24,604.16,586.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,538.24,469.12,638.72,538.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,577.28,529.92,638.72,622.08,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,620.16,600.32,638.72,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,625.92,458.24,638.72,481.28,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,627.84,481.28,638.72,506.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,629.12,506.24,638.72,529.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1837-2_JPG.rf.3ae04597406133092c9e9b5aa929ab0b.jpg,312.96,288.96,640.0,640.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1864-2_jpg.rf.4a652b55d26cd0148eafe1befb1bf728.jpg,314.88,373.12,453.12,519.68,1.0,Organic Waste,0.9535
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1864-2_jpg.rf.4a652b55d26cd0148eafe1befb1bf728.jpg,378.88,485.12,403.2,510.72,1.0,,0.0322
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1876-2_JPG.rf.a7e9f498d70b0160c108badec0d82968.jpg,209.28,252.16,357.76,334.08,1.0,Other Waste,0.6728
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1876-2_JPG.rf.a7e9f498d70b0160c108badec0d82968.jpg,209.92,213.76,344.96,263.04,1.0,,0.3622
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1876-2_JPG.rf.a7e9f498d70b0160c108badec0d82968.jpg,209.92,289.28,302.72,332.16,1.0,,0.2204
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1876-2_JPG.rf.a7e9f498d70b0160c108badec0d82968.jpg,211.84,156.8,307.84,229.76,1.0,Organic Waste,0.8682
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_1980_JPG.rf.37af8c83756b699162c8354ac0b5d79a.jpg,336.0,268.16,403.84,280.32,1.0,,0.0179
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,289.92,90.24,364.8,236.16,1.0,Recyclable Material,0.9636
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,325.12,53.76,353.28,222.08,1.0,Other Waste,0.6022
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,373.76,200.96,391.04,222.08,1.0,Other Waste,0.772
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,396.16,149.76,474.24,192.0,1.0,Other Waste,0.9626
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,398.08,172.16,423.04,192.0,1.0,,0.1445
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,423.04,172.16,440.32,192.0,1.0,,0.1001
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,440.32,172.16,449.28,192.0,1.0,,0.0519
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,449.28,172.16,460.16,192.0,1.0,,0.063
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,460.16,172.16,472.32,192.0,1.0,,0.0704
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,629.76,218.24,638.72,231.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241114_082102_jpg.rf.14307b14ca532b8004a5a996782d3c32.jpg,632.32,220.16,638.72,236.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,213.12,81.28,353.28,275.2,1.0,Organic Waste,0.9447
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,243.84,220.16,259.84,259.84,1.0,,0.0224
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,248.32,224.0,309.12,243.84,1.0,,0.0426
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,270.72,172.16,312.32,224.0,1.0,,0.0761
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,275.2,156.8,312.32,181.76,1.0,,0.0327
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,277.76,133.76,312.32,156.8,1.0,,0.0281
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,280.32,106.24,312.32,136.96,1.0,,0.0347
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,282.88,133.76,312.32,179.84,1.0,,0.0479
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20241213_073608_jpg.rf.eaa72004d680945f0afe2f9ad165ed4d.jpg,284.16,179.84,312.32,211.84,1.0,,0.0318
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,0.0,510.72,112.0,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,19.84,455.04,133.12,545.28,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,62.08,494.08,252.16,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,94.08,604.16,147.84,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,94.72,405.76,259.2,547.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,163.84,369.28,272.0,449.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,199.68,499.84,398.08,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,211.84,407.04,391.04,547.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,216.32,604.16,291.2,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,225.28,336.0,389.76,449.92,1.0,,0.0335
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,330.88,339.84,497.92,446.72,1.0,,0.0481
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,334.08,499.84,538.24,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,334.72,408.96,520.96,551.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,366.08,609.28,435.84,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,407.04,311.04,490.88,368.0,1.0,,0.1167
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,446.72,330.24,620.8,451.2,1.0,,0.014
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,451.84,407.04,638.72,549.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,460.16,266.24,597.76,366.72,1.0,,0.0325
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,469.12,501.76,638.72,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,524.8,264.96,560.0,298.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,526.08,608.0,583.68,638.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,544.0,282.88,624.0,332.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,556.8,332.16,638.72,419.2,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,579.84,414.08,638.72,496.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,597.76,506.24,638.72,583.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,602.24,305.92,638.72,353.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,629.76,245.76,638.72,284.8,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,152.96,245.76,263.04,327.68,1.0,Organic Waste,0.9622
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,243.84,202.88,332.8,259.84,1.0,Organic Waste,0.889
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,272.0,197.76,353.92,220.16,1.0,,0.3976
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,424.96,231.04,476.16,263.68,1.0,Other Waste,0.9355
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,517.12,449.92,540.8,471.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,577.92,391.68,590.72,405.12,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,593.28,330.24,608.0,355.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,600.32,327.68,625.92,339.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,604.16,339.84,638.72,359.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,288.64,188.48,640.0,525.76,1.0,,0.0214
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,613.12,359.68,638.72,364.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,615.68,359.68,638.72,369.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,620.16,359.68,638.72,378.24,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,627.2,359.68,638.72,385.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072151_jpg.rf.fbf20a2f9fe1eb271832f03a04cf76d5.jpg,632.32,359.68,638.72,392.96,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072730_jpg.rf.04c94d8351ffdfbd2d7391c96b474256.jpg,158.08,250.24,280.96,348.8,1.0,Organic Waste,0.8059
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250106_072730_jpg.rf.04c94d8351ffdfbd2d7391c96b474256.jpg,259.2,224.0,382.08,316.16,1.0,Organic Waste,0.939
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_20250109_074213_jpg.rf.70a8bd28946b36ece01a48b9cdfaa26d.jpg,213.76,0.0,327.04,199.04,1.0,Other Waste,0.9885
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,28.16,188.16,325.12,417.92,1.0,Recyclable Material,0.9835
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,238.08,224.0,414.72,339.84,1.0,Other Waste,0.8995
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,339.84,120.32,515.84,263.68,1.0,Recyclable Material,0.9436
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,350.08,193.92,421.76,238.72,1.0,,0.1276
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,403.2,193.28,433.92,218.24,1.0,,0.0305
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,410.24,165.76,481.28,206.08,1.0,,0.1138
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,412.16,199.68,481.28,236.16,1.0,,0.1002
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,173.44,98.88,640.0,292.8,1.0,,0.2781
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4230_JPG.rf.b064ad551265db0369e9bf1f618d0b83.jpg,414.72,193.92,481.28,199.68,1.0,,0.0152
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,0.0,218.88,62.72,396.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,229.12,32.0,378.88,241.28,1.0,,0.1491
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,323.2,129.28,398.08,394.24,1.0,,0.31
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,382.72,14.72,405.76,113.28,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,538.24,42.88,600.32,186.24,1.0,,0.0104
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,540.16,0.0,638.72,37.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4293_JPG.rf.2ee41cac427df29aa0348a1fdf3ba43a.jpg,590.08,0.0,638.72,37.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4384_JPG.rf.b89fff6257bced61fff24d71d5c96809.jpg,172.16,268.16,188.8,291.2,1.0,,0.0266
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4384_JPG.rf.b89fff6257bced61fff24d71d5c96809.jpg,197.76,289.92,216.32,321.28,1.0,,0.0403
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4384_JPG.rf.b89fff6257bced61fff24d71d5c96809.jpg,229.12,295.04,252.16,323.2,1.0,,0.0449
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4384_JPG.rf.b89fff6257bced61fff24d71d5c96809.jpg,252.16,295.68,279.04,316.16,1.0,,0.0381
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4384_JPG.rf.b89fff6257bced61fff24d71d5c96809.jpg,256.0,295.04,279.04,304.0,1.0,,0.0143
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,0.0,200.96,14.4,478.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,0.0,341.76,28.8,389.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,0.0,419.2,65.92,494.08,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,0.0,245.76,129.92,364.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,0.0,327.04,181.76,472.96,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,0.0,179.84,85.76,277.76,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,0.0,163.2,113.28,215.04,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,53.12,204.16,197.12,289.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,88.32,241.92,273.28,384.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,190.08,241.28,300.16,305.28,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,300.16,0.0,638.72,638.72,1.0,,0.0964
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,343.04,179.2,483.84,314.88,1.0,Organic Waste,0.9165
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,472.32,199.68,542.08,254.08,1.0,,0.04
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4398_JPG.rf.83b60305e9efa040fa94d0b934e5e7d1.jpg,485.12,0.0,638.72,211.84,1.0,,0.0031
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_JPG.rf.a40bfe5dc594ca8f8b19a657df19a24b.jpg,225.92,149.76,389.76,302.08,1.0,Organic Waste,0.9086
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_JPG.rf.a40bfe5dc594ca8f8b19a657df19a24b.jpg,250.88,206.72,300.16,243.84,1.0,,0.0666
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_JPG.rf.a40bfe5dc594ca8f8b19a657df19a24b.jpg,266.24,273.28,321.28,295.04,1.0,,0.0436
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_JPG.rf.a40bfe5dc594ca8f8b19a657df19a24b.jpg,268.16,252.16,344.32,282.88,1.0,,0.0852
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_JPG.rf.a40bfe5dc594ca8f8b19a657df19a24b.jpg,312.32,252.16,364.16,277.76,1.0,,0.0483
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_JPG.rf.a40bfe5dc594ca8f8b19a657df19a24b.jpg,337.92,252.16,366.08,268.16,1.0,,0.0164
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_jpg.rf.dfd53b0debc27c7095a817bcea1e7804.jpg,298.24,176.0,330.24,250.88,1.0,,0.3662
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_4399_jpg.rf.dfd53b0debc27c7095a817bcea1e7804.jpg,357.12,184.96,376.96,232.96,1.0,,0.1741
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_5811_JPG.rf.7d14868bfb97d93f7e4b11e0317bae95.jpg,245.76,225.92,316.16,288.0,1.0,Organic Waste,0.9252
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_5811_JPG.rf.7d14868bfb97d93f7e4b11e0317bae95.jpg,261.76,225.28,291.2,286.72,1.0,,0.4011
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,330.24,254.72,440.32,369.92,1.0,,0.0154
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8840_jpeg.rf.e81302474b616be782c62f783c50f9ef.jpg,371.84,366.08,440.32,396.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,204.16,382.72,364.8,465.92,1.0,Mixed Waste,0.8473
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,216.32,300.8,334.08,353.28,1.0,Mixed Waste,0.9039
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,216.96,341.76,357.76,398.08,1.0,Mixed Waste,0.6441
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,222.72,430.72,385.92,536.32,1.0,Mixed Waste,0.667
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,113.28,223.04,466.56,420.8,1.0,,0.1715
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,291.84,147.84,336.0,179.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,291.84,165.76,336.0,195.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,291.84,165.76,336.0,179.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,7.68,236.16,120.96,378.24,1.0,,0.0595
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,8.96,131.84,55.04,161.28,1.0,Organic Waste,0.8814
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,42.24,149.12,149.76,199.68,1.0,,0.3606
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,144.0,163.84,158.08,197.12,1.0,,0.0389
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,145.92,113.92,154.24,165.12,1.0,,0.0558
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,309.76,216.32,512.0,336.0,1.0,Organic Waste,0.5974
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,378.24,113.92,561.28,346.88,1.0,,0.2431
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,487.04,131.84,540.16,188.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,513.92,131.84,540.16,188.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,528.0,131.84,540.16,188.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,534.4,131.84,540.16,188.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,538.24,131.84,540.16,188.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_118_jpg.rf.751a9f8b4b5b4b48a2f64fb3f275db64.jpg,270.72,37.76,640.0,225.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,72.96,231.04,286.72,624.0,1.0,Recyclable Material,0.9074
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,236.8,67.2,389.76,414.72,1.0,Recyclable Material,0.9401
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,348.16,1.28,453.12,216.96,1.0,Recyclable Material,0.9422
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,270.08,279.04,327.68,359.04,1.0,,0.0815
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,337.92,163.84,380.16,252.16,1.0,,0.0748
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,350.08,199.68,385.92,291.2,1.0,,0.058
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,201.6,15.68,577.92,228.8,1.0,,0.2742
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_20_jpg.rf.8c91705062bd43ae087945b6a7b939c1.jpg,391.68,124.16,435.84,211.84,1.0,,0.1615
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_51_jpg.rf.a1a6c477482754d254bc147983926134.jpg,190.08,200.96,236.8,316.16,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_51_jpg.rf.a1a6c477482754d254bc147983926134.jpg,199.68,272.0,225.28,307.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_51_jpg.rf.a1a6c477482754d254bc147983926134.jpg,199.68,200.96,218.24,272.0,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,220.16,234.24,357.76,321.28,1.0,Organic Waste,0.9309
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,261.76,289.92,469.12,405.12,1.0,Organic Waste,0.9792
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,263.68,339.84,355.84,403.84,1.0,,0.2522
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,353.28,341.12,389.76,403.84,1.0,,0.0978
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,389.76,339.84,453.76,403.2,1.0,,0.1734
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_72_jpg.rf.a466579d42cb532b261671de0845d756.jpg,444.8,327.68,469.12,401.92,1.0,,0.0768
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,355.84,110.08,440.32,327.68,1.0,Mixed Waste,0.9669
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,410.24,168.96,512.0,360.96,1.0,Mixed Waste,0.9054
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,289.92,110.08,384.0,284.8,1.0,Mixed Waste,0.9597
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,300.16,254.08,426.88,400.0,1.0,Mixed Waste,0.7994
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,94.08,275.84,218.24,536.96,1.0,Mixed Waste,0.9862
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,209.28,197.12,305.92,451.84,1.0,Mixed Waste,0.9527
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,318.08,88.96,376.32,122.24,1.0,Other Waste,0.5418
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,206.08,128.0,275.84,179.2,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,256.0,113.28,311.04,161.28,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,316.16,126.08,344.96,135.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,344.96,0.0,430.72,7.68,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,344.96,7.04,430.72,46.72,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,344.96,46.08,428.16,81.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,344.96,81.28,426.88,115.84,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,344.96,113.92,419.84,145.92,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PHOTO-2024-12-26-07-09-05_jpg.rf.fe782e99ace7cb6ae4e2e124fc030592.jpg,344.96,145.92,419.84,206.08,1.0,,0.0
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064324039-MP_jpg.rf.14da8fd358dd67f611f45f79feec4bbf.jpg,231.04,268.16,357.76,362.88,1.0,Organic Waste,0.6319
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064324039-MP_jpg.rf.14da8fd358dd67f611f45f79feec4bbf.jpg,266.24,295.68,316.16,353.92,1.0,,0.1556
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064324039-MP_jpg.rf.14da8fd358dd67f611f45f79feec4bbf.jpg,295.04,273.28,318.08,348.8,1.0,,0.0931
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064324039-MP_jpg.rf.14da8fd358dd67f611f45f79feec4bbf.jpg,307.84,272.0,346.24,348.8,1.0,,0.1578
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064444279_jpg.rf.fcd56876b1eea9222f981e515780c1e4.jpg,181.12,248.32,337.28,332.16,1.0,Organic Waste,0.9616
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064444279_jpg.rf.fcd56876b1eea9222f981e515780c1e4.jpg,213.76,231.68,337.92,298.88,1.0,Organic Waste,0.6881
+LocateAnything 3B,sens-mdwd-orange-04,find all orange waste bags,PXL_20241125_064444279_jpg.rf.fcd56876b1eea9222f981e515780c1e4.jpg,216.32,295.04,336.0,327.68,1.0,,0.3251

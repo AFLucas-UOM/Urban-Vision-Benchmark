@@ -1,0 +1,148 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,20241214_075842_jpg.rf.1891b8867310eeface2f0bc74a0dc490.jpg,240.0,223.36,358.4,394.88,1.0,Mixed Waste,0.9337
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,20241214_080220_jpg.rf.234574b4eb8647a6c3ed82f22a62b812.jpg,243.2,110.72,433.92,357.12,1.0,Mixed Waste,0.574
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,20241214_080238_jpg.rf.d135463be32b902dab5265e4564ae485.jpg,202.88,197.76,438.4,499.2,1.0,Mixed Waste,0.9424
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,20241214_081623_jpg.rf.f7aaa00411197af17d610f3891d8f207.jpg,227.84,167.04,360.96,266.88,1.0,Mixed Waste,0.8634
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,20250124_115555_jpg.rf.d9cd5b950662bca69f8c4f49336d7ca1.jpg,318.72,232.96,427.52,357.12,1.0,Other Waste,0.9428
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,20250124_115754_jpg.rf.f09908763acae851d2c8ed30353256db.jpg,168.96,163.2,336.64,323.2,1.0,Mixed Waste,0.9647
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,20250124_120520_jpg.rf.c987ae9fb81418ff52771c2a335bd188.jpg,259.2,200.96,330.88,327.68,1.0,,0.4638
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,462558199_1001990671958199_4561658825687510846_n_jpg.rf.4c287ea0dd3e02a8648b0d41ec1d3d83.jpg,0.0,362.88,218.88,608.64,1.0,Recyclable Material,0.9616
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,472788297_879958087384265_8846214687047667235_n_jpg.rf.90b70971ab4cbf4a8c8d3d540b858ddf.jpg,238.08,108.16,413.44,318.72,1.0,Mixed Waste,0.8696
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,473055810_1017914696762987_4178034688130709660_n_jpg.rf.f03f6b9a9f959d7dce7512e0d31dc6a1.jpg,273.28,320.0,406.4,431.36,1.0,Recyclable Material,0.9034
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,473314797_639061222116244_5729195119363315525_n_jpg.rf.d6671b2a7547d3b8eafb61831882cbdd.jpg,359.68,65.92,594.56,330.24,1.0,Recyclable Material,0.9618
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,473437598_1044987534334740_1719468698253840100_n_jpg.rf.93fb6945fd13b28776a738d10ab1fc88.jpg,158.72,62.08,345.6,205.44,1.0,Mixed Waste,0.8668
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch5_15_jpeg.rf.5dc21330fd6004b5fe9c6cdcf1a1732c.jpg,273.28,410.24,357.12,483.2,1.0,Recyclable Material,0.9301
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_30_jpeg.rf.399e64bccb44d80fa05c2372ef8a2a0d.jpg,285.44,432.64,532.48,503.04,1.0,Orange CMD,0.9661
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_36_jpeg.rf.bbdedbb8ba216b5178969e02bdc8fb0b.jpg,263.68,418.56,371.2,480.64,1.0,Orange CMD,0.924
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_40_jpeg.rf.41584ad8be2654c6380775654da6238a.jpg,97.28,217.6,333.44,369.92,1.0,Orange CMD,0.9608
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_41_jpeg.rf.62380990d4cb7b48d4ffab37e6a4512e.jpg,294.4,305.28,623.36,553.6,1.0,Orange CMD,0.9748
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_66_jpeg.rf.75f4585faca68c0a3642fbce04ca3ec7.jpg,140.16,205.44,216.32,350.08,1.0,Mixed Waste,0.5673
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_78_jpeg.rf.4b9e3ec13a417da31dc0abac0ff06069.jpg,163.2,288.0,430.08,549.12,1.0,Orange CMD,0.9679
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_83_jpeg.rf.6cc13ff41089668352f07368d32ec054.jpg,496.0,343.04,560.0,384.64,1.0,,0.0457
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_85_jpeg.rf.79aae13eef022dd2d7d90c4d0182f7f7.jpg,383.36,368.0,470.4,438.4,1.0,Orange CMD,0.8542
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch6_94_jpeg.rf.e15471f4e2b9f13849cd1f70018d6ac9.jpg,254.72,275.2,494.72,545.28,1.0,Orange CMD,0.93
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch7_40_jpg.rf.d79715216e7de40d828fd273f75c31bc.jpg,149.76,339.84,330.88,394.88,1.0,Orange CMD,0.9209
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch8_25_jpeg.rf.f4a2237c8b9ebf92d1c8e30de6ebe63d.jpg,101.12,231.68,216.32,307.84,1.0,Orange CMD,0.9159
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,147.84,284.16,244.48,368.0,1.0,Recyclable Material,0.6079
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,250.24,288.0,362.88,430.08,1.0,,0.4633
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,312.32,292.48,391.68,360.96,1.0,Recyclable Material,0.5481
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch8_37_jpeg.rf.1883d28593e616e79ca8b2e836b6e854.jpg,418.56,292.48,510.72,348.16,1.0,Other Waste,0.6345
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch9_11_jpeg.rf.4126636e69402c1d283355333ce014ab.jpg,160.0,109.44,365.44,252.8,1.0,Orange CMD,0.9551
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL-NewBatch9_12_jpeg.rf.439663c2acd785b36963c00338581b94.jpg,150.4,261.12,245.76,307.84,1.0,Orange CMD,0.9225
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL_NewBatch3_25_jpeg.rf.069bd1f2aa40571351ff75fa5c1994df.jpg,233.6,266.88,380.16,353.92,1.0,Orange CMD,0.9375
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL_NewBatch3_38_jpeg.rf.4b95816ea6ebd56c2d1dc192d358948b.jpg,266.88,156.16,444.16,309.12,1.0,Orange CMD,0.959
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,AFL_NewBatch3_57_jpeg.rf.65df70c80f13dc75e7ad76b812d937df.jpg,259.2,320.0,519.04,547.84,1.0,Recyclable Material,0.9586
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_AFL_13_jpeg.rf.3b2d222a7fb553564619bba08946664e.jpg,147.84,165.76,467.84,441.6,1.0,Mixed Waste,0.9661
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_AFL_88_jpeg.rf.d003f357baa77787fd77568c430ecd89.jpg,171.52,210.56,469.12,420.48,1.0,Mixed Waste,0.9522
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,286.08,192.64,396.16,375.04,1.0,Other Waste,0.95
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_SDM_23_jpg.rf.922f3b08d993fdaed3a142f2eeca663f.jpg,177.28,193.92,304.64,390.4,1.0,Other Waste,0.9703
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_SDM_29_jpg.rf.8b226744799c5e1605f8385be5fc3725.jpg,282.24,195.2,579.2,483.2,1.0,Mixed Waste,0.9762
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_SDM_69_jpg.rf.32e253b3a45b80b4d52b3ab590eb724d.jpg,87.68,32.64,310.4,314.88,1.0,Recyclable Material,0.9586
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_SDM_99_jpeg.rf.a4d0fdd81a97ad316e370313d851c98f.jpg,240.0,105.6,404.48,278.4,1.0,Recyclable Material,0.5234
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_TK_21_jpg.rf.e7fc13c2c3cd2a82bf7e0cc414513a7c.jpg,0.0,69.12,222.08,289.28,1.0,Mixed Waste,0.7683
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,ARI3129_TK_38_jpg.rf.671d8201ffe8cb20d15242ffd2314a4c.jpg,432.64,295.04,638.72,483.2,1.0,Recyclable Material,0.9426
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,CMD-Batch1_131_jpeg.rf.e4689cf06851282cb99fc61669a8fc16.jpg,430.08,323.2,592.64,423.04,1.0,Orange CMD,0.9636
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,CMD-Batch1_138_jpeg.rf.ad0dcccba7ec7ec465753ce1355090d3.jpg,72.96,410.24,126.72,431.36,1.0,Orange CMD,0.8382
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,CMD-Batch1_154_jpeg.rf.19166d7805818a35c045253065a12b6d.jpg,231.68,348.16,383.36,424.32,1.0,,0.2697
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,CMD-Batch1_3_jpeg.rf.e5c2dfc4821b22cd3e8a8bbd7d0d201c.jpg,195.2,195.2,304.64,270.08,1.0,Recyclable Material,0.7782
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,CMD-Batch1_5_jpeg.rf.9cf4282cc53b9b11fff40c8c8a876ed0.jpg,145.92,323.2,265.6,420.48,1.0,Recyclable Material,0.8577
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,CMD-Batch1_82_jpeg.rf.05df9653751a42ea7362d6f298e81071.jpg,297.6,339.84,391.68,441.6,1.0,Recyclable Material,0.9068
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,CMD-Batch1_88_jpeg.rf.bf5aa164958d0cd2482ce7224ebf29c6.jpg,320.0,532.48,496.0,634.88,1.0,Orange CMD,0.9017
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IllegalDumping_17_jpg.rf.03f87370361f62b6bf4dcb116f1f7e6c.jpg,0.0,109.44,305.28,372.48,1.0,Other Waste,0.5161
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IllegalDumping_2_JPG.rf.777dc55527a1016d48449d0a9527a1c5.jpg,216.32,179.84,275.2,305.28,1.0,,0.1088
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IllegalDumping_48_jpeg.rf.0e4b7f0cef362ff913350959077e3877.jpg,59.52,373.76,292.48,525.44,1.0,Mixed Waste,0.9775
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IllegalDumping_55_jpeg.rf.5e8de9324cfcca810d22a9395c6a455a.jpg,103.68,140.16,323.2,254.72,1.0,Recyclable Material,0.8662
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IllegalDumping_63_jpeg.rf.2949592c2f89825f9cf5f001bc46868e.jpg,156.16,130.56,404.48,373.76,1.0,Other Waste,0.858
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,image00042_jpeg.rf.b2466e61bc76e942d37dc702f18b81e4.jpg,168.96,248.96,446.72,424.32,1.0,Mixed Waste,0.7762
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,image00082_jpeg.rf.2a65a428911318f5f3442ffe3870263d.jpg,247.04,271.36,639.36,634.88,1.0,Mixed Waste,0.5962
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,image00083_jpeg.rf.f9009d8e506a69c5a9dc3d92ae5eb132.jpg,0.0,360.96,271.36,624.0,1.0,Mixed Waste,0.8859
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,115.2,330.24,218.88,514.56,1.0,Recyclable Material,0.8885
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,442.88,345.6,530.56,465.28,1.0,Recyclable Material,0.8108
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,460.8,410.24,591.36,593.28,1.0,Recyclable Material,0.8565
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,0.0,418.56,119.68,556.16,1.0,Recyclable Material,0.5848
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,189.44,418.56,318.72,590.08,1.0,Mixed Waste,0.6614
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,335.36,426.88,489.6,605.44,1.0,Mixed Waste,0.8279
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,imageedit_27_2058072492_jpg.rf.381bcb48ed3d07e889f70406b69a417d.jpg,560.0,431.36,634.88,574.72,1.0,Recyclable Material,0.6393
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,imageedit_9_8654318877_jpg.rf.118a4ab4d7d78c57339b763ca18f794a.jpg,380.16,338.56,444.16,476.16,1.0,Recyclable Material,0.5406
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG-20241230-WA0013_jpg.rf.76493a67373b4c640b121b6b5c7f1724.jpg,171.52,292.48,273.28,472.32,1.0,Mixed Waste,0.9532
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG20250106070329_jpg.rf.f61f2006072335cf78abccceebdc787e.jpg,318.72,285.44,412.8,310.4,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG20250107085454_jpg.rf.03f678b7d914e0a5a963f3e051cb0aa4.jpg,323.2,116.48,420.48,189.44,1.0,Mixed Waste,0.7489
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG20250107085725_jpg.rf.53a2bbc5094b71e31feedd0cf1513ef9.jpg,163.2,265.6,358.4,397.44,1.0,Mixed Waste,0.9561
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,265.6,89.6,384.64,258.56,1.0,Recyclable Material,0.8296
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,365.44,70.4,456.96,240.64,1.0,Recyclable Material,0.8586
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,436.48,49.28,540.8,188.16,1.0,Recyclable Material,0.8247
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,263.68,259.84,383.36,431.36,1.0,Recyclable Material,0.5842
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_0229_JPG.rf.361eb1972bfbb59796e90222373324d7.jpg,376.32,320.64,504.32,460.8,1.0,Recyclable Material,0.9487
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_0262_JPG.rf.5e327b0490f360f82423eb156bb2c702.jpg,270.08,98.56,501.76,344.32,1.0,Mixed Waste,0.9613
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_0687_jpeg.rf.33deed523731d41422e9ce7e68fd713f.jpg,49.28,131.84,320.0,282.24,1.0,Recyclable Material,0.858
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_1059_converted_jpg.rf.a48e95e3c031ab71cc93936a5cefddaa.jpg,256.64,151.68,314.88,292.48,1.0,Recyclable Material,0.5622
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_1323-1-_jpg.rf.b9ca18acb6bf9dd41459183bbdbb6677.jpg,259.2,257.28,438.4,440.96,1.0,Mixed Waste,0.9738
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_1338_jpg.rf.a77202bb50f4f0bf51a37f2fb8b271b0.jpg,585.6,80.0,634.88,175.36,1.0,,0.0015
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_1592_jpg.rf.f4a4dc858b6ce3d6993baf21056a4137.jpg,298.88,179.84,391.68,285.44,1.0,Mixed Waste,0.92
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_1642-3_JPG.rf.dc053066bc3dc85394edbc00ef55a8e4.jpg,0.0,175.36,142.08,320.64,1.0,Mixed Waste,0.9363
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_1663-3_JPG.rf.ea606bdf3ee56a51dfe29b23a311611d.jpg,267.52,188.16,505.6,359.68,1.0,,0.497
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_20241121_091747_jpg.rf.3fd3e241b47f6b97e6d584dded292019.jpg,196.48,223.36,270.08,339.84,1.0,Recyclable Material,0.8952
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_20241121_092636_jpg.rf.ebe63be68e45b5654d5eca22e2830f56.jpg,173.44,292.48,220.8,391.68,1.0,Other Waste,0.8625
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_20241121_092646_jpg.rf.4131a781a45bdb336c71a66bff023eea.jpg,140.16,279.68,189.44,386.56,1.0,Other Waste,0.8242
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_20241212_071851_jpg.rf.550bce41f56e3f83cfcf50a20246ac39.jpg,245.76,105.6,634.88,341.12,1.0,Recyclable Material,0.9241
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_20241228_084606_jpg.rf.a4b1a7867d1bdf6ec683a909c6388742.jpg,258.56,177.28,394.88,276.48,1.0,Mixed Waste,0.8978
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_20250104_071750_jpg.rf.e12592ccdd49ad017049232f2c21f3d6.jpg,310.4,220.8,474.88,355.2,1.0,Mixed Waste,0.963
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_20250109_074213_jpg.rf.70a8bd28946b36ece01a48b9cdfaa26d.jpg,213.76,0.0,325.12,196.48,1.0,Other Waste,0.9603
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_3064_jpeg.rf.1f5dffcb25bb06330248faaa7e4470fc.jpg,374.4,240.64,440.96,295.04,1.0,Recyclable Material,0.7708
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_3084_jpeg.rf.584a131d14876e68f98bf572d6e2c1e3.jpg,250.24,208.0,430.08,438.4,1.0,Orange CMD,0.7199
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_4324_JPG.rf.20ebc0d9831223e686418cc21814847f.jpg,183.04,91.52,352.0,323.2,1.0,Mixed Waste,0.6063
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_4329_JPG.rf.743d3b23867d61b5e40194a0805de44f.jpg,240.0,323.2,461.44,505.6,1.0,Mixed Waste,0.9742
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_5726_JPG.rf.286ad9a77d75805b06ffef5d803abbf6.jpg,168.96,152.96,465.28,437.12,1.0,Mixed Waste,0.5817
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_5755_JPG.rf.39996c0e5fa5a0cce44d9d495a7d3c47.jpg,362.88,103.68,444.16,170.24,1.0,Other Waste,0.8808
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_5777_JPG.rf.1cff999d3d76787ed68aa22bf6e0d50f.jpg,265.6,133.12,380.16,195.2,1.0,Other Waste,0.7024
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_5780_blurred_jpg.rf.79dedd739e6bb733eeed62225a18a389.jpg,406.4,154.24,425.6,176.0,1.0,Recyclable Material,0.6462
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8255_size_jpeg.rf.6761db8582d4837db7e2397532361d67.jpg,227.2,351.36,372.48,466.56,1.0,Mixed Waste,0.9213
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8257_size_jpeg.rf.19792c9e34156566549cd8191acf13cd.jpg,145.92,368.0,371.2,538.24,1.0,Mixed Waste,0.9393
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,227.2,394.88,256.64,478.08,1.0,,0.2903
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,256.64,394.88,279.68,435.84,1.0,,0.2768
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,266.88,397.44,289.28,435.84,1.0,,0.4633
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,289.28,397.44,312.32,435.84,1.0,,0.2513
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,312.32,397.44,330.88,435.84,1.0,,0.2494
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,330.88,397.44,346.88,435.84,1.0,,0.215
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,346.88,397.44,389.12,458.24,1.0,Mixed Waste,0.5432
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,254.72,400.64,266.88,435.84,1.0,,0.2599
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,279.68,400.64,292.48,435.84,1.0,,0.2531
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,306.56,400.64,320.0,435.84,1.0,,0.1656
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,344.32,400.64,355.2,435.84,1.0,,0.134
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,355.2,400.64,365.44,435.84,1.0,,0.0839
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8649_jpeg.rf.f7d44ca79830471c7bd151be6fbcb8f2.jpg,365.44,400.64,378.24,435.84,1.0,,0.1041
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8692_jpeg.rf.7f04ea376ec44117007bb686d6250bd9.jpg,202.88,383.36,268.8,424.32,1.0,Orange CMD,0.9413
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8747_jpeg.rf.4dab4ee43bac4a6699e1b96b2dba1467.jpg,199.68,430.08,346.88,540.8,1.0,Mixed Waste,0.8833
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8748_jpeg.rf.cd71a2f00e207d12af58a0eb4c4cb1d7.jpg,173.44,365.44,342.4,486.4,1.0,Mixed Waste,0.8658
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8855_jpeg.rf.469bc628fe1d53ff9c31b2c10988aa90.jpg,383.36,226.56,425.6,348.8,1.0,,0.3106
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8857_jpeg.rf.706343f1401bebbd7dd3c69f38b48729.jpg,220.8,353.92,364.16,451.2,1.0,Mixed Waste,0.9606
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8860_jpeg.rf.5af16907c63b034c96c83914fb2f3f52.jpg,355.2,368.0,467.84,439.68,1.0,Mixed Waste,0.8919
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8897_jpeg.rf.b37a0ca77a98222cb9e76bb1579578ef.jpg,220.8,299.52,383.36,535.04,1.0,,0.3054
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8970_jpeg.rf.606d186f47d76fee3e1fd1f7dce7c442.jpg,261.12,407.68,358.4,483.2,1.0,Mixed Waste,0.9068
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8972_jpeg.rf.cd49521b82c9ff62a6e578b50e8b47dc.jpg,270.08,390.4,373.76,496.0,1.0,Mixed Waste,0.9312
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,IMG_8974_jpeg.rf.228d538a131d7415743d51cf6832042a.jpg,335.36,355.84,417.28,471.04,1.0,Recyclable Material,0.8534
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,Mixed_3_jpeg.rf.2ecdba47ebadb9c2a485e6edc9984489.jpg,340.48,192.64,618.24,529.28,1.0,Mixed Waste,0.9321
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_78_jpg.rf.b9b8f73ad3edf0d736f832314e0f0067.jpg,92.8,275.2,213.76,533.76,1.0,Mixed Waste,0.9274
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_7_jpg.rf.f2872b3a2205d094a9825494bf8ae862.jpg,343.68,176.0,518.4,406.4,1.0,Mixed Waste,0.9319
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_88_jpg.rf.cac27dccd12ad886c07a473c48031856.jpg,217.6,218.88,312.32,355.2,1.0,Mixed Waste,0.8893
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,323.2,7.04,355.2,122.24,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,352.0,7.04,372.48,115.2,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,372.48,7.04,391.04,115.2,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,418.56,7.04,433.92,109.44,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,451.2,7.04,465.28,109.44,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,496.0,7.04,505.6,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,574.72,7.04,583.68,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,588.16,7.04,597.12,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,609.92,7.04,619.52,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,626.56,7.04,639.36,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,540.8,11.52,551.04,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,551.04,11.52,560.0,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,560.0,11.52,569.6,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,569.6,11.52,578.56,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,618.88,11.52,627.84,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_89_jpg.rf.38597069da0c4a1fdcc6e87e247df9f6.jpg,632.96,11.52,639.36,48.0,1.0,,0.0
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,MSIDA_99_jpg.rf.7127f6f8ce1053b941aff134be9c151f.jpg,360.96,69.12,391.04,135.04,1.0,Mixed Waste,0.6177
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,Number_blur-2-_size_jpeg.rf.1c3be494c4b9cc9941f73ca4650b2955.jpg,292.48,348.8,426.88,451.2,1.0,Mixed Waste,0.7386
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,PXL_20241103_204907919-NIGHT_jpg.rf.0069fe6c121acb8c84a133154abbc05a.jpg,215.04,323.2,542.72,634.88,1.0,Mixed Waste,0.675
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,PXL_20241226_080053691_jpg.rf.08e12d2cae94660dfcd43c04079c13f9.jpg,163.2,107.52,407.68,380.8,1.0,Recyclable Material,0.9783
+Cosmos Reason2 2B,mdwd-p3,white organic-waste bag,Unknown-6_jpg.rf.ad6fdf8bf89e73dc870edfa7e5f8588c.jpg,77.44,150.4,504.32,420.48,1.0,Mixed Waste,0.805
