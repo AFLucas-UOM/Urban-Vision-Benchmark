@@ -25,7 +25,6 @@ from mtsd_detection.model_registry import resolve_checkpoint_info, validate_mode
 from mtsd_detection.train_yolo import yolo_batch_plan, yolo_online_augmentation_args
 
 RUNNER = Path("Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py")
-DEFAULT_RUNNER_PYTHON = Path(r"C:\Users\fridge\anaconda3\envs\mtsd-base\python.exe")
 DEFAULT_QA_REPORT = Path(
     "Results/MTSD-Results/Dataset-QA/"
     "Strong-Augmentation-Final-QA-20260724-R2/qa_report.json"
@@ -50,7 +49,7 @@ def _now() -> str:
 
 
 def _runner_python() -> str:
-    configured = Path(os.environ.get("MTSD_RUNNER_PYTHON", str(DEFAULT_RUNNER_PYTHON)))
+    configured = Path(os.environ.get("MTSD_RUNNER_PYTHON", sys.executable))
     return str(configured if configured.is_file() else Path(sys.executable))
 
 

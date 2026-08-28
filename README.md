@@ -66,10 +66,6 @@ Urban-Vision-Benchmark/
 ├── Datasets/
 │   ├── MDWD/                          # Waste-detection exports (YOLO11/12/26 + RF-DETR variants)
 │   └── MTSD/                          # GRP-1..11 raw groups, Annotations/ (Final-QA), Prepared/
-├── Documentation/                     # Dissertation chapters (LaTeX) + writing notes/audits
-│   ├── 1. Introduction/
-│   ├── 2-3. Background-LiteratureReview/
-│   └── 4. Methodology/
 ├── Documents/                         # Workflow guides + generated EDA/report artefacts
 │   ├── MDWD-EDA/  MTSD-EDA/           # EDA figures, CSVs, interactive GPS atlas
 │   ├── Final-Reports/                 # Integrity, leakage, health, audit, dashboard outputs
@@ -186,7 +182,7 @@ A read-only analysis layer over stored results (nothing here trains or silently 
 
 ## Dissertation documentation
 
-The LaTeX chapters live under [Documentation/](Documentation/) (Introduction; Background; Literature Review; Methodology), each accompanied by dated writing notes and evidence audits that map every claim to its repository artefact. Chapter state as of 18 July 2026: dataset facts synchronised with the final eleven-group MTSD scope, the three-copy augmentation recipe, the completed 16-variant attribute matrix and both prompt protocols.
+The dissertation evidence and supporting documentation available in this repository live under [Documents/](Documents/), including EDA outputs, final reports, figures, tables, workflow guides and evidence audits. Chapter state as of 18 July 2026: dataset facts synchronised with the final eleven-group MTSD scope, the three-copy augmentation recipe, the completed 16-variant attribute matrix and both prompt protocols.
 
 ## Citation
 

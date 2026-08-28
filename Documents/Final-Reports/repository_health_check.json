@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T12:53:58",
+  "generated_at": "2026-08-26T16:06:09",
   "overall": "PASS",
   "checks": [
     {
@@ -29,7 +29,7 @@
     {
       "check": "python_compiles",
       "status": "PASS",
-      "description": "117 Python files compile",
+      "description": "169 Python files compile",
       "details": []
     },
     {
@@ -95,7 +95,7 @@
     {
       "check": "automation_targets",
       "status": "PASS",
-      "description": "All 30 workflow-runner targets exist on disk",
+      "description": "All 43 workflow-runner targets exist on disk",
       "details": []
     },
     {

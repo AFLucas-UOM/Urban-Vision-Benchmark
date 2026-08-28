@@ -19,7 +19,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
 RUNNER = HERE / "run_mtsd_supervised.py"
-PYTHON = Path(r"C:\Users\fridge\anaconda3\envs\mtsd-base\python.exe")
+PYTHON = Path(os.environ.get("MTSD_RUNNER_PYTHON", sys.executable))
 QUEUE_RECORD = REPO / "Results" / "MTSD-Runs" / "final_ablation_queue_20260812.json"
 
 

@@ -34,7 +34,6 @@ DEFAULT_QA_REPORT = Path(
     "Strong-Augmentation-Final-QA-20260724-R2/qa_report.json"
 )
 RUNNER = Path("Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py")
-DEFAULT_RUNNER_PYTHON = Path(r"C:\Users\fridge\anaconda3\envs\mtsd-base\python.exe")
 
 MODEL_FAMILIES = {
     "yolo11s": "YOLO11",
@@ -49,7 +48,7 @@ def _now() -> str:
 
 
 def _runner_python() -> str:
-    configured = Path(os.environ.get("MTSD_RUNNER_PYTHON", str(DEFAULT_RUNNER_PYTHON)))
+    configured = Path(os.environ.get("MTSD_RUNNER_PYTHON", sys.executable))
     return str(configured if configured.is_file() else Path(sys.executable))
 
 
