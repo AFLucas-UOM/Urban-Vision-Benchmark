@@ -296,7 +296,7 @@
       "noUserSite": true,
       "defaultArgs": ["--plan", "--profile", "size_ablation_all"],
       "training": false,
-      "description": "Resolved 16-variant size-ablation experiment plan (read-only: no manifest refresh, no model loading, no training)."
+      "description": "Resolved 18-variant size/adaptation experiment plan (read-only: no manifest refresh, no model loading, no training)."
     },
     "AttrCls-Size-Ablation-Frozen": {
       "type": "python",
@@ -314,7 +314,7 @@
       "noUserSite": true,
       "defaultArgs": ["--profile", "size_ablation_adapted"],
       "training": true,
-      "description": "TRAINS the 8 adapted size-ablation variants (LoRA for the SSL backbones, full fine-tuning for ConvNeXt)."
+      "description": "TRAINS the 10 adapted variants (LoRA for all four families plus full fine-tuning for ConvNeXt Base/Large)."
     },
     "AttrCls-Size-Ablation-All": {
       "type": "python",
@@ -323,7 +323,7 @@
       "noUserSite": true,
       "defaultArgs": ["--profile", "size_ablation_all"],
       "training": true,
-      "description": "TRAINS the complete 16-variant size-ablation matrix and writes the consolidated reports."
+      "description": "TRAINS the complete 18-variant size/adaptation matrix and writes the consolidated reports."
     },
     "AttrCls-Smoke": {
       "type": "python",

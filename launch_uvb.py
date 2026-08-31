@@ -35,7 +35,7 @@ import sys
 import time
 import webbrowser
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Callable, Sequence
@@ -47,6 +47,8 @@ if os.name == "nt":
 ROOT = Path(__file__).resolve().parent
 STATE_FILE = ROOT / ".uvb_launcher_state.json"
 LOG_DIR = ROOT / ".uvb_launcher_logs"
+WORKFLOW_REGISTRY_FILE = ROOT / "Scripts/Automation/workflow_targets.json"
+EXECUTED_NOTEBOOK_DIR = ROOT / "Scripts/Automation/executed"
 
 try:
     from rich.console import Console
@@ -99,6 +101,11 @@ class Tool:
     ready_timeout: float = 90.0
     notes: str = ""
     instruction: str | None = None
+    kind: str = "python"
+    no_user_site: bool = False
+    training: bool = False
+    workflow_target: str | None = None
+    redirect_id: str | None = None
 
     @property
     def path(self) -> Path | None:
@@ -116,7 +123,7 @@ def T(**kwargs) -> Tool:
 WEB_APP_NOTE = ("Closing the browser tab does NOT stop the server; "
                 "stop or restart it from the launcher.")
 
-TOOLS = [
+CURATED_TOOLS = [
     # ---- Local web applications (long-running, launcher-managed) ----------
     T(id="promptdetect",
       title="PromptDetect — single-image prompted localisation (local web app)",
@@ -143,6 +150,7 @@ TOOLS = [
       cwd="Scripts/MTSD-Scripts/AttributeClassification",
       env="mtsd-attrcls", port=7860, port_arg="--port", no_browser_arg="--no-browser",
       url="http://127.0.0.1:{port}", browser=True, heavy=True, confirm=True, ready_timeout=180.0,
+      no_user_site=True,
       notes="Needs trained checkpoints under AttributeClassification/outputs/checkpoints."),
     T(id="mtsd-review",
       title="MTSD QA — visual review of audit findings (local web app)",
@@ -208,17 +216,18 @@ TOOLS = [
     T(id="attr-variants-list", title="MTSD attributes — list configured variants (read-only)", category="Evaluation and Benchmarks",
       description="Print every configured attribute-classifier variant (all four backbone families, sizes and adaptation modes) with its metadata. No model loading, no manifest refresh.",
       script="Scripts/MTSD-Scripts/AttributeClassification/run_all.py", cwd="Scripts/MTSD-Scripts/AttributeClassification",
-      env="mtsd-attrcls", args=("--list-variants",), read_only=True),
-    T(id="attr-size-plan", title="MTSD attributes — 16-variant size-ablation plan (read-only)", category="Evaluation and Benchmarks",
-      description="Print the resolved 16-variant size-ablation matrix (DINOv3, V-JEPA 2.1, ConvNeXt, LingBot-Vision; base/large; frozen/LoRA/fine-tuned; batch settings, output dirs). No manifest refresh, no model loading or downloads, no training.",
+      env="mtsd-attrcls", args=("--list-variants",), read_only=True, no_user_site=True),
+    T(id="attr-size-plan", title="MTSD attributes — 18-variant size/adaptation plan (read-only)", category="Evaluation and Benchmarks",
+      description="Print the resolved 18-variant size/adaptation matrix (DINOv3, V-JEPA 2.1, ConvNeXt, LingBot-Vision; base/large; frozen/LoRA/fine-tuned; batch settings, output dirs). No manifest refresh, no model loading or downloads, no training.",
       script="Scripts/MTSD-Scripts/AttributeClassification/run_all.py", cwd="Scripts/MTSD-Scripts/AttributeClassification",
-      env="mtsd-attrcls", args=("--plan", "--profile", "size_ablation_all"), read_only=True),
+      env="mtsd-attrcls", args=("--plan", "--profile", "size_ablation_all"), read_only=True,
+      no_user_site=True),
     T(id="batch-cli", title="PromptDetect — batch evaluation plan (dry-run, read-only)", category="Evaluation and Benchmarks",
-      description="Validate a small MTSD/SAM3 evaluation plan: 25 images, no prompts, no model load and no output files.",
+      description="Validate a small MTSD/SAM3 evaluation plan: 25 images, one neutral prompt, no model load and no output files.",
       script="Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_batch_eval.py",
       cwd="Scripts/Other-Scripts/PromptDetect/batch_evaluation", env="mtsd-base",
-      args=("--dataset", "MTSD", "--split", "test", "--prompts", "--models", "sam3", "--max-images", "25", "--dry-run"),
-      heavy=True, confirm=True),
+      args=("--dataset", "MTSD", "--split", "test", "--prompts", "traffic sign", "--models", "sam3", "--max-images", "25", "--dry-run"),
+      read_only=True),
     T(id="mtsd-supervised-plan", title="MTSD supervised detection — 13-model plan (dry-run, read-only)", category="Evaluation and Benchmarks",
       description="Discover Final-QA annotations and print the canonical split and 13-model plan (YOLO11/12/26, RF-DETR) without writing files.",
       script="Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py", cwd=".", env="MDWD",
@@ -277,6 +286,90 @@ TOOLS = [
       env="mtsd-base", args=("--help",), confirm=True,
       notes="Preview creates a separate output tree. Applying redactions is deliberately not exposed here."),
 ]
+
+
+# The automation registry is the authoritative inventory of principal
+# workflows.  Curated entries above remain the shortest route to common safe
+# actions; this generated section makes every registered workflow discoverable
+# without maintaining a second, incomplete list by hand.
+WORKFLOW_ALIASES = {
+    "PromptDetect-App": "promptdetect",
+    "MTSD-AnnotationQA-Review-UI": "mtsd-review",
+    "AttrCls-Compare-UI": "attr-ui",
+}
+REGISTRY_LOAD_ERROR: str | None = None
+
+
+def _workflow_is_read_only(spec: dict) -> bool:
+    if spec.get("training") or spec.get("type") == "notebook":
+        return False
+    args = {str(arg).lower() for arg in spec.get("defaultArgs", [])}
+    return bool(args & {"--dry-run", "--help", "--list", "--list-models", "--list-variants", "--plan"})
+
+
+def _load_workflow_tools() -> list[Tool]:
+    global REGISTRY_LOAD_ERROR
+    try:
+        payload = json.loads(WORKFLOW_REGISTRY_FILE.read_text(encoding="utf-8"))
+        targets = payload["targets"]
+        if not isinstance(targets, dict):
+            raise ValueError("'targets' must be an object")
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        REGISTRY_LOAD_ERROR = str(exc)
+        return []
+
+    generated: list[Tool] = []
+    for name, spec in targets.items():
+        if not isinstance(spec, dict):
+            REGISTRY_LOAD_ERROR = f"target {name!r} is not an object"
+            continue
+        read_only = _workflow_is_read_only(spec)
+        training = bool(spec.get("training"))
+        redirect_id = WORKFLOW_ALIASES.get(name)
+        generated.append(T(
+            id=f"workflow:{name}",
+            title=name,
+            category="Complete Workflow Registry",
+            description=str(spec.get("description", "Registered repository workflow.")),
+            script=str(spec.get("path", "")) or None,
+            args=tuple(str(arg) for arg in spec.get("defaultArgs", [])),
+            cwd=".",
+            env=str(spec.get("env", "")) or None,
+            heavy=training,
+            confirm=training or not read_only,
+            read_only=read_only,
+            kind=str(spec.get("type", "python")),
+            no_user_site=bool(spec.get("noUserSite")),
+            training=training,
+            workflow_target=name,
+            redirect_id=redirect_id,
+            notes=(
+                "Registry-controlled heavy/training workflow; a real run requires explicit confirmation."
+                if training else
+                "Loaded from Scripts/Automation/workflow_targets.json."
+            ),
+        ))
+    return generated
+
+
+WORKFLOW_TOOLS = _load_workflow_tools()
+TOOLS = CURATED_TOOLS + WORKFLOW_TOOLS
+TOOL_BY_ID = {tool.id.lower(): tool for tool in TOOLS}
+
+
+def find_tool(tool_id: str) -> Tool | None:
+    """Resolve a tool ID case-insensitively."""
+    return TOOL_BY_ID.get(tool_id.lower())
+
+
+def effective_tool(tool: Tool) -> Tool:
+    """Resolve a registry alias to its curated managed implementation."""
+    if not tool.redirect_id:
+        return tool
+    target = find_tool(tool.redirect_id)
+    if target is None:
+        raise RuntimeError(f"Launcher alias {tool.id!r} points to missing tool {tool.redirect_id!r}")
+    return target
 
 
 def say(message: str = "", style: str | None = None) -> None:
@@ -388,8 +481,13 @@ def read_key() -> str:
 
 def tool_badges(tool: Tool) -> str:
     badges: list[str] = []
-    if tool.is_web_app:
-        badges.append(f"LOCAL WEB APP :{tool.port}")
+    display_tool = effective_tool(tool) if tool.redirect_id else tool
+    if display_tool.is_web_app:
+        badges.append(f"LOCAL WEB APP :{display_tool.port}")
+    elif tool.kind == "notebook":
+        badges.append("NOTEBOOK COPY")
+    if tool.training:
+        badges.append("HEAVY/TRAINING")
     if tool.env:
         badges.append(tool.env)
     if tool.confirm:
@@ -401,6 +499,8 @@ def tool_badges(tool: Tool) -> str:
 
 def navigation_menu(title: str, subtitle: str, options: Sequence[tuple[str, str, str]], *, allow_search: bool = False, allow_quit: bool = False) -> tuple[str, int | None]:
     """Return (action, selected index); keyboard controls are shown on screen."""
+    if not options:
+        return "back", None
     selected = 0
 
     controls = "↑/↓ move   Enter select   Esc back"
@@ -411,8 +511,16 @@ def navigation_menu(title: str, subtitle: str, options: Sequence[tuple[str, str,
 
     with fullscreen_tui():
         while True:
+            terminal_height = shutil.get_terminal_size(fallback=(120, 36)).lines
+            max_visible = max(3, min(10, (terminal_height - 18) // 3))
+            start = min(max(0, selected - max_visible // 2), max(0, len(options) - max_visible))
+            stop = min(len(options), start + max_visible)
+            visible_options = options[start:stop]
+            position = f"items {start + 1}–{stop} of {len(options)}" if len(options) > max_visible else ""
             if RICH:
-                def _build(c: Console, *, _sel=selected, _opts=options, _title=title, _sub=subtitle, _ctrl=controls) -> None:
+                def _build(c: Console, *, _sel=selected, _opts=visible_options,
+                           _offset=start, _title=title, _sub=subtitle,
+                           _ctrl=controls, _position=position) -> None:
                     _render_header(c)
                     c.print(f" [dim]{_sub}[/]\n")
 
@@ -420,7 +528,8 @@ def navigation_menu(title: str, subtitle: str, options: Sequence[tuple[str, str,
                     table.add_column("Pointer", justify="right", style="bold bright_cyan", width=2)
                     table.add_column("Main")
 
-                    for idx, (label, description, badge) in enumerate(_opts):
+                    for local_idx, (label, description, badge) in enumerate(_opts):
+                        idx = _offset + local_idx
                         if idx == _sel:
                             ptr = "▶"
                             t_text = f"[bold bright_cyan]{label}[/]"
@@ -432,14 +541,14 @@ def navigation_menu(title: str, subtitle: str, options: Sequence[tuple[str, str,
                         b_text = f"  [dim]{badge}[/]" if badge else ""
                         row = f"{t_text}{b_text}\n  {d_text}"
                         table.add_row(ptr, row)
-                        if idx < len(_opts) - 1:
+                        if local_idx < len(_opts) - 1:
                             table.add_row("", "")
 
                     c.print(Panel(
                         table,
                         title=f"[bold white]{_title}[/]",
                         title_align="left",
-                        subtitle=f"[dim]{_ctrl}[/]",
+                        subtitle=f"[dim]{_position + '   ' if _position else ''}{_ctrl}[/]",
                         subtitle_align="left",
                         border_style="bright_black",
                         padding=(1, 2),
@@ -451,12 +560,13 @@ def navigation_menu(title: str, subtitle: str, options: Sequence[tuple[str, str,
                 lines.append(f"\n{title}")
                 lines.append(subtitle)
                 lines.append("")
-                for idx, (label, description, badge) in enumerate(options):
+                for local_idx, (label, description, badge) in enumerate(visible_options):
+                    idx = start + local_idx
                     pointer = ">" if idx == selected else " "
                     suffix = f"  [{badge}]" if badge else ""
                     lines.append(f"{pointer} {label}{suffix}")
                     lines.append(f"    {description}")
-                lines.append(f"\n{controls}")
+                lines.append(f"\n{position + '   ' if position else ''}{controls}")
                 frame = "\n".join(lines) + "\n"
 
             _paint(frame)
@@ -482,7 +592,8 @@ def navigation_menu(title: str, subtitle: str, options: Sequence[tuple[str, str,
 # Command construction and environment discovery
 # ---------------------------------------------------------------------------
 
-def command_for(tool: Tool, port: int | None = None, *, managed: bool = False) -> list[str]:
+def command_for(tool: Tool, port: int | None = None, *, managed: bool = False,
+                notebook_output: Path | None = None) -> list[str]:
     """Build the exact command line for a tool.
 
     When *managed* is true (a launcher-managed web app), the app's
@@ -496,6 +607,20 @@ def command_for(tool: Tool, port: int | None = None, *, managed: bool = False) -
         conda = find_conda()
         if conda:
             python_cmd = [str(conda), "run", "-n", tool.env, "python"]
+    if tool.no_user_site:
+        python_cmd.append("-s")
+    if tool.kind == "notebook":
+        output = notebook_output or (
+            EXECUTED_NOTEBOOK_DIR /
+            f"{tool.workflow_target or tool.id}-<timestamp>.ipynb"
+        )
+        return python_cmd + [
+            "-m", "jupyter", "nbconvert", "--to", "notebook", "--execute",
+            str(ROOT / tool.script),
+            "--output", output.name,
+            "--output-dir", str(output.parent),
+            "--ExecutePreprocessor.timeout=14400",
+        ]
     args = list(tool.args)
     if tool.port_arg and port:
         args += [tool.port_arg, str(port)]
@@ -518,7 +643,16 @@ def find_conda() -> Path | None:
     found = shutil.which("conda")
     if found:
         return Path(found)
-    for candidate in (Path.home() / "anaconda3/Scripts/conda.exe", Path.home() / "miniconda3/Scripts/conda.exe", Path(os.environ.get("PROGRAMDATA", "C:/ProgramData")) / "anaconda3/Scripts/conda.exe"):
+    candidates = [
+        Path.home() / "anaconda3/bin/conda",
+        Path.home() / "miniconda3/bin/conda",
+        Path.home() / "mambaforge/bin/conda",
+        Path.home() / "anaconda3/Scripts/conda.exe",
+        Path.home() / "miniconda3/Scripts/conda.exe",
+        Path(os.environ.get("PROGRAMDATA", "C:/ProgramData")) / "anaconda3/Scripts/conda.exe",
+        Path(os.environ.get("LOCALAPPDATA", "C:/Users/Default/AppData/Local")) / "anaconda3/Scripts/conda.exe",
+    ]
+    for candidate in candidates:
         if candidate.exists():
             return candidate
     return None
@@ -529,10 +663,49 @@ def conda_envs() -> set[str]:
     if not conda:
         return set()
     try:
-        output = subprocess.check_output([str(conda), "env", "list"], text=True, stderr=subprocess.STDOUT, timeout=10)
-    except (OSError, subprocess.SubprocessError):
+        output = subprocess.check_output(
+            [str(conda), "env", "list", "--json"],
+            text=True, stderr=subprocess.STDOUT, timeout=20,
+        )
+        payload = json.loads(output)
+        paths = payload.get("envs", [])
+        root_prefix = payload.get("root_prefix")
+    except (OSError, subprocess.SubprocessError, ValueError):
         return set()
-    return {line.split()[0] for line in output.splitlines() if line and not line.lstrip().startswith("#") and line.split()}
+    names = {Path(path).name for path in paths if path != root_prefix}
+    if paths:
+        names.add("base")
+    return names
+
+
+def environment_issue(tool: Tool) -> str | None:
+    """Return a clear preflight error when a named Conda environment is absent.
+
+    A missing environment used to surface as a brief ``conda run`` failure after
+    the launcher had already tried to start a workflow.  Catching it here keeps
+    the menu responsive and tells the researcher exactly what needs installing.
+    """
+    if not tool.env:
+        return None
+    conda = find_conda()
+    if conda is None:
+        return None
+    available = conda_envs()
+    if tool.env in available:
+        return None
+    found = ", ".join(sorted(available)) if available else "none detected"
+    if os.name == "nt":
+        setup = (
+            ".\\Requirements\\CondaEnvironments\\setup_conda_env.ps1 "
+            f"-Name {tool.env}"
+        )
+    else:
+        setup = f"bash Requirements/CondaEnvironments/setup_conda_env.sh {tool.env}"
+    return (
+        f"Required Conda environment '{tool.env}' is not installed. "
+        f"Detected environments: {found}. "
+        f"From the repository root, run: {setup}"
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -622,6 +795,11 @@ def pid_command_line(pid: int) -> str | None:
         cmdline = Path(f"/proc/{pid}/cmdline")
         if cmdline.exists():
             return cmdline.read_bytes().replace(b"\x00", b" ").decode(errors="replace").strip() or None
+        out = subprocess.check_output(
+            ["ps", "-p", str(pid), "-o", "command="],
+            text=True, timeout=10, stderr=subprocess.DEVNULL,
+        )
+        return out.strip() or None
     except (OSError, subprocess.SubprocessError):
         pass
     return None
@@ -704,7 +882,9 @@ class AppManager:
             for app in self.apps.values() if app.running}}
         try:
             if payload["apps"]:
-                self._state_file.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+                temp = self._state_file.with_suffix(self._state_file.suffix + ".tmp")
+                temp.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+                temp.replace(self._state_file)
             elif self._state_file.exists():
                 self._state_file.unlink()
         except OSError:
@@ -748,7 +928,7 @@ class AppManager:
         """Spawn the app process (no readiness wait, no browser)."""
         cmd = command_for(tool, port, managed=True)
         self._log_dir.mkdir(exist_ok=True)
-        log_path = self._log_dir / f"{tool.id}-{datetime.now().strftime('%Y%m%d-%H%M%S')}.log"
+        log_path = self._log_dir / f"{tool.id.replace(':', '-')}-{datetime.now().strftime('%Y%m%d-%H%M%S-%f')}.log"
         log_handle = open(log_path, "w", encoding="utf-8", errors="replace")
         process = self._spawn(cmd, ROOT / tool.cwd, log_handle)
         app = ManagedApp(tool=tool, process=process, port=port,
@@ -859,7 +1039,8 @@ def _commands_equivalent(current: str, stored: str) -> bool:
 # Tool information display
 # ---------------------------------------------------------------------------
 
-def show_tool(tool: Tool, port: int | None = None) -> None:
+def show_tool(tool: Tool, port: int | None = None,
+              notebook_output: Path | None = None) -> None:
     if tool.instruction:
         say(f"\n{tool.title}\n{tool.description}\n", "bold cyan")
         for item in tool.instruction.splitlines():
@@ -873,12 +1054,19 @@ def show_tool(tool: Tool, port: int | None = None) -> None:
         if tool.id == "labelstudio":
             say("\nRead the guide before starting Label Studio. The documented launcher uses port 8080 and may stop an existing listener.", "yellow")
         return
-    cmd = command_for(tool, port, managed=tool.is_web_app)
+    cmd = command_for(
+        tool, port, managed=tool.is_web_app,
+        notebook_output=notebook_output,
+    )
     say(f"\n{tool.title}\n{tool.description}", "bold cyan")
     say(f"Command: {display_command(cmd)}")
     say(f"Working directory: {ROOT / tool.cwd}")
     if tool.env:
         say(f"Conda environment: {tool.env}")
+    if tool.no_user_site:
+        say("Python user-site packages: disabled (-s)")
+    if tool.kind == "notebook":
+        say("Notebook source: preserved; execution writes a timestamped copy")
     if tool.is_web_app:
         say(f"URL: {tool.url.format(port=port or tool.port)}  (port {port or tool.port}: {port_info(port or tool.port)})")
         say(f"Note: {WEB_APP_NOTE}", "yellow")
@@ -940,33 +1128,52 @@ def run_instruction_tool(tool: Tool, dry_run: bool = False) -> None:
             elif os.name == "nt":
                 os.startfile(str(target))  # type: ignore[attr-defined]
             else:
-                subprocess.run(["xdg-open", str(target)], check=False)
+                opener = "open" if sys.platform == "darwin" else "xdg-open"
+                try:
+                    subprocess.run([opener, str(target)], check=False)
+                except OSError as exc:
+                    say(f"Could not open automatically ({exc}); open manually: {target}", "yellow")
         else:
             say(f"Missing: {target}", "red")
 
 
-def run_cli_tool(tool: Tool, dry_run: bool = False) -> None:
+def run_cli_tool(tool: Tool, dry_run: bool = False, *, assume_yes: bool = False) -> int:
     """Run a non-web tool in the foreground, with full-tree cleanup on Ctrl+C."""
     if tool.path and not tool.path.exists():
         say(f"Missing script: {tool.path}", "red")
-        return
-    cmd = command_for(tool)
-    show_tool(tool)
+        return 2
+    notebook_output = None
+    if tool.kind == "notebook":
+        stamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+        notebook_output = EXECUTED_NOTEBOOK_DIR / f"{tool.workflow_target or tool.id}-{stamp}.ipynb"
+    cmd = command_for(tool, notebook_output=notebook_output)
+    show_tool(tool, notebook_output=notebook_output)
     if dry_run:
-        return
-    if tool.confirm and not confirm("Proceed with this launch?"):
+        return 0
+    issue = environment_issue(tool)
+    if issue:
+        say(issue, "red")
+        return 2
+    if tool.confirm and not assume_yes and not confirm(
+        "Proceed with this HEAVY/TRAINING workflow?" if tool.training else "Proceed with this launch?"
+    ):
         say("Cancelled.", "yellow")
-        return
+        return 0
     if tool.env and not find_conda():
         if tool.heavy:
             say("Conda was not found; this launch needs its documented environment and was not started.", "red")
-            return
+            return 2
         say("Conda was not found; using the current Python interpreter for this safe command.", "yellow")
     process = None
     try:
+        if notebook_output is not None:
+            notebook_output.parent.mkdir(parents=True, exist_ok=True)
         process = _default_spawn_foreground(cmd, ROOT / tool.cwd)
         code = process.wait()
         say(f"\nFinished with exit code {code}.", "green" if code == 0 else "red")
+        if code == 0 and notebook_output is not None:
+            say(f"Executed notebook copy: {notebook_output}", "green")
+        return code
     except KeyboardInterrupt:
         say("\nInterrupted — stopping the tool's full process tree...", "yellow")
         if process is not None:
@@ -974,8 +1181,10 @@ def run_cli_tool(tool: Tool, dry_run: bool = False) -> None:
             with contextlib.suppress(subprocess.TimeoutExpired):
                 process.wait(timeout=15)
         say("Stopped.", "yellow")
+        return 130
     except OSError as exc:
         say(f"Could not launch: {exc}", "red")
+        return 1
 
 
 def _default_spawn_foreground(cmd: list[str], cwd: Path) -> subprocess.Popen:
@@ -989,7 +1198,7 @@ def _default_spawn_foreground(cmd: list[str], cwd: Path) -> subprocess.Popen:
 
 def launch_web_app(tool: Tool, manager: AppManager, *, dry_run: bool = False,
                    open_browser: bool = True, ready_timeout: float | None = None,
-                   interactive: bool = True) -> ManagedApp | None:
+                   interactive: bool = True, assume_yes: bool = False) -> ManagedApp | None:
     """Start a managed local web application with readiness polling.
 
     The browser is opened only after the app's port actually accepts
@@ -1019,9 +1228,17 @@ def launch_web_app(tool: Tool, manager: AppManager, *, dry_run: bool = False,
         return None
 
     show_tool(tool, port)
-    if tool.confirm and interactive and not confirm("Proceed with this launch?"):
-        say("Cancelled.", "yellow")
+    issue = environment_issue(tool)
+    if issue:
+        say(issue, "red")
         return None
+    if tool.confirm and not assume_yes:
+        if not interactive:
+            say("This launch requires confirmation; re-run with --yes from a non-interactive shell.", "red")
+            return None
+        if not confirm("Proceed with this launch?"):
+            say("Cancelled.", "yellow")
+            return None
     if tool.env and not find_conda():
         say("Conda was not found; this local web application needs its documented environment and was not started.", "red")
         return None
@@ -1115,16 +1332,18 @@ def handle_running_app(tool: Tool, manager: AppManager) -> None:
 
 def run_tool(tool: Tool, dry_run: bool = False, *, manager: AppManager | None = None,
              open_browser: bool = True, ready_timeout: float | None = None,
-             interactive: bool = True) -> None:
+             interactive: bool = True, assume_yes: bool = False) -> int:
     manager = manager or MANAGER
+    tool = effective_tool(tool)
     if tool.instruction:
         run_instruction_tool(tool, dry_run)
-        return
+        return 0
     if tool.is_web_app:
         launch_web_app(tool, manager, dry_run=dry_run, open_browser=open_browser,
-                       ready_timeout=ready_timeout, interactive=interactive)
-        return
-    run_cli_tool(tool, dry_run)
+                       ready_timeout=ready_timeout, interactive=interactive,
+                       assume_yes=assume_yes)
+        return 0
+    return run_cli_tool(tool, dry_run, assume_yes=assume_yes)
 
 
 # ---------------------------------------------------------------------------
@@ -1142,6 +1361,42 @@ def list_tools() -> None:
             say(f"  {'':<28} {tool.description}", "dim")
 
 
+def search_tools(query: str) -> list[Tool]:
+    terms = query.lower().split()
+    if not terms:
+        return []
+    matches = []
+    for tool in TOOLS:
+        haystack = " ".join((
+            tool.id, tool.title, tool.category, tool.description, tool.notes,
+            tool.script or "", " ".join(tool.args),
+        )).lower()
+        if "promptdetect" in haystack:
+            haystack += " prompted prompting zero-shot sensitivity paraphrase"
+        if all(term in haystack for term in terms):
+            matches.append(tool)
+    return matches
+
+
+def catalog_findings() -> list[str]:
+    findings: list[str] = []
+    ids = [tool.id.lower() for tool in TOOLS]
+    duplicates = sorted({tool_id for tool_id in ids if ids.count(tool_id) > 1})
+    findings.extend(f"duplicate tool id: {tool_id}" for tool_id in duplicates)
+    for tool in TOOLS:
+        if tool.script and not tool.path.exists():
+            findings.append(f"missing script for {tool.id}: {tool.script}")
+        if not (ROOT / tool.cwd).is_dir():
+            findings.append(f"missing working directory for {tool.id}: {tool.cwd}")
+        if tool.kind not in {"python", "notebook"}:
+            findings.append(f"unsupported kind for {tool.id}: {tool.kind}")
+        if tool.redirect_id and find_tool(tool.redirect_id) is None:
+            findings.append(f"broken alias for {tool.id}: {tool.redirect_id}")
+    if REGISTRY_LOAD_ERROR:
+        findings.append(f"workflow registry load error: {REGISTRY_LOAD_ERROR}")
+    return findings
+
+
 def doctor() -> None:
     say("UVB launcher doctor", "bold cyan")
     conda = find_conda()
@@ -1157,6 +1412,14 @@ def doctor() -> None:
     if missing:
         for item in missing:
             say(f"    missing: {item}", "red")
+    findings = catalog_findings()
+    say(
+        f"  launcher catalog: {'OK' if not findings else str(len(findings)) + ' issue(s)'}; "
+        f"{len(CURATED_TOOLS)} curated actions + {len(WORKFLOW_TOOLS)} registered workflows",
+        "green" if not findings else "red",
+    )
+    for finding in findings:
+        say(f"    {finding}", "red")
     stale = MANAGER.read_stale_state()
     say(f"  launcher state file: {'PRESENT — ' + str(len(stale)) + ' recorded app(s) from a previous session' if stale else 'clean'}",
         "yellow" if stale else "green")
@@ -1183,6 +1446,8 @@ CATEGORY_DESCRIPTIONS = {
     "Evaluation and Benchmarks": "Validate benchmark plans, integrity checks and qualitative-analysis tooling.",
     "Documentation and Reports": "Open the folders and HTML outputs produced by the repository tools.",
     "Repository Maintenance": "Run read-only repository checks and view safe GDPR workflow guidance.",
+    "Complete Workflow Registry": ("Every target from Scripts/Automation/workflow_targets.json, including notebooks, "
+                                   "dataset preparation, final exports, full inference and explicitly gated training."),
 }
 
 
@@ -1239,7 +1504,7 @@ def menu() -> None:
                 continue
             if not query:
                 continue
-            matches = [t for t in TOOLS if query in (t.id + " " + t.title + " " + t.description).lower()]
+            matches = search_tools(query)
             if not matches:
                 say("No matching tools.", "yellow")
                 input("Press Enter to return...")
@@ -1278,37 +1543,49 @@ def main() -> int:
                     "readiness-polled startup, reopen/restart/stop, deterministic process-tree cleanup)")
     parser.add_argument("tool", nargs="?", help="direct tool id, e.g. promptdetect, attr-ui, health")
     parser.add_argument("--list", action="store_true", help="list configured tools")
+    parser.add_argument("--search", metavar="QUERY", help="list tools matching all words in QUERY")
     parser.add_argument("--doctor", action="store_true", help="check environments, ports, paths and leftover state")
     parser.add_argument("--dry-run", action="store_true", help="print configured commands without running them")
+    parser.add_argument("--yes", action="store_true",
+                        help="accept the launcher's confirmation gate (underlying tools may still prompt)")
     parser.add_argument("--no-browser", action="store_true", help="do not open a browser after a web app becomes ready")
     parser.add_argument("--ready-timeout", type=float, default=None,
                         help="seconds to wait for a local web app to become ready (default: per-tool)")
     args = parser.parse_args()
     if args.list:
         list_tools(); return 0
+    if args.search is not None:
+        matches = search_tools(args.search)
+        if not matches:
+            say(f"No tools match: {args.search}", "yellow")
+            return 1
+        for tool in matches:
+            say(f"{tool.id:<42} {tool.title}  [{tool_badges(tool)}]")
+        return 0
     if args.doctor:
         doctor(); return 0
     if args.dry_run:
         if args.tool:
-            tool = next((t for t in TOOLS if t.id == args.tool), None)
+            tool = find_tool(args.tool)
             if not tool:
                 say(f"Unknown tool id: {args.tool}", "red"); return 2
-            run_tool(tool, dry_run=True)
+            run_tool(tool, dry_run=True, assume_yes=args.yes)
         else:
             for tool in TOOLS:
                 if tool.script:
-                    show_tool(tool, tool.port)
+                    show_tool(effective_tool(tool), effective_tool(tool).port)
         return 0
     try:
         if args.tool:
-            tool = next((t for t in TOOLS if t.id == args.tool), None)
+            selected_tool = find_tool(args.tool)
+            tool = effective_tool(selected_tool) if selected_tool else None
             if not tool:
                 say(f"Unknown tool id: {args.tool}. Use --list.", "red"); return 2
             report_stale_state(MANAGER, interactive=sys.stdin.isatty())
             if tool.is_web_app:
                 app = launch_web_app(tool, MANAGER, open_browser=not args.no_browser,
                                      ready_timeout=args.ready_timeout,
-                                     interactive=sys.stdin.isatty())
+                                     interactive=sys.stdin.isatty(), assume_yes=args.yes)
                 if app is None:
                     return 1
                 say("Press Ctrl+C to stop the application and exit.", "yellow")
@@ -1322,8 +1599,7 @@ def main() -> int:
                     MANAGER.stop_all()
                     say("Cleaned up.", "green")
                 return 0
-            run_tool(tool)
-            return 0
+            return run_tool(tool, interactive=sys.stdin.isatty(), assume_yes=args.yes)
         report_stale_state(MANAGER, interactive=sys.stdin.isatty())
         menu()
         return 0

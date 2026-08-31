@@ -1,191 +1,166 @@
 # Urban Vision Benchmark
 
-**A comparative benchmark of vision-based perception paradigms for urban waste and infrastructure monitoring in Malta.**
+**Benchmarking supervised, prompt-based and representation-learning approaches to street-level urban monitoring in Malta.**
 
-This repository is the complete experimental record of an MSc dissertation at the **University of Malta** (2026). It contains the code, configurations, annotation records, quality-assurance tooling and numeric results behind two purpose-built Maltese street-level datasets and three families of computer-vision experiments run on them:
+This repository is the reproducible research artefact for an MSc dissertation at the [University of Malta](https://www.um.edu.mt/). It introduces two locally collected datasets and evaluates three computer-vision paradigms for domestic-waste monitoring and traffic-sign assessment.
 
-1. **Supervised object detection** — three YOLO generations (YOLO11, YOLO12, YOLO26) and the RF-DETR detection transformer, trained and compared under one fixed protocol.
-2. **Prompt-based, zero-shot localisation** — SAM 3 / SAM 3.1, LocateAnything-3B and NVIDIA Cosmos Reason2 (2B/8B/32B), evaluated against fixed municipal ground truth from natural-language prompts alone, including a dedicated prompt-sensitivity protocol.
-3. **Multi-attribute representation learning** — a shared-backbone, four-head traffic-sign attribute classifier comparing frozen probing, LoRA and full fine-tuning across DINOv3, V-JEPA 2.1, ConvNeXt and LingBot-Vision at two model sizes (16 variants).
+![Urban Vision Benchmark experimental overview](Documents/Diagrams/Dissertation-Summary.png)
 
-Everything is driven by version-controlled configuration, fixed seeds (42 throughout), SHA-256-hashed dataset manifests and immutable run directories, so that every reported number traces back to a recorded artefact.
+## At a glance
 
-> **Data availability & privacy.** The raw street-level imagery contains personal data (faces, number plates) and is **not distributed** with this repository; it is stored locally under GDPR-compliant handling, and a guarded redaction workflow (face/plate/QR blurring with manual preview) governs anything designated for sharing. The repository publishes code, configuration, annotation records and numeric results only.
-
----
-
-## The datasets
-
-### MDWD — Maltese Domestic Waste Dataset
-
-Street-level photographs of domestic waste presented for kerbside collection in Malta, annotated for object detection with **five operational classes** aligned with the national collection streams: `Mixed Waste`, `Organic Waste`, `Recyclable Material`, `Orange CMD`, `Other Waste`.
-
-| Property | Value |
+| Component | Scope |
 | --- | --- |
-| Unique source photographs | 3,598 |
-| Working release | Roboflow project v20, 640×640 |
-| Export splits (images) | train 29,487 (~10× offline-augmented) / valid 369 / test 369 |
-| Export formats | YOLO (`MDWD-YOLO11/12/26`) and COCO (`MDWD-RFDETR`) — four variants of one annotation state |
-| Integrity | dataset-integrity checker + independent split-leakage sensitivity analysis (effect measured **negligible**, max Δ 0.48 pp mAP50-95 — [Documents/MDWDLeakageSensitivity.md](Documents/MDWDLeakageSensitivity.md)) |
+| **MDWD** | 3,598 source photographs of domestic waste; five operational waste classes |
+| **MTSD** | 7,482 street-level photographs; 20,509 traffic-sign boxes; 12 sign classes and four maintenance-relevant attributes |
+| **Supervised detection** | YOLO11, YOLO12, YOLO26 and RF-DETR |
+| **Zero-shot localisation** | SAM 3, SAM 3.1, LocateAnything-3B and Cosmos Reason2 2B/8B |
+| **Attribute classification** | DINOv3, V-JEPA 2.1, ConvNeXt and LingBot-Vision under frozen, LoRA and full fine-tuning regimes |
 
-### MTSD — Maltese Traffic Sign Dataset
+The central question is not only which model scores highest, but which paradigm provides the best balance of accuracy, adaptation effort, prompt robustness and operational usefulness for local-authority workflows.
 
-Smartphone photographs of Maltese traffic-sign and roadside infrastructure, collected in eleven groups (GRP-1…GRP-11) between November 2025 and January 2026. **Annotation and quality assurance are complete over all eleven groups** (QA gate resolved 18 July 2026).
+## Results summary
 
-| Property | Value |
-| --- | --- |
-| Images | 7,482 (72.6% with EXIF timestamps, 57.9% with GPS coordinates) |
-| Annotated instances | 20,509 bounding boxes |
-| Detection classes | 12 (regulatory, warning, navigational and municipal signage, incl. explicit `Back-Unknown` / `Other-Unknown` categories) |
-| Per-box attributes | viewing angle (Front/Side/Back) · mounting (Pole/Wall) · condition (Good/Weathered/Heavily Damaged) · shape (Circular/Quadrangle/Triangular/Octagonal/Pentagon) |
-| Canonical record | one QA-verified COCO JSON per group (`Datasets/MTSD/Annotations/GRP-*/Final-QA/`) |
-| Prepared datasets | `mtsd-qa-v1-aug` and `mtsd-qa-v1-noaug` (built 18 July 2026): deterministic 80/10/10 source-level split — 5,986 train / 749 valid / 747 test images; the augmented variant adds **three offline copies per training image** (two photometric + one motion-blur, recipe `photometric-v1+motion-blur-v1`) for 23,944 training images |
-
-Every annotated sign carries all four attributes, which turns the detection inventory into a maintenance-oriented condition-assessment resource — a combination no established public traffic-sign dataset provides.
-
----
-
-## Experimental tracks and status
-
-| Track | Scope | Status (15 August 2026) |
+| Experiment | Best recorded result | Main observation |
 | --- | --- | --- |
-| MDWD supervised detection | YOLO11/12/26 (n–l suites) + RF-DETR | **Executed**; runs archived, leakage-checked (RF-DETR nano executed; small/medium pending) |
-| MTSD supervised detection | 13-model matrix: YOLO11/12/26 (n/s/m), YOLO26-L, RF-DETR (n/s/m) + augmentation and resolution follow-up experiments | **Executed** 19–22 July 2026; best model RF-DETR-M (mAP50-95 0.686, 11-class evaluation). Additional final ablation work is currently in progress. |
-| Prompt-based localisation | SAM 3/3.1, LocateAnything-3B, Cosmos Reason2 2B/8B (32B opt-in) under `dissertation-v1` + `prompt-sensitivity-v1` (36 prompts, 9 paraphrase families) | Protocols implemented and pilot-verified; full fixed-protocol runs pending |
-| Attribute classification | 16-variant size/adaptation matrix over 4 backbone families × 2 sizes × frozen/adapted | **Executed** 13 July 2026 on the eight-group snapshot (13,862 crops); best variant `dinov3_vitl_lora`, test mean macro-F1 0.894 |
-| Deployment benchmark | latency / throughput / memory across all paradigms | Implemented, dry-run verified; execution pending |
+| **MDWD supervised detection** | **YOLO26-L:** 0.782 test mAP50–95 | YOLO26-L was the strongest stored run; smaller YOLO variants offered competitive accuracy at lower cost. |
+| **MTSD supervised detection** | **YOLO26-M:** 0.738 test mAP50–95 in the high-resolution follow-up (11-class evaluation) | RF-DETR-M led the original common 13-model evaluation at 0.686; later controlled runs showed that input resolution was a major performance driver. |
+| **MTSD attribute classification** | **V-JEPA 2.1 ViT-L + LoRA:** 0.901 test mean macro-F1, 95% CI [0.891, 0.910] | LoRA consistently improved frozen representations while updating less than 0.3% of the winning model's parameters. Condition remained the hardest attribute (0.747 macro-F1). |
+| **MDWD prompt localisation** | **SAM 3.1:** 0.526 macro mean F1 across four prompt families | Strongest zero-shot result, but wording sensitivity remained substantial (49.0% mean relative best-to-worst degradation). |
+| **MTSD prompt localisation** | **Cosmos Reason2 8B:** 0.305 macro mean F1 across five prompt families | The strongest prompt model was also the least sensitive of those tested on MTSD, but prompt-based localisation remained less reliable for this specialised task. |
 
-The MTSD matrix trained on the augmented set (three offline copies/image, the third a motion-blur copy strengthening the earlier photometric-only recipe); RF-DETR swept the top three ranks by mAP50-95, ahead of every YOLO variant. A clean augmentation ablation (YOLO11m/12m/26m, augmented vs unaugmented) found the offline-augmentation effect small and mixed (±1 pp); a resolution follow-up (640→960→1280 px) found substantial, monotonic mAP50-95 gains that the matrix has not yet been systematically extended to capture — an open scope decision. A further MTSD augmentation recipe is in active development and not yet reflected here.
+These metrics come from task-specific protocols and should not be compared as if they were interchangeable: detection uses mAP, attribute classification uses crop-level macro-F1, and prompt localisation reports targeted F1 over controlled paraphrase families. The complete evidence is available in the [MDWD detection table](Documents/Final-Tables/20260712-213548/mdwd_detection_results.csv), [MTSD detection report](Documents/Final-Reports/MTSD-SupervisedDetection/mtsd_main_scale_comparison.md), [attribute ablation report](Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/size_ablation.md), and prompt-sensitivity reports for [MDWD](Results/PromptDetect/BatchEvaluation/MDWD/20260821-170445-optimized-v2-bounded-sensitivity/prompt_sensitivity_report.md) and [MTSD](Results/PromptDetect/BatchEvaluation/MTSD/20260822-102455-optimized-v2-bounded-sensitivity/prompt_sensitivity_report.md).
 
----
+Additional findings include:
 
-## Repository structure
+- Increasing MTSD input resolution produced larger and more consistent gains than the original offline-augmentation ablation.
+- Prompt wording can change both accuracy and the set of objects returned, making prompt selection an operational variable rather than a cosmetic one.
+- The independently verified MDWD split leakage changed aggregate performance by at most 0.48 percentage points mAP50–95; the issue is real, but its measured effect on the reported conclusion is negligible ([analysis](Documents/MDWDLeakageSensitivity.md)).
+- For MTSD attributes, mounting and sign shape were comparatively easy; visual condition was consistently the limiting head.
 
-```
-Urban-Vision-Benchmark/
-├── Datasets/
-│   ├── MDWD/                          # Waste-detection exports (YOLO11/12/26 + RF-DETR variants)
-│   └── MTSD/                          # GRP-1..11 raw groups, Annotations/ (Final-QA), Prepared/
-├── Documents/                         # Workflow guides + generated EDA/report artefacts
-│   ├── MDWD-EDA/  MTSD-EDA/           # EDA figures, CSVs, interactive GPS atlas
-│   ├── Final-Reports/                 # Integrity, leakage, health, audit, dashboard outputs
-│   ├── Final-Figures/  Final-Tables/  # Dissertation-ready exports
-│   └── *.md                           # Protocol and workflow documentation
-├── Models/                            # Stock pretrained checkpoints (untracked, re-downloadable)
-├── Requirements/                      # Pip requirements + conda environment definitions
-├── Results/
-│   ├── MDWD-Runs/  MDWD-Results/      # Archived MDWD runs + consolidated tables
-│   ├── MTSD-Runs/  MTSD-Results/      # MTSD supervised outputs (13-model matrix executed)
-│   └── PromptDetect/                  # Batch prompt-evaluation runs
-├── Scripts/
-│   ├── Automation/                    # Workflow registry/runner + repository health verifier
-│   ├── FinalEvaluation/               # Read-only evidence tooling (see below)
-│   ├── MDWD-Scripts/                  # MDWD EDA + supervised training notebooks
-│   ├── MTSD-Scripts/
-│   │   ├── AttributeClassification/   # 16-variant multi-attribute pipeline
-│   │   ├── LabelStudio/               # Annotation import/setup/QA-formatting tooling
-│   │   ├── MTSD-Analysis/             # EDA package, GPS atlas, audit utilities
-│   │   ├── MTSD-AnnotationQA/         # Audit → visual review → guarded-apply QA pipeline
-│   │   ├── MTSD-SupervisedDetection/  # QA-gated preparation + resumable training matrix
-│   │   └── MTSD-SupervisedNotebooks/  # Thin read-only notebook front ends
-│   └── Other-Scripts/
-│       ├── GDPR-Compliance/           # Face/plate/QR redaction with preview-and-verify
-│       ├── Inference-Benchmark/       # Cross-paradigm inference-speed benchmark
-│       └── PromptDetect/              # Prompt-based evaluation backend, protocols, apps
-├── tests/                             # Launcher lifecycle tests (pipeline tests live per-package)
-├── launch_uvb.py / launch_uvb.ps1     # Managed launcher for all interactive tools
-└── README.md                          # Public project documentation
-```
+## Datasets
 
----
+### Maltese Domestic Waste Dataset (MDWD)
+
+MDWD contains street-level photographs of waste presented for kerbside collection. Its five classes align with Malta's collection streams: `Mixed Waste`, `Organic Waste`, `Recyclable Material`, `Orange CMD` and `Other Waste`.
+
+| Property | Value |
+| --- | --- |
+| Unique source images | 3,598 |
+| Working export | Roboflow v20, 640 × 640 |
+| Exported splits | 29,487 augmented train / 369 validation / 369 test images |
+| Formats | YOLO and COCO, derived from the same annotation state |
+
+### Maltese Traffic Sign Dataset (MTSD)
+
+MTSD contains smartphone imagery collected across Malta between November 2025 and January 2026. Every retained sign is localised and labelled for viewing angle, mounting, physical condition and shape.
+
+| Property | Value |
+| --- | --- |
+| Source images | 7,482 |
+| Annotated instances | 20,509 |
+| Detection classes | 12 |
+| Attributes | view angle, mounting, condition, sign shape |
+| Canonical split | 5,986 train / 749 validation / 747 test source images |
+| Attribute study | 19,253 retained crops across all 11 QA-approved groups |
+
+The canonical annotations are the QA-approved COCO files under `Datasets/MTSD/Annotations/GRP-*/Final-QA/`. Prepared datasets use deterministic source-level splits, preventing crops or augmented copies of one photograph from crossing partitions.
+
+## Reproducibility
+
+- Seed **42** is used throughout; deterministic execution is enabled where supported.
+- Dataset splits are assigned at source-image level using fixed salted hashes.
+- Prepared datasets and annotation exports carry SHA-256 manifests.
+- Run directories are immutable and store their effective configuration, environment and evaluation artefacts.
+- Dataset preparation is blocked unless the corresponding MTSD annotation QA gate has passed.
+- Final evaluation tools are read-only over stored predictions and write to new timestamped directories.
+
+The repository preserves code, protocols, configurations, QA records, aggregate results and dissertation-ready exports. Weights & Biases is used as a monitoring mirror; repository artefacts are the authoritative evidence.
 
 ## Getting started
 
-### Environments
+Clone the repository and create the environment required by the workflow you want to reproduce. Environment definitions and platform-specific setup scripts are in [Requirements/CondaEnvironments](Requirements/CondaEnvironments/README.md).
 
-Four isolated conda environments cover mutually incompatible dependency stacks (definitions and setup scripts in [Requirements/CondaEnvironments/](Requirements/CondaEnvironments/); pip layers in [Requirements/](Requirements/)):
+| Environment | Primary use |
+| --- | --- |
+| `MDWD` | YOLO/RF-DETR training and MDWD analysis |
+| `mtsd-attrcls` | Multi-head attribute classification |
+| `mtsd-base` | MTSD detection, SAM/Cosmos evaluation, QA and privacy tools |
+| `mtsd-la` | Isolated LocateAnything worker |
 
-| Environment | Used by | Key pins |
-| --- | --- | --- |
-| `MDWD` | Detection training (YOLO + RF-DETR) and MDWD EDA | Ultralytics 8.4.x, `rfdetr` 1.3.0, NumPy < 2 |
-| `mtsd-attrcls` | Attribute-classification pipeline | Transformers 5.x, PEFT, timm, `lingbot-vision` |
-| `mtsd-base` | PromptDetect (SAM 3/3.1, Cosmos), GDPR redaction, QA review app | Meta `sam3` package, Transformers 5.x |
-| `mtsd-la` | LocateAnything worker (HTTP subprocess) | Transformers 4.57.x |
+Optional W&B logging is configured through a git-ignored root `.env`:
 
-### Secrets
-
-Create a git-ignored `.env` at the repository root for Weights & Biases logging (not required for offline work):
-
-```
+```dotenv
 WANDB_MODE=online
-WANDB_API_KEY=<your key>
-WANDB_ENTITY=mark-bugeja-university-of-malta
+WANDB_API_KEY=<your-key>
+WANDB_ENTITY=<your-entity>
 ```
 
-W&B projects: `MSc-MDWD-EUVIP26` (MDWD detection), `MSc-MTSD-SupervisedDetection` (MTSD detection), `MSc-MTSD-Attributes` (attribute classification), and `MSc-MDWD-MDWD-PromptDetect` (PromptDetect evaluation). W&B is a monitoring mirror; the authoritative record is the repository artefacts.
-
-### The UVB launcher
-
-`python launch_uvb.py` opens a searchable menu over every safe tool in the repository — EDA, audits, review apps, evaluators, reports — resolving the right conda environment per tool. Web applications run as **managed processes**: the launcher polls readiness before opening a browser, offers reopen/restart/stop for running apps, keeps per-app logs under `.uvb_launcher_logs/`, and never starts training, applies annotation fixes or deletes anything. Heavy/mutating commands sit behind explicit confirmation.
-
-### The workflow runner
-
-Batch workflows are registered as named targets in [Scripts/Automation/](Scripts/Automation/README.md) and executed via `run_urban_workflows.ps1`: every run is logged, notebooks execute headlessly into timestamped copies (sources never modified), `-DryRun` previews any target, and training targets refuse to run without an explicit `-AllowTraining` flag. `verify_repository_health.py` is the local pre-commit/pre-push health check (structure, notebook validity, compilation, stale paths, credential leaks, link integrity).
-
----
-
-## Key workflows
+For an interactive entry point:
 
 ```bash
-# MDWD exploratory analysis
-python Scripts/MDWD-Scripts/MDWD-Analysis/run_eda.py
-
-# MTSD annotation QA (read-only audit → visual review → guarded apply)
-python Scripts/MTSD-Scripts/MTSD-AnnotationQA/scan_annotations.py --dry-run
-python Scripts/MTSD-Scripts/MTSD-AnnotationQA/review_app.py
-python Scripts/MTSD-Scripts/MTSD-AnnotationQA/apply_fixes.py --decisions <file> --apply
-
-# MTSD supervised detection (QA-gated; refuses on unresolved audit findings)
-python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --dry-run
-python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --prepare-only --dataset-variant both --final
-python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --validate-prepared --strict
-python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --matrix dissertation --final
-
-# Attribute classification (16-variant matrix; read-only planning first)
-python Scripts/MTSD-Scripts/AttributeClassification/run_all.py --plan --profile size_ablation_all
-python Scripts/MTSD-Scripts/AttributeClassification/run_all.py --profile size_ablation_all
-
-# Prompt-based evaluation (both protocols, resumable, atomic per model×prompt;
-# online W&B logging defaults to the configured PromptDetect project)
-python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_protocol.py --dataset both --split test --dry-run
-python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_protocol.py --dataset both --split test --final
-
-# Cross-paradigm inference benchmark
-python Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py --dataset MDWD --task detection --dry-run
+python launch_uvb.py
 ```
 
-### Dissertation evidence tooling — [Scripts/FinalEvaluation/](Scripts/FinalEvaluation/README.md)
+The launcher selects the appropriate conda environment, manages local web applications and logs, and requires confirmation before heavy or mutating actions.
 
-A read-only analysis layer over stored results (nothing here trains or silently re-runs inference): dataset-integrity sign-off, the MDWD leakage-sensitivity analysis, robustness slice analysis (twelve slice dimensions from stored predictions), seeded bootstrap confidence intervals, an annotation/operational-effort report (no composite scores), failure-case sampling, final table/figure export with per-cell provenance, and a fully offline HTML evidence dashboard mapping each research question to its evidence. All tools have `--self-test` and `--dry-run` modes and write to fresh timestamped folders.
+### Representative workflows
 
----
+```bash
+# Check repository structure, Python sources, notebooks, links and secrets
+python Scripts/Automation/verify_repository_health.py
 
-## Reproducibility and data governance
+# Preview the MTSD supervised-detection matrix
+python Scripts/MTSD-Scripts/MTSD-SupervisedDetection/run_mtsd_supervised.py --dry-run
 
-- **Seeds and determinism**: seed 42 everywhere; deterministic execution enabled where frameworks support it; splits assigned at source-image level by deterministic (salted-hash) algorithms that are never re-salted.
-- **Immutable artefacts**: prepared datasets and annotation exports carry SHA-256 manifests; run directories are name-encoded, never overwritten, and export their effective configuration verbatim.
-- **QA gating**: MTSD dataset preparation is blocked by a machine-readable QA gate that names the audit it trusts; preparation refuses to consume unaudited annotation state.
-- **Testing**: pytest suites cover the preparation, QA, augmentation, splitting, attribute and prompt-evaluation packages, including consumer-compatibility tests that run real framework data loaders against synthetic prepared datasets; every attribute variant has a smoke-test mode.
-- **Privacy**: raw imagery is untracked and access-restricted; the GDPR redaction workflow (automatic face/plate/QR detection, manual preview, guarded apply) governs any imagery designated for sharing; GPS metadata is used only in aggregate.
+# Preview the complete attribute-classification ablation
+python Scripts/MTSD-Scripts/AttributeClassification/run_all.py --plan --profile size_ablation_all
 
----
+# Preview the fixed prompt-evaluation protocol on both datasets
+python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_protocol.py \
+  --dataset both --split test --dry-run
 
-## Dissertation documentation
+# Inspect the dissertation evidence tools
+python Scripts/FinalEvaluation/export_dissertation_tables.py --dry-run
+```
 
-The dissertation evidence and supporting documentation available in this repository live under [Documents/](Documents/), including EDA outputs, final reports, figures, tables, workflow guides and evidence audits. Chapter state as of 18 July 2026: dataset facts synchronised with the final eleven-group MTSD scope, the three-copy augmentation recipe, the completed 16-variant attribute matrix and both prompt protocols.
+Training and full inference require authorised access to the private imagery and locally downloaded pretrained weights. See the component READMEs for exact commands and hardware-specific settings.
+
+## Repository guide
+
+```text
+Urban-Vision-Benchmark/
+├── Datasets/       MDWD exports, MTSD source groups, annotations and prepared sets
+├── Documents/      methodology notes, EDA, audits, final figures, tables and reports
+├── Models/         local pretrained checkpoints (not distributed)
+├── Requirements/   pip requirements and conda environment definitions
+├── Results/        immutable training, evaluation and prediction artefacts
+├── Scripts/
+│   ├── Automation/       workflow runner and repository health checks
+│   ├── FinalEvaluation/  integrity, uncertainty, robustness and export tools
+│   ├── MDWD-Scripts/     waste-dataset analysis and supervised training
+│   ├── MTSD-Scripts/     annotation QA, detection and attribute classification
+│   └── Other-Scripts/    PromptDetect, GDPR redaction and inference benchmarks
+└── launch_uvb.py   managed entry point for interactive tools
+```
+
+Useful starting points:
+
+- [Final-evaluation documentation](Scripts/FinalEvaluation/README.md)
+- [MTSD supervised-detection documentation](Scripts/MTSD-Scripts/MTSD-SupervisedDetection/README.md)
+- [MTSD attribute-classification documentation](Scripts/MTSD-Scripts/AttributeClassification/README.md)
+- [PromptDetect protocol](Documents/PromptDetect-Dissertation-Protocol.md)
+- [Automation and workflow registry](Scripts/Automation/README.md)
+
+## Data availability, ethics and privacy
+
+Raw street-level images are **not publicly distributed** because they may contain faces, vehicle registration plates, location metadata and other personal data. Access is restricted and governed by the dissertation's GDPR-aware handling procedure. Any imagery selected for publication must pass the repository's face, plate and QR-code redaction workflow, including manual preview and verification.
+
+The public research artefact is therefore intended to provide the implementation, annotation schema, configurations, provenance records and numeric evidence without exposing the underlying personal data. GPS information is used only in aggregate reporting.
 
 ## Citation
 
-> A. F. Lucas, *A Comparative Study of Vision-Based Perception Paradigms for Urban Waste and Infrastructure Monitoring* (working title), MSc dissertation, University of Malta, 2026. Repository: `AFLucas-UOM/Urban-Vision-Benchmark`.
+If you use this repository or its methodology, please cite:
 
-The private, git-ignored `Summary.md` is maintained locally as an agent/project status ledger. It records what has been completed, what is in progress, evidence locations and the remaining work; it is intentionally excluded from public releases.
+> A. F. Lucas, *A Comparative Study of Vision-Based Perception Paradigms for Urban Waste and Infrastructure Monitoring*. MSc dissertation, University of Malta, 2026. Repository: `AFLucas-UOM/Urban-Vision-Benchmark`.
+
+No public licence is currently declared; contact the author before redistributing code, annotations or derived artefacts.
