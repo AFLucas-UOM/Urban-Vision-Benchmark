@@ -1,0 +1,31 @@
+[
+  {
+    "source_path": "Datasets/MTSD/GRP-11/Images/05174eac-IMG_6411.jpeg",
+    "sha256": "fcc9c96baa8a786aec355421a3dc11f24f5675a1fad0d814b815273c39d2c7b2",
+    "matches_detection_manifest_hash": true,
+    "detection_split": "train",
+    "attribute_split": [
+      "train"
+    ],
+    "n_crops": 2,
+    "crop_ids": [
+      "GRP-11/05174eac-IMG_6411.jpeg#35",
+      "GRP-11/05174eac-IMG_6411.jpeg#36"
+    ]
+  },
+  {
+    "source_path": "Datasets/MTSD/GRP-11/Images/d5012226-IMG_6411.jpeg",
+    "sha256": "fcc9c96baa8a786aec355421a3dc11f24f5675a1fad0d814b815273c39d2c7b2",
+    "matches_detection_manifest_hash": true,
+    "detection_split": "train",
+    "attribute_split": [
+      "test"
+    ],
+    "n_crops": 3,
+    "crop_ids": [
+      "GRP-11/d5012226-IMG_6411.jpeg#1304",
+      "GRP-11/d5012226-IMG_6411.jpeg#1305",
+      "GRP-11/d5012226-IMG_6411.jpeg#1306"
+    ]
+  }
+]

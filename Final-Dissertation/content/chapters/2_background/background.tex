@@ -49,7 +49,7 @@ The two monitoring domains established in Subsection~\ref{sec:bg-monitoring-doma
 \subsection{\gls{MDWD}%
 \texorpdfstring{ \cite{BG15-mdwd}}{}}
 \label{sec:bg-mdwd}
-The \gls{MDWD} is a street-level \gls{OD} dataset developed to represent \gls{MSW} as it is visually encountered within the Maltese streetscape \cite{BG15-mdwd}. Its five object classes distinguish the main bag-based streams of the national kerbside collection system from waste associated with public cleansing and other forms of waste that fall outside these streams \cite{BG15-mdwd,wastecollection2026web}. The taxonomy is based on characteristics that can be determined from road-facing imagery, primarily presentation, colour, form, and context, rather than on the underlying material composition of an object. This is necessary because the contents of sealed or opaque refuse bags cannot be determined visually, and assigning labels based on information unavailable in the image would introduce systematic annotation uncertainty.
+The \gls{MDWD} is a street-level \gls{OD} dataset developed to represent \gls{MSW} as it is visually encountered within the Maltese streetscape \cite{BG15-mdwd}. Its five object classes distinguish the principal bag-based streams of the national kerbside collection system from waste associated with public cleansing and other forms of waste that fall outside these streams \cite{BG15-mdwd,wastecollection2026web}. The taxonomy is based on characteristics that can be determined from road-facing imagery, primarily presentation, colour, form, and context, rather than on the underlying material composition of an object. This is necessary because the contents of sealed or opaque refuse bags cannot be determined visually, and assigning labels based on information unavailable in the image would introduce systematic annotation uncertainty.
 
 \subsubsection{Waste Terminology and Annotation Scope}
 The terminology used for waste requires separating the physical object being observed from the circumstances under which it entered the streetscape. In its broadest sense, \emph{waste} follows the definition established by the European Union Waste Framework Directive as a substance or object that its holder discards, intends to discard, or is required to discard \cite{BG23-waste-framework}. Within this category, \emph{kerbside-presented \gls{MSW}} is used throughout this dissertation for domestic waste intentionally placed for collection under the established national schedule \cite{wastecollection2026web}.
@@ -57,7 +57,7 @@ The terminology used for waste requires separating the physical object being obs
 \emph{Litter} instead refers to loose waste whose visible presentation is consistent with material having been dropped, left or deposited in a public place rather than presented for scheduled collection. This follows the distinction in Maltese legislation between litter deposited in public spaces and refuse lawfully presented for collection \cite{BG24-malta-litter}. A related but separate category, \emph{bulky waste}, describes large discarded objects such as furniture, mattresses and household appliances \cite{BG25-bulky-waste}. By contrast, \emph{illegal dumping} describes the circumstances and legality of disposal rather than a category defined by visual appearance \cite{BG26-illegal-disposal}.
 
 What separates kerbside-presented waste, litter and illegal dumping from one another is therefore largely a matter of intent and legality rather than appearance: a black bag placed at the kerb on collection day and one dumped illegally elsewhere may be visually indistinguishable, yet correspond to entirely different operational categories. Bulky waste, by contrast, is defined by the physical form of the object itself, and may co-occur with any of these circumstances. As intent, legality and circumstance cannot reliably be recovered from an image, the taxonomy set out below instead classifies instances according to the collection stream that their presentation most plausibly indicates, rather than by the terminology introduced above.
- 
+
 \subsubsection{Object-Class Taxonomy}
 \label{sec:bg-mdwd-taxonomy}
 The five \gls{MDWD} classes are summarised in Table~\ref{tab:mdwd-taxonomy}. For the principal streams, the operational meaning of each class is defined by the national collection scheme \cite{wastecollection2026web,era2023web}, while annotation follows the bag type visible within the image.
@@ -74,27 +74,27 @@ The five \gls{MDWD} classes are summarised in Table~\ref{tab:mdwd-taxonomy}. For
     Mixed Waste
     & Black refuse bags
     & Non-separable household waste comprising soiled or composite packaging, sanitary products, household sweepings, ceramics and worn textiles, with hazardous and electrical items excluded from the stream. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Recyclable\newline Material
     & Grey or green refuse bags
     & Co-mingled recyclable household stream comprising accepted paper, cardboard, metal and plastic packaging. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Organic Waste
     & White or transparent refuse bags
-    & Biodegradable household stream comprising food scraps, garden trimmings and other compostable kitchen waste presented for organic collection. \\
-    
+    & Biodegradable household stream comprising food scraps, flowers, leaves and other accepted kitchen waste presented for organic collection. \\
+
     \addlinespace[0.5em]
-    
+
     Orange \gls{CMD}
     & Orange refuse bags
     & Waste associated with \gls{CMD} street-cleansing activity rather than a household separation stream. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Other Waste
     & No single designated presentation
     & Waste outside the four preceding bag-based categories, including bulky objects, loose discarded material, glass presented separately, flattened cardboard and open containers. \\
@@ -109,15 +109,15 @@ The five \gls{MDWD} classes are summarised in Table~\ref{tab:mdwd-taxonomy}. For
 \label{sec:bg-mtsd}
 The \gls{MTSD} is a street-level dataset of Maltese traffic signs and related roadside infrastructure developed to support both \gls{OD} and object-level attribute classification. Each annotated instance is localised by a bounding box, assigned to one of twelve object classes, and described through four object-level attributes, detailed in Subsection~\ref{sec:bg-attributes}. The taxonomy is operational rather than exhaustive, representing the roadside assets selected for monitoring rather than attempting to reproduce the complete catalogue of signs used in Malta.
 
-Private notices, advertisements and other signage outside the monitoring scope are excluded, while roadside infrastructure relevant to sightlines or road operation is retained even where it is not a conventional traffic sign. The sole such inclusion is the convex mirror, recognised by Transport Malta as a means of improving visibility where sight distance is otherwise inadequate \cite{BG27-malta-road-mirrors}.
+Private notices, advertisements and other signage outside the monitoring scope are excluded, while roadside infrastructure relevant to sightlines or road operation is retained even where it is not a conventional traffic sign. One such inclusion is the convex mirror, recognised by Transport Malta as a means of improving visibility where sight distance is otherwise inadequate \cite{BG27-malta-road-mirrors}.
 
 \subsubsection{Object-Class Taxonomy}
 \label{sec:bg-mtsd-taxonomy}
-The twelve object classes are summarised in Table~\ref{tab:mtsd-taxonomy} and organised into three functional groups \cite{BG28-malta-road-signs}. Five represent signs associated with specific road conditions or required driver responses, namely \emph{Stop}, \emph{No Entry (One Way)}, \emph{Pedestrian Crossing}, \emph{Roundabout Ahead} and \emph{No Through Road (T-Junction)}. These classes are defined according to the operational condition represented within the dataset rather than strictly reproducing the formal regulatory, warning and informative categories of the underlying traffic-sign system. Consequently, \emph{Pedestrian Crossing} and \emph{Roundabout Ahead} each encompass visually distinct sign forms associated with the same underlying road feature, including both triangular warning variants and their corresponding non-warning forms. A further five represent direction, location and visibility assets that support navigation and situational awareness rather than an immediate manoeuvre, namely \emph{Street Sign}, \emph{Directional Sign}, \emph{Tourist Sign}, \emph{Auxiliary Sign} and \emph{Blind-Spot Mirror (Convex Mirror)}. The remaining two, \emph{Back-Unknown} and \emph{Other-Unknown}, retain observations for which a more specific semantic category cannot be established from the available visual evidence, since context is not used to infer a concealed or insufficiently visible sign face.
+The twelve object classes are summarised in Table~\ref{tab:mtsd-taxonomy} and organised into three functional groups \cite{BG28-malta-road-signs}. Five represent signs associated with specific road conditions or required driver responses, namely \emph{Stop}, \emph{No Entry (One Way)}, \emph{Pedestrian Crossing}, \emph{Roundabout Ahead} and \emph{No Through Road (T-Junction)}. These classes are defined according to the operational condition represented within the dataset rather than strictly reproducing the formal regulatory, warning and informative categories of the underlying traffic-sign system. Consequently, \emph{Pedestrian Crossing} and \emph{Roundabout Ahead} each encompass visually distinct sign forms associated with the same underlying road feature, including both triangular warning variants and their corresponding non-warning forms. A further five represent direction, location and visibility assets that support navigation and situational awareness rather than an immediate manoeuvre, namely \emph{Street Sign}, \emph{Directional Sign}, \emph{Tourist Sign}, \emph{Auxiliary Sign} and \emph{Blind-Spot Mirror (Convex Mirror)}. The remaining two classes distinguish different forms of taxonomic uncertainty: \emph{Back-Unknown} records signs whose semantic identity cannot be recovered from the visible rear surface, whereas \emph{Other-Unknown} includes signs outside the explicitly modelled categories, even when their meaning is visually recognisable. Context is not used to infer a concealed sign face.
 
 \begin{table}[H]
 \centering
-\caption{Object classes and corresponding annotation criteria defined for the \gls{MTSD}, organised into road-condition signage, roadside information and visibility assets, and semantically unidentifiable signs.}
+\caption{Object classes and corresponding annotation criteria defined for the \gls{MTSD}, organised into road-condition signage, roadside information and visibility assets, and rear-facing or otherwise uncategorised signs.}
 \label{tab:mtsd-taxonomy}
 \begin{tabularx}{\textwidth}{@{}p{3.8cm} X@{}}
 \toprule
@@ -125,58 +125,58 @@ The twelve object classes are summarised in Table~\ref{tab:mtsd-taxonomy} and or
 \midrule
     Stop Sign
     & Red octagonal sign bearing \emph{STOP}, indicating a mandatory halt at the approaching junction. \\
-    
+
     \addlinespace[0.5em]
     No Entry (One Way)
     & Red circular sign with a horizontal white bar, prohibiting vehicular access from the observed direction. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Pedestrian Crossing
     & Blue quadrangular sign bearing a walking figure, or red triangular warning variant, indicating a pedestrian crossing. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Roundabout Ahead
     & Blue circular directional sign with a circular arrow indicating traffic flow, or red triangular warning variant, indicating an approaching roundabout. \\
-    
+
     \addlinespace[0.5em]
-    
+
     No Through Road\newline (T-Junction)
-    & Blue quadrangular sign displaying a T-shaped junction symbol, indicating that the road ahead terminates rather than continuing through. \\
-    
+    & Blue quadrangular sign displaying a white vertical bar capped by a red horizontal bar, indicating a no-through road. The parenthetical dataset label does not denote a T-junction warning sign. \\
+
 \midrule
 
     Blind-Spot Mirror (Convex Mirror)
     & Convex roadside mirror, installed to improve visibility where sightlines are restricted at junctions, bends or access points. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Street Sign
     & Plate bearing a street or locality name, commonly prefixed with the Maltese \emph{Triq} or \emph{Vjal}, typically wall-mounted and varying in shape and size. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Directional Sign
     & Blue sign providing route or destination guidance through place names, arrows or related indicators, varying in shape and size. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Tourist Sign
     & Brown sign providing the same route or destination guidance as a Directional Sign, specialised for tourist, historical, cultural or environmental destinations. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Auxiliary Sign
     & White quadrangular plate with a thin black border, bearing supplementary text, distances or symbols. Supplements a primary sign, or stands alone carrying finer detail. \\
-    
+
 \midrule
 
     Back-Unknown
     & Sign panel and mounting structure visible only from the rear, with the sign face not visible and its semantic category therefore unrecoverable. \\
-    
+
     \addlinespace[0.5em]
-    
+
     Other-Unknown
     & Roadside sign outside the preceding classes, retained as part of the road's regulatory or informational infrastructure. \\
 \bottomrule
@@ -216,7 +216,7 @@ Physical\newline Condition
 
 Geometric Shape
 & Circular, Quadrangle, Triangular, Octagonal, Pentagon, Damaged-Unknown
-& Visible geometric form, with \emph{Quadrangle} covering both square and rectangular appearances. \emph{Damaged-Unknown} was available during initial annotation for cases where deformation prevented reliable shape identification\\
+& Visible geometric form, with \emph{Quadrangle} covering both square and rectangular appearances. \emph{Damaged-Unknown} was available during initial annotation for cases where deformation prevented reliable shape identification. No final instance retains this label; the classification experiments therefore use five shape classes.\\
 
 \bottomrule
 \end{tabularx}
@@ -230,11 +230,11 @@ Existing work relevant to the two monitoring domains differs not only in the dat
 
 \subsubsection{Waste-Related Datasets}
 \label{sec:bg-waste-datasets}
-Waste-related \gls{CV} research has developed along several distinct formulations, differing along each of the dimensions introduced above and, in particular, in the semantic basis used to define categories. Table~\ref{tab:waste-dataset-comparison} sets out these dimensions for the datasets reviewed here alongside the \gls{MDWD}. Early work generally treated waste recognition as a task of image-level classification. TrashNet~\cite{trashnet} established a widely used benchmark of isolated recyclable objects captured under controlled conditions, and subsequent transfer-learning studies have shown that pretrained image classifiers can be adapted effectively to this formulation \cite{jain2024mobilenetbags,jain2024resnetbags}. Categories in this formulation describe the material of a single object that has already been isolated, so neither spatial localisation nor the cluttered street context characteristic of municipal imagery is represented.
+Waste-related \gls{CV} research has developed along several distinct formulations, differing along each of the dimensions introduced above and, in particular, in the semantic basis used to define categories. Table~\ref{tab:waste-dataset-comparison} sets out these dimensions for the datasets reviewed here alongside the \gls{MDWD}. Early work generally treated waste recognition as a task of image-level classification. TrashNet~\cite{trashnet} established a widely used benchmark of isolated waste objects captured under controlled conditions, and subsequent transfer-learning studies have shown that pretrained image classifiers can be adapted effectively to this formulation \cite{jain2024mobilenetbags,jain2024resnetbags}. Categories in this formulation describe the material of a single object that has already been isolated, so neither spatial localisation nor the cluttered street context characteristic of municipal imagery is represented.
 
 Trash Annotations in Context (TACO)~\cite{proenca2020taco} adds localisation to this category information, annotating individual litter objects with bounding boxes and polygons in natural and urban scenes. Its sixty categories nonetheless describe litter by material or object type rather than by the stream under which waste is presented for collection, a semantic basis that departs from kerbside monitoring, where the manner of presentation itself carries operational meaning.
 
-A separate line of work alters the acquisition viewpoint rather than the task formulation. The Small Objects from Different Altitude (SODA) dataset~\cite{pisani2024soda}, also collected in Malta, applies bounding-box and polygon annotation to small litter objects observed from \gls{UAV} imagery over rural garigue terrain. Aerial capture broadens spatial coverage, but the overhead viewpoint diminishes the road-facing cues through which bag colour, kerbside placement and surrounding infrastructure can be interpreted, and these cues underpin the \gls{MDWD} taxonomy. Aerial acquisition is also more readily achievable over open rural terrain than within dense urban areas, where airspace restrictions and the incidental capture of identifiable individuals and private property raise obligations under regulations such as the \gls{GDPR}~\cite{lee2022uavprivacy}. Street-level acquisition therefore offers a more practical basis for repeated road-facing observation of kerbside waste in an urban Maltese context.
+A separate line of work alters the acquisition viewpoint rather than the task formulation. The SODA dataset~\cite{pisani2024soda}, also collected in Malta, applies bounding-box and polygon annotation to small litter objects observed from \gls{UAV} imagery over rural garigue terrain. Aerial capture broadens spatial coverage, but the overhead viewpoint diminishes the road-facing cues through which bag colour, kerbside placement and surrounding infrastructure can be interpreted, and these cues underpin the \gls{MDWD} taxonomy. Aerial acquisition is also more readily achievable over open rural terrain than within dense urban areas, where airspace restrictions and the incidental capture of identifiable individuals and private property raise obligations under regulations such as the \gls{GDPR}~\cite{lee2022uavprivacy}. Street-level acquisition therefore offers a more practical basis for repeated road-facing observation of kerbside waste in an urban Maltese context.
 
 \begin{table}[H]
 \centering
@@ -262,42 +262,42 @@ A separate line of work alters the acquisition viewpoint rather than the task fo
     TrashNet \cite{trashnet}
     & 2,527
     & 6
-    & Image-level classification of isolated recyclable objects under controlled conditions. \\
-    
+    & Image-level classification of isolated waste objects under controlled conditions. \\
+
     TACO \cite{proenca2020taco}
     & 1,500
     & 60
     & Bounding-box and polygon annotation of individual litter objects in contextual outdoor imagery. \\
-    
+
     SODA \cite{pisani2024soda}
     & 829
     & 6
     & Bounding-box and polygon annotation of small litter objects from \gls{UAV} imagery. \\
-    
+
     GIGO \cite{sukel2023gigo}
     & 25,000
     & 5
     & Multi-label classification of street-level urban garbage from vehicle-mounted imagery. \\
-    
+
     GVP \cite{kumar2026gvp}
     & 5,000
     & 2
-    & Binary waste detection from fixed-camera imagery of garbage-vulnerable locations. \\
-    
+    & Bounding-box annotation of waste/non-waste regions in 5,000 selected fixed-camera frames. \\
+
     \midrule
-    
+
     \textbf{\gls{MDWD}} \cite{BG15-mdwd}
     & \textbf{3,694}
     & \textbf{5}
     & \textbf{Multi-class bounding-box detection} of operationally defined waste streams in Maltese street-level imagery. \\
-    
+
 \bottomrule
 \end{tabularx}
 \end{table}
 
 \noindent The datasets closest to municipal monitoring share this street-level perspective, but they diverge from one another in task formulation and in the granularity of the labels they carry. Garbage In, Garbage Out (GIGO)~\cite{sukel2023gigo} is acquired from vehicle-mounted cameras, yet its multi-label formulation records which garbage categories occur in a scene without localising individual waste instances. Garbage Vulnerable Point (GVP)~\cite{kumar2026gvp} does resolve waste spatially through \gls{OD}, so the position of waste within the scene is recovered, but its binary formulation (waste / no waste) abstracts away the operational interpretation of how waste is presented, which the \gls{MDWD} preserves through collection-stream categories.
 
-The principal distinction across these datasets is therefore not dataset scale alone, but the type and granularity of information each formulation retains: classification datasets preserve category without localisation, litter datasets localise objects but describe them by material rather than collection operation, and street-level monitoring datasets capture realistic scenes while retaining only scene-level or binary waste labels. None combines road-facing street-level imagery, instance-level bounding boxes and categories defined by operational waste presentation. The \gls{MDWD} fills this gap, treating the visible collection presentation itself as the object category while retaining non-standard presentations through the residual \emph{Other Waste} class~\cite{BG15-mdwd}.
+The principal distinction across these datasets is therefore not dataset scale alone, but the type and granularity of information each formulation retains: classification datasets preserve category without localisation, litter datasets localise objects but describe them by material rather than collection operation, and street-level monitoring datasets capture realistic scenes while retaining only scene-level or binary waste labels. None of the datasets compared in this table combines road-facing street-level imagery, instance-level bounding boxes and the collection-stream taxonomy used in this study. The \gls{MDWD} fills this gap, treating the visible collection presentation itself as the object category while retaining non-standard presentations through the residual \emph{Other Waste} class~\cite{BG15-mdwd}.
 
 \subsubsection{Traffic-Sign Datasets}
 \label{sec:bg-sign-datasets}
@@ -307,7 +307,7 @@ The German Traffic Sign Detection Benchmark (GTSDB)~\cite{houben2013gtsdb} shift
 
 Subsequent datasets broaden both geographic coverage and annotation scope. The Mapillary Traffic Sign Dataset~\cite{ertler2020mapillary} contains globally sourced street-level imagery spanning 400 traffic-sign classes and a wide range of capture devices, regions and environmental conditions. Alongside bounding-box localisation and semantic labels, it records attributes describing factors such as occlusion, ambiguity, truncation and relationships between signs. These annotations provide a richer description of how an instance appears in an image, but remain primarily concerned with its observability rather than its mounting configuration or physical condition as an infrastructure asset.
 
-A further group of datasets is more directly aligned with road-infrastructure inventory and maintenance. The DFG Traffic Sign Dataset (DFG)~\cite{tabernik2019dfg} was collected using vehicle-mounted imagery specifically to support traffic-sign inventory management on Slovenian roads. Its 200 categories provide substantially broader semantic coverage than conventional driver-assistance benchmarks, including sign types with considerable intra-class variation, and instances are localised using tightly fitted polygon annotations. Its formulation therefore moves closer to asset-management requirements, although the annotations still principally describe which sign is present and where it occurs.
+A further group of datasets is more directly aligned with road-infrastructure inventory and maintenance. The DFG Traffic Sign Dataset (DFG)~\cite{tabernik2019dfg} was collected using vehicle-mounted imagery specifically to support traffic-sign inventory management on Slovenian roads. Its 200 categories provide substantially broader semantic coverage than conventional driver-assistance benchmarks, including sign types with considerable intra-class variation, with tightly fitted polygon annotations for instances larger than 30 pixels and ignored bounding-box annotations for smaller instances between 15 and 30 pixels. Its formulation therefore moves closer to asset-management requirements, although the annotations still principally describe which sign is present and where it occurs.
 
 \noindent The Dataset of Road Infrastructure Elements (DORIE)~\cite{katsamenis2025dorie} broadens the monitored object space beyond signage. Acquired from a patrol vehicle on a Spanish motorway, it localises ten classes including bollards, delineators, guardrails and road surfaces alongside four coarse-grained traffic-sign categories. Its acquisition context and object coverage make it particularly relevant to road-infrastructure monitoring, but this broader scope comes at the expense of fine-grained traffic-sign semantics. As with DFG, the annotations primarily record asset presence and location rather than the observed state of an individual instance.
 
@@ -337,8 +337,8 @@ GTSRB \cite{stallkamp2012gtsrb}
 
 GTSDB \cite{houben2013gtsdb}
 & 900
-& 43
-& Bounding boxes for full-scene German sign detection. \\
+& 3 groups
+& Bounding boxes with fine-grained sign IDs; the benchmark evaluates prohibitory, mandatory and danger categories. \\
 
 \addlinespace[0.4em]
 
@@ -386,7 +386,7 @@ DORIE \cite{katsamenis2025dorie}
 \end{tabularx}
 \end{table}
 
-\noindent Among the datasets reviewed, DFG and DORIE come closest to the \gls{MTSD}'s infrastructure-monitoring formulation, though from different directions: DFG retains fine-grained semantic coverage suited to inventory management, while DORIE broadens monitoring to more roadside assets using coarser sign categories. Neither, however, records mounting, condition, viewing geometry or shape as per-instance attributes. The \gls{MTSD} addresses this gap by coupling localisation with these four properties, capturing not only what asset is present and where, but how it is observed, installed and maintained.
+\noindent Among the datasets reviewed, DFG and DORIE come closest to the \gls{MTSD}'s infrastructure-monitoring formulation, though from different directions: DFG retains fine-grained semantic coverage suited to inventory management, while DORIE broadens monitoring to more roadside assets using coarser sign categories. Neither, however, records mounting, condition, viewing geometry or shape as per-instance attributes. The \gls{MTSD} addresses this gap by coupling localisation with these four properties, capturing the asset category and location alongside viewing angle, mounting type, visible condition and shape.
 
 \section{Computer Vision for Municipal Visual Monitoring}
 \label{sec:bg-cv}
@@ -394,7 +394,7 @@ DORIE \cite{katsamenis2025dorie}
 
 \subsection{Computer Vision Tasks and Learning Paradigms}
 \label{sec:bg-cv-paradigms}
-The principal \gls{CV} tasks differ in the semantic and spatial detail of their outputs \cite{reshadi2026deeplearningcv,Transformers4Vision}, ranging from coarse image-level labels to pixel-precise delineation of object boundaries. \emph{Image classification} assigns an image to one of a predefined set of semantic classes, whereas \gls{OD} additionally localises individual object instances using bounding boxes and associated class labels \cite{BG32-image-classification,BG33-object-detection,zhu2024openvocabulary}. Segmentation represents spatial extent at pixel level instead of through boxes, with \emph{semantic segmentation} assigning a semantic category to each pixel and \emph{instance segmentation} additionally distinguishing separate instances of the same category \cite{BG34-semantic-segmentation,BG35-instance-segmentation,zhu2024openvocabulary}. This finer spatial representation demands a correspondingly greater annotation effort, as object boundaries must be explicitly delineated in fully supervised settings through masks or polygons rather than the coarser bounding boxes sufficient for \gls{OD} \cite{BG36-mask-annotation}. 
+The principal \gls{CV} tasks differ in the semantic and spatial detail of their outputs \cite{reshadi2026deeplearningcv,Transformers4Vision}, ranging from coarse image-level labels to pixel-precise delineation of object boundaries. \emph{Image classification} assigns an image to one of a predefined set of semantic classes, whereas \gls{OD} additionally localises individual object instances using bounding boxes and associated class labels \cite{BG32-image-classification,BG33-object-detection,zhu2024openvocabulary}. Segmentation represents spatial extent at pixel level instead of through boxes, with \emph{semantic segmentation} assigning a semantic category to each pixel and \emph{instance segmentation} additionally distinguishing separate instances of the same category \cite{BG34-semantic-segmentation,BG35-instance-segmentation,zhu2024openvocabulary}. This finer spatial representation demands a correspondingly greater annotation effort, as object boundaries must be explicitly delineated in fully supervised settings through masks or polygons rather than the coarser bounding boxes sufficient for \gls{OD} \cite{BG36-mask-annotation}.
 
 Visual attribute prediction departs from this localisation-oriented hierarchy altogether, characterising observable properties of an object beyond its categorical identity \cite{BG41-visual-attributes}. Accordingly, this dissertation distinguishes \emph{object localisation}, which determines where an object occurs, from \emph{semantic characterisation}, which determines its category or observable attributes \cite{BG33-object-detection,BG41-visual-attributes}.
 
@@ -472,7 +472,7 @@ A more substantial change appeared with \gls{YOLO}10, which introduced consisten
 
 Furthermore, the recent generations leading to the models evaluated in this dissertation illustrate materially different architectural emphases. \gls{YOLO}11 retains a predominantly convolutional backbone--neck--head structure while introducing compact C3k2 blocks and the C2PSA attention module to strengthen spatial feature modelling, with an anchor-free head available across several capacity scales \cite{yolo11}. \gls{YOLO}12 moves the lineage towards attention-centric feature modelling through Area Attention, which partitions attention computation to retain a broad receptive field at reduced cost, and Residual Efficient Layer Aggregation Networks for stable optimisation \cite{tian2025yolov12}. It integrates attention more centrally into the representation without becoming a conventional \gls{VIT}, preserving the real-time latency characteristic of \gls{YOLO} detectors while adopting the attention-based feature modelling associated with Transformer architectures.
 
-\gls{YOLO}26 shifts emphasis towards native end-to-end and edge-oriented inference, whereby a dual-head design yields \gls{NMS}-free one-to-one predictions, with the one-to-many head used only during training, while Distribution Focal Loss is removed to simplify the inference graph \cite{jocher2026yolo26,hidayatullah2026yolo26}. Its training procedure is adapted accordingly, with Small-Target-Aware Label Assignment improving positive-sample coverage for objects spanning few candidate locations, Progressive Loss stabilising optimisation as reliance shifts towards the one-to-one head, and the \gls{MuSGD} optimiser supporting convergence under this dual-head regime \cite{jocher2026yolo26,hidayatullah2026yolo26}. These developments are directly pertinent to small targets and constrained hardware, although architectural simplification does not guarantee superior accuracy or latency on every dataset.
+\gls{YOLO}26 shifts emphasis towards native end-to-end and edge-oriented inference, whereby a dual-head design yields \gls{NMS}-free one-to-one predictions, with the one-to-many head used only during training, while Distribution Focal Loss is removed to simplify the inference graph \cite{jocher2026yolo26}. Its training procedure is adapted accordingly, with Small-Target-Aware Label Assignment improving positive-sample coverage for objects spanning few candidate locations, Progressive Loss stabilising optimisation as reliance shifts towards the one-to-one head, and the \gls{MuSGD} optimiser supporting convergence under this dual-head regime \cite{jocher2026yolo26}. These developments are directly pertinent to small targets and constrained hardware, although architectural simplification does not guarantee superior accuracy or latency on every dataset.
 
 \subsubsection{Transformer-Based Detection}
 \label{sec:bg-transformer-detection}
@@ -493,15 +493,15 @@ Beyond its backbone and query-based decoding, \gls{RF-DETR} additionally employs
 \label{sec:bg-od-municipal}
 Municipal monitoring places supervised \gls{OD} in substantially less controlled conditions than many conventional recognition tasks. Waste may vary considerably in shape, material and appearance and often occurs in cluttered or overlapping arrangements, whereas traffic signs are visually more structured but frequently occupy only a small proportion of the image and are affected by distance, occlusion and illumination \cite{BG17-small-signs,BG20-sign-glare}. These differences make detector selection dependent not only on predictive accuracy, but also on how well an architecture handles the visual characteristics and computational requirements of the target domain.
 
-The \gls{YOLO} family has consequently been prominent in applied municipal-monitoring research, particularly where repeated image processing favours low-latency inference. In waste monitoring, \citeauthor{decarolis2020yolotrashnet} developed YOLO TrashNet from \gls{YOLO}3 for the detection and reporting of abandoned waste \cite{decarolis2020yolotrashnet}, demonstrating an early use of \gls{OD} within an operational reporting workflow. More recently, \citeauthor{espinosa2025litter} compared \gls{YOLO}8, \gls{YOLO}9 and \gls{YOLO}10 on pLitterStreet before applying the selected detector to Google Street View imagery for spatial litter mapping \cite{espinosa2025litter}, and \cite{reddy2025yologarbagepothole} used \gls{YOLO}11 to detect both garbage and potholes within a municipal reporting workflow \cite{reddy2025yologarbagepothole}. These studies illustrate a shift from recognising waste in isolation towards using detections as spatial observations of street-level conditions.
+The \gls{YOLO} family has consequently been prominent in applied municipal-monitoring research, particularly where repeated image processing favours low-latency inference. In waste monitoring, \citeauthor{decarolis2020yolotrashnet} developed YOLO TrashNet from \gls{YOLO}3 for the detection and reporting of abandoned waste \cite{decarolis2020yolotrashnet}, demonstrating an early use of \gls{OD} within an operational reporting workflow. More recently, \citeauthor{espinosa2025litter} compared \gls{YOLO}8, \gls{YOLO}9 and \gls{YOLO}10 on pLitterStreet before applying the selected detector to Google Street View imagery for spatial litter mapping \cite{espinosa2025litter}, and \citeauthor{reddy2025yologarbagepothole} used \gls{YOLO}11 to detect both garbage and potholes within a municipal reporting workflow \cite{reddy2025yologarbagepothole}. These studies illustrate a shift from recognising waste in isolation towards using detections as spatial observations of street-level conditions.
 
-A similar emphasis on efficient detection is evident in traffic-sign research, although the small image-space extent of signs has encouraged greater attention to feature preservation and multi-scale representation. A series of modifications to \gls{YOLO}5 and \gls{YOLO}7 introduced coordinate, channel and spatial attention, dynamic label assignment and multi-scale feature fusion specifically to improve small-sign detection under complex road conditions \cite{wang2023improvedtrafficsign,shi2023scyolo,mahadshetti2024signyolo}, while \cite{liu2024yolots} developed YOLO-TS from \gls{YOLO}8n to reduce computational demand while retaining performance on small traffic signs \cite{liu2024yolots}. Across this work, small-target representation, feature fusion, attention and deployment cost are treated as interdependent design considerations rather than accuracy in isolation.
+A similar emphasis on efficient detection is evident in traffic-sign research, although the small image-space extent of signs has encouraged greater attention to feature preservation and multi-scale representation. A series of modifications to \gls{YOLO}5 and \gls{YOLO}7 introduced coordinate, channel and spatial attention, dynamic label assignment and multi-scale feature fusion specifically to improve small-sign detection under complex road conditions \cite{wang2023improvedtrafficsign,shi2023scyolo,mahadshetti2024signyolo}, while \citeauthor{liu2024yolots} developed YOLO-TS from \gls{YOLO}8n to reduce computational demand while retaining performance on small traffic signs \cite{liu2024yolots}. Across this work, small-target representation, feature fusion, attention and deployment cost are treated as interdependent design considerations rather than accuracy in isolation.
 
-Transformer-based detectors provide a contrasting approach through query-based set prediction and attention-based feature modelling. Recent traffic-sign studies suggest that these architectures can also operate within real-time constraints when adapted to the domain. Author's in \cite{lin2025tsdetr} proposed TS-DETR, combining positive- and negative-sample augmentation with multi-scale feature integration to address small targets and class imbalance \cite{lin2025tsdetr}, while \cite{dong2026hasdetr} adapted \gls{RT-DETR} through HAS-DETR, introducing high-frequency feature preservation, cross-scale fusion and a dedicated small-target enhancement head \cite{dong2026hasdetr}. Both studies retain the end-to-end Transformer formulation while explicitly modifying it around the characteristics of traffic-sign imagery. Early infrastructure studies have also begun to evaluate \gls{RF-DETR} directly against \gls{YOLO} for road-surface and road-damage assessment \cite{kurrey2026roadsurface,amores2026roaddamage}, although its application base remains considerably smaller than that of either \gls{YOLO} or \gls{RT-DETR}.
+Transformer-based detectors provide a contrasting approach through query-based set prediction and attention-based feature modelling. Recent traffic-sign studies suggest that these architectures can also operate within real-time constraints when adapted to the domain. \citeauthor{lin2025tsdetr} proposed TS-DETR, combining positive- and negative-sample augmentation with multi-scale feature integration to address small targets and class imbalance \cite{lin2025tsdetr}, while \citeauthor{dong2026hasdetr} adapted \gls{RT-DETR} through HAS-DETR, introducing high-frequency feature preservation, cross-scale fusion and a dedicated small-target enhancement head \cite{dong2026hasdetr}. Both studies retain the end-to-end Transformer formulation while explicitly modifying it around the characteristics of traffic-sign imagery. Early infrastructure studies have also begun to evaluate \gls{RF-DETR} directly against \gls{YOLO} for road-surface and road-damage assessment \cite{kurrey2026roadsurface,amores2026roaddamage}, although its application base remains considerably smaller than that of either \gls{YOLO} or \gls{RT-DETR}.
 
-More direct comparisons indicate that neither detector family is uniformly preferable. \citeauthor{kumar2026gvp} compared \gls{YOLO}8, \gls{YOLO}10, \gls{YOLO}11m and \gls{RT-DETR} for monitoring garbage-vulnerable points using a street-side camera and \gls{IoT} infrastructure \cite{kumar2026gvp}. Their system coupled detection with temporal analysis of dumping and cleaning activity, placing the comparison within an operational waste-monitoring setting rather than an isolated benchmark. In traffic-sign condition assessment, \cite{pandey2026signcondition} compared \gls{YOLO}11 and \gls{RT-DETR} for detecting fading and delamination from vehicle-acquired roadway imagery \cite{pandey2026signcondition}. Relative performance depended on the defect: \gls{YOLO}11 performed better for fading and achieved lower end-to-end runtime, whereas \gls{RT-DETR} showed a smaller advantage for delamination. This suggests that architectural preference can vary even within the same municipal asset class.
+More direct comparisons indicate that neither detector family is uniformly preferable. \citeauthor{kumar2026gvp} compared \gls{YOLO}8, \gls{YOLO}10, \gls{YOLO}11m and \gls{RT-DETR} for monitoring garbage-vulnerable points using a street-side camera and \gls{IoT} infrastructure \cite{kumar2026gvp}. Their system coupled detection with temporal analysis of dumping and cleaning activity, placing the comparison within an operational waste-monitoring setting rather than an isolated benchmark. In traffic-sign condition assessment, \citeauthor{pandey2026signcondition} compared \gls{YOLO}11 and \gls{RT-DETR} for detecting fading and delamination from vehicle-acquired roadway imagery \cite{pandey2026signcondition}. Relative performance depended on the defect: \gls{YOLO}11 performed better for fading and achieved lower end-to-end runtime, whereas \gls{RT-DETR} showed a smaller advantage for delamination. This suggests that architectural preference can vary even within the same municipal asset class.
 
-The acquisition setting further shapes these requirements. Fixed cameras provide high temporal density at selected locations, as demonstrated by \cite{kumar2026gvp} \cite{kumar2026gvp}, whereas vehicle-based sensing provides broader spatial coverage at the expense of repeated observation at any individual location \cite{BG7-driveby-sensing,BG10-vehicle-sensing}. The \gls{MDWD} follows the latter setting by representing municipal waste as observed from street level within dense urban environments \cite{BG15-mdwd}, and the \gls{MTSD} likewise represents traffic signs from variable road-level viewpoints, so that both datasets place the detector under the mobile-observation conditions characteristic of municipal monitoring.
+The acquisition setting further shapes these requirements. Fixed cameras provide high temporal density at selected locations, as demonstrated by \citeauthor{kumar2026gvp}~\cite{kumar2026gvp}, whereas vehicle-based sensing provides broader spatial coverage at the expense of repeated observation at any individual location \cite{BG7-driveby-sensing,BG10-vehicle-sensing}. The \gls{MDWD} provides spatially varied street-level views of municipal waste within dense urban environments \cite{BG15-mdwd}, and the \gls{MTSD} likewise represents traffic signs from variable road-level viewpoints, Both datasets were acquired predominantly on foot, with some passenger-captured vehicle imagery; they therefore represent mobile street-level observation rather than continuous vehicle-mounted sensing.
 
 \subsubsection{Selection of Detection Architectures}
 Taken together, the literature indicates that detector performance is strongly dependent on the visual and operational characteristics of the target domain. Waste monitoring involves irregular object geometry, heterogeneous appearance, clutter and frequent co-occurrence, whereas traffic-sign monitoring places greater emphasis on small-object localisation, viewing distance, illumination and, where condition is considered, subtle degradation cues. Performance reported on generic benchmarks, or within one municipal domain, therefore cannot be assumed to transfer directly to another \cite{robinson2026rfdetrneuralarchitecturesearch,pandey2026signcondition}.
@@ -527,32 +527,32 @@ Subsequent \glspl{FM} have extended this principle beyond image-level recognitio
 
 A parallel development occurred in segmentation through the introduction of promptable visual segmentation. The original \gls{SAM} separated image encoding from prompt-conditioned mask prediction, allowing a target region to be specified using spatial cues such as points or bounding boxes rather than through a fixed semantic category \cite{kirillov2023segment}. \gls{SAM}~2 extended this formulation from static images to video through a memory-based architecture capable of propagating and refining prompted objects across frames while retaining the point-, box- and mask-based interaction of the original model \cite{ravi2024sam2}. The principal capability of these models was therefore spatial generalisation: they could delineate previously unseen objects when supplied with an indication of which object should be segmented, but the prompt itself did not necessarily communicate semantic identity.
 
-This distinction motivated combinations of promptable segmentation with language-grounded detection. Grounded SAM, for example, couples Grounding DINO with \gls{SAM}, using a textual query to identify corresponding regions before supplying the resulting boxes to the segmentation model \cite{ren2024groundedsam}. The resulting pipeline combines semantic flexibility with pixel-level localisation without requiring the segmentation component itself to perform open-vocabulary recognition.
+This distinction motivated combinations of promptable segmentation with language-grounded detection. Grounded SAM, for example, couples Grounding DINO with \gls{SAM}, using a textual query to identify corresponding regions before supplying the resulting boxes to the segmentation model \cite{ren2024grounded}. The resulting pipeline combines semantic flexibility with pixel-level localisation without requiring the segmentation component itself to perform open-vocabulary recognition.
 
-\gls{SAM}~3 subsequently integrates semantic concept prompting more directly into the Segment Anything formulation. Rather than requiring the location of an individual instance to be provided in advance, the model introduces promptable concept segmentation, in which short noun phrases, image exemplars or combinations of the two can be used to detect and segment all matching instances within an image or video \cite{carion2026sam3}. Positive and negative exemplars can additionally refine the intended concept, providing a form of visual few-shot specification alongside language prompting. This broader capability also introduces semantic ambiguity absent from purely spatial prompting, since noun phrases may admit multiple visual interpretations and their correspondence can be affected by occlusion, blur or subjective descriptors. Prompt formulation and exemplar selection therefore become part of the effective task definition rather than merely an interface choice.
+\gls{SAM}~3 subsequently integrates semantic concept prompting more directly into the Segment Anything formulation. Rather than requiring the location of an individual instance to be provided in advance, the model introduces promptable concept segmentation, in which short noun phrases, image exemplars or combinations of the two can be used to detect and segment all matching instances within an image or video \cite{meta2025sam3}. Positive and negative exemplars can additionally refine the intended concept, providing a form of visual few-shot specification alongside language prompting. This broader capability also introduces semantic ambiguity absent from purely spatial prompting, since noun phrases may admit multiple visual interpretations and their correspondence can be affected by occlusion, blur or subjective descriptors. Prompt formulation and exemplar selection therefore become part of the effective task definition rather than merely an interface choice.
 
 \subsubsection{Open-Vocabulary and Language-Grounded Localisation}
 \label{sec:bg-open-vocabulary}
 
 The development of open-vocabulary localisation similarly reflects the movement from image-level language alignment towards region-level grounding. While models such as \gls{CLIP} demonstrated that visual representations could be associated with arbitrary textual concepts, image-level contrastive supervision does not itself establish where those concepts occur within an image \cite{radford2021learning}. Open-vocabulary detection addresses this limitation by explicitly aligning textual representations with spatial image regions, allowing language to specify the objects to be localised.
 
-Grounding DINO represents a prominent development of this formulation by integrating grounded language supervision with a Transformer-based detector \cite{liu2024groundingdino}. Rather than attaching language only to the final classification stage, the architecture introduces cross-modal interaction during feature enhancement, query selection and decoding, enabling categories and referring expressions to influence the localisation process throughout the network. The model can consequently detect objects specified through category names or descriptive expressions without requiring the corresponding target dataset to have been used for task-specific training.
+Grounding DINO represents a prominent development of this formulation by integrating grounded language supervision with a Transformer-based detector \cite{liu2024grounding}. Rather than attaching language only to the final classification stage, the architecture introduces cross-modal interaction during feature enhancement, query selection and decoding, enabling categories and referring expressions to influence the localisation process throughout the network. The model can consequently detect objects specified through category names or descriptive expressions without requiring the corresponding target dataset to have been used for task-specific training.
 
 This flexibility differentiates grounded localisation from conventional closed-set \gls{OD}, where adding a new semantic category generally requires additional labelled examples and model adaptation. It also differs from the earlier Segment Anything formulation, in which the prompt primarily identifies \emph{where} the target object lies rather than \emph{what} concept should be found. Language-grounded localisation must infer both simultaneously, increasing semantic flexibility but also introducing sensitivity to terminology. This is particularly relevant to specialised monitoring taxonomies, where an operational category may be visually meaningful within a local context while differing from the language and concepts represented during large-scale pretraining.
 
 \subsubsection{Locate Anything}
 \label{sec:bg-locate-anything}
 
-The extension of language grounding into generative \glspl{VLM} has introduced a further localisation formulation in which spatial coordinates are represented within the model's output sequence. Conventional generative grounding commonly serialises a bounding box into several coordinate tokens that are decoded sequentially, allowing spatial prediction to share the same general interface as textual generation but imposing both computational and structural limitations when numerous objects must be returned \cite{wang2026locateanything}.
+The extension of language grounding into generative \glspl{VLM} has introduced a further localisation formulation in which spatial coordinates are represented within the model's output sequence. Conventional generative grounding commonly serialises a bounding box into several coordinate tokens that are decoded sequentially, allowing spatial prediction to share the same general interface as textual generation but imposing both computational and structural limitations when numerous objects must be returned \cite{nvidia2026locateanything}.
 
-LocateAnything addresses this limitation through Parallel Box Decoding, treating geometric entities such as bounding boxes and points as coupled spatial units rather than independent tokens \cite{wang2026locateanything}. Its large-scale grounding framework is trained on more than 138 million localisation samples and supports multiple forms of visual grounding and detection within a common vision--language architecture. By decoding the coordinates belonging to a geometric unit in parallel, the model seeks to preserve their spatial relationship while reducing the sequential inference cost associated with autoregressive coordinate generation.
+LocateAnything addresses this limitation through Parallel Box Decoding, treating geometric entities such as bounding boxes and points as coupled spatial units rather than independent tokens \cite{nvidia2026locateanything}. Its large-scale grounding framework is trained on more than 138 million localisation samples and supports multiple forms of visual grounding and detection within a common vision--language architecture. By decoding the coordinates belonging to a geometric unit in parallel, the model seeks to preserve their spatial relationship while reducing the sequential inference cost associated with autoregressive coordinate generation.
 
 This formulation is particularly relevant to comparisons with conventional \gls{OD} because it produces explicit spatial predictions while retaining the semantic flexibility of a generative \gls{VLM}. The distinction nevertheless remains important: localisation is generated through a vision--language decoding process rather than a conventional detector head, so its output structure, confidence information and inference behaviour need not correspond directly to those of supervised detectors. The LocateAnything study additionally considers dense and overlapping scenes, where maintaining separation between adjacent predictions is especially demanding, making the approach relevant to localisation problems containing multiple closely positioned instances.
 
 \subsubsection{Vision--Language Models and Grounded Visual Reasoning}
 \label{sec:bg-vlm-grounding}
 
-Grounded \glspl{VLM} generalise this formulation further by combining visual localisation with the broader language-generation capabilities of multimodal models. Whereas a dedicated detector is principally optimised to produce categories, locations and confidence scores, a \gls{VLM} can place spatial predictions within a richer generated response that also describes objects, relationships or contextual properties. Florence-2 demonstrates an intermediate form of this unification, using textual task prompts and a shared sequence representation for detection, grounding, segmentation and language-based visual understanding \cite{xiao2024florence2}, while more recent generative grounding models incorporate coordinates directly into multimodal output sequences \cite{wang2026locateanything}.
+Grounded \glspl{VLM} generalise this formulation further by combining visual localisation with the broader language-generation capabilities of multimodal models. Whereas a dedicated detector is principally optimised to produce categories, locations and confidence scores, a \gls{VLM} can place spatial predictions within a richer generated response that also describes objects, relationships or contextual properties. Florence-2 demonstrates an intermediate form of this unification, using textual task prompts and a shared sequence representation for detection, grounding, segmentation and language-based visual understanding \cite{xiao2024florence2}, while more recent generative grounding models incorporate coordinates directly into multimodal output sequences \cite{nvidia2026locateanything}.
 
 The broader output space provides greater flexibility but creates additional reliability requirements. Spatial predictions must remain geometrically valid and complete while the generated semantic interpretation must remain grounded in the visual evidence. Recent evaluation of multimodal language models has shown that linguistically plausible outputs do not necessarily imply faithful visual grounding, with errors arising from target-region binding, transcription and language-prior effects even where the visual evidence is comparatively clear \cite{wang2026symbolconsistency}. Such behaviour is particularly relevant to roadside imagery containing text, symbols or multiple similar objects, since a plausible semantic response may still refer to the wrong visual instance.
 
@@ -563,7 +563,7 @@ Grounded \glspl{VLM} should therefore be distinguished from specialised localisa
 
 \Glspl{WFM} broaden the scope of foundation modelling from static visual recognition towards representations of physical environments and their evolution over time. NVIDIA's Cosmos platform defines a \gls{WFM} as a broadly pretrained world model that can subsequently be specialised for downstream physical-\gls{AI} applications, using large-scale video data to acquire general representations of visual dynamics before post-training for particular environments or tasks \cite{nvidia2025cosmosplatform}. This differs from conventional \gls{OD} and visual grounding because the intended representation encompasses not only object identity and location but also temporal behaviour and physical interaction.
 
-Cosmos-Reason1 develops the reasoning component of this formulation through multimodal models trained to interpret video using representations of physical common sense and embodied reasoning \cite{nvidia2025cosmosreason1}. Its emphasis lies on spatial, temporal and physical relationships and on producing reasoned natural-language responses or embodied decisions, rather than on replacing a dedicated object detector. Cosmos~3 subsequently extends the family towards an omnimodal architecture capable of jointly processing and generating language, images, video, audio and action sequences, thereby integrating visual understanding, generation and action modelling within a common framework \cite{nvidia2026cosmos3}.
+Cosmos-Reason1 develops the reasoning component of this formulation through multimodal models trained to interpret video using representations of physical common sense and embodied reasoning \cite{nvidia2025cosmosreason1}. Its emphasis lies on spatial, temporal and physical relationships and on producing reasoned natural-language responses or embodied decisions, rather than on replacing a dedicated object detector. The Cosmos Reason2 models evaluated in this dissertation are reasoning \glspl{VLM} from this family, applied here to static images and bounding-box generation rather than video prediction or action generation \cite{nvidia2025cosmosreason2}. Cosmos~3 subsequently extends the family towards an omnimodal architecture capable of jointly processing and generating language, images, video, audio and action sequences, thereby integrating visual understanding, generation and action modelling within a common framework \cite{nvidia2026cosmos3}.
 
 For municipal visual monitoring, the relevance of this broader modelling direction lies in the distinction between recognising an object and interpreting its context. A dedicated detector may establish that waste or a traffic sign is present, whereas a physically grounded model may potentially reason about temporal persistence, spatial relationships or the surrounding scene. The literature supporting these models is, however, presently concentrated primarily on general visual grounding, robotics, autonomous systems and embodied \gls{AI}, rather than on municipal inspection itself. Their applicability to street-level waste and infrastructure monitoring therefore remains an empirical question rather than an established result.
 

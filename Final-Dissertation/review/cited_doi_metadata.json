@@ -1,0 +1,1900 @@
+[
+  {
+    "key": "kumar2026gvp",
+    "doi": "10.1109/WF-IoT64238.2025.11270560",
+    "bib_title": "Garbage Vulnerable Point Monitoring Using {IoT} and Computer Vision",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FWF-IoT64238.2025.11270560",
+    "status": "resolved",
+    "registered_title": "Garbage Vulnerable Point Monitoring using IoT and Computer Vision",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          27
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Kumar",
+      "Lall",
+      "Chaudhari",
+      "Kale",
+      "Vattem"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "bartolo2026aeriallitter",
+    "doi": "10.1007/s11042-026-21440-1",
+    "bib_title": "Litter Detection from Aerial Imagery: A Review of {UAV}-Based Approaches and Deep Learning Techniques",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11042-026-21440-1",
+    "status": "resolved",
+    "registered_title": "Litter detection from aerial imagery: a review of UAV-based approaches and deep learning techniques",
+    "registered_year": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          26
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Bartolo",
+      "Hili",
+      "Seychell",
+      "Montebello",
+      "Debono",
+      "Formosa",
+      "Makantasis"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "pisani2024soda",
+    "doi": "10.1109/ICIP51287.2024.10647335",
+    "bib_title": "SODA}: A Dataset for Small Object Detection in {UAV}-Captured Imagery",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FICIP51287.2024.10647335",
+    "status": "resolved",
+    "registered_title": "SODA: A Dataset for Small Object Detection in UAV Captured Imagery",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024,
+          10,
+          27
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Pisani",
+      "Seychell",
+      "Debono",
+      "Schembri"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "sukel2023gigo",
+    "doi": "10.1007/978-3-031-27077-2_41",
+    "bib_title": "GIGO}, Garbage In, Garbage Out: An Urban Garbage Classification Dataset",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2F978-3-031-27077-2_41",
+    "status": "resolved",
+    "registered_title": "GIGO, Garbage In, Garbage Out: An Urban Garbage Classification Dataset",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Sukel",
+      "Rudinac",
+      "Worring"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "jain2024mobilenetbags",
+    "doi": "10.1109/CYBERCOM63683.2024.10803209",
+    "bib_title": "Harnessing Deep Learning for Sustainable Waste Classification: An Innovative Approach Using {MobileNetV2} on a Diverse Bag Dataset",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCYBERCOM63683.2024.10803209",
+    "status": "resolved",
+    "registered_title": "Harnessing Deep Learning for Sustainable Waste Classification: An Innovative Approach Using MobileNetV2 on a Diverse Bag Dataset",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024,
+          11,
+          15
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Jain",
+      "Kumar"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "jain2024resnetbags",
+    "doi": "10.1109/PDGC64653.2024.10984186",
+    "bib_title": "Enhancing Waste Management with Automated Garbage Bag Classification with {ResNet50V2",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FPDGC64653.2024.10984186",
+    "status": "resolved",
+    "registered_title": "Enhancing Waste Management with Automated Garbage Bag Classification with ResNet50V2",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024,
+          12,
+          18
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Jain",
+      "Kumar"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "MJU-Waste",
+    "doi": "10.3390/s20143816",
+    "bib_title": "A Multi-Level Approach to Waste Object Segmentation",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fs20143816",
+    "status": "resolved",
+    "registered_title": "A Multi-Level Approach to Waste Object Segmentation",
+    "registered_year": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          8
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Wang",
+      "Cai",
+      "Liang",
+      "Ye"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "urbanproblem",
+    "doi": "10.1016/j.ugj.2025.02.003",
+    "bib_title": "Exploring Big Data Applications in Sustainable Urban Infrastructure: A Review",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.ugj.2025.02.003",
+    "status": "resolved",
+    "registered_title": "Exploring big data applications in sustainable urban infrastructure: A review",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          3
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Ogunkan",
+      "Ogunkan"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "adnan2020municipal",
+    "doi": "10.34218/IJARET.11.5.2020.071",
+    "bib_title": "Municipal Solid Waste Management and Its Impact: A Review",
+    "metadata_url": "https://api.crossref.org/works/10.34218%2FIJARET.11.5.2020.071",
+    "status": "unresolved",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "key": "I1",
+    "doi": "10.1016/j.wasman.2012.09.008",
+    "bib_title": "Solid waste management challenges for cities in developing countries",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.wasman.2012.09.008",
+    "status": "resolved",
+    "registered_title": "Solid waste management challenges for cities in developing countries",
+    "registered_year": {
+      "date-parts": [
+        [
+          2013,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Guerrero",
+      "Maas",
+      "Hogland"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "I2",
+    "doi": "10.1016/j.wasman.2008.07.016",
+    "bib_title": "Municipal solid waste management in Pudong New Area, China",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.wasman.2008.07.016",
+    "status": "resolved",
+    "registered_title": "Municipal solid waste management in Pudong New Area, China",
+    "registered_year": {
+      "date-parts": [
+        [
+          2009,
+          3
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Minghua",
+      "Xiumin",
+      "Rovetta",
+      "Qichang",
+      "Vicentini",
+      "Bingkai",
+      "Giusti",
+      "Yi"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "I3",
+    "doi": "10.1016/j.wasman.2007.06.013",
+    "bib_title": "Household solid waste characteristics and management in Chittagong, Bangladesh",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.wasman.2007.06.013",
+    "status": "resolved",
+    "registered_title": "Household solid waste characteristics and management in Chittagong, Bangladesh",
+    "registered_year": {
+      "date-parts": [
+        [
+          2008,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Sujauddin",
+      "Huda",
+      "Hoque"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "I4",
+    "doi": "10.3390/su16145991",
+    "bib_title": "Exploring the Competencies, Phases and Dimensions of Municipal Administrative Management towards Sustainability: A Systematic Review",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fsu16145991",
+    "status": "resolved",
+    "registered_title": "Exploring the Competencies, Phases and Dimensions of Municipal Administrative Management towards Sustainability: A Systematic Review",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024,
+          7,
+          13
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Uquillas Granizo",
+      "Mostacero",
+      "Puente Riofrío"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "I5-malta",
+    "doi": "10.3390/su152316397",
+    "bib_title": "Exploring the Potential for Timed Cities in Malta: The Case of Paola",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fsu152316397",
+    "status": "resolved",
+    "registered_title": "Exploring the Potential for Timed Cities in Malta: The Case of Paola",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          11,
+          28
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Scheiber",
+      "Bajada",
+      "Mifsud",
+      "C. Montebello"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "I6-malta",
+    "doi": "10.1016/j.trpro.2021.12.020",
+    "bib_title": "Re-designing urban open spaces to act as green infrastructure - the case of Malta",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.trpro.2021.12.020",
+    "status": "resolved",
+    "registered_title": "Re-designing urban open spaces to act as green infrastructure - the case of Malta",
+    "registered_year": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Scheiber"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "I9",
+    "doi": "10.1109/CVPR52688.2022.01069",
+    "bib_title": "Grounded Language-Image Pre-training",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR52688.2022.01069",
+    "status": "resolved",
+    "registered_title": "Grounded Language-Image Pre-training",
+    "registered_year": {
+      "date-parts": [
+        [
+          2022,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Li",
+      "Zhang",
+      "Zhang",
+      "Yang",
+      "Li",
+      "Zhong",
+      "Wang",
+      "Yuan",
+      "Zhang",
+      "Hwang",
+      "Chang",
+      "Gao"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG1-repeatedinspection",
+    "doi": "10.1016/j.jenvman.2019.05.142",
+    "bib_title": "A standardized inspection methodology to evaluate municipal solid waste collection performance",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.jenvman.2019.05.142",
+    "status": "resolved",
+    "registered_title": "A standardized inspection methodology to evaluate municipal solid waste collection performance",
+    "registered_year": {
+      "date-parts": [
+        [
+          2019,
+          9
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Calabrò",
+      "Komilis"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG2-waste-reporting",
+    "doi": "10.1093/jopart/muaa026",
+    "bib_title": "The Challenges of Using Citizen Reporting to Improve Public Services: A Field Experiment on Solid Waste Services in Uganda",
+    "metadata_url": "https://api.crossref.org/works/10.1093%2Fjopart%2Fmuaa026",
+    "status": "resolved",
+    "registered_title": "The Challenges of Using Citizen Reporting to Improve Public Services: A Field Experiment on Solid Waste Services in Uganda",
+    "registered_year": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Buntaine",
+      "Hunnicutt",
+      "Komakech"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG3-citizen-reporting",
+    "doi": "10.1080/03003930.2022.2116575",
+    "bib_title": "Dog fouling and potholes: understanding the role of coproducing ‘citizen sensors’ in local governance",
+    "metadata_url": "https://api.crossref.org/works/10.1080%2F03003930.2022.2116575",
+    "status": "resolved",
+    "registered_title": "Dog fouling and potholes: understanding the role of coproducing ‘citizen sensors’ in local governance",
+    "registered_year": {
+      "date-parts": [
+        [
+          2022,
+          10,
+          18
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Matthews",
+      "Parsons",
+      "Nyanzu",
+      "Rae"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG4-human-inspection",
+    "doi": "10.1016/j.autcon.2018.10.019",
+    "bib_title": "A survey of automation-enabled human-in-the-loop systems for infrastructure visual inspection",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.autcon.2018.10.019",
+    "status": "resolved",
+    "registered_title": "A survey of automation-enabled human-in-the-loop systems for infrastructure visual inspection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2019,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Agnisarman",
+      "Lopes",
+      "Chalil Madathil",
+      "Piratla",
+      "Gramopadhye"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG5-sign-monitoring",
+    "doi": "10.1007/s41062-026-02676-0",
+    "bib_title": "Automated traffic signs condition monitoring using machine vision",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs41062-026-02676-0",
+    "status": "resolved",
+    "registered_title": "Automated traffic signs condition monitoring using machine vision",
+    "registered_year": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          20
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Dwairi",
+      "Manasreh",
+      "Melhem",
+      "Nazzal"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG6-reporting-bias",
+    "doi": "10.1016/j.scs.2020.102503",
+    "bib_title": "Bias in smart city governance: How socio-spatial disparities in 311 complaint behavior impact the fairness of data-driven decisions",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.scs.2020.102503",
+    "status": "resolved",
+    "registered_title": "Bias in smart city governance: How socio-spatial disparities in 311 complaint behavior impact the fairness of data-driven decisions",
+    "registered_year": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Kontokosta",
+      "Hong"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG7-driveby-sensing",
+    "doi": "10.1016/j.scs.2023.104874",
+    "bib_title": "A survey of urban drive-by sensing: An optimization perspective",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.scs.2023.104874",
+    "status": "resolved",
+    "registered_title": "A survey of urban drive-by sensing: An optimization perspective",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          12
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Ji",
+      "Han",
+      "Liu"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG8-waste-impacts",
+    "doi": "10.3390/ijerph191912717",
+    "bib_title": "Environmental Sustainability Impacts of Solid Waste Management Practices in the Global South",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fijerph191912717",
+    "status": "resolved",
+    "registered_title": "Environmental Sustainability Impacts of Solid Waste Management Practices in the Global South",
+    "registered_year": {
+      "date-parts": [
+        [
+          2022,
+          10,
+          5
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Abubakar",
+      "Maniruzzaman",
+      "Dano",
+      "AlShihri",
+      "AlShammari",
+      "Ahmed",
+      "Al-Gehlani",
+      "Alrawaf"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG10-vehicle-sensing",
+    "doi": "10.1073/pnas.1821667116",
+    "bib_title": "Quantifying the sensing power of vehicle fleets",
+    "metadata_url": "https://api.crossref.org/works/10.1073%2Fpnas.1821667116",
+    "status": "resolved",
+    "registered_title": "Quantifying the sensing power of vehicle fleets",
+    "registered_year": {
+      "date-parts": [
+        [
+          2019,
+          6,
+          11
+        ]
+      ]
+    },
+    "registered_authors": [
+      "O’Keeffe",
+      "Anjomshoaa",
+      "Strogatz",
+      "Santi",
+      "Ratti"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG14-sign-degradation",
+    "doi": "10.1016/j.iatssr.2022.08.003",
+    "bib_title": "Modeling retroreflectivity degradation of traffic signs using artificial neural networks",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.iatssr.2022.08.003",
+    "status": "resolved",
+    "registered_title": "Modeling retroreflectivity degradation of traffic signs using artificial neural networks",
+    "registered_year": {
+      "date-parts": [
+        [
+          2022,
+          12
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Jamal",
+      "Reza",
+      "Shafiullah"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG17-small-signs",
+    "doi": "10.3390/s23115307",
+    "bib_title": "STC-YOLO: Small Object Detection Network for Traffic Signs in Complex Environments",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fs23115307",
+    "status": "resolved",
+    "registered_title": "STC-YOLO: Small Object Detection Network for Traffic Signs in Complex Environments",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          3
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Lai",
+      "Chen",
+      "Liu",
+      "Yan",
+      "Ye"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG19-malta-slow-streets",
+    "doi": "10.1016/j.trpro.2021.12.031",
+    "bib_title": "Slow Streets Malta – Challenging the Status Quo in a Car-Dependent Island State",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.trpro.2021.12.031",
+    "status": "resolved",
+    "registered_title": "Slow Streets Malta – Challenging the Status Quo in a Car-Dependent Island State",
+    "registered_year": {
+      "date-parts": [
+        [
+          2022
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Zammit"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG20-sign-glare",
+    "doi": "10.1109/TITS.2023.3294411",
+    "bib_title": "GLARE: A Dataset for Traffic Sign Detection in Sun Glare",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FTITS.2023.3294411",
+    "status": "resolved",
+    "registered_title": "GLARE: A Dataset for Traffic Sign Detection in Sun Glare",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          11
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Gray",
+      "Moraes",
+      "Bian",
+      "Wang",
+      "Tian",
+      "Wilson",
+      "Huang",
+      "Xiong",
+      "Guo"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG21-marine-corrosion",
+    "doi": "10.3390/ma10040406",
+    "bib_title": "Marine Atmospheric Corrosion of Carbon Steel: A Review",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fma10040406",
+    "status": "resolved",
+    "registered_title": "Marine Atmospheric Corrosion of Carbon Steel: A Review",
+    "registered_year": {
+      "date-parts": [
+        [
+          2017,
+          4,
+          13
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Alcántara",
+      "Fuente",
+      "Chico",
+      "Simancas",
+      "Díaz",
+      "Morcillo"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG22-sign-condition",
+    "doi": "10.1061/JTEPBS.TEENG-6921",
+    "bib_title": "Traffic Sign Retroreflectivity Condition Assessment and Deterioration Analysis Using Lidar Technology",
+    "metadata_url": "https://api.crossref.org/works/10.1061%2FJTEPBS.TEENG-6921",
+    "status": "resolved",
+    "registered_title": "Traffic Sign Retroreflectivity Condition Assessment and Deterioration Analysis Using Lidar Technology",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          5,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Steele",
+      "Pranav",
+      "Tsai"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG30-sign-visual-condition",
+    "doi": "10.1061/JTEPBS.0000132",
+    "bib_title": "Analysis of In-Service Traffic Sign Visual Condition: Tree-Based Model for Mobile LiDAR and Digital Photolog Data",
+    "metadata_url": "https://api.crossref.org/works/10.1061%2FJTEPBS.0000132",
+    "status": "resolved",
+    "registered_title": "Analysis of In-Service Traffic Sign Visual Condition: Tree-Based Model for Mobile LiDAR and Digital Photolog Data",
+    "registered_year": {
+      "date-parts": [
+        [
+          2018,
+          6,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Khalilikhah",
+      "Fu",
+      "Heaslip",
+      "Carlson"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG31-daytime-retroreflectivity",
+    "doi": "10.1016/j.measurement.2015.07.049",
+    "bib_title": "Can daytime digital imaging be used for traffic sign retroreflectivity compliance?",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.measurement.2015.07.049",
+    "status": "resolved",
+    "registered_title": "Can daytime digital imaging be used for traffic sign retroreflectivity compliance?",
+    "registered_year": {
+      "date-parts": [
+        [
+          2015,
+          11
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Khalilikhah",
+      "Heaslip",
+      "Song"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG32-image-classification",
+    "doi": "10.1109/CVPR.2016.90",
+    "bib_title": "Deep Residual Learning for Image Recognition",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR.2016.90",
+    "status": "resolved",
+    "registered_title": "Deep Residual Learning for Image Recognition",
+    "registered_year": {
+      "date-parts": [
+        [
+          2016,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "He",
+      "Zhang",
+      "Ren",
+      "Sun"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG33-object-detection",
+    "doi": "10.1109/ACCESS.2023.3266093",
+    "bib_title": "Object Detection Using Deep Learning, CNNs and Vision Transformers: A Review",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FACCESS.2023.3266093",
+    "status": "resolved",
+    "registered_title": "Object Detection Using Deep Learning, CNNs and Vision Transformers: A Review",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Amjoud",
+      "Amrouch"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG34-semantic-segmentation",
+    "doi": "10.1109/CVPR.2015.7298965",
+    "bib_title": "Fully convolutional networks for semantic segmentation",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR.2015.7298965",
+    "status": "resolved",
+    "registered_title": "Fully convolutional networks for semantic segmentation",
+    "registered_year": {
+      "date-parts": [
+        [
+          2015,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Long",
+      "Shelhamer",
+      "Darrell"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG35-instance-segmentation",
+    "doi": "10.1109/ICCV.2017.322",
+    "bib_title": "Mask R-CNN",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FICCV.2017.322",
+    "status": "resolved",
+    "registered_title": "Mask R-CNN",
+    "registered_year": {
+      "date-parts": [
+        [
+          2017,
+          10
+        ]
+      ]
+    },
+    "registered_authors": [
+      "He",
+      "Gkioxari",
+      "Dollar",
+      "Girshick"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG36-mask-annotation",
+    "doi": "10.1109/CVPR.2018.00096",
+    "bib_title": "Efficient Interactive Annotation of Segmentation Datasets with Polygon-RNN++",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR.2018.00096",
+    "status": "resolved",
+    "registered_title": "Efficient Interactive Annotation of Segmentation Datasets with Polygon-RNN++",
+    "registered_year": {
+      "date-parts": [
+        [
+          2018,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Acuna",
+      "Ling",
+      "Kar",
+      "Fidler"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG37-open-vocabulary",
+    "doi": "10.1109/CVPR52729.2023.00679",
+    "bib_title": "CORA: Adapting CLIP for Open-Vocabulary Detection with Region Prompting and Anchor Pre-Matching",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR52729.2023.00679",
+    "status": "resolved",
+    "registered_title": "CORA: Adapting CLIP for Open-Vocabulary Detection with Region Prompting and Anchor Pre-Matching",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Wu",
+      "Zhu",
+      "Zhao",
+      "Li"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG38-segment-anything",
+    "doi": "10.1109/ICCV51070.2023.00371",
+    "bib_title": "Segment Anything",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FICCV51070.2023.00371",
+    "status": "resolved",
+    "registered_title": "Segment Anything",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Kirillov",
+      "Mintun",
+      "Ravi",
+      "Mao",
+      "Rolland",
+      "Gustafson",
+      "Xiao",
+      "Whitehead",
+      "Berg",
+      "Lo",
+      "Dollár",
+      "Girshick"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "BG41-visual-attributes",
+    "doi": "10.1109/CVPR46437.2021.01282",
+    "bib_title": " Learning to Predict Visual Attributes in the Wild ",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR46437.2021.01282",
+    "status": "resolved",
+    "registered_title": "Learning to Predict Visual Attributes in the Wild",
+    "registered_year": {
+      "date-parts": [
+        [
+          2021,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Pham",
+      "Kafle",
+      "Lin",
+      "Ding",
+      "Cohen",
+      "Tran",
+      "Shrivastava"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "lee2022uavprivacy",
+    "doi": "10.1016/j.techsoc.2022.102079",
+    "bib_title": "Safety and privacy regulations for unmanned aerial vehicles: A multiple comparative analysis",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.techsoc.2022.102079",
+    "status": "resolved",
+    "registered_title": "Safety and privacy regulations for unmanned aerial vehicles: A multiple comparative analysis",
+    "registered_year": {
+      "date-parts": [
+        [
+          2022,
+          11
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Lee",
+      "Hess",
+      "Heldeweg"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "zhu2016tt100k",
+    "doi": "10.1109/CVPR.2016.232",
+    "bib_title": "Traffic-Sign Detection and Classification in the Wild",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR.2016.232",
+    "status": "resolved",
+    "registered_title": "Traffic-Sign Detection and Classification in the Wild",
+    "registered_year": {
+      "date-parts": [
+        [
+          2016,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Zhu",
+      "Liang",
+      "Zhang",
+      "Huang",
+      "Li",
+      "Hu"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "stallkamp2012gtsrb",
+    "doi": "10.1109/IJCNN.2011.6033395",
+    "bib_title": "The German Traffic Sign Recognition Benchmark: A multi-class classification competition",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FIJCNN.2011.6033395",
+    "status": "resolved",
+    "registered_title": "The German Traffic Sign Recognition Benchmark: A multi-class classification competition",
+    "registered_year": {
+      "date-parts": [
+        [
+          2011,
+          7
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Stallkamp",
+      "Schlipsing",
+      "Salmen",
+      "Igel"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "katsamenis2025dorie",
+    "doi": "10.3390/s25216653",
+    "bib_title": "DORIE: Dataset of Road Infrastructure Elements—A Benchmark of YOLO Architectures for Real-Time Patrol Vehicle Monitoring",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fs25216653",
+    "status": "resolved",
+    "registered_title": "DORIE: Dataset of Road Infrastructure Elements—A Benchmark of YOLO Architectures for Real-Time Patrol Vehicle Monitoring",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          31
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Katsamenis",
+      "Bakalos",
+      "Lappas",
+      "Protopapadakis",
+      "Martín-Portugués Montoliu",
+      "Doulamis",
+      "Doulamis",
+      "Rallis",
+      "Kalogeras"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "timofte2014belgiumts",
+    "doi": "10.1007/s00138-011-0391-3",
+    "bib_title": "Multi-view traffic sign detection, recognition, and 3D localisation",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs00138-011-0391-3",
+    "status": "resolved",
+    "registered_title": "Multi-view traffic sign detection, recognition, and 3D localisation",
+    "registered_year": {
+      "date-parts": [
+        [
+          2011,
+          12,
+          30
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Timofte",
+      "Zimmermann",
+      "Van Gool"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "houben2013gtsdb",
+    "doi": "10.1109/IJCNN.2013.6706807",
+    "bib_title": "Detection of traffic signs in real-world images: The German traffic sign detection benchmark",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FIJCNN.2013.6706807",
+    "status": "resolved",
+    "registered_title": "Detection of traffic signs in real-world images: The German traffic sign detection benchmark",
+    "registered_year": {
+      "date-parts": [
+        [
+          2013,
+          8
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Houben",
+      "Stallkamp",
+      "Salmen",
+      "Schlipsing",
+      "Igel"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "tabernik2019dfg",
+    "doi": "10.1109/TITS.2019.2913588",
+    "bib_title": "Deep Learning for Large-Scale Traffic-Sign Detection and Recognition",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FTITS.2019.2913588",
+    "status": "resolved",
+    "registered_title": "Deep Learning for Large-Scale Traffic-Sign Detection and Recognition",
+    "registered_year": {
+      "date-parts": [
+        [
+          2020,
+          4
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Tabernik",
+      "Skocaj"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "cohen1960coefficient",
+    "doi": "10.1177/001316446002000104",
+    "bib_title": "A Coefficient of Agreement for Nominal Scales",
+    "metadata_url": "https://api.crossref.org/works/10.1177%2F001316446002000104",
+    "status": "resolved",
+    "registered_title": "A Coefficient of Agreement for Nominal Scales",
+    "registered_year": {
+      "date-parts": [
+        [
+          1960,
+          4
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Cohen"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "bergsma",
+    "doi": "10.1016/j.jkss.2012.10.002",
+    "bib_title": "A bias-correction for Cramér’s and Tschuprow’s",
+    "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.jkss.2012.10.002",
+    "status": "resolved",
+    "registered_title": "A bias-correction for Cramér’s and Tschuprow’s",
+    "registered_year": {
+      "date-parts": [
+        [
+          2013,
+          9
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Bergsma"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "Transformers4Vision",
+    "doi": "10.1109/ACCESS.2025.3571735",
+    "bib_title": "Transformers for Vision: A Survey on Innovative Methods for Computer Vision",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FACCESS.2025.3571735",
+    "status": "resolved",
+    "registered_title": "Transformers for Vision: A Survey on Innovative Methods for Computer Vision",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Palanisamy",
+      "Hassija",
+      "Chatterjee",
+      "Mandal",
+      "Chakraborty",
+      "Pandey",
+      "Chalapathi",
+      "Kumar"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "reshadi2026deeplearningcv",
+    "doi": "10.1007/s10586-026-06045-5",
+    "bib_title": "Deep learning approaches in computer vision: a comprehensive survey",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs10586-026-06045-5",
+    "status": "resolved",
+    "registered_title": "Deep learning approaches in computer vision: a comprehensive survey",
+    "registered_year": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          30
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Reshadi",
+      "TaghipourEivazi",
+      "Ghaffari",
+      "Seyyedabbasi"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "wu2024openvocabulary",
+    "doi": "10.1109/TPAMI.2024.3361862",
+    "bib_title": "Towards Open Vocabulary Learning: A Survey",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FTPAMI.2024.3361862",
+    "status": "resolved",
+    "registered_title": "Towards Open Vocabulary Learning: A Survey",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024,
+          7
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Wu",
+      "Li",
+      "Xu",
+      "Yuan",
+      "Ding",
+      "Yang",
+      "Li",
+      "Zhang",
+      "Tong",
+      "Jiang",
+      "Ghanem",
+      "Tao"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "zhu2024openvocabulary",
+    "doi": "10.1109/TPAMI.2024.3413013",
+    "bib_title": "A Survey on Open-Vocabulary Detection and Segmentation: Past, Present, and Future",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FTPAMI.2024.3413013",
+    "status": "resolved",
+    "registered_title": "A Survey on Open-Vocabulary Detection and Segmentation: Past, Present, and Future",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024,
+          12
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Zhu",
+      "Chen"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "cao2025zeroshot",
+    "doi": "10.26599/BDMA.2024.9020098",
+    "bib_title": "A Survey of Zero-Shot Object Detection",
+    "metadata_url": "https://api.crossref.org/works/10.26599%2FBDMA.2024.9020098",
+    "status": "resolved",
+    "registered_title": "A Survey of Zero-Shot Object Detection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Cao",
+      "Yao",
+      "Xu",
+      "Liu",
+      "Pan",
+      "Ming"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "zou2023objectdetection",
+    "doi": "10.1109/JPROC.2023.3238524",
+    "bib_title": "Object Detection in 20 Years: A Survey",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FJPROC.2023.3238524",
+    "status": "resolved",
+    "registered_title": "Object Detection in 20 Years: A Survey",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          3
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Zou",
+      "Chen",
+      "Shi",
+      "Guo",
+      "Ye"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "girshick2014rcnn",
+    "doi": "10.1109/CVPR.2014.81",
+    "bib_title": "Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR.2014.81",
+    "status": "resolved",
+    "registered_title": "Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation",
+    "registered_year": {
+      "date-parts": [
+        [
+          2014,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Girshick",
+      "Donahue",
+      "Darrell",
+      "Malik"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "girshick2015fastrcnn",
+    "doi": "10.1109/ICCV.2015.169",
+    "bib_title": "Fast R-CNN",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FICCV.2015.169",
+    "status": "resolved",
+    "registered_title": "Fast R-CNN",
+    "registered_year": {
+      "date-parts": [
+        [
+          2015,
+          12
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Girshick"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "redmon2016you",
+    "doi": "10.1109/CVPR.2016.91",
+    "bib_title": "You Only Look Once: Unified, Real-Time Object Detection",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR.2016.91",
+    "status": "resolved",
+    "registered_title": "You Only Look Once: Unified, Real-Time Object Detection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2016,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Redmon",
+      "Divvala",
+      "Girshick",
+      "Farhadi"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "carion2020end",
+    "doi": "10.1007/978-3-030-58452-8_13",
+    "bib_title": "End-to-End Object Detection with Transformers",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2F978-3-030-58452-8_13",
+    "status": "resolved",
+    "registered_title": "End-to-End Object Detection with Transformers",
+    "registered_year": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Carion",
+      "Massa",
+      "Synnaeve",
+      "Usunier",
+      "Kirillov",
+      "Zagoruyko"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "tian2019fcos",
+    "doi": "10.1109/ICCV.2019.00972",
+    "bib_title": "FCOS: Fully Convolutional One-Stage Object Detection",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FICCV.2019.00972",
+    "status": "resolved",
+    "registered_title": "FCOS: Fully Convolutional One-Stage Object Detection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2019,
+          10
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Tian",
+      "Shen",
+      "Chen",
+      "He"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "wang2024yolov10",
+    "doi": "10.52202/079017-3429",
+    "bib_title": "YOLOv10: Real-Time End-to-End Object Detection",
+    "metadata_url": "https://api.crossref.org/works/10.52202%2F079017-3429",
+    "status": "resolved",
+    "registered_title": "YOLOv10: Real-Time End-to-End Object Detection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Wang",
+      "Chen",
+      "Liu",
+      "Chen",
+      "Lin",
+      "Han",
+      "Ding"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "lin2017fpn",
+    "doi": "10.1109/CVPR.2017.106",
+    "bib_title": "Feature Pyramid Networks for Object Detection",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR.2017.106",
+    "status": "resolved",
+    "registered_title": "Feature Pyramid Networks for Object Detection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2017,
+          7
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Lin",
+      "Dollar",
+      "Girshick",
+      "He",
+      "Hariharan",
+      "Belongie"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "lin2017focal",
+    "doi": "10.1109/ICCV.2017.324",
+    "bib_title": "Focal Loss for Dense Object Detection",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FICCV.2017.324",
+    "status": "resolved",
+    "registered_title": "Focal Loss for Dense Object Detection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2017,
+          10
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Lin",
+      "Goyal",
+      "Girshick",
+      "He",
+      "Dollar"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "redmon2017yolo9000",
+    "doi": "10.1109/CVPR.2017.690",
+    "bib_title": "YOLO9000: Better, Faster, Stronger",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR.2017.690",
+    "status": "resolved",
+    "registered_title": "YOLO9000: Better, Faster, Stronger",
+    "registered_year": {
+      "date-parts": [
+        [
+          2017,
+          7
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Redmon",
+      "Farhadi"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "wang2023yolov7",
+    "doi": "10.1109/CVPR52729.2023.00721",
+    "bib_title": "YOLOv7: Trainable Bag-of-Freebies Sets New State-of-the-Art for Real-Time Object Detectors",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR52729.2023.00721",
+    "status": "resolved",
+    "registered_title": "YOLOv7: Trainable Bag-of-Freebies Sets New State-of-the-Art for Real-Time Object Detectors",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Wang",
+      "Bochkovskiy",
+      "Liao"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "yu2025detrreview",
+    "doi": "10.3390/s25133952",
+    "bib_title": "A Review of DEtection TRansformer: From Basic Architecture to Advanced Developments and Visual Perception Applications",
+    "metadata_url": "https://api.crossref.org/works/10.3390%2Fs25133952",
+    "status": "resolved",
+    "registered_title": "A Review of DEtection TRansformer: From Basic Architecture to Advanced Developments and Visual Perception Applications",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          6,
+          25
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Yu",
+      "Tang",
+      "Mu"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "zhao2024rtdetr",
+    "doi": "10.1109/CVPR52733.2024.01605",
+    "bib_title": "DETRs Beat YOLOs on Real-time Object Detection",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCVPR52733.2024.01605",
+    "status": "resolved",
+    "registered_title": "DETRs Beat YOLOs on Real-time Object Detection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024,
+          6,
+          16
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Zhao",
+      "Lv",
+      "Xu",
+      "Wei",
+      "Wang",
+      "Dang",
+      "Liu",
+      "Chen"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "decarolis2020yolotrashnet",
+    "doi": "10.1109/EAIS48028.2020.9122693",
+    "bib_title": "YOLO TrashNet: Garbage Detection in Video Streams",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FEAIS48028.2020.9122693",
+    "status": "resolved",
+    "registered_title": "YOLO TrashNet: Garbage Detection in Video Streams",
+    "registered_year": {
+      "date-parts": [
+        [
+          2020,
+          5
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Carolis",
+      "Ladogana",
+      "Macchiarulo"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "espinosa2025litter",
+    "doi": "10.1109/CIETES63869.2025.10995152",
+    "bib_title": "Litter detection in Real-World Environments using YOLO models",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCIETES63869.2025.10995152",
+    "status": "resolved",
+    "registered_title": "Litter detection in Real-World Environments using YOLO models",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          3,
+          17
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Espinosa-Juárez",
+      "Aguilar-Canto",
+      "Torres-León",
+      "Vergara-Sánchez",
+      "Moreno-Armendáriz",
+      "Calvo"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "reddy2025yologarbagepothole",
+    "doi": "10.1109/NMITCON65824.2025.11188066",
+    "bib_title": "YOLO-Based System for Efficient Garbage and Pothole Detection and Reporting",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FNMITCON65824.2025.11188066",
+    "status": "resolved",
+    "registered_title": "YOLO-Based System for Efficient Garbage and Pothole Detection and Reporting",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          8,
+          1
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Reddy",
+      "Balnarsaiah",
+      "Pasha",
+      "Reddy",
+      "Bimbasri",
+      "Virinchi"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "wang2023improvedtrafficsign",
+    "doi": "10.1109/ACCESS.2023.3281551",
+    "bib_title": "An Improved Traffic Sign Detection and Recognition Deep Model Based on YOLOv5",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FACCESS.2023.3281551",
+    "status": "resolved",
+    "registered_title": "An Improved Traffic Sign Detection and Recognition Deep Model Based on YOLOv5",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Wang",
+      "Li",
+      "Lu"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "shi2023scyolo",
+    "doi": "10.1109/ACCESS.2023.3241234",
+    "bib_title": "SC-YOLO: A Object Detection Model for Small Traffic Signs",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FACCESS.2023.3241234",
+    "status": "resolved",
+    "registered_title": "SC-YOLO: A Object Detection Model for Small Traffic Signs",
+    "registered_year": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Shi",
+      "Li",
+      "Chen"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "mahadshetti2024signyolo",
+    "doi": "10.1109/ACCESS.2024.3417023",
+    "bib_title": "Sign-YOLO: Traffic Sign Detection Using Attention-Based YOLOv7",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FACCESS.2024.3417023",
+    "status": "resolved",
+    "registered_title": "Sign-YOLO: Traffic Sign Detection Using Attention-Based YOLOv7",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Mahadshetti",
+      "Kim",
+      "Um"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "liu2024yolots",
+    "doi": "10.1109/ACCESS.2024.3498057",
+    "bib_title": "YOLO-TS: A Lightweight YOLO Model for Traffic Sign Detection",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FACCESS.2024.3498057",
+    "status": "resolved",
+    "registered_title": "YOLO-TS: A Lightweight YOLO Model for Traffic Sign Detection",
+    "registered_year": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Liu",
+      "Luo"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "lin2025tsdetr",
+    "doi": "10.1109/ICRA55743.2025.11127628",
+    "bib_title": "TS-DETR: Traffic Sign Detection Based on Positive and Negative Sample Augmentation",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FICRA55743.2025.11127628",
+    "status": "resolved",
+    "registered_title": "TS-DETR: Traffic Sign Detection Based on Positive and Negative Sample Augmentation",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          5,
+          19
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Lin",
+      "Lin",
+      "Wang"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "dong2026hasdetr",
+    "doi": "10.1007/s11554-025-01812-w",
+    "bib_title": "HAS-DETR: a real-time lightweight traffic sign detection model",
+    "metadata_url": "https://api.crossref.org/works/10.1007%2Fs11554-025-01812-w",
+    "status": "resolved",
+    "registered_title": "HAS-DETR: a real-time lightweight traffic sign detection model",
+    "registered_year": {
+      "date-parts": [
+        [
+          2025,
+          12,
+          10
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Dong",
+      "Liao",
+      "Ji"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "kurrey2026roadsurface",
+    "doi": "10.1109/COMSNETS67989.2026.11418262",
+    "bib_title": "Intelligent Road Surface Assessment: A Comparative Deep Learning Approach using YOLOv12 and RF-DETR",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCOMSNETS67989.2026.11418262",
+    "status": "resolved",
+    "registered_title": "Intelligent Road Surface Assessment: A Comparative Deep Learning Approach using YOLOv12 and RF-DETR",
+    "registered_year": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          6
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Kurrey",
+      "Rai",
+      "Reddy Bollu"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "amores2026roaddamage",
+    "doi": "10.1109/CICN70047.2026.11594244",
+    "bib_title": "Road Damage Detection Using Instance Segmentation: A Comparative Study of YOLOv8m-Seg and RF-DETR in Philippine Road Conditions",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FCICN70047.2026.11594244",
+    "status": "resolved",
+    "registered_title": "Road Damage Detection Using Instance Segmentation: A Comparative Study of YOLOv8m-Seg and RF-DETR in Philippine Road Conditions",
+    "registered_year": {
+      "date-parts": [
+        [
+          2026,
+          6,
+          12
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Amores",
+      "Bernardo",
+      "Bondoc",
+      "Maddela",
+      "Melegrito",
+      "Tolentino",
+      "Velasco",
+      "Alina",
+      "Salces",
+      "Ramos",
+      "Reyes",
+      "Valencia",
+      "Estropia"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "pandey2026signcondition",
+    "doi": "10.1109/IETC69527.2026.11568642",
+    "bib_title": "A Comparative Study of Convolutional Neural Networks and Vision Transformers for Automated Traffic Sign Condition Assessment",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FIETC69527.2026.11568642",
+    "status": "resolved",
+    "registered_title": "A Comparative Study of Convolutional Neural Networks and Vision Transformers for Automated Traffic Sign Condition Assessment",
+    "registered_year": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          8
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Pandey",
+      "Esteghamati"
+    ],
+    "title_similarity": 1.0
+  },
+  {
+    "key": "wang2026symbolconsistency",
+    "doi": "10.1109/ACCESS.2026.3711096",
+    "bib_title": "Beyond VQA Accuracy: A Cross-Regime Diagnostic Evaluation of Symbol Consistency in Multimodal Large Language Models",
+    "metadata_url": "https://api.crossref.org/works/10.1109%2FACCESS.2026.3711096",
+    "status": "resolved",
+    "registered_title": "Beyond VQA Accuracy: A Cross-Regime Diagnostic Evaluation of Symbol Consistency in Multimodal Large Language Models",
+    "registered_year": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "registered_authors": [
+      "Wang",
+      "Guo",
+      "Xiu",
+      "Zhao",
+      "Wang"
+    ],
+    "title_similarity": 1.0
+  }
+]

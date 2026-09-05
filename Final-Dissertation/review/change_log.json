@@ -1,0 +1,566 @@
+[
+  {
+    "file": "Final-Dissertation/content/chapters/1_introduction/introduction.tex",
+    "reason": "Limit novelty claim to the reviewed evidence.",
+    "old": "This exposes a research gap: no controlled, locally grounded evaluation of these paradigms yet exists using Maltese data, task-appropriate reference annotations and deployment-oriented criteria.",
+    "new": "The literature reviewed here does not establish how these paradigms compare on the two Maltese monitoring tasks under a shared, task-appropriate evaluation framework."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/1_introduction/introduction.tex",
+    "reason": "Specify SDG 11 targets accurately.",
+    "old": "\\gls{SDG}~11, which addresses urban environmental impact, waste management and road safety",
+    "new": "\\gls{SDG}~11, whose targets include reducing the environmental impact of cities, improving waste management and providing safe, accessible transport"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/1_introduction/introduction.tex",
+    "reason": "OD denotes detection, not a countable detector.",
+    "old": "Train and comparatively evaluate supervised \\glspl{OD}",
+    "new": "Train and comparatively evaluate supervised object detectors"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/1_introduction/introduction.tex",
+    "reason": "Avoid implying identical optimisation across detector frameworks.",
+    "old": "under a common experimental protocol. Performance is quantified",
+    "new": "within a shared experimental framework, with framework-specific training differences recorded explicitly. Performance is quantified"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Remove unsupported expansion of the SODA acronym.",
+    "old": "The Small Objects from Different Altitude (SODA) dataset",
+    "new": "The SODA dataset"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "National guidance excludes twigs; garden trimmings is too broad.",
+    "old": "food scraps, garden trimmings and other compostable kitchen waste",
+    "new": "food scraps, flowers, leaves and other accepted kitchen waste"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Methodology and annotations also refer to directional bollards.",
+    "old": "The sole such inclusion is the convex mirror",
+    "new": "One such inclusion is the convex mirror"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Separate unknown appearance from known signs outside the selected taxonomy.",
+    "old": "The remaining two, \\emph{Back-Unknown} and \\emph{Other-Unknown}, retain observations for which a more specific semantic category cannot be established from the available visual evidence, since context is not used to infer a concealed or insufficiently visible sign face.",
+    "new": "The remaining two classes distinguish different forms of taxonomic uncertainty: \\emph{Back-Unknown} records signs whose semantic identity cannot be recovered from the visible rear surface, whereas \\emph{Other-Unknown} includes signs outside the explicitly modelled categories, even when their meaning is visually recognisable. Context is not used to infer a concealed sign face."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Other-Unknown need not be semantically unidentifiable.",
+    "old": "organised into road-condition signage, roadside information and visibility assets, and semantically unidentifiable signs.",
+    "new": "organised into road-condition signage, roadside information and visibility assets, and rear-facing or otherwise uncategorised signs."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Distinguish no-through-road symbol from a T-junction warning.",
+    "old": "Blue quadrangular sign displaying a T-shaped junction symbol, indicating that the road ahead terminates rather than continuing through.",
+    "new": "Blue quadrangular sign displaying a white vertical bar capped by a red horizontal bar, indicating a no-through road. The parenthetical dataset label does not denote a T-junction warning sign."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Reconcile initial shape vocabulary with the final five-class classifier.",
+    "old": "cases where deformation prevented reliable shape identification\\\\",
+    "new": "cases where deformation prevented reliable shape identification. No final instance retains this label; the classification experiments therefore use five shape classes.\\\\"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Minor academic wording.",
+    "old": "Its five object classes distinguish the main bag-based streams",
+    "new": "Its five object classes distinguish the principal bag-based streams"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "TrashNet also contains a trash class.",
+    "old": "Image-level classification of isolated recyclable objects under controlled conditions.",
+    "new": "Image-level classification of isolated waste objects under controlled conditions."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "TrashNet also contains a trash class.",
+    "old": "benchmark of isolated recyclable objects captured under controlled conditions",
+    "new": "benchmark of isolated waste objects captured under controlled conditions"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Clarify that 5,000 counts annotated frames, not the entire GVP capture corpus.",
+    "old": "Binary waste detection from fixed-camera imagery of garbage-vulnerable locations.",
+    "new": "Bounding-box annotation of waste/non-waste regions in 5,000 selected fixed-camera frames."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Avoid a universal novelty claim contradicted by broader related work.",
+    "old": "None combines road-facing street-level imagery, instance-level bounding boxes and categories defined by operational waste presentation.",
+    "new": "None of the datasets compared in this table combines road-facing street-level imagery, instance-level bounding boxes and the collection-stream taxonomy used in this study."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Distinguish GTSDB evaluation categories from fine-grained annotation IDs.",
+    "old": "& 900\n& 43\n& Bounding boxes for full-scene German sign detection.",
+    "new": "& 900\n& 3 groups\n& Bounding boxes with fine-grained sign IDs; the benchmark evaluates prohibitory, mandatory and danger categories."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Visible condition does not establish maintenance history.",
+    "old": "capturing not only what asset is present and where, but how it is observed, installed and maintained.",
+    "new": "capturing the asset category and location alongside viewing angle, mounting type, visible condition and shape."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Correct possessive error and narrative citation.",
+    "old": "Author's in \\cite{lin2025tsdetr}",
+    "new": "\\citeauthor{lin2025tsdetr}"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Use an author name as the grammatical subject.",
+    "old": "\\cite{reddy2025yologarbagepothole} used",
+    "new": "\\citeauthor{reddy2025yologarbagepothole} used"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Use an author name as the grammatical subject.",
+    "old": "\\cite{liu2024yolots} developed",
+    "new": "\\citeauthor{liu2024yolots} developed"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Use an author name as the grammatical subject.",
+    "old": "\\cite{dong2026hasdetr} adapted",
+    "new": "\\citeauthor{dong2026hasdetr} adapted"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Use an author name as the grammatical subject.",
+    "old": "\\cite{pandey2026signcondition} compared",
+    "new": "\\citeauthor{pandey2026signcondition} compared"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Remove duplicate citation and repair grammatical subject.",
+    "old": "as demonstrated by \\cite{kumar2026gvp} \\cite{kumar2026gvp}",
+    "new": "as demonstrated by \\citeauthor{kumar2026gvp}~\\cite{kumar2026gvp}"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Acquisition was predominantly on foot, not a vehicle-mounted sensing survey.",
+    "old": "The \\gls{MDWD} follows the latter setting by representing municipal waste as observed from street level within dense urban environments",
+    "new": "The \\gls{MDWD} provides spatially varied street-level views of municipal waste within dense urban environments"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Match acquisition description to author-confirmed methodology.",
+    "old": "so that both datasets place the detector under the mobile-observation conditions characteristic of municipal monitoring.",
+    "new": "Both datasets were acquired predominantly on foot, with some passenger-captured vehicle imagery; they therefore represent mobile street-level observation rather than continuous vehicle-mounted sensing."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Resolve citation alias",
+    "old": "carion2026sam3",
+    "new": "meta2025sam3"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Resolve citation alias",
+    "old": "liu2024groundingdino",
+    "new": "liu2024grounding"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Resolve citation alias",
+    "old": "ren2024groundedsam",
+    "new": "ren2024grounded"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Resolve citation alias",
+    "old": "wang2026locateanything",
+    "new": "nvidia2026locateanything"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/2_background/background.tex",
+    "reason": "Explain the evaluated Reason2 models before discussing unevaluated Cosmos 3.",
+    "old": "Cosmos~3 subsequently extends the family",
+    "new": "The Cosmos Reason2 models evaluated in this dissertation are reasoning \\glspl{VLM} from this family, applied here to static images and bounding-box generation rather than video prediction or action generation \\cite{nvidia2025cosmosreason2}. Cosmos~3 subsequently extends the family"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Do not assert training/test independence for the historical MDWD export.",
+    "old": "Training-specific operations, including augmentation and parameter optimisation, are confined to the corresponding training partitions, while validation data are used where required for model selection, configuration and early stopping.",
+    "new": "Parameter optimisation uses the training partitions, while validation data are used where required for model selection, configuration and early stopping. MTSD augmentation follows source-image partitioning; the historical MDWD export has cross-partition source and event overlap, as detailed in Subsection~\\ref{sec:md-partitioning}."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Attribute splitting is independent identifier hashing, not inheritance from detection splits.",
+    "old": "For attribute classification, experimental partitions are instead inherited from the source imagery before object crops are generated, ensuring that all instances originating from the same image remain within a single partition. This preserves independence between the training, validation and test sets and provides a controlled basis for comparing the investigated visual representations and transfer strategies across the four annotated \\gls{MTSD} attributes.",
+    "new": "For attribute classification, source-image partitions are assigned independently of the detection split using a deterministic hash of each image identifier before crops are generated. All crops from the same source-image identifier remain in one partition. This prevents within-image crop leakage, but does not by itself guarantee independence between different photographs of the same asset or scene. The classification results therefore describe recognition on ground-truth crops under their own fixed partitioning protocol."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Correct EUVIP event name.",
+    "old": "14th \\gls{IEEE} European Conference on Visual Information Processing 2026",
+    "new": "14th \\gls{IEEE} European Workshop on Visual Information Processing 2026"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Distinguish MDWD v28 source characterisation from v20 experiments.",
+    "old": "This distinction separates the characteristics of the original datasets from transformations introduced for individual experiments.",
+    "new": "This distinction separates source-level characteristics from task-specific transformations. For the MDWD, the current full-resolution, unaugmented source export is Roboflow v28, whereas the recorded experiments use the earlier v20 export. These are separate snapshots of an evolving annotation project: the current source statistics must not be interpreted as an exact reconstruction of the historical experiment inputs."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "The 34 camera-model strings apply to MTSD only.",
+    "old": "Capture devices varied across the collection period, spanning 34 distinct camera-model strings from several manufacturers, predominantly Apple, Xiaomi and Samsung.",
+    "new": "The retained MTSD metadata contain 34 distinct non-empty camera-model strings from several manufacturers, predominantly Apple, Xiaomi and Samsung. No camera metadata survive in the current MDWD source export, so its device diversity is supported by the acquisition account rather than independently recoverable from the files."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Preparation hard-links or copies original images; blanket GPS-removal claim is unsupported.",
+    "old": "Raw per-image \\gls{GPS} coordinates were also excluded from the experiment-ready datasets, retaining location only at aggregated district level where required for descriptive analysis. These measures limited the retention of identifiable and precise geographic information in accordance with applicable data-protection requirements, including the \\gls{GDPR}~\\cite{gdpr}.",
+    "new": "Geographical summaries used aggregated district-level information rather than publishing per-image \\gls{GPS} coordinates. Image redaction and geographical aggregation were intended to reduce privacy risks in the context of the \\gls{GDPR}~\\cite{gdpr}. These measures are distinct from metadata removal: the preparation code can retain source metadata in linked or copied MTSD images, so complete removal of embedded location information cannot be inferred from the redaction procedure alone."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Distinguish manual GT from AI-assisted privacy redaction.",
+    "old": "No model-generated or \\gls{AI}-assisted annotations were used.",
+    "new": "No model-generated object-class, attribute or reference bounding-box annotations were used; the automated privacy-redaction regions were separate from the task annotations."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Verified source negative-image counts differ from historical augmented MDWD counts.",
+    "old": "and the small number of images containing no eligible target objects was retained as negative examples rather than removed from the source corpora.",
+    "new": "and images containing no eligible target objects were retained where present. The current MTSD source corpus contains two such images, whereas the current MDWD source export contains none."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Correct rounding of 0.999052; it does not round to 0.99.",
+    "old": "mean \\gls{IoU} reached 0.99",
+    "new": "mean \\gls{IoU} reached 0.999"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Unmatched geometry is not proof of historical object addition/deletion.",
+    "old": "while 2,681 objects were added and 196 removed during review.",
+    "new": "with 2,681 final annotations and 196 initial annotations left unmatched at this threshold. These are treated as apparent additions and removals, although matching alone cannot distinguish every addition or removal from a substantial geometric revision."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Use the measured comparison unit consistently.",
+    "old": "The 2,681 objects introduced during review represent approximately 13.07\\%",
+    "new": "The 2,681 unmatched final annotations represent approximately 13.07\\%"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Do not infer exact editing history from matching counts.",
+    "old": "indicating that initially omitted instances constituted a more substantial source of correction than bounding-box adjustment.",
+    "new": "suggesting that annotation completeness required substantial attention alongside revisions to retained instances."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Qualify dependent before/after agreement statistics.",
+    "old": "An equivalent quantitative comparison could not be reproduced for the \\gls{MDWD}",
+    "new": "These statistics quantify agreement between an initial annotation state and its subsequent review, rather than inter-annotator reliability from independent, blinded annotation. High agreement therefore indicates stability through review, not independent confirmation of every final label.\n\nAn equivalent quantitative comparison could not be reproduced for the \\gls{MDWD}"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Replace false leakage-free partitioning with current and historical audit evidence.",
+    "old": "To preserve independence between model development and evaluation, partitioning was performed at source-corpus level after annotation and \\gls{QA}, but before augmentation or any other task-specific transformation. Each dataset was divided into fixed training, validation and test subsets in proportions of \\textbf{80/10/10}, without class stratification, balancing or resampling, thereby retaining the naturally occurring class composition of each corpus. The \\gls{MDWD} partition was generated once through Roboflow, while the \\gls{MTSD} was partitioned deterministically using seed~42, with images sharing identical SHA-256 hashes constrained to the same subset to prevent byte-identical files from crossing partition boundaries. Once established, these source-image assignments were retained throughout the subsequent experiments, providing a consistent basis for training, model selection and final evaluation within each dataset.",
+    "new": "Fixed training, validation and test partitions with nominal proportions of \\textbf{80/10/10} were used. For the \\gls{MTSD}, partitioning followed annotation and \\gls{QA} and preceded offline augmentation. The seed-42 procedure grouped byte-identical images by SHA-256 hash before assigning them to subsets, without class stratification. This produced 5,986 training, 749 validation and 747 test images. The assignments were retained across the detection and prompt-localisation experiments, although different photographs of the same physical asset were not explicitly grouped.\n\nThe current \\gls{MDWD} source export contains 2,956 training, 369 validation and 369 test images. Its historical v20 experiment export contains 29,487 training images after offline augmentation, together with 369 validation and 369 test images. The later source export is used for dataset characterisation; the historical export defines the recorded experiment inputs. The repository does not retain sufficient Roboflow version history to establish a completely unchanged annotation state between these exports.\n\nAn August 2026 source-mapping audit identified 17 source-file identities and 39 reviewed same-event groups spanning partitions in the historical \\gls{MDWD} export. The same-event grouping affects 17 validation and 25 test images; 23 reviewed same-event pairs also cross partitions in the current source export. The \\gls{MDWD} evaluation is therefore not event-independent. An earlier sensitivity analysis of four YOLO checkpoints, based on a different 30-stem filename heuristic, found changes of at most 0.48 percentage points in mAP after subset exclusion. That result applies only to the evaluated subsets and checkpoints and does not establish the effect of excluding all 39 subsequently identified event groups."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Recalculate maximum class-proportion variation from source counts.",
+    "old": "show that \\gls{MDWD} class proportions remain broadly consistent across the three subsets, varying by less than two percentage points.",
+    "new": "show that the MDWD class proportions are broadly similar but not identical across subsets. The largest range is approximately 4.59 percentage points for Mixed Waste, whose share rises from 25.61\\% in validation to 30.20\\% in testing."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Tourist Sign remains in training and broad prompts; evaluator filters categories, not spatial ignore regions.",
+    "old": "A further distinction between the source and experiment-ready \\gls{MTSD} taxonomies concerns the \\emph{Tourist Sign} class. Only 33 instances were present in the source corpus, comprising 27 training, three validation and three test examples, which was considered insufficient for meaningful supervised learning or reliable class-specific evaluation given the visual variability of the category. Its annotations were therefore excluded from the experiment-ready target taxonomy used for supervised detection and zero-shot localisation. The corresponding bounding boxes were retained as ignore regions during localisation evaluation, such that predictions overlapping a Tourist Sign instance were excluded from true-positive and false-positive assignment rather than treated as background errors. This ensured that the class was neither learned nor evaluated as a modelled category while preventing valid localisation of an otherwise recognisable traffic sign from being penalised.",
+    "new": "The \\emph{Tourist Sign} category contains only 33 source instances: 27 training, three validation and three test examples. All twelve categories remain in the prepared training datasets. For the consolidated supervised evaluation, Tourist Sign is excluded from the reported category set by filtering its ground-truth annotations and predictions assigned to that category. This is a reporting exclusion, not removal from training or a spatial ignore-region mechanism; predictions assigned to another retained category are not exempted merely because they overlap a Tourist Sign. Prompt-based evaluation retains the full twelve-class source taxonomy, including Tourist Sign under the broad queries. These differences must be respected when comparing the experimental tracks."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Remove another blanket independence claim.",
+    "old": "while preserving validation and test independence.",
+    "new": "while retaining the fixed partitions and the MDWD overlap limitation described above."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Distinguish MDWD export size from RF-DETR network size.",
+    "old": "This resolution was therefore retained as the fixed reference input size for all \\gls{MDWD} detector experiments, ensuring that all models were trained and evaluated under a common spatial configuration.",
+    "new": "The exported 640-pixel representation was therefore retained across the MDWD experiments. This common stored representation does not imply identical internal network resolutions, because model-specific loaders may resize it again."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Use actual v20 training-image count and avoid false exact multiplicity.",
+    "old": "Ten outputs were produced per source training image, consisting of the resized original and nine augmented derivatives, increasing the effective training set to 29,580 images.",
+    "new": "The intended recipe produced approximately ten outputs per source training image, including an original representation and augmented derivatives. The recorded v20 export actually contains 29,487 training images, rather than the 29,580 implied by multiplying the older nominal source count by ten."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Training-only output storage does not imply source-independent augmentation.",
+    "old": "All augmentation was restricted to the training partition, while validation and test imagery remained unchanged apart from the required deterministic preprocessing.",
+    "new": "Generated augmentation files occur in the training partition, while validation and test files receive deterministic preprocessing. However, some training derivatives share a source record or photographed event with held-out images, as established by the split-integrity audit."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Avoid unsupported validation benefit and explain transformation limitations.",
+    "old": "Although comparatively aggressive, this transformation was retained because preliminary validation indicated improved generalisation.",
+    "new": "These settings are treated as choices of the historical augmentation recipe rather than independently established optimal values. In particular, vertical reflection transforms the entire streetscape and does not simply simulate a toppled waste object; colour perturbations can also weaken the bag-colour cues used by the taxonomy."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "RF-DETR still uses online horizontal flips.",
+    "old": "Horizontal reflection was excluded because it may alter semantically meaningful sign orientation",
+    "new": "Horizontal reflection was excluded from the offline recipes because it may alter semantically meaningful sign orientation"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Disclose framework-specific online augmentation confound.",
+    "old": "ensuring that the experiment-ready corpora can be reproduced consistently.",
+    "new": "supporting reproducibility of the offline corpora. These recipes do not describe every training-time transformation: online augmentation was disabled for the recorded MTSD YOLO runs, whereas RF-DETR 1.3.0 retained internal random horizontal flips, crop/resize operations and multi-scale training. Thus, the RF-DETR \\emph{none} condition means no offline augmentation, not no augmentation of any kind."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Clarify per-side context: normally 1.5 times box width/height, not 1.25.",
+    "old": "Each annotated instance was extracted with a \\(25\\%\\) contextual margin around its bounding box",
+    "new": "Each annotated instance was extracted with a contextual margin equal to \\(25\\%\\) of the box width on each horizontal side and \\(25\\%\\) of its height on each vertical side, clipped at the image boundaries"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Padding happens at loading, not during saved crop generation.",
+    "old": "and square-padded with neutral grey rather than geometrically stretched, preserving the sign's original proportions prior to model-specific resizing and normalisation.",
+    "new": "and saved as a rectangular crop. Square padding with neutral grey was subsequently applied by the data loader before model-specific resizing and normalisation, preserving the crop's proportions during deterministic evaluation preprocessing."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Do not minimise unquantified hosted-training confounds.",
+    "old": "a minor variation in initialisation and training environment",
+    "new": "variation in initialisation, platform-controlled optimisation and training environment"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "MTSD run records say cu128, not CUDA 13.0 or a nightly build.",
+    "old": "The local software environment comprised Python~3.12.13, Ultralytics~8.4.101, \\gls{RF-DETR}~1.3.0 and Transformers~4.57.6, with PyTorch~2.10.0 (nightly build) and \\gls{CUDA}~13.0.",
+    "new": "The recorded MTSD software environment comprised Python~3.12.13, Ultralytics~8.4.101 and RF-DETR~1.3.0, with PyTorch~2.10.0+cu128 and CUDA~12.8. Environment provenance is interpreted per experiment; these values do not establish that all historical MDWD or hosted runs used the same software versions."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Scope batch settings to supported run records.",
+    "old": "\\caption{Shared training hyperparameters used for locally trained supervised detectors.}",
+    "new": "\\caption{Principal training settings for locally trained detectors. Effective batch sizes distinguish the recorded MTSD frameworks; historical MDWD configurations require their own run provenance.}"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Correct optimiser-effective batches from nbs=64 and RF-DETR accumulation=1.",
+    "old": "    Effective Batch Size & 32 \\\\",
+    "new": "    MTSD effective batch size & 64 (YOLO); 32 (RF-DETR) \\\\"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "RF-DETR does not receive Ultralytics momentum setting.",
+    "old": "    Momentum ($\\beta_1$) & 0.937 \\\\",
+    "new": "    AdamW first-moment coefficient ($\\beta_1$) & 0.937 (YOLO); library default (RF-DETR) \\\\"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "British academic hyphenation.",
+    "old": "    Warmup Epochs & 3 \\\\",
+    "new": "    Warm-up epochs & 3 \\\\"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "State physical and effective batch sizes precisely.",
+    "old": "As resolution increased, the effective optimiser batch size was maintained by reducing the physical batch size and increasing gradient accumulation accordingly.",
+    "new": "For YOLO inputs of 640, 960 and 1280 pixels, physical batches of 32, 16 and 8 corresponded to nominal accumulation factors of 2, 4 and 8, respectively, giving an optimiser-effective batch size of 64 after warm-up."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Zero-shot does not imply query wording is the only adaptation.",
+    "old": "preserving a zero-shot setting in which task adaptation was limited to the natural-language query supplied at inference time.",
+    "new": "preserving a setting without target-dataset parameter updates. Task specification nevertheless includes the prompt, its target-class mapping and the fixed post-processing configuration."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Disclose test-informed prediction cap.",
+    "old": "with each cap resolved once per dataset and applied consistently across all model--prompt combinations.",
+    "new": "with each cap resolved once per dataset and applied consistently across all model--prompt combinations. Because the limits were derived from test annotations, this aspect of the protocol is test-informed. It does not involve fitting model weights, but the caps should not be presented as independently selected deployment settings."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Author confirmed exploratory prompts excluded test images.",
+    "old": "The interface supported free-text prompt entry, model selection, adjustable display and filtering settings, alternative-prompt comparison, and visual inspection of predicted boxes, and masks where applicable, to assess failure cases qualitatively.",
+    "new": "Exploration was restricted to training and validation images; test images were not used for exploratory prompt selection. The interface supported free-text prompt entry, model selection, adjustable display and filtering settings, alternative-prompt comparison and visual inspection of predicted boxes and, where applicable, masks."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Broad traffic-sign prompt includes Tourist Sign.",
+    "old": "maps to the ten sign-related categories",
+    "new": "maps to the eleven sign-related categories"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Broad traffic-control prompt uses all 12 categories.",
+    "old": "encompasses the complete eleven-class \\gls{MTSD} taxonomy",
+    "new": "encompasses the complete twelve-class \\gls{MTSD} taxonomy"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Expose unequal category weighting in prompt-macro average.",
+    "old": "Each query maps to a single \\gls{GT} category and therefore represents a comparable category-level localisation task.",
+    "new": "Each query maps to one ground-truth category, but this is a prompt-macro average rather than a uniformly weighted class average. No Entry and No Through Road each contribute twice through their alternative queries; the other included MTSD classes contribute once."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Remove stray LaTeX line break inside coordinate tuple.",
+    "old": "\\((x_0, y_0, x_1, \\\\y_1)\\)",
+    "new": "\\((x_0, y_0, x_1, y_1)\\)"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Distinguish scoreless models and non-identical AP implementations.",
+    "old": "leaving confidence-ranked \\gls{AP} directly interpretable only for \\gls{SAM}~3 and 3.1 and cross-model comparison reliant instead on the fixed-operating-point measures defined in Chapter~\\ref{ch:evaluation}.",
+    "new": "making confidence-ranked AP informative only for SAM~3 and 3.1. The constant-score models are compared through fixed-operating-point measures. SAM AP is calculated from predictions already filtered at confidence 0.30 using all-point interpolation; it is therefore not directly equivalent to the supervised COCO evaluator's AP computed with 101 recall samples and a different prediction-retention policy."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Define correct runtime unit and excluded costs.",
+    "old": "Reported latency consequently represents end-to-end prediction-pipeline latency rather than neural-network forward-pass time alone.",
+    "new": "Reported latency consequently represents prediction-pipeline latency per image--prompt pair rather than neural-network forward-pass time alone. It excludes worker start-up and repeated model loading, so it is not the wall-clock cost of the complete evaluation. Processing the full prompt inventory also requires multiple queries per image, unlike a detector that returns all modelled classes in one pass."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Describe actual PromptDetect matching, whose docstring differs from implementation.",
+    "old": "Annotations outside \\(\\mathcal{C}_q\\) remained present as non-target objects",
+    "new": "Predictions were processed in descending score order, retaining generation order for tied scores. For each prediction, the implementation selected the highest-overlap target annotation; if that annotation had already been matched, the prediction was counted as a duplicate false positive rather than reassigned to its next-best unmatched target. This detail can affect crowded scenes and differs from matchers that search only the remaining unmatched annotations.\n\nAnnotations outside \\(\\mathcal{C}_q\\) remained present as non-target objects"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Correct spacing in class label.",
+    "old": "\\emph{Blind-Spot Mirror(Convex Mirror)}",
+    "new": "\\emph{Blind-Spot Mirror (Convex Mirror)}"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Remove repeated comprising.",
+    "old": "The experimental matrix comprises 18 principal configurations, comprising",
+    "new": "The experimental matrix contains 18 principal configurations:"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Do not assert universal hardware impossibility without feasibility records.",
+    "old": "as the memory requirements of end-to-end adaptation exceeded the practical limits of the available training hardware.",
+    "new": "within the available computational budget; the resulting matrix does not establish that full adaptation of every transformer variant is inherently infeasible on the hardware."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Higher learning rate does not guarantee larger parameter updates.",
+    "old": "Newly initialised heads therefore received larger updates, while pretrained backbone parameters were adapted more conservatively.",
+    "new": "Newly initialised heads therefore used higher learning rates, while pretrained backbone parameters used lower learning rates. Actual update magnitudes also depend on gradients and optimiser state."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Distinguish per-example loss from PyTorch weighted-mean reduction.",
+    "old": "For an instance with reference class \\(y_a\\), the loss for attribute \\(a\\) is:",
+    "new": "For an instance with reference class \\(y_a\\), the unreduced weighted loss contribution for attribute \\(a\\) is:"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Document weighted cross-entropy reduction used by the implementation.",
+    "old": "The overall optimisation objective is the unweighted sum of the four attribute losses, each term corresponding to its respective sign attribute:",
+    "new": "For a mini-batch, PyTorch reduces each head loss by dividing the summed weighted contributions by the sum of the corresponding target-class weights. Thus, for the valid examples \\(\\mathcal{B}_a\\) of attribute \\(a\\),\n\n\\begin{equation}\n\\overline{\\mathcal{L}}_a = \\frac{\\sum_{j\\in\\mathcal{B}_a}-w_{a,y_{a,j}}\\log p_{a,j,y_{a,j}}}{\\sum_{j\\in\\mathcal{B}_a}w_{a,y_{a,j}}}.\n\\end{equation}\n\n\\noindent The overall optimisation objective is the unweighted sum of these four reduced attribute losses:"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Use reduced losses in the joint objective.",
+    "old": "\\mathcal{L}_{\\mathrm{angle}}\n+\n\\mathcal{L}_{\\mathrm{mounting}}\n+\n\\mathcal{L}_{\\mathrm{condition}}\n+\n\\mathcal{L}_{\\mathrm{shape}}.",
+    "new": "\\overline{\\mathcal{L}}_{\\mathrm{angle}}\n+\\overline{\\mathcal{L}}_{\\mathrm{mounting}}\n+\\overline{\\mathcal{L}}_{\\mathrm{condition}}\n+\\overline{\\mathcal{L}}_{\\mathrm{shape}}."
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Avoid implying hosted runs used the local workstation.",
+    "old": "the same workstation used for the supervised \\glspl{OD} and prompt-based localisation experiments",
+    "new": "the same workstation used for the locally trained supervised detectors and prompt-based localisation experiments"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Remove unnecessary manual word split.",
+    "old": "\\texttt{transfo\\-rmers}",
+    "new": "\\texttt{transformers}"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Remove unnecessary manual word split.",
+    "old": "thro\\-ugh",
+    "new": "through"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Remove unnecessary manual word split.",
+    "old": "unweight\\-ed",
+    "new": "unweighted"
+  },
+  {
+    "file": "Final-Dissertation/content/chapters/3_methodology/methodology.tex",
+    "reason": "Correct spelling.",
+    "old": "intialised",
+    "new": "initialised"
+  },
+  {
+    "file": "content/chapters/3_methodology/methodology.tex",
+    "old": "This prevents within-image crop leakage, but does not by itself guarantee independence between different photographs of the same asset or scene.",
+    "new": "This keeps crops sharing an image identifier together, but does not guarantee independence between duplicate files under different names or different photographs of the same asset or scene. A source-content check identified one byte-identical image pair assigned to training and test, affecting three test crops; the effect on the reported classification metrics has not been quantified.",
+    "reason": "Verified duplicate content crosses attribute partitions."
+  },
+  {
+    "file": "content/chapters/3_methodology/methodology.tex",
+    "old": "The current \\gls{MDWD} source export contains",
+    "new": "The attribute-classification partitions were generated separately by hashing the string \\texttt{mtsd-attr-split-v1:group/filename} with SHA-256 and assigning the resulting image identifier deterministically to a subset. This is a filename-based assignment, whereas the detection split groups images by their file-content hash. Consequently, the content-duplicate protection used for detection does not carry over to attribute classification.\n\nThe current \\gls{MDWD} source export contains",
+    "reason": "Clarify distinct hash inputs and independence limitations."
+  },
+  {
+    "file": "content/chapters/3_methodology/methodology.tex",
+    "old": "Training, validation and test partitioning of the \\gls{MDWD} and \\gls{MTSD}, together with the corresponding class distributions within each split.",
+    "new": "Training, validation and test partitioning of the current unaugmented \\gls{MDWD} source export (v28) and the \\gls{MTSD}, together with the corresponding class distributions within each split. The historical MDWD experiment export (v20) has a different training-image count.",
+    "reason": "Figure uses current source counts."
+  },
+  {
+    "file": "content/chapters/3_methodology/methodology.tex",
+    "old": "Preliminary resolution trials produced only marginal differences in validation performance across the tested input sizes, indicating that the standard \\(640 \\times 640\\) configuration provided an appropriate balance between predictive performance and computational cost. The exported 640-pixel representation was therefore retained across the MDWD experiments.",
+    "new": "The exported 640-pixel representation was retained across the MDWD experiments.",
+    "reason": "Remove empirical resolution-selection claim without retained trial evidence."
+  },
+  {
+    "file": "content/chapters/3_methodology/methodology.tex",
+    "old": "\\texttt{rf-detr-\\{n,s,m\\}.pth}",
+    "new": "\\texttt{rf-detr-\\{nano,small,medium\\}.pth}",
+    "reason": "Use released checkpoint filenames."
+  },
+  {
+    "file": "content/chapters/3_methodology/methodology.tex",
+    "old": "Attribute-crop preparation from the \\gls{MTSD} source imagery, showing the \\gls{GT} object localisation, \\(25\\%\\) contextual expansion and square-padded model input.",
+    "new": "Attribute-crop preparation from the \\gls{MTSD} source imagery, showing the \\gls{GT} object localisation, contextual expansion by \\(25\\%\\) on each side and square-padded model input. Annotation overlays are illustrative and are not included in the training crops.",
+    "reason": "Clarify margin and illustrative overlays."
+  },
+  {
+    "file": "content/chapters/3_methodology/methodology.tex",
+    "old": "The complete annotation criteria and decision rules are provided in Appendices~\\ref{app:mdwd-annotation-criteria} and~\\ref{app:mtsd-annotation-criteria}.",
+    "new": "Appendices~\\ref{app:mdwd-annotation-criteria} and~\\ref{app:mtsd-annotation-criteria} are reserved for the complete annotation criteria and decision rules; their contents remain to be incorporated in the current draft.",
+    "reason": "Appendices currently contain headings only."
+  },
+  {
+    "file": "content/chapters/2_background/background.tex",
+    "old": "and instances are localised using tightly fitted polygon annotations.",
+    "new": "with tightly fitted polygon annotations for instances larger than 30 pixels and ignored bounding-box annotations for smaller instances between 15 and 30 pixels.",
+    "reason": "Align DFG annotation description with official dataset documentation."
+  },
+  {
+    "file": "content/chapters/1_introduction/introduction.tex",
+    "old": "\\cite{ashraf2026urbaninfrastructure, adnan2020municipal}",
+    "new": "\\cite{ashraf2026urbaninfrastructure}",
+    "reason": "Municipal-waste impact review does not substantiate street-level imagery claim."
+  }
+]
