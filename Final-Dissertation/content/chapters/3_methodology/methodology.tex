@@ -6,7 +6,7 @@ This chapter sets out the empirical methodology used to address the research obj
 \label{sec:md-overview}
 As established in Section~\ref{sec:research-approach}, the three experimental tracks are implemented within a common framework intended to preserve comparability where their objectives overlap, while retaining the methodological requirements specific to each task. The two localisation tracks operate on full street-level imagery from both datasets, whereas attribute classification uses \gls{GT} object crops from the \gls{MTSD}, allowing localisation performance to be assessed directly on complete scenes while separating traffic-sign characterisation from errors introduced by an upstream detector.
 
-Within each dataset, supervised and zero-shot localisation are evaluated on the same fixed held-out test imagery, comprising 369 images for the \gls{MDWD} and 747 for the \gls{MTSD}, with predictions assessed against the same \gls{GT} annotations. Training-specific operations, including augmentation and parameter optimisation, are confined to the corresponding training partitions, while validation data are used where required for model selection, configuration and early stopping. Model-specific preprocessing is retained where necessary, rather than imposing transformations that would conflict with a given architecture's intended implementation.
+Within each dataset, supervised and zero-shot localisation are evaluated on the same fixed held-out test imagery, comprising 369 images for the \gls{MDWD} and 747 for the \gls{MTSD}, with predictions assessed against the same \gls{GT} annotations. Parameter optimisation uses the training partitions, while validation data are used where required for model selection, configuration and early stopping. MTSD augmentation follows source-image partitioning. Model-specific preprocessing is retained where necessary, rather than imposing transformations that would conflict with a given architecture's intended implementation.
 
 For attribute classification, experimental partitions are instead inherited from the source imagery before object crops are generated, ensuring that all instances originating from the same image remain within a single partition. This preserves independence between the training, validation and test sets and provides a controlled basis for comparing the investigated visual representations and transfer strategies across the four annotated \gls{MTSD} attributes.
 
@@ -84,7 +84,7 @@ Capture devices varied across the collection period, spanning 34 distinct camera
 
 \noindent Although collected through a broadly similar process, the two source corpora differ in their temporal coverage and typical acquisition conditions. The \gls{MDWD} was collected from autumn 2024 to summer 2025, providing broader exposure to seasonal and illumination variation, with imagery acquired predominantly between morning and dusk and a smaller number of lower-light observations. The \gls{MTSD}, by contrast, was collected between autumn 2025 and winter 2026, primarily during morning and midday hours. Night-time acquisition was limited because artificial illumination from the mobile devices produced pronounced reflections on retroreflective traffic-sign surfaces, frequently obscuring useful visual detail.
 
-Both corpora otherwise comprise predominantly high-resolution, portrait-oriented imagery, particularly in the \gls{MTSD}. These native characteristics are relevant to the subsequent detection experiments because the source imagery is processed at considerably lower input resolutions, potentially reducing the visual detail retained for small or distant objects. The resulting trade-off between image detail, predictive performance and computational requirements is examined through the input-resolution experiments described in Subsection~\ref{subsec:mtsd-augmentation-resolution}.
+Both corpora otherwise comprise predominantly high-resolution, portrait-orient\-ed imagery, particularly in the \gls{MTSD}. These native characteristics are relevant to the subsequent detection experiments because the source imagery is processed at considerably lower input resolutions, potentially reducing the visual detail retained for small or distant objects. The resulting trade-off between image detail, predictive performance and computational requirements is examined through the input-resolution experiments described in Subsection~\ref{subsec:mtsd-augmentation-resolution}.
 
 \subsection{Privacy Protection and Data Anonymisation}
 \label{sec:md-privacy}
@@ -624,8 +624,8 @@ All supervised detectors were fine-tuned from pretrained weights rather than tra
 \vspace{0.4em}
 \begin{minipage}{0.97\textwidth}
 \footnotesize
-\textsuperscript{\dag}Released checkpoints are pretrained on Objects365 and subsequently fine-tuned on \gls{COCO} \cite{hidayatullah2026yolo26, robinson2026rfdetrneuralarchitecturesearch}.\\
-\textsuperscript{*}Objects365-pretrained checkpoint intialised from Roboflow platform.
+\textsuperscript{\dag}Released checkpoints are pretrained on Objects365 and subsequently fine-tuned on \gls{COCO} \cite{jocher2026yolo26, robinson2026rfdetrneuralarchitecturesearch}.\\
+\textsuperscript{*}Objects365-pretrained checkpoint initialised from Roboflow platform.
 \end{minipage}
 \end{table}
 
@@ -641,7 +641,7 @@ A common training configuration was adopted for the locally trained supervised \
 Input resolution was treated independently from the shared configuration. All \gls{MDWD} detectors used the fixed \(640 \times 640\)-pixel stretch-based representation established in Subsection~\ref{sec:md-augmentation-mdwd}, whereas resolution was retained as an experimental factor for the \gls{MTSD}, examined together with the augmentation strategies in Subsection~\ref{subsec:mtsd-augmentation-resolution}.
 
 \begin{table}[H]
-\caption{Shared training hyperparameters used for locally trained supervised detectors.}
+\caption{Principal training settings for locally trained detectors.}
 \label{tab:hyperparams}
 \centering
 \begin{tabular*}{\columnwidth}{@{\extracolsep{\fill}}lr@{}}
@@ -650,11 +650,11 @@ Input resolution was treated independently from the shared configuration. All \g
 \midrule
     Epochs & 100 \\
     Patience \textit{(Early Stopping)} & 10 \\
-    Effective Batch Size & 32 \\
+    MTSD Effective Batch Size & 64 (YOLO); 32 (RF-DETR) \\
     Optimiser & AdamW \\
     Initial Learning Rate & 0.001 \\
     Weight Decay & 0.0005 \\
-    Momentum ($\beta_1$) & 0.937 \\
+    Momentum ($\beta_1$) & 0.937 (YOLO); library default (RF-DETR) \\
     Warmup Epochs & 3 \\
     Seed & 42 \\
 \bottomrule
@@ -759,7 +759,7 @@ The comparison comprises \gls{SAM}~3\footnote{\url{https://huggingface.co/facebo
 LocateAnything-3B\footnote{\url{https://huggingface.co/nvidia/LocateAnything-3B}},
 Cosmos Reason2-2B\footnote{\url{https://huggingface.co/nvidia/Cosmos-Reason2-2B}},
 and Cosmos Reason2-8B\footnote{\url{https://huggingface.co/nvidia/Cosmos-Reason2-8B}}.
-Each model used its released pretrained checkpoint without task-specific fine-tuning or prompt-specific parameter optimisation: \gls{SAM}~3 and \gls{SAM}~3.1 were loaded through Meta's native \texttt{sam3} implementation using their corresponding Hugging Face checkpoints, while LocateAnything and Cosmos Reason2 used their respective Hugging Face model releases. This restriction was deliberate, preserving a zero-shot setting in which task adaptation was limited to the natural-language query supplied at inference time.
+Each model used its released pretrained checkpoint without task-specific fine-tuning or prompt-specific parameter optimisation: \gls{SAM}~3 and \gls{SAM}~3.1 were loaded through Meta's native \texttt{sam3} implementation using their corresponding Hugging Face checkpoints, while LocateAnything and Cosmos Reason2 used their respective Hugging Face model releases. This restriction was deliberate, preserving a setting without target-dataset parameter updates. Task specification nevertheless includes the prompt, its target-class mapping and the fixed post-processing configuration.
 
 All experiments were run on the same workstation used for the supervised detector experiments. \gls{SAM}~3, \gls{SAM}~3.1 and Cosmos Reason2 shared a conda environment built on PyTorch~2.10.0, whilst LocateAnything-3B required a separate environment with PyTorch~2.11.0, its custom model implementation depending on Transformers~4.57.1; both environments ran Python~3.12.13 and \gls{CUDA}~12.8. \gls{SAM}~3 and~3.1 used \gls{BF16} autocasting, Cosmos Reason2 used \gls{FP16} weights, and LocateAnything-3B used \gls{BF16} weights. Against this shared computational backdrop, a common operating protocol was applied across model families wherever their outputs permitted equivalent treatment.
 
@@ -923,7 +923,7 @@ All \gls{MTSD} classes, including Blind-Spot Mirror (Convex Mirror)
 
 \noindent The principal cross-model comparison is calculated as a prompt-level macro-average across class-targeted and synonym-comparison prompts. Each query maps to a single \gls{GT} category and therefore represents a comparable category-level localisation task. Synonym variants are retained as separate observations to assess whether alternative terminology affects localisation performance for the same target class. Broad prompts are evaluated separately because they span multiple \gls{GT} categories, increasing the number and diversity of eligible targets. Including them in the aggregate would therefore confound prompt specificity with model performance.
 
-\newpage 
+\newpage
 \subsection{Prediction Normalisation and Post-Processing}
 \label{sec:prediction-normalisation}
 For each prompt condition, the same semantic query was presented to all models, with only the formatting required by each architecture differing. \gls{SAM}~3 and 3.1 accept the query directly and natively return bounding boxes, confidence scores and segmentation masks. The masks were retained for inspection in the interactive \gls{UI} but excluded from quantitative evaluation since neither dataset provides instance-mask \gls{GT}. Cosmos Reason2 and LocateAnything instead require textual localisation outputs, with Cosmos Reason2 instructed to return a \gls{JSON} list of \texttt{bbox\_2d} coordinates and labels and LocateAnything returning four-coordinate \texttt{<box>} tokens through its native multi-instance grounding formulation. Decoding was deterministic, with generation length bounded by the permitted prediction count, and both parsers discarded malformed box records while tolerating surrounding generated text. The resulting predictions from all models were then converted to source-image pixel coordinates in \((x_0, y_0, x_1, \\y_1)\) format, with the \(0\)--\(1000\) coordinates produced by Cosmos Reason2 and LocateAnything rescaled accordingly, before being clipped to valid image bounds and evaluated in the same coordinate system.
@@ -946,7 +946,7 @@ Model-specific input resizing was applied only where required by the inference a
 
 Completed chunks and model--prompt combinations were reused only when their stored experimental fingerprint matched the active configuration, including the protocol and dataset hashes, model, prompt text, target classes, split, detection limits and evaluation thresholds. Incompatible stored results were rejected, allowing interrupted evaluations to resume without mixing predictions generated under different experimental settings.
 
-Reported localisation latency was measured per image around the complete prediction call after source-image loading. Model initialisation, worker creation, image loading and result persistence were therefore excluded. The measurement included model-specific preprocessing, prompt preparation, inference or generation, output parsing, coordinate conversion, prediction filtering and \gls{NMS}. Reported latency consequently represents end-to-end prediction-pipeline latency rather than neural-network forward-pass time alone.
+Reported localisation latency was measured per image around the complete prediction call after source-image loading. Model initialisation, worker creation, image loading and result persistence were therefore excluded. The measurement included model-specific preprocessing, prompt preparation, inference or generation, output parsing, coordinate conversion, prediction filtering and \gls{NMS}. Reported latency consequently represents prediction-pipeline latency per image--prompt pair rather than neural-network forward-pass time alone. It excludes worker start-up and repeated model loading, so it is not the wall-clock cost of the complete evaluation. Processing the full prompt inventory also requires multiple queries per image, unlike a detector that returns all modelled classes in one pass.
 
 \newpage
 \subsection{Taxonomy-Aware Ground-Truth Mapping}
@@ -962,13 +962,13 @@ g \in G_i :
 \right\}.
 \end{equation}
 
-\noindent Annotations outside \(\mathcal{C}_q\) remained present as non-target objects, while images containing no eligible targets were retained so that erroneous predictions in target-absent scenes remained measurable. Unmatched predictions overlapping a non-target annotated object at \(\mathrm{IoU} \geq 0.50\) remained \glspl{FP}, but were recorded separately by non-target class to distinguish semantic confusion from predictions occurring on background or unannotated regions. 
+\noindent Annotations outside \(\mathcal{C}_q\) remained present as non-target objects, while images containing no eligible targets were retained so that erroneous predictions in target-absent scenes remained measurable. Unmatched predictions overlapping a non-target annotated object at \(\mathrm{IoU} \geq 0.50\) remained \glspl{FP}, but were recorded separately by non-target class to distinguish semantic confusion from predictions occurring on background or unannotated regions.
 
 \subsection{Controlled Prompt-Sensitivity Experiment}
 \label{sec:prompt-sensitivity}
 A controlled experiment examined the sensitivity of prompt-based localisation to changes in linguistic formulation. Unlike the broader and synonym-comparison queries used in the primary evaluation, all prompts within a sensitivity family shared the same target \gls{GT} set, with only their wording varied. Differences in localisation performance within a family could therefore be attributed more directly to prompt formulation rather than to changes in target-class scope.
 
-Nine target families were evaluated: four from the \gls{MDWD}, corresponding to \emph{Mixed Waste}, \emph{Recyclable Material}, \emph{Organic Waste} and \emph{Orange \gls{CMD}}, and five from the \gls{MTSD}, corresponding to \emph{Pedestrian Crossing}, \emph{Stop Sign}, \emph{Roundabout Ahead}, \emph{No Entry (One Way)} and \emph{Blind-Spot Mirror(Convex Mirror)}. Each family contained four formulations designed to vary the linguistic expression of the query while preserving the same underlying target concept. The formulation types and their intended distinction are summarised in Table~\ref{tab:prompt-sensitivity-types} using \emph{Mixed Waste} as an illustrative example.
+Nine target families were evaluated: four from the \gls{MDWD}, corresponding to \emph{Mixed Waste}, \emph{Recyclable Material}, \emph{Organic Waste} and \emph{Orange \gls{CMD}}, and five from the \gls{MTSD}, corresponding to \emph{Pedestrian Crossing}, \emph{Stop Sign}, \emph{Roundabout Ahead}, \emph{No Entry (One Way)} and \emph{Blind-Spot Mirror (Convex Mirror)}. Each family contained four formulations designed to vary the linguistic expression of the query while preserving the same underlying target concept. The formulation types and their intended distinction are summarised in Table~\ref{tab:prompt-sensitivity-types} using \emph{Mixed Waste} as an illustrative example.
 
 Within each family, all four formulations shared an identical target-class set and were evaluated on the same canonical test split. The protocol additionally verified identical positive-image, negative-image and target-box counts across variants, ensuring that observed differences reflected changes in prompt wording rather than changes in evaluation scope. The complete prompt inventory is provided in Appendix~\ref{app:prompt-sensitivity-prompts}.
 
@@ -1119,7 +1119,7 @@ Full \gls{FT} was applied only to ConvNeXt-B and -L, for which both the pretrain
 \newpage
 \subsection{Shared Multi-Head Architecture and Optimisation}
 \label{sec:attribute-training}
-Irrespective of backbone or adaptation strategy, the same downstream classification formulation was retained. For an input crop \(x\), the selected backbone \(f_{\theta}\) produces a pooled visual representation: 
+Irrespective of backbone or adaptation strategy, the same downstream classification formulation was retained. For an input crop \(x\), the selected backbone \(f_{\theta}\) produces a pooled visual representation:
 
 \begin{equation}
 \mathbf{z}=f_{\theta}(x),
@@ -1144,7 +1144,7 @@ w_{a,c}
 \frac{N_a}{C_a n_{a,c}},
 \end{equation}
 
-\noindent where \(N_a\) denotes the number of training instances for attribute \(a\), \(C_a\) its number of classes and \(n_{a,c}\) the number of training instances belonging to class \(c\). This inverse-frequency formulation increases the contribution of less frequently represented classes while maintaining a frequency-weighted mean class weight of one within each task. For an instance with reference class \(y_a\), the loss for attribute \(a\) is:
+\noindent where \(N_a\) denotes the number of training instances for attribute \(a\), \(C_a\) its number of classes and \(n_{a,c}\) the number of training instances belonging to class \(c\). This inverse-frequency formulation increases the contribution of less frequently represented classes while maintaining a frequency-weighted mean class weight of one within each task. For an instance with reference class \(y_a\), the unreduced weighted loss contribution for attribute \(a\) is:
 
 \begin{equation}
 \mathcal{L}_{a}
@@ -1153,21 +1153,24 @@ w_{a,c}
 \log p_{a,y_a},
 \end{equation}
 
-\noindent where \(p_{a,y_a}\) denotes the predicted probability assigned to the reference class. The overall optimisation objective is the unweighted sum of the four attribute losses, each term corresponding to its respective sign attribute:
+\noindent where \(p_{a,y_a}\) denotes the predicted probability assigned to the reference class. For a mini-batch, PyTorch reduces each head loss by dividing the summed weighted contributions by the sum of the corresponding target-class weights. Thus, for the valid examples \(\mathcal{B}_a\) of attribute \(a\),
+
+\begin{equation}
+\overline{\mathcal{L}}_a = \frac{\sum_{j\in\mathcal{B}_a}-w_{a,y_{a,j}}\log p_{a,j,y_{a,j}}}{\sum_{j\in\mathcal{B}_a}w_{a,y_{a,j}}}.
+\end{equation}
+
+\noindent The overall optimisation objective is the unweighted sum of these four reduced attribute losses:
 
 \begin{equation}
 \mathcal{L}_{\mathrm{joint}}
 =
-\mathcal{L}_{\mathrm{angle}}
-+
-\mathcal{L}_{\mathrm{mounting}}
-+
-\mathcal{L}_{\mathrm{condition}}
-+
-\mathcal{L}_{\mathrm{shape}}.
+\overline{\mathcal{L}}_{\mathrm{angle}}
++\overline{\mathcal{L}}_{\mathrm{mounting}}
++\overline{\mathcal{L}}_{\mathrm{condition}}
++\overline{\mathcal{L}}_{\mathrm{shape}}.
 \end{equation}
 
-\noindent Equal task weighting was retained so that no attribute received greater importance a priori, with class imbalance addressed independently within each head and no label smoothing applied. Per-head masking of missing labels was implemented as a defensive measure but never exercised, since the final manifest contains valid supervision for all four attributes.
+\noindent Equal weighting was used across the four attribute losses, while class imbalance was handled independently within each head.
 
 \subsection{Training Procedure}
 \label{sec:trainingprod}
@@ -1175,7 +1178,7 @@ A common optimisation protocol was applied across the 18 principal configuration
 
 \begin{table}[H]
 \centering
-\caption{Training configuration used for the multi-attribute classification experiments. Values are shared unless a model- or adaptation-specific exception is indicated.}
+\caption{Training configuration for multi-attribute classification, with model-specific exceptions indicated.}
 \label{tab:attribute-training-config}
 \renewcommand{\arraystretch}{1.18}
 \small
@@ -1240,9 +1243,6 @@ Loss
 Class weighting
 & Per-attribute inverse-frequency weights calculated from the training split (Eq.~\ref{eq:attr-class-weight}) \\
 
-Task weighting
-& Equal weighting across all four heads \\
-
 Missing labels
 & Masked independently for the affected attribute head \\
 
@@ -1259,10 +1259,10 @@ Minimum improvement
 \end{table}
 
 \newpage
-\noindent Separate learning rates were assigned to the classification heads, \gls{LoRA} adapters and fully \gls{FT} backbone parameters to reflect their different initialisation states. Newly initialised heads therefore received larger updates, while pretrained backbone parameters were adapted more conservatively. Where the standard physical batch size exceeded available \gls{GPU} memory, gradient accumulation preserved an effective batch size of 32. Automatic batch-size reduction was disabled so that memory constraints could not silently alter the experimental configuration.
+\noindent Separate learning rates were assigned to the classification heads, \gls{LoRA} adapters and fully \gls{FT} backbone parameters to reflect their different initialisation states. Newly initialised heads therefore used higher learning rates, while pretrained backbone parameters used lower learning rates. Actual update magnitudes also depend on gradients and optimiser state. Where the standard physical batch size exceeded available \gls{GPU} memory, gradient accumulation preserved an effective batch size of 32. Automatic batch-size reduction was disabled so that memory constraints could not silently alter the experimental configuration.
 
 Checkpoint selection used validation mean macro-\(F_1\), calculated as the unweight\-ed mean of the four attribute-level macro-\(F_1\) scores. Early stopping was triggered after 10 consecutive epochs without an improvement exceeding \(0.001\), whereas checkpoint selection remained independent of this threshold, with any strict improvement updating the best checkpoint. Following training, only the checkpoint with the highest validation mean macro-\(F_1\) was evaluated on the held-out test partition.
 
-These experiments were run on the same workstation used for the supervised \glspl{OD} and prompt-based localisation experiments. Python~3.11.15, PyTorch~2.11.0, \gls{CUDA} 12.8 and \gls{CUDNN}~9.19 were used, together with torchvision~0.26.0, Transformers~5.12.1, \gls{PEFT}~0.19.1, timm~1.0.27 and lingbot-vision~0.1.0. Python, NumPy and PyTorch \gls{CPU} and \gls{CUDA} random-number generators were seeded at 42. Configuration snapshots, dataset manifests, included group and split counts, class weights, checkpoints, evaluation outputs and the corresponding Git commit were retained for each run. Exact bitwise replication is not claimed, as \gls{CUDNN} autotuning, parallel data loading and mixed-precision operations were not constrained to fully deterministic execution.
+These experiments were run on the same workstation used for the locally trained supervised detectors and prompt-based localisation experiments. Python~3.11.15, PyTorch~2.11.0, \gls{CUDA} 12.8 and \gls{CUDNN}~9.19 were used, together with torchvision~0.26.0, Transformers~5.12.1, \gls{PEFT}~0.19.1, timm~1.0.27 and lingbot-vision~0.1.0. Python, NumPy and PyTorch \gls{CPU} and \gls{CUDA} random-number generators were seeded at 42. Configuration snapshots, dataset manifests, included group and split counts, class weights, checkpoints, evaluation outputs and the corresponding Git commit were retained for each run. Exact bitwise replication is not claimed, as \gls{CUDNN} autotuning, parallel data loading and mixed-precision operations were not constrained to fully deterministic execution.
 
 \noindent\rule{\linewidth}{0.3pt}
