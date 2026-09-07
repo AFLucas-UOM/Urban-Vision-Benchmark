@@ -31,16 +31,15 @@ Capture devices varied across the collection period, spanning 34 distinct camera
 \begin{tabularx}{\textwidth}{
     @{}
     >{\raggedright\arraybackslash}X
-    >{\centering\arraybackslash}p{4.0cm}
-    >{\centering\arraybackslash}p{4.0cm}
+    >{\centering\arraybackslash}p{4.3cm}
+    >{\centering\arraybackslash}p{4.3cm}
     @{}
 }
     \toprule
     \textbf{Characteristic}
-    & \textbf{\gls{MDWD}}
-    & \textbf{\gls{MTSD}} \\
+    & \textbf{\acrshort{MDWD}}
+    & \textbf{\acrshort{MTSD}} \\
     \midrule
-
     \multicolumn{3}{@{}l}{\textit{Corpus composition}} \\
     \addlinespace[0.2em]
     Source images
@@ -52,17 +51,15 @@ Capture devices varied across the collection period, spanning 34 distinct camera
     Mean instances per image
     & 3.10
     & 2.74 \\
-
     \midrule
     \multicolumn{3}{@{}l}{\textit{Acquisition settings}} \\
     \addlinespace[0.2em]
     Acquisition period
-    & Nov 2024--Aug 2025
-    & Nov 2025--Jan 2026 \\
+    & Nov 2024 -- Aug 2025
+    & Nov 2025 -- Jan 2026 \\
     Typical acquisition window
     & Morning to dusk
     & Morning to midday \\
-
     \midrule
     \multicolumn{3}{@{}l}{\textit{Image characteristics}} \\
     \addlinespace[0.2em]
@@ -90,7 +87,7 @@ Both corpora otherwise comprise predominantly high-resolution, portrait-orient\-
 \label{sec:md-privacy}
 The collection of street-level imagery in public environments introduced privacy considerations through the incidental capture of identifiable visual information and geographic metadata. Accordingly, raw imagery was retained under restricted access and was not made publicly available.
 
-Prior to annotation, potentially identifiable regions were anonymised using \gls{SAM} 3.1. The model was selected for its promptable open-vocabulary interface, which allows multiple object categories to be localised through fixed natural-language prompts without training a task-specific detector for each, providing a consistent and reproducible procedure across both source corpora. Three fixed text prompts were used: \textbf{\texttt{human face}}, \textbf{\texttt{vehicle licence plate}}, and \textbf{\texttt{QR code sticker}}, with returned regions blurred within their predicted bounding boxes, as illustrated in Figure~\ref{fig:anonymisation-example}. The automated procedure identified the majority of potentially identifiable regions, with missed instances subsequently blurred during a manual review. Raw per-image \gls{GPS} coordinates were also excluded from the experiment-ready datasets, retaining location only at aggregated district level where required for descriptive analysis. These measures limited the retention of identifiable and precise geographic information in accordance with applicable data-protection requirements, including the \gls{GDPR}~\cite{gdpr}.
+Prior to annotation, potentially identifiable regions were anonymised using \gls{SAM} 3.1. The model was selected for its promptable open-vocabulary interface, which allows multiple object categories to be localised through fixed natural-language prompts without training a task-specific detector for each, providing a consistent and reproducible procedure across both source corpora. Three fixed text prompts were used: \texttt{human face}, \texttt{vehicle licence plate}, and \texttt{QR code sticker}, with returned regions blurred within their predicted bounding boxes, as illustrated in Figure~\ref{fig:anonymisation-example}. The automated procedure identified the majority of potentially identifiable regions, with missed instances subsequently blurred during a manual review. Raw per-image \gls{GPS} coordinates were also excluded from the experiment-ready datasets, retaining location only at aggregated district level where required for descriptive analysis. These measures limited the retention of identifiable and precise geographic information in accordance with applicable data-protection requirements, including the \gls{GDPR}~\cite{gdpr}.
 
 \begin{figure}[H]
     \centering
@@ -121,7 +118,7 @@ Similarly, each eligible \gls{MTSD} object was represented by a single bounding 
     \label{fig:mtsd-annotation-overview}
 \end{figure}
 
-\subsection{Annotation \gls{QA} and Agreement Stability Analysis}
+\subsection{Annotation \glsentryshort{QA} and Agreement Stability Analysis}
 \label{sec:md-annotation-qa}
 Annotation quality was controlled through the staged review and adjudication workflow illustrated in Figure~\ref{fig:annotation-qa-workflow}, with the objective of establishing a consistent \gls{GT} standard across both datasets. Annotations produced by the annotation team were first examined by the review team and then assessed by the \gls{QA} lead. At this stage, annotations were either accepted as final \gls{GT}, corrected directly by the \gls{QA} lead, or returned to the annotation team where further revision was required. Returned annotations re-entered the workflow from the annotation stage and were reviewed again, with this iterative process continuing until all annotations satisfied the required \gls{QA} standard and were accepted as final \gls{GT}.
 
@@ -189,7 +186,7 @@ Greater class imbalance is evident within the \gls{MTSD}, although this arises l
 A further distinction between the source and experiment-ready \gls{MTSD} taxonomies concerns the \emph{Tourist Sign} class. Only 33 instances were present in the source corpus, comprising 27 training, three validation and three test examples, which was considered insufficient for meaningful supervised learning or reliable class-specific evaluation given the visual variability of the category. Its annotations were therefore excluded from the experiment-ready target taxonomy used for supervised detection and zero-shot localisation. The corresponding bounding boxes were retained as ignore regions during localisation evaluation, such that predictions overlapping a Tourist Sign instance were excluded from true-positive and false-positive assignment rather than treated as background errors. This ensured that the class was neither learned nor evaluated as a modelled category while preventing valid localisation of an otherwise recognisable traffic sign from being penalised.
 
 \newpage
-\subsection{Exploratory Dataset Analysis (\gls{EDA})}
+\subsection{Exploratory Data Analysis (\glsentryshort{EDA})}
 \label{sec:eda}
 The \gls{EDA} was conducted on the final \gls{QA}-approved source annotations to characterise properties of the two datasets likely to influence the subsequent learning tasks, considering object scale, bounding-box geometry and scene density across both corpora, together with \gls{MDWD} class co-occurrence and the distribution of \gls{MTSD} object-level attributes and their association with semantic class. These statistics are calculated across the complete 20,509-instance \gls{MTSD} source corpus, including the 33 \emph{Tourist Sign} instances retained at this stage.
 
@@ -328,7 +325,7 @@ Geometric shape    & 0.62 & Strong class-specific geometric structure \\
 \label{sec:md-training-data-prep}
 Following the source-image partitioning defined in Subsection~\ref{sec:md-partitioning}, data preparation was performed separately for each experimental track while preserving validation and test independence. Augmentation was restricted to the training data, with held-out images receiving only model-specific deterministic preprocessing. The \gls{MDWD} detection experiments used a fixed offline augmentation pipeline, whereas the \gls{MTSD} detection experiments compared three augmentation strategies. Attribute classification employed a separate crop-based pipeline with online training augmentation.
 
-\subsubsection{\gls{MDWD} Detection Data Preparation and Augmentation}
+\subsubsection{\glsentryshort{MDWD} Detection Data Preparation and Augmentation}
 \label{sec:md-augmentation-mdwd}
 The \gls{MDWD} imagery was first normalised to a consistent orientation and subsequently resized to \(640 \times 640\) pixels using stretch-based resizing. Preliminary resolution trials produced only marginal differences in validation performance across the tested input sizes, indicating that the standard \(640 \times 640\) configuration provided an appropriate balance between predictive performance and computational cost. This resolution was therefore retained as the fixed reference input size for all \gls{MDWD} detector experiments, ensuring that all models were trained and evaluated under a common spatial configuration.
 
@@ -374,7 +371,7 @@ Offline augmentation was generated once using Roboflow and reused across all \gl
 \newpage
 \noindent Horizontal reflection was retained as a conventional augmentation for street-level imagery, while vertical reflection was included specifically for the \gls{MDWD} due to the less constrained orientation of deformable waste objects, which may topple, collapse or otherwise appear in irregular configurations. Motion blur of up to 40 pixels was also applied to reflect acquisition artefacts observed in imagery captured from slowly moving vehicles. Although comparatively aggressive, this transformation was retained because preliminary validation indicated improved generalisation.
 
-\subsubsection{\gls{MTSD} Detection Augmentation Strategies}
+\subsubsection{\glsentryshort{MTSD} Detection Augmentation Strategies}
 \label{sec:md-augmentation-mtsd}
 To examine the effect of training-data variation on \gls{MTSD} detection performance, three alternative augmentation strategies were defined: \emph{none}, \emph{mild} and \emph{strong}. All three operate from the same fixed source-image partitions, comprising 5,986 training, 749 validation and 747 test images, so that the experimental conditions differ in their training representations rather than their underlying data allocation. The \emph{none} strategy provides the unaugmented reference condition using the original \gls{QA}-approved imagery, while \emph{mild} and \emph{strong} each generate four outputs per source training image, consisting of the original and three augmented derivatives, expanding the training set from 5,986 to 23,944 images. The two strategies progressively increase the degree of visual variation presented during training, as illustrated comparatively in Figure~\ref{fig:mtsd-augmentation-examples}.
 
@@ -547,7 +544,7 @@ Attribute classification uses an object-centred representation derived directly 
 \noindent Rather than generating additional crop variants offline, augmentation was applied dynamically to training crops only, while validation and test crops followed a fixed, deterministic pipeline. Training crops were first square-padded with the neutral-grey fill value \((114,114,114)\) and randomly rotated within \(\pm10^\circ\), with regions exposed by rotation filled with the same neutral grey. A \texttt{RandomResizedCrop} then sampled \(80\text{--}100\%\) of the padded area at an aspect ratio of \(0.90\text{--}1.11\), resizing the result to the backbone-specific resolution with antialiasing. Colour jitter was applied last, perturbing brightness and contrast by up to \(0.3\), saturation by up to \(0.2\), and hue by up to \(0.02\), before tensor conversion and ImageNet normalisation. Horizontal reflection was deliberately excluded, as it may alter orientation-dependent cues relevant to sign content and viewing angle, and no other transformations were applied. Validation and test crops, by contrast, underwent only square padding, antialiased resizing, tensor conversion and normalisation, with no rotation, cropping or colour perturbation, ensuring a consistent and reproducible evaluation input.
 
 \newpage 
-\section{Supervised Object Detection (\gls{OD})} 
+\section{Supervised Object Detection (\glsentryshort{OD})}
 \label{sec:supervised-detection-methodology}
 The supervised detection study compares \gls{YOLO}11, \gls{YOLO}12, \gls{YOLO}26 and \gls{RF-DETR} across both the \gls{MDWD} and \gls{MTSD}, following the architectural rationale established in Section~\ref{sec:bg-supervised-od}. The methodology focuses on how detector family, model scale, training-data strategy and input resolution influence predictive performance and computational requirements under a common experimental framework. Each configuration was trained and evaluated using fixed dataset partitions, with task-specific weights learned independently for the two municipal domains. The following subsections define the model-scale comparisons, pretrained initialisation, shared training configuration and the additional augmentation and resolution experiments conducted on the \gls{MTSD}.
 
@@ -650,11 +647,11 @@ Input resolution was treated independently from the shared configuration. All \g
 \midrule
     Epochs & 100 \\
     Patience \textit{(Early Stopping)} & 10 \\
-    MTSD Effective Batch Size & 64 (YOLO); 32 (RF-DETR) \\
+    MTSD Effective Batch Size & 64 (\gls{YOLO}); 32 (\gls{RF-DETR}) \\
     Optimiser & AdamW \\
     Initial Learning Rate & 0.001 \\
     Weight Decay & 0.0005 \\
-    Momentum ($\beta_1$) & 0.937 (YOLO); library default (RF-DETR) \\
+    Momentum ($\beta_1$) & 0.937 (\gls{YOLO}); 0.9 (\gls{RF-DETR}) \\
     Warmup Epochs & 3 \\
     Seed & 42 \\
 \bottomrule
@@ -663,7 +660,7 @@ Input resolution was treated independently from the shared configuration. All \g
 
 \noindent Although common dataset partitions and training representations were maintained within each comparison, some implementation differences remained between model families, including pretrained initialisation, optimisation implementation and, for selected \gls{RF-DETR} configurations, training infrastructure. The resulting experiments are therefore interpreted as a practical comparison of the evaluated detector configurations rather than a strictly parameter-matched architectural ablation.
 
-\subsection{\gls{MTSD} Augmentation and Input-Resolution Experiments}
+\subsection{\glsentryshort{MTSD} Augmentation and Input-Resolution Experiments}
 \label{subsec:mtsd-augmentation-resolution}
 Beyond the model-scale comparison, the supervised \gls{MTSD} experiments varied two further factors: the offline augmentation strategy applied to the training data and the input resolution at which the detectors were trained and evaluated. The \emph{none}, \emph{mild} and \emph{strong} strategies defined in Subsection~\ref{sec:md-augmentation-mtsd} introduce progressively greater variation into the training data, and were examined in combination with input resolution to establish how training-data diversity and retained spatial detail each influence traffic-sign detection.
 
@@ -830,7 +827,7 @@ Matching threshold
 \newpage
 \subsection{Prompt Inventory and Ground-Truth Mapping}
 \label{sec:prompt-inventory}
-Prompt-based localisation requires an explicit, predetermined correspondence between each natural-language query and the dataset classes against which it is evaluated, fixed independently of model output so that every prompt retained a constant semantic scope throughout. Only annotations belonging to the mapped \gls{GT} class or classes were eligible for a \gls{TP} match, while detections against other annotated categories remained \glspl{FP}. This was necessary because the dataset taxonomies were designed for annotation and municipal monitoring rather than as natural-language vocabularies, so several class labels do not translate directly into suitable user-facing queries.
+Prompt-based localisation requires an explicit, predetermined correspondence between each natural-language query and the dataset classes against which it is evaluated, fixed independently of model output so that every prompt retained a constant semantic scope throughout. Only annotations belonging to the mapped \gls{GT} class or classes were eligible for a \gls{TP} match, while localisation against other annotated categories remained \glspl{FP}. This was necessary because the dataset taxonomies were designed for annotation and municipal monitoring rather than as natural-language vocabularies, so several class labels do not translate directly into suitable user-facing queries.
 
 Candidate formulations were explored beforehand using a local, Gradio\footnote{\url{https://gradio.app/}}-based \gls{UI} developed for inspecting zero-shot, text-guided localisation across all five prompt-based models under study. The interface supported free-text prompt entry, model selection, adjustable display and filtering settings, alternative-prompt comparison, and visual inspection of predicted boxes, and masks where applicable, to assess failure cases qualitatively. Figure~\ref{fig:promptdetect-ui} illustrates the interface used during this preliminary process.
 
@@ -946,7 +943,7 @@ Model-specific input resizing was applied only where required by the inference a
 
 Completed chunks and model--prompt combinations were reused only when their stored experimental fingerprint matched the active configuration, including the protocol and dataset hashes, model, prompt text, target classes, split, detection limits and evaluation thresholds. Incompatible stored results were rejected, allowing interrupted evaluations to resume without mixing predictions generated under different experimental settings.
 
-Reported localisation latency was measured per image around the complete prediction call after source-image loading. Model initialisation, worker creation, image loading and result persistence were therefore excluded. The measurement included model-specific preprocessing, prompt preparation, inference or generation, output parsing, coordinate conversion, prediction filtering and \gls{NMS}. Reported latency consequently represents prediction-pipeline latency per image--prompt pair rather than neural-network forward-pass time alone. It excludes worker start-up and repeated model loading, so it is not the wall-clock cost of the complete evaluation. Processing the full prompt inventory also requires multiple queries per image, unlike a detector that returns all modelled classes in one pass.
+Reported localisation latency was measured per image around the complete prediction call following source-image loading, excluding model initialisation, worker creation, image loading and result persistence. It included model-specific preprocessing, prompt preparation, inference or generation, output parsing, coordinate conversion, prediction filtering and \gls{NMS}, and therefore represents prediction-pipeline latency per image--prompt pair rather than neural-network forward-pass time alone. This does not reflect the wall-clock cost of the complete evaluation, since processing the full prompt inventory requires multiple queries per image, unlike a detector that returns all modelled classes in a single pass.
 
 \newpage
 \subsection{Taxonomy-Aware Ground-Truth Mapping}
