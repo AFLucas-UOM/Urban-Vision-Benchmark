@@ -1,0 +1,12 @@
+{
+  "n_checked": 378,
+  "n_passed": 378,
+  "n_failed": 0,
+  "settings": {
+    "n_bootstrap": 2000,
+    "seed": 42,
+    "interval": "percentile 95%",
+    "unit": "test crop"
+  },
+  "failures": []
+}

@@ -1,5 +1,0 @@
-split,subset,n_images,n_source_stems,n_boxes,n_removed_images,pct_removed
-valid,original,369,369,1072,0,0.0
-valid,clean,355,355,1030,14,3.79
-test,original,369,368,1106,0,0.0
-test,clean,350,349,1066,19,5.15

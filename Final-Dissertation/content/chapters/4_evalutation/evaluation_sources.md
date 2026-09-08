@@ -1,29 +1,31 @@
 # Evaluation chapter evidence audit
 
-Methodology is authoritative. The chapter is `evaluation.tex`; the existing `evalutation.tex` entry point includes it, so `main.tex` needs no change. No figures were created or inserted. Figure requests remain LaTeX comments.
+Methodology is authoritative. The chapter is `evaluation.tex`; `main.tex` now includes it directly because the former misspelled `evalutation.tex` wrapper has been removed. No figures were created or inserted. Figure requests remain LaTeX comments.
 
 ## Decisions and limitations
 
-- MDWD: use explicit `test_` columns from the family summaries, not the unprefixed validation values used by the July consolidated table. Exclude YOLO11-L and YOLO26-DGX from the principal Methodology matrix. RF-DETR-N training artifacts exist, but completed RF-DETR-N/S/M test exports were not located. No paper numbers or architecture claims were invented.
+- MDWD: use explicit `test_` columns from the retained YOLO family summaries. RF-DETR-N/S/M values are transcribed from the final cross-architecture Table IV supplied by the researcher; RF-DETR-S and -M were trained through Roboflow. The supplied table is authoritative for those hosted results, whose normalised local metric exports are unavailable.
 - MTSD: preserve the complete July mild baseline separately from later strong runs. The August generated main-scale report mixes validation, probe and test rows; it is not used as a numerical authority. Original metrics JSONs are used. Missing strong test rows remain missing, even where validation or completed training exists.
-- The MTSD unified evaluator computes micro P/R/F1 at the best confidence on the evaluated split (`_common_confidence_f1`). Test values are explicitly labelled descriptive test-sweep maxima, not validation-selected operating points.
+- The MTSD unified evaluator computes standard micro P/R/F1 at the best confidence on the evaluated split (`_common_confidence_f1`). The chapter uses ordinary `F1` notation consistently for MDWD and MTSD, while noting that MTSD operating thresholds were selected on the evaluated test split rather than independently on validation data.
 - Methodology requires Tourist Sign exclusion from training and evaluation, with retained ignore regions. Existing run records can retain the training taxonomy; `_filtered_evaluation_payload` deletes excluded categories/annotations and class-labelled predictions rather than ignoring predictions spatially overlapping excluded boxes. The prompt targeted matcher also has no explicit overlap-ignore step. Chapter reports existing exports with a prominent limitation and does not claim these are fully protocol-compliant final numbers. No correction was estimated or inference rerun.
 - Main MDWD prompt scores and timing use the four canonical rows of the completed bounded sensitivity run. All four targeted concepts are retained; their exported per-query metrics are averaged. This avoids older Cosmos execution settings. MDWD broad queries from older execution records are not represented as final bounded-protocol results.
 - Main MTSD prompting uses the completed optimized-v2 export, whose final run configuration and rows identify model-specific Cosmos max sides and chunk size 8. Eleven class-targeted/synonym queries are averaged; two broad queries are separate. Final bounded sensitivity results use the later MDWD/MTSD sensitivity exports.
 - Prompt matcher actually chooses the highest-IoU target, then marks an already-used target as a duplicate; it does not try another unmatched GT. The chapter describes this implementation rather than relying on the module's more general docstring.
 - Attribute results use all 18 non-smoke test_metrics.json files with 1,890 crops, not historical six-model/503-crop results. Stored 2,000-resample percentile intervals preserve shared crop resampling across heads but do not cluster source images. No unperformed paired test is claimed.
-- Existing MDWD bootstrap/slices at confidence 0.25 are labelled separately from native detector summaries. Historical attribute and prompt-pilot intervals/slices are excluded from current conclusions. No compatible final full-split prompt CI or MTSD image-condition slice report was located.
+- The refreshed September MDWD bootstrap/slices at confidence 0.25 are labelled separately from native detector summaries. The refreshed uncertainty report also contains full-split PromptDetect intervals and the retained 1,890-crop attribute snapshot; no full MTSD image-condition slice report was located.
+- The September integrity audit reports 15 fail-level out-of-range MDWD boxes and 30 cross-split source identities. The refreshed leakage report re-identifies the affected sources but contains no new inference metrics, so the chapter applies no numerical correction. The current prepared MTSD detection dataset fails strict validation; this is reported as a reproduction blocker rather than used to rewrite retained historical result exports.
 - Cross-paradigm observations explicitly distinguish class/query scope, macro/micro averaging, thresholds and post-processing. No new harmonised benchmark or end-to-end deployment result is claimed.
 - Runtime boundaries are distinct: native MDWD inference; MTSD prediction loop including loading/conversion; prompt per-image-query pipeline; batched attribute forward and end-to-end timings. No edge hardware claim, total VRAM estimate or unmeasured model file size is inferred.
 - The optional foreign-sign subsection records the absence of a supported annotated benchmark. Tiling and Ox Alpha are excluded from principal results because they are outside Methodology's retained model/protocol scope.
 
 ## Table source groups
 
-- `mdwd-benchmark`: Results/MDWD-Results/{YOLO11,YOLO12,YOLO26}/Model-Size-Comparison/*_summary.csv; explicit test_ columns only.
+- `mdwd-benchmark`: Results/MDWD-Results/{YOLO11,YOLO12,YOLO26}/Model-Size-Comparison/*_summary.csv for YOLO test columns; researcher-supplied final cross-architecture Table IV image for RF-DETR-N/S/M Roboflow results.
 - `mdwd-runtime`: Results/MDWD-Results/{YOLO11,YOLO12,YOLO26}/Model-Size-Comparison/*_summary.csv; test_inference_time_ms and total_training_time_seconds.
-- `mdwd-classes`: Documents/Final-Reports/Robustness-Slices/20260710-120353/robustness_slice_results.csv; YOLO26-EUVIP, test, class slices.
-- `robustness`: Documents/Final-Reports/Robustness-Slices/20260710-120353/robustness_slice_results.csv and robustness_slice_config.json; yolo26l@YOLO26-EUVIP test only.
-- `mdwd-ci`: Documents/Final-Reports/Statistical-Uncertainty/20260710-120457/bootstrap_results.csv and bootstrap_config.json; yolo26l@YOLO26-EUVIP test only.
+- `mdwd-classes`: Documents/Final-Reports/Robustness-Slices/20260908-103240/robustness_slice_results.csv; YOLO26-EUVIP, test, class slices.
+- `robustness`: Documents/Final-Reports/Robustness-Slices/20260908-103240/robustness_slice_results.csv and robustness_slice_config.json; yolo26l@YOLO26-EUVIP test only.
+- `mdwd-ci`: Documents/Final-Reports/Statistical-Uncertainty/20260908-105836/bootstrap_results.csv and bootstrap_config.json; yolo26l@YOLO26-EUVIP test only.
+- `dataset-integrity`: Documents/Final-Reports/dataset_integrity_report.md; Documents/Final-Reports/MDWD-Leakage-Analysis/mdwd_leakage_sensitivity_report.md; Documents/Final-Reports/MTSD-Dataset-Audit/audit-20260908-103955/pipeline_state.md.
 - `mtsd-benchmark`: Results/MTSD-Results/Unified-Evaluation-NoTourist/20260722-all13/*/{metrics_summary,evaluation_record}.json.
 - `mtsd-strong`: Results/MTSD-Results/Unified-Evaluation-NoTourist/20260818-084730-pending-yolo-test/*/metrics_summary.json; Strong-640 entries only.
 - `augmentation`: Results/MTSD-Results/Unified-Evaluation-NoTourist/{20260722-all13,20260818-084730-pending-yolo-test}/*/metrics_summary.json; Results/MTSD-Runs/*/*noaug_img640*/unified_evaluation/metrics_summary.json.
@@ -50,8 +52,11 @@ Methodology is authoritative. The chapter is `evaluation.tex`; the existing `eva
 
 ## Exact numerical files read
 
-- `Documents/Final-Reports/Robustness-Slices/20260710-120353/robustness_slice_results.csv`
-- `Documents/Final-Reports/Statistical-Uncertainty/20260710-120457/bootstrap_results.csv`
+- `Documents/Final-Reports/Robustness-Slices/20260908-103240/robustness_slice_results.csv`
+- `Documents/Final-Reports/Statistical-Uncertainty/20260908-105836/bootstrap_results.csv`
+- `Documents/Final-Reports/dataset_integrity_report.md`
+- `Documents/Final-Reports/MDWD-Leakage-Analysis/mdwd_leakage_sensitivity_report.md`
+- `Documents/Final-Reports/MTSD-Dataset-Audit/audit-20260908-103955/pipeline_state.md`
 - `Results/MDWD-Results/YOLO11/Model-Size-Comparison/yolo11_multi_model_template_summary.csv`
 - `Results/MDWD-Results/YOLO12/Model-Size-Comparison/yolo12_multi_model_template_summary.csv`
 - `Results/MDWD-Results/YOLO26/Model-Size-Comparison/yolo26_multi_model_template_summary.csv`
