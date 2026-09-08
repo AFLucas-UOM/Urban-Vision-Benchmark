@@ -1,0 +1,291 @@
+{
+  "generated_at": "2026-09-08T08:31:14+00:00",
+  "read_only": true,
+  "blockers": [
+    "Prepared dataset failed strict validation"
+  ],
+  "warnings": [],
+  "discovery": {
+    "valid_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-4",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "invalid_groups": {},
+    "groups_without_final_qa": []
+  },
+  "vocabulary_consistent": true,
+  "expected_class_names": [
+    "Pedestrian Crossing",
+    "Stop Sign",
+    "No Entry (One Way)",
+    "Roundabout Ahead",
+    "No Through Road (T-Junction)",
+    "Blind-Spot Mirror (Convex Mirror)",
+    "Street Sign",
+    "Directional Sign",
+    "Tourist Sign",
+    "Auxiliary Sign",
+    "Back-Unknown",
+    "Other-Unknown"
+  ],
+  "sampled_image_existence": {
+    "GRP-1": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-2": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-3": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-4": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-5": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-6": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-7": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-8": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-9": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-10": {
+      "sampled": 5,
+      "missing": []
+    },
+    "GRP-11": {
+      "sampled": 5,
+      "missing": []
+    }
+  },
+  "scope": {
+    "approved_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-4",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "discovered_valid_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-4",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "pending_unapproved_groups": [],
+    "approved_but_missing_groups": [],
+    "unexpected_group_policy": "fail"
+  },
+  "qa_gate": {
+    "resolution_status": "resolved",
+    "gate_audit_path": "Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-20260718-113454",
+    "gate_audited_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-4",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "newest_audit_path": "/Volumes/Filis SSD/2. UM-Student/MSC Dissertation/Urban-Vision-Benchmark/Scripts/MTSD-Scripts/MTSD-AnnotationQA/outputs/audit-20260718-113454",
+    "newest_audit_timestamp": "2026-07-18T11:34:55",
+    "newest_audit_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-4",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "outstanding_findings": {},
+    "unaudited_discovered_groups": []
+  },
+  "attribute_manifest": {
+    "ingested_groups": [
+      "GRP-1",
+      "GRP-2",
+      "GRP-3",
+      "GRP-4",
+      "GRP-5",
+      "GRP-6",
+      "GRP-7",
+      "GRP-8",
+      "GRP-9",
+      "GRP-10",
+      "GRP-11"
+    ],
+    "updated_at": "2026-08-06T14:10:29+00:00",
+    "split_sizes": {
+      "train": 15465,
+      "val": 1898,
+      "test": 1890
+    },
+    "groups_pending_auto_ingest": [],
+    "split_policy": "per-source-image salted hash (mtsd-attr-split-v1); crops of one photo share one split by construction"
+  },
+  "prepared": {
+    "present": true,
+    "ok": false,
+    "fatal_findings": [
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-4\\Final-QA\\QA-GRP4.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-4\\Final-QA\\QA-GRP4.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-8\\Final-QA\\QA-GRP8.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-9\\Final-QA\\QA-GRP9.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-10\\Final-QA\\QA-GRP10.json"
+      },
+      {
+        "severity": "fatal",
+        "code": "stale_annotation_hash",
+        "detail": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Annotations\\GRP-11\\Final-QA\\QA-GRP11.json"
+      }
+    ]
+  },
+  "ready_for_final_preparation": false
+}

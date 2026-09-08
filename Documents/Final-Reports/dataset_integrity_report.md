@@ -1,6 +1,6 @@
 # Dataset integrity report
 
-Generated: 2026-07-11T20:59:24  |  Overall: **FAIL**
+Generated: 2026-09-08T10:28:35  |  Overall: **FAIL**
 
 FAIL = data that would corrupt training/evaluation; WARNING = quality issues to acknowledge in the dissertation; full row-level list in `dataset_integrity_issues.csv`.
 
@@ -39,9 +39,8 @@ FAIL = data that would corrupt training/evaluation; WARNING = quality issues to 
 
 | Issue | Severity | Count |
 | --- | --- | --- |
-| attr_known_drop_value | WARNING | 15 |
-| dup_exact_duplicate | WARNING | 1 |
-| dup_high_overlap | WARNING | 4 |
+| dup_conflicting_duplicate | WARNING | 1 |
+| dup_high_overlap | WARNING | 13 |
 
 ## MTSD prepared detection dataset (MTSD-YOLO) — **PENDING**
 

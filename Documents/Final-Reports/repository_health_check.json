@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-26T16:06:09",
-  "overall": "PASS",
+  "generated_at": "2026-09-08T10:59:11",
+  "overall": "WARN",
   "checks": [
     {
       "check": "expected_folders",
@@ -29,7 +29,7 @@
     {
       "check": "python_compiles",
       "status": "PASS",
-      "description": "169 Python files compile",
+      "description": "171 Python files compile",
       "details": []
     },
     {
@@ -76,9 +76,12 @@
     },
     {
       "check": "markdown_links",
-      "status": "PASS",
+      "status": "WARN",
       "description": "Relative links in key Markdown files resolve",
-      "details": []
+      "details": [
+        "README.md: (Documents/Diagrams/Dissertation-Summary.png)",
+        "README.md: (Documents/Final-Tables/20260712-213548/mdwd_detection_results.csv)"
+      ]
     },
     {
       "check": "env_gitignored",

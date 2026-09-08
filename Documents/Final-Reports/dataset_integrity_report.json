@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-11T20:59:24",
+  "generated_at": "2026-09-08T10:28:35",
   "overall": "FAIL",
   "sections": [
     {
@@ -134,14 +134,6 @@
         },
         {
           "dataset": "MDWD",
-          "issue": "empty_annotation",
-          "severity": "WARNING",
-          "where": "image00094_jpeg.rf.5dc9d7dab7a5842d30c04d175ee32719.jpg",
-          "split": "train",
-          "detail": ""
-        },
-        {
-          "dataset": "MDWD",
           "issue": "out_of_range_box",
           "severity": "FAIL",
           "where": "IMG_0210_JPG.rf.83286e23a8cd8dd360dbe235dcfa1be8.txt",
@@ -243,6 +235,14 @@
           "where": "PHOTO-2025-01-04-12-12-42-1-_jpg.rf.aa140dab5ed57345c816d846d417ee49.txt",
           "split": "train",
           "detail": "line 3"
+        },
+        {
+          "dataset": "MDWD",
+          "issue": "empty_annotation",
+          "severity": "WARNING",
+          "where": "image00094_jpeg.rf.5dc9d7dab7a5842d30c04d175ee32719.jpg",
+          "split": "train",
+          "detail": ""
         },
         {
           "dataset": "MDWD",
@@ -501,45 +501,67 @@
       "format": "coco+attributes",
       "summary": {
         "qa_files": [
-          "Datasets\\MTSD\\Annotations\\GRP-1\\Final-QA\\QA-GRP1.json",
-          "Datasets\\MTSD\\Annotations\\GRP-2\\Final-QA\\QA-GRP2.json",
-          "Datasets\\MTSD\\Annotations\\GRP-3\\Final-QA\\QA-GRP3.json",
-          "Datasets\\MTSD\\Annotations\\GRP-5\\Final-QA\\QA-GRP5.json",
-          "Datasets\\MTSD\\Annotations\\GRP-6\\Final-QA\\QA-GRP6.json",
-          "Datasets\\MTSD\\Annotations\\GRP-7\\Final-QA\\QA-GRP7.json"
+          "Datasets/MTSD/Annotations/GRP-1/Final-QA/QA-GRP1.json",
+          "Datasets/MTSD/Annotations/GRP-10/Final-QA/QA-GRP10.json",
+          "Datasets/MTSD/Annotations/GRP-11/Final-QA/QA-GRP11.json",
+          "Datasets/MTSD/Annotations/GRP-2/Final-QA/QA-GRP2.json",
+          "Datasets/MTSD/Annotations/GRP-3/Final-QA/QA-GRP3.json",
+          "Datasets/MTSD/Annotations/GRP-4/Final-QA/QA-GRP4.json",
+          "Datasets/MTSD/Annotations/GRP-5/Final-QA/QA-GRP5.json",
+          "Datasets/MTSD/Annotations/GRP-6/Final-QA/QA-GRP6.json",
+          "Datasets/MTSD/Annotations/GRP-7/Final-QA/QA-GRP7.json",
+          "Datasets/MTSD/Annotations/GRP-8/Final-QA/QA-GRP8.json",
+          "Datasets/MTSD/Annotations/GRP-9/Final-QA/QA-GRP9.json"
         ],
         "per_group": {
           "GRP-1": {
             "annotations": 1960,
             "images": 724
           },
+          "GRP-10": {
+            "annotations": 2334,
+            "dup_high_overlap": 3,
+            "images": 779
+          },
+          "GRP-11": {
+            "annotations": 1506,
+            "dup_conflicting_duplicate": 1,
+            "dup_high_overlap": 2,
+            "images": 602
+          },
           "GRP-2": {
             "annotations": 1621,
-            "attr_known_drop_value": 1,
             "dup_high_overlap": 3,
             "images": 630
           },
           "GRP-3": {
             "annotations": 1844,
-            "attr_known_drop_value": 1,
             "images": 617
           },
+          "GRP-4": {
+            "annotations": 2314,
+            "images": 875
+          },
           "GRP-5": {
-            "annotations": 1841,
-            "attr_known_drop_value": 3,
-            "dup_exact_duplicate": 1,
-            "dup_high_overlap": 1,
+            "annotations": 1839,
             "images": 657
           },
           "GRP-6": {
             "annotations": 1106,
-            "attr_known_drop_value": 3,
             "images": 470
           },
           "GRP-7": {
             "annotations": 1891,
-            "attr_known_drop_value": 7,
             "images": 710
+          },
+          "GRP-8": {
+            "annotations": 1869,
+            "images": 703
+          },
+          "GRP-9": {
+            "annotations": 2225,
+            "dup_high_overlap": 5,
+            "images": 715
           }
         },
         "attribute_schema": {
@@ -569,123 +591,51 @@
       "issues": [
         {
           "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
+          "issue": "dup_high_overlap",
           "severity": "WARNING",
-          "where": "GRP-2/f5018d2e-IMG_20251223_124329.jpg#1529",
-          "split": "GRP-2",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
+          "where": "GRP-10/IMG_20251125_151725.jpg",
+          "split": "GRP-10",
+          "detail": "ann 1309 vs 1310 IoU=0.8977"
         },
         {
           "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
+          "issue": "dup_high_overlap",
           "severity": "WARNING",
-          "where": "GRP-3/9e3791d5-20251129_113953.jpg#1078",
-          "split": "GRP-3",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
+          "where": "GRP-10/IMG_20251125_152206.jpg",
+          "split": "GRP-10",
+          "detail": "ann 1354 vs 1355 IoU=0.8535"
         },
         {
           "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
+          "issue": "dup_high_overlap",
           "severity": "WARNING",
-          "where": "GRP-5/0856e08c-BenTaliana_33_Front.jpeg#66",
-          "split": "GRP-5",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
+          "where": "GRP-10/IMG_20251125_152213.jpg",
+          "split": "GRP-10",
+          "detail": "ann 1357 vs 1360 IoU=0.8686"
         },
         {
           "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
+          "issue": "dup_conflicting_duplicate",
           "severity": "WARNING",
-          "where": "GRP-5/9986c115-MelatAssefa_32_Side.jpg#1114",
-          "split": "GRP-5",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
+          "where": "GRP-11/2d64dcc1-IMG_20251125_194650.jpg",
+          "split": "GRP-11",
+          "detail": "ann 269 vs 270 IoU=0.9507"
         },
         {
           "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
+          "issue": "dup_high_overlap",
           "severity": "WARNING",
-          "where": "GRP-5/c09ec099-BenTaliana_33_Back.jpeg#1443",
-          "split": "GRP-5",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
+          "where": "GRP-11/5e92372f-IMG_1352.jpg",
+          "split": "GRP-11",
+          "detail": "ann 573 vs 574 IoU=0.8904"
         },
         {
           "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
+          "issue": "dup_high_overlap",
           "severity": "WARNING",
-          "where": "GRP-6/20e6b33d-IMG_0375.JPG#165",
-          "split": "GRP-6",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-6/c1d5a1a3-IMG_0211.JPG#913",
-          "split": "GRP-6",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-6/f67fe295-IMG_0210.JPG#1067",
-          "split": "GRP-6",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-7/2e3ef7ce-20251206_161918.jpg#335",
-          "split": "GRP-7",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-7/2ec0dd18-IMG_2350.JPG#338",
-          "split": "GRP-7",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-7/5c5593f4-IMG_2331.JPG#670",
-          "split": "GRP-7",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-7/645ac169-IMG_1759.jpg#726",
-          "split": "GRP-7",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-7/645ac169-IMG_1759.jpg#727",
-          "split": "GRP-7",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-7/9974d5a4-20251206_161835.jpg#1074",
-          "split": "GRP-7",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
-        },
-        {
-          "dataset": "MTSD-QA",
-          "issue": "attr_known_drop_value",
-          "severity": "WARNING",
-          "where": "GRP-7/a974004b-IMG_2347.JPG#1208",
-          "split": "GRP-7",
-          "detail": "sign_shape=Damaged-Unknown suggestion="
+          "where": "GRP-11/bf0d5a71-IMG_1354.jpg",
+          "split": "GRP-11",
+          "detail": "ann 1188 vs 1190 IoU=0.8366"
         },
         {
           "dataset": "MTSD-QA",
@@ -715,17 +665,41 @@
           "dataset": "MTSD-QA",
           "issue": "dup_high_overlap",
           "severity": "WARNING",
-          "where": "GRP-5/7a0c33f1-BenTaliana_36_Side.jpeg",
-          "split": "GRP-5",
-          "detail": "ann 855 vs 857 IoU=0.8397"
+          "where": "GRP-9/0d1e2722-IMG_20251111_170441.jpg",
+          "split": "GRP-9",
+          "detail": "ann 81 vs 86 IoU=0.7765"
         },
         {
           "dataset": "MTSD-QA",
-          "issue": "dup_exact_duplicate",
+          "issue": "dup_high_overlap",
           "severity": "WARNING",
-          "where": "GRP-5/90ee886c-MichaelFarrugia_59_Side.jpg",
-          "split": "GRP-5",
-          "detail": "ann 1033 vs 1040 IoU=1.0"
+          "where": "GRP-9/183bc57a-WhatsApp_Image_2026-01-03_at_18.46.16.jpeg",
+          "split": "GRP-9",
+          "detail": "ann 147 vs 148 IoU=0.8003"
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "dup_high_overlap",
+          "severity": "WARNING",
+          "where": "GRP-9/90362c2e-NE10_FRONT.jpg",
+          "split": "GRP-9",
+          "detail": "ann 1270 vs 1271 IoU=0.9396"
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "dup_high_overlap",
+          "severity": "WARNING",
+          "where": "GRP-9/a98a0b67-IMG_20251106_140412.jpg",
+          "split": "GRP-9",
+          "detail": "ann 1460 vs 1461 IoU=0.8515"
+        },
+        {
+          "dataset": "MTSD-QA",
+          "issue": "dup_high_overlap",
+          "severity": "WARNING",
+          "where": "GRP-9/fe0c59e5-IMG_20251106_140341.jpg",
+          "split": "GRP-9",
+          "detail": "ann 2205 vs 2208 IoU=0.8919"
         }
       ],
       "notes": [
@@ -734,9 +708,8 @@
       ],
       "status": "WARNING",
       "issue_counts": {
-        "attr_known_drop_value": 15,
-        "dup_high_overlap": 4,
-        "dup_exact_duplicate": 1
+        "dup_high_overlap": 13,
+        "dup_conflicting_duplicate": 1
       }
     },
     {

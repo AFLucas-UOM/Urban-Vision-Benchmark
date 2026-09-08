@@ -1,0 +1,44 @@
+item,raw_images,annotated_images,unannotated_images,boxes,classes,auxiliary_attributes,disk_size_gb,source,training_seconds,parameters,model_size_mb,test_inference_ms,status,adaptation,trainable_params,best_epoch,n_images,prompts,prompt_model_combinations
+MDWD dataset,30225,30225,0,211512,5,0,10.97,Documents/MDWD-EDA/eda_summary.json; Documents/Final-Reports/MDWD-Leakage-Analysis/metric_comparison.json,,,,,,,,,,,
+MTSD dataset,7482,7482,0,20509,12,4,239.39,Datasets/MTSD/Annotations/GRP-1/Final-QA/QA-GRP1.json; Datasets/MTSD/Annotations/GRP-10/Final-QA/QA-GRP10.json,,,,,,,,,,,
+MDWD run yolo11n (YOLO11-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO11-EUVIP/E001_yolo11n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,10402.89,2590815,5.22,1.1065593495980621,final,,,,,,
+MDWD run yolo11s (YOLO11-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO11-EUVIP/E002_yolo11s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,10635.52,9429727,18.29,2.1376999999923525,final,,,,,,
+MDWD run yolo11m (YOLO11-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO11-EUVIP/E003_yolo11m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,12053.98,20056863,38.64,3.639014905151724,final,,,,,,
+MDWD run yolo11l (YOLO11-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO11-EUVIP/E004_yolo11l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,17753.24,25314335,48.83,4.713532249347009,final,,,,,,
+MDWD run yolo12n (YOLO12-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO12-EUVIP/E001_yolo12n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,12103.25,2569023,5.26,2.0487837400035,final,,,,,,
+MDWD run yolo12s (YOLO12-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO12-EUVIP/E002_yolo12s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,15215.0,9255071,18.06,2.6344967448230845,final,,,,,,
+MDWD run yolo12m (YOLO12-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO12-EUVIP/E003_yolo12m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,17051.21,20141343,38.88,5.01073495936274,final,,,,,,
+MDWD run yolo26n (YOLO26-DGX),,,,,,,,Results/MDWD-Runs/YOLO26-DGX/E001_yolo26n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,9188.58,2505750,5.14,3.0685505772529735,final,,,,,,
+MDWD run yolo26s (YOLO26-DGX),,,,,,,,Results/MDWD-Runs/YOLO26-DGX/E002_yolo26s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,22959.41,9951734,19.38,8.07531673719032,final,,,,,,
+MDWD run yolo26m (YOLO26-DGX),,,,,,,,Results/MDWD-Runs/YOLO26-DGX/E003_yolo26m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,46709.58,21780598,41.99,15.04252795400546,final,,,,,,
+MDWD run yolo26l (YOLO26-DGX),,,,,,,,Results/MDWD-Runs/YOLO26-DGX/E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,90351.43,26184054,50.54,16.867737590633762,final,,,,,,
+MDWD run yolo26n (YOLO26-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO26-EUVIP/E001_yolo26n_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,10687.15,2505750,5.14,1.5538986431571042,final,,,,,,
+MDWD run yolo26s (YOLO26-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO26-EUVIP/E002_yolo26s_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,18632.86,9951734,19.38,2.603901628414951,final,,,,,,
+MDWD run yolo26m (YOLO26-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO26-EUVIP/E003_yolo26m_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,18368.08,21780598,42.0,3.7139577230786887,final,,,,,,
+MDWD run yolo26l (YOLO26-EUVIP),,,,,,,,Results/MDWD-Runs/YOLO26-EUVIP/E004_yolo26l_rfv20_img640_b32_e100_adamw_lr0p001/pipeline_complete.json,26600.16,26184054,50.54,4.807777779787617,final,,,,,,
+Attribute variant dinov3_vitb_frozen,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,frozen,9997,18,,,
+Attribute variant dinov3_vitl_frozen,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,frozen,13325,14,,,
+Attribute variant dinov3_vitb_lora,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,lora,304909,32,,,
+Attribute variant dinov3_vitl_lora,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,lora,799757,21,,,
+Attribute variant vjepa21_vitb_frozen,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,frozen,9997,20,,,
+Attribute variant vjepa21_vitl_frozen,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,frozen,13325,34,,,
+Attribute variant vjepa21_vitb_lora,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,lora,304909,18,,,
+Attribute variant vjepa21_vitl_lora,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,lora,799757,12,,,
+Attribute variant convnext_base_frozen,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,frozen,13325,16,,,
+Attribute variant convnext_large_frozen,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,frozen,19981,16,,,
+Attribute variant convnext_base_finetune,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,finetune,87577741,23,,,
+Attribute variant convnext_large_finetune,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,finetune,196247245,18,,,
+Attribute variant convnext_base_lora,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,lora,1457165,48,,,
+Attribute variant convnext_large_lora,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,lora,2185741,36,,,
+Attribute variant lingbot_vitb_frozen,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,frozen,9997,33,,,
+Attribute variant lingbot_vitl_frozen,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,frozen,13325,24,,,
+Attribute variant lingbot_vitb_lora,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,lora,304909,28,,,
+Attribute variant lingbot_vitl_lora,,,,,,,,Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/comparison.csv,,,,,historical snapshot,lora,799757,12,,,
+PromptDetect run MDWD/20260810-121902,,,,,,,,Results/PromptDetect/BatchEvaluation/MDWD/20260810-121902/run_config.json,,,,,final,,,,369,0,0
+PromptDetect run MDWD/20260812-115841-smoke,,,,,,,,Results/PromptDetect/BatchEvaluation/MDWD/20260812-115841-smoke/run_config.json,,,,,pilot,,,,1,0,0
+PromptDetect run MDWD/20260812-115920-isolated-la-smoke,,,,,,,,Results/PromptDetect/BatchEvaluation/MDWD/20260812-115920-isolated-la-smoke/run_config.json,,,,,pilot,,,,1,0,0
+PromptDetect run MDWD/20260818-092355-optimized-v2,,,,,,,,Results/PromptDetect/BatchEvaluation/MDWD/20260818-092355-optimized-v2/run_config.json,,,,,final,,,,369,0,0
+PromptDetect run MDWD/20260821-170445-optimized-v2-bounded-sensitivity,,,,,,,,Results/PromptDetect/BatchEvaluation/MDWD/20260821-170445-optimized-v2-bounded-sensitivity/run_config.json,,,,,final,,,,369,0,0
+PromptDetect run MTSD/20260810-210556,,,,,,,,Results/PromptDetect/BatchEvaluation/MTSD/20260810-210556/run_config.json,,,,,final,,,,747,0,0
+PromptDetect run MTSD/20260818-134723-optimized-v2,,,,,,,,Results/PromptDetect/BatchEvaluation/MTSD/20260818-134723-optimized-v2/run_config.json,,,,,final,,,,747,0,0
+PromptDetect run MTSD/20260822-102455-optimized-v2-bounded-sensitivity,,,,,,,,Results/PromptDetect/BatchEvaluation/MTSD/20260822-102455-optimized-v2-bounded-sensitivity/run_config.json,,,,,final,,,,747,0,0

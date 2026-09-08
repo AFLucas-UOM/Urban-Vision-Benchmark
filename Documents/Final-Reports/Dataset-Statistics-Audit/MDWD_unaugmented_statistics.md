@@ -13,6 +13,7 @@ Source included: `unaugmented COCO split directories only`.
 
 | Class | Objects | % of split objects |
 |---|---:|---:|
+| wastedetection | 0 | 0.0000% |
 | Mixed Waste | 2,566 | 27.7046% |
 | Orange CMD | 667 | 7.2015% |
 | Organic Waste | 1,677 | 18.1062% |
@@ -24,6 +25,7 @@ Source included: `unaugmented COCO split directories only`.
 
 | Class | Objects | % of split objects |
 |---|---:|---:|
+| wastedetection | 0 | 0.0000% |
 | Mixed Waste | 275 | 25.6052% |
 | Orange CMD | 78 | 7.2626% |
 | Organic Waste | 196 | 18.2495% |
@@ -35,6 +37,7 @@ Source included: `unaugmented COCO split directories only`.
 
 | Class | Objects | % of split objects |
 |---|---:|---:|
+| wastedetection | 0 | 0.0000% |
 | Mixed Waste | 334 | 30.1989% |
 | Orange CMD | 78 | 7.0524% |
 | Organic Waste | 178 | 16.0940% |

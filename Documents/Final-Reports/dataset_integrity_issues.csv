@@ -5,7 +5,6 @@ MDWD,empty_annotation,WARNING,train,ARI3129_TK_76_jpg.rf.be9b8f5cf041aa7042a5a9d
 MDWD,out_of_range_box,FAIL,train,ARI3129_TK_80_jpg.rf.8c5047a7cd420055e57597f7fc962518.txt,line 2
 MDWD,empty_annotation,WARNING,train,CMD-Batch1_108_jpeg.rf.729768dc0b9b62a7e60c6ecf40b4b716.jpg,
 MDWD,out_of_range_box,FAIL,train,CMD-Batch1_151_jpeg.rf.5533559aa3de8ae698be773ebdb6fab2.txt,line 3
-MDWD,empty_annotation,WARNING,train,image00094_jpeg.rf.5dc9d7dab7a5842d30c04d175ee32719.jpg,
 MDWD,out_of_range_box,FAIL,train,IMG_0210_JPG.rf.83286e23a8cd8dd360dbe235dcfa1be8.txt,line 1
 MDWD,out_of_range_box,FAIL,train,IMG_0689_jpeg.rf.70f86cd8ca2e437ccf19efbe49607b40.txt,line 1
 MDWD,out_of_range_box,FAIL,train,IMG_0712_jpeg.rf.d8d792231d3bd80e08fe91ee48383928.txt,line 4
@@ -19,6 +18,7 @@ MDWD,out_of_range_box,FAIL,train,IMG_4432_jpeg.rf.fd3bd9654f49e097f8d9beaae80675
 MDWD,empty_annotation,WARNING,train,IMG_8894_jpeg.rf.5b7176ec4afd76d88bce07c56139a03a.jpg,
 MDWD,empty_annotation,WARNING,train,IMG_8992_jpeg.rf.7a801e51f331acd1d7e7395812e27e51.jpg,
 MDWD,out_of_range_box,FAIL,train,PHOTO-2025-01-04-12-12-42-1-_jpg.rf.aa140dab5ed57345c816d846d417ee49.txt,line 3
+MDWD,empty_annotation,WARNING,train,image00094_jpeg.rf.5dc9d7dab7a5842d30c04d175ee32719.jpg,
 MDWD,source_in_multiple_splits,WARNING,,20241214_080238_jpg,"test, train"
 MDWD,source_in_multiple_splits,WARNING,,ARI3129_AFL_55_jpeg,"train, valid"
 MDWD,source_in_multiple_splits,WARNING,,ARI3129_AFL_60_jpeg,"test, valid"
@@ -49,23 +49,17 @@ MDWD,source_in_multiple_splits,WARNING,,IMG_8897_jpeg,"test, train"
 MDWD,source_in_multiple_splits,WARNING,,IMG_8972_jpeg,"test, train"
 MDWD,source_in_multiple_splits,WARNING,,MSIDA_72_jpg,"test, train"
 MDWD,source_in_multiple_splits,WARNING,,MSIDA_77_jpg,"test, train"
-MTSD-QA,attr_known_drop_value,WARNING,GRP-2,GRP-2/f5018d2e-IMG_20251223_124329.jpg#1529,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-3,GRP-3/9e3791d5-20251129_113953.jpg#1078,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-5,GRP-5/0856e08c-BenTaliana_33_Front.jpeg#66,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-5,GRP-5/9986c115-MelatAssefa_32_Side.jpg#1114,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-5,GRP-5/c09ec099-BenTaliana_33_Back.jpeg#1443,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-6,GRP-6/20e6b33d-IMG_0375.JPG#165,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-6,GRP-6/c1d5a1a3-IMG_0211.JPG#913,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-6,GRP-6/f67fe295-IMG_0210.JPG#1067,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-7,GRP-7/2e3ef7ce-20251206_161918.jpg#335,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-7,GRP-7/2ec0dd18-IMG_2350.JPG#338,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-7,GRP-7/5c5593f4-IMG_2331.JPG#670,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-7,GRP-7/645ac169-IMG_1759.jpg#726,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-7,GRP-7/645ac169-IMG_1759.jpg#727,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-7,GRP-7/9974d5a4-20251206_161835.jpg#1074,sign_shape=Damaged-Unknown suggestion=
-MTSD-QA,attr_known_drop_value,WARNING,GRP-7,GRP-7/a974004b-IMG_2347.JPG#1208,sign_shape=Damaged-Unknown suggestion=
+MTSD-QA,dup_high_overlap,WARNING,GRP-10,GRP-10/IMG_20251125_151725.jpg,ann 1309 vs 1310 IoU=0.8977
+MTSD-QA,dup_high_overlap,WARNING,GRP-10,GRP-10/IMG_20251125_152206.jpg,ann 1354 vs 1355 IoU=0.8535
+MTSD-QA,dup_high_overlap,WARNING,GRP-10,GRP-10/IMG_20251125_152213.jpg,ann 1357 vs 1360 IoU=0.8686
+MTSD-QA,dup_conflicting_duplicate,WARNING,GRP-11,GRP-11/2d64dcc1-IMG_20251125_194650.jpg,ann 269 vs 270 IoU=0.9507
+MTSD-QA,dup_high_overlap,WARNING,GRP-11,GRP-11/5e92372f-IMG_1352.jpg,ann 573 vs 574 IoU=0.8904
+MTSD-QA,dup_high_overlap,WARNING,GRP-11,GRP-11/bf0d5a71-IMG_1354.jpg,ann 1188 vs 1190 IoU=0.8366
 MTSD-QA,dup_high_overlap,WARNING,GRP-2,GRP-2/1df3d397-51.back.front.jpg,ann 190 vs 191 IoU=0.8848
 MTSD-QA,dup_high_overlap,WARNING,GRP-2,GRP-2/204dfdcd-20251223_154404.jpg,ann 201 vs 202 IoU=0.9496
 MTSD-QA,dup_high_overlap,WARNING,GRP-2,GRP-2/d79d0bd2-20251223_155233.jpg,ann 1363 vs 1364 IoU=0.9124
-MTSD-QA,dup_high_overlap,WARNING,GRP-5,GRP-5/7a0c33f1-BenTaliana_36_Side.jpeg,ann 855 vs 857 IoU=0.8397
-MTSD-QA,dup_exact_duplicate,WARNING,GRP-5,GRP-5/90ee886c-MichaelFarrugia_59_Side.jpg,ann 1033 vs 1040 IoU=1.0
+MTSD-QA,dup_high_overlap,WARNING,GRP-9,GRP-9/0d1e2722-IMG_20251111_170441.jpg,ann 81 vs 86 IoU=0.7765
+MTSD-QA,dup_high_overlap,WARNING,GRP-9,GRP-9/183bc57a-WhatsApp_Image_2026-01-03_at_18.46.16.jpeg,ann 147 vs 148 IoU=0.8003
+MTSD-QA,dup_high_overlap,WARNING,GRP-9,GRP-9/90362c2e-NE10_FRONT.jpg,ann 1270 vs 1271 IoU=0.9396
+MTSD-QA,dup_high_overlap,WARNING,GRP-9,GRP-9/a98a0b67-IMG_20251106_140412.jpg,ann 1460 vs 1461 IoU=0.8515
+MTSD-QA,dup_high_overlap,WARNING,GRP-9,GRP-9/fe0c59e5-IMG_20251106_140341.jpg,ann 2205 vs 2208 IoU=0.8919
