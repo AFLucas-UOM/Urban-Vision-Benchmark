@@ -4,7 +4,9 @@
 
 This repository is the reproducible research artefact for an MSc dissertation at the [University of Malta](https://www.um.edu.mt/). It introduces two locally collected datasets and evaluates three computer-vision paradigms for domestic-waste monitoring and traffic-sign assessment.
 
-![Urban Vision Benchmark experimental overview](Documents/Diagrams/Dissertation-Summary.png)
+## Repository status
+
+This is a **private** dissertation repository being prepared for public release. The root README is the maintained project entry point; timestamped tables and reports under `Documents/Final-Tables/` and `Documents/Final-Reports/` are the supporting evidence. Local datasets, downloaded weights, transient working directories and superseded experiment artefacts are intentionally excluded from version control.
 
 ## At a glance
 
@@ -28,13 +30,12 @@ The central question is not only which model scores highest, but which paradigm 
 | **MDWD prompt localisation** | **SAM 3.1:** 0.526 macro mean F1 across four prompt families | Strongest zero-shot result, but wording sensitivity remained substantial (49.0% mean relative best-to-worst degradation). |
 | **MTSD prompt localisation** | **Cosmos Reason2 8B:** 0.305 macro mean F1 across five prompt families | The strongest prompt model was also the least sensitive of those tested on MTSD, but prompt-based localisation remained less reliable for this specialised task. |
 
-These metrics come from task-specific protocols and should not be compared as if they were interchangeable: detection uses mAP, attribute classification uses crop-level macro-F1, and prompt localisation reports targeted F1 over controlled paraphrase families. The complete evidence is available in the [MDWD detection table](Documents/Final-Tables/20260712-213548/mdwd_detection_results.csv), [MTSD detection report](Documents/Final-Reports/MTSD-SupervisedDetection/mtsd_main_scale_comparison.md), [attribute ablation report](Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/size_ablation.md), and prompt-sensitivity reports for [MDWD](Results/PromptDetect/BatchEvaluation/MDWD/20260821-170445-optimized-v2-bounded-sensitivity/prompt_sensitivity_report.md) and [MTSD](Results/PromptDetect/BatchEvaluation/MTSD/20260822-102455-optimized-v2-bounded-sensitivity/prompt_sensitivity_report.md).
+These metrics come from task-specific protocols and should not be compared as if they were interchangeable: detection uses mAP, attribute classification uses crop-level macro-F1, and prompt localisation reports targeted F1 over controlled paraphrase families. The complete evidence is available in the [MDWD detection table](Documents/Final-Tables/20260712-213548/mdwd_detection_results.csv), [MTSD detection report](Documents/Final-Reports/MTSD-SupervisedDetection/mtsd_main_scale_comparison.md), [attribute ablation report](Scripts/MTSD-Scripts/AttributeClassification/outputs/reports/size_ablation.md), prompt-sensitivity reports for [MDWD](Results/PromptDetect/BatchEvaluation/MDWD/20260821-170445-optimized-v2-bounded-sensitivity/prompt_sensitivity_report.md) and [MTSD](Results/PromptDetect/BatchEvaluation/MTSD/20260822-102455-optimized-v2-bounded-sensitivity/prompt_sensitivity_report.md), and the [completed cross-suite inference benchmark](Documents/Final-Tables/20260910-inference-benchmark/all_model_inference_benchmark.md).
 
 Additional findings include:
 
 - Increasing MTSD input resolution produced larger and more consistent gains than the original offline-augmentation ablation.
 - Prompt wording can change both accuracy and the set of objects returned, making prompt selection an operational variable rather than a cosmetic one.
-- The independently verified MDWD split leakage changed aggregate performance by at most 0.48 percentage points mAP50–95; the issue is real, but its measured effect on the reported conclusion is negligible ([analysis](Documents/MDWDLeakageSensitivity.md)).
 - For MTSD attributes, mounting and sign shape were comparatively easy; visual condition was consistently the limiting head.
 
 ## Datasets
@@ -73,6 +74,7 @@ The canonical annotations are the QA-approved COCO files under `Datasets/MTSD/An
 - Run directories are immutable and store their effective configuration, environment and evaluation artefacts.
 - Dataset preparation is blocked unless the corresponding MTSD annotation QA gate has passed.
 - Final evaluation tools are read-only over stored predictions and write to new timestamped directories.
+- Raw imagery, downloaded weights, local scratch space and superseded smoke or trial outputs are excluded from the release snapshot.
 
 The repository preserves code, protocols, configurations, QA records, aggregate results and dissertation-ready exports. Weights & Biases is used as a monitoring mirror; repository artefacts are the authoritative evidence.
 
@@ -148,7 +150,9 @@ Useful starting points:
 - [Final-evaluation documentation](Scripts/FinalEvaluation/README.md)
 - [MTSD supervised-detection documentation](Scripts/MTSD-Scripts/MTSD-SupervisedDetection/README.md)
 - [MTSD attribute-classification documentation](Scripts/MTSD-Scripts/AttributeClassification/README.md)
-- [PromptDetect protocol](Documents/PromptDetect-Dissertation-Protocol.md)
+- [PromptDetect batch-evaluation protocol](Scripts/Other-Scripts/PromptDetect/batch_evaluation/README.md)
+- [Completed inference benchmark](Documents/Final-Tables/20260910-inference-benchmark/all_model_inference_benchmark.md)
+- [Dataset-integrity report](Documents/Final-Reports/dataset_integrity_report.md)
 - [Automation and workflow registry](Scripts/Automation/README.md)
 
 ## Data availability, ethics and privacy
