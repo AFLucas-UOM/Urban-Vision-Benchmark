@@ -1,0 +1,14 @@
+variant,split,attribute,class,f1,support
+vjepa21_vitl_frozen,test,view_angle,Front,0.3684,23
+vjepa21_vitl_frozen,test,view_angle,Back,0.4255,24
+vjepa21_vitl_frozen,test,view_angle,Side,0.5116,17
+vjepa21_vitl_frozen,test,mounting,Pole-Mounted,0.5185,59
+vjepa21_vitl_frozen,test,mounting,Wall-Mounted,0.1702,5
+vjepa21_vitl_frozen,test,condition,Good,0.6947,45
+vjepa21_vitl_frozen,test,condition,Weathered,0.1429,12
+vjepa21_vitl_frozen,test,condition,Heavily Damaged,0.0000,7
+vjepa21_vitl_frozen,test,sign_shape,Circular,0.0000,23
+vjepa21_vitl_frozen,test,sign_shape,Quadrangle,0.6250,20
+vjepa21_vitl_frozen,test,sign_shape,Triangular,0.0000,12
+vjepa21_vitl_frozen,test,sign_shape,Octagonal,0.1429,6
+vjepa21_vitl_frozen,test,sign_shape,Pentagon,0.0000,3

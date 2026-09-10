@@ -1,0 +1,14 @@
+model,prompt_id,prompt,image_id,fp_x0,fp_y0,fp_x1,fp_y1,fp_score,fp_overlap_class,fp_overlap_iou
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/02ac92f5-IMG20251123165127.jpg,1441.93,1374.34,2002.06,2857.66,0.6719,Blind-Spot Mirror (Convex Mirror),0.9693
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/02ac92f5-IMG20251123165127.jpg,2053.15,3523.6,2653.3,4039.32,0.3418,Back-Unknown,0.9652
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/072bd818-IMG_4648.jpeg,1121.88,1421.72,1773.93,3085.83,0.9141,Stop Sign,0.9379
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/072bd818-IMG_4648.jpeg,2586.62,2960.0,3024.0,3577.26,0.3379,,0.0
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/091652b2-IMG20260105120954.jpg,500.18,1039.06,2768.65,3070.08,0.9062,Auxiliary Sign,0.9721
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/091652b2-IMG20260105120954.jpg,1070.67,1206.69,2284.19,2323.7,0.6133,,0.286
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/091652b2-IMG20260105120954.jpg,930.81,583.89,2403.17,1157.43,0.4238,Directional Sign,0.9731
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/094f8a9f-RV__2.jpeg,1061.85,593.25,1813.84,1260.13,0.8828,Stop Sign,0.969
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/094f8a9f-RV__2.jpeg,1074.71,1205.41,1819.13,1995.0,0.8438,Other-Unknown,0.9788
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/094f8a9f-RV__2.jpeg,174.92,2787.57,331.33,2995.4,0.5664,Auxiliary Sign,0.9625
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/094f8a9f-RV__2.jpeg,1243.63,1866.06,1718.48,3079.47,0.4023,Pedestrian Crossing,0.9463
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/094f8a9f-RV__2.jpeg,104.5,2961.03,330.9,3145.2,0.3555,Auxiliary Sign,0.8227
+SAM 3,sens-mtsd-entry-01,no entry sign,GRP-1/094f8a9f-RV__2.jpeg,1060.24,586.42,1809.7,4032.0,0.3477,,0.2358

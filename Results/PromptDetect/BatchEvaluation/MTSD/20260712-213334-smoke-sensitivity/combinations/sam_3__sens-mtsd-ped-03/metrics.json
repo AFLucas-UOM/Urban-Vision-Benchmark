@@ -1,0 +1,40 @@
+{
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "SAM 3",
+  "prompt_id": "sens-mtsd-ped-03",
+  "prompt": "sign indicating a pedestrian crossing",
+  "prompt_group": "paraphrase-sensitivity",
+  "target_classes": [
+    "Pedestrian Crossing"
+  ],
+  "prompt_class_confusion": {
+    "Directional Sign": 1,
+    "Auxiliary Sign": 2,
+    "Pedestrian Crossing": 1,
+    "Other-Unknown": 1
+  },
+  "tp": 1,
+  "fp": 7,
+  "fn": 0,
+  "duplicates": 0,
+  "precision": 0.125,
+  "recall": 1.0,
+  "f1": 0.2222,
+  "accuracy": 0.125,
+  "mean_matched_iou": 0.9579,
+  "ap50": 1.0,
+  "map50_95": 1.0,
+  "n_gt": 1,
+  "n_images": 5,
+  "target_gt_boxes": 1,
+  "positive_images": 1,
+  "negative_images": 4,
+  "fp_overlapping_nontarget": 4,
+  "model_load_ms": 9712.9,
+  "sensitivity_family": "mtsd-pedestrian-crossing",
+  "variant_type": "descriptive-paraphrase",
+  "mean_inference_ms": 189.44,
+  "has_confidence": true,
+  "ap_meaningful": true
+}

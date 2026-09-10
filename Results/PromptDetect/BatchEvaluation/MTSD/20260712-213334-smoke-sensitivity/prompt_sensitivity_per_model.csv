@@ -1,0 +1,2 @@
+dataset,model,n_families,macro_mean_f1,mean_within_family_f1_std,median_within_family_f1_std,mean_f1_range,max_f1_range,mean_relative_f1_degradation,worst_family,worst_family_relative_degradation,macro_worst_prompt_f1,macro_canonical_f1,macro_instruction_f1,mean_matched_iou_variability,mean_inference_ms
+MTSD,SAM 3,5,0.2686,0.1283,0.1717,0.3362,0.7647,0.4278,mtsd-blind-spot-mirror,0.7647,0.1305,0.4,0.346,0.0013,203.8015

@@ -1,0 +1,7 @@
+variant,run_id,adaptation,view_angle,mounting,condition,sign_shape,mean_macro_f1,val_mean_macro_f1,best_epoch,stopped_epoch,stop_reason,total_params,trainable_params,trainable_pct
+dinov3,dinov3-20260703-151103-smoke,frozen,0.2688,0.5594,0.1411,0.0961,0.2664,0.3134,1,1,max_epochs,85670413,9997,0.0117
+dinov3_lora,dinov3_lora-20260703-150833-smoke,lora,0.2473,0.7037,0.3302,0.1987,0.3700,0.3602,1,1,max_epochs,85965325,304909,0.3547
+vjepa,vjepa-20260703-151111-smoke,frozen,0.3168,0.3594,0.2901,0.1263,0.2731,0.3068,1,1,max_epochs,304694285,13325,0.0044
+vjepa_lora,vjepa_lora-20260703-150838-smoke,lora,0.2410,0.3667,0.3319,0.2032,0.2857,0.2923,1,1,max_epochs,305480717,799757,0.2618
+convnext_frozen,convnext_frozen-20260703-151123-smoke,frozen,0.2978,0.6807,0.2854,0.1140,0.3445,0.3093,1,1,max_epochs,27828589,9997,0.0359
+convnext,convnext-20260703-151131-smoke,finetune,0.2586,0.6530,0.2802,0.0945,0.3216,0.3009,1,1,max_epochs,27828589,27828589,100.0

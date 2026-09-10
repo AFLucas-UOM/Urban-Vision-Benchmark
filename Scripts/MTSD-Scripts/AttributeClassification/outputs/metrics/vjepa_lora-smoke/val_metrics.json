@@ -1,0 +1,191 @@
+{
+ "run_id": "vjepa_lora-20260703-150838-smoke",
+ "variant": "vjepa_lora",
+ "split": "val",
+ "smoke_test": true,
+ "timestamp": "2026-07-03T13:08:49+00:00",
+ "mean_macro_f1": 0.2922879742083328,
+ "run_info": {
+  "adaptation": "lora",
+  "best_epoch": 1,
+  "stopped_epoch": 1,
+  "stop_reason": "max_epochs",
+  "max_epochs": 1,
+  "val_mean_macro_f1": 0.2922879742083328,
+  "parameters": {
+   "total": 305480717,
+   "trainable": 799757,
+   "trainable_pct": 0.2618,
+   "backbone_total": 305467392,
+   "backbone_trainable": 786432,
+   "head_trainable": 13325,
+   "lora_trainable": 786432
+  }
+ },
+ "attributes": {
+  "view_angle": {
+   "n": 64,
+   "accuracy": 0.375,
+   "macro_f1": 0.288458510470792,
+   "classes": [
+    "Front",
+    "Back",
+    "Side"
+   ],
+   "per_class_f1": {
+    "Front": 0.0,
+    "Back": 0.5205479452054794,
+    "Side": 0.3448275862068966
+   },
+   "support": {
+    "Front": 26,
+    "Back": 19,
+    "Side": 19
+   },
+   "confusion_matrix": [
+    [
+     0,
+     21,
+     5
+    ],
+    [
+     0,
+     19,
+     0
+    ],
+    [
+     0,
+     14,
+     5
+    ]
+   ]
+  },
+  "mounting": {
+   "n": 64,
+   "accuracy": 0.4375,
+   "macro_f1": 0.34545454545454546,
+   "classes": [
+    "Pole-Mounted",
+    "Wall-Mounted"
+   ],
+   "per_class_f1": {
+    "Pole-Mounted": 0.5909090909090909,
+    "Wall-Mounted": 0.1
+   },
+   "support": {
+    "Pole-Mounted": 60,
+    "Wall-Mounted": 4
+   },
+   "confusion_matrix": [
+    [
+     26,
+     34
+    ],
+    [
+     2,
+     2
+    ]
+   ]
+  },
+  "condition": {
+   "n": 64,
+   "accuracy": 0.703125,
+   "macro_f1": 0.3976111896903976,
+   "classes": [
+    "Good",
+    "Weathered",
+    "Heavily Damaged"
+   ],
+   "per_class_f1": {
+    "Good": 0.8118811881188119,
+    "Weathered": 0.38095238095238093,
+    "Heavily Damaged": 0.0
+   },
+   "support": {
+    "Good": 46,
+    "Weathered": 13,
+    "Heavily Damaged": 5
+   },
+   "confusion_matrix": [
+    [
+     41,
+     4,
+     1
+    ],
+    [
+     9,
+     4,
+     0
+    ],
+    [
+     5,
+     0,
+     0
+    ]
+   ]
+  },
+  "sign_shape": {
+   "n": 64,
+   "accuracy": 0.3125,
+   "macro_f1": 0.13762765121759624,
+   "classes": [
+    "Circular",
+    "Quadrangle",
+    "Triangular",
+    "Octagonal",
+    "Pentagon"
+   ],
+   "per_class_f1": {
+    "Circular": 0.47761194029850745,
+    "Quadrangle": 0.21052631578947367,
+    "Triangular": 0.0,
+    "Octagonal": 0.0,
+    "Pentagon": 0.0
+   },
+   "support": {
+    "Circular": 25,
+    "Quadrangle": 17,
+    "Triangular": 13,
+    "Octagonal": 6,
+    "Pentagon": 3
+   },
+   "confusion_matrix": [
+    [
+     16,
+     9,
+     0,
+     0,
+     0
+    ],
+    [
+     12,
+     4,
+     1,
+     0,
+     0
+    ],
+    [
+     10,
+     3,
+     0,
+     0,
+     0
+    ],
+    [
+     3,
+     3,
+     0,
+     0,
+     0
+    ],
+    [
+     1,
+     2,
+     0,
+     0,
+     0
+    ]
+   ]
+  }
+ }
+}

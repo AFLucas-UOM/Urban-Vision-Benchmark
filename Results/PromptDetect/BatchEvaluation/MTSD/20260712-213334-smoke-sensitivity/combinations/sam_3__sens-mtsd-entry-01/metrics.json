@@ -1,0 +1,43 @@
+{
+  "dataset": "MTSD",
+  "split": "test",
+  "model": "SAM 3",
+  "prompt_id": "sens-mtsd-entry-01",
+  "prompt": "no entry sign",
+  "prompt_group": "paraphrase-sensitivity",
+  "target_classes": [
+    "No Entry (One Way)"
+  ],
+  "prompt_class_confusion": {
+    "Blind-Spot Mirror (Convex Mirror)": 1,
+    "Back-Unknown": 1,
+    "Stop Sign": 2,
+    "Auxiliary Sign": 3,
+    "Directional Sign": 1,
+    "Other-Unknown": 1,
+    "Pedestrian Crossing": 1
+  },
+  "tp": 0,
+  "fp": 13,
+  "fn": 0,
+  "duplicates": 0,
+  "precision": 0.0,
+  "recall": 0.0,
+  "f1": 0.0,
+  "accuracy": 0.0,
+  "mean_matched_iou": 0.0,
+  "ap50": 0.0,
+  "map50_95": 0.0,
+  "n_gt": 0,
+  "n_images": 5,
+  "target_gt_boxes": 0,
+  "positive_images": 0,
+  "negative_images": 5,
+  "fp_overlapping_nontarget": 10,
+  "model_load_ms": 9712.9,
+  "sensitivity_family": "mtsd-no-entry",
+  "variant_type": "canonical",
+  "mean_inference_ms": 191.69,
+  "has_confidence": true,
+  "ap_meaningful": true
+}

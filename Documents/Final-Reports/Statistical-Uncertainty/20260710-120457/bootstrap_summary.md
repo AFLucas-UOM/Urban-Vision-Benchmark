@@ -1,0 +1,201 @@
+# Bootstrap uncertainty summary
+
+Generated: 2026-07-10T12:04:59  |  Commit: `15853d305771`
+
+Seeded percentile bootstrap (2000 resamples, seed 42, 95% intervals) over stored sample-level outcomes. Resampling units, exclusions and pairing rules: `bootstrap_config.json`; gaps: `missing_inputs.md`.
+
+## MDWD-detection - status: **final**
+
+| Model | Run | Split | Metric | Point | 95% CI | Units |
+| --- | --- | --- | --- | --- | --- | --- |
+| yolo11l@YOLO11-EUVIP | yolo11l__YOLO11-EUVIP__test__original | test | precision | 0.8919 | [0.8665, 0.9167] | 369 |
+| yolo11l@YOLO11-EUVIP | yolo11l__YOLO11-EUVIP__test__original | test | recall | 0.8653 | [0.8311, 0.8991] | 369 |
+| yolo11l@YOLO11-EUVIP | yolo11l__YOLO11-EUVIP__test__original | test | f1 | 0.8784 | [0.8522, 0.9039] | 369 |
+| yolo11l@YOLO11-EUVIP | yolo11l__YOLO11-EUVIP__test__original | test | mean_matched_iou | 0.9094 | [0.9015, 0.9176] | 369 |
+| yolo11l@YOLO11-EUVIP | yolo11l__YOLO11-EUVIP__valid__original | valid | precision | 0.9148 | [0.8914, 0.936] | 369 |
+| yolo11l@YOLO11-EUVIP | yolo11l__YOLO11-EUVIP__valid__original | valid | recall | 0.861 | [0.8321, 0.8888] | 369 |
+| yolo11l@YOLO11-EUVIP | yolo11l__YOLO11-EUVIP__valid__original | valid | f1 | 0.8871 | [0.8634, 0.9086] | 369 |
+| yolo11l@YOLO11-EUVIP | yolo11l__YOLO11-EUVIP__valid__original | valid | mean_matched_iou | 0.9152 | [0.9083, 0.9218] | 369 |
+| yolo12m@YOLO12-EUVIP | yolo12m__YOLO12-EUVIP__test__original | test | precision | 0.9037 | [0.8826, 0.9238] | 369 |
+| yolo12m@YOLO12-EUVIP | yolo12m__YOLO12-EUVIP__test__original | test | recall | 0.8743 | [0.8392, 0.9079] | 369 |
+| yolo12m@YOLO12-EUVIP | yolo12m__YOLO12-EUVIP__test__original | test | f1 | 0.8888 | [0.864, 0.9117] | 369 |
+| yolo12m@YOLO12-EUVIP | yolo12m__YOLO12-EUVIP__test__original | test | mean_matched_iou | 0.9068 | [0.8997, 0.9146] | 369 |
+| yolo12m@YOLO12-EUVIP | yolo12m__YOLO12-EUVIP__valid__original | valid | precision | 0.8836 | [0.8544, 0.9112] | 369 |
+| yolo12m@YOLO12-EUVIP | yolo12m__YOLO12-EUVIP__valid__original | valid | recall | 0.8853 | [0.8607, 0.9102] | 369 |
+| yolo12m@YOLO12-EUVIP | yolo12m__YOLO12-EUVIP__valid__original | valid | f1 | 0.8844 | [0.8614, 0.9066] | 369 |
+| yolo12m@YOLO12-EUVIP | yolo12m__YOLO12-EUVIP__valid__original | valid | mean_matched_iou | 0.9068 | [0.8995, 0.9137] | 369 |
+| yolo26l@YOLO26-DGX | yolo26l__YOLO26-DGX__test__original | test | precision | 0.9341 | [0.9149, 0.9512] | 369 |
+| yolo26l@YOLO26-DGX | yolo26l__YOLO26-DGX__test__original | test | recall | 0.8843 | [0.8509, 0.9168] | 369 |
+| yolo26l@YOLO26-DGX | yolo26l__YOLO26-DGX__test__original | test | f1 | 0.9085 | [0.8856, 0.9311] | 369 |
+| yolo26l@YOLO26-DGX | yolo26l__YOLO26-DGX__test__original | test | mean_matched_iou | 0.9175 | [0.9103, 0.9252] | 369 |
+| yolo26l@YOLO26-DGX | yolo26l__YOLO26-DGX__valid__original | valid | precision | 0.9296 | [0.9052, 0.9515] | 369 |
+| yolo26l@YOLO26-DGX | yolo26l__YOLO26-DGX__valid__original | valid | recall | 0.8741 | [0.8479, 0.9003] | 369 |
+| yolo26l@YOLO26-DGX | yolo26l__YOLO26-DGX__valid__original | valid | f1 | 0.901 | [0.8795, 0.9219] | 369 |
+| yolo26l@YOLO26-DGX | yolo26l__YOLO26-DGX__valid__original | valid | mean_matched_iou | 0.9236 | [0.9178, 0.9292] | 369 |
+| yolo26l@YOLO26-EUVIP | yolo26l__YOLO26-EUVIP__test__original | test | precision | 0.9454 | [0.9256, 0.9633] | 369 |
+| yolo26l@YOLO26-EUVIP | yolo26l__YOLO26-EUVIP__test__original | test | recall | 0.8761 | [0.8435, 0.9088] | 369 |
+| yolo26l@YOLO26-EUVIP | yolo26l__YOLO26-EUVIP__test__original | test | f1 | 0.9094 | [0.8856, 0.9309] | 369 |
+| yolo26l@YOLO26-EUVIP | yolo26l__YOLO26-EUVIP__test__original | test | mean_matched_iou | 0.9215 | [0.9156, 0.9277] | 369 |
+| yolo26l@YOLO26-EUVIP | yolo26l__YOLO26-EUVIP__valid__original | valid | precision | 0.9173 | [0.8939, 0.9402] | 369 |
+| yolo26l@YOLO26-EUVIP | yolo26l__YOLO26-EUVIP__valid__original | valid | recall | 0.8797 | [0.8545, 0.904] | 369 |
+| yolo26l@YOLO26-EUVIP | yolo26l__YOLO26-EUVIP__valid__original | valid | f1 | 0.8981 | [0.8764, 0.9191] | 369 |
+| yolo26l@YOLO26-EUVIP | yolo26l__YOLO26-EUVIP__valid__original | valid | mean_matched_iou | 0.9233 | [0.9173, 0.9291] | 369 |
+
+## MTSD-attributes - status: **historical snapshot**
+
+| Model | Run | Split | Metric | Point | 95% CI | Units |
+| --- | --- | --- | --- | --- | --- | --- |
+| convnext | convnext-20260704-015608 | test | view_angle/accuracy | 0.9145 | [0.8907, 0.9384] | 503 |
+| convnext | convnext-20260704-015608 | test | view_angle/macro_f1 | 0.9054 | [0.8783, 0.9312] | 503 |
+| convnext | convnext-20260704-015608 | test | view_angle/f1[Front] | 0.9202 | [0.8908, 0.9455] | 503 |
+| convnext | convnext-20260704-015608 | test | view_angle/f1[Back] | 0.9474 | [0.9242, 0.9684] | 503 |
+| convnext | convnext-20260704-015608 | test | view_angle/f1[Side] | 0.8485 | [0.7968, 0.8936] | 503 |
+| convnext | convnext-20260704-015608 | test | mounting/accuracy | 0.9503 | [0.9304, 0.9682] | 503 |
+| convnext | convnext-20260704-015608 | test | mounting/macro_f1 | 0.8734 | [0.8231, 0.9183] | 503 |
+| convnext | convnext-20260704-015608 | test | mounting/f1[Pole-Mounted] | 0.9721 | [0.9607, 0.9824] | 503 |
+| convnext | convnext-20260704-015608 | test | mounting/f1[Wall-Mounted] | 0.7748 | [0.6813, 0.8551] | 503 |
+| convnext | convnext-20260704-015608 | test | condition/accuracy | 0.8566 | [0.8247, 0.8865] | 502 |
+| convnext | convnext-20260704-015608 | test | condition/macro_f1 | 0.7113 | [0.6391, 0.774] | 502 |
+| convnext | convnext-20260704-015608 | test | condition/f1[Good] | 0.9258 | [0.9063, 0.9433] | 502 |
+| convnext | convnext-20260704-015608 | test | condition/f1[Weathered] | 0.6199 | [0.5255, 0.6982] | 502 |
+| convnext | convnext-20260704-015608 | test | condition/f1[Heavily Damaged] | 0.5882 | [0.4102, 0.7385] | 502 |
+| convnext | convnext-20260704-015608 | test | sign_shape/accuracy | 0.9702 | [0.9543, 0.9841] | 503 |
+| convnext | convnext-20260704-015608 | test | sign_shape/macro_f1 | 0.9663 | [0.9477, 0.9823] | 503 |
+| convnext | convnext-20260704-015608 | test | sign_shape/f1[Circular] | 0.9823 | [0.9685, 0.9934] | 503 |
+| convnext | convnext-20260704-015608 | test | sign_shape/f1[Quadrangle] | 0.9764 | [0.9574, 0.9929] | 503 |
+| convnext | convnext-20260704-015608 | test | sign_shape/f1[Triangular] | 0.9474 | [0.8989, 0.9833] | 503 |
+| convnext | convnext-20260704-015608 | test | sign_shape/f1[Octagonal] | 0.9256 | [0.8718, 0.9677] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | view_angle/accuracy | 0.8549 | [0.8231, 0.8847] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | view_angle/macro_f1 | 0.8426 | [0.8099, 0.8736] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | view_angle/f1[Front] | 0.8556 | [0.8162, 0.8907] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | view_angle/f1[Back] | 0.9118 | [0.8804, 0.9387] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | view_angle/f1[Side] | 0.7603 | [0.6984, 0.814] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | mounting/accuracy | 0.9026 | [0.8748, 0.9284] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | mounting/macro_f1 | 0.8026 | [0.7498, 0.8528] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | mounting/f1[Pole-Mounted] | 0.9431 | [0.9266, 0.9583] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | mounting/f1[Wall-Mounted] | 0.6621 | [0.5691, 0.75] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | condition/accuracy | 0.7291 | [0.6892, 0.7669] | 502 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | condition/macro_f1 | 0.5673 | [0.5098, 0.6212] | 502 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | condition/f1[Good] | 0.8487 | [0.8184, 0.875] | 502 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | condition/f1[Weathered] | 0.449 | [0.3567, 0.5273] | 502 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | condition/f1[Heavily Damaged] | 0.4043 | [0.2708, 0.5234] | 502 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | sign_shape/accuracy | 0.8887 | [0.8588, 0.9165] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | sign_shape/macro_f1 | 0.8389 | [0.7854, 0.8821] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | sign_shape/f1[Circular] | 0.9099 | [0.88, 0.937] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | sign_shape/f1[Quadrangle] | 0.9225 | [0.8889, 0.9527] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | sign_shape/f1[Triangular] | 0.878 | [0.8113, 0.9355] | 503 |
+| convnext_frozen | convnext_frozen-20260704-013448 | test | sign_shape/f1[Octagonal] | 0.7967 | [0.7076, 0.8654] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | view_angle/accuracy | 0.8748 | [0.8449, 0.9026] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | view_angle/macro_f1 | 0.8649 | [0.8331, 0.8953] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | view_angle/f1[Front] | 0.8717 | [0.8338, 0.9053] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | view_angle/f1[Back] | 0.9196 | [0.8894, 0.9466] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | view_angle/f1[Side] | 0.8034 | [0.7461, 0.8549] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | mounting/accuracy | 0.9324 | [0.9085, 0.9543] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | mounting/macro_f1 | 0.8458 | [0.795, 0.8911] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | mounting/f1[Pole-Mounted] | 0.9614 | [0.9474, 0.9736] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | mounting/f1[Wall-Mounted] | 0.7302 | [0.6364, 0.8101] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | condition/accuracy | 0.7092 | [0.6673, 0.749] | 502 |
+| dinov3 | dinov3-20260704-010441 | test | condition/macro_f1 | 0.5534 | [0.4894, 0.6196] | 502 |
+| dinov3 | dinov3-20260704-010441 | test | condition/f1[Good] | 0.8216 | [0.7889, 0.8508] | 502 |
+| dinov3 | dinov3-20260704-010441 | test | condition/f1[Weathered] | 0.4925 | [0.4167, 0.5641] | 502 |
+| dinov3 | dinov3-20260704-010441 | test | condition/f1[Heavily Damaged] | 0.3462 | [0.1818, 0.5002] | 502 |
+| dinov3 | dinov3-20260704-010441 | test | sign_shape/accuracy | 0.9026 | [0.8767, 0.9284] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | sign_shape/macro_f1 | 0.8663 | [0.8143, 0.9072] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | sign_shape/f1[Circular] | 0.9273 | [0.9, 0.9511] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | sign_shape/f1[Quadrangle] | 0.922 | [0.8897, 0.951] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | sign_shape/f1[Triangular] | 0.8621 | [0.7912, 0.9231] | 503 |
+| dinov3 | dinov3-20260704-010441 | test | sign_shape/f1[Octagonal] | 0.8346 | [0.7551, 0.8992] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | view_angle/accuracy | 0.9205 | [0.8966, 0.9423] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | view_angle/macro_f1 | 0.9129 | [0.8866, 0.9375] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | view_angle/f1[Front] | 0.9173 | [0.8862, 0.9429] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | view_angle/f1[Back] | 0.957 | [0.9347, 0.9753] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | view_angle/f1[Side] | 0.8644 | [0.8142, 0.9083] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | mounting/accuracy | 0.9563 | [0.9384, 0.9742] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | mounting/macro_f1 | 0.8959 | [0.8508, 0.9356] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | mounting/f1[Pole-Mounted] | 0.9752 | [0.9642, 0.985] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | mounting/f1[Wall-Mounted] | 0.8167 | [0.735, 0.8873] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | condition/accuracy | 0.8267 | [0.7928, 0.8606] | 502 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | condition/macro_f1 | 0.7346 | [0.6704, 0.7891] | 502 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | condition/f1[Good] | 0.898 | [0.8736, 0.9204] | 502 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | condition/f1[Weathered] | 0.6161 | [0.5359, 0.69] | 502 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | condition/f1[Heavily Damaged] | 0.6897 | [0.5312, 0.8109] | 502 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | sign_shape/accuracy | 0.9602 | [0.9404, 0.9762] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | sign_shape/macro_f1 | 0.9503 | [0.9182, 0.9734] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | sign_shape/f1[Circular] | 0.9731 | [0.9553, 0.9873] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | sign_shape/f1[Quadrangle] | 0.9695 | [0.9485, 0.9884] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | sign_shape/f1[Triangular] | 0.9402 | [0.8908, 0.9796] | 503 |
+| dinov3_lora | dinov3_lora-20260704-020900 | test | sign_shape/f1[Octagonal] | 0.912 | [0.8524, 0.9581] | 503 |
+| vjepa | vjepa-20260704-011610 | test | view_angle/accuracy | 0.8907 | [0.8628, 0.9165] | 503 |
+| vjepa | vjepa-20260704-011610 | test | view_angle/macro_f1 | 0.8823 | [0.852, 0.91] | 503 |
+| vjepa | vjepa-20260704-011610 | test | view_angle/f1[Front] | 0.8976 | [0.864, 0.9272] | 503 |
+| vjepa | vjepa-20260704-011610 | test | view_angle/f1[Back] | 0.9173 | [0.8878, 0.9434] | 503 |
+| vjepa | vjepa-20260704-011610 | test | view_angle/f1[Side] | 0.8319 | [0.7767, 0.8811] | 503 |
+| vjepa | vjepa-20260704-011610 | test | mounting/accuracy | 0.9364 | [0.9145, 0.9563] | 503 |
+| vjepa | vjepa-20260704-011610 | test | mounting/macro_f1 | 0.8672 | [0.8215, 0.9084] | 503 |
+| vjepa | vjepa-20260704-011610 | test | mounting/f1[Pole-Mounted] | 0.963 | [0.9496, 0.9751] | 503 |
+| vjepa | vjepa-20260704-011610 | test | mounting/f1[Wall-Mounted] | 0.7714 | [0.6885, 0.8434] | 503 |
+| vjepa | vjepa-20260704-011610 | test | condition/accuracy | 0.7371 | [0.6992, 0.7749] | 502 |
+| vjepa | vjepa-20260704-011610 | test | condition/macro_f1 | 0.511 | [0.457, 0.5658] | 502 |
+| vjepa | vjepa-20260704-011610 | test | condition/f1[Good] | 0.8763 | [0.8505, 0.9009] | 502 |
+| vjepa | vjepa-20260704-011610 | test | condition/f1[Weathered] | 0.3681 | [0.2686, 0.4572] | 502 |
+| vjepa | vjepa-20260704-011610 | test | condition/f1[Heavily Damaged] | 0.2887 | [0.1666, 0.404] | 502 |
+| vjepa | vjepa-20260704-011610 | test | sign_shape/accuracy | 0.8628 | [0.833, 0.8926] | 503 |
+| vjepa | vjepa-20260704-011610 | test | sign_shape/macro_f1 | 0.8189 | [0.7633, 0.8637] | 503 |
+| vjepa | vjepa-20260704-011610 | test | sign_shape/f1[Circular] | 0.9065 | [0.8764, 0.9333] | 503 |
+| vjepa | vjepa-20260704-011610 | test | sign_shape/f1[Quadrangle] | 0.8961 | [0.8571, 0.9325] | 503 |
+| vjepa | vjepa-20260704-011610 | test | sign_shape/f1[Triangular] | 0.8772 | [0.8077, 0.9365] | 503 |
+| vjepa | vjepa-20260704-011610 | test | sign_shape/f1[Octagonal] | 0.7006 | [0.6122, 0.7801] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | view_angle/accuracy | 0.9165 | [0.8926, 0.9404] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | view_angle/macro_f1 | 0.9089 | [0.8824, 0.9351] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | view_angle/f1[Front] | 0.9022 | [0.8691, 0.9316] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | view_angle/f1[Back] | 0.9561 | [0.9352, 0.9749] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | view_angle/f1[Side] | 0.8684 | [0.8209, 0.9106] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | mounting/accuracy | 0.9583 | [0.9404, 0.9742] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | mounting/macro_f1 | 0.9054 | [0.8623, 0.9419] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | mounting/f1[Pole-Mounted] | 0.9761 | [0.9649, 0.9859] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | mounting/f1[Wall-Mounted] | 0.8346 | [0.7568, 0.8991] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | condition/accuracy | 0.8028 | [0.7669, 0.8386] | 502 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | condition/macro_f1 | 0.5948 | [0.523, 0.6634] | 502 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | condition/f1[Good] | 0.9027 | [0.8794, 0.9244] | 502 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | condition/f1[Weathered] | 0.5636 | [0.4789, 0.6392] | 502 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | condition/f1[Heavily Damaged] | 0.3182 | [0.1333, 0.4929] | 502 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | sign_shape/accuracy | 0.9662 | [0.9483, 0.9801] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | sign_shape/macro_f1 | 0.9507 | [0.9149, 0.9764] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | sign_shape/f1[Circular] | 0.98 | [0.9655, 0.9913] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | sign_shape/f1[Quadrangle] | 0.9664 | [0.9441, 0.9854] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | sign_shape/f1[Triangular] | 0.955 | [0.9109, 0.9905] | 503 |
+| vjepa_lora | vjepa_lora-20260704-022043 | test | sign_shape/f1[Octagonal] | 0.9355 | [0.8824, 0.9756] | 503 |
+
+## PromptDetect-MDWD - status: **pilot**
+
+| Model | Run | Split | Metric | Point | 95% CI | Units |
+| --- | --- | --- | --- | --- | --- | --- |
+| Cosmos Reason2 2B | MDWD/20260710-011505 | garbage bag | test | precision | 1.0 | [1.0, 1.0] | 10 |
+| Cosmos Reason2 2B | MDWD/20260710-011505 | garbage bag | test | recall | 0.3478 | [0.0417, 0.68] | 10 |
+| Cosmos Reason2 2B | MDWD/20260710-011505 | garbage bag | test | f1 | 0.5161 | [0.08, 0.8095] | 10 |
+| Cosmos Reason2 2B | MDWD/20260710-011505 | garbage bag | test | mean_matched_iou | 0.8921 | [0.8765, 0.9424] | 10 |
+| Cosmos Reason2 2B | MDWD/20260710-011505 | garbage bag | test | fp_per_image | 0.0 | [0.0, 0.0] | 10 |
+| Cosmos Reason2 2B | MDWD/20260710-011505 | garbage bag | test | fn_per_image | 1.5 | [0.7, 2.2] | 10 |
+| SAM 3.1 | MDWD/20260710-011505 | garbage bag | test | precision | 0.9167 | [0.8461, 1.0] | 10 |
+| SAM 3.1 | MDWD/20260710-011505 | garbage bag | test | recall | 0.9565 | [0.8636, 1.0] | 10 |
+| SAM 3.1 | MDWD/20260710-011505 | garbage bag | test | f1 | 0.9362 | [0.8889, 1.0] | 10 |
+| SAM 3.1 | MDWD/20260710-011505 | garbage bag | test | mean_matched_iou | 0.9308 | [0.9081, 0.9531] | 10 |
+| SAM 3.1 | MDWD/20260710-011505 | garbage bag | test | fp_per_image | 0.2 | [0.0, 0.5] | 10 |
+| SAM 3.1 | MDWD/20260710-011505 | garbage bag | test | fn_per_image | 0.1 | [0.0, 0.3] | 10 |
+
+| Comparison | Split | Metric | Observed diff | 95% CI | P(A better) | Units |
+| --- | --- | --- | --- | --- | --- | --- |
+| Cosmos Reason2 2B vs SAM 3.1 | prompt: garbage bag | test | f1 | -0.42 | [-0.8791, -0.131] | 0.0005 | 10 |
+| Cosmos Reason2 2B vs SAM 3.1 | prompt: garbage bag | test | recall | -0.6087 | [-0.9091, -0.3042] | 0.0 | 10 |
+| Cosmos Reason2 2B vs SAM 3.1 | prompt: garbage bag | test | mean_matched_iou | -0.0388 | [-0.0657, 0.0186] | 0.0745 | 10 |
+
+> Interpretation criterion: a difference is only called robust when its percentile CI excludes zero; the P(A better) column is the raw proportion of resamples, not a p-value.
+
+## Figures
+
+- `Documents/Final-Figures/Statistical-Uncertainty/20260710-120457/mdwd_detection_ci.png`
+- `Documents/Final-Figures/Statistical-Uncertainty/20260710-120457/mtsd_attributes_ci.png`
+- `Documents/Final-Figures/Statistical-Uncertainty/20260710-120457/promptdetect_mdwd_ci.png`
+- `Documents/Final-Figures/Statistical-Uncertainty/20260710-120457/paired_differences.png`
+
+*Read-only analysis - no inference was run; pending analyses are listed in `missing_inputs.md`.*

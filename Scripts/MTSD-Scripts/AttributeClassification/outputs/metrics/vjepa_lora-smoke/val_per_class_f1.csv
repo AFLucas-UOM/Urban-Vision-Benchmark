@@ -1,0 +1,14 @@
+variant,split,attribute,class,f1,support
+vjepa_lora,val,view_angle,Front,0.0000,26
+vjepa_lora,val,view_angle,Back,0.5205,19
+vjepa_lora,val,view_angle,Side,0.3448,19
+vjepa_lora,val,mounting,Pole-Mounted,0.5909,60
+vjepa_lora,val,mounting,Wall-Mounted,0.1000,4
+vjepa_lora,val,condition,Good,0.8119,46
+vjepa_lora,val,condition,Weathered,0.3810,13
+vjepa_lora,val,condition,Heavily Damaged,0.0000,5
+vjepa_lora,val,sign_shape,Circular,0.4776,25
+vjepa_lora,val,sign_shape,Quadrangle,0.2105,17
+vjepa_lora,val,sign_shape,Triangular,0.0000,13
+vjepa_lora,val,sign_shape,Octagonal,0.0000,6
+vjepa_lora,val,sign_shape,Pentagon,0.0000,3
