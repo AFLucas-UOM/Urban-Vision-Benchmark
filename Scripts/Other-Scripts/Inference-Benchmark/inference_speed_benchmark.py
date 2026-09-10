@@ -426,7 +426,10 @@ def benchmark_yolo(entry: ModelEntry, images: list[Path], args, device: str) -> 
 def benchmark_rfdetr(entry: ModelEntry, images: list[Path], args, device: str) -> dict:
     from PIL import Image
 
-    size_token = entry.id.split("@")[0].replace("rfdetr-", "")
+    # Historical MTSD run folders use both ``rfdetr-m`` and ``rfdetrm``.
+    # Parse the scale rather than assuming one particular run-name spelling.
+    size_match = re.search(r"rfdetr[-_]?([nsm])", entry.id.lower())
+    size_token = size_match.group(1) if size_match else None
     try:
         from rfdetr import RFDETRMedium, RFDETRNano, RFDETRSmall
     except ImportError as exc:

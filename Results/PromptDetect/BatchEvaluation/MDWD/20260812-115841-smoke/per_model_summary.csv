@@ -1,2 +1,0 @@
-model,headline_prompt_groups,n_headline_prompts,ap_used_for_ranking,precision,recall,f1,accuracy,mean_matched_iou,mean_inference_ms
-SAM 3,"class-targeted,synonym-comparison",1,False,0.0,0.0,0.0,0.0,0.0,550.2

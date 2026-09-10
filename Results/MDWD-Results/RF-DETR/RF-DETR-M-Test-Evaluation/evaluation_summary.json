@@ -1,0 +1,90 @@
+{
+  "model": "RF-DETR-M",
+  "checkpoint": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\MDWD-RF-DETR-M.pt",
+  "checkpoint_sha256": "3b86153974560b8084585baa70547ef19bf364a519e91eaa1e80ca46cc7d3735",
+  "model_parameters": 33381628,
+  "model_parameters_million": 33.381628,
+  "checkpoint_size_mb": 127.54223155975342,
+  "dataset": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MDWD\\MDWD-RFDETR",
+  "split": "test",
+  "resolution": 640,
+  "device": "cuda",
+  "images": 369,
+  "raw_predictions": 110693,
+  "dropped_degenerate_predictions": 7,
+  "invalid_raw_class_ids": [],
+  "inference_seconds": 8.878637400004664,
+  "map50": 0.9429451509893221,
+  "map50_95": 0.7856829613937032,
+  "precision": 0.9017391304347826,
+  "recall": 0.9376130198915009,
+  "f1": 0.9193262411347517,
+  "fixed_audit_confidence_threshold": 0.25,
+  "fixed_audit_iou_threshold": 0.5,
+  "fixed_audit_true_positives": 1037,
+  "fixed_audit_false_positives": 113,
+  "fixed_audit_false_negatives": 69,
+  "best_f1_operating_point": {
+    "confidence": 0.5361467599868774,
+    "precision": 0.9682386910490857,
+    "recall": 0.9095840867992767,
+    "f1": 0.9379953379953381
+  },
+  "class_level_results": [
+    {
+      "class": "Mixed Waste",
+      "support": 334,
+      "precision": 0.901685393258427,
+      "recall": 0.9610778443113772,
+      "f1": 0.9304347826086956,
+      "mean_matched_iou": 0.8957983838536088,
+      "true_positives": 321,
+      "false_positives": 35,
+      "false_negatives": 13
+    },
+    {
+      "class": "Orange CMD",
+      "support": 78,
+      "precision": 0.8227848101265823,
+      "recall": 0.8333333333333334,
+      "f1": 0.8280254777070064,
+      "mean_matched_iou": 0.9123588041394077,
+      "true_positives": 65,
+      "false_positives": 14,
+      "false_negatives": 13
+    },
+    {
+      "class": "Organic Waste",
+      "support": 178,
+      "precision": 0.9558011049723757,
+      "recall": 0.9719101123595506,
+      "f1": 0.9637883008356547,
+      "mean_matched_iou": 0.911850664527641,
+      "true_positives": 173,
+      "false_positives": 8,
+      "false_negatives": 5
+    },
+    {
+      "class": "Other Waste",
+      "support": 278,
+      "precision": 0.8692579505300353,
+      "recall": 0.8848920863309353,
+      "f1": 0.8770053475935828,
+      "mean_matched_iou": 0.8696291864502256,
+      "true_positives": 246,
+      "false_positives": 37,
+      "false_negatives": 32
+    },
+    {
+      "class": "Recyclable Material",
+      "support": 238,
+      "precision": 0.9243027888446215,
+      "recall": 0.9747899159663865,
+      "f1": 0.9488752556237218,
+      "mean_matched_iou": 0.9228200398311912,
+      "true_positives": 232,
+      "false_positives": 19,
+      "false_negatives": 6
+    }
+  ]
+}

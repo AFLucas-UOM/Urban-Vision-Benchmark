@@ -24,6 +24,7 @@ same process would shadow it and break the torch.hub import.
 """
 
 import logging
+import sys
 from pathlib import Path
 
 import torch
@@ -50,6 +51,62 @@ def _ensure_hub_checkpoint(url):
     target.parent.mkdir(parents=True, exist_ok=True)
     log.info("Downloading V-JEPA 2.1 checkpoint from %s (several GB)", url)
     torch.hub.download_url_to_file(url, str(target), progress=True)
+
+
+def _load_vjepa_hub(repo, entrypoint):
+    """Load V-JEPA 2.1 while isolating colliding top-level hub packages.
+
+    Meta's hub code imports top-level ``src`` and ``app.vjepa_2_1``.  Other
+    experiment libraries can preload unrelated packages with either name;
+    then the hub import resolves the wrong package.  Temporarily hide only
+    those conflicting trees, load the exact requested V-JEPA model, and
+    restore the caller's modules afterwards.
+    """
+    hub_root = Path(torch.hub.get_dir()) / "facebookresearch_vjepa2_main"
+    saved = {}
+    hub_root = hub_root.resolve()
+    original_sys_path = list(sys.path)
+
+    def belongs_to_hub(module):
+        locations = list(getattr(module, "__path__", []))
+        module_file = getattr(module, "__file__", None)
+        if module_file:
+            locations.append(module_file)
+        for location in locations:
+            try:
+                path = Path(location).resolve()
+                if path == hub_root or hub_root in path.parents:
+                    return True
+            except (OSError, RuntimeError):
+                continue
+        return False
+
+    for root in ("src", "app"):
+        existing = sys.modules.get(root)
+        if existing is None or belongs_to_hub(existing):
+            continue
+        conflicts = {name: module for name, module in sys.modules.items()
+                     if name == root or name.startswith(f"{root}.")}
+        saved.update(conflicts)
+        for name in conflicts:
+            sys.modules.pop(name, None)
+    # A later ``app.py`` on sys.path overrides Meta's namespace-package
+    # directory even when the hub root is inserted at index zero.  PromptDetect
+    # exposes precisely such an app.py, so hide external providers while the
+    # V-JEPA entry point imports its own app.vjepa_2_1 package.
+    sys.path[:] = [raw for raw in sys.path if not (
+        (Path(raw) / "app.py").is_file() and Path(raw).resolve() != hub_root
+    )]
+    try:
+        return torch.hub.load(repo, entrypoint, trust_repo=True)
+    finally:
+        sys.path[:] = original_sys_path
+        if saved:
+            for name in [name for name in sys.modules if (
+                    name in ("src", "app") or name.startswith("src.")
+                    or name.startswith("app."))]:
+                sys.modules.pop(name, None)
+            sys.modules.update(saved)
 
 
 class VJEPABackbone(nn.Module):
@@ -85,11 +142,7 @@ class VJEPABackbone(nn.Module):
             try:
                 if model_cfg.get("torch_hub_checkpoint_url"):
                     _ensure_hub_checkpoint(model_cfg["torch_hub_checkpoint_url"])
-                loaded = torch.hub.load(
-                    model_cfg["torch_hub_repo"],
-                    entrypoint,
-                    trust_repo=True,
-                )
+                loaded = _load_vjepa_hub(model_cfg["torch_hub_repo"], entrypoint)
                 # V-JEPA 2.1 entry points return (encoder, predictor).
                 self.model = loaded[0] if isinstance(loaded, tuple) else loaded
                 self.backend = "torch_hub"

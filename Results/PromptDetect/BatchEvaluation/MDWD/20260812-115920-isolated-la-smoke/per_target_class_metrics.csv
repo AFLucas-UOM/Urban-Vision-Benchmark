@@ -1,2 +1,0 @@
-model,target_class,best_prompt_id,best_prompt,recall,f1
-LocateAnything 3B,Mixed Waste,mdwd-p1,black garbage bag,0.0,0.0

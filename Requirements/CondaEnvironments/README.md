@@ -18,9 +18,12 @@ experiments ran in.
 | `mtsd-base` | [environment-mtsd-base.yml](environment-mtsd-base.yml) | 3.12 | [Scripts/Other-Scripts/PromptDetect/](../../Scripts/Other-Scripts/PromptDetect/) main app (SAM 3 / 3.1 + Cosmos Reason2) and the [GDPR-Compliance](../../Scripts/Other-Scripts/GDPR-Compliance/) `sam31` backend |
 | `mtsd-la` | [environment-mtsd-la.yml](environment-mtsd-la.yml) | 3.12 | PromptDetect's LocateAnything-3B worker (`transformers==4.57.1`, spawned automatically — never activated by hand) |
 
-The corresponding loose pip requirements (unpinned/manual installs) live in
-[`Requirements/`](../../Requirements/) at the repository root; the YAMLs here
-are the pinned, reproducible superset of those files.
+The corresponding loose pip requirements live in [`Requirements/`](../../Requirements/)
+at the repository root. `requirements-traditional-training.txt` maps to `MDWD`,
+`requirements-attribute-classification.txt` maps to `mtsd-attrcls`, and the two
+PromptDetect files map to `mtsd-base` and `mtsd-la`. The YAMLs are the pinned,
+reproducible supersets; they also carry tools needed by the repository test,
+notebook, evaluation and inference-benchmark workflows.
 
 ## Why PyTorch is not in the YAMLs
 

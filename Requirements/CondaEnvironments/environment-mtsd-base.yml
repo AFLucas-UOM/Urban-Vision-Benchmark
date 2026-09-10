@@ -41,6 +41,11 @@ dependencies:
       - pandas==3.0.3
       - numpy==1.26.4
       - scipy==1.17.1
+      # ---- Notebook and validation tooling ----
+      - jupyterlab==4.4.7
+      - notebook==7.4.5
+      - ipykernel==6.30.1
+      - pytest>=8
       # ---- sam3 package prerequisites ----
       # pkg_resources was removed in setuptools 81; the sam3 package still uses it.
       - setuptools<81

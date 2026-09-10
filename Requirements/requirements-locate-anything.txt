@@ -18,26 +18,26 @@
 # ============================================================
 
 # ---- App framework ----
-gradio>=4.28.0
+gradio>=6.17.0
 
 # ---- transformers PINNED for LocateAnything's remote code ----
 transformers==4.57.1
-accelerate>=0.27.0
-huggingface_hub>=0.21.0
-safetensors>=0.4.0
+accelerate>=1.14.0
+huggingface_hub>=0.36.0,<1
+safetensors>=0.8.0
 
 # ---- LocateAnything remote-code dependencies ----
 # The model's modeling/processor files import these at module load time.
-peft
+peft>=0.19.0
 decord==0.6.0
-lmdb
+lmdb>=2.2.0
 
 # ---- Vision & numerics ----
-Pillow>=10.0.0
-opencv-python>=4.8.0
-matplotlib>=3.7.0
-pandas>=2.0.0
-numpy
+Pillow>=12.0.0
+opencv-python>=4.13.0
+matplotlib>=3.11.0
+pandas>=3.0.0
+numpy>=2.4.0
 
 # ---- PyTorch (install separately, see header / README) ----
 # torch

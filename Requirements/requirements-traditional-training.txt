@@ -1,22 +1,46 @@
-jupyter
-notebook
-ipykernel
-numpy<2.0
-pandas
-matplotlib
-seaborn
-opencv-python<4.13
-pillow
-tqdm
-torch
-torchvision
-ultralytics>=8.4.60
-wandb
-roboflow
+# ============================================================
+# MDWD and MTSD supervised-detection environment
+# ============================================================
+# This is the loose/manual counterpart of
+# Requirements/CondaEnvironments/environment-mdwd.yml. For a reproducible
+# environment (including the platform-specific PyTorch wheel), use the Conda
+# setup scripts instead. When installing manually, install torch and
+# torchvision from the appropriate PyTorch index before this file.
+# ============================================================
+
+# Detection and evaluation
+ultralytics==8.4.60
 rfdetr==1.3.0
-transformers>=4.57,<5
-supervision
-optuna
+supervision==0.27.0.post2
 pycocotools
-pytest
-PyYAML
+roboflow
+optuna
+
+# PyTorch is intentionally not pinned here: CUDA/CPU/macOS wheels use
+# different indexes. The Conda setup scripts install the tested 2.11/0.26 pair.
+# torch
+# torchvision
+
+# Data, visualisation and configuration
+numpy==1.26.4
+pandas==2.3.3
+matplotlib==3.10.6
+seaborn==0.13.2
+opencv-python==4.10.0.84
+pillow==11.1.0
+pyarrow==23.0.0
+scikit-learn==1.7.1
+scipy==1.16.0
+PyYAML==6.0.2
+tqdm==4.67.1
+
+# Experiment tracking and notebooks
+wandb==0.27.0
+python-dotenv==1.0.1
+jupyterlab==4.4.7
+notebook==7.4.5
+ipykernel==6.30.1
+jupyter_bbox_widget==0.6.0
+
+# Test suite
+pytest>=8

@@ -1,0 +1,96 @@
+{
+  "map50_95": 0.8022339970852791,
+  "map50": 0.9557335076134265,
+  "map75": 0.8768961250884812,
+  "map_small": 0.40971533911988806,
+  "map_medium": 0.7684653541106741,
+  "map_large": 0.9015550543293468,
+  "ar1": 0.4197402104559235,
+  "ar10": 0.8244197613835944,
+  "ar100": 0.8377859826457401,
+  "ar_small": 0.48751457339692633,
+  "ar_medium": 0.8155151515151515,
+  "ar_large": 0.9233889118691156,
+  "precision": 0.9619512195121951,
+  "recall": 0.9197761194029851,
+  "f1": 0.9403910348116358,
+  "f1_score_threshold": 0.5373194813728333,
+  "per_class": [
+    {
+      "category_id": 0,
+      "category_name": "Mixed Waste",
+      "ground_truth_count": 274,
+      "ap50_95": 0.8082693032522673,
+      "ap50": 0.9596074962297816,
+      "ap75": 0.8820663808607607,
+      "ar100": 0.8383211678832119,
+      "ar50": 0.9817518248175182
+    },
+    {
+      "category_id": 1,
+      "category_name": "Orange CMD",
+      "ground_truth_count": 78,
+      "ap50_95": 0.8234867404869487,
+      "ap50": 0.9439151016414961,
+      "ap75": 0.8800086651419804,
+      "ar100": 0.8423076923076923,
+      "ar50": 0.9615384615384616
+    },
+    {
+      "category_id": 2,
+      "category_name": "Organic Waste",
+      "ground_truth_count": 196,
+      "ap50_95": 0.7887877860217158,
+      "ap50": 0.9650557822530978,
+      "ap75": 0.8645869784293658,
+      "ar100": 0.823469387755102,
+      "ar50": 0.9795918367346939
+    },
+    {
+      "category_id": 3,
+      "category_name": "Other Waste",
+      "ground_truth_count": 261,
+      "ap50_95": 0.7410966659895143,
+      "ap50": 0.929388686767076,
+      "ap75": 0.8156214780452478,
+      "ar100": 0.8053639846743295,
+      "ar50": 0.9770114942528736
+    },
+    {
+      "category_id": 4,
+      "category_name": "Recyclable Material",
+      "ground_truth_count": 263,
+      "ap50_95": 0.8495294896759491,
+      "ap50": 0.9807004711756813,
+      "ap75": 0.9421971229650514,
+      "ar100": 0.879467680608365,
+      "ar50": 0.9923954372623575
+    }
+  ],
+  "evaluator": "pycocotools.COCOeval",
+  "iou_thresholds": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "max_dets": [
+    1,
+    10,
+    100
+  ],
+  "prediction_count": 110681,
+  "input_prediction_count": 110681,
+  "excluded_prediction_count": 0,
+  "evaluated_image_count": 369,
+  "evaluated_category_count": 5,
+  "excluded_category_names": [],
+  "common_f1_iou": 0.5,
+  "common_f1_averaging": "micro"
+}

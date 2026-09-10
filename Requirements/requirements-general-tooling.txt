@@ -11,6 +11,7 @@
 #   Requirements/requirements-promptdetect.txt             (mtsd-base: SAM 3/3.1 + Cosmos)
 #   Requirements/requirements-locate-anything.txt          (mtsd-la: LocateAnything worker)
 #   Requirements/requirements-attribute-classification.txt (mtsd-attrcls: attribute experiments)
+#   Requirements/requirements-traditional-training.txt     (MDWD/MTSD supervised detection)
 # ============================================================
 
 Pillow>=10.0.0
@@ -30,5 +31,5 @@ ipykernel>=6.0.0
 opencv-python>=4.8.0
 # Optional: plug-in YOLO detectors for the anonymiser (--yolo-weights)
 # ultralytics>=8.0.0
-pytest
-PyYAML
+pytest>=8.0.0
+PyYAML>=6.0.0

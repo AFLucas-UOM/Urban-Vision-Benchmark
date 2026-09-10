@@ -1,2 +1,0 @@
-model,prompt_group,n_prompts,precision,recall,f1,accuracy,mean_matched_iou,mean_inference_ms
-SAM 3,class-targeted,1,0.0,0.0,0.0,0.0,0.0,550.2

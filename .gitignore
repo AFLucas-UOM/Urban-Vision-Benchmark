@@ -113,6 +113,9 @@ desktop.ini
 .uvb_launcher_state.json
 .uvb_launcher_logs/
 
-# Other Runs
-Ox Alpha/
-YOLO26-DGX/
+# Local-only, obsolete, and ad-hoc experiment artefacts
+/TEMP/
+**/Ox Alpha/
+**/YOLO26-DGX/
+/Results/MDWD-Runs/[[]OLD] YOLO26-Sweep/
+Other/
