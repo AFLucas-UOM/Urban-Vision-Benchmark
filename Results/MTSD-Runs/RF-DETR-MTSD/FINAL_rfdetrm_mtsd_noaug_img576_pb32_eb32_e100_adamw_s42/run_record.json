@@ -218,11 +218,106 @@
             "precision": 0.7590075636878889,
             "recall": 0.7000000000000001
           }
+        ],
+        "test": [
+          {
+            "class": "Pedestrian Crossing",
+            "map@50:95": 0.6910854109803626,
+            "map@50": 0.8406259528471033,
+            "precision": 0.9595959595959596,
+            "recall": 0.66
+          },
+          {
+            "class": "Stop Sign",
+            "map@50:95": 0.8509126645591063,
+            "map@50": 0.9050791946328541,
+            "precision": 1.0,
+            "recall": 0.66
+          },
+          {
+            "class": "No Entry (One Way)",
+            "map@50:95": 0.8330062036744371,
+            "map@50": 0.8942088313145681,
+            "precision": 0.9931506849315068,
+            "recall": 0.66
+          },
+          {
+            "class": "Roundabout Ahead",
+            "map@50:95": 0.7983492964638981,
+            "map@50": 0.8737873266218077,
+            "precision": 1.0,
+            "recall": 0.66
+          },
+          {
+            "class": "No Through Road (T-Junction)",
+            "map@50:95": 0.9208416571726423,
+            "map@50": 0.9806683030485606,
+            "precision": 1.0,
+            "recall": 0.66
+          },
+          {
+            "class": "Blind-Spot Mirror (Convex Mirror)",
+            "map@50:95": 0.8438236554500208,
+            "map@50": 0.9015109401612739,
+            "precision": 1.0,
+            "recall": 0.66
+          },
+          {
+            "class": "Street Sign",
+            "map@50:95": 0.6281115967599186,
+            "map@50": 0.7401395223375798,
+            "precision": 0.9420289855072463,
+            "recall": 0.66
+          },
+          {
+            "class": "Directional Sign",
+            "map@50:95": 0.5064208643913036,
+            "map@50": 0.7160848176084381,
+            "precision": 0.6605504587155964,
+            "recall": 0.66
+          },
+          {
+            "class": "Tourist Sign",
+            "map@50:95": 0.7006092916984004,
+            "map@50": 0.7410510281797406,
+            "precision": 1.0,
+            "recall": 0.66
+          },
+          {
+            "class": "Auxiliary Sign",
+            "map@50:95": 0.3407466625054142,
+            "map@50": 0.45305083350061814,
+            "precision": 0.11644832605531295,
+            "recall": 0.66
+          },
+          {
+            "class": "Back-Unknown",
+            "map@50:95": 0.6317977044925002,
+            "map@50": 0.7603246667055427,
+            "precision": 0.9605263157894737,
+            "recall": 0.66
+          },
+          {
+            "class": "Other-Unknown",
+            "map@50:95": 0.5151836415056078,
+            "map@50": 0.6531028978304136,
+            "precision": 0.5770750988142292,
+            "recall": 0.66
+          },
+          {
+            "class": "all",
+            "map@50:95": 0.6884073874711343,
+            "map@50": 0.7883028595657084,
+            "precision": 0.8507813191174437,
+            "recall": 0.66
+          }
         ]
       },
       "map": 0.7367689339482767,
-      "precision": 0.7590075636878889,
-      "recall": 0.7000000000000001
+      "precision": 0.8507813191174437,
+      "recall": 0.66,
+      "map50": 0.7883028595657084,
+      "map50_95": 0.6884073874711343
     }
   },
   "native_metrics_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\FINAL_rfdetrm_mtsd_noaug_img576_pb32_eb32_e100_adamw_s42\\results.json",
@@ -267,11 +362,11 @@
     "gradient_checkpointing": true,
     "device": "cuda"
   },
-"test_evaluation_deferred": false,
+  "test_evaluation_deferred": false,
   "unified_eval_status": "completed",
   "unified_eval_error": null,
-"unified_evaluation_seconds": 149.24837240000488,
-"evaluation_split": "test",
+  "unified_evaluation_seconds": 149.24837240000488,
+  "evaluation_split": "test",
   "unified_validation_metrics": {
     "map50_95": 0.6959231192017208,
     "map50": 0.802497642873443,
@@ -438,29 +533,39 @@
     "inference_throughput_images_per_second": 5.211213430338154,
     "inference_peak_vram_mib": 1263.45068359375
   },
-"unified_test_metrics": {
-"map50_95": 0.6881755959952016,
-"map50": 0.792865230934019,
-"map75": 0.703341737023767,
-"ar100": 0.7560320102626599,
-"map_small": 0.08450515030069779,
-"map_medium": 0.3793732961314776,
-"map_large": 0.8816821967366575,
-"ar_small": 0.15127995567650743,
-"ar_medium": 0.5294752575855681,
-"ar_large": 0.9323229329261585,
-"precision": 0.8873591989987485,
-"recall": 0.7179746835443038,
-"f1": 0.7937307584662748,
-"f1_score_threshold": 0.41543465852737427,
-"prediction_count": 220445,
-"dropped_degenerate_predictions": 6,
-"clamped_predictions": 19962,
-"evaluator": "pycocotools.COCOeval",
-"evaluated_image_count": 747,
-"evaluated_category_count": 11,
-"excluded_category_names": ["Tourist Sign"],
-"evaluation_artifact": "Results/MTSD-Results/Unified-Evaluation-NoTourist/20260815-validation-only-noaug/RF-DETR-M-NoAug-576/evaluation_record.json"
-},
-  "finished_at": "2026-08-15T05:41:39.477544+00:00"
+  "unified_test_metrics": {
+    "map50_95": 0.6881755959952016,
+    "map50": 0.792865230934019,
+    "map75": 0.703341737023767,
+    "ar100": 0.7560320102626599,
+    "map_small": 0.08450515030069779,
+    "map_medium": 0.3793732961314776,
+    "map_large": 0.8816821967366575,
+    "ar_small": 0.15127995567650743,
+    "ar_medium": 0.5294752575855681,
+    "ar_large": 0.9323229329261585,
+    "precision": 0.8873591989987485,
+    "recall": 0.7179746835443038,
+    "f1": 0.7937307584662748,
+    "f1_score_threshold": 0.41543465852737427,
+    "prediction_count": 220445,
+    "dropped_degenerate_predictions": 6,
+    "clamped_predictions": 19962,
+    "evaluator": "pycocotools.COCOeval",
+    "evaluated_image_count": 747,
+    "evaluated_category_count": 11,
+    "excluded_category_names": [
+      "Tourist Sign"
+    ],
+    "evaluation_artifact": "Results/MTSD-Results/Unified-Evaluation-NoTourist/20260815-validation-only-noaug/RF-DETR-M-NoAug-576/evaluation_record.json"
+  },
+  "finished_at": "2026-08-15T05:41:39.477544+00:00",
+  "native_test_evaluation": {
+    "checkpoint": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\FINAL_rfdetrm_mtsd_noaug_img576_pb32_eb32_e100_adamw_s42\\checkpoint_best_total.pth",
+    "dataset_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Unaugmented\\MTSD-COCO",
+    "split": "test",
+    "resolution": 576,
+    "batch_size": 32,
+    "seconds": 52.25272540000151
+  }
 }

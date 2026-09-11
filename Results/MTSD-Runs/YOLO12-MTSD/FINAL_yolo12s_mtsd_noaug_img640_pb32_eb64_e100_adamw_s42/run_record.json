@@ -131,6 +131,13 @@
       "metrics/mAP50(B)": 0.6394414369112517,
       "metrics/mAP50-95(B)": 0.5584744629489846,
       "fitness": 0.5584744629489846
+    },
+    "test": {
+      "metrics/precision(B)": 0.8001652720604637,
+      "metrics/recall(B)": 0.6209719561467351,
+      "metrics/mAP50(B)": 0.6672196674904348,
+      "metrics/mAP50-95(B)": 0.5887486905727627,
+      "fitness": 0.5887486905727627
     }
   },
   "training_summary": {
@@ -196,12 +203,12 @@
     "gradient_accumulation_steps": 2
   },
   "post_training_evaluation_skipped": false,
-"test_evaluation_deferred": false,
+  "test_evaluation_deferred": false,
   "result_type": "DetMetrics",
   "unified_eval_status": "completed",
   "unified_eval_error": null,
-"unified_evaluation_seconds": 67.40754609997384,
-"evaluation_split": "test",
+  "unified_evaluation_seconds": 67.40754609997384,
+  "evaluation_split": "test",
   "unified_validation_metrics": {
     "map50_95": 0.5951985742874055,
     "map50": 0.6726371983100142,
@@ -367,29 +374,39 @@
     "inference_throughput_images_per_second": 11.109417967254325,
     "inference_peak_vram_mib": 322.4482421875
   },
-"unified_test_metrics": {
-"map50_95": 0.5701690269726974,
-"map50": 0.637281435617648,
-"map75": 0.5918893437399885,
-"ar100": 0.6184751437160982,
-"map_small": 0.031184679258824594,
-"map_medium": 0.1789651583332681,
-"map_large": 0.7610267349323814,
-"ar_small": 0.05553479087961847,
-"ar_medium": 0.2391276265768981,
-"ar_large": 0.8118420021378416,
-"precision": 0.8727134146341463,
-"recall": 0.579746835443038,
-"f1": 0.6966839062975357,
-"f1_score_threshold": 0.44414281845092773,
-"prediction_count": 6186,
-"dropped_degenerate_predictions": 0,
-"clamped_predictions": 0,
-"evaluator": "pycocotools.COCOeval",
-"evaluated_image_count": 747,
-"evaluated_category_count": 11,
-"excluded_category_names": ["Tourist Sign"],
-"evaluation_artifact": "Results/MTSD-Results/Unified-Evaluation-NoTourist/20260815-validation-only-noaug/YOLO12-S-NoAug-640/evaluation_record.json"
-},
-  "finished_at": "2026-08-15T10:18:58.526772+00:00"
+  "unified_test_metrics": {
+    "map50_95": 0.5701690269726974,
+    "map50": 0.637281435617648,
+    "map75": 0.5918893437399885,
+    "ar100": 0.6184751437160982,
+    "map_small": 0.031184679258824594,
+    "map_medium": 0.1789651583332681,
+    "map_large": 0.7610267349323814,
+    "ar_small": 0.05553479087961847,
+    "ar_medium": 0.2391276265768981,
+    "ar_large": 0.8118420021378416,
+    "precision": 0.8727134146341463,
+    "recall": 0.579746835443038,
+    "f1": 0.6966839062975357,
+    "f1_score_threshold": 0.44414281845092773,
+    "prediction_count": 6186,
+    "dropped_degenerate_predictions": 0,
+    "clamped_predictions": 0,
+    "evaluator": "pycocotools.COCOeval",
+    "evaluated_image_count": 747,
+    "evaluated_category_count": 11,
+    "excluded_category_names": [
+      "Tourist Sign"
+    ],
+    "evaluation_artifact": "Results/MTSD-Results/Unified-Evaluation-NoTourist/20260815-validation-only-noaug/YOLO12-S-NoAug-640/evaluation_record.json"
+  },
+  "finished_at": "2026-08-15T10:18:58.526772+00:00",
+  "native_test_evaluation": {
+    "split": "test",
+    "checkpoint": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO12-MTSD\\FINAL_yolo12s_mtsd_noaug_img640_pb32_eb64_e100_adamw_s42\\weights\\best.pt",
+    "output_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO12-MTSD\\FINAL_yolo12s_mtsd_noaug_img640_pb32_eb64_e100_adamw_s42\\native_test_evaluation",
+    "completed_at": "2026-09-11T16:26:35.274639+00:00",
+    "seconds": 25.19271309999749
+  },
+  "native_test_evaluation_seconds": 25.19271309999749
 }

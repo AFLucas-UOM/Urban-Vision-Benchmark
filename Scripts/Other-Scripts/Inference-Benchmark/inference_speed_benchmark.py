@@ -44,7 +44,6 @@ benchmarks from `mtsd-base`. Heavy imports are lazy, so --list-models and
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 import platform
 import random
@@ -57,13 +56,24 @@ from datetime import datetime
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+# Timing primitives are shared with the Jetson edge benchmark so both suites
+# use one implementation of warmup / CUDA synchronisation / percentiles.
+from uvb_bench_core import (  # noqa: E402
+    clear_metric_lists,
+    file_size_mb,
+    find_project_root as _find_project_root,
+    make_batches,
+    percentile as _percentile,
+    timed_loop,
+    write_csv,
+)
 
 
 def find_project_root(start: Path = SCRIPT_DIR) -> Path:
-    for parent in [start, *start.parents]:
-        if (parent / "Datasets").exists() and (parent / "Scripts").exists():
-            return parent
-    raise RuntimeError("Could not locate project root (needs Datasets/ and Scripts/).")
+    return _find_project_root(start)
 
 
 PROJECT_ROOT = find_project_root()
@@ -297,75 +307,6 @@ def sample_images(task: str, dataset: str, split: str, max_images: int, seed: in
 # Timing core
 # ---------------------------------------------------------------------------
 
-def _percentile(values: list[float], q: float) -> float:
-    if not values:
-        return 0.0
-    ordered = sorted(values)
-    index = min(len(ordered) - 1, max(0, round(q / 100 * (len(ordered) - 1))))
-    return ordered[index]
-
-
-def timed_loop(run_batch, batches: list, device: str, warmup: int,
-               reset_after_warmup=None) -> dict:
-    """Warmup then time run_batch(batch) over all batches, CUDA-synchronised."""
-    import torch
-
-    use_cuda = device.startswith("cuda") and torch.cuda.is_available()
-
-    for batch in batches[:min(max(0, warmup), len(batches))]:
-        run_batch(batch)
-    if use_cuda:
-        torch.cuda.synchronize()
-        torch.cuda.reset_peak_memory_stats()
-    if reset_after_warmup is not None:
-        reset_after_warmup()
-
-    per_image_latency_ms: list[float] = []
-    total_images = 0
-    wall_start = time.perf_counter()
-    for batch in batches:
-        if use_cuda:
-            torch.cuda.synchronize()
-        t0 = time.perf_counter()
-        run_batch(batch)
-        if use_cuda:
-            torch.cuda.synchronize()
-        elapsed = time.perf_counter() - t0
-        n = len(batch)
-        total_images += n
-        per_image_latency_ms.extend([elapsed * 1000 / n] * n)
-    wall_total = time.perf_counter() - wall_start
-
-    peak_mem_gb = (round(torch.cuda.max_memory_allocated() / 1024**3, 3)
-                   if use_cuda else None)
-    return {
-        "timed_images": total_images,
-        "mean_latency_ms": round(statistics.fmean(per_image_latency_ms), 2),
-        "median_latency_ms": round(statistics.median(per_image_latency_ms), 2),
-        "p95_latency_ms": round(_percentile(per_image_latency_ms, 95), 2),
-        "fps": round(total_images / wall_total, 2) if wall_total else 0.0,
-        "total_wall_seconds": round(wall_total, 3),
-        "peak_gpu_mem_gb": peak_mem_gb,
-        "per_image_latency_ms": per_image_latency_ms,
-    }
-
-
-def make_batches(items: list, batch_size: int) -> list[list]:
-    return [items[i:i + batch_size] for i in range(0, len(items), batch_size)]
-
-
-def clear_metric_lists(metrics: dict[str, list]) -> None:
-    for values in metrics.values():
-        values.clear()
-
-
-def file_size_mb(path: str | Path | None) -> float | None:
-    if not path:
-        return None
-    path = Path(path)
-    return round(path.stat().st_size / 1024**2, 2) if path.exists() else None
-
-
 def hardware_info(device: str) -> dict:
     import torch
 
@@ -566,17 +507,6 @@ def engine_for(entry: ModelEntry):
 # ---------------------------------------------------------------------------
 # Output writers
 # ---------------------------------------------------------------------------
-
-def write_csv(path: Path, rows: list[dict]) -> None:
-    if not rows:
-        path.write_text("", encoding="utf-8")
-        return
-    fieldnames = list(dict.fromkeys(k for row in rows for k in row))
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
-
 
 def write_summary_md(path: Path, rows: list[dict], config: dict) -> None:
     lines = [

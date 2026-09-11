@@ -1,0 +1,200 @@
+# ============================================================================
+# NVIDIA Jetson edge-device inference benchmark - default configuration
+# ============================================================================
+# Inference only. Nothing in this file can cause training, dataset mutation or
+# any write outside a new timestamped Results/Jetson-Benchmark/<stamp>/ folder.
+#
+# Every value here is deliberate and overridable from the CLI
+# (`--set section.key=value`, plus the dedicated flags documented in
+# Scripts/Other-Scripts/Jetson-Benchmark/README.md).
+# ============================================================================
+
+benchmark_version: 1.0.0
+seed: 42
+batch_size: 1            # single-image, matching the RTX 4090 baseline
+device: cuda             # `cpu` exists for debugging only, never for results
+
+# --- Timing boundaries -------------------------------------------------------
+# model_forward      : the model computation alone (CUDA-synchronised).
+# in_memory_pipeline : already-decoded input -> preprocess + inference + postprocess.
+# end_to_end_file    : SSD read + decode + preprocess + inference + postprocess.
+# These are NEVER averaged together; each is reported in its own columns.
+timing:
+  boundaries: [model_forward, in_memory_pipeline, end_to_end_file]
+  cuda_synchronise: true
+
+# --- PASS A: protocol-compatible latency comparison --------------------------
+# Reuses the exact seeded sample manifest recorded by the completed workstation
+# benchmark (Results/Inference-Benchmark/InferenceSpeed/<run>/benchmark_images_used.csv)
+# so the same checkpoint is measured over the same images on both devices.
+comparative_latency:
+  enabled: true
+  reuse_workstation_sample: true
+  # Used only if the workstation manifest cannot be resolved; the fallback is
+  # the same seeded sampling rule the workstation benchmark applied.
+  fallback_max_images: 50
+  fallback_prompt_max_images: 10
+  repeats: 3
+  warmup: 3              # same warm-up count as the workstation baseline
+  keep_repeat_detail: true
+
+# --- PASS B: sustained edge telemetry ---------------------------------------
+# A 50-image pass is too short for stable power/thermal readings on fast
+# models, so the same deterministic sample is cycled for a fixed interval.
+sustained_telemetry:
+  enabled: true
+  repeats: 3
+  minimum_duration_seconds: 20
+  maximum_duration_seconds: 180   # guard against a pathologically slow model
+  maximum_items: 20000
+  warmup: 20                      # warm-up items, excluded from measurement
+  boundary: comparable            # `comparable` = the Pass A comparison boundary
+
+# --- Telemetry ---------------------------------------------------------------
+telemetry:
+  tegrastats_enabled: true
+  tegrastats_interval_ms: 100
+  keep_raw_lines: true
+  idle_baseline_seconds: 10
+  proc_sampling_enabled: true     # /proc/meminfo + thermal zones fallback
+
+# --- Power ------------------------------------------------------------------
+# Rails can overlap hierarchically, so rails are never blindly summed.
+#   auto            : use a true board/input rail when the platform exposes one;
+#                     otherwise use a documented disjoint rail set (clearly
+#                     labelled as a module-power estimate, not board input);
+#                     otherwise leave total power and energy null.
+#   total_rail_only : only a true board/input rail is accepted.
+#   explicit        : use `power.rails` below and nothing else.
+power:
+  rail_strategy: auto
+  rails: []                       # only used when rail_strategy: explicit
+  compute_dynamic_energy: true    # idle-subtracted figure, reported separately
+  change_nvpmodel: false          # never silently change the platform power mode
+  lock_clocks: false              # never silently run jetson_clocks
+
+# --- Thermal ----------------------------------------------------------------
+thermal:
+  abort_temperature_c: 95         # graceful stop for the affected model only
+  record_all_zones: true
+
+cooldown:
+  min_seconds: 10
+  target_delta_c: 3               # wait until within this of the start temperature
+  max_seconds: 120                # finite, so the benchmark can never hang
+
+# --- Runtime backends --------------------------------------------------------
+# TensorRT is a SEPARATE optimised-runtime experiment and never a prerequisite
+# for the native PyTorch benchmark; its rows carry runtime_backend=tensorrt.
+runtime:
+  native: true
+  precision: fp32                 # native PyTorch default on Jetson
+  tensorrt_yolo: false
+  tensorrt:
+    precision: fp16
+    parity_check: true
+    parity_iou_threshold: 0.5
+    cache_engines: true
+
+# --- Optional zero-shot localisation ----------------------------------------
+# auto = preflight each candidate and benchmark only those that pass cleanly.
+# A zero-shot failure never fails the required detector/attribute benchmark.
+zero_shot:
+  mode: auto
+  allow_downloads: false
+  candidates: [sam_3, sam_3.1, locateanything_3b, cosmos_reason2_2b, cosmos_reason2_8b]
+  excluded: [cosmos_reason2_32b]   # out of scope for the default Jetson benchmark
+  min_available_ram_gb: 6.0
+  prompt_source: dissertation_protocol   # reuse the existing prompt definitions
+  prompt_dataset: MTSD
+  prompt_id: mtsd-p12                    # the broad "traffic sign" protocol prompt
+
+# --- Failure handling and resumability --------------------------------------
+execution:
+  continue_on_failure: true
+  smoke_test_required: true
+  release_between_models: true
+  residual_memory_tolerance_mb: 512
+  worker_timeout_seconds: 1800
+  checkpoint_hashing: true
+
+# --- Outputs -----------------------------------------------------------------
+outputs:
+  figures: true
+  compress_raw_timings: true
+  report: true
+  comparison: true
+
+# ============================================================================
+# Required benchmark matrix
+# ============================================================================
+# Identifiers below are resolved to exactly one checkpoint by
+# jetson_bench/models.py using repository evidence (final reports, the MTSD
+# experiment matrix, run metadata and FINAL/non-probe naming) - never by a
+# newest-timestamp heuristic. An unresolvable or genuinely ambiguous request is
+# recorded as missing_checkpoint / ambiguous_checkpoint, never substituted.
+models:
+
+  mdwd_detection:
+    - {family: yolo26, scale: s, suite: YOLO26-EUVIP}
+    - {family: yolo26, scale: l, suite: YOLO26-EUVIP}
+    - {family: rfdetr, scale: m}
+    - {family: rfdetr, scale: s}
+    - {family: yolo12, scale: s, suite: YOLO12-EUVIP}
+    - {family: yolo11, scale: s, suite: YOLO11-EUVIP}
+
+  mtsd_detection:
+    - {family: yolo26, scale: s, augmentation: strong, input_size: 1280}
+    - {family: yolo26, scale: m, augmentation: strong, input_size: 1280}
+    - {family: rfdetr, scale: m, augmentation: strong, input_size: trained}
+    - {family: rfdetr, scale: s, augmentation: strong, input_size: trained}
+    - {family: yolo12, scale: s, augmentation: strong, input_size: 1280}
+    - {family: yolo11, scale: s, augmentation: strong, input_size: 1280}
+
+  attribute:
+    - dinov3_vitl_lora
+    - vjepa21_vitl_lora
+    - dinov3_vitb_lora
+    - vjepa21_vitb_lora
+
+# Deterministic execution order: required supervised tracks first (so a partial
+# run still yields the dissertation's required evidence), optional zero-shot
+# last. Within a track the configuration order above is preserved.
+track_order: [mdwd, mtsd, attributes, zero-shot]
+
+# ============================================================================
+# Profiles
+# ============================================================================
+profiles:
+
+  # Fast stack verification: does everything execute at all?
+  smoke:
+    comparative_latency:
+      reuse_workstation_sample: true
+      fallback_max_images: 2
+      fallback_prompt_max_images: 1
+      max_images: 2
+      repeats: 1
+      warmup: 1
+    sustained_telemetry:
+      repeats: 1
+      minimum_duration_seconds: 3
+      maximum_duration_seconds: 15
+      warmup: 2
+    telemetry:
+      idle_baseline_seconds: 2
+    cooldown:
+      min_seconds: 0
+      max_seconds: 5
+    outputs:
+      figures: false
+    zero_shot:
+      mode: "off"
+
+  # The full selected suite; this is what `run_jetson_benchmark.sh` runs.
+  dissertation: {}
+
+  # Everything in `dissertation` plus the optional TensorRT YOLO experiment.
+  dissertation_tensorrt:
+    runtime:
+      tensorrt_yolo: true

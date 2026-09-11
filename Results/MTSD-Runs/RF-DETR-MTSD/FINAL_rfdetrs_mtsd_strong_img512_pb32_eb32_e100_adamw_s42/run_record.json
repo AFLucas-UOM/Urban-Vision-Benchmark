@@ -218,11 +218,106 @@
             "precision": 0.8194462165250207,
             "recall": 0.63
           }
+        ],
+        "test": [
+          {
+            "class": "Pedestrian Crossing",
+            "map@50:95": 0.6846489841906259,
+            "map@50": 0.8225150283123771,
+            "precision": 0.9789473684210527,
+            "recall": 0.65
+          },
+          {
+            "class": "Stop Sign",
+            "map@50:95": 0.8481386170644191,
+            "map@50": 0.901993887636425,
+            "precision": 1.0,
+            "recall": 0.65
+          },
+          {
+            "class": "No Entry (One Way)",
+            "map@50:95": 0.8161076389017233,
+            "map@50": 0.8866369662649444,
+            "precision": 0.9868421052631579,
+            "recall": 0.65
+          },
+          {
+            "class": "Roundabout Ahead",
+            "map@50:95": 0.7827655658125647,
+            "map@50": 0.8578463916179713,
+            "precision": 1.0,
+            "recall": 0.65
+          },
+          {
+            "class": "No Through Road (T-Junction)",
+            "map@50:95": 0.9330827530368041,
+            "map@50": 0.9776243249324932,
+            "precision": 1.0,
+            "recall": 0.65
+          },
+          {
+            "class": "Blind-Spot Mirror (Convex Mirror)",
+            "map@50:95": 0.8357725599636955,
+            "map@50": 0.909045587437229,
+            "precision": 1.0,
+            "recall": 0.65
+          },
+          {
+            "class": "Street Sign",
+            "map@50:95": 0.597845449582469,
+            "map@50": 0.7528697365928987,
+            "precision": 0.9130434782608695,
+            "recall": 0.65
+          },
+          {
+            "class": "Directional Sign",
+            "map@50:95": 0.5062046736216721,
+            "map@50": 0.6941690810745469,
+            "precision": 0.7634408602150538,
+            "recall": 0.65
+          },
+          {
+            "class": "Tourist Sign",
+            "map@50:95": 0.8574257425742574,
+            "map@50": 0.9158415841584159,
+            "precision": 1.0,
+            "recall": 0.65
+          },
+          {
+            "class": "Auxiliary Sign",
+            "map@50:95": 0.2898276391736665,
+            "map@50": 0.4266692643681657,
+            "precision": 0.0684811237928007,
+            "recall": 0.65
+          },
+          {
+            "class": "Back-Unknown",
+            "map@50:95": 0.6171566003260404,
+            "map@50": 0.7487600480257695,
+            "precision": 0.9472527472527472,
+            "recall": 0.65
+          },
+          {
+            "class": "Other-Unknown",
+            "map@50:95": 0.4981985504648125,
+            "map@50": 0.6300876167944509,
+            "precision": 0.5416666666666666,
+            "recall": 0.65
+          },
+          {
+            "class": "all",
+            "map@50:95": 0.6889312312260626,
+            "map@50": 0.7936716264346405,
+            "precision": 0.8499728624893623,
+            "recall": 0.65
+          }
         ]
       },
       "map": 0.7553409782858567,
-      "precision": 0.8194462165250207,
-      "recall": 0.63
+      "precision": 0.8499728624893623,
+      "recall": 0.65,
+      "map50": 0.7936716264346405,
+      "map50_95": 0.6889312312260626
     }
   },
   "native_metrics_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\FINAL_rfdetrs_mtsd_strong_img512_pb32_eb32_e100_adamw_s42\\results.json",
@@ -438,6 +533,39 @@
     "inference_throughput_images_per_second": 5.353704966512572,
     "inference_peak_vram_mib": 1257.52294921875
   },
-  "unified_test_metrics": {"map50_95": 0.674294326853809, "map50": 0.7830945198466593, "map75": 0.6877769330600927, "ar100": 0.7408836709677229, "map_small": 0.08146647283326901, "map_medium": 0.3596393123998617, "map_large": 0.8666961681840002, "ar_small": 0.1223200554235037, "ar_medium": 0.49029224833363677, "ar_large": 0.9209334490883555, "precision": 0.9260273972602739, "recall": 0.6845569620253165, "f1": 0.7871906841339156, "f1_score_threshold": 0.5191991925239563, "prediction_count": 201194, "dropped_degenerate_predictions": 64, "clamped_predictions": 11110, "evaluator": "pycocotools.COCOeval", "evaluated_image_count": 747, "evaluated_category_count": 11, "excluded_category_names": ["Tourist Sign"], "evaluation_artifact": "Results/MTSD-Results/Unified-Evaluation-NoTourist/20260815-validation-only-strong/RF-DETR-S-Strong-512/evaluation_record.json"},
-  "finished_at": "2026-08-13T07:29:17.703994+00:00"
+  "unified_test_metrics": {
+    "map50_95": 0.674294326853809,
+    "map50": 0.7830945198466593,
+    "map75": 0.6877769330600927,
+    "ar100": 0.7408836709677229,
+    "map_small": 0.08146647283326901,
+    "map_medium": 0.3596393123998617,
+    "map_large": 0.8666961681840002,
+    "ar_small": 0.1223200554235037,
+    "ar_medium": 0.49029224833363677,
+    "ar_large": 0.9209334490883555,
+    "precision": 0.9260273972602739,
+    "recall": 0.6845569620253165,
+    "f1": 0.7871906841339156,
+    "f1_score_threshold": 0.5191991925239563,
+    "prediction_count": 201194,
+    "dropped_degenerate_predictions": 64,
+    "clamped_predictions": 11110,
+    "evaluator": "pycocotools.COCOeval",
+    "evaluated_image_count": 747,
+    "evaluated_category_count": 11,
+    "excluded_category_names": [
+      "Tourist Sign"
+    ],
+    "evaluation_artifact": "Results/MTSD-Results/Unified-Evaluation-NoTourist/20260815-validation-only-strong/RF-DETR-S-Strong-512/evaluation_record.json"
+  },
+  "finished_at": "2026-08-13T07:29:17.703994+00:00",
+  "native_test_evaluation": {
+    "checkpoint": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\FINAL_rfdetrs_mtsd_strong_img512_pb32_eb32_e100_adamw_s42\\checkpoint_best_total.pth",
+    "dataset_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\MTSD-COCO",
+    "split": "test",
+    "resolution": 512,
+    "batch_size": 32,
+    "seconds": 47.3044474000053
+  }
 }

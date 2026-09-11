@@ -13,7 +13,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[2]
-AUDIT = REPO / "existing_mtSD_experiment_audit.csv"
+AUDIT = REPO / "MTSD-SupervisedOD_ExperimentAudit.csv"
 REPORT_DIR = REPO / "Documents" / "Final-Reports" / "MTSD-SupervisedDetection"
 
 
@@ -43,7 +43,7 @@ def write_csv(path: Path, data: list[dict[str, object]]) -> None:
 
 def write_md(path: Path, title: str, data: list[dict[str, object]]) -> None:
     keys = list(data[0]) if data else ["status"]
-    lines = [f"# {title}", "", "Generated from `existing_mtSD_experiment_audit.csv`.", ""]
+    lines = [f"# {title}", "", "Generated from `MTSD-SupervisedOD_ExperimentAudit.csv`.", ""]
     if not data:
         lines.append("No matching rows are currently available.")
     else:

@@ -200,25 +200,63 @@ def metrics_from_record(record: dict[str, Any]) -> dict[str, Any]:
     val = native.get("val", {}) if isinstance(native, dict) else {}
     unified_val = record.get("unified_validation_metrics", {}) or {}
     unified_test = record.get("unified_test_metrics", {}) or {}
-    test = unified_test
+    # The dissertation-facing test columns represent the model's normal
+    # framework evaluation on the held-out MTSD test split.  A unified result
+    # is retained in the run record for cross-framework analysis, but must not
+    # silently replace this native result in a native V/T comparison.
+    test = native.get("test", {}) if isinstance(native, dict) else {}
     if not test:
-        test = native.get("test", {}) if isinstance(native, dict) else {}
+        test = unified_test
+
+    # RF-DETR's historical run records store both split summaries under
+    # ``class_map``.  Its top-level ``map``/precision/recall fields describe
+    # validation even when the test rows are present, so select the explicit
+    # aggregate test row for an unambiguous held-out result.
+    if isinstance(test, dict) and isinstance(test.get("class_map"), dict):
+        test_rows = test["class_map"].get("test", [])
+        if isinstance(test_rows, list):
+            aggregate = next(
+                (row for row in test_rows
+                 if isinstance(row, dict) and str(row.get("class", "")).lower() == "all"),
+                None,
+            )
+            if aggregate:
+                test = {
+                    "map50": aggregate.get("map@50", ""),
+                    "map50_95": aggregate.get("map@50:95", ""),
+                    "precision": aggregate.get("precision", ""),
+                    "recall": aggregate.get("recall", ""),
+                }
     def m(source: dict[str, Any], *keys: str) -> Any:
         for key in keys:
             if key in source and source[key] not in (None, ""):
                 return source[key]
         return ""
+    def f1(source: dict[str, Any], precision: Any, recall: Any) -> Any:
+        explicit = m(source, "f1", "metrics/f1(B)")
+        if explicit not in (None, ""):
+            return explicit
+        try:
+            p, r = float(precision), float(recall)
+            return 2 * p * r / (p + r) if p + r else ""
+        except (TypeError, ValueError):
+            return ""
+
+    val_precision = first(m(unified_val, "precision"), m(val, "metrics/precision(B)", "precision"), summary.get("precision"))
+    val_recall = first(m(unified_val, "recall"), m(val, "metrics/recall(B)", "recall"), summary.get("recall"))
+    test_precision = first(m(test, "precision"), m(test, "metrics/precision(B)"))
+    test_recall = first(m(test, "recall"), m(test, "metrics/recall(B)"))
     return {
         "val_map50": first(m(unified_val, "map50"), m(val, "metrics/mAP50(B)", "map50"), summary.get("mAP50")),
         "val_map50_95": first(m(unified_val, "map50_95"), m(val, "metrics/mAP50-95(B)", "map50-95"), summary.get("mAP50-95")),
-        "val_precision": first(m(unified_val, "precision"), m(val, "metrics/precision(B)", "precision"), summary.get("precision")),
-        "val_recall": first(m(unified_val, "recall"), m(val, "metrics/recall(B)", "recall"), summary.get("recall")),
-        "val_f1": first(m(unified_val, "f1"), summary.get("F1")),
+        "val_precision": val_precision,
+        "val_recall": val_recall,
+        "val_f1": first(m(unified_val, "f1"), summary.get("F1"), f1(val, val_precision, val_recall)),
         "test_map50": first(m(test, "map50"), m(test, "metrics/mAP50(B)")),
         "test_map50_95": first(m(test, "map50_95"), m(test, "metrics/mAP50-95(B)")),
-        "test_precision": first(m(test, "precision"), m(test, "metrics/precision(B)")),
-        "test_recall": first(m(test, "recall"), m(test, "metrics/recall(B)")),
-        "test_f1": first(m(test, "f1")),
+        "test_precision": test_precision,
+        "test_recall": test_recall,
+        "test_f1": f1(test, test_precision, test_recall),
         "inference_seconds": first(m(unified_test, "inference_seconds")),
         "inference_fps": first(m(unified_test, "inference_throughput_images_per_second")),
     }
