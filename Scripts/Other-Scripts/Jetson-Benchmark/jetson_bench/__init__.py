@@ -13,6 +13,11 @@ matches - and are explicitly marked ``not_protocol_comparable`` where it does
 not.
 """
 
-__all__ = ["__version__"]
+# Importing .paths first puts Scripts/Other-Scripts/Inference-Benchmark on
+# sys.path, so every submodule can import the shared uvb_bench_core
+# helpers regardless of which module is imported first.
+from . import paths as paths  # noqa: F401
+
+__all__ = ["__version__", "paths"]
 
 __version__ = "1.0.0"

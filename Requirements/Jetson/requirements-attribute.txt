@@ -1,0 +1,49 @@
+# ============================================================================
+# Jetson attribute-classification environment (.venv-jetson-attribute)
+# ============================================================================
+# For the four MTSD attribute LoRA configurations of the Jetson edge benchmark
+# (DINOv3 ViT-B/ViT-L + LoRA, V-JEPA 2.1 ViT-B/ViT-L + LoRA), INFERENCE ONLY.
+# No optimiser is ever constructed and nothing is retrained.
+#
+# torch / torchvision are DELIBERATELY ABSENT - see the explanation in
+# requirements-detection.txt. The JetPack build is preserved and pinned through
+# a generated pip constraints file.
+#
+# Derived from Requirements/requirements-attribute-classification.txt with the
+# training-only and desktop-only dependencies removed:
+#
+#   * wandb           - the edge benchmark is offline and locally authoritative
+#   * gradio          - no web UI is launched on the device
+#   * jupyterlab      - not needed for a headless benchmark
+#   * lingbot-vision  - the LingBot backbones are not in the Jetson matrix;
+#                       it installs from a Git commit and pulls a second
+#                       opencv, which would fight the JetPack one
+#   * scikit-learn    - only used for training-time metric computation
+# ============================================================================
+
+# ---- Backbone loading and LoRA adaptation ----
+# The DINOv3 backbones load through transformers; the V-JEPA 2.1 backbones load
+# through torch.hub, which needs network access on first use (run with
+# --allow-model-downloads once to populate .cache/jetson/torch, then the
+# benchmark is fully offline).
+transformers>=5.2,<6
+huggingface_hub>=1.20
+safetensors>=0.8
+timm>=1.0
+accelerate>=1.14
+peft>=0.19
+einops>=0.8
+omegaconf>=2.3
+
+# ---- Numerics and imaging ----
+numpy==1.26.4
+pillow>=11
+pyyaml>=6.0
+tqdm>=4.67
+
+# ---- Benchmark reporting ----
+matplotlib>=3.10
+psutil>=5.9
+
+# ---- Test suite ----
+pytest>=8

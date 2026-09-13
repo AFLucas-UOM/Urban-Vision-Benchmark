@@ -16,6 +16,7 @@ LabelStudioshared/
 venv/
 env/
 ENV/
+.venv-jetson-*/
 __pycache__/
 *.pyc
 *.pytest_cache
@@ -112,6 +113,10 @@ desktop.ini
 # UVB local application state
 .uvb_launcher_state.json
 .uvb_launcher_logs/
+
+# Jetson benchmark local caches and generated environments
+.cache/jetson/
+.uvb_jetson_write_probe
 
 # Local-only, obsolete, and ad-hoc experiment artefacts
 /TEMP/

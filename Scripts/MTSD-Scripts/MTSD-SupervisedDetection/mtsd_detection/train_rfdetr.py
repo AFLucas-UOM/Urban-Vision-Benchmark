@@ -12,6 +12,69 @@ from .wandb_utils import attach_rfdetr_logger
 RFDETR_RESOLUTIONS = {"n": 384, "s": 512, "m": 576, "large": 640}
 
 
+def _resume_early_stopping_state(
+    resume: str | Path,
+    min_delta: float = 0.001,
+) -> dict[str, Any]:
+    """Reconstruct uninterrupted early-stopping state across resume segments."""
+    resume_path = Path(resume)
+    if not resume_path.is_file():
+        return {"restored": False, "best_map": 0.0, "counter": 0, "completed_evaluations": 0}
+
+    import torch
+
+    run_dirs: list[Path] = []
+    seen: set[Path] = set()
+    checkpoint_path = resume_path.resolve()
+    while checkpoint_path.is_file() and checkpoint_path not in seen:
+        seen.add(checkpoint_path)
+        run_dirs.append(checkpoint_path.parent)
+        checkpoint = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
+        checkpoint_args = checkpoint.get("args")
+        previous = getattr(checkpoint_args, "resume", "") if checkpoint_args is not None else ""
+        del checkpoint
+        if not previous:
+            break
+        checkpoint_path = Path(previous).resolve()
+
+    best_map = 0.0
+    counter = 0
+    completed = 0
+    for run_dir in reversed(run_dirs):
+        log_path = run_dir / "log.txt"
+        if not log_path.is_file():
+            continue
+        for line in log_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            try:
+                row = json.loads(line)
+                candidates = []
+                for key in ("test_coco_eval_bbox", "ema_test_coco_eval_bbox"):
+                    metrics = row.get(key)
+                    if isinstance(metrics, list) and metrics:
+                        candidates.append(float(metrics[0]))
+                if not candidates:
+                    continue
+                current_map = max(candidates)
+            except (json.JSONDecodeError, TypeError, ValueError):
+                continue
+            completed += 1
+            if current_map > best_map + min_delta:
+                best_map = current_map
+                counter = 0
+            else:
+                counter += 1
+    return {
+        "restored": completed > 0,
+        "best_map": best_map,
+        "counter": counter,
+        "completed_evaluations": completed,
+        "history_run_dirs": [str(path) for path in reversed(run_dirs)],
+        "resume_checkpoint": str(resume_path),
+    }
+
+
 def rfdetr_resolution(spec: ModelSpec, training: dict[str, Any]) -> int:
     overrides = training.get("per_model_overrides", {})
     model_override = overrides.get(spec.key, {}) if isinstance(overrides, dict) else {}
@@ -94,18 +157,47 @@ def train(spec: ModelSpec, checkpoint: Path, dataset_dir: Path, run_dir: Path,
         except ImportError:
             device = "cpu"
     resolution = rfdetr_resolution(spec, training)
+    overrides = training.get("per_model_overrides", {})
+    model_override = overrides.get(spec.key, {}) if isinstance(overrides, dict) else {}
+    resume = str(model_override.get("resume", ""))
+    early_stopping_min_delta = float(model_override.get("early_stopping_min_delta", 0.001))
+    resume_early_stopping = _resume_early_stopping_state(resume, early_stopping_min_delta)
     model = _rfdetr_class(spec)(pretrain_weights=str(checkpoint),
                                 resolution=resolution,
                                 gradient_checkpointing=True, device=device)
     attach_rfdetr_logger(model, wandb_run, wandb_log_interval_steps)
+    if resume_early_stopping["restored"]:
+        from rfdetr.util.early_stopping import EarlyStoppingCallback
+
+        early_stopping = EarlyStoppingCallback(
+            model=model.model,
+            patience=int(training["patience"]),
+            min_delta=early_stopping_min_delta,
+            use_ema=False,
+        )
+        early_stopping.best_map = float(resume_early_stopping["best_map"])
+        early_stopping.counter = int(resume_early_stopping["counter"])
+        model.callbacks["on_fit_epoch_end"].append(early_stopping.update)
+        print(
+            "RF-DETR resume restored early stopping: "
+            f"best_map={early_stopping.best_map:.6f}, "
+            f"counter={early_stopping.counter}/{early_stopping.patience}, "
+            f"completed_evaluations={resume_early_stopping['completed_evaluations']}"
+        )
     started = time.perf_counter()
     args = dict(dataset_dir=str(dataset_dir), epochs=2 if smoke else int(training["epochs"]),
-                batch_size=int(training["effective_batch"]), grad_accum_steps=1,
+                batch_size=int(model_override.get("batch_size", training["effective_batch"])),
+                grad_accum_steps=int(model_override.get("grad_accum_steps", 1)),
+                resume=resume,
                 lr=float(training["lr0"]), weight_decay=float(training["weight_decay"]),
                 warmup_epochs=float(training["warmup_epochs"]), checkpoint_interval=10,
-                multi_scale=True, expanded_scales=True, do_random_resize_via_padding=False,
+                multi_scale=bool(model_override.get("multi_scale", True)),
+                expanded_scales=bool(model_override.get("expanded_scales", True)),
+                do_random_resize_via_padding=False,
                 square_resize_div_64=True,
-                early_stopping=True, early_stopping_patience=int(training["patience"]),
+                early_stopping=not resume_early_stopping["restored"],
+                early_stopping_patience=int(training["patience"]),
+                early_stopping_min_delta=early_stopping_min_delta,
                 output_dir=str(run_dir), tensorboard=True,
                 run_test=not defer_test_evaluation, wandb=False)
     result = model.train(**args)
@@ -118,4 +210,5 @@ def train(spec: ModelSpec, checkpoint: Path, dataset_dir: Path, run_dir: Path,
             "native_metrics": {"test": native_metrics}, "native_metrics_path": str(native_path),
             "training_summary": summarize_training(run_dir, native_metrics), "train_args": args,
             "model_args": {"resolution": resolution, "gradient_checkpointing": True, "device": device},
+            "resume_early_stopping_state": resume_early_stopping,
             "test_evaluation_deferred": defer_test_evaluation}

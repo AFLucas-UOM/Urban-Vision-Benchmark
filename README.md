@@ -89,6 +89,11 @@ Clone the repository and create the environment required by the workflow you wan
 | `mtsd-base` | MTSD detection, SAM/Cosmos evaluation, QA and privacy tools |
 | `mtsd-la` | Isolated LocateAnything worker |
 
+For NVIDIA Jetson edge-device benchmarking the environments are different: they
+are Python `venv`s created on the external SSD around the device's existing
+JetPack PyTorch, never the Conda/x86 CUDA wheels above. See
+[Requirements/Jetson](Requirements/Jetson/README.md).
+
 Optional W&B logging is configured through a git-ignored root `.env`:
 
 ```dotenv
@@ -123,6 +128,16 @@ python Scripts/Other-Scripts/PromptDetect/batch_evaluation/run_dissertation_prot
 
 # Inspect the dissertation evidence tools
 python Scripts/FinalEvaluation/export_dissertation_tables.py --dry-run
+
+# Preview the NVIDIA Jetson edge-device benchmark (safe on any machine)
+python Scripts/Other-Scripts/Jetson-Benchmark/run_jetson_benchmark.py --dry-run
+```
+
+On a Jetson with the repository on an external SSD, the whole edge experiment is
+one command from the repository root:
+
+```bash
+./run_jetson_benchmark.sh
 ```
 
 Training and full inference require authorised access to the private imagery and locally downloaded pretrained weights. See the component READMEs for exact commands and hardware-specific settings.
@@ -141,7 +156,8 @@ Urban-Vision-Benchmark/
 │   ├── FinalEvaluation/  integrity, uncertainty, robustness and export tools
 │   ├── MDWD-Scripts/     waste-dataset analysis and supervised training
 │   ├── MTSD-Scripts/     annotation QA, detection and attribute classification
-│   └── Other-Scripts/    PromptDetect, GDPR redaction and inference benchmarks
+│   └── Other-Scripts/    PromptDetect, GDPR redaction, workstation and Jetson benchmarks
+├── run_jetson_benchmark.sh  one-command NVIDIA Jetson edge benchmark
 └── launch_uvb.py   managed entry point for interactive tools
 ```
 
@@ -152,6 +168,7 @@ Useful starting points:
 - [MTSD attribute-classification documentation](Scripts/MTSD-Scripts/AttributeClassification/README.md)
 - [PromptDetect batch-evaluation protocol](Scripts/Other-Scripts/PromptDetect/batch_evaluation/README.md)
 - [Completed inference benchmark](Documents/Final-Tables/20260910-inference-benchmark/all_model_inference_benchmark.md)
+- [NVIDIA Jetson edge-device benchmark](Scripts/Other-Scripts/Jetson-Benchmark/README.md)
 - [Dataset-integrity report](Documents/Final-Reports/dataset_integrity_report.md)
 - [Automation and workflow registry](Scripts/Automation/README.md)
 

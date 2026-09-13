@@ -3,6 +3,20 @@
 Deployment-oriented benchmarks for the dissertation's comparative evaluation —
 metrics beyond accuracy: latency, throughput, memory, model size.
 
+This folder holds the **workstation / RTX 4090** benchmark. The NVIDIA Jetson
+edge-device benchmark lives in
+[`Scripts/Other-Scripts/Jetson-Benchmark/`](../Jetson-Benchmark/README.md) and
+reuses this suite's timing discipline and seeded sample manifests so the two
+devices can be compared where the protocol genuinely matches.
+
+## `uvb_bench_core.py`
+
+Shared primitives used by both suites: project-root discovery, percentile and
+batching helpers, `timed_loop` (warm-up, CUDA synchronisation, per-item latency
+collection), checkpoint integrity checks (size, SHA-256, Git-LFS pointer
+detection) and CSV writing. `inference_speed_benchmark.py` imports them under
+their original names, so its behaviour, CSV schemas and CLI are unchanged.
+
 ## `inference_speed_benchmark.py`
 
 Benchmarks every trained model family in the repository with a shared,
@@ -60,3 +74,8 @@ Each real run writes a fresh timestamped folder
   spawns its `mtsd-la` worker; Cosmos 32B requires `--allow-heavy`.
 - Run the same command per environment — dependency failures are recorded per
   model in the summary rather than aborting the whole run.
+- Every YOLO row is measured at `--imgsz` (640 by default) regardless of the
+  resolution the checkpoint was trained at, and RF-DETR is constructed without
+  an explicit resolution, so it runs at its package default (N 384 / S 512 /
+  M 576). The Jetson benchmark checks both facts before declaring a row
+  protocol-comparable.

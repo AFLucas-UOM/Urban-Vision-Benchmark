@@ -1,0 +1,24 @@
+{
+  "requested_matrix": [
+    "rfdetr-n"
+  ],
+  "dataset_version": "mtsd-qa-v1-strong-offline-v2",
+  "prep_manifest_sha256": "86ece120835b9b2648d14adf71ac322ef8c6dd8b628344d46c55e4c680cba24a",
+  "split_manifest_sha256": "acd4a151b032425f08ab5160f5bcd0ac55ac5dad013ad2087680119ba31a08b6",
+  "annotation_source_mode": "qa_only",
+  "dataset_variant": "augmented",
+  "offline_augmentation_selection": "strong",
+  "config_fingerprint": "c572ec580adc3f07bfa728beac286d6a627a0e31a0bb0fd4c606c53833db65bf",
+  "run_label": "strongaug-wandb-cuda-rfdetr-n-img640-fixed-b16ga2-s42-resume2",
+  "started_at": "2026-09-12T20:27:04.245615+00:00",
+  "models": {
+    "rfdetr-n": {
+      "status": "running",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\strongaug-wandb-cuda-rfdetr-n-img640-fixed-b16ga2-s42-resume2",
+      "started_at": "2026-09-12T20:27:04.270714+00:00",
+      "wandb_run_id": "nkat6cze"
+    }
+  },
+  "current_model": "rfdetr-n",
+  "final_status": "running"
+}

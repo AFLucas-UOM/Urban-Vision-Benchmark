@@ -1,0 +1,47 @@
+# ============================================================================
+# Jetson zero-shot / prompted-localisation environment (.venv-jetson-prompt)
+# ============================================================================
+# OPTIONAL. The required detector and attribute benchmark must remain runnable
+# even if this environment cannot be created, so the bootstrap treats every
+# failure here as non-fatal and the orchestrator prints
+#
+#   Required benchmark: READY
+#   Optional zero-shot environment: SKIPPED (reason)
+#
+# and carries on.
+#
+# torch / torchvision are DELIBERATELY ABSENT - see requirements-detection.txt.
+#
+# Deliberately NOT installed here:
+#   * the Meta `sam3` package - it is built for x86 CUDA, imports `triton`, and
+#     getting it onto aarch64 is dependency surgery rather than an install. The
+#     zero-shot preflight reports `dependency_unavailable` for SAM 3 / 3.1 if it
+#     is absent, which is a result, not a failure.
+#   * triton / triton-windows - no supported Jetson wheel.
+#   * flash-attn - no Jetson wheel; attention falls back to SDPA.
+#   * Cosmos Reason2 32B is excluded from the Jetson matrix entirely.
+#
+# Weights are NEVER downloaded implicitly: the preflight checks the
+# repository-local Hugging Face cache under .cache/jetson/huggingface and
+# reports `missing_local_weights` unless --allow-model-downloads is passed.
+# ============================================================================
+
+# ---- Qwen3-VL / Cosmos Reason2 and LocateAnything (Eagle) ----
+transformers>=5.12,<6
+accelerate>=1.14
+huggingface_hub>=1.20
+safetensors>=0.8
+timm>=1.0
+einops>=0.8
+sentencepiece>=0.2
+
+# ---- Numerics and imaging ----
+numpy==1.26.4
+pillow>=11
+pyyaml>=6.0
+
+# ---- Benchmark reporting ----
+psutil>=5.9
+
+# ---- Test suite ----
+pytest>=8

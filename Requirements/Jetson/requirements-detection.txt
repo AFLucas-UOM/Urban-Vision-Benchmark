@@ -1,0 +1,52 @@
+# ============================================================================
+# Jetson detection environment (.venv-jetson-detection)
+# ============================================================================
+# For the MDWD and MTSD supervised-detection tracks of the Jetson edge
+# benchmark: Ultralytics YOLO11/12/26 and RF-DETR inference only.
+#
+# torch / torchvision are DELIBERATELY ABSENT.
+#
+# On a Jetson, PyTorch comes from NVIDIA's JetPack/L4T wheels and is built
+# against the device's CUDA, cuDNN and cuBLAS. Installing a PyPI torch wheel
+# here would either fail (no aarch64+CUDA wheel) or silently replace the
+# working JetPack build with a CPU-only one. The bootstrap therefore:
+#
+#   1. creates the venv with --system-site-packages so the JetPack torch stays
+#      importable;
+#   2. generates a pip constraints file pinning the *installed* torch,
+#      torchvision, numpy and opencv versions;
+#   3. installs this file with that constraint, so no transitive dependency can
+#      pull a different torch in.
+#
+# Versions mirror Requirements/requirements-traditional-training.txt where an
+# aarch64 wheel exists. numpy is pinned to the 1.x series because the JetPack
+# torch builds in use are compiled against it.
+# ============================================================================
+
+# ---- Detection ----
+ultralytics==8.4.60
+rfdetr==1.3.0
+supervision==0.27.0.post2
+pycocotools
+
+# ---- Numerics, data and imaging ----
+# numpy is normally satisfied by the JetPack system package; the pin exists so
+# a fresh venv without system numpy still gets a compatible version.
+numpy==1.26.4
+pandas>=2.0
+pillow>=10.0
+PyYAML>=6.0
+scipy>=1.10
+tqdm>=4.66
+
+# opencv: prefer the JetPack system OpenCV (CUDA-enabled) inherited through
+# --system-site-packages. The bootstrap installs the headless wheel ONLY when
+# no system cv2 is importable, so a working JetPack OpenCV is never shadowed.
+# opencv-python-headless   <- installed conditionally by bootstrap_jetson.sh
+
+# ---- Benchmark reporting ----
+matplotlib>=3.7
+psutil>=5.9
+
+# ---- Test suite ----
+pytest>=8

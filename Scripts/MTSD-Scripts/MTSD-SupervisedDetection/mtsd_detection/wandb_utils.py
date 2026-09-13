@@ -79,6 +79,14 @@ def start_run(config: dict[str, Any], name: str, group: str, mode: str, tags: li
         print("W&B is not installed; continuing without experiment tracking.")
         return None
 
+    # RF-DETR emits high-volume progress/evaluation prints.  On Windows,
+    # W&B's console-capture pipe can raise OSError(22) when the parent
+    # terminal/session is detached.  Keep metric, artifact, and metadata
+    # logging enabled while disabling only terminal capture.  Pass this as
+    # an explicit setting: W&B 0.28.1 did not honour WANDB_CONSOLE=off for
+    # these runs and silently selected console="wrap" instead.
+    wandb_settings = wandb.Settings(console="off")
+
     entity = os.getenv(config["wandb"]["entity_env"])
     runs_root = Path(config["outputs"]["runs_root"])
     runs_root.mkdir(parents=True, exist_ok=True)
@@ -86,6 +94,7 @@ def start_run(config: dict[str, Any], name: str, group: str, mode: str, tags: li
         project=config["wandb"]["project"], entity=entity, name=name,
         group=group, tags=tags, config=config, job_type="train",
         resume="never", dir=str(runs_root), reinit=True,
+        settings=wandb_settings,
     )
     try:
         run = wandb.init(**init_args, mode=mode)

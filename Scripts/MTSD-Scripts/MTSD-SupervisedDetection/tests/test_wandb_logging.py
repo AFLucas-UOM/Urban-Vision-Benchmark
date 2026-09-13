@@ -1,14 +1,19 @@
 from __future__ import annotations
 
+import json
+import sys
 from collections import defaultdict
 from types import SimpleNamespace
 
 import pytest
 
+from mtsd_detection.train_rfdetr import _resume_early_stopping_state
+
 from mtsd_detection.wandb_utils import (
     _final_metrics,
     attach_rfdetr_logger,
     attach_yolo_logger,
+    start_run,
     summarize_yolo_results,
 )
 
@@ -19,6 +24,57 @@ class FakeRun:
 
     def log(self, payload):
         self.logged.append(payload)
+
+
+def test_start_run_explicitly_disables_wandb_console_capture(tmp_path, monkeypatch):
+    captured = {}
+    run = SimpleNamespace(define_metric=lambda *args, **kwargs: None)
+
+    def settings(**kwargs):
+        return SimpleNamespace(**kwargs)
+
+    def init(**kwargs):
+        captured.update(kwargs)
+        return run
+
+    monkeypatch.setitem(sys.modules, "wandb", SimpleNamespace(Settings=settings, init=init))
+    config = {
+        "repo_root": str(tmp_path),
+        "outputs": {"runs_root": str(tmp_path / "runs")},
+        "wandb": {"entity_env": "TEST_WANDB_ENTITY", "project": "test"},
+    }
+    assert start_run(config, "run", "group", "online", ["test"]) is run
+    assert captured["settings"].console == "off"
+
+
+def test_rfdetr_resume_restores_early_stopping_across_run_segments(tmp_path):
+    torch = pytest.importorskip("torch")
+    first = tmp_path / "first"
+    second = tmp_path / "second"
+    first.mkdir()
+    second.mkdir()
+    first.joinpath("log.txt").write_text(
+        '\n'.join([
+            json.dumps({"test_coco_eval_bbox": [.50], "ema_test_coco_eval_bbox": [.51]}),
+            json.dumps({"test_coco_eval_bbox": [.52], "ema_test_coco_eval_bbox": [.53]}),
+            json.dumps({"test_coco_eval_bbox": [.52], "ema_test_coco_eval_bbox": [.529]}),
+        ]) + '\n',
+        encoding="utf-8",
+    )
+    second.joinpath("log.txt").write_text(
+        json.dumps({"test_coco_eval_bbox": [.521], "ema_test_coco_eval_bbox": [.528]}) + '\n',
+        encoding="utf-8",
+    )
+    first_checkpoint = first / "checkpoint.pth"
+    second_checkpoint = second / "checkpoint.pth"
+    torch.save({"args": SimpleNamespace(resume="")}, first_checkpoint)
+    torch.save({"args": SimpleNamespace(resume=str(first_checkpoint))}, second_checkpoint)
+
+    state = _resume_early_stopping_state(second_checkpoint)
+    assert state["restored"] is True
+    assert state["best_map"] == pytest.approx(.53)
+    assert state["counter"] == 2
+    assert state["completed_evaluations"] == 4
 
 
 def test_yolo_logger_emits_mdwd_metric_surface(tmp_path):
