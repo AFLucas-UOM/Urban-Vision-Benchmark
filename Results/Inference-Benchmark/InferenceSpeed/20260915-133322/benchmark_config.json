@@ -1,0 +1,40 @@
+{
+  "started_at": "2026-09-15T13:33:22",
+  "dataset": "MTSD",
+  "task": "detection",
+  "split": "test",
+  "models_requested": [
+    "yolo26",
+    "yolo11",
+    "rfdetr"
+  ],
+  "models_resolved": [
+    "yolo26s",
+    "yolo26m@mtsd",
+    "yolo11s@mtsd",
+    "rfdetr-m@mtsd",
+    "rfdetr-n@mtsd",
+    "rfdetr-s@mtsd"
+  ],
+  "run_pattern": "E02_yolo26s_mtsdqa1aug_img1280_eb32_e100_adamw_s42|strongaug-wandb-followup-yolo26m-img1280-s42|E03_yolo11s_mtsdqa1aug_img1280_eb32_e100_adamw_s42|strongaug-wandb-cuda-rfdetr-n-img640-fixed-b16ga2-s42-resume3|strongaug-wandb-cuda-rfdetr-s-img640-fixed-b16ga2-s42|strongaug-wandb-cuda-rfdetr-m-img640-fixed-b16ga2-s42",
+  "n_images": 50,
+  "batch_size": 1,
+  "batch_sizes": [
+    1
+  ],
+  "warmup": 3,
+  "seed": 42,
+  "imgsz": 640,
+  "conf_threshold": 0.3,
+  "source_resize": 640,
+  "prompt": null,
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "python": "3.12.11",
+    "torch": "2.10.0.dev20251013+cu130",
+    "device": "cuda",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4090"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "started_at": "2026-09-15T02:39:22",
+  "dataset": "MTSD",
+  "task": "detection",
+  "split": "test",
+  "models_requested": [
+    "rfdetr"
+  ],
+  "models_resolved": [
+    "rfdetr-m@mtsd",
+    "rfdetr-n@mtsd",
+    "rfdetr-s@mtsd"
+  ],
+  "run_pattern": "(rfdetr-n-img640-fixed-b16ga2-s42-resume3|rfdetr-[sm]-img640-fixed-b16ga2-s42)$",
+  "n_images": 50,
+  "batch_size": 1,
+  "batch_sizes": [
+    1
+  ],
+  "warmup": 3,
+  "seed": 42,
+  "imgsz": 640,
+  "conf_threshold": 0.3,
+  "prompt": null,
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "device": "cuda",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 4090"
+  }
+}

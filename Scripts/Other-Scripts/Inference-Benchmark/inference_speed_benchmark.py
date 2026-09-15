@@ -79,6 +79,7 @@ def find_project_root(start: Path = SCRIPT_DIR) -> Path:
 PROJECT_ROOT = find_project_root()
 RESULTS_ROOT = PROJECT_ROOT / "Results" / "Inference-Benchmark" / "InferenceSpeed"
 MDWD_RUNS = PROJECT_ROOT / "Results" / "MDWD-Runs"
+MDWD_RFDETR_RESULTS = PROJECT_ROOT / "Results" / "MDWD-Results" / "RF-DETR"
 MTSD_RUNS = PROJECT_ROOT / "Results" / "MTSD-Runs"
 ATTRCLS_DIR = PROJECT_ROOT / "Scripts" / "MTSD-Scripts" / "AttributeClassification"
 ATTR_CHECKPOINTS = ATTRCLS_DIR / "outputs" / "checkpoints"
@@ -130,8 +131,27 @@ class ModelEntry:
 
 def _variant_from_run_name(run_name: str) -> str:
     """'E003_yolo26m_rfv20_img640_...' -> 'yolo26m'."""
+    model = re.search(r"(?:^|[_-])(yolo(?:11|12|26)[nsml]|rfdetr[-_]?[nsm])(?:[_-]|$)",
+                      run_name.lower())
+    if model:
+        return model.group(1).replace("_", "-")
     parts = run_name.split("_")
     return parts[1] if len(parts) > 1 else run_name
+
+
+def _mdwd_rfdetr_result_entries() -> list[ModelEntry]:
+    """Discover standalone MDWD RF-DETR S/M artefacts outside MDWD-Runs."""
+    entries: list[ModelEntry] = []
+    for scale in ("s", "m"):
+        checkpoint = MDWD_RFDETR_RESULTS / f"MDWD-RF-DETR-{scale.upper()}.pt"
+        if checkpoint.exists():
+            entries.append(ModelEntry(
+                id=f"rfdetr-{scale}@mdwd-results", task="detection",
+                dataset="MDWD", family="rfdetr", status="ready",
+                checkpoint=str(checkpoint), suite="RF-DETR-Results",
+                notes=f"trained artifact {checkpoint.name}",
+            ))
+    return entries
 
 
 def _detection_entries(runs_root: Path, dataset: str) -> list[ModelEntry]:
@@ -234,6 +254,7 @@ def _prompt_entries() -> list[ModelEntry]:
 
 def build_inventory(include_smoke: bool = False) -> list[ModelEntry]:
     entries = _detection_entries(MDWD_RUNS, "MDWD")
+    entries += _mdwd_rfdetr_result_entries()
     mtsd_detection = _detection_entries(MTSD_RUNS, "MTSD")
     entries += mtsd_detection if mtsd_detection else _pending_detection_entries("MTSD")
     entries += _attribute_entries(include_smoke)
@@ -330,6 +351,7 @@ def hardware_info(device: str) -> dict:
 
 def benchmark_yolo(entry: ModelEntry, images: list[Path], args, device: str) -> dict:
     import torch
+    from PIL import Image
     from ultralytics import YOLO
 
     t0 = time.perf_counter()
@@ -340,8 +362,19 @@ def benchmark_yolo(entry: ModelEntry, images: list[Path], args, device: str) -> 
 
     speeds = {"preprocess": [], "inference": [], "postprocess": []}
 
+    # An optional source resize lets detector suites be compared without the
+    # cost of transferring arbitrarily large source photographs.  It is done
+    # before warmup/timing, matching the preloaded RF-DETR input path.
+    if args.source_resize:
+        loaded = [Image.open(p).convert("RGB").resize(
+            (args.source_resize, args.source_resize), Image.Resampling.BILINEAR)
+                  for p in images]
+    else:
+        loaded = images
+
     def run_batch(batch):
-        results = model.predict([str(p) for p in batch], imgsz=args.imgsz,
+        inputs = batch if args.source_resize else [str(p) for p in batch]
+        results = model.predict(inputs, imgsz=args.imgsz,
                                 device=device, verbose=False)
         for result in results:
             for key in speeds:
@@ -350,7 +383,7 @@ def benchmark_yolo(entry: ModelEntry, images: list[Path], args, device: str) -> 
                     speeds[key].append(value)
 
     stats = timed_loop(
-        run_batch, make_batches(images, args.batch_size), device, args.warmup,
+        run_batch, make_batches(loaded, args.batch_size), device, args.warmup,
         reset_after_warmup=lambda: clear_metric_lists(speeds),
     )
     return {
@@ -388,6 +421,9 @@ def benchmark_rfdetr(entry: ModelEntry, images: list[Path], args, device: str) -
         params = None
 
     loaded = [Image.open(p).convert("RGB") for p in images]
+    if args.source_resize:
+        loaded = [image.resize((args.source_resize, args.source_resize),
+                               Image.Resampling.BILINEAR) for image in loaded]
 
     def run_batch(batch):
         for image in batch:
@@ -458,7 +494,11 @@ def benchmark_prompt(entry: ModelEntry, images: list[Path], args, device: str) -
     if not status.get("ok"):
         raise RuntimeError(f"model load failed: {status.get('error')}")
 
-    loaded = [np.array(Image.open(p).convert("RGB")) for p in images]
+    loaded = [Image.open(p).convert("RGB") for p in images]
+    if args.source_resize:
+        loaded = [image.resize((args.source_resize, args.source_resize),
+                               Image.Resampling.BILINEAR) for image in loaded]
+    loaded = [np.array(image) for image in loaded]
     breakdown = {"preprocess": [], "inference": [], "postprocess": []}
 
     def run_batch(batch):
@@ -602,6 +642,9 @@ def main() -> int:
     parser.add_argument("--models", nargs="+", default=[],
                         help="Model ids/families from --list-models "
                              "(e.g. yolo26, yolo26n, rf-detr, dinov3_lora, sam3).")
+    parser.add_argument("--run-pattern",
+                        help="Optional regular expression matched against the trained run name/notes; "
+                             "use this to benchmark an exact subset of same-family checkpoints.")
     parser.add_argument("--split", default="test", choices=["train", "valid", "test"])
     parser.add_argument("--max-images", type=int, default=50)
     parser.add_argument("--batch-size", type=int, default=1)
@@ -610,6 +653,9 @@ def main() -> int:
     parser.add_argument("--warmup", type=int, default=3)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--imgsz", type=int, default=640)
+    parser.add_argument("--source-resize", type=int, default=None,
+                        help="Resize detector source images square before timing; "
+                             "use 640 for input-normalised cross-dataset comparisons.")
     parser.add_argument("--conf-threshold", type=float, default=0.30)
     parser.add_argument("--prompt", default="traffic sign",
                         help="Text prompt for the prompt task.")
@@ -633,6 +679,16 @@ def main() -> int:
     chosen, unmatched = select_models(inventory, args.models, args.task, dataset)
     if unmatched:
         raise SystemExit(f"No inventory match for: {unmatched}. Run --list-models.")
+    if args.run_pattern:
+        try:
+            run_re = re.compile(args.run_pattern, re.IGNORECASE)
+        except re.error as exc:
+            raise SystemExit(f"Invalid --run-pattern: {exc}") from exc
+        chosen = [entry for entry in chosen if run_re.search(
+            " ".join((entry.id, entry.notes, entry.checkpoint))
+        )]
+        if not chosen:
+            raise SystemExit(f"No selected model matched --run-pattern {args.run_pattern!r}.")
     heavy = [e for e in chosen if e.status == "heavy-opt-in"]
     if heavy and not args.allow_heavy:
         raise SystemExit(f"Heavy model(s) need --allow-heavy: {[e.id for e in heavy]}")
@@ -670,9 +726,11 @@ def main() -> int:
         "started_at": datetime.now().isoformat(timespec="seconds"),
         "dataset": dataset, "task": args.task, "split": args.split,
         "models_requested": args.models, "models_resolved": [e.id for e in chosen],
+        "run_pattern": args.run_pattern,
         "n_images": len(images), "batch_size": args.batch_size,
         "batch_sizes": batch_sizes, "warmup": args.warmup, "seed": args.seed,
         "imgsz": args.imgsz, "conf_threshold": args.conf_threshold,
+        "source_resize": args.source_resize,
         "prompt": args.prompt if args.task == "prompt" else None,
         "hardware": hw,
     }

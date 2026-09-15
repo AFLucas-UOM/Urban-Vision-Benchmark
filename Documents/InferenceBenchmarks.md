@@ -1,5 +1,10 @@
 # Inference Speed / Deployment Benchmark — Status Report
 
+> **Superseded status:** The benchmark has now been executed. The current
+> consolidated results are in
+> `Documents/Final-Tables/20260915-inference-benchmark/`; this document retains
+> the original infrastructure plan for historical context.
+
 *Generated 2026-07-06. Companion to `Scripts/Other-Scripts/Inference-Benchmark/inference_speed_benchmark.py`.
 This report describes the benchmark **infrastructure and coverage**; it contains no
 timing numbers yet, because no full benchmark run has been executed — dry-run

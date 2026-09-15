@@ -16,7 +16,7 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[3]
 BENCH_ROOT = REPO / "Results" / "Inference-Benchmark" / "InferenceSpeed"
-OUTPUT = REPO / "Documents" / "Final-Tables" / "20260910-inference-benchmark"
+OUTPUT = REPO / "Documents" / "Final-Tables" / "20260915-inference-benchmark"
 
 # Ordered by precedence.  The last three are the targeted successful repairs.
 SOURCES = [
@@ -27,6 +27,9 @@ SOURCES = [
     ("20260910-221923", "MTSD RF-DETR compact-name repair", 20),
     ("20260910-222307", "V-JEPA import-isolation repair", 20),
     ("20260910-224006", "MTSD RF-DETR-M strong repair", 30),
+    ("20260915-023903", "MDWD standalone RF-DETR-S/M", 40),
+    ("20260915-023922", "MTSD RF-DETR-N/S/M 640-Strong", 40),
+    ("20260915-024003", "MTSD YOLO 1280 inference", 50),
 ]
 
 FIELDS = [
@@ -115,8 +118,8 @@ def main() -> None:
     rows.sort(key=lambda r: (r["dataset"], r["task"], r["suite"], r["model"], r["run_identifier"]))
     counts = Counter((row["dataset"], row["task"]) for row in rows)
     expected = {
-        ("MDWD", "detection"): 16,
-        ("MTSD", "detection"): 49,
+        ("MDWD", "detection"): 18,
+        ("MTSD", "detection"): 57,
         ("MTSD", "attribute"): 18,
         ("MTSD", "prompt"): 6,
     }
@@ -133,7 +136,11 @@ def main() -> None:
     md: list[str] = [
         "# Completed inference benchmark — all models",
         "",
-        f"**Coverage:** {len(rows)} unique evaluated model artifacts: 16 MDWD detectors, 49 MTSD detectors, 18 MTSD attribute classifiers, and 6 PromptDetect models.",
+        f"**Coverage:** {len(rows)} unique evaluated model artifacts: "
+        f"{counts[('MDWD', 'detection')]} MDWD detectors, "
+        f"{counts[('MTSD', 'detection')]} MTSD detectors, "
+        f"{counts[('MTSD', 'attribute')]} MTSD attribute classifiers, and "
+        f"{counts[('MTSD', 'prompt')]} PromptDetect models.",
         "",
         "Each row is one successfully completed benchmark result. Targeted repair runs supersede earlier failed rows for the same checkpoint. Timing is only comparable within the same task/protocol; prompt models use a 10-image sample, all other groups use 50 images. All runs use seed 42, batch size 1, 3 warm-up iterations, CUDA on an NVIDIA GeForce RTX 4090.",
         "",
@@ -141,7 +148,7 @@ def main() -> None:
         "",
         "## Coverage and provenance",
         "",
-        "| Dataset | Task | Final models | Protocol |",
+        "| Dataset | Task | Final artifacts | Protocol |",
         "|---|---:|---:|---|",
     ]
     for (dataset, task), count in sorted(counts.items()):
@@ -163,16 +170,17 @@ def main() -> None:
             "",
             f"## {dataset} — {task} ({len(grouped_rows)} models)",
             "",
-            "| Model | Suite / trained run | Artifact MB | Parameters | Mean ms | p95 ms | FPS | Cold start s | Peak GPU GB | Source |",
-            "|---|---|---:|---:|---:|---:|---:|---:|---:|---|",
+            "| Model | Suite / trained run | Input | Artifact MB | Parameters | Mean ms | p95 ms | FPS | Cold start s | Peak GPU GB | Source |",
+            "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|",
         ])
         for row in grouped_rows:
             suite_run = row["suite"] or row["run_identifier"] or "—"
             if row["suite"] and row["run_identifier"]:
                 suite_run += f" / {row['run_identifier']}"
             md.append(
-                "| {model} | {suite} | {size} | {params} | {mean} | {p95} | {fps} | {cold} | {gpu} | `{source}` |".format(
+                "| {model} | {suite} | {input_size} | {size} | {params} | {mean} | {p95} | {fps} | {cold} | {gpu} | `{source}` |".format(
                     model=row["model"], suite=suite_run.replace("|", "/"),
+                    input_size=row["input_size"] or "—",
                     size=fmt(row["checkpoint_artifact_mb"]),
                     params=(f"{int(float(row['parameters'])):,}" if as_number(row["parameters"]) is not None else "—"),
                     mean=fmt(row["mean_latency_ms"]), p95=fmt(row["p95_latency_ms"]),
