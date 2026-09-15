@@ -13,12 +13,14 @@
   "started_at": "2026-09-13T09:44:14.807858+00:00",
   "models": {
     "rfdetr-s": {
-      "status": "running",
+      "status": "completed",
       "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\strongaug-wandb-cuda-rfdetr-s-img640-fixed-b16ga2-s42",
       "started_at": "2026-09-13T09:44:14.836368+00:00",
-      "wandb_run_id": "gssgs85y"
+      "wandb_run_id": "gssgs85y",
+      "finished_at": "2026-09-13T20:47:02.618047+00:00"
     }
   },
-  "current_model": "rfdetr-s",
-  "final_status": "running"
+  "current_model": null,
+  "final_status": "completed",
+  "finished_at": "2026-09-13T20:47:57.771311+00:00"
 }

@@ -1,0 +1,24 @@
+{
+  "population": "retained MTSD attribute test crops",
+  "n_crops": 1890,
+  "pixel_stage": "post-PadToSquare/post-Resize, before normalisation",
+  "tercile_method": "linear interpolation at 1/3 and 2/3 over sorted values",
+  "thresholds": {
+    "crop_brightness": {
+      "tercile_33": 104.2858378092448,
+      "tercile_67": 120.171999613444
+    },
+    "crop_contrast": {
+      "tercile_33": 37.025047302246094,
+      "tercile_67": 49.61860656738281
+    },
+    "crop_sharpness": {
+      "tercile_33": 43.28554662068683,
+      "tercile_67": 293.31998697916663
+    }
+  },
+  "original_object_size": {
+    "small_max_exclusive_area": 1024,
+    "medium_max_exclusive_area": 9216
+  }
+}

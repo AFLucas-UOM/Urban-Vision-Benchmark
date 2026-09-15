@@ -218,11 +218,106 @@
             "precision": 0.8079975713937603,
             "recall": 0.67
           }
+        ],
+        "test": [
+          {
+            "class": "Pedestrian Crossing",
+            "map@50:95": 0.7270232223618481,
+            "map@50": 0.8702299637816684,
+            "precision": 0.9711538461538461,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Stop Sign",
+            "map@50:95": 0.8573943450657138,
+            "map@50": 0.9110915345897314,
+            "precision": 1.0,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "No Entry (One Way)",
+            "map@50:95": 0.8484331165109662,
+            "map@50": 0.9084216594135226,
+            "precision": 0.9943502824858758,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Roundabout Ahead",
+            "map@50:95": 0.8085910173922369,
+            "map@50": 0.8706433883322927,
+            "precision": 1.0,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "No Through Road (T-Junction)",
+            "map@50:95": 0.9266228617097921,
+            "map@50": 0.9680373596765103,
+            "precision": 1.0,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Blind-Spot Mirror (Convex Mirror)",
+            "map@50:95": 0.856280309225226,
+            "map@50": 0.9117163736607261,
+            "precision": 1.0,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Street Sign",
+            "map@50:95": 0.6299213384908412,
+            "map@50": 0.7649446482610555,
+            "precision": 0.8048780487804879,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Directional Sign",
+            "map@50:95": 0.5404645050863499,
+            "map@50": 0.7365196561728087,
+            "precision": 0.7450980392156863,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Tourist Sign",
+            "map@50:95": 0.9112211221122112,
+            "map@50": 1.0,
+            "precision": 1.0,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Auxiliary Sign",
+            "map@50:95": 0.3539123969932592,
+            "map@50": 0.48645879530234687,
+            "precision": 0.11988716502115655,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Back-Unknown",
+            "map@50:95": 0.6561791733199025,
+            "map@50": 0.784298652761283,
+            "precision": 0.9585921325051759,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "Other-Unknown",
+            "map@50:95": 0.5427426633237991,
+            "map@50": 0.6843260445319651,
+            "precision": 0.5698529411764706,
+            "recall": 0.7000000000000001
+          },
+          {
+            "class": "all",
+            "map@50:95": 0.7215655059660121,
+            "map@50": 0.8247240063736591,
+            "precision": 0.846984371278225,
+            "recall": 0.7000000000000001
+          }
         ]
       },
       "map": 0.7814401443774895,
-      "precision": 0.8079975713937603,
-      "recall": 0.67
+      "precision": 0.846984371278225,
+      "recall": 0.7000000000000001,
+      "map50": 0.8247240063736591,
+      "map50_95": 0.7215655059660121
     }
   },
   "native_metrics_path": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\strongaug-wandb-cuda-rfdetr-m-img640-fixed-b16ga2-s42\\results.json",
@@ -275,7 +370,7 @@
     "counter": 0,
     "completed_evaluations": 0
   },
-  "test_evaluation_deferred": true,
+  "test_evaluation_deferred": false,
   "unified_eval_status": "completed",
   "unified_eval_error": null,
   "unified_evaluation_seconds": 151.496588,
@@ -447,5 +542,13 @@
     "inference_peak_vram_mib": 1264.51318359375
   },
   "unified_test_metrics": {},
-  "finished_at": "2026-09-13T04:35:53.444651+00:00"
+  "finished_at": "2026-09-13T04:35:53.444651+00:00",
+  "native_test_evaluation": {
+    "checkpoint": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\RF-DETR-MTSD\\strongaug-wandb-cuda-rfdetr-m-img640-fixed-b16ga2-s42\\checkpoint_best_total.pth",
+    "dataset_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Datasets\\MTSD\\Prepared\\MTSD-Augmented-Strong\\MTSD-COCO",
+    "split": "test",
+    "resolution": 640,
+    "batch_size": 16,
+    "seconds": 49.49607200000901
+  }
 }

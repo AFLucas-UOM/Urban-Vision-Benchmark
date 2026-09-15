@@ -12,7 +12,9 @@ Workstreams and their evidence sources:
     (Documents/Final-Reports/MDWD-Leakage-Analysis/scratch/runs/*__original/),
     which cover the full official valid/test splits with the original
     protocol; ground truth from Datasets/MDWD/MDWD-YOLO26.
-  * MTSD supervised detection - PENDING until training runs exist.
+  * MTSD supervised detection - stored unified COCO predictions from completed
+    run folders under Results/MTSD-Runs.  This is an inventory analysis: runs
+    remain distinguishable by their individual protocol/run identifier.
   * MTSD attribute classification - per-head/per-class metrics stored by the
     completed GRP-1..GRP-3 snapshot round (historical status). Image-property
     slices need per-crop predictions the pipeline does not store - reported
@@ -38,6 +40,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import ast
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -50,6 +53,19 @@ import evidence_lib as ev  # noqa: E402
 
 GENERATOR = "Scripts/FinalEvaluation/robustness_slice_analysis.py"
 WORKSTREAMS = ("MDWD", "MTSD", "PromptDetect-MDWD", "PromptDetect-MTSD")
+
+CANONICAL_SAM3_RUNS = {
+    "MDWD": ev.PROMPT_RESULTS / "MDWD" /
+            "20260821-170445-optimized-v2-bounded-sensitivity",
+    "MTSD": ev.PROMPT_RESULTS / "MTSD" /
+            "20260822-102455-optimized-v2-bounded-sensitivity",
+}
+RETAINED_DETECTION_SLICE_CONFIGS = {
+    "MDWD": ev.REPORTS_ROOT / "Robustness-Slices" / "20260908-103240" /
+            "robustness_slice_config.json",
+    "MTSD": ev.REPORTS_ROOT / "Robustness-Slices" / "20260914-123609" /
+            "robustness_slice_config.json",
+}
 
 
 # ---------------------------------------------------------------------------
@@ -256,6 +272,215 @@ def analyse_mdwd_detection(args, pd_metrics, missing: list[str]) -> tuple[list[d
 
 
 # ---------------------------------------------------------------------------
+# MTSD supervised detection slices (stored unified COCO predictions)
+# ---------------------------------------------------------------------------
+
+def _mtsd_prepared_variant(run_dir: Path) -> Path:
+    """Return the prepared COCO root implied by a recorded MTSD run name."""
+    name = run_dir.name.lower()
+    if "noaug" in name:
+        variant = "MTSD-Unaugmented"
+    elif "strong" in name:
+        variant = "MTSD-Augmented-Strong"
+    else:
+        variant = "MTSD-Augmented"
+    return ev.ROOT / "Datasets" / "MTSD" / "Prepared" / variant / "MTSD-COCO"
+
+
+def _mtsd_annotation_path(run_dir: Path, split: str) -> tuple[Path | None, Path | None]:
+    """Find the exact unified-eval annotation when retained, else its source COCO file."""
+    eval_names = ("unified_evaluation_validation", "unified_evaluation_valid") if split == "valid" else (
+        "unified_evaluation_test", "unified_evaluation")
+    for directory in eval_names:
+        path = run_dir / directory / "evaluation_annotations.coco.json"
+        if path.exists():
+            return path, _mtsd_prepared_variant(run_dir) / split
+    path = _mtsd_prepared_variant(run_dir) / split / "_annotations.coco.json"
+    return (path, path.parent) if path.exists() else (None, None)
+
+
+def _load_mtsd_gt(run_dir: Path, split: str) -> tuple[dict | None, str]:
+    """Load MTSD COCO GT in the matcher schema, preserving unified exclusions."""
+    annotation_path, image_dir = _mtsd_annotation_path(run_dir, split)
+    if annotation_path is None or image_dir is None:
+        return None, ""
+    payload = ev.read_json(annotation_path)
+    record = ev.read_json(run_dir / "run_record.json")
+    excluded = set(record.get("evaluation_excluded_categories", ["Tourist Sign"]))
+    categories = {int(row["id"]): row["name"] for row in payload.get("categories", [])
+                  if row.get("name") not in excluded}
+    images = {int(row["id"]): row for row in payload.get("images", [])}
+    records = {
+        image_id: {
+            "path": image_dir / row["file_name"],
+            "width": float(row["width"]), "height": float(row["height"]),
+            "boxes": [],
+        }
+        for image_id, row in images.items()
+    }
+    for row in payload.get("annotations", []):
+        category_id = int(row["category_id"])
+        image_id = int(row["image_id"])
+        if category_id not in categories or image_id not in records:
+            continue
+        x, y, w, h = (float(value) for value in row["bbox"])
+        records[image_id]["boxes"].append({
+            "class_name": categories[category_id], "x0": x, "y0": y,
+            "x1": x + w, "y1": y + h,
+        })
+    return {"records": records, "class_names": categories}, ev.rel(annotation_path)
+
+
+def _load_mtsd_predictions(path: Path, class_names: dict[int, str], min_score: float) -> dict[int, list[dict]]:
+    predictions: dict[int, list[dict]] = defaultdict(list)
+    for row in ev.read_json(path):
+        category_id = int(row.get("category_id", -1))
+        score = float(row.get("score", 0.0))
+        if category_id not in class_names or score < min_score:
+            continue
+        x, y, w, h = (float(value) for value in row["bbox"])
+        predictions[int(row["image_id"])].append({
+            "class_name": class_names[category_id], "x0": x, "y0": y,
+            "x1": x + w, "y1": y + h, "score": score,
+        })
+    return predictions
+
+
+def analyse_mtsd_detection(args, pd_metrics, missing: list[str]) -> tuple[list[dict], dict]:
+    """Calculate slices for every completed stored unified MTSD prediction export.
+
+    The inventory intentionally retains distinct runs rather than silently selecting
+    a winner.  Results therefore support within-run robustness statements; users
+    must restrict comparisons to matching split/taxonomy/protocol conditions.
+    """
+    prediction_files = sorted((ev.ROOT / "Results" / "MTSD-Runs").rglob("unified_*_predictions.json"))
+    rows: list[dict] = []
+    thresholds_used: dict = {}
+    gt_cache: dict[tuple[str, str], tuple[dict, str]] = {}
+    stats_cache: dict[tuple[str, str], dict] = {}
+    skipped = 0
+
+    for prediction_path in prediction_files:
+        run_dir = prediction_path.parent
+        record_path = run_dir / "run_record.json"
+        if not record_path.exists():
+            skipped += 1
+            continue
+        record = ev.read_json(record_path)
+        if record.get("status") != "completed":
+            skipped += 1
+            continue
+        split = "valid" if "validation" in prediction_path.name else "test"
+        gt, annotation_source = _load_mtsd_gt(run_dir, split)
+        if not gt or not gt["records"]:
+            skipped += 1
+            continue
+        cache_key = (annotation_source, split)
+        if cache_key not in gt_cache:
+            gt_cache[cache_key] = (gt, annotation_source)
+            stats_cache[cache_key] = {
+                image_id: ev.image_stats(data["path"])
+                for image_id, data in gt["records"].items() if data["path"].exists()
+            }
+        gt, annotation_source = gt_cache[cache_key]
+        stats = stats_cache[cache_key]
+        preds = _load_mtsd_predictions(prediction_path, gt["class_names"], args.working_conf)
+        per_image: dict[int, dict] = {}
+        class_counts: dict[str, Counter] = defaultdict(Counter)
+        gt_records_all: list[dict] = []
+        for image_id, image in gt["records"].items():
+            result = ev.match_detections(pd_metrics, preds.get(image_id, []), image["boxes"], 0.5)
+            per_image[image_id] = result
+            for gt_record in result["gt_records"]:
+                gt_record["image"] = image_id
+                gt_records_all.append(gt_record)
+                class_counts[gt_record["class_name"]]["gt"] += 1
+                class_counts[gt_record["class_name"]]["tp"] += int(gt_record["matched"])
+            for pred_record in result["pred_records"]:
+                if not pred_record["is_tp"]:
+                    class_counts[pred_record["class_name"]]["fp"] += 1
+
+        totals = {key: sum(result[key] for result in per_image.values()) for key in ("tp", "fp", "fn")}
+        aggregate = ev.prf_from_counts(**totals)
+        matched = [row for row in gt_records_all if row["matched"]]
+        aggregate_miou = sum(row["iou"] for row in matched) / len(matched) if matched else 0.0
+        model = f"{record.get('family', 'MTSD')} {record.get('scale', '')}".strip()
+        run_id = ev.rel(run_dir)
+
+        def base(**kw) -> dict:
+            return slice_row(workstream="MTSD-detection", status=ev.STATUS_HISTORICAL,
+                             model=model, run=run_id, split=split, min_support=args.min_support,
+                             source=ev.rel(prediction_path),
+                             snapshot="completed unified-prediction run inventory; no final shortlist applied",
+                             **kw)
+
+        for metric_name, metric_value in [*aggregate.items(), ("mean_matched_iou", aggregate_miou)]:
+            rows.append(base(dimension="aggregate", value="all", metric=metric_name,
+                             metric_value=metric_value, n_images=len(per_image),
+                             n_objects=len(gt_records_all), aggregate=None))
+
+        split_thresholds = {
+            feature: ev.tercile_thresholds([value[feature] for value in stats.values()])
+            for feature in ("brightness", "contrast", "sharpness")
+        }
+        thresholds_used[f"MTSD/{run_dir.name}/{split}"] = {
+            **{feature: {"tercile_33": round(values[0], 2), "tercile_67": round(values[1], 2)}
+               for feature, values in split_thresholds.items()},
+            "annotation_source": annotation_source,
+        }
+        image_assigners = {
+            "brightness": lambda image_id: ev.tercile_label(stats[image_id]["brightness"], split_thresholds["brightness"]),
+            "contrast": lambda image_id: ev.tercile_label(stats[image_id]["contrast"], split_thresholds["contrast"]),
+            "sharpness": lambda image_id: ev.tercile_label(stats[image_id]["sharpness"], split_thresholds["sharpness"], ("blurred", "intermediate", "sharp")),
+            "object_density": lambda image_id: ev.density_label(len(gt["records"][image_id]["boxes"])),
+        }
+        for dimension, assign in image_assigners.items():
+            groups: dict[str, list[int]] = defaultdict(list)
+            for image_id in per_image:
+                if image_id in stats or dimension == "object_density":
+                    groups[assign(image_id)].append(image_id)
+            for value, ids in sorted(groups.items()):
+                counts = {key: sum(per_image[image_id][key] for image_id in ids) for key in ("tp", "fp", "fn")}
+                for metric_name, metric_value in ev.prf_from_counts(**counts).items():
+                    rows.append(base(dimension=dimension, value=value, metric=metric_name,
+                                     metric_value=metric_value, n_images=len(ids),
+                                     n_objects=sum(len(gt["records"][image_id]["boxes"]) for image_id in ids),
+                                     aggregate=aggregate[metric_name]))
+
+        support_by_class = Counter(row["class_name"] for row in gt_records_all)
+        median_support = sorted(support_by_class.values())[len(support_by_class) // 2]
+        object_assigners = {
+            "object_size": lambda row: ev.coco_size_label(max(0.0, (row["x1"] - row["x0"]) * (row["y1"] - row["y0"]))),
+            "object_position": lambda row: ev.position_label(row, gt["records"][row["image"]]["width"], gt["records"][row["image"]]["height"]),
+            "class": lambda row: row["class_name"],
+            "class_frequency": lambda row: "common" if support_by_class[row["class_name"]] >= median_support else "rare",
+        }
+        for dimension, assign in object_assigners.items():
+            groups: dict[str, list[dict]] = defaultdict(list)
+            for gt_record in gt_records_all:
+                groups[assign(gt_record)].append(gt_record)
+            for value, group in sorted(groups.items()):
+                matched_group = [row for row in group if row["matched"]]
+                values = [("recall", len(matched_group) / len(group) if group else 0.0),
+                          ("mean_matched_iou", sum(row["iou"] for row in matched_group) / len(matched_group) if matched_group else 0.0)]
+                if dimension == "class":
+                    counts = class_counts[value]
+                    values.extend((key, metric) for key, metric in ev.prf_from_counts(
+                        counts["tp"], counts["fp"], counts["gt"] - counts["tp"]).items() if key != "recall")
+                for metric_name, metric_value in values:
+                    overall = aggregate.get(metric_name, aggregate_miou if metric_name == "mean_matched_iou" else None)
+                    rows.append(base(dimension=dimension, value=value, metric=metric_name,
+                                     metric_value=metric_value, n_images=len({row["image"] for row in group}),
+                                     n_objects=len(group), aggregate=overall))
+
+    if not rows:
+        missing.append("MTSD supervised detection: no completed, compatible unified prediction exports were found.")
+    elif skipped:
+        missing.append(f"MTSD supervised detection: skipped {skipped} prediction exports without a completed run record or compatible COCO ground truth.")
+    return rows, thresholds_used
+
+
+# ---------------------------------------------------------------------------
 # MTSD attribute classification slices (stored per-head metrics)
 # ---------------------------------------------------------------------------
 
@@ -457,6 +682,364 @@ def analyse_promptdetect(args, pd_metrics, dataset: str, missing: list[str]) -> 
 
 
 # ---------------------------------------------------------------------------
+# New extension: canonical SAM 3 prompt robustness with retained thresholds
+# ---------------------------------------------------------------------------
+
+def _retained_detection_test_thresholds(dataset: str) -> tuple[dict, str]:
+    """Load, but never recompute, the retained detector test-split terciles."""
+    config_path = RETAINED_DETECTION_SLICE_CONFIGS[dataset]
+    if not config_path.exists():
+        raise FileNotFoundError(
+            f"retained {dataset} detector slice config not found: {ev.rel(config_path)}")
+    resolved = ev.read_json(config_path).get("resolved_thresholds", {})
+    if dataset == "MDWD":
+        selected = resolved.get("MDWD/test")
+        source_key = "MDWD/test"
+        if not selected:
+            raise RuntimeError(f"MDWD/test thresholds absent from {ev.rel(config_path)}")
+    else:
+        candidates = []
+        for key, value in resolved.items():
+            if not (key.startswith("MTSD/") and key.endswith("/test")):
+                continue
+            feature_values = tuple(
+                (round(float(value.get(feature, {}).get("tercile_33", 0.0)), 6),
+                 round(float(value.get(feature, {}).get("tercile_67", 0.0)), 6))
+                for feature in ("brightness", "contrast", "sharpness"))
+            if all(low != 0.0 or high != 0.0 for low, high in feature_values):
+                candidates.append((feature_values, key, value))
+        unique = {item[0] for item in candidates}
+        if len(unique) != 1:
+            raise RuntimeError(
+                "MTSD retained test thresholds are absent or inconsistent; "
+                "refusing to select or recompute them")
+        preferred = [item for item in candidates
+                     if "strongaug-wandb-followup-yolo26m-img1280-s42/test"
+                     in item[1]]
+        _, source_key, selected = preferred[0] if preferred else candidates[0]
+    thresholds = {
+        feature: (float(selected[feature]["tercile_33"]),
+                  float(selected[feature]["tercile_67"]))
+        for feature in ("brightness", "contrast", "sharpness")}
+    return thresholds, f"{ev.rel(config_path)}::{source_key}"
+
+
+def _target_classes(row: dict) -> set[str]:
+    raw = row.get("target_classes", "")
+    try:
+        parsed = ast.literal_eval(raw)
+    except (SyntaxError, ValueError) as exc:
+        raise ValueError(f"invalid target_classes value {raw!r}") from exc
+    if not isinstance(parsed, (list, tuple)) or not parsed:
+        raise ValueError(f"target_classes must be a non-empty list, got {raw!r}")
+    return {str(value) for value in parsed}
+
+
+def analyse_sam3_canonical_extension(args, pd_metrics, dataset: str,
+                                     missing: list[str]) -> tuple[list[dict], dict]:
+    """Slice canonical SAM 3 using detector-aligned image and object rules."""
+    run_dir = CANONICAL_SAM3_RUNS[dataset]
+    required = ["prompt_sensitivity_per_prompt.csv", "predictions.csv",
+                "ground_truth_index.csv", "run_config.json"]
+    absent = [name for name in required if not (run_dir / name).exists()]
+    if absent:
+        missing.append(
+            f"SAM 3 canonical {dataset}: missing required stored files "
+            f"{', '.join(absent)} under `{ev.rel(run_dir)}`; no slices produced.")
+        return [], {}
+
+    summary_rows = ev.read_csv_rows(run_dir / "prompt_sensitivity_per_prompt.csv")
+    families = [row for row in summary_rows
+                if row.get("model") == "SAM 3"
+                and row.get("variant_type") == "canonical"]
+    families.sort(key=lambda row: row.get("sensitivity_family", ""))
+    expected_families = 4 if dataset == "MDWD" else 5
+    if len(families) != expected_families:
+        missing.append(
+            f"SAM 3 canonical {dataset}: expected {expected_families} canonical "
+            f"families but found {len(families)}; no slices produced.")
+        return [], {}
+
+    data = ev.load_promptdetect_run(run_dir)
+    config = data["config"]
+    configured_confidence = float(config.get("conf_threshold", 0.3))
+    configured_iou = float(config.get("iou_threshold", 0.5))
+    if abs(configured_confidence - 0.30) > 1e-9 or abs(configured_iou - 0.50) > 1e-9:
+        raise RuntimeError(
+            f"{dataset} stored protocol is confidence={configured_confidence}, "
+            f"IoU={configured_iou}; expected 0.30/0.50")
+
+    thresholds, threshold_source = _retained_detection_test_thresholds(dataset)
+    stats: dict[str, dict] = {}
+    missing_images = []
+    for image_id, record in data["gt_by_image"].items():
+        local = ev.rebase_stored_path(record["stored_path"])
+        if not local or not local.exists():
+            missing_images.append(image_id)
+            continue
+        stats[image_id] = ev.image_stats(local)
+    if missing_images:
+        missing.append(
+            f"SAM 3 canonical {dataset}: {len(missing_images)} test images could "
+            "not be resolved, so exact tercile slices were not produced.")
+        return [], {}
+
+    family_results: dict[str, dict] = {}
+    for family in families:
+        family_name = family["sensitivity_family"]
+        prompt = family["prompt"]
+        target_classes = _target_classes(family)
+        per_image = {}
+        for image_id, record in data["gt_by_image"].items():
+            gt_boxes = [box for box in record["boxes"]
+                        if box["class_name"] in target_classes]
+            predictions = [prediction for prediction in
+                           data["predictions"].get(("SAM 3", prompt, image_id), [])
+                           if (not prediction["has_confidence"]
+                               or prediction["score"] >= configured_confidence)]
+            per_image[image_id] = ev.match_detections(
+                pd_metrics, predictions, gt_boxes, iou_threshold=configured_iou,
+                class_aware=False)
+        totals = {key: sum(value[key] for value in per_image.values())
+                  for key in ("tp", "fp", "fn")}
+        aggregate_metrics = ev.prf_from_counts(**totals)
+        aggregate_f1 = aggregate_metrics["f1"]
+        reported_f1 = float(family["f1"])
+        if abs(aggregate_f1 - reported_f1) > 5e-4:
+            raise RuntimeError(
+                f"{dataset}/{family_name}: rematched canonical F1 {aggregate_f1:.6f} "
+                f"does not reproduce prompt_sensitivity_per_prompt.csv {reported_f1:.6f}")
+        family_results[family_name] = {
+            "prompt": prompt, "target_classes": sorted(target_classes),
+            "per_image": per_image, "aggregate_f1": aggregate_f1,
+            "aggregate_recall": aggregate_metrics["recall"],
+        }
+
+    rows: list[dict] = []
+    run_id = f"{dataset}/{run_dir.name}"
+    source = (f"{ev.rel(run_dir / 'prompt_sensitivity_per_prompt.csv')}; "
+              f"{ev.rel(run_dir / 'predictions.csv')}; "
+              f"{ev.rel(run_dir / 'ground_truth_index.csv')}")
+    snapshot = ("NEW ANALYSIS; SAM 3 canonical prompts; detector-aligned "
+                "brightness/contrast/sharpness, density and COCO-size rules; "
+                f"retained detector test terciles from {threshold_source}")
+    n_images_total = len(data["gt_by_image"])
+    total_target_objects = sum(
+        sum(1 for record in data["gt_by_image"].values()
+            for box in record["boxes"]
+            if box["class_name"] in result["target_classes"])
+        for result in family_results.values())
+    macro_aggregate = sum(result["aggregate_f1"]
+                          for result in family_results.values()) / len(family_results)
+    macro_aggregate_recall = sum(result["aggregate_recall"]
+                                 for result in family_results.values()) / len(family_results)
+
+    rows.append(slice_row(
+        workstream=f"PromptDetect-SAM3-canonical-{dataset}", status=ev.STATUS_FINAL,
+        model="SAM 3 canonical macro", run=run_id, split="test",
+        dimension="aggregate", value="all", metric="macro_f1",
+        metric_value=macro_aggregate, n_images=n_images_total,
+        n_objects=total_target_objects, min_support=args.min_support,
+        aggregate=None, source=source, snapshot=snapshot,
+        notes=f"unweighted macro-average across {len(family_results)} target families"))
+    rows.append(slice_row(
+        workstream=f"PromptDetect-SAM3-canonical-{dataset}", status=ev.STATUS_FINAL,
+        model="SAM 3 canonical macro", run=run_id, split="test",
+        dimension="aggregate", value="all", metric="macro_recall",
+        metric_value=macro_aggregate_recall, n_images=n_images_total,
+        n_objects=total_target_objects, min_support=args.min_support,
+        aggregate=None, source=source, snapshot=snapshot,
+        notes=f"unweighted macro-average across {len(family_results)} target-family recalls"))
+    for family_name, result in family_results.items():
+        family_objects = sum(
+            len([box for box in record["boxes"]
+                 if box["class_name"] in result["target_classes"]])
+            for record in data["gt_by_image"].values())
+        rows.append(slice_row(
+            workstream=f"PromptDetect-SAM3-canonical-{dataset}",
+            status=ev.STATUS_FINAL, model=f"SAM 3 — {family_name}", run=run_id,
+            split="test", dimension="aggregate", value="all", metric="f1",
+            metric_value=result["aggregate_f1"], n_images=n_images_total,
+            n_objects=family_objects, min_support=args.min_support,
+            aggregate=None, source=source, snapshot=snapshot,
+            notes=f"canonical prompt: {result['prompt']}"))
+        rows.append(slice_row(
+            workstream=f"PromptDetect-SAM3-canonical-{dataset}",
+            status=ev.STATUS_FINAL, model=f"SAM 3 — {family_name}", run=run_id,
+            split="test", dimension="aggregate", value="all", metric="recall",
+            metric_value=result["aggregate_recall"], n_images=n_images_total,
+            n_objects=family_objects, min_support=args.min_support,
+            aggregate=None, source=source, snapshot=snapshot,
+            notes=f"canonical prompt: {result['prompt']}"))
+
+    label_names = {
+        "brightness": ("low", "medium", "high"),
+        "contrast": ("low", "medium", "high"),
+        "sharpness": ("blurred", "intermediate", "sharp"),
+        "object_density": ("single-object", "low-clutter", "high-clutter"),
+    }
+    for dimension, labels in label_names.items():
+        grouped: dict[str, list[str]] = defaultdict(list)
+        for image_id in data["gt_by_image"]:
+            if dimension == "object_density":
+                density_boxes = [
+                    box for box in data["gt_by_image"][image_id]["boxes"]
+                    if not (dataset == "MTSD"
+                            and box["class_name"] == "Tourist Sign")]
+                label = ev.density_label(len(density_boxes))
+            else:
+                label = ev.tercile_label(stats[image_id][dimension],
+                                         thresholds[dimension], labels)
+            grouped[label].append(image_id)
+        for slice_value in labels:
+            image_ids = grouped[slice_value]
+            family_slice_f1 = {}
+            slice_target_objects = 0
+            for family_name, result in family_results.items():
+                counts = {key: sum(result["per_image"][image_id][key]
+                                   for image_id in image_ids)
+                          for key in ("tp", "fp", "fn")}
+                f1 = ev.prf_from_counts(**counts)["f1"]
+                family_slice_f1[family_name] = f1
+                family_objects = sum(
+                    len([box for box in data["gt_by_image"][image_id]["boxes"]
+                         if box["class_name"] in result["target_classes"]])
+                    for image_id in image_ids)
+                slice_target_objects += family_objects
+                rows.append(slice_row(
+                    workstream=f"PromptDetect-SAM3-canonical-{dataset}",
+                    status=ev.STATUS_FINAL, model=f"SAM 3 — {family_name}",
+                    run=run_id, split="test", dimension=dimension,
+                    value=slice_value, metric="f1", metric_value=f1,
+                    n_images=len(image_ids), n_objects=family_objects,
+                    min_support=args.min_support,
+                    aggregate=result["aggregate_f1"], source=source,
+                    snapshot=snapshot, notes=f"canonical prompt: {result['prompt']}"))
+            macro_f1 = sum(family_slice_f1.values()) / len(family_slice_f1)
+            rows.append(slice_row(
+                workstream=f"PromptDetect-SAM3-canonical-{dataset}",
+                status=ev.STATUS_FINAL, model="SAM 3 canonical macro", run=run_id,
+                split="test", dimension=dimension, value=slice_value,
+                metric="macro_f1", metric_value=macro_f1,
+                n_images=len(image_ids), n_objects=slice_target_objects,
+                min_support=args.min_support, aggregate=macro_aggregate,
+                source=source, snapshot=snapshot,
+                notes=f"unweighted macro-average across {len(family_results)} family F1 values"))
+
+    # Object-size slices are target-object-level. False positives cannot be
+    # assigned uniquely to a ground-truth size bin, so report recall, not F1.
+    size_labels = ("small", "medium", "large")
+    size_by_family: dict[str, dict[str, list[dict]]] = {}
+    for family_name, result in family_results.items():
+        groups: dict[str, list[dict]] = defaultdict(list)
+        for image_id, matched in result["per_image"].items():
+            for gt_record in matched["gt_records"]:
+                area = max(0.0, ((gt_record["x1"] - gt_record["x0"])
+                                 * (gt_record["y1"] - gt_record["y0"])))
+                groups[ev.coco_size_label(area)].append(
+                    {**gt_record, "image": image_id})
+        size_by_family[family_name] = groups
+        for size in size_labels:
+            group = groups[size]
+            recall = (sum(int(record["matched"]) for record in group) / len(group)
+                      if group else 0.0)
+            rows.append(slice_row(
+                workstream=f"PromptDetect-SAM3-canonical-{dataset}",
+                status=ev.STATUS_FINAL, model=f"SAM 3 — {family_name}", run=run_id,
+                split="test", dimension="object_size", value=size, metric="recall",
+                metric_value=recall,
+                n_images=len({record["image"] for record in group}),
+                n_objects=len(group), min_support=args.min_support,
+                aggregate=result["aggregate_recall"], source=source,
+                snapshot=snapshot,
+                notes=(f"canonical prompt: {result['prompt']}; COCO area thresholds; "
+                       "object-level recall because false positives are not "
+                       "uniquely attributable to a GT size bin")))
+
+    for size in size_labels:
+        eligible = []
+        for family_name, groups in size_by_family.items():
+            group = groups[size]
+            if len(group) >= args.min_support:
+                recall = sum(int(record["matched"]) for record in group) / len(group)
+                eligible.append((family_name, group, recall))
+        if not eligible:
+            continue
+        rows.append(slice_row(
+            workstream=f"PromptDetect-SAM3-canonical-{dataset}",
+            status=ev.STATUS_FINAL, model="SAM 3 canonical macro", run=run_id,
+            split="test", dimension="object_size", value=size,
+            metric="macro_recall",
+            metric_value=sum(item[2] for item in eligible) / len(eligible),
+            n_images=len({record["image"] for _, group, _ in eligible
+                          for record in group}),
+            n_objects=sum(len(group) for _, group, _ in eligible),
+            min_support=args.min_support, aggregate=macro_aggregate_recall,
+            source=source, snapshot=snapshot,
+            notes=(f"unweighted macro-average across {len(eligible)} family recalls "
+                   f"whose {size} support is >= {args.min_support}; COCO area thresholds")))
+
+    threshold_record = {
+        feature: {"tercile_33": values[0], "tercile_67": values[1]}
+        for feature, values in thresholds.items()}
+    threshold_record.update({
+        "source": threshold_source, "reuse_policy": "loaded, not recomputed",
+        "confidence_threshold": configured_confidence,
+        "iou_threshold": configured_iou,
+        "object_density_rule": "single-object=1; low-clutter=2-4; high-clutter>=5",
+        "object_density_exclusions": (["Tourist Sign"] if dataset == "MTSD" else []),
+        "object_size_rule": "COCO box-area thresholds: small<32^2; medium<96^2; otherwise large",
+        "object_size_metric": "macro-recall; false positives are not assigned to GT size bins",
+    })
+    return rows, {f"PromptDetect-SAM3-canonical-{dataset}/test": threshold_record}
+
+
+def audit_attribute_crop_slice_inputs(missing: list[str]) -> None:
+    """Enforce the no-approximation gate for VJEPA crop-condition slicing."""
+    manifest_path = ev.ATTR_OUTPUTS / "manifests" / "manifest.json"
+    variant = "vjepa21_vitl_lora"
+    if not manifest_path.exists():
+        missing.append(
+            "VJEPA 2.1-L LoRA crop-condition slices: crop manifest is missing; "
+            "no attribute slices produced.")
+        return
+    manifest = ev.read_json(manifest_path)
+    test_records = [record for record in manifest.get("records", [])
+                    if record.get("split") == "test"]
+    subproject_root = ev.ROOT / "Scripts" / "MTSD-Scripts" / "AttributeClassification"
+    existing_crops = sum(
+        (subproject_root / Path(record.get("crop_path", "").replace("\\", "/"))).exists()
+        for record in test_records)
+    prediction_candidates = []
+    for path in ev.ATTR_OUTPUTS.rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in {
+                ".csv", ".json", ".jsonl", ".parquet"}:
+            continue
+        lower = path.name.lower()
+        if variant in path.as_posix().lower() and any(
+                token in lower for token in ("prediction", "per_crop", "logit")):
+            prediction_candidates.append(path)
+    if len(test_records) != 1890 or existing_crops != 1890:
+        missing.append(
+            "VJEPA 2.1-L LoRA crop-condition slices: expected 1,890 retained test "
+            f"crop records/images but found {len(test_records)} records and "
+            f"{existing_crops} images; no attribute slices produced.")
+        return
+    if not prediction_candidates:
+        missing.append(
+            "VJEPA 2.1-L LoRA crop-condition slices: all 1,890 crop records and "
+            "crop images still exist, but no per-crop prediction or logit records "
+            "were retained. Only aggregate metrics/confusion matrices and the "
+            "checkpoint remain. Per instruction, this branch was stopped: no "
+            "terciles were computed and no detector thresholds were reused.")
+        return
+    missing.append(
+        "VJEPA 2.1-L LoRA crop-condition slices: candidate per-crop files were "
+        "found but are not consumed automatically without schema validation: "
+        + ", ".join(f"`{ev.rel(path)}`" for path in prediction_candidates))
+
+
+# ---------------------------------------------------------------------------
 # Figures
 # ---------------------------------------------------------------------------
 
@@ -578,6 +1161,29 @@ def make_figures(rows: list[dict], figures_dir: Path, min_support: int) -> list[
         axis.set_xlabel("Slice metric - aggregate metric")
         axis.set_title("MDWD detection - largest slice deviations (test, worst model per slice)")
         saved.extend(ev.save_figure(figure, figures_dir, "mdwd_slice_degradation_test"))
+
+    # New extension figures: canonical SAM 3 with detector-aligned slicing.
+    for dataset in ("MDWD", "MTSD"):
+        workstream = f"PromptDetect-SAM3-canonical-{dataset}"
+        figure_specs = (
+            ("brightness", ["low", "medium", "high"], "macro_f1", "Macro-F1"),
+            ("contrast", ["low", "medium", "high"], "macro_f1", "Macro-F1"),
+            ("sharpness", ["blurred", "intermediate", "sharp"], "macro_f1", "Macro-F1"),
+            ("object_density", ["single-object", "low-clutter", "high-clutter"],
+             "macro_f1", "Macro-F1"),
+            ("object_size", ["small", "medium", "large"],
+             "macro_recall", "Macro-recall"),
+        )
+        for dimension, value_order, metric, metric_label in figure_specs:
+            subset = [r for r in rows if r["workstream"] == workstream
+                      and r["model"] == "SAM 3 canonical macro"
+                      and r["slice_dimension"] == dimension
+                      and r["metric"] == metric
+                      and r["support_ok"] == "ok"]
+            bars(subset,
+                 f"{dataset} SAM 3 canonical - {metric_label} by {dimension}",
+                 f"{dataset.lower()}_sam3_canonical_{metric}_by_{dimension}",
+                 value_order, f"{metric_label} across target families")
     return saved
 
 
@@ -611,23 +1217,35 @@ def write_reports(report_dir: Path, figures: list[str], rows: list[dict],
         + f" of {len(rows)} rows (retained in the CSV/JSON, never highlighted).\n",
         encoding="utf-8")
 
+    is_extension = args.task == "extensions"
     lines = [
-        "# Robustness slice analysis",
+        ("# Robustness slice analysis — new canonical-prompt extension"
+         if is_extension else "# Robustness slice analysis"),
         f"\nGenerated: {generated_at}  |  Commit: `{ev.git_commit_sha()[:12]}`",
         "\nPerformance across data slices, computed **only from stored predictions "
         "and ground truth** (no model was run). Full machine-readable results: "
         "`robustness_slice_results.csv/.json`; thresholds and matching rules: "
         "`robustness_slice_config.json`; gaps: `insufficient_or_missing_inputs.md`.",
     ]
+    if is_extension:
+        lines.append(
+            "\n> **New analysis, separate from the retained robustness report.** "
+            "This output contains SAM 3 canonical-prompt image-condition and "
+            "object-size slices. It does not alter or supersede any earlier "
+            "retained report. "
+            "The requested VJEPA crop-condition branch is documented below as "
+            "unavailable because per-crop predictions were not retained.")
     for workstream in sorted({r["workstream"] for r in rows}):
         ws_rows = [r for r in rows if r["workstream"] == workstream]
         status = ws_rows[0]["status"]
         lines.append(f"\n## {workstream} - status: **{status}**\n")
         if status in (ev.STATUS_PILOT, ev.STATUS_HISTORICAL):
-            lines.append("> " + ("Pilot-scale run: pipeline validation only, not "
-                                 "dissertation evidence." if status == ev.STATUS_PILOT else
-                                 "Historical GRP-1..GRP-3 snapshot; a final-scope round "
-                                 "is still pending.") + "\n")
+            if status == ev.STATUS_PILOT:
+                lines.append("> Pilot-scale run: pipeline validation only, not dissertation evidence.\n")
+            elif workstream == "MTSD-attributes":
+                lines.append("> Historical GRP-1..GRP-3 snapshot; a final-scope round is still pending.\n")
+            else:
+                lines.append("> Completed stored-run inventory; compare only runs with matching split, taxonomy and protocol.\n")
         aggregates = [r for r in ws_rows if r["slice_dimension"] == "aggregate"]
         if aggregates:
             lines.append("| Model | Run | Split | Metric | Value | Images | Objects |")
@@ -635,6 +1253,31 @@ def write_reports(report_dir: Path, figures: list[str], rows: list[dict],
             for r in aggregates:
                 lines.append(f"| {r['model']} | {r['run']} | {r['split']} | {r['metric']} "
                              f"| {r['value']} | {r['n_images']} | {r['n_objects']} |")
+        if is_extension:
+            macro_slices = [r for r in ws_rows
+                            if r["model"] == "SAM 3 canonical macro"
+                            and r["slice_dimension"] in {
+                                "brightness", "contrast", "sharpness",
+                                "object_density", "object_size"}
+                            and r["metric"] in {"macro_f1", "macro_recall"}]
+            if macro_slices:
+                lines.append(
+                    "\nCanonical SAM 3 macro metrics using detector-aligned "
+                    "slice definitions:\n")
+                lines.append("| Dimension | Slice | Metric | Value | Images | Target boxes | Support |")
+                lines.append("| --- | --- | --- | --- | --- | --- | --- |")
+                for r in macro_slices:
+                    lines.append(
+                        f"| {r['slice_dimension']} | {r['slice_value']} | "
+                        f"{r['metric']} | {r['value']} | {r['n_images']} | "
+                        f"{r['n_objects']} | "
+                        f"{r['support_ok']} |")
+                lines.append(
+                    "\nObject density is an image-level split and therefore reports "
+                    "macro-F1. Object size is a target-object split and reports "
+                    "macro-recall because false positives cannot be uniquely assigned "
+                    "to a ground-truth size bin. Size-family cells below the minimum "
+                    "support are excluded from that bin's macro-average.")
         deviations = [r for r in ws_rows if r["support_ok"] == "ok"
                       and r["delta_vs_aggregate"] != ""
                       and abs(r["delta_vs_aggregate"]) >= 0.03]
@@ -657,6 +1300,9 @@ def write_reports(report_dir: Path, figures: list[str], rows: list[dict],
     if figures:
         lines.append("\n## Figures\n")
         lines.extend(f"- `{f}`" for f in figures if f.endswith(".png"))
+    if is_extension and missing:
+        lines.append("\n## Requested branch not produced\n")
+        lines.extend(f"- {note}" for note in missing)
     lines.append("\n*Read-only analysis - no datasets, checkpoints or previous "
                  "results were modified.*\n")
     (report_dir / "robustness_slice_summary.md").write_text("\n".join(lines),
@@ -734,7 +1380,11 @@ def main() -> int:
     parser.add_argument("--dataset", default="all",
                         choices=[*WORKSTREAMS, "all"],
                         help="Workstream to analyse (default: every one with evidence).")
-    parser.add_argument("--task", default="auto", choices=["detection", "attributes", "auto"])
+    parser.add_argument(
+        "--task", default="auto",
+        choices=["detection", "attributes", "extensions", "auto"],
+        help=("Analysis family. 'extensions' creates a separate new-analysis "
+              "report for canonical SAM 3 and audits the VJEPA per-crop gate."))
     parser.add_argument("--run", default="latest",
                         help="'latest' or a path to a specific stored run directory.")
     parser.add_argument("--min-support", type=int, default=15)
@@ -759,16 +1409,31 @@ def main() -> int:
     missing: list[str] = []
 
     wants = lambda ws: args.dataset in ("all", ws)  # noqa: E731
+    if args.task == "extensions":
+        selected = ("MDWD", "MTSD") if args.dataset == "all" else (
+            args.dataset.replace("PromptDetect-", ""),)
+        selected = tuple(dataset for dataset in selected
+                         if dataset in ("MDWD", "MTSD"))
+        for dataset in selected:
+            print(f"Analysing NEW canonical SAM 3 {dataset} slices "
+                  "(reused detector thresholds)...")
+            new_rows, new_thresholds = analyse_sam3_canonical_extension(
+                args, pd_metrics, dataset, missing)
+            rows += new_rows
+            thresholds.update(new_thresholds)
+        if args.dataset in ("all", "MTSD", "PromptDetect-MTSD"):
+            print("Auditing VJEPA 2.1-L LoRA per-crop inputs...")
+            audit_attribute_crop_slice_inputs(missing)
     if wants("MDWD") and args.task in ("detection", "auto"):
         print("Analysing MDWD detection slices (stored predictions)...")
         new_rows, new_thresholds = analyse_mdwd_detection(args, pd_metrics, missing)
         rows += new_rows
         thresholds.update(new_thresholds)
     if wants("MTSD") and args.task in ("detection", "auto"):
-        missing.append(
-            "MTSD supervised detection: PENDING - Results/MTSD-Runs and "
-            "Results/MTSD-Results are empty. Train via "
-            "Scripts/MTSD-Scripts/MTSD-SupervisedNotebooks first.")
+        print("Analysing MTSD detection slices (stored unified predictions)...")
+        new_rows, new_thresholds = analyse_mtsd_detection(args, pd_metrics, missing)
+        rows += new_rows
+        thresholds.update(new_thresholds)
     if wants("MTSD") and args.task in ("attributes", "auto"):
         print("Analysing MTSD attribute slices (stored per-head metrics)...")
         rows += analyse_attributes(args, missing)
@@ -786,7 +1451,9 @@ def main() -> int:
         print("Dry run: no files written.")
         return 0
 
-    report_dir, figures_dir = ev.new_output_dirs("Robustness-Slices", args.overwrite,
+    output_family = ("Robustness-Slices-New-Analysis"
+                     if args.task == "extensions" else "Robustness-Slices")
+    report_dir, figures_dir = ev.new_output_dirs(output_family, args.overwrite,
                                                  args.output_dir)
     figures = make_figures(rows, figures_dir, args.min_support) if rows else []
     write_reports(report_dir, figures, rows, thresholds, missing, args)

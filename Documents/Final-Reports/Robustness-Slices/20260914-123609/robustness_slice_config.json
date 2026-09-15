@@ -1,0 +1,725 @@
+{
+  "generated_at": "2026-09-14T12:36:10",
+  "generator": "Scripts/FinalEvaluation/robustness_slice_analysis.py",
+  "args": {
+    "dataset": "MTSD",
+    "task": "auto",
+    "run": "latest",
+    "min_support": 15,
+    "bootstrap_samples": 0,
+    "seed": 42,
+    "working_conf": 0.25,
+    "output_dir": null,
+    "overwrite": false,
+    "dry_run": false,
+    "self_test": false
+  },
+  "resolved_thresholds": {
+    "MTSD/FINAL_rfdetrm_mtsd_noaug_img576_pb32_eb32_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/FINAL_rfdetrm_mtsd_noaug_img576_pb32_eb32_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_rfdetrm_mtsd_strong_img576_pb32_eb32_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/FINAL_rfdetrm_mtsd_strong_img576_pb32_eb32_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_rfdetrs_mtsd_strong_img512_pb32_eb32_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/FINAL_rfdetrs_mtsd_strong_img512_pb32_eb32_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-rfdetr-m-img640-fixed-b16ga2-s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/strongaug-wandb-cuda-rfdetr-m-img640-fixed-b16ga2-s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-rfdetr-n-img384-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/strongaug-wandb-cuda-rfdetr-n-img384-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-rfdetr-n-img640-fixed-b16ga2-s42-resume3/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/strongaug-wandb-cuda-rfdetr-n-img640-fixed-b16ga2-s42-resume3/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-rfdetr-s-img640-fixed-b16ga2-s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/strongaug-wandb-cuda-rfdetr-s-img640-fixed-b16ga2-s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-followup-rfdetr-m-img704-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/strongaug-wandb-followup-rfdetr-m-img704-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-followup-rfdetr-s-img640-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/RF-DETR-MTSD/strongaug-wandb-followup-rfdetr-s-img640-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/E01_yolo11m_mtsdqa1aug_img1280_eb32_e100_adamw_s42/test": {
+      "brightness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "contrast": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "sharpness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/E01_yolo11m_mtsdqa1aug_img1280_eb32_e100_adamw_s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/E01_yolo11m_mtsdqa1noaug_img640_eb32_e100_adamw_s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/E01_yolo11m_mtsdqa1noaug_img640_eb32_e100_adamw_s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/E01_yolo11s_mtsdqa1aug_img960_eb32_e100_adamw_s42/test": {
+      "brightness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "contrast": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "sharpness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/E01_yolo11s_mtsdqa1aug_img960_eb32_e100_adamw_s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/E02_yolo11m_mtsdqa1aug_img960_eb32_e100_adamw_s42/test": {
+      "brightness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "contrast": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "sharpness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/E02_yolo11m_mtsdqa1aug_img960_eb32_e100_adamw_s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/E03_yolo11s_mtsdqa1aug_img1280_eb32_e100_adamw_s42/test": {
+      "brightness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "contrast": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "sharpness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/E03_yolo11s_mtsdqa1aug_img1280_eb32_e100_adamw_s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo11m_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/FINAL_yolo11m_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo11m_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/FINAL_yolo11m_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo11n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/FINAL_yolo11n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo11n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/FINAL_yolo11n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo11n_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/FINAL_yolo11n_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo11s_mtsd_noaug_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/FINAL_yolo11s_mtsd_noaug_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo11s_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/FINAL_yolo11s_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-yolo11s-img1280-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/strongaug-wandb-cuda-yolo11s-img1280-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-yolo11s-img960-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/strongaug-wandb-cuda-yolo11s-img960-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-followup-yolo11m-img1280-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO11-MTSD/strongaug-wandb-followup-yolo11m-img1280-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/E02_yolo12m_mtsdqa1noaug_img640_eb32_e100_adamw_s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO12-MTSD/E02_yolo12m_mtsdqa1noaug_img640_eb32_e100_adamw_s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo12m_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO12-MTSD/FINAL_yolo12m_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo12n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO12-MTSD/FINAL_yolo12n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo12n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO12-MTSD/FINAL_yolo12n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo12n_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO12-MTSD/FINAL_yolo12n_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo12s_mtsd_noaug_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO12-MTSD/FINAL_yolo12s_mtsd_noaug_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo12s_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO12-MTSD/FINAL_yolo12s_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-yolo12s-img960-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO12-MTSD/strongaug-wandb-cuda-yolo12s-img960-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/E02_yolo26s_mtsdqa1aug_img1280_eb32_e100_adamw_s42/test": {
+      "brightness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "contrast": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "sharpness": {
+        "tercile_33": 0.0,
+        "tercile_67": 0.0
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/E02_yolo26s_mtsdqa1aug_img1280_eb32_e100_adamw_s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/E03_yolo26m_mtsdqa1noaug_img640_eb32_e100_adamw_s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/E03_yolo26m_mtsdqa1noaug_img640_eb32_e100_adamw_s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26m_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26m_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26m_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26m_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26n_mtsd_strong_img1280_pb8_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26n_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26n_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26n_mtsd_strong_img960_pb16_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26s_mtsd_noaug_img1280_pb8_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26s_mtsd_noaug_img1280_pb8_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26s_mtsd_noaug_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26s_mtsd_noaug_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26s_mtsd_noaug_img960_pb16_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26s_mtsd_noaug_img960_pb16_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/FINAL_yolo26s_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/FINAL_yolo26s_mtsd_strong_img640_pb32_eb64_e100_adamw_s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-yolo26l-img640-b16ga2-s42/valid": {
+      "brightness": {
+        "tercile_33": 114.77,
+        "tercile_67": 129.05
+      },
+      "contrast": {
+        "tercile_33": 50.26,
+        "tercile_67": 59.0
+      },
+      "sharpness": {
+        "tercile_33": 103.4,
+        "tercile_67": 338.54
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/strongaug-wandb-cuda-yolo26l-img640-b16ga2-s42/unified_evaluation_validation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-yolo26s-img1280-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/strongaug-wandb-cuda-yolo26s-img1280-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-cuda-yolo26s-img960-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/strongaug-wandb-cuda-yolo26s-img960-s42/unified_evaluation/evaluation_annotations.coco.json"
+    },
+    "MTSD/strongaug-wandb-followup-yolo26m-img1280-s42/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "annotation_source": "Results/MTSD-Runs/YOLO26-MTSD/strongaug-wandb-followup-yolo26m-img1280-s42/unified_evaluation/evaluation_annotations.coco.json"
+    }
+  },
+  "min_support_rule": "slices below --min-support are kept in the CSV/JSON but marked insufficient_support and excluded from figures/summary tables"
+}

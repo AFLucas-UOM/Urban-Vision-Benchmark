@@ -1,0 +1,291 @@
+{
+  "analysis_status": "new inference-only analysis; separate from retained report",
+  "generated_at": "2026-09-14T16:13:46+00:00",
+  "generator": "Scripts/FinalEvaluation/attribute_robustness_analysis.py",
+  "generator_sha256": "e29dafec3ab55006c3d03f32cdd801924cc0dc72e950cf26845327d9e207a1e1",
+  "git_commit": "2a158e051662ee79638603fd99baca98b03716c5",
+  "variant": "vjepa21_vitl_lora",
+  "retained_run_id": "vjepa21_vitl_lora-20260805-141508",
+  "checkpoint_epoch": 12,
+  "training_performed": false,
+  "population": {
+    "dataset": "MTSD",
+    "split": "test",
+    "n_crops": 1890,
+    "groups": {
+      "GRP-1": 194,
+      "GRP-10": 155,
+      "GRP-11": 156,
+      "GRP-2": 156,
+      "GRP-3": 133,
+      "GRP-4": 185,
+      "GRP-5": 191,
+      "GRP-6": 96,
+      "GRP-7": 174,
+      "GRP-8": 207,
+      "GRP-9": 243
+    },
+    "manifest_total_records": 19253,
+    "split_assignment": "retained manifest; no refresh or resplitting"
+  },
+  "inputs": {
+    "checkpoint": "Scripts/MTSD-Scripts/AttributeClassification/outputs/checkpoints/vjepa21_vitl_lora/best.pt",
+    "checkpoint_sha256": "b07b4134b55f6448d918ccef23af563089195477213235eb4c531d9e4ab0a993",
+    "manifest": "Scripts/MTSD-Scripts/AttributeClassification/outputs/manifests/manifest.json",
+    "manifest_sha256": "7dcef48b686bf1f43c3b19902124fe18bf46bf5a8c280bf9f6c0d0bad5e76e0d",
+    "config": "Scripts/MTSD-Scripts/AttributeClassification/config/default.yaml",
+    "config_sha256": "9a42281dc02e448cb449a4fc81ae4a28874db5c81a9e5317435ca1d6b22afac1",
+    "retained_metrics": "Scripts/MTSD-Scripts/AttributeClassification/outputs/metrics/vjepa21_vitl_lora/test_metrics.json",
+    "retained_metrics_sha256": "f8c121945abdb5ccbbc393594ee728e3e643a48d87e799675682de3c4f2dcde8",
+    "metric_implementation": "Scripts/MTSD-Scripts/AttributeClassification/mtsd_attr/evaluate.py",
+    "metric_implementation_sha256": "91604bb6e84da91ba397b810501ba90974caff62453348328b882e675f3993ab",
+    "dataset_implementation": "Scripts/MTSD-Scripts/AttributeClassification/mtsd_attr/dataset.py",
+    "dataset_implementation_sha256": "8702e2da993b3db0f1ca37f59e2a183dd5b9ec9659e70b7559cd53f772ceae68"
+  },
+  "model": {
+    "model_cfg": {
+      "backbone": "vjepa",
+      "family": "V-JEPA",
+      "architecture": "ViT-L/16",
+      "model_size": "large",
+      "backend": "torch_hub",
+      "allow_backend_fallback": false,
+      "vjepa_version": "2.1",
+      "torch_hub_repo": "facebookresearch/vjepa2",
+      "torch_hub_entrypoint": "vjepa2_1_vit_large_384",
+      "torch_hub_checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+      "num_frames": 2,
+      "adaptation": "lora",
+      "lora": {
+        "r": 8,
+        "alpha": 16,
+        "dropout": 0.05,
+        "target_modules": [
+          "qkv"
+        ]
+      },
+      "image_size_torch_hub": 384,
+      "training_overrides": {
+        "lr_backbone": 0.0002,
+        "batch_size": 16,
+        "gradient_accumulation_steps": 2
+      }
+    },
+    "probe": {
+      "type": "linear",
+      "mlp_hidden_dim": 512,
+      "mlp_dropout": 0.2
+    },
+    "attributes": {
+      "view_angle": {
+        "classes": [
+          "Front",
+          "Back",
+          "Side"
+        ]
+      },
+      "mounting": {
+        "classes": [
+          "Pole-Mounted",
+          "Wall-Mounted"
+        ]
+      },
+      "condition": {
+        "classes": [
+          "Good",
+          "Weathered",
+          "Heavily Damaged"
+        ]
+      },
+      "sign_shape": {
+        "classes": [
+          "Circular",
+          "Quadrangle",
+          "Triangular",
+          "Octagonal",
+          "Pentagon"
+        ],
+        "drop_values": [
+          "Damaged-Unknown"
+        ]
+      }
+    },
+    "adaptation": "lora",
+    "retained_backbone_meta": {
+      "requested_backend": "torch_hub",
+      "loaded_backend": "torch_hub",
+      "requested_version": "2.1",
+      "loaded_version": "2.1",
+      "allow_backend_fallback": false,
+      "entrypoint": "vjepa2_1_vit_large_384",
+      "checkpoint": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+      "model_id": "vjepa2_1_vit_large_384",
+      "image_size": 384,
+      "feature_dim": 1024,
+      "num_frames": 2
+    },
+    "loaded_backbone_meta": {
+      "requested_backend": "torch_hub",
+      "loaded_backend": "torch_hub",
+      "requested_version": "2.1",
+      "loaded_version": "2.1",
+      "allow_backend_fallback": false,
+      "entrypoint": "vjepa2_1_vit_large_384",
+      "checkpoint": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+      "model_id": "vjepa2_1_vit_large_384",
+      "image_size": 384,
+      "feature_dim": 1024,
+      "num_frames": 2
+    }
+  },
+  "inference": {
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "batch_size": 16,
+    "num_workers": 4,
+    "amp": true,
+    "amp_dtype": "bfloat16",
+    "seed": 42,
+    "shuffle": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "deterministic_algorithms": true,
+    "preprocessing": [
+      "PadToSquare(fill=[114,114,114])",
+      "Resize([384,384], antialias=True)",
+      "ToTensor()",
+      "Normalize(ImageNet mean/std)"
+    ]
+  },
+  "metrics": {
+    "primary": "macro_f1",
+    "implementation": "sklearn.metrics.f1_score",
+    "average": "macro",
+    "zero_division": 0,
+    "label_policy": "fixed complete checkpoint vocabulary for each head",
+    "overall": "unweighted mean of eligible per-head macro-F1 values",
+    "min_support": 15,
+    "class_support_warning": "flag a head-level slice when any expected target class has fewer than min_support examples; the fixed-vocabulary score is retained",
+    "reconciliation_tolerance": 0.005,
+    "aggregate_reconciliation": {
+      "view_angle": {
+        "macro_f1": 0.9296771795020141,
+        "n_samples": 1890,
+        "retained_macro_f1": 0.9296771795020141,
+        "absolute_difference": 0.0
+      },
+      "mounting": {
+        "macro_f1": 0.9514637627482524,
+        "n_samples": 1890,
+        "retained_macro_f1": 0.9526152766160151,
+        "absolute_difference": 0.001151513867762688
+      },
+      "condition": {
+        "macro_f1": 0.7449275030606038,
+        "n_samples": 1890,
+        "retained_macro_f1": 0.7470310263292831,
+        "absolute_difference": 0.0021035232686792416
+      },
+      "sign_shape": {
+        "macro_f1": 0.9738164347921728,
+        "n_samples": 1890,
+        "retained_macro_f1": 0.9732256091278991,
+        "absolute_difference": 0.0005908256642737086
+      },
+      "overall_mean": {
+        "macro_f1": 0.8999712200257608,
+        "n_samples": 1890,
+        "retained_macro_f1": 0.9006372728938028,
+        "absolute_difference": 0.0006660528680419997
+      }
+    }
+  },
+  "slices": {
+    "original_object_size": {
+      "area_source": "original manifest GT bbox width*height before padding/cropping/resizing",
+      "thresholds": {
+        "Small": "area < 32^2",
+        "Medium": "32^2 <= area < 96^2",
+        "Large": "area >= 96^2"
+      }
+    },
+    "crop_properties": {
+      "pixel_population": "post-PadToSquare/post-Resize 384 RGB pixels before ToTensor/normalisation",
+      "brightness": "mean greyscale intensity",
+      "contrast": "greyscale standard deviation",
+      "sharpness": "variance of 4-neighbour Laplacian; higher means sharper",
+      "thresholds": {
+        "crop_brightness": {
+          "tercile_33": 104.2858378092448,
+          "tercile_67": 120.171999613444
+        },
+        "crop_contrast": {
+          "tercile_33": 37.025047302246094,
+          "tercile_67": 49.61860656738281
+        },
+        "crop_sharpness": {
+          "tercile_33": 43.28554662068683,
+          "tercile_67": 293.31998697916663
+        }
+      }
+    },
+    "semantic_condition": {
+      "policy": "each prediction head sliced only by other ground-truth attributes",
+      "self_target_slices_omitted": true,
+      "matrix": {
+        "view_angle": [
+          "mounting",
+          "condition",
+          "sign_shape"
+        ],
+        "mounting": [
+          "view_angle",
+          "condition",
+          "sign_shape"
+        ],
+        "condition": [
+          "view_angle",
+          "mounting",
+          "sign_shape"
+        ],
+        "sign_shape": [
+          "view_angle",
+          "mounting",
+          "condition"
+        ]
+      }
+    },
+    "explicitly_not_analysed": [
+      "object_density",
+      "image_position"
+    ]
+  },
+  "software": {
+    "python": "3.11.15",
+    "torch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "sklearn": "1.9.0",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "matplotlib": "3.11.1"
+  },
+  "outputs": {
+    "report_dir": "Documents/Final-Reports/Attribute-Robustness/20260914-180650",
+    "figures_dir": "Documents/Final-Figures/Attribute-Robustness/20260914-180650",
+    "per_crop_predictions_logits": "Documents/Final-Reports/Attribute-Robustness/20260914-180650/per_crop_predictions_logits.csv",
+    "per_crop_predictions_logits_sha256": "94bef6c3e2ed62b16d5236193ac38ce8728d3d03ea9d56a4d74c2f11f6b63710",
+    "slice_results": "Documents/Final-Reports/Attribute-Robustness/20260914-180650/attribute_robustness_slices.csv",
+    "slice_results_sha256": "4b40f5783d4468fa986764f24f9ff1d3eb51cc823919eff06ea32caef98b86e2",
+    "figures": [
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_macro_f1_by_original_object_size.png",
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_macro_f1_by_original_object_size.pdf",
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_macro_f1_by_original_object_size.svg",
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_crop_property_robustness.png",
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_crop_property_robustness.pdf",
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_crop_property_robustness.svg",
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_semantic_condition_robustness.png",
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_semantic_condition_robustness.pdf",
+      "Documents/Final-Figures/Attribute-Robustness/20260914-180650/vjepa21_vitl_lora_semantic_condition_robustness.svg"
+    ]
+  }
+}

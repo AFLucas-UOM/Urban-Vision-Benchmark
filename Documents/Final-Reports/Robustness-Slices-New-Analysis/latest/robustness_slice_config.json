@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-09-14T17:47:15",
+  "generator": "Scripts/FinalEvaluation/robustness_slice_analysis.py",
+  "args": {
+    "dataset": "all",
+    "task": "extensions",
+    "run": "latest",
+    "min_support": 15,
+    "bootstrap_samples": 0,
+    "seed": 42,
+    "working_conf": 0.25,
+    "output_dir": null,
+    "overwrite": true,
+    "dry_run": false,
+    "self_test": false
+  },
+  "resolved_thresholds": {
+    "PromptDetect-SAM3-canonical-MDWD/test": {
+      "brightness": {
+        "tercile_33": 136.27,
+        "tercile_67": 149.63
+      },
+      "contrast": {
+        "tercile_33": 41.85,
+        "tercile_67": 51.77
+      },
+      "sharpness": {
+        "tercile_33": 829.95,
+        "tercile_67": 1620.7
+      },
+      "source": "Documents/Final-Reports/Robustness-Slices/20260908-103240/robustness_slice_config.json::MDWD/test",
+      "reuse_policy": "loaded, not recomputed",
+      "confidence_threshold": 0.3,
+      "iou_threshold": 0.5,
+      "object_density_rule": "single-object=1; low-clutter=2-4; high-clutter>=5",
+      "object_density_exclusions": [],
+      "object_size_rule": "COCO box-area thresholds: small<32^2; medium<96^2; otherwise large",
+      "object_size_metric": "macro-recall; false positives are not assigned to GT size bins"
+    },
+    "PromptDetect-SAM3-canonical-MTSD/test": {
+      "brightness": {
+        "tercile_33": 115.38,
+        "tercile_67": 129.07
+      },
+      "contrast": {
+        "tercile_33": 50.29,
+        "tercile_67": 59.31
+      },
+      "sharpness": {
+        "tercile_33": 100.48,
+        "tercile_67": 292.85
+      },
+      "source": "Documents/Final-Reports/Robustness-Slices/20260914-123609/robustness_slice_config.json::MTSD/strongaug-wandb-followup-yolo26m-img1280-s42/test",
+      "reuse_policy": "loaded, not recomputed",
+      "confidence_threshold": 0.3,
+      "iou_threshold": 0.5,
+      "object_density_rule": "single-object=1; low-clutter=2-4; high-clutter>=5",
+      "object_density_exclusions": [
+        "Tourist Sign"
+      ],
+      "object_size_rule": "COCO box-area thresholds: small<32^2; medium<96^2; otherwise large",
+      "object_size_metric": "macro-recall; false positives are not assigned to GT size bins"
+    }
+  },
+  "min_support_rule": "slices below --min-support are kept in the CSV/JSON but marked insufficient_support and excluded from figures/summary tables"
+}

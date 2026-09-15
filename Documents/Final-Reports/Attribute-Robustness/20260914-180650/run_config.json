@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-09-14T16:13:46+00:00",
+  "generator": "Scripts/FinalEvaluation/attribute_robustness_analysis.py",
+  "arguments": {
+    "config": null,
+    "output_dir": "Documents\\Final-Reports\\Attribute-Robustness\\20260914-180650",
+    "figures_dir": "Documents\\Final-Figures\\Attribute-Robustness\\20260914-180650",
+    "min_support": 15,
+    "reconciliation_tolerance": 0.005,
+    "allow_cpu": false
+  },
+  "variant": "vjepa21_vitl_lora",
+  "checkpoint": "Scripts/MTSD-Scripts/AttributeClassification/outputs/checkpoints/vjepa21_vitl_lora/best.pt",
+  "manifest": "Scripts/MTSD-Scripts/AttributeClassification/outputs/manifests/manifest.json",
+  "training_performed": false
+}

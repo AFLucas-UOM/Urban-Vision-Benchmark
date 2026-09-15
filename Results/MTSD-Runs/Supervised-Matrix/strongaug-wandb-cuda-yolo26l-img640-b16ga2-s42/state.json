@@ -1,0 +1,26 @@
+{
+  "requested_matrix": [
+    "yolo26l"
+  ],
+  "dataset_version": "mtsd-qa-v1-strong-offline-v2",
+  "prep_manifest_sha256": "86ece120835b9b2648d14adf71ac322ef8c6dd8b628344d46c55e4c680cba24a",
+  "split_manifest_sha256": "acd4a151b032425f08ab5160f5bcd0ac55ac5dad013ad2087680119ba31a08b6",
+  "annotation_source_mode": "qa_only",
+  "dataset_variant": "augmented",
+  "offline_augmentation_selection": "strong",
+  "config_fingerprint": "f3e3553dc03924ccf97b8253d45650367b9d381a3d2c281bf2393ad7097b6eee",
+  "run_label": "strongaug-wandb-cuda-yolo26l-img640-b16ga2-s42",
+  "started_at": "2026-09-13T22:44:23.191627+00:00",
+  "models": {
+    "yolo26l": {
+      "status": "completed",
+      "run_dir": "E:\\2. UM-Student\\MSC Dissertation\\Urban-Vision-Benchmark\\Results\\MTSD-Runs\\YOLO26-MTSD\\strongaug-wandb-cuda-yolo26l-img640-b16ga2-s42",
+      "started_at": "2026-09-13T22:44:23.220493+00:00",
+      "wandb_run_id": "ux4yxkl0",
+      "finished_at": "2026-09-14T01:20:55.703725+00:00"
+    }
+  },
+  "current_model": null,
+  "final_status": "completed",
+  "finished_at": "2026-09-14T01:21:04.513950+00:00"
+}
