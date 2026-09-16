@@ -1,7 +1,0 @@
-variant,backbone,adaptation,mean_macro_f1,view_angle_f1,mounting_f1,condition_f1,sign_shape_f1,total_params,trainable_params,best_model,run_id,source_file,status
-dinov3,dinov3,frozen,0.7826,0.8649,0.8458,0.5534,0.8663,85670413,9997,,dinov3-20260704-010441,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv,completed
-dinov3_lora,dinov3,lora,0.8734,0.9129,0.8959,0.7346,0.9503,85965325,304909,YES,dinov3_lora-20260704-020900,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv,completed
-vjepa,vjepa,frozen,0.7699,0.8823,0.8672,0.5110,0.8189,304694285,13325,,vjepa-20260704-011610,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv,completed
-vjepa_lora,vjepa,lora,0.8400,0.9089,0.9054,0.5948,0.9507,305480717,799757,,vjepa_lora-20260704-022043,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv,completed
-convnext_frozen,convnext,frozen,0.7629,0.8426,0.8026,0.5673,0.8389,27828589,9997,,convnext_frozen-20260704-013448,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv,completed
-convnext,convnext,finetune,0.8641,0.9054,0.8734,0.7113,0.9663,27828589,27828589,,convnext-20260704-015608,Scripts\MTSD-Scripts\AttributeClassification\outputs\reports\comparison.csv,completed

@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the dissertation below."
+
+title: "A Comparative Study of Vision-Based Perception Paradigms for Urban Waste and Infrastructure Monitoring"
+type: software
+
+authors:
+  - family-names: "Lucas"
+    given-names: "Andrea Filiberto"
+    affiliation: "Dawl AI Lab, Department of Artificial Intelligence, Faculty of ICT, University of Malta"
+    email: "contact@aflucas.com"
+
+contact:
+  - family-names: "Lucas"
+    given-names: "Andrea Filiberto"
+    email: "contact@aflucas.com"
+
+date-released: 2026-09-30
+
+repository-code: "https://github.com/AFLucas-UOM/Urban-Vision-Benchmark"
+
+keywords:
+  - computer vision
+  - urban monitoring
+  - object detection
+  - zero-shot localisation
+  - traffic sign assessment
+  - municipal waste detection
+
+preferred-citation:
+  type: thesis
+  title: "A Comparative Study of Vision-Based Perception Paradigms for Urban Waste and Infrastructure Monitoring"
+  authors:
+    - family-names: "Lucas"
+      given-names: "Andrea Filiberto"
+  year: 2026
+  institution:
+    name: "University of Malta"
+  department: "Department of Artificial Intelligence, Faculty of ICT"
+  thesis-type: "MSc Dissertation"
