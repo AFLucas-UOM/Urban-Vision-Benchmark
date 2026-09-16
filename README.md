@@ -1,10 +1,14 @@
 # A Comparative Study of Vision-Based Perception Paradigms for Urban Waste and Infrastructure Monitoring
 
 <p align="center">
-  <a href="https://www.ieeesmc.org/cai-2026/">
-    <img src="https://img.shields.io/badge/IEEE%20Conference%20on%20Artificial%20Intelligence-CAI%202026-blue?style=for-the-badge&logo=ieee&logoColor=white"
-         alt="IEEE Conference on Artificial Intelligence CAI 2026">
+  <a href="https://euvip2026.github.io/">
+    <img src="https://img.shields.io/badge/IEEE%20European%20Conference%20on%20Visual%20Information%20Processing-EUVIP%202026-blue?style=for-the-badge&logo=ieee&logoColor=white"
+         alt="IEEE European Conference on Visual Information Processing EUVIP 2026">
   </a>
+  <br>
+  <sub>
+    Paper: <a href="https://arxiv.org/abs/2608.00257"><em>MDWD: A Street-Level Dataset for Municipal Solid Waste Detection in Dense Urban Environments</em></a>
+  </sub>
 </p>
 
 ## Research Overview
@@ -154,11 +158,18 @@ The public research artefact therefore provides the **implementation, annotation
 GPS information is used only for aggregate reporting.
 
 
-## Citation
+## Citations
 
 If you use this repository, its datasets, or its methodology, please cite the relevant work.
 
 ```bibtex
+@inproceedings{MDWD-ResearchPaper,
+  author    = {Lucas, Andrea Filiberto and Bugeja, Mark and Debono, Carl James and Seychell, Dylan},
+  title     = {MDWD: A Street-Level Dataset for Municipal Solid Waste Detection in Dense Urban Environments},
+  booktitle = {2026 14th European Workshop on Visual Information Processing (EUVIP)},
+  year      = {2026}
+}
+
 @dataset{MDWDataset,
   title     = {Maltese Domestic Waste Dataset (MDWD)},
   author    = {Lucas, Andrea Filiberto and Seychell, Dylan and Bugeja, Mark},
@@ -166,13 +177,6 @@ If you use this repository, its datasets, or its methodology, please cite the re
   type      = {Open Source Dataset},
   publisher = {Roboflow},
   url       = {https://universe.roboflow.com/um-dawl-ai-lab/mdwd-maltese-domestic-waste-dataset}
-}
-
-@inproceedings{MDWD-ResearchPaper,
-  author    = {Lucas, Andrea Filiberto and Bugeja, Mark and Debono, Carl James and Seychell, Dylan},
-  title     = {MDWD: A Street-Level Dataset for Municipal Solid Waste Detection in Dense Urban Environments},
-  booktitle = {2026 14th European Workshop on Visual Information Processing (EUVIP)},
-  year      = {2026}
 }
 
 @mastersthesis{lucas2026-UVBDissertation,
@@ -188,7 +192,6 @@ If you use this repository, its datasets, or its methodology, please cite the re
 
 This project is licensed under the **CC BY 4.0 License**. See the [`LICENSE`](LICENSE) file for details.
 
----
 
 ## Acknowledgements
 
@@ -198,14 +201,14 @@ The dissertation was supervised by **Dr Dylan Seychell**, with **Dr Mark Bugeja*
 
 This research was supported by the [Pathfinder Digital Scholarship](https://mdia.gov.mt/services/pathfinder-digital-scholarship/), awarded by the [Malta Digital Innovation Authority (MDIA)](https://mdia.gov.mt/) under the **2025 call**.
 
-The research was also closely motivated by the practical requirements of the **Application of AI and Computer Vision to Optimise Cleansing Operations in Malta (AICOM)** project. Key components of the dissertation, including the development of the **Maltese Domestic Waste Dataset (MDWD)**, directly support the project's objectives and operational requirements.
+The research was also closely motivated by the practical requirements of the **Application of AI and Computer Vision to Optimise Cleansing Operations in Malta (AICOM)** project. Key components of the dissertation, including the development of the **MDWD**, directly support the project's objectives and operational requirements.
 
 AICOM was funded by the Government of Malta's [Cleansing and Maintenance Division (CMD)](https://publiccleanliness.gov.mt/public-bodies/cmd/).
 
-This work was conducted within the [Dawl AI Lab](https://www.um.edu.mt/research/dawl/) at the University of Malta's **Department of Artificial Intelligence**.
-
----
+This work was conducted within the [Dawl AI Lab](https://www.um.edu.mt/research/dawl/) at the University of Malta's Department of Artificial Intelligence.
 
 ## Contact
 
 For questions or feedback, please contact [Andrea Filiberto Lucas](mailto:contact@aflucas.com).
+
+---
